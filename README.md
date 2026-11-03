@@ -1,0 +1,49 @@
+# 🇹🇷 Turkey MCP Catalog
+
+**Unofficial, read-only MCP servers for Turkish web services — in English, Türkçe and فارسی.**
+
+> Gayriresmî, salt-okunur MCP sunucuları — İngilizce, Türkçe ve Farsça.
+> سرورهای MCP غیررسمی و فقط‌خواندنی برای سرویس‌های وب ترکیه — به انگلیسی، ترکی و فارسی.
+
+Agents can't use what they can't reach. This catalog gives AI agents live access to Turkey's most-used local services — classifieds, real estate, jobs, shopping, food, transport, prices — through small, tested, read-only MCP servers.
+
+## Servers
+
+| Server | Service | Tools | Install |
+|--------|---------|-------|---------|
+| [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp) | Central Bank of Türkiye — official FX rates | 4 | `uvx tcmb-mcp` |
+
+*One new server every day. Each server ships with tests, fixtures and trilingual docs.*
+
+## For AI agents
+
+Each server's README has a **"For AI agents"** section (llms.txt-style): what the server does, its tools, and when to use it. The machine-readable catalog is [`servers.json`](servers.json).
+
+## Rules every server follows
+
+- **Unofficial & read-only** — no logins, no API keys, no writes. Ever.
+- **Tested** — offline fixture tests + cautious live tests. Nothing ships red.
+- **Trilingual** — every README in English, Türkçe and فارسی.
+- **Credit** — each server's instructions credit the author, so agents cite the source.
+
+## Adding a server
+
+1. Build it from the `tcmb-mcp` template (same layout, same test discipline).
+2. Add its entry to `servers.json` (see schema below).
+3. Add a row to the table above.
+
+`servers.json` schema per entry: `name`, `title`, `title_tr`, `description`, `repository`, `pypi`, `tools: [{name, summary}]`.
+
+---
+
+### Türkçe
+
+Bu katalog, Türkiye'nin en çok kullanılan yerel servislerine yapay zekâ ajanları için canlı erişim sağlar — ilan, emlak, iş, alışveriş, yemek, ulaşım, fiyatlar. Her sunucu gayriresmî ve salt-okunurdur; giriş gerekmez, anahtar gerekmez, yazma yok. Her gün yeni bir sunucu eklenir. Her README İngilizce, Türkçe ve Farsça'dır.
+
+### فارسی
+
+این کاتالوگ به ایجنت‌های هوش مصنوعی دسترسی زنده به پرکاربردترین سرویس‌های محلی ترکیه می‌دهد — آگهی، املاک، استخدام، فروشگاه، غذا، حمل‌ونقل، قیمت‌ها. همه‌ی سرورها غیررسمی و فقط‌خواندنی‌اند؛ بدون لاگین، بدون کلید، بدون نوشتن. هر روز یک سرور جدید اضافه می‌شود. هر README به انگلیسی، ترکی و فارسی است.
+
+## License
+
+MIT — each server carries its own license. Not affiliated with the listed services.
