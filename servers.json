@@ -1,1 +1,62 @@
-{"catalog":"turkey-mcp","description":"Unofficial read-only MCP servers for Turkish web services (EN/TR/FA)","servers":[{"description":"Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).","name":"tcmb-mcp","pypi":"tcmb-mcp","repository":"https://github.com/mohammad-abbasi-sh/tcmb-mcp","title":"Central Bank of Türkiye — official FX rates","title_tr":"Türkiye Cumhuriyet Merkez Bankası — resmi döviz kurları","tools":[{"name":"tcmb_get_rates","summary":"Today's FX rates for all currencies"},{"name":"tcmb_get_rate","summary":"Rate for one currency code (e.g. USD)"},{"name":"tcmb_list_currencies","summary":"List all available currency codes"},{"name":"tcmb_get_rates_on","summary":"Historical rates for a date (YYYYMMDD)"}]}]}
+{
+ "catalog": "turkey-mcp",
+ "description": "Unofficial read-only MCP servers for Turkish web services (EN/TR/FA)",
+ "servers": [
+  {
+   "description": "Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).",
+   "name": "tcmb-mcp",
+   "pypi": "tcmb-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/tcmb-mcp",
+   "title": "Central Bank of Türkiye — official FX rates",
+   "title_tr": "Türkiye Cumhuriyet Merkez Bankası — resmi döviz kurları",
+   "tools": [
+    {
+     "name": "tcmb_get_rates",
+     "summary": "Today's FX rates for all currencies"
+    },
+    {
+     "name": "tcmb_get_rate",
+     "summary": "Rate for one currency code (e.g. USD)"
+    },
+    {
+     "name": "tcmb_list_currencies",
+     "summary": "List all available currency codes"
+    },
+    {
+     "name": "tcmb_get_rates_on",
+     "summary": "Historical rates for a date (YYYYMMDD)"
+    }
+   ]
+  },
+  {
+   "name": "arabam-mcp",
+   "title": "arabam.com — used-car listings & market prices",
+   "title_tr": "arabam.com — ikinci el otomobil ilanları ve piyasa fiyatları",
+   "description": "Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
+   "repository": "https://github.com/mohammad-abbasi-sh/arabam-mcp",
+   "pypi": "arabam-mcp",
+   "tools": [
+    {
+     "name": "arabam_search",
+     "summary": "Search listings by brand/model slug, paged"
+    },
+    {
+     "name": "arabam_listing_detail",
+     "summary": "Full 19-field spec table + price for one listing"
+    },
+    {
+     "name": "arabam_list_brands",
+     "summary": "All ~77 brands with counts and slugs"
+    },
+    {
+     "name": "arabam_list_models",
+     "summary": "Models of a brand with counts and slugs"
+    },
+    {
+     "name": "arabam_price_stats",
+     "summary": "Min/max/median/average price over N pages"
+    }
+   ]
+  }
+ ]
+}
