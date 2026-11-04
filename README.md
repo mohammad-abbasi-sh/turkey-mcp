@@ -12,6 +12,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | Server | Service | Tools | Install |
 |--------|---------|-------|---------|
 | [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp) | Central Bank of Türkiye — official FX rates | 4 | `uvx tcmb-mcp` |
+| [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp) | arabam.com — used-car listings & market prices | 5 | `uvx arabam-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
