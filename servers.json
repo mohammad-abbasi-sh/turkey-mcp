@@ -57,6 +57,32 @@
      "summary": "Min/max/median/average price over N pages"
     }
    ]
+  },
+  {
+   "name": "emlakjet-mcp",
+   "title": "emlakjet.com — real-estate listings, districts & price stats",
+   "title_tr": "emlakjet.com — emlak ilanları, ilçeler ve fiyat istatistikleri",
+   "description": "Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
+   "repository": "https://github.com/mohammad-abbasi-sh/emlakjet-mcp",
+   "pypi": "emlakjet-mcp",
+   "tools": [
+    {
+     "name": "emlakjet_search",
+     "summary": "Search listings by city/district, rooms, price, area"
+    },
+    {
+     "name": "emlakjet_listing_detail",
+     "summary": "Full detail + 14 spec fields for one listing"
+    },
+    {
+     "name": "emlakjet_list_districts",
+     "summary": "Districts of a city with listing pages"
+    },
+    {
+     "name": "emlakjet_price_stats",
+     "summary": "Min/max/median/average price + median per m²"
+    }
+   ]
   }
  ]
 }
