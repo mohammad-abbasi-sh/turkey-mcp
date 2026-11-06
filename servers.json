@@ -147,6 +147,36 @@
      "summary": "Recent customer reviews: author, rating, text, date"
     }
    ]
+  },
+  {
+   "name": "n11-mcp",
+   "title": "n11.com — shopping search, product details & price stats",
+   "title_tr": "n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+   "description": "Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
+   "repository": "https://github.com/mohammad-abbasi-sh/n11-mcp",
+   "pypi": "n11-mcp",
+   "tools": [
+    {
+     "name": "n11_search",
+     "summary": "Search products by keyword, sort by price or relevance"
+    },
+    {
+     "name": "n11_product_detail",
+     "summary": "Detail of one product: price, stock, seller, rating, category"
+    },
+    {
+     "name": "n11_list_categories",
+     "summary": "The 11 top categories with URLs and slugs"
+    },
+    {
+     "name": "n11_price_stats",
+     "summary": "Price stats for a query: min/median/mean/max in TRY"
+    },
+    {
+     "name": "n11_product_reviews",
+     "summary": "Recent customer reviews: reviewer and star rating"
+    }
+   ]
   }
  ]
 }
