@@ -177,6 +177,36 @@
      "summary": "Recent customer reviews: reviewer and star rating"
     }
    ]
+  },
+  {
+   "name": "ciceksepeti-mcp",
+   "title": "ciceksepeti.com — flowers & gifts search, details & price stats",
+   "title_tr": "ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
+   "description": "Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
+   "repository": "https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp",
+   "pypi": "ciceksepeti-mcp",
+   "tools": [
+    {
+     "name": "ciceksepeti_search",
+     "summary": "Search flowers & gifts by keyword, sort by price or relevance"
+    },
+    {
+     "name": "ciceksepeti_product_detail",
+     "summary": "Detail of one product: price, stock, seller, rating, category"
+    },
+    {
+     "name": "ciceksepeti_list_categories",
+     "summary": "89 flower/plant/gift categories with URLs and slugs"
+    },
+    {
+     "name": "ciceksepeti_price_stats",
+     "summary": "Price stats for a query: min/median/mean/max in TRY"
+    },
+    {
+     "name": "ciceksepeti_product_reviews",
+     "summary": "Recent customer reviews: reviewer, star rating, date"
+    }
+   ]
   }
  ]
 }
