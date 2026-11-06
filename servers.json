@@ -207,6 +207,36 @@
      "summary": "Recent customer reviews: reviewer, star rating, date"
     }
    ]
+  },
+  {
+   "name": "obilet-mcp",
+   "title": "obilet.com — bus journeys, locations & flight summary",
+   "title_tr": "obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
+   "description": "Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
+   "repository": "https://github.com/mohammad-abbasi-sh/obilet-mcp",
+   "pypi": "obilet-mcp",
+   "tools": [
+    {
+     "name": "obilet_search_locations",
+     "summary": "Search bus/flight locations by name"
+    },
+    {
+     "name": "obilet_search_bus_journeys",
+     "summary": "Bus journeys for a route + date, sorted by price, departure or duration"
+    },
+    {
+     "name": "obilet_journey_detail",
+     "summary": "Full detail of one journey: stops, prices, features"
+    },
+    {
+     "name": "obilet_price_stats",
+     "summary": "Price stats for a route + date: min/median/mean/max in TRY"
+    },
+    {
+     "name": "obilet_flight_summary",
+     "summary": "Flight summary: count, min/max price, durations, airlines"
+    }
+   ]
   }
  ]
 }
