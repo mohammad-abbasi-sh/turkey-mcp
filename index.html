@@ -156,7 +156,7 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 [data-theme="dark"] .badge-verified{color:var(--secondary)}
 .badge-unverified{background:#FDECEC;color:#B42318}
 [data-theme="dark"] .badge-unverified{background:#3A1D1D;color:#FF9A94}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--primary-soft);color:var(--primary);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--primary-soft);color:var(--primary);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;white-space:nowrap}
 .chip.mint{background:var(--secondary-soft);color:#0B7A6E}
 [data-theme="dark"] .chip.mint{color:var(--secondary)}
 .star-btn{border:1px solid var(--line);background:var(--card);border-radius:10px;width:36px;height:36px;font-size:17px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center}
@@ -407,14 +407,14 @@ const CATEGORIES = [
 const catCount = id => SERVERS.filter(s=>s.cat===id).length;
 
 const PLATFORMS_VERIFIED = [
- {id:"claude-code",name:"Claude Code",icon:"⌘",desc:"CLI agent — connect with one terminal command."},
- {id:"cursor",name:"Cursor",icon:"▸",desc:"AI code editor — add the server in MCP settings."},
- {id:"claude-desktop",name:"Claude Desktop",icon:"▣",desc:"Desktop app — add the server to its config file."},
- {id:"vscode",name:"VS Code",icon:"◈",desc:"Any MCP-compatible editor via a stdio config."}
+ {id:"claude-code",name:"Claude Code",icon:"⌘",desc:{fa:"ایجنت خط فرمان — با یک دستور ترمینال وصل می‌شود.",tr:"Komut satırı ajanı — tek bir terminal komutuyla bağlanın.",en:"CLI agent — connect with one terminal command."}},
+ {id:"cursor",name:"Cursor",icon:"▸",desc:{fa:"ویرایشگر کد هوش مصنوعی — سرور را در تنظیمات MCP اضافه کنید.",tr:"Yapay zekâ kod düzenleyicisi — sunucuyu MCP ayarlarından ekleyin.",en:"AI code editor — add the server in MCP settings."}},
+ {id:"claude-desktop",name:"Claude Desktop",icon:"▣",desc:{fa:"برنامهٔ دسکتاپ — سرور را به فایل تنظیماتش اضافه کنید.",tr:"Masaüstü uygulaması — sunucuyu yapılandırma dosyasına ekleyin.",en:"Desktop app — add the server to its config file."}},
+ {id:"vscode",name:"VS Code",icon:"◈",desc:{fa:"هر ویرایشگر سازگار با MCP، با یک تنظیم stdio.",tr:"stdio yapılandırmasıyla MCP uyumlu her düzenleyici.",en:"Any MCP-compatible editor via a stdio config."}}
 ];
 const PLATFORMS_UNVERIFIED = [
- {id:"chatgpt",name:"ChatGPT",icon:"✦",desc:"Web app — local stdio servers are not verified here."},
- {id:"gemini",name:"Gemini",icon:"✧",desc:"Web app — local stdio servers are not verified here."}
+ {id:"chatgpt",name:"ChatGPT",icon:"✦",desc:{fa:"وب‌اپ — سرورهای stdio محلی اینجا تأیید نشده‌اند.",tr:"Web uygulaması — yerel stdio sunucuları burada doğrulanmadı.",en:"Web app — local stdio servers are not verified here."}},
+ {id:"gemini",name:"Gemini",icon:"✧",desc:{fa:"وب‌اپ — سرورهای stdio محلی اینجا تأیید نشده‌اند.",tr:"Web uygulaması — yerel stdio sunucuları burada doğrulanmadı.",en:"Web app — local stdio servers are not verified here."}}
 ];
 
 const SKILLS = [
@@ -566,7 +566,7 @@ fa:{
  nav_profile:"پروفایل", nav_logout:"خروج", nav_menu:"منو",
  hero_title:"هوش مصنوعی را به دنیای واقعی متصل کن",
  hero_sub:"سرورهای MCP فقط‌خواندنی برای سرویس‌های ترکیه: خرید، خودرو، املاک، سفر و نرخ ارز — وصل‌شونده به Claude Code، Cursor و Claude Desktop. بدون کلید API، بدون حساب.",
- hero_search_ph:"نام سرویس یا ابزار را جست‌وجو کن؛ مثلاً بلیط اتوبوس…",
+ hero_search_ph:"نام سرویس یا ابزار را جستجو کن؛ مثلاً بلیط اتوبوس…",
  hero_cta1:"کاوش ابزارهای MCP", hero_cta2:"چطور کار می‌کند؟",
  stat_servers:"سرور MCP", stat_tools:"ابزار", stat_skills:"مهارت ایجنت", stat_langs:"زبان",
  demo_title:"زنده امتحان کن", demo_note:"مقادیر زیر در ۱۵ آبان ۱۴۰۵ به‌صورت زنده بررسی شده‌اند؛ دادهٔ زنده نیستند.",
@@ -582,7 +582,7 @@ fa:{
  cat_communication:"ارتباطات", cat_communication_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_development:"توسعه", cat_development_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_data:"داده و تحلیل", cat_data_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
- cat_coming:"به‌زودی", cat_servers:"سرور", view_all:"مشاهدهٔ همه",
+ cat_coming:"به‌زودی", cat_servers:"سرور", cat_server_one:"سرور", view_all:"مشاهدهٔ همه",
  feat_title:"سرورهای منتخب MCP", feat_sub:"هشت سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
  feat_badge:"منتخب", status_available:"در دسترس", tools_count:"ابزار",
  details:"جزئیات", docs:"مستندات", connect:"اتصال", add_fav:"افزودن به علاقه‌مندی‌ها", remove_fav:"حذف از علاقه‌مندی‌ها",
@@ -605,7 +605,7 @@ fa:{
  foot_privacy:"حریم خصوصی", foot_terms:"شرایط استفاده", foot_rights:"همهٔ حقوق محفوظ است.",
  foot_follow:"ما را دنبال کن",
  mp_title:"بازارچهٔ MCP", mp_sub:"همهٔ سرورهای کاتالوگ — جست‌وجو، فیلتر و مرتب‌سازی.",
- mp_search_ph:"جست‌وجو در سرورها، مهارت‌ها، آموزش‌ها و مقاله‌ها…",
+ mp_search_ph:"جستجو در سرورها، مهارت‌ها، آموزش‌ها و مقاله‌ها…",
  f_category:"دسته‌بندی", f_platform:"پلتفرم", f_connection:"نوع اتصال", f_status:"وضعیت",
  f_all:"همه", f_stdio:"stdio (محلی)", f_available:"در دسترس",
  sort:"مرتب‌سازی", sort_popular:"بیشترین ابزار (نمایندهٔ محبوبیت)", sort_newest:"جدیدترین در کاتالوگ", sort_alpha:"الفبایی",
@@ -618,7 +618,7 @@ fa:{
  back:"بازگشت",
  cats_page_title:"دسته‌بندی‌ها", cats_page_sub:"شش دستهٔ واقعی با سرور زنده، و دسته‌هایی که هنوز در این کاتالوگ نیستند.",
  skills_page_title:"بازارچهٔ مهارت‌ها", skills_page_sub:"مهارت‌های ایجنت ساخته‌شده برای خلأهای واقعی اکوسیستم Claude.",
- skills_search_ph:"جست‌وجو در مهارت‌ها…",
+ skills_search_ph:"جستجو در مهارت‌ها…",
  tut_page_title:"آموزش‌ها", tut_page_sub:"از نصب تا عیب‌یابی — همه با دستورهای واقعی.",
  blog_page_title:"وبلاگ", blog_page_sub:"مقاله‌های آموزشی دربارهٔ MCP و سرورهای ترکیه.",
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
@@ -652,7 +652,7 @@ fa:{
  nf_title:"صفحه پیدا نشد", nf_sub:"نشانی‌ای که باز کردی در این کاتالوگ وجود ندارد.", nf_home:"رفتن به خانه",
  theme_light:"روشن", theme_dark:"تیره", lang_name:"زبان",
  logout_ok:"با موفقیت خارج شدی.", fav_added:"به علاقه‌مندی‌ها اضافه شد.", fav_removed:"از علاقه‌مندی‌ها حذف شد.",
- search_in:"جست‌وجو در", match_servers:"سرورها", match_skills:"مهارت‌ها", match_tuts:"آموزش‌ها", match_arts:"مقاله‌ها"
+ search_in:"جستجو در", match_servers:"سرورها", match_skills:"مهارت‌ها", match_tuts:"آموزش‌ها", match_arts:"مقاله‌ها"
 },
 tr:{
  a11y_skip:"İçeriğe atla", brand_tag:"Türkiye MCP Kataloğu",
@@ -678,7 +678,7 @@ tr:{
  cat_communication:"İletişim", cat_communication_d:"Yakında — bu katalog için planlanmadı",
  cat_development:"Geliştirme", cat_development_d:"Yakında — bu katalog için planlanmadı",
  cat_data:"Veri ve Analitik", cat_data_d:"Yakında — bu katalog için planlanmadı",
- cat_coming:"Yakında", cat_servers:"sunucu", view_all:"Tümünü Gör",
+ cat_coming:"Yakında", cat_servers:"sunucu", cat_server_one:"sunucu", view_all:"Tümünü Gör",
  feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş sekiz salt okunur sunucu — doğrulanmamış iddia yok.",
  feat_badge:"Öne Çıkan", status_available:"Kullanılabilir", tools_count:"araç",
  details:"Detaylar", docs:"Belgeler", connect:"Bağlan", add_fav:"Favorilere ekle", remove_fav:"Favorilerden çıkar",
@@ -774,7 +774,7 @@ en:{
  cat_communication:"Communication", cat_communication_d:"Coming soon — not planned for this catalog",
  cat_development:"Development", cat_development_d:"Coming soon — not planned for this catalog",
  cat_data:"Data & Analytics", cat_data_d:"Coming soon — not planned for this catalog",
- cat_coming:"Coming soon", cat_servers:"servers", view_all:"View All",
+ cat_coming:"Coming soon", cat_servers:"servers", cat_server_one:"server", view_all:"View All",
  feat_title:"Featured MCP Servers", feat_sub:"Eight read-only servers built with real tests — no unverified claims.",
  feat_badge:"Featured", status_available:"Available", tools_count:"tools",
  details:"Details", docs:"Docs", connect:"Connect", add_fav:"Add to favorites", remove_fav:"Remove from favorites",
@@ -990,7 +990,7 @@ function catCard(c){
     <span class="ic" style="background:${c.color}22;color:${c.color}">${c.icon}</span>
     <h3>${esc(catName(c.id))}</h3>
     <p>${esc(catDesc(c.id))}</p>
-    ${c.soon?`<span class="badge badge-soon">${t("cat_coming")}</span>`:`<span class="chip">${fmtNum(n)} ${t("cat_servers")}</span>`}
+    ${c.soon?`<span class="badge badge-soon">${t("cat_coming")}</span>`:`<span class="chip">${fmtNum(n)} ${n===1?t("cat_server_one"):t("cat_servers")}</span>`}
   </article>`;
 }
 function emptyHTML(hint){
@@ -1020,7 +1020,7 @@ function heroHTML(){
         <div><b>${fmtNum(SERVERS.length)}</b><span>${t("stat_servers")}</span></div>
         <div><b>${fmtNum(TOTAL_TOOLS)}</b><span>${t("stat_tools")}</span></div>
         <div><b>${fmtNum(SKILLS.length)}</b><span>${t("stat_skills")}</span></div>
-        <div><b>3</b><span>${t("stat_langs")}</span></div>
+        <div><b>${fmtNum(3)}</b><span>${t("stat_langs")}</span></div>
       </div>
     </div>
     <div>
@@ -1050,10 +1050,10 @@ function homeHTML(){
   <section class="section"><div class="wrap">
     ${sectionHead("◆", t("plat_title"), t("plat_sub"))}
     <h3 style="font-size:16px;margin-bottom:12px"><span class="badge badge-verified">✓ ${t("plat_verified")}</span></h3>
-    <div class="plat-grid">${PLATFORMS_VERIFIED.map(p=>`<article class="card plat-card"><span class="logo">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><span class="badge badge-verified">✓ ${t("plat_verified")}</span></article>`).join("")}</div>
+    <div class="plat-grid">${PLATFORMS_VERIFIED.map(p=>`<article class="card plat-card"><span class="logo">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc[state.lang]||p.desc.en)}</p><span class="badge badge-verified">✓ ${t("plat_verified")}</span></article>`).join("")}</div>
     <p style="color:var(--muted);font-size:13.5px;margin:14px 0 8px">${t("plat_verified_note")}</p>
     <h3 style="font-size:16px;margin:18px 0 12px"><span class="badge badge-unverified">! ${t("plat_unverified")}</span></h3>
-    <div class="plat-grid">${PLATFORMS_UNVERIFIED.map(p=>`<article class="card plat-card"><span class="logo" style="opacity:.55">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><span class="badge badge-unverified">! ${t("plat_unverified")}</span></article>`).join("")}</div>
+    <div class="plat-grid">${PLATFORMS_UNVERIFIED.map(p=>`<article class="card plat-card"><span class="logo" style="opacity:.55">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc[state.lang]||p.desc.en)}</p><span class="badge badge-unverified">! ${t("plat_unverified")}</span></article>`).join("")}</div>
     <p style="color:var(--muted);font-size:13.5px;margin-top:14px">${t("plat_unverified_note")}</p>
   </div></section>
   <section class="section" id="how"><div class="wrap">
@@ -1514,7 +1514,7 @@ window.App = {
     const h=(location.hash||"").replace(/^#\/?/,""); const parts=h.split("/").filter(Boolean);
     if(["fa","tr","en"].includes(parts[0])) parts[0]=l; else parts.unshift(l);
     location.hash = "#/"+parts.join("/"); render(); },
-  toggleTheme(){ state.theme = state.theme==="dark"?"light":"dark"; store.set("tmp_theme", state.theme); document.documentElement.setAttribute("data-theme", state.theme); },
+  toggleTheme(){ state.theme = state.theme==="dark"?"light":"dark"; store.set("tmp_theme", state.theme); document.documentElement.setAttribute("data-theme", state.theme); const b=document.querySelector('button[onclick="App.toggleTheme()"]'); if(b){ const l=t(state.theme==="dark"?"theme_light":"theme_dark"); b.textContent=state.theme==="dark"?"☀️":"🌙"; b.setAttribute("aria-label",l); b.setAttribute("title",l); } },
   toggleMenu(){ const m=document.getElementById("mobile-menu"); if(m) m.classList.toggle("open"); },
   toggleFav(type,id,ev){ if(ev) ev.stopPropagation();
     let f = favs(); const i = f.findIndex(x=>x.type===type&&x.id===id);
