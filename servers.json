@@ -117,6 +117,36 @@
      "summary": "Trending/popular services and most-searched combos"
     }
    ]
+  },
+  {
+   "name": "hepsiburada-mcp",
+   "title": "hepsiburada.com — shopping search, product details & price stats",
+   "title_tr": "hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+   "description": "Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY).",
+   "repository": "https://github.com/mohammad-abbasi-sh/hepsiburada-mcp",
+   "pypi": "hepsiburada-mcp",
+   "tools": [
+    {
+     "name": "hepsiburada_search",
+     "summary": "Search products by keyword, sort by price or relevance"
+    },
+    {
+     "name": "hepsiburada_product_detail",
+     "summary": "Detail of one product: price, stock, seller, GTIN, highlights"
+    },
+    {
+     "name": "hepsiburada_list_categories",
+     "summary": "The 9 top categories with URLs and ids"
+    },
+    {
+     "name": "hepsiburada_price_stats",
+     "summary": "Price stats for a query: min/median/mean/max in TRY"
+    },
+    {
+     "name": "hepsiburada_product_reviews",
+     "summary": "Recent customer reviews: author, rating, text, date"
+    }
+   ]
   }
  ]
 }
