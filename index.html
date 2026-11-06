@@ -857,7 +857,7 @@ const state = {
   lang: store.get("tmp_lang", null) || ((navigator.language||"fa").slice(0,2)==="tr"?"tr":(navigator.language||"").slice(0,2)==="en"?"en":"fa"),
   theme: store.get("tmp_theme", null) || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
   user: store.get("tmp_session_v1", null),
-  page: "home", param: null
+  page: "home", param: null, anchor: null
 };
 if(!["fa","tr","en"].includes(state.lang)) state.lang = "fa";
 function t(k){ const d = I18N[state.lang]||I18N.en; return d[k]!==undefined?d[k]:(I18N.en[k]!==undefined?I18N.en[k]:k); }
@@ -889,7 +889,12 @@ function fallbackCopy(txt, done){ const ta=document.createElement("textarea"); t
 /* ---------------- router ---------------- */
 const PAGES = ["home","marketplace","tool","categories","skills","skill","tutorials","tutorial","blog","article","about","contact","login","register","dashboard","favorites","profile"];
 function parseHash(){
-  const h = (location.hash||"").replace(/^#\/?/,"");
+  const raw = location.hash||"";
+  if(raw && !raw.startsWith("#/")){
+    const id = raw.slice(1);
+    if(/^[A-Za-z][\w-]*$/.test(id)){ state.anchor = id; return; }
+  }
+  const h = raw.replace(/^#\/?/,"");
   const parts = h.split("/").filter(Boolean);
   let lang = parts[0], page = parts[1]||"home", param = parts[2]||null;
   if(!["fa","tr","en"].includes(lang)){ lang = state.lang; page = parts[0]||"home"; param = parts[1]||null; }
@@ -1500,6 +1505,7 @@ function render(){
   const app = document.getElementById("app");
   app.innerHTML = headerHTML() + '<main id="main">' + pageHTML() + '</main>' + footerHTML();
   const skip = document.querySelector(".skip"); if(skip) skip.textContent = t("a11y_skip");
+  if(state.anchor){ const el=document.getElementById(state.anchor); if(el) el.scrollIntoView(); state.anchor=null; }
   if(state.page==="home") startDemo();
 }
 
@@ -1588,7 +1594,7 @@ window.App = {
 };
 
 /* ---------------- init ---------------- */
-window.addEventListener("hashchange", ()=>{ render(); window.scrollTo({top:0}); });
+window.addEventListener("hashchange", ()=>{ render(); const h=location.hash||""; if(h.startsWith("#/") || !h) window.scrollTo({top:0}); });
 if(!location.hash) location.hash = "#/"+state.lang+"/";
 render();
 </script>
