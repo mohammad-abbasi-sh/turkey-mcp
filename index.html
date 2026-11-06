@@ -272,7 +272,6 @@ footer.site{margin-top:90px;border-top:1px solid var(--line);background:var(--ca
   .section-head h2{font-size:24px}
   .grid-4,.grid-3,.grid-2,.plat-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
-  .btn-login-text{display:none}
   .hero-search{flex-direction:column;border-radius:20px;padding:10px}
   .hero-search .btn{width:100%}
 }
@@ -562,8 +561,8 @@ fa:{
  a11y_skip:"پرش به محتوا", brand_tag:"کاتالوگ MCP ترکیه",
  nav_home:"خانه", nav_marketplace:"بازارچه MCP", nav_categories:"دسته‌بندی‌ها", nav_skills:"مهارت‌ها",
  nav_tutorials:"آموزش‌ها", nav_blog:"وبلاگ", nav_about:"درباره ما", nav_contact:"تماس",
- nav_login:"ورود", nav_register:"ثبت‌نام", nav_dashboard:"داشبورد", nav_favorites:"علاقه‌مندی‌ها",
- nav_profile:"پروفایل", nav_logout:"خروج", nav_menu:"منو",
+ nav_favorites:"علاقه‌مندی‌ها",
+ nav_menu:"منو",
  hero_title:"هوش مصنوعی را به دنیای واقعی متصل کن",
  hero_sub:"سرورهای MCP فقط‌خواندنی برای سرویس‌های ترکیه: خرید، خودرو، املاک، سفر و نرخ ارز — وصل‌شونده به Claude Code، Cursor و Claude Desktop. بدون کلید API، بدون حساب.",
  hero_search_ph:"نام سرویس یا ابزار را جستجو کن؛ مثلاً بلیط اتوبوس…",
@@ -625,41 +624,21 @@ fa:{
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
  about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
  about_catalog_t:"کاتالوگ", about_catalog_d:"۸ سرور، ۳۹ ابزار، همه فقط‌خواندنی و روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی (۲۴ تا ۳۷ تست) تأیید شده است.",
- contact_title:"تماس با ما", contact_sub:"سؤال، پیشنهاد یا گزارش مشکل — پیامت را بفرست؛ فعلاً فقط در همین صفحه تأیید می‌شود و به جایی ارسال نمی‌شود.",
- contact_name:"نام", contact_email:"ایمیل", contact_subject:"موضوع", contact_message:"پیام",
- contact_send:"ارسال پیام", contact_sent:"پیامت دریافت شد — ممنون! توجه: این نسخه بدون بک‌اند است و پیام ذخیره نمی‌شود.",
- contact_note:"این فرم نمایشی است؛ بدون سرور، پیام به جایی ارسال نمی‌شود.",
- err_required:"این فیلد الزامی است.", err_email:"ایمیل معتبر وارد کن.", err_msg_len:"پیام باید حداقل ۱۰ کاراکتر باشد.",
- auth_login_t:"ورود به حساب", auth_login_s:"به حساب نمایشی خودت وارد شو.",
- auth_reg_t:"ساخت حساب", auth_reg_s:"یک حساب نمایشی بساز — فقط در همین مرورگر ذخیره می‌شود.",
- auth_name:"نام نمایشی", auth_email:"ایمیل", auth_pass:"گذرواژه", auth_pass2:"تکرار گذرواژه",
- auth_login_btn:"ورود", auth_reg_btn:"ثبت‌نام",
- auth_no_acc:"حساب نداری؟ ثبت‌نام کن", auth_has_acc:"حساب داری؟ وارد شو",
- auth_err_email:"ایمیل معتبر وارد کن.", auth_err_pass:"گذرواژه حداقل ۶ کاراکتر باشد.",
- auth_err_name:"نام را وارد کن.", auth_err_match:"گذرواژه‌ها یکی نیستند.",
- auth_err_exists:"این ایمیل قبلاً ثبت شده است.", auth_err_invalid:"ایمیل یا گذرواژه اشتباه است.",
- auth_ok_reg:"حسابت ساخته شد — خوش آمدی!", auth_ok_login:"خوش برگشتی!",
- auth_demo:"حساب نمایشی: ورود و ثبت‌نام فقط در همین مرورگر (localStorage) ذخیره می‌شوند و رمز عبور به‌صورت امن هش نمی‌شود. نسخهٔ نهایی به بک‌اند واقعی نیاز دارد.",
- auth_req:"برای دیدن این صفحه باید وارد شوی.", auth_req_go:"رفتن به ورود",
- dash_title:"داشبورد", dash_welcome:"سلام", dash_favs:"علاقه‌مندی‌ها", dash_recent:"اخیراً دیده‌شده",
- dash_account:"حساب من", dash_none:"هنوز چیزی اینجا نیست.", dash_none_hint:"از بازارچه یا مهارت‌ها، سرور و مهارت موردعلاقه‌ات را ستاره‌دار کن.",
+ contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
  fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
  fav_empty:"هنوز علاقه‌مندی نداری.", fav_empty_hint:"روی ستارهٔ هر سرور یا مهارت بزن تا اینجا ذخیره شود.",
- prof_title:"پروفایل", prof_sub:"نام نمایشی و ترجیح‌هایت را تغییر بده.",
- prof_name:"نام نمایشی", prof_lang:"زبان", prof_theme:"تم", prof_save:"ذخیره", prof_saved:"ذخیره شد.",
- prof_pass_t:"تغییر گذرواژه", prof_cur:"گذرواژهٔ فعلی", prof_new:"گذرواژهٔ جدید", prof_err_cur:"گذرواژهٔ فعلی اشتباه است.",
  nf_title:"صفحه پیدا نشد", nf_sub:"نشانی‌ای که باز کردی در این کاتالوگ وجود ندارد.", nf_home:"رفتن به خانه",
  theme_light:"روشن", theme_dark:"تیره", lang_name:"زبان",
- logout_ok:"با موفقیت خارج شدی.", fav_added:"به علاقه‌مندی‌ها اضافه شد.", fav_removed:"از علاقه‌مندی‌ها حذف شد.",
+ fav_added:"به علاقه‌مندی‌ها اضافه شد.", fav_removed:"از علاقه‌مندی‌ها حذف شد.",
  search_in:"جستجو در", match_servers:"سرورها", match_skills:"مهارت‌ها", match_tuts:"آموزش‌ها", match_arts:"مقاله‌ها"
 },
 tr:{
  a11y_skip:"İçeriğe atla", brand_tag:"Türkiye MCP Kataloğu",
  nav_home:"Ana Sayfa", nav_marketplace:"MCP Pazaryeri", nav_categories:"Kategoriler", nav_skills:"Beceriler",
  nav_tutorials:"Eğitimler", nav_blog:"Blog", nav_about:"Hakkımızda", nav_contact:"İletişim",
- nav_login:"Giriş Yap", nav_register:"Kayıt Ol", nav_dashboard:"Panel", nav_favorites:"Favoriler",
- nav_profile:"Profil", nav_logout:"Çıkış", nav_menu:"Menü",
+ nav_favorites:"Favoriler",
+ nav_menu:"Menü",
  hero_title:"Yapay Zekâyı Gerçek Dünyaya Bağla",
  hero_sub:"Türkiye servisleri için salt okunur MCP sunucuları: alışveriş, otomobil, emlak, seyahat ve döviz — Claude Code, Cursor ve Claude Desktop'a bağlanır. API anahtarı yok, hesap yok.",
  hero_search_ph:"Servis veya araç arayın; örn. otobüs bileti…",
@@ -721,41 +700,21 @@ tr:{
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
  about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
  about_catalog_t:"Katalog", about_catalog_d:"8 sunucu, 39 araç — hepsi salt okunur ve PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle (24–37 test) doğrulanmıştır.",
- contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi — mesajınızı gönderin; şimdilik yalnızca bu sayfada onaylanır, hiçbir yere gönderilmez.",
- contact_name:"Ad", contact_email:"E-posta", contact_subject:"Konu", contact_message:"Mesaj",
- contact_send:"Mesajı Gönder", contact_sent:"Mesajınız alındı — teşekkürler! Not: Bu sürümün arka ucu yoktur ve mesaj kaydedilmez.",
- contact_note:"Bu form tanıtım amaçlıdır; arka uç olmadan mesaj hiçbir yere gönderilmez.",
- err_required:"Bu alan zorunludur.", err_email:"Geçerli bir e-posta girin.", err_msg_len:"Mesaj en az 10 karakter olmalıdır.",
- auth_login_t:"Hesabınıza Giriş Yapın", auth_login_s:"Tanıtım hesabınıza giriş yapın.",
- auth_reg_t:"Hesap Oluşturun", auth_reg_s:"Tanıtım hesabı oluşturun — yalnızca bu tarayıcıda saklanır.",
- auth_name:"Görünen ad", auth_email:"E-posta", auth_pass:"Şifre", auth_pass2:"Şifreyi tekrar girin",
- auth_login_btn:"Giriş Yap", auth_reg_btn:"Kayıt Ol",
- auth_no_acc:"Hesabınız yok mu? Kayıt olun", auth_has_acc:"Hesabınız var mı? Giriş yapın",
- auth_err_email:"Geçerli bir e-posta girin.", auth_err_pass:"Şifre en az 6 karakter olmalıdır.",
- auth_err_name:"Adınızı girin.", auth_err_match:"Şifreler eşleşmiyor.",
- auth_err_exists:"Bu e-posta zaten kayıtlı.", auth_err_invalid:"E-posta veya şifre hatalı.",
- auth_ok_reg:"Hesabınız oluşturuldu — hoş geldiniz!", auth_ok_login:"Tekrar hoş geldiniz!",
- auth_demo:"Tanıtım hesabı: giriş ve kayıt yalnızca bu tarayıcıda (localStorage) saklanır ve şifre güvenli şekilde hash'lenmez. Son sürüm gerçek bir arka uç gerektirir.",
- auth_req:"Bu sayfayı görmek için giriş yapmalısınız.", auth_req_go:"Girişe git",
- dash_title:"Panel", dash_welcome:"Merhaba", dash_favs:"Favoriler", dash_recent:"Son görüntülenenler",
- dash_account:"Hesabım", dash_none:"Burada henüz bir şey yok.", dash_none_hint:"Pazaryerinden veya becerilerden sevdiğiniz sunucu ve becerileri yıldızlayın.",
+ contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
  fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
  fav_empty:"Henüz favoriniz yok.", fav_empty_hint:"Herhangi bir sunucu veya becerinin yıldızına dokunun, burada saklansın.",
- prof_title:"Profil", prof_sub:"Görünen adınızı ve tercihlerinizi değiştirin.",
- prof_name:"Görünen ad", prof_lang:"Dil", prof_theme:"Tema", prof_save:"Kaydet", prof_saved:"Kaydedildi.",
- prof_pass_t:"Şifre değiştir", prof_cur:"Mevcut şifre", prof_new:"Yeni şifre", prof_err_cur:"Mevcut şifre hatalı.",
  nf_title:"Sayfa bulunamadı", nf_sub:"Açtığınız adres bu katalogda yok.", nf_home:"Ana sayfaya git",
  theme_light:"Açık", theme_dark:"Koyu", lang_name:"Dil",
- logout_ok:"Başarıyla çıkış yaptınız.", fav_added:"Favorilere eklendi.", fav_removed:"Favorilerden çıkarıldı.",
+ fav_added:"Favorilere eklendi.", fav_removed:"Favorilerden çıkarıldı.",
  search_in:"Arama", match_servers:"Sunucular", match_skills:"Beceriler", match_tuts:"Eğitimler", match_arts:"Makaleler"
 },
 en:{
  a11y_skip:"Skip to content", brand_tag:"Turkey MCP Catalog",
  nav_home:"Home", nav_marketplace:"MCP Marketplace", nav_categories:"Categories", nav_skills:"Skills",
  nav_tutorials:"Tutorials", nav_blog:"Blog", nav_about:"About Us", nav_contact:"Contact",
- nav_login:"Log In", nav_register:"Sign Up", nav_dashboard:"Dashboard", nav_favorites:"Favorites",
- nav_profile:"Profile", nav_logout:"Log Out", nav_menu:"Menu",
+ nav_favorites:"Favorites",
+ nav_menu:"Menu",
  hero_title:"Connect AI to the World",
  hero_sub:"Read-only MCP servers for Turkish services: shopping, cars, real estate, travel and exchange rates — connecting to Claude Code, Cursor and Claude Desktop. No API key, no account.",
  hero_search_ph:"Search a service or tool; e.g. bus ticket…",
@@ -817,33 +776,13 @@ en:{
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
  about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
  about_catalog_t:"The catalog", about_catalog_d:"8 servers, 39 tools — all read-only and published on PyPI. Every server's code is on GitHub and each server is verified with real tests (24–37 tests).",
- contact_title:"Contact Us", contact_sub:"Questions, suggestions or bug reports — send your message; for now it is only confirmed on this page and sent nowhere.",
- contact_name:"Name", contact_email:"Email", contact_subject:"Subject", contact_message:"Message",
- contact_send:"Send Message", contact_sent:"Your message was received — thank you! Note: this version has no backend, so the message is not stored.",
- contact_note:"This form is a demo; without a server, the message is sent nowhere.",
- err_required:"This field is required.", err_email:"Enter a valid email.", err_msg_len:"The message must be at least 10 characters.",
- auth_login_t:"Log In to Your Account", auth_login_s:"Sign in to your demo account.",
- auth_reg_t:"Create an Account", auth_reg_s:"Create a demo account — stored only in this browser.",
- auth_name:"Display name", auth_email:"Email", auth_pass:"Password", auth_pass2:"Repeat password",
- auth_login_btn:"Log In", auth_reg_btn:"Sign Up",
- auth_no_acc:"No account? Sign up", auth_has_acc:"Have an account? Log in",
- auth_err_email:"Enter a valid email.", auth_err_pass:"Password must be at least 6 characters.",
- auth_err_name:"Enter your name.", auth_err_match:"Passwords do not match.",
- auth_err_exists:"This email is already registered.", auth_err_invalid:"Wrong email or password.",
- auth_ok_reg:"Your account was created — welcome!", auth_ok_login:"Welcome back!",
- auth_demo:"Demo account: login and registration are stored only in this browser (localStorage) and the password is not securely hashed. The production version needs a real backend.",
- auth_req:"You need to log in to see this page.", auth_req_go:"Go to log in",
- dash_title:"Dashboard", dash_welcome:"Hello", dash_favs:"Favorites", dash_recent:"Recently viewed",
- dash_account:"My account", dash_none:"Nothing here yet.", dash_none_hint:"Star servers and skills you like in the marketplace or skills pages.",
+ contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
  fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
  fav_empty:"No favorites yet.", fav_empty_hint:"Tap the star on any server or skill to save it here.",
- prof_title:"Profile", prof_sub:"Change your display name and preferences.",
- prof_name:"Display name", prof_lang:"Language", prof_theme:"Theme", prof_save:"Save", prof_saved:"Saved.",
- prof_pass_t:"Change password", prof_cur:"Current password", prof_new:"New password", prof_err_cur:"Current password is wrong.",
  nf_title:"Page not found", nf_sub:"The address you opened does not exist in this catalog.", nf_home:"Go home",
  theme_light:"Light", theme_dark:"Dark", lang_name:"Language",
- logout_ok:"You logged out.", fav_added:"Added to favorites.", fav_removed:"Removed from favorites.",
+ fav_added:"Added to favorites.", fav_removed:"Removed from favorites.",
  search_in:"Search in", match_servers:"Servers", match_skills:"Skills", match_tuts:"Tutorials", match_arts:"Articles"
 }};
 const LANGS = {fa:{name:"فارسی",dir:"rtl",locale:"fa-IR"},tr:{name:"Türkçe",dir:"ltr",locale:"tr-TR"},en:{name:"English",dir:"ltr",locale:"en-US"}};
@@ -856,7 +795,6 @@ const store = {
 const state = {
   lang: store.get("tmp_lang", null) || ((navigator.language||"fa").slice(0,2)==="tr"?"tr":(navigator.language||"").slice(0,2)==="en"?"en":"fa"),
   theme: store.get("tmp_theme", null) || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
-  user: store.get("tmp_session_v1", null),
   page: "home", param: null, anchor: null
 };
 if(!["fa","tr","en"].includes(state.lang)) state.lang = "fa";
@@ -873,9 +811,6 @@ function serverDesc(s){ return state.lang==="fa"?s.desc_fa:state.lang==="tr"?s.d
 function toolSum(tl){ return state.lang==="fa"?tl.sf:state.lang==="tr"?tl.st:tl.s; }
 function skillTag(k){ return state.lang==="fa"?k.tag_fa:state.lang==="tr"?k.tag_tr:k.tag; }
 function skillGap(k){ return state.lang==="fa"?k.gap_fa:state.lang==="tr"?k.gap_tr:k.gap; }
-function hashPass(p){ let h=5381; for(let i=0;i<p.length;i++){ h=((h<<5)+h+p.charCodeAt(i))>>>0; } return "d"+h.toString(16); }
-function users(){ return store.get("tmp_users_v1", []); }
-function saveUsers(u){ store.set("tmp_users_v1", u); }
 function favs(){ return store.get("tmp_favs_v1", []); }
 function isFav(type,id){ return favs().some(f=>f.type===type&&f.id===id); }
 function recent(){ return store.get("tmp_recent_v1", []); }
@@ -887,7 +822,7 @@ function copyText(txt, msg){ const done=()=>toast(msg||t("tool_copied"));
 function fallbackCopy(txt, done){ const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{ document.execCommand("copy"); }catch(e){} document.body.removeChild(ta); done(); }
 
 /* ---------------- router ---------------- */
-const PAGES = ["home","marketplace","tool","categories","skills","skill","tutorials","tutorial","blog","article","about","contact","login","register","dashboard","favorites","profile"];
+const PAGES = ["home","marketplace","tool","categories","skills","skill","tutorials","tutorial","blog","article","about","contact","favorites"];
 function parseHash(){
   const raw = location.hash||"";
   if(raw && !raw.startsWith("#/")){
@@ -905,14 +840,8 @@ function go(page, param){ location.hash = hashFor(page, param); window.scrollTo(
 
 /* ---------------- shared components ---------------- */
 function headerHTML(){
-  const u = state.user;
   const navItems = [["home","nav_home"],["marketplace","nav_marketplace"],["categories","nav_categories"],["skills","nav_skills"],["tutorials","nav_tutorials"],["blog","nav_blog"],["about","nav_about"],["contact","nav_contact"]];
   const nav = navItems.map(([p,k])=>`<a href="${hashFor(p)}" class="${state.page===p||(p==="marketplace"&&state.page==="tool")||(p==="skills"&&state.page==="skill")||(p==="tutorials"&&state.page==="tutorial")||(p==="blog"&&state.page==="article")?"active":""}">${t(k)}</a>`).join("");
-  const authBtns = u
-    ? `<a class="btn btn-ghost btn-sm" href="${hashFor("dashboard")}">${esc(u.name)} · ${t("nav_dashboard")}</a>
-       <button class="icon-btn" onclick="App.logout()" title="${t("nav_logout")}" aria-label="${t("nav_logout")}">⎋</button>`
-    : `<a class="btn btn-ghost btn-sm btn-login-text" href="${hashFor("login")}">${t("nav_login")}</a>
-       <a class="btn btn-primary btn-sm" href="${hashFor("register")}">${t("nav_register")}</a>`;
   return `<header class="site"><div class="wrap nav">
     <a class="brand" href="${hashFor("home")}"><span class="mark">T</span><span>Turkey MCP<small>${t("brand_tag")}</small></span></a>
     <nav class="main" aria-label="main">${nav}</nav>
@@ -921,13 +850,12 @@ function headerHTML(){
         ${Object.keys(LANGS).map(l=>`<option value="${l}" ${l===state.lang?"selected":""}>${LANGS[l].name}</option>`).join("")}
       </select>
       <button class="icon-btn" onclick="App.toggleTheme()" aria-label="${state.theme==="dark"?t("theme_light"):t("theme_dark")}" title="${state.theme==="dark"?t("theme_light"):t("theme_dark")}">${state.theme==="dark"?"☀️":"🌙"}</button>
-      ${authBtns}
+      <a class="icon-btn" href="${hashFor("favorites")}" title="${t("nav_favorites")}" aria-label="${t("nav_favorites")}">★</a>
       <button class="icon-btn burger" onclick="App.toggleMenu()" aria-label="${t("nav_menu")}">☰</button>
     </div>
   </div>
   <div class="mobile-menu" id="mobile-menu">${navItems.map(([p,k])=>`<a href="${hashFor(p)}">${t(k)}</a>`).join("")}
-    ${u?`<a href="${hashFor("dashboard")}">${t("nav_dashboard")}</a><a href="${hashFor("favorites")}">${t("nav_favorites")}</a><a href="${hashFor("profile")}">${t("nav_profile")}</a>`
-       :`<a href="${hashFor("login")}">${t("nav_login")}</a><a href="${hashFor("register")}">${t("nav_register")}</a>`}
+    <a href="${hashFor("favorites")}">${t("nav_favorites")}</a>
   </div></header>`;
 }
 function footerHTML(){
@@ -1301,52 +1229,13 @@ function contactHTML(){
     <div class="form-card" style="max-width:620px">
       <h1>${t("contact_title")}</h1>
       <p class="sub">${t("contact_sub")}</p>
-      <div id="contact-alert"></div>
-      <form onsubmit="return App.submitContact(event)" novalidate>
-        <div class="field" id="f-c-name"><label for="c-name">${t("contact_name")}</label><input id="c-name" type="text" autocomplete="name"><p class="err">${t("err_required")}</p></div>
-        <div class="field" id="f-c-email"><label for="c-email">${t("contact_email")}</label><input id="c-email" type="email" autocomplete="email" dir="ltr" style="text-align:start"><p class="err">${t("err_email")}</p></div>
-        <div class="field" id="f-c-subject"><label for="c-subject">${t("contact_subject")}</label><input id="c-subject" type="text"><p class="err">${t("err_required")}</p></div>
-        <div class="field" id="f-c-msg"><label for="c-msg">${t("contact_message")}</label><textarea id="c-msg" rows="5"></textarea><p class="err">${t("err_msg_len")}</p></div>
-        <button class="btn btn-primary btn-block" type="submit">${t("contact_send")}</button>
-      </form>
-      <p class="note">${t("contact_note")}</p>
+      <p style="display:grid;gap:12px;margin-top:24px">
+        <a class="btn btn-primary btn-block" href="https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new" target="_blank" rel="noopener">${t("contact_gh_issue")}</a>
+        <a class="btn btn-ghost btn-block" href="https://github.com/mohammad-abbasi-sh" target="_blank" rel="noopener">${t("contact_gh_profile")}</a>
+        <a class="btn btn-ghost btn-block" href="https://www.linkedin.com/in/mohammad-abbasi-sh/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
     </div>
   </div></section>`;
-}
-function needLoginHTML(){
-  return `<section class="section"><div class="wrap"><div class="form-card" style="text-align:center">
-    <h1>🔒 ${t("auth_req")}</h1>
-    <p class="sub">${t("auth_demo")}</p>
-    <a class="btn btn-primary" href="${hashFor("login")}">${t("auth_req_go")}</a>
-  </div></div></section>`;
-}
-function loginHTML(){
-  return `<section class="section"><div class="wrap"><div class="form-card">
-    <h1>${t("auth_login_t")}</h1><p class="sub">${t("auth_login_s")}</p>
-    <div id="login-alert"></div>
-    <form onsubmit="return App.submitLogin(event)" novalidate>
-      <div class="field" id="f-l-email"><label for="l-email">${t("auth_email")}</label><input id="l-email" type="email" autocomplete="email" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_email")}</p></div>
-      <div class="field" id="f-l-pass"><label for="l-pass">${t("auth_pass")}</label><input id="l-pass" type="password" autocomplete="current-password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_pass")}</p></div>
-      <button class="btn btn-primary btn-block" type="submit">${t("auth_login_btn")}</button>
-    </form>
-    <p style="text-align:center;margin-top:16px"><a href="${hashFor("register")}">${t("auth_no_acc")}</a></p>
-    <p class="note">${t("auth_demo")}</p>
-  </div></div></section>`;
-}
-function registerHTML(){
-  return `<section class="section"><div class="wrap"><div class="form-card">
-    <h1>${t("auth_reg_t")}</h1><p class="sub">${t("auth_reg_s")}</p>
-    <div id="reg-alert"></div>
-    <form onsubmit="return App.submitRegister(event)" novalidate>
-      <div class="field" id="f-r-name"><label for="r-name">${t("auth_name")}</label><input id="r-name" type="text" autocomplete="name"><p class="err">${t("auth_err_name")}</p></div>
-      <div class="field" id="f-r-email"><label for="r-email">${t("auth_email")}</label><input id="r-email" type="email" autocomplete="email" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_email")}</p></div>
-      <div class="field" id="f-r-pass"><label for="r-pass">${t("auth_pass")}</label><input id="r-pass" type="password" autocomplete="new-password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_pass")}</p></div>
-      <div class="field" id="f-r-pass2"><label for="r-pass2">${t("auth_pass2")}</label><input id="r-pass2" type="password" autocomplete="new-password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_match")}</p></div>
-      <button class="btn btn-primary btn-block" type="submit">${t("auth_reg_btn")}</button>
-    </form>
-    <p style="text-align:center;margin-top:16px"><a href="${hashFor("login")}">${t("auth_has_acc")}</a></p>
-    <p class="note">${t("auth_demo")}</p>
-  </div></div></section>`;
 }
 function favItemsHTML(){
   const f = favs();
@@ -1357,59 +1246,11 @@ function favItemsHTML(){
   }).join("");
   return `<div class="grid grid-3">${cards}</div>`;
 }
-function recentHTML(){
-  const r = recent();
-  if(!r.length) return `<p style="color:var(--muted)">${t("dash_none")}</p>`;
-  return `<div class="grid grid-3">${r.map(x=>{
-    if(x.type==="server"){ const s=SERVERS.find(v=>v.id===x.id); return s?serverCard(s):""; }
-    if(x.type==="skill"){ const k=SKILLS.find(v=>v.id===x.id); return k?skillCard(k):""; }
-    if(x.type==="tutorial"){ const v=TUTORIALS.find(y=>y.id===x.id); return v?tutCard(v):""; }
-    const a=ARTICLES.find(y=>y.id===x.id); return a?artCard(a,1):"";
-  }).join("")}</div>`;
-}
-function dashboardHTML(){
-  if(!state.user) return needLoginHTML();
-  const f = favs(), r = recent();
-  return `<section class="section"><div class="wrap">
-    ${sectionHead("◉", t("dash_title")+" — "+t("dash_welcome")+", "+esc(state.user.name), state.user.email)}
-    <div class="stat-grid">
-      <div class="stat"><b>${fmtNum(f.length)}</b><span>${t("dash_favs")}</span></div>
-      <div class="stat"><b>${fmtNum(r.length)}</b><span>${t("dash_recent")}</span></div>
-      <div class="stat"><b>${fmtNum(SERVERS.length)}</b><span>${t("stat_servers")}</span></div>
-    </div>
-    <h2 style="font-size:20px;margin-bottom:14px">${t("dash_favs")}</h2>
-    ${f.length?favItemsHTML():`<p style="color:var(--muted)">${t("dash_none")} ${t("dash_none_hint")}</p><p><a class="btn btn-primary btn-sm" href="${hashFor("marketplace")}">${t("dash_go")}</a></p>`}
-    <h2 style="font-size:20px;margin:30px 0 14px">${t("dash_recent")}</h2>
-    ${recentHTML()}
-  </div></section>`;
-}
 function favoritesHTML(){
-  if(!state.user) return needLoginHTML();
   return `<section class="section"><div class="wrap">
     ${sectionHead("★", t("fav_title"), t("fav_sub"))}
     ${favItemsHTML()}
   </div></section>`;
-}
-function profileHTML(){
-  if(!state.user) return needLoginHTML();
-  const u = state.user;
-  return `<section class="section"><div class="wrap"><div class="form-card" style="max-width:560px">
-    <h1>${t("prof_title")}</h1><p class="sub">${t("prof_sub")}</p>
-    <div id="prof-alert"></div>
-    <form onsubmit="return App.submitProfile(event)" novalidate>
-      <div class="field"><label for="p-name">${t("prof_name")}</label><input id="p-name" type="text" value="${esc(u.name)}"></div>
-      <div class="field"><label for="p-lang">${t("prof_lang")}</label><select id="p-lang">${Object.keys(LANGS).map(l=>`<option value="${l}" ${l===state.lang?"selected":""}>${LANGS[l].name}</option>`).join("")}</select></div>
-      <div class="field"><label for="p-theme">${t("prof_theme")}</label><select id="p-theme"><option value="light" ${state.theme==="light"?"selected":""}>${t("theme_light")}</option><option value="dark" ${state.theme==="dark"?"selected":""}>${t("theme_dark")}</option></select></div>
-      <button class="btn btn-primary btn-block" type="submit">${t("prof_save")}</button>
-    </form>
-    <h2 style="font-size:18px;margin:28px 0 12px">${t("prof_pass_t")}</h2>
-    <div id="pass-alert"></div>
-    <form onsubmit="return App.submitPassword(event)" novalidate>
-      <div class="field" id="f-p-cur"><label for="p-cur">${t("prof_cur")}</label><input id="p-cur" type="password" dir="ltr" style="text-align:start"><p class="err">${t("prof_err_cur")}</p></div>
-      <div class="field" id="f-p-new"><label for="p-new">${t("prof_new")}</label><input id="p-new" type="password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_pass")}</p></div>
-      <button class="btn btn-ghost btn-block" type="submit">${t("prof_save")}</button>
-    </form>
-  </div></div></section>`;
 }
 function notFoundHTML(){
   return `<section class="section"><div class="wrap" style="text-align:center;padding:60px 0">
@@ -1476,17 +1317,13 @@ function pageHTML(){
     case "article": return articleHTML(state.param);
     case "about": return aboutHTML();
     case "contact": return contactHTML();
-    case "login": return loginHTML();
-    case "register": return registerHTML();
-    case "dashboard": return dashboardHTML();
     case "favorites": return favoritesHTML();
-    case "profile": return profileHTML();
     default: return notFoundHTML();
   }
 }
 function pageTitle(){
   const base = "Turkey MCP";
-  const map = {home:t("hero_title"),marketplace:t("mp_title"),categories:t("cats_page_title"),skills:t("skills_page_title"),tutorials:t("tut_page_title"),blog:t("blog_page_title"),about:t("about_title"),contact:t("contact_title"),login:t("auth_login_t"),register:t("auth_reg_t"),dashboard:t("dash_title"),favorites:t("fav_title"),profile:t("prof_title"),"404":t("nf_title")};
+  const map = {home:t("hero_title"),marketplace:t("mp_title"),categories:t("cats_page_title"),skills:t("skills_page_title"),tutorials:t("tut_page_title"),blog:t("blog_page_title"),about:t("about_title"),contact:t("contact_title"),favorites:t("fav_title"),"404":t("nf_title")};
   if(state.page==="tool"){ const s=SERVERS.find(x=>x.id===state.param); return s? s.title+" — "+base : base; }
   if(state.page==="skill"){ const k=SKILLS.find(x=>x.id===state.param); return k? k.id+" — "+base : base; }
   if(state.page==="tutorial"){ const x=TUTORIALS.find(v=>v.id===state.param); return x? L(x.title)+" — "+base : base; }
@@ -1510,11 +1347,6 @@ function render(){
 }
 
 /* ---------------- App actions ---------------- */
-function setField(id, ok){
-  const f = document.getElementById(id); if(!f) return;
-  f.classList.toggle("invalid", !ok);
-}
-function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
 window.App = {
   setLang(l){ if(!LANGS[l]) return; state.lang=l; store.set("tmp_lang", l);
     const h=(location.hash||"").replace(/^#\/?/,""); const parts=h.split("/").filter(Boolean);
@@ -1537,60 +1369,6 @@ window.App = {
     const list=SKILLS.filter(k=>(!q||(k.id+" "+skillTag(k)+" "+skillGap(k)).toLowerCase().includes(q))&&(cat==="all"||k.cat===cat));
     el.innerHTML = list.length?`<div class="grid grid-3">${list.map(skillCard).join("")}</div>`:emptyHTML(); },
   skillFilter(v){ skillsHTML._cat=v; App.skillSearch(skillsHTML._q||""); },
-  logout(){ store.set("tmp_session_v1", null); state.user=null; toast(t("logout_ok")); go("home"); render(); },
-  submitContact(ev){ ev.preventDefault();
-    const name=document.getElementById("c-name").value.trim();
-    const email=document.getElementById("c-email").value.trim();
-    const subj=document.getElementById("c-subject").value.trim();
-    const msg=document.getElementById("c-msg").value.trim();
-    setField("f-c-name", !!name); setField("f-c-email", validEmail(email));
-    setField("f-c-subject", !!subj); setField("f-c-msg", msg.length>=10);
-    if(!name||!validEmail(email)||!subj||msg.length<10) return false;
-    document.getElementById("contact-alert").innerHTML = `<div class="alert alert-ok">${t("contact_sent")}</div>`;
-    ev.target.reset(); return false; },
-  submitLogin(ev){ ev.preventDefault();
-    const email=document.getElementById("l-email").value.trim().toLowerCase();
-    const pass=document.getElementById("l-pass").value;
-    setField("f-l-email", validEmail(email)); setField("f-l-pass", pass.length>=6);
-    const box=document.getElementById("login-alert");
-    if(!validEmail(email)||pass.length<6) return false;
-    const u=users().find(x=>x.email===email);
-    if(!u||u.pass!==hashPass(pass)){ box.innerHTML=`<div class="alert alert-err">${t("auth_err_invalid")}</div>`; return false; }
-    state.user={name:u.name,email:u.email}; store.set("tmp_session_v1", state.user);
-    toast(t("auth_ok_login")); go("dashboard"); render(); return false; },
-  submitRegister(ev){ ev.preventDefault();
-    const name=document.getElementById("r-name").value.trim();
-    const email=document.getElementById("r-email").value.trim().toLowerCase();
-    const p1=document.getElementById("r-pass").value, p2=document.getElementById("r-pass2").value;
-    setField("f-r-name", !!name); setField("f-r-email", validEmail(email));
-    setField("f-r-pass", p1.length>=6); setField("f-r-pass2", p2===p1&&p2.length>=6);
-    const box=document.getElementById("reg-alert");
-    if(!name||!validEmail(email)||p1.length<6||p2!==p1) return false;
-    const us=users();
-    if(us.some(x=>x.email===email)){ box.innerHTML=`<div class="alert alert-err">${t("auth_err_exists")}</div>`; return false; }
-    us.push({name,email,pass:hashPass(p1)}); saveUsers(us);
-    state.user={name,email}; store.set("tmp_session_v1", state.user);
-    toast(t("auth_ok_reg")); go("dashboard"); render(); return false; },
-  submitProfile(ev){ ev.preventDefault();
-    const name=document.getElementById("p-name").value.trim();
-    if(!name) return false;
-    const lang=document.getElementById("p-lang").value;
-    const theme=document.getElementById("p-theme").value;
-    const us=users(); const u=us.find(x=>x.email===state.user.email);
-    if(u){ u.name=name; saveUsers(us); }
-    state.user={name,email:state.user.email}; store.set("tmp_session_v1", state.user);
-    if(lang!==state.lang){ App.setLang(lang); return false; }
-    if(theme!==state.theme){ state.theme=theme; store.set("tmp_theme", theme); }
-    document.getElementById("prof-alert").innerHTML=`<div class="alert alert-ok">${t("prof_saved")}</div>`;
-    render(); return false; },
-  submitPassword(ev){ ev.preventDefault();
-    const cur=document.getElementById("p-cur").value, nw=document.getElementById("p-new").value;
-    const us=users(); const u=us.find(x=>x.email===state.user.email);
-    setField("f-p-cur", !!u&&u.pass===hashPass(cur)); setField("f-p-new", nw.length>=6);
-    if(!u||u.pass!==hashPass(cur)||nw.length<6) return false;
-    u.pass=hashPass(nw); saveUsers(us);
-    document.getElementById("pass-alert").innerHTML=`<div class="alert alert-ok">${t("prof_saved")}</div>`;
-    ev.target.reset(); return false; }
 };
 
 /* ---------------- init ---------------- */
