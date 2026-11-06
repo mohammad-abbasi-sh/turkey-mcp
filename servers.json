@@ -83,6 +83,40 @@
      "summary": "Min/max/median/average price + median per m²"
     }
    ]
+  },
+  {
+   "name": "armut-mcp",
+   "title": "armut.com — local services, pros & price guides",
+   "title_tr": "armut.com — yerel hizmetler, profesyoneller ve fiyat rehberleri",
+   "description": "Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
+   "repository": "https://github.com/mohammad-abbasi-sh/armut-mcp",
+   "pypi": "armut-mcp",
+   "tools": [
+    {
+     "name": "armut_search_services",
+     "summary": "Search the 6,759-service catalogue by keyword"
+    },
+    {
+     "name": "armut_service_detail",
+     "summary": "Detail of one service: pro count, rating, reviews"
+    },
+    {
+     "name": "armut_list_pros",
+     "summary": "Top pros for a service, optionally filtered by city"
+    },
+    {
+     "name": "armut_service_faq",
+     "summary": "FAQs for a service, with answers"
+    },
+    {
+     "name": "armut_price_guide",
+     "summary": "Price guide: 12 monthly averages, quotes, example jobs"
+    },
+    {
+     "name": "armut_trending_services",
+     "summary": "Trending/popular services and most-searched combos"
+    }
+   ]
   }
  ]
 }
