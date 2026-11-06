@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turkey MCP — Connect AI to the World</title>
+<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 8 servers, 39 tools, in English, Türkçe and فارسی.">
+<link rel="canonical" href="https://github.com/mohammad-abbasi-sh/turkey-mcp">
+<link rel="alternate" hreflang="fa" href="#/fa/">
+<link rel="alternate" hreflang="tr" href="#/tr/">
+<link rel="alternate" hreflang="en" href="#/en/">
+<link rel="alternate" hreflang="x-default" href="#/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Turkey MCP — Connect AI to the World">
+<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance. 8 servers, 39 tools. English, Türkçe, فارسی.">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Turkey MCP — Connect AI to the World">
+<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 8 servers, 39 tools. EN / TR / FA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://github.com/mohammad-abbasi-sh/turkey-mcp","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 8 servers, 39 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
+</script>
+<style>
+:root{
+  --bg:#F5F7FC; --card:#FFFFFF; --elev:#FFFFFF; --text:#101B35; --muted:#5A6B8C;
+  --line:#E4E9F4; --primary:#6657E8; --primary-2:#7C6FF0; --primary-soft:#EFEDFD;
+  --secondary:#19C6B3; --secondary-soft:#E2F8F5; --accent:#FFB86B; --accent-soft:#FFF3E2;
+  --navy:#101B35; --danger:#E5484D; --ok:#0E9F6E;
+  --shadow:0 10px 30px rgba(16,27,53,.08); --shadow-lg:0 24px 60px rgba(16,27,53,.14);
+  --radius:18px; --radius-sm:12px;
+  --font-fa:"Vazirmatn",system-ui,Tahoma,sans-serif;
+  --font-lat:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#0B1120; --card:#141E32; --elev:#1B2940; --text:#F5F7FC; --muted:#9AA8C7;
+  --line:#24314F; --primary:#8B80FF; --primary-2:#A39CFF; --primary-soft:#23264D;
+  --secondary:#32DCC7; --secondary-soft:#123B38; --accent:#FFB86B; --accent-soft:#3A2B17;
+  --shadow:0 10px 30px rgba(0,0,0,.35); --shadow-lg:0 24px 60px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.75;font-family:var(--font-lat);transition:background .35s ease,color .35s ease}
+[dir="rtl"] body,[lang="fa"] body{font-family:var(--font-fa)}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em;font-weight:800}
+p{margin:0 0 1em}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit;font-size:15px;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;width:100%;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--primary-soft);border-radius:6px;padding:1px 6px;direction:ltr;unicode-bidi:isolate}
+pre{background:var(--navy);color:#E6EBF7;border-radius:14px;padding:16px 18px;overflow-x:auto;font-size:13px;line-height:1.7;direction:ltr;text-align:left;margin:0}
+pre code{background:none;padding:0;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+.section{padding:72px 0 8px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.section-head h2{font-size:30px;margin:0}
+.section-head p{color:var(--muted);margin:6px 0 0;max-width:640px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--primary);background:var(--primary-soft);border-radius:999px;padding:5px 14px;margin-bottom:14px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--secondary)}
+/* ---------- header / nav ---------- */
+header.site{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--text);text-decoration:none;white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#9B8CFF 55%,var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:19px;box-shadow:0 6px 16px rgba(102,87,232,.35)}
+.brand small{display:block;font-size:11px;font-weight:600;color:var(--muted);line-height:1}
+nav.main{display:flex;gap:2px;margin-inline-start:8px}
+nav.main a{color:var(--muted);font-size:14.5px;font-weight:600;padding:8px 12px;border-radius:999px;text-decoration:none;white-space:nowrap}
+nav.main a:hover{color:var(--text);background:var(--primary-soft);text-decoration:none}
+nav.main a.active{color:var(--primary);background:var(--primary-soft)}
+.nav-right{margin-inline-start:auto;display:flex;align-items:center;gap:8px}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);display:inline-flex;align-items:center;justify-content:center;font-size:17px}
+.icon-btn:hover{border-color:var(--primary)}
+.lang-select{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:0 8px;height:40px;width:auto;font-weight:700;font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 26px;font-size:15px;font-weight:700;border:1px solid transparent;text-decoration:none;transition:transform .15s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 10px 24px rgba(102,87,232,.35)}
+.btn-ghost{background:var(--card);border-color:var(--line);color:var(--text)}
+.btn-mint{background:var(--secondary);color:#06231F;box-shadow:0 10px 24px rgba(25,198,179,.3)}
+.btn-sm{padding:9px 18px;font-size:14px}
+.btn-block{width:100%}
+.burger{display:none}
+.mobile-menu{display:none;border-top:1px solid var(--line);padding:12px 20px 18px;background:var(--bg)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:11px 4px;font-weight:600;color:var(--text);border-bottom:1px solid var(--line)}
+.mobile-menu a:last-child{border-bottom:none}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:64px 0 40px}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(560px 380px at 88% -5%,color-mix(in srgb,var(--primary) 16%,transparent),transparent 70%),
+  radial-gradient(520px 360px at 4% 30%,color-mix(in srgb,var(--secondary) 14%,transparent),transparent 70%),
+  radial-gradient(420px 300px at 55% 110%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:52px;line-height:1.18;letter-spacing:-.01em}
+.hero h1 .grad{background:linear-gradient(120deg,var(--primary),var(--secondary));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--muted);font-size:17.5px;max-width:560px}
+.hero-search{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 16px;box-shadow:var(--shadow);max-width:560px;margin:22px 0 14px}
+[dir="ltr"] .hero-search{padding:6px 16px 6px 6px}
+.hero-search input{border:none;background:transparent;box-shadow:none;padding:8px 4px}
+.hero-search input:focus{box-shadow:none}
+.hero-search .btn{flex-shrink:0}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.hero-stats b{display:block;font-size:24px}
+.hero-stats span{color:var(--muted);font-size:13.5px}
+/* demo card */
+.demo{background:linear-gradient(160deg,#141B31,#0B1120);border:1px solid #26304D;border-radius:22px;box-shadow:var(--shadow-lg);overflow:hidden;color:#E6EBF7}
+.demo-tabs{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid #22304F;flex-wrap:wrap}
+.demo-tabs button{background:transparent;border:none;color:#8EA0C4;border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600}
+.demo-tabs button.active{background:#232C47;color:#fff}
+.demo-body{padding:20px 22px;min-height:250px}
+.demo-body .q{font-weight:700;color:#fff;font-size:16px;margin-bottom:12px;min-height:52px}
+.demo-body pre{background:#1A2340;border:1px solid #2A3557}
+.demo-body .fn{color:#32DCC7}.demo-body .str{color:#FFB86B}.demo-body .arg{color:#C3CFE8}
+.demo-body .status{color:#32DCC7;font-size:13px;font-weight:700;margin:12px 0 4px}
+.demo-body .a{color:#C3CFE8;font-size:14px;margin:0 0 12px}
+.demo-body .ask{font-size:13px;color:#8EA0C4;margin:0}
+.demo-body .ask a{color:#9DB4FF}
+.demo-body .cursor{display:inline-block;width:2px;height:1em;background:#32DCC7;vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.demo-foot{display:flex;align-items:center;gap:12px;border-top:1px solid #22304F;padding:14px 22px}
+.demo-foot span{color:#8EA0C4;font-size:13px}
+.demo-foot .btn{padding:9px 20px;font-size:14px}
+/* ---------- cards / grids ---------- */
+.grid{display:grid;gap:18px}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;transition:transform .18s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.card h3{font-size:17.5px;margin:0}
+.card .desc{color:var(--muted);font-size:14px;margin:8px 0 14px;flex:1}
+.tile{width:48px;height:48px;min-width:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:800;color:#fff}
+.card-top{display:flex;gap:12px;align-items:flex-start}
+.card-top .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start}
+.meta-row{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);margin:0 0 4px}
+.meta-row .ic{font-size:14px}
+.card-bottom{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.card-bottom .count{color:var(--muted);font-size:13px}
+.card-bottom .btn{margin-inline-start:auto}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
+.badge-feat{background:var(--accent-soft);color:#B26A00}
+[data-theme="dark"] .badge-feat{color:var(--accent)}
+.badge-ok{background:var(--secondary-soft);color:#0B7A6E}
+[data-theme="dark"] .badge-ok{color:var(--secondary)}
+.badge-soon{background:var(--primary-soft);color:var(--primary)}
+.badge-verified{background:var(--secondary-soft);color:#0B7A6E}
+[data-theme="dark"] .badge-verified{color:var(--secondary)}
+.badge-unverified{background:#FDECEC;color:#B42318}
+[data-theme="dark"] .badge-unverified{background:#3A1D1D;color:#FF9A94}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--primary-soft);color:var(--primary);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.chip.mint{background:var(--secondary-soft);color:#0B7A6E}
+[data-theme="dark"] .chip.mint{color:var(--secondary)}
+.star-btn{border:1px solid var(--line);background:var(--card);border-radius:10px;width:36px;height:36px;font-size:17px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center}
+.star-btn.on{color:#F5A623;border-color:#F5A623;background:var(--accent-soft)}
+/* category cards */
+.cat-card{cursor:pointer;text-align:start}
+.cat-card .ic{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+.cat-card h3{font-size:17px}
+.cat-card p{color:var(--muted);font-size:13.5px;margin:6px 0 12px;flex:1}
+/* platforms */
+.plat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plat-card{text-align:center;align-items:center;padding:28px 18px}
+.plat-card .logo{width:60px;height:60px;border-radius:18px;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;margin-bottom:12px}
+.plat-card h3{font-size:17px}
+.plat-card p{color:var(--muted);font-size:13.5px;flex:1}
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{position:relative}
+.step .n{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:14px;box-shadow:0 8px 18px rgba(102,87,232,.3)}
+.step h3{font-size:18px}
+.step p{color:var(--muted);font-size:14.5px}
+/* toolbar: search + filters */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.toolbar .search-box{flex:1;min-width:220px;position:relative}
+.toolbar .search-box input{padding-inline-start:40px}
+.toolbar .search-box .mag{position:absolute;inset-inline-start:13px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.toolbar select{width:auto;min-width:160px}
+.empty{text-align:center;padding:56px 20px;background:var(--card);border:1px dashed var(--line);border-radius:var(--radius)}
+.empty .big{font-size:44px;margin-bottom:8px}
+.empty h3{font-size:19px}
+.empty p{color:var(--muted)}
+/* tool detail */
+.detail-head{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px}
+.detail-head .tile{width:64px;height:64px;border-radius:18px;font-size:28px}
+.detail-head h1{font-size:30px;margin:0}
+.detail-head .latin{color:var(--muted);direction:ltr;text-align:start}
+.tools-table{width:100%;border-collapse:collapse;font-size:14px}
+.tools-table th,.tools-table td{text-align:start;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tools-table th{color:var(--muted);font-size:13px}
+.tools-table code{white-space:nowrap}
+.install-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}
+.install-box h3{font-size:16px;margin-bottom:10px}
+.copy-row{display:flex;gap:8px;align-items:stretch}
+.copy-row pre{flex:1;margin:0}
+.copy-btn{border:1px solid var(--line);background:var(--elev);border-radius:12px;padding:0 16px;font-weight:700;color:var(--text)}
+/* forms */
+.form-card{max-width:480px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:32px}
+.form-card h1{font-size:24px;text-align:center}
+.form-card .sub{text-align:center;color:var(--muted);font-size:14.5px}
+.field{margin-bottom:16px}
+.field .err{color:var(--danger);font-size:13px;margin-top:5px;display:none}
+.field.invalid input,.field.invalid textarea{border-color:var(--danger)}
+.field.invalid .err{display:block}
+.alert{border-radius:12px;padding:12px 16px;font-size:14px;margin-bottom:16px}
+.alert-ok{background:var(--secondary-soft);color:#0B7A6E}
+[data-theme="dark"] .alert-ok{color:var(--secondary)}
+.alert-err{background:#FDECEC;color:#B42318}
+[data-theme="dark"] .alert-err{background:#3A1D1D;color:#FF9A94}
+.alert-info{background:var(--primary-soft);color:var(--primary)}
+.note{font-size:13px;color:var(--muted);background:var(--primary-soft);border-radius:12px;padding:12px 14px;margin-top:16px}
+/* blog / tutorial */
+.article-body{max-width:760px}
+.article-body h2{font-size:22px;margin:28px 0 10px}
+.article-body p{color:var(--muted);font-size:16px}
+.article-body ol,.article-body ul{color:var(--muted);font-size:16px;line-height:1.9}
+.post-meta{display:flex;gap:14px;color:var(--muted);font-size:13.5px;flex-wrap:wrap;margin-bottom:18px}
+.cover{height:180px;border-radius:16px 16px 0 0;margin:-22px -22px 18px;display:flex;align-items:center;justify-content:center;font-size:52px;color:#fff}
+.cover.g1{background:linear-gradient(135deg,#6657E8,#9B8CFF)}
+.cover.g2{background:linear-gradient(135deg,#19C6B3,#5EEAD4)}
+.cover.g3{background:linear-gradient(135deg,#F59E0B,#FFB86B)}
+.cover.g4{background:linear-gradient(135deg,#0EA5E9,#38BDF8)}
+.cover.g5{background:linear-gradient(135deg,#EC4899,#F9A8D4)}
+/* dashboard */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.stat b{font-size:28px;display:block}
+.stat span{color:var(--muted);font-size:13.5px}
+/* footer */
+footer.site{margin-top:90px;border-top:1px solid var(--line);background:var(--card)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding:56px 0 32px}
+.foot-grid h4{font-size:15px;margin:0 0 14px}
+.foot-grid a{display:block;color:var(--muted);font-size:14px;margin-bottom:9px}
+.foot-grid p{color:var(--muted);font-size:14px}
+.foot-bottom{border-top:1px solid var(--line);padding:18px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.socials{display:flex;gap:8px;margin-top:14px}
+.socials a{width:38px;height:38px;border-radius:11px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:16px}
+.socials a:hover{color:var(--primary);border-color:var(--primary);text-decoration:none}
+/* toast */
+#toast{position:fixed;bottom:22px;inset-inline-start:50%;transform:translateX(50%);background:var(--navy);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;font-weight:600;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:100}
+[dir="ltr"] #toast{transform:translateX(-50%)}
+#toast.show{opacity:1}
+[dir="rtl"] #toast{transform:translateX(50%)}
+.skip{position:absolute;inset-inline-start:-9999px}
+.skip:focus{position:fixed;inset-inline-start:16px;top:16px;z-index:200;background:var(--primary);color:#fff;padding:10px 18px;border-radius:999px}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px;border-radius:6px}
+/* responsive */
+@media (max-width:1020px){
+  nav.main{display:none}
+  .burger{display:inline-flex}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:40px}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .plat-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .stat-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .section{padding:48px 0 4px}
+  .hero{padding:40px 0 24px}
+  .hero h1{font-size:32px}
+  .section-head h2{font-size:24px}
+  .grid-4,.grid-3,.grid-2,.plat-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .btn-login-text{display:none}
+  .hero-search{flex-direction:column;border-radius:20px;padding:10px}
+  .hero-search .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#app" data-i18n="a11y_skip">Skip to content</a>
+<div id="app"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+/* ---------------- DATA (real catalog) ---------------- */
+const SERVERS = [
+{ id:"tcmb-mcp", cat:"finance", color:"#0D9488", letter:"₺", featured:true, added:1,
+  title:"Central Bank of Türkiye — official FX rates",
+  title_tr:"Türkiye Cumhuriyet Merkez Bankası — resmi döviz kurları",
+  desc:"Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).",
+  desc_fa:"نرخ زندهٔ دلار، یورو و بیش از ۲۰ ارز دیگر از بانک مرکزی ترکیه (XML رسمی، بدون کلید).",
+  desc_tr:"tcmb.gov.tr'den canlı USD/TRY, EUR/TRY ve 20'den fazla döviz kuru (resmi XML, anahtar gerekmez).",
+  repo:"https://github.com/mohammad-abbasi-sh/tcmb-mcp", pypi:"tcmb-mcp",
+  tools:[
+   {n:"tcmb_get_rates",s:"Today's FX rates for all currencies",sf:"نرخ امروز همهٔ ارزها",st:"Bugünkü tüm döviz kurları"},
+   {n:"tcmb_get_rate",s:"Rate for one currency code (e.g. USD)",sf:"نرخ یک ارز مشخص (مثلاً USD)",st:"Tek bir para biriminin kuru (örn. USD)"},
+   {n:"tcmb_list_currencies",s:"List all available currency codes",sf:"فهرست همهٔ کدهای ارز",st:"Tüm para birimi kodlarını listele"},
+   {n:"tcmb_get_rates_on",s:"Historical rates for a date (YYYYMMDD)",sf:"نرخ‌های تاریخی یک روز (YYYYMMDD)",st:"Bir tarihe ait geçmiş kurlar (YYYYMMDD)"}]},
+{ id:"arabam-mcp", cat:"cars", color:"#DC2626", letter:"🚗", featured:false, added:2,
+  title:"arabam.com — used-car listings & market prices",
+  title_tr:"arabam.com — ikinci el otomobil ilanları ve piyasa fiyatları",
+  desc:"Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
+  desc_fa:"جست‌وجو در حدود ۱۷۶ هزار آگهی خودروی دست‌دوم arabam.com: مشخصات کامل ۱۹ فیلدی، مرور برند و مدل، آمار قیمت بازار (لیر).",
+  desc_tr:"arabam.com'da ~176 bin ikinci el ilanında arama: 19 alanlık tam özellikler, marka/model gezgini, piyasa fiyat istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/arabam-mcp", pypi:"arabam-mcp",
+  tools:[
+   {n:"arabam_search",s:"Search listings by brand/model slug, paged",sf:"جست‌وجوی آگهی‌ها بر اساس برند/مدل، صفحه‌بندی‌شده",st:"Marka/model kısaltmasıyla ilanlarda ara, sayfalı"},
+   {n:"arabam_listing_detail",s:"Full 19-field spec table + price for one listing",sf:"جدول کامل مشخصات ۱۹ فیلدی + قیمت یک آگهی",st:"Bir ilan için 19 alanlık tam özellik tablosu + fiyat"},
+   {n:"arabam_list_brands",s:"All ~77 brands with counts and slugs",sf:"همهٔ حدود ۷۷ برند با تعداد و شناسه",st:"Sayı ve kısaltmalarıyla ~77 markanın tamamı"},
+   {n:"arabam_list_models",s:"Models of a brand with counts and slugs",sf:"مدل‌های یک برند با تعداد و شناسه",st:"Bir markanın modelleri, sayı ve kısaltmalarıyla"},
+   {n:"arabam_price_stats",s:"Min/max/median/average price over N pages",sf:"کمترین/بیشترین/میانه/میانگین قیمت در N صفحه",st:"N sayfada min/maks/medyan/ortalama fiyat"}]},
+{ id:"emlakjet-mcp", cat:"real-estate", color:"#1D4ED8", letter:"🏠", featured:false, added:3,
+  title:"emlakjet.com — real-estate listings, districts & price stats",
+  title_tr:"emlakjet.com — emlak ilanları, ilçeler ve fiyat istatistikleri",
+  desc:"Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
+  desc_fa:"جست‌وجوی آگهی‌های فروش و اجارهٔ emlakjet.com بر اساس شهر و محله: جزئیات کامل با ۱۴ فیلد مشخصات، مرور محله‌ها، آمار قیمت شامل میانهٔ قیمت هر متر مربع (لیر).",
+  desc_tr:"emlakjet.com satılık/kiralık ilanlarında şehre ve ilçeye göre arama: 14 alanlık tam detaylar, ilçe gezgini, m² başına medyan fiyat dahil piyasa istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/emlakjet-mcp", pypi:"emlakjet-mcp",
+  tools:[
+   {n:"emlakjet_search",s:"Search listings by city/district, rooms, price, area",sf:"جست‌وجوی آگهی بر اساس شهر/محله، اتاق، قیمت، متراژ",st:"Şehir/ilçe, oda, fiyat ve alana göre ilan ara"},
+   {n:"emlakjet_listing_detail",s:"Full detail + 14 spec fields for one listing",sf:"جزئیات کامل + ۱۴ فیلد مشخصات یک آگهی",st:"Bir ilan için tam detay + 14 özellik alanı"},
+   {n:"emlakjet_list_districts",s:"Districts of a city with listing pages",sf:"محله‌های یک شهر با صفحه‌های آگهی",st:"Bir şehrin ilçeleri ve ilan sayfaları"},
+   {n:"emlakjet_price_stats",s:"Min/max/median/average price + median per m²",sf:"کمترین/بیشترین/میانه/میانگین قیمت + میانهٔ هر متر مربع",st:"Min/maks/medyan/ortalama fiyat + m² başına medyan"}]},
+{ id:"armut-mcp", cat:"services", color:"#059669", letter:"🔧", featured:false, added:4,
+  title:"armut.com — local services, pros & price guides",
+  title_tr:"armut.com — yerel hizmetler, profesyoneller ve fiyat rehberleri",
+  desc:"Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
+  desc_fa:"جست‌وجو در ۶٬۷۵۹ خدمت Armut، مرور بهترین متخصصان با امتیاز و نظر بر اساس شهر، خواندن سؤالات متداول و راهنمای قیمت با میانگین ۱۲ ماهه (لیر).",
+  desc_tr:"6.759 Armut hizmetinde arama, şehre göre puan ve yorumlarıyla en iyi ustaları görme, SSS okuma ve 12 aylık ortalamalarla fiyat rehberleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/armut-mcp", pypi:"armut-mcp",
+  tools:[
+   {n:"armut_search_services",s:"Search the 6,759-service catalogue by keyword",sf:"جست‌وجو در کاتالوگ ۶٬۷۵۹ خدمتی با کلیدواژه",st:"6.759 hizmetlik katalogda anahtar kelimeyle ara"},
+   {n:"armut_service_detail",s:"Detail of one service: pro count, rating, reviews",sf:"جزئیات یک خدمت: تعداد متخصص، امتیاز، نظرات",st:"Bir hizmetin detayı: usta sayısı, puan, yorumlar"},
+   {n:"armut_list_pros",s:"Top pros for a service, optionally filtered by city",sf:"بهترین متخصصان یک خدمت، با فیلتر شهر",st:"Bir hizmet için en iyi ustalar, isteğe bağlı şehir filtresi"},
+   {n:"armut_service_faq",s:"FAQs for a service, with answers",sf:"سؤالات متداول یک خدمت با پاسخ",st:"Bir hizmetin SSS'leri ve yanıtları"},
+   {n:"armut_price_guide",s:"Price guide: 12 monthly averages, quotes, example jobs",sf:"راهنمای قیمت: میانگین ۱۲ ماهه، قیمت‌های نمونه، نمونه‌کارها",st:"Fiyat rehberi: 12 aylık ortalama, teklifler, örnek işler"},
+   {n:"armut_trending_services",s:"Trending/popular services and most-searched combos",sf:"خدمات پرطرفدار و پرجست‌وجوترین ترکیب‌ها",st:"Trend ve popüler hizmetler ile en çok aranan kombinasyonlar"}]},
+{ id:"hepsiburada-mcp", cat:"shopping", color:"#EA580C", letter:"🛒", featured:true, added:5,
+  title:"hepsiburada.com — shopping search, product details & price stats",
+  title_tr:"hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+  desc:"Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY).",
+  desc_fa:"جست‌وجوی کالاهای hepsiburada.com، خواندن جزئیات (قیمت، موجودی، فروشنده، GTIN)، نظرات، مرور ۹ دسته و آمار قیمت (لیر).",
+  desc_tr:"hepsiburada.com ürünlerinde arama, detayları okuma (fiyat, stok, satıcı, GTIN), yorumlar, 9 kategori gezgini ve fiyat istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/hepsiburada-mcp", pypi:"hepsiburada-mcp",
+  tools:[
+   {n:"hepsiburada_search",s:"Search products by keyword, sort by price or relevance",sf:"جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",st:"Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"},
+   {n:"hepsiburada_product_detail",s:"Detail of one product: price, stock, seller, GTIN, highlights",sf:"جزئیات یک کالا: قیمت، موجودی، فروشنده، GTIN، نکات مهم",st:"Bir ürünün detayı: fiyat, stok, satıcı, GTIN, öne çıkanlar"},
+   {n:"hepsiburada_list_categories",s:"The 9 top categories with URLs and ids",sf:"۹ دستهٔ اصلی با نشانی و شناسه",st:"URL ve kimlikleriyle 9 ana kategori"},
+   {n:"hepsiburada_price_stats",s:"Price stats for a query: min/median/mean/max in TRY",sf:"آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
+   {n:"hepsiburada_product_reviews",s:"Recent customer reviews: author, rating, text, date",sf:"نظرات اخیر مشتریان: نویسنده، امتیاز، متن، تاریخ",st:"Son müşteri yorumları: yazar, puan, metin, tarih"}]},
+{ id:"n11-mcp", cat:"shopping", color:"#7C3AED", letter:"🛍️", featured:false, added:6,
+  title:"n11.com — shopping search, product details & price stats",
+  title_tr:"n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+  desc:"Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
+  desc_fa:"جست‌وجوی کالاهای n11.com، خواندن جزئیات (قیمت، قیمت فهرست، موجودی، فروشنده، امتیاز)، نظرات، مرور ۱۱ دسته و آمار قیمت (لیر).",
+  desc_tr:"n11.com ürünlerinde arama, detayları okuma (fiyat, liste fiyatı, stok, satıcı, puan), yorumlar, 11 kategori gezgini ve fiyat istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/n11-mcp", pypi:"n11-mcp",
+  tools:[
+   {n:"n11_search",s:"Search products by keyword, sort by price or relevance",sf:"جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",st:"Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"},
+   {n:"n11_product_detail",s:"Detail of one product: price, stock, seller, rating, category",sf:"جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",st:"Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"},
+   {n:"n11_list_categories",s:"The 11 top categories with URLs and slugs",sf:"۱۱ دستهٔ اصلی با نشانی و شناسه",st:"URL ve kısaltmalarıyla 11 ana kategori"},
+   {n:"n11_price_stats",s:"Price stats for a query: min/median/mean/max in TRY",sf:"آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
+   {n:"n11_product_reviews",s:"Recent customer reviews: reviewer and star rating",sf:"نظرات اخیر مشتریان: نظر‌دهنده و امتیاز ستاره‌ای",st:"Son müşteri yorumları: yorumcu ve yıldız puanı"}]},
+{ id:"ciceksepeti-mcp", cat:"shopping", color:"#DB2777", letter:"💐", featured:false, added:7,
+  title:"ciceksepeti.com — flowers & gifts search, details & price stats",
+  title_tr:"ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
+  desc:"Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
+  desc_fa:"جست‌وجوی گل و هدیه در ciceksepeti.com، خواندن جزئیات (قیمت، موجودی، فروشنده، امتیاز)، نظرات، مرور ۸۹ دسته و آمار قیمت (لیر).",
+  desc_tr:"ciceksepeti.com'da çiçek ve hediye arama, detayları okuma (fiyat, stok, satıcı, puan), yorumlar, 89 kategori gezgini ve fiyat istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp", pypi:"ciceksepeti-mcp",
+  tools:[
+   {n:"ciceksepeti_search",s:"Search flowers & gifts by keyword, sort by price or relevance",sf:"جست‌وجوی گل و هدیه با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",st:"Anahtar kelimeyle çiçek ve hediye ara, fiyata veya ilgiye göre sırala"},
+   {n:"ciceksepeti_product_detail",s:"Detail of one product: price, stock, seller, rating, category",sf:"جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",st:"Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"},
+   {n:"ciceksepeti_list_categories",s:"89 flower/plant/gift categories with URLs and slugs",sf:"۸۹ دستهٔ گل/گیاه/هدیه با نشانی و شناسه",st:"URL ve kısaltmalarıyla 89 çiçek/bitki/hediye kategorisi"},
+   {n:"ciceksepeti_price_stats",s:"Price stats for a query: min/median/mean/max in TRY",sf:"آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
+   {n:"ciceksepeti_product_reviews",s:"Recent customer reviews: reviewer, star rating, date",sf:"نظرات اخیر مشتریان: نظر‌دهنده، امتیاز ستاره‌ای، تاریخ",st:"Son müşteri yorumları: yorumcu, yıldız puanı, tarih"}]},
+{ id:"obilet-mcp", cat:"travel", color:"#0284C7", letter:"🚌", featured:false, added:8,
+  title:"obilet.com — bus journeys, locations & flight summary",
+  title_tr:"obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
+  desc:"Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
+  desc_fa:"جست‌وجوی مکان‌های اتوبوس obilet.com، فهرست سفرهای اتوبوس یک مسیر و تاریخ (شرکت، صندلی، قیمت به لیر، توقف‌ها)، جزئیات سفر، آمار قیمت و خلاصهٔ پروازها (تعداد، قیمت، شرکت‌ها).",
+  desc_tr:"obilet.com otobüs konumlarında arama, bir güzergâh ve tarih için otobüs seferleri (firma, koltuk, TL fiyat, duraklar), sefer detayları, fiyat istatistikleri ve uçuş özeti (sayı, fiyatlar, havayolları).",
+  repo:"https://github.com/mohammad-abbasi-sh/obilet-mcp", pypi:"obilet-mcp",
+  tools:[
+   {n:"obilet_search_locations",s:"Search bus/flight locations by name",sf:"جست‌وجوی مکان‌های اتوبوس/پرواز با نام",st:"Otobüs/uçuş konumlarını adla ara"},
+   {n:"obilet_search_bus_journeys",s:"Bus journeys for a route + date, sorted by price, departure or duration",sf:"سفرهای اتوبوس یک مسیر و تاریخ، مرتب بر اساس قیمت، حرکت یا مدت",st:"Bir güzergâh ve tarih için otobüs seferleri; fiyat, kalkış veya süreye göre sıralı"},
+   {n:"obilet_journey_detail",s:"Full detail of one journey: stops, prices, features",sf:"جزئیات کامل یک سفر: توقف‌ها، قیمت‌ها، امکانات",st:"Bir seferin tam detayı: duraklar, fiyatlar, özellikler"},
+   {n:"obilet_price_stats",s:"Price stats for a route + date: min/median/mean/max in TRY",sf:"آمار قیمت یک مسیر و تاریخ: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir güzergâh ve tarih için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
+   {n:"obilet_flight_summary",s:"Flight summary: count, min/max price, durations, airlines",sf:"خلاصهٔ پروازها: تعداد، کمترین/بیشترین قیمت، مدت‌ها، شرکت‌ها",st:"Uçuş özeti: sayı, min/maks fiyat, süreler, havayolları"}]}
+];
+const TOTAL_TOOLS = SERVERS.reduce((a,s)=>a+s.tools.length,0);
+
+const CATEGORIES = [
+ {id:"shopping",icon:"🛒",color:"#EA580C",soon:false},
+ {id:"cars",icon:"🚗",color:"#DC2626",soon:false},
+ {id:"real-estate",icon:"🏠",color:"#1D4ED8",soon:false},
+ {id:"services",icon:"🔧",color:"#059669",soon:false},
+ {id:"travel",icon:"🚌",color:"#0284C7",soon:false},
+ {id:"finance",icon:"💱",color:"#0D9488",soon:false},
+ {id:"productivity",icon:"⚡",color:"#7C3AED",soon:true},
+ {id:"communication",icon:"💬",color:"#EC4899",soon:true},
+ {id:"development",icon:"💻",color:"#0EA5E9",soon:true},
+ {id:"data",icon:"📊",color:"#F59E0B",soon:true}
+];
+const catCount = id => SERVERS.filter(s=>s.cat===id).length;
+
+const PLATFORMS_VERIFIED = [
+ {id:"claude-code",name:"Claude Code",icon:"⌘",desc:"CLI agent — connect with one terminal command."},
+ {id:"cursor",name:"Cursor",icon:"▸",desc:"AI code editor — add the server in MCP settings."},
+ {id:"claude-desktop",name:"Claude Desktop",icon:"▣",desc:"Desktop app — add the server to its config file."},
+ {id:"vscode",name:"VS Code",icon:"◈",desc:"Any MCP-compatible editor via a stdio config."}
+];
+const PLATFORMS_UNVERIFIED = [
+ {id:"chatgpt",name:"ChatGPT",icon:"✦",desc:"Web app — local stdio servers are not verified here."},
+ {id:"gemini",name:"Gemini",icon:"✧",desc:"Web app — local stdio servers are not verified here."}
+];
+
+const SKILLS = [
+ {id:"bidi-skills",cat:"language",repo:"https://github.com/mohammad-abbasi-sh/bidi-skills",tests:"—",
+  tag:"Agent skill that stops AI from corrupting RTL text: ZWNJ, bidi order, Arabic-vs-Persian codepoints and digit mixing.",
+  tag_fa:"مهارتی که جلوی خراب‌شدن متن راست‌به‌چپ توسط هوش مصنوعی را می‌گیرد: نیم‌فاصله، ترتیب دوجهته، کدهای عربی در برابر فارسی و ترکیب ارقام.",
+  tag_tr:"Yapay zekânın RTL metni bozmasını engelleyen beceri: ZWNJ, çift yönlü sıralama, Arapça/Farsça kod noktaları ve rakam karıştırma.",
+  gap:"No RTL skill pack existed for Persian, Arabic, Urdu or Hebrew among hundreds of English-centric agent skills.",
+  gap_fa:"در میان صدها مهارت انگلیسی‌محور، هیچ بستهٔ مهارتی برای متن راست‌به‌چپ فارسی، عربی، اردو یا عبری وجود نداشت.",
+  gap_tr:"Yüzlerce İngilizce merkezli beceri arasında Farsça, Arapça, Urduca veya İbranice için hiçbir RTL beceri paketi yoktu."},
+ {id:"agent-seo-skills",cat:"seo",repo:"https://github.com/mohammad-abbasi-sh/agent-seo-skills",tests:"—",
+  tag:"Agent Skills + MCP server that give AI agents real SEO tools — local-first, zero API keys, zero dependencies.",
+  tag_fa:"مهارت‌های ایجنت + سرور MCP که ابزارهای واقعی سئو را به هوش مصنوعی می‌دهند — محلی، بدون کلید API و بدون وابستگی.",
+  tag_tr:"Yapay zekâ ajanlarına gerçek SEO araçları veren Agent Skill + MCP sunucusu — yerel öncelikli, API anahtarı yok, bağımlılık yok.",
+  gap:"SEO skills existed only as prompts and checklists; agents had no deterministic, runnable SEO tools.",
+  gap_fa:"مهارت‌های سئو فقط در حد پرامپت و چک‌لیست بودند؛ ایجنت‌ها ابزار سئوی قطعی و اجراشدنی نداشتند.",
+  gap_tr:"SEO becerileri yalnızca komut ve kontrol listesi olarak vardı; ajanların çalıştırılabilir, deterministik SEO araçları yoktu."},
+ {id:"rtl-i18n-check",cat:"language",repo:"https://github.com/mohammad-abbasi-sh/rtl-i18n-check",tests:"59",
+  tag:"Checks translated fa/ar/ur locale files for the RTL layer — bidi isolation, ZWNJ, letter variants and digit scripts — that other i18n checkers miss.",
+  tag_fa:"فایل‌های ترجمه‌شدهٔ فارسی/عربی/اردو را از نظر لایهٔ راست‌به‌چپ بررسی می‌کند: ایزولاسیون دوجهته، نیم‌فاصله، گونه‌های حروف و خط ارقام — چیزهایی که بقیهٔ ابزارها نمی‌بینند.",
+  tag_tr:"Çevrilmiş fa/ar/ur yerelleştirme dosyalarını RTL katmanı açısından denetler: çift yönlü yalıtım, ZWNJ, harf varyantları ve rakam yazı sistemleri.",
+  gap:"Generic i18n checkers verify keys and placeholders, but none checks the RTL layer of translated files.",
+  gap_fa:"ابزارهای عمومی i18n کلیدها و جای‌بان‌ها را بررسی می‌کنند، اما هیچ‌کدام لایهٔ راست‌به‌چپ فایل‌های ترجمه‌شده را نمی‌سنجند.",
+  gap_tr:"Genel i18n denetleyicileri anahtarları ve yer tutucuları doğrular, ancak hiçbiri çevrilmiş dosyaların RTL katmanını denetlemez."},
+ {id:"flaky-repro",cat:"devtools",repo:"https://github.com/mohammad-abbasi-sh/flaky-repro",tests:"—",
+  tag:"Enforces a reproduce-first contract for flaky tests: a failing seed, a replay command and seeded stress proof before any fix.",
+  tag_fa:"قرارداد «اول بازتولید، بعد رفع» را برای تست‌های ناپایدار اعمال می‌کند: بذرِ خطا، دستور بازپخش و اثبات استرس با بذر، پیش از هر اصلاحی.",
+  tag_tr:"Kararsız testler için önce-tekrar-üret sözleşmesini uygular: hatalı tohum, tekrar komutu ve tohumlu stres kanıtı — düzeltmeden önce.",
+  gap:"Flaky-test tools only detect and analyze; none records a failing seed or gives a replay command.",
+  gap_fa:"ابزارهای تست ناپایدار فقط تشخیص و تحلیل می‌دهند؛ هیچ‌کدام بذرِ خطا را ثبت نمی‌کنند و دستور بازپخش نمی‌دهند.",
+  gap_tr:"Kararsız test araçları yalnızca tespit ve analiz yapar; hiçbiri hatalı tohumu kaydetmez veya tekrar komutu vermez."},
+ {id:"mail-auth",cat:"devtools",repo:"https://github.com/mohammad-abbasi-sh/mail-auth",tests:"—",
+  tag:"Deterministic SPF / DKIM / DMARC checker with the exact DNS fix and a recheck loop — built on a from-scratch stdlib DNS client.",
+  tag_fa:"بررسی‌کنندهٔ قطعی SPF و DKIM و DMARC با راه‌حل دقیق DNS و چرخهٔ بررسی دوباره — ساخته‌شده با کلاینت DNS دست‌ساز و بدون وابستگی.",
+  tag_tr:"Kesin DNS düzeltmesi ve yeniden denetleme döngüsüyle deterministik SPF / DKIM / DMARC denetleyicisi — sıfırdan yazılmış stdlib DNS istemcisiyle.",
+  gap:"'Emails going to spam' is a daily complaint, but nobody shipped the check + exact fix + recheck as one skill.",
+  gap_fa:"«ایمیل‌ها به اسپم می‌روند» شکایت روزانه است، اما هیچ‌کس بررسی + راه‌حل دقیق + بررسی دوباره را در قالب یک مهارت عرضه نکرده بود.",
+  gap_tr:"'E-postalar spam'e düşüyor' günlük bir şikâyet, ama denetim + kesin düzeltme + yeniden denetlemeyi tek beceri olarak sunan yoktu."},
+ {id:"talking-avatar",cat:"media",repo:"https://github.com/mohammad-abbasi-sh/talking-avatar",tests:"60",
+  tag:"One router skill across free local SadTalker, rented-GPU SadTalker, Hedra and HeyGen — with a deterministic preflight that stops wasted paid renders.",
+  tag_fa:"یک مهارت مسیریاب برای SadTalker محلی رایگان، SadTalker با GPU اجاره‌ای، Hedra و HeyGen — با پیش‌بررسی قطعی که جلوی هدررفتن رندرهای پولی را می‌گیرد.",
+  tag_tr:"Ücretsiz yerel SadTalker, kiralık GPU SadTalker, Hedra ve HeyGen arasında tek yönlendirici beceri — ücretli render israfını durduran deterministik ön denetimle.",
+  gap:"Every avatar skill was single-vendor; no router existed across free local and paid API backends, and no preflight stopped bad assets.",
+  gap_fa:"همهٔ مهارت‌های آواتار تک‌فروشنده بودند؛ هیچ مسیریابی میان بک‌اندهای محلی رایگان و API پولی وجود نداشت و پیش‌بررسی‌ای برای فایل‌های خراب نبود.",
+  gap_tr:"Tüm avatar becerileri tek satıcılıydı; ücretsiz yerel ve ücretli API arka uçları arasında yönlendirici yoktu ve bozuk dosyaları durduran ön denetim yoktu."},
+ {id:"deutsch-fa",cat:"language",repo:"https://github.com/mohammad-abbasi-sh/deutsch-fa",tests:"59",
+  tag:"German declension for Persian speakers: a deterministic engine for der/die/das and the four cases, with 199 hand-checked A1 nouns, quiz and Anki export.",
+  tag_fa:"صرف اسم آلمانی برای فارسی‌زبان‌ها: موتور قطعی برای der/die/das و چهار حالت، با ۱۹۹ اسم دست‌بررسی‌شدهٔ A1، کوئیز و خروجی Anki.",
+  tag_tr:"Farsça konuşanlar için Almanca isim çekimi: der/die/das ve dört hâl için deterministik motor, 199 elle doğrulanmış A1 ismi, test ve Anki dışa aktarımı.",
+  gap:"Persian learners' daily blocker is gender + cases (Persian has no grammatical gender); agents answering from memory get articles wrong.",
+  gap_fa:"مشکل روزانهٔ فارسی‌زبان‌ها جنسیت و حالت‌هاست (فارسی جنس دستوری ندارد)؛ پاسخ‌های حفظی ایجنت‌ها آرتیکل را اشتباه می‌دهند.",
+  gap_tr:"Farsça konuşanların günlük engeli cinsiyet + hâllerdir (Farsçada dilbilgisel cinsiyet yoktur); ezberden yanıt veren ajanlar artikeli yanlış verir."},
+ {id:"deutsch-verbs-fa",cat:"language",repo:"https://github.com/mohammad-abbasi-sh/deutsch-verbs-fa",tests:"48",
+  tag:"German verb conjugation for Persian speakers: 183 hand-checked A1–B1 verbs across 6 tenses, with sentence checker, quiz and 2,196 Anki cards.",
+  tag_fa:"صرف فعل آلمانی برای فارسی‌زبان‌ها: ۱۸۳ فعل دست‌بررسی‌شدهٔ A1 تا B1 در ۶ زمان، با بررسی‌کنندهٔ جمله، کوئیز و ۲٬۱۹۶ کارت Anki.",
+  tag_tr:"Farsça konuşanlar için Almanca fiil çekimi: 6 zamanda 183 elle doğrulanmış A1–B1 fiili, cümle denetleyicisi, test ve 2.196 Anki kartı.",
+  gap:"After der/die/das, verb conjugation is the other daily blocker — and no Persian-glossed conjugation skill, CLI or MCP existed.",
+  gap_fa:"بعد از der/die/das، صرف فعل دیگر مانع روزانه است — و هیچ مهارت، CLI یا MCP صرف فعل با توضیح فارسی وجود نداشت.",
+  gap_tr:"der/die/das'tan sonra fiil çekimi diğer günlük engeldir — ve Farsça açıklamalı hiçbir çekim becerisi, CLI veya MCP yoktu."}
+];
+const SKILL_CATS = ["language","seo","devtools","media"];
+
+/* Live-verified demo values (checked 6 Nov 2026 — do not present as live data) */
+const DEMOS = [
+ {tab:{fa:"بانک مرکزی",tr:"Merkez Bankası",en:"Central Bank"},
+  q:{fa:"نرخ دلار به لیر امروز چنده؟",tr:"Bugün USD/TRY kuru ne kadar?",en:"What is the USD/TRY rate today?"},
+  code:'tcmb_get_rate("USD")',
+  status:{fa:"✓ نرخ برگشت",tr:"✓ Kur döndü",en:"✓ Rate returned"},
+  a:{fa:"خرید ۴۹٫۹۸۲۴، فروش ۵۰٫۰۷۲۴ لیر — ۱۵ آبان ۱۴۰۵.",tr:"Alış 49,9824, satış 50,0724 TL — 6 Kasım 2026.",en:"Buying 49.9824, selling 50.0724 TRY — 6 Nov 2026."}},
+ {tab:{fa:"هپسی‌بورادا",tr:"Hepsiburada",en:"Hepsiburada"},
+  q:{fa:"ارزان‌ترین هدفون بی‌سیم در Hepsiburada چنده؟",tr:"Hepsiburada'daki en ucuz kablosuz kulaklık ne kadar?",en:"What is the cheapest wireless earphone on Hepsiburada?"},
+  code:'hepsiburada_search(query="kablosuz kulaklık", sort="artanfiyat")',
+  status:{fa:"✓ ارزان‌ترین کالا برگشت",tr:"✓ En ucuz ürün döndü",en:"✓ Cheapest item returned"},
+  a:{fa:"۱۵۰ لیر — ارزان‌ترین هدفون بی‌سیم موجود.",tr:"150 TL — stokta bulunan en ucuz kablosuz kulaklık.",en:"150 TRY — the cheapest wireless earphone in stock."}},
+ {tab:{fa:"ان۱۱",tr:"n11",en:"n11"},
+  q:{fa:"iPhone 17 Pro Max در n11 چنده؟",tr:"n11'de iPhone 17 Pro Max ne kadar?",en:"How much is an iPhone 17 Pro Max on n11?"},
+  code:'n11_search(query="iPhone 17 Pro Max")',
+  status:{fa:"✓ کالا پیدا شد",tr:"✓ Ürün bulundu",en:"✓ Product found"},
+  a:{fa:"۱۱۲٬۴۳۴٫۲۸ لیر، فروشنده SALİM TEKEMEN، امتیاز ۵٫۰، ۲۲۷ نظر.",tr:"112.434,28 TL, satıcı SALİM TEKEMEN, puan 5,0, 227 yorum.",en:"112,434.28 TRY, seller SALİM TEKEMEN, rating 5.0, 227 reviews."}},
+ {tab:{fa:"اوبیلت",tr:"Obilet",en:"Obilet"},
+  q:{fa:"ارزان‌ترین اتوبوس فردا از استانبول به آنکارا؟",tr:"Yarın İstanbul'dan Ankara'ya en ucuz otobüs hangisi?",en:"Cheapest bus tomorrow from Istanbul to Ankara?"},
+  code:'obilet_search_bus_journeys(origin="349", destination="356", date="2026-11-07")',
+  status:{fa:"✓ ۴۲۱ سفر برگشت",tr:"✓ 421 sefer döndü",en:"✓ 421 journeys returned"},
+  a:{fa:"از ۵۳۹ تا ۱٬۱۵۰ لیر، میانه ۸۰۰ لیر.",tr:"539 ile 1.150 TL arası, medyan 800 TL.",en:"From 539 to 1,150 TRY, median 800 TRY."}}
+];
+
+const TUTORIALS = [
+ {id:"install-uvx",level:"beginner",mins:5,cat:"setup",
+  title:{fa:"نصب uvx و اجرای اولین سرور",tr:"uvx kurulumu ve ilk sunucuyu çalıştırma",en:"Install uvx and run your first server"},
+  ex:{fa:"در پنج دقیقه uvx را نصب کن و نرخ زندهٔ دلار را از بانک مرکزی ترکیه بگیر.",tr:"Beş dakikada uvx'i kurun ve Türkiye Cumhuriyet Merkez Bankası'ndan canlı dolar kurunu alın.",en:"Install uvx in five minutes and get the live dollar rate from the Central Bank of Türkiye."},
+  steps:{fa:["پایتون ۳٫۹ یا جدیدتر را نصب کن (python.org).","در ترمینال اجرا کن: pip install uv","با این دستور سرور را آزمایش کن: uvx tcmb-mcp","اگر سرور بدون خطا بالا آمد، آماده‌ای — ادامه را در آموزش Claude Code ببین."],
+         tr:["Python 3.9 veya yenisini kurun (python.org).","Terminalde çalıştırın: pip install uv","Sunucuyu şu komutla test edin: uvx tcmb-mcp","Sunucu hatasız başlarsa hazırsınız — devamı için Claude Code eğitimine bakın."],
+         en:["Install Python 3.9 or newer (python.org).","In your terminal run: pip install uv","Test the server with: uvx tcmb-mcp","If the server starts without errors, you are ready — see the Claude Code tutorial next."]}},
+ {id:"claude-code",level:"beginner",mins:5,cat:"setup",
+  title:{fa:"اتصال سرور به Claude Code",tr:"Sunucuyu Claude Code'a bağlama",en:"Connect a server in Claude Code"},
+  ex:{fa:"با یک دستور ترمینال، سرور TCMB را به Claude Code اضافه کن.",tr:"Tek bir terminal komutuyla TCMB sunucusunu Claude Code'a ekleyin.",en:"Add the TCMB server to Claude Code with a single terminal command."},
+  steps:{fa:["ترمینال را باز کن و مطمئن شو uvx نصب است (uvx --version).","این دستور را اجرا کن: claude mcp add --transport stdio --scope user tcmb -- uvx tcmb-mcp","در Claude Code بپرس: «نرخ دلار به لیر امروز چنده؟»","اگر جواب با عدد برگشت، اتصال برقرار است. برای سرورهای دیگر، همین دستور را با نام سرور عوض کن."],
+         tr:["Terminali açın ve uvx'in kurulu olduğundan emin olun (uvx --version).","Şu komutu çalıştırın: claude mcp add --transport stdio --scope user tcmb -- uvx tcmb-mcp","Claude Code'da sorun: “Bugün USD/TRY kuru ne kadar?”","Sayılarla yanıt gelirse bağlantı kurulmuştur. Diğer sunucular için aynı komutta sunucu adını değiştirin."],
+         en:["Open a terminal and make sure uvx is installed (uvx --version).","Run: claude mcp add --transport stdio --scope user tcmb -- uvx tcmb-mcp","In Claude Code ask: “What is the USD/TRY rate today?”","If the answer comes back with numbers, the connection works. For other servers, use the same command with the server name changed."]}},
+ {id:"cursor",level:"beginner",mins:6,cat:"setup",
+  title:{fa:"اتصال سرور به Cursor",tr:"Sunucuyu Cursor'a bağlama",en:"Connect a server in Cursor"},
+  ex:{fa:"از تنظیمات MCP در Cursor، سرور را اضافه کن و از چت استفاده کن.",tr:"Cursor'ın MCP ayarlarından sunucuyu ekleyin ve sohbetten kullanın.",en:"Add the server from Cursor's MCP settings and use it from the chat."},
+  steps:{fa:["در Cursor مسیر Settings → MCP → Add new MCP server را باز کن.","Command را uvx و Args را [\"tcmb-mcp\"] بگذار.","ذخیره کن و مطمئن شو وضعیت سرور سبز است.","در چت Cursor بپرس: «ارزان‌ترین هدفون بی‌سیم در Hepsiburada چنده؟» — ولی اول سرور hepsiburada-mcp را اضافه کن."],
+         tr:["Cursor'da Settings → MCP → Add new MCP server yolunu açın.","Command alanına uvx, Args alanına [\"tcmb-mcp\"] yazın.","Kaydedin ve sunucu durumunun yeşil olduğundan emin olun.","Cursor sohbetinde sorun: “Hepsiburada'daki en ucuz kablosuz kulaklık ne kadar?” — önce hepsiburada-mcp sunucusunu ekleyin."],
+         en:["In Cursor open Settings → MCP → Add new MCP server.","Set Command to uvx and Args to [\"tcmb-mcp\"].","Save and make sure the server status is green.","In the Cursor chat ask: “What is the cheapest wireless earphone on Hepsiburada?” — first add the hepsiburada-mcp server."]}},
+ {id:"claude-desktop",level:"intermediate",mins:8,cat:"setup",
+  title:{fa:"پیکربندی Claude Desktop",tr:"Claude Desktop yapılandırması",en:"Configure Claude Desktop"},
+  ex:{fa:"با ویرایش فایل پیکربندی، سرور را به برنامهٔ دسکتاپ Claude اضافه کن.",tr:"Yapılandırma dosyasını düzenleyerek sunucuyu Claude masaüstü uygulamasına ekleyin.",en:"Add the server to the Claude desktop app by editing its config file."},
+  steps:{fa:["فایل پیکربندی را باز کن: در macOS مسیر ~/Library/Application Support/Claude/claude_desktop_config.json و در ویندوز %APPDATA%\\Claude\\claude_desktop_config.json","این بخش را اضافه کن: {\"mcpServers\": {\"tcmb\": {\"command\": \"uvx\", \"args\": [\"tcmb-mcp\"]}}}","فایل را ذخیره کن و Claude Desktop را کاملاً ببند و دوباره باز کن.","اگر سرور در چت ظاهر نشد، مسیر نصب uvx را بررسی کن (which uvx)."],
+         tr:["Yapılandırma dosyasını açın: macOS'ta ~/Library/Application Support/Claude/claude_desktop_config.json, Windows'ta %APPDATA%\\Claude\\claude_desktop_config.json","Şu bölümü ekleyin: {\"mcpServers\": {\"tcmb\": {\"command\": \"uvx\", \"args\": [\"tcmb-mcp\"]}}}","Dosyayı kaydedin ve Claude Desktop'ı tamamen kapatıp yeniden açın.","Sunucu sohbette görünmezse uvx kurulum yolunu kontrol edin (which uvx)."],
+         en:["Open the config file: on macOS ~/Library/Application Support/Claude/claude_desktop_config.json, on Windows %APPDATA%\\Claude\\claude_desktop_config.json","Add this section: {\"mcpServers\": {\"tcmb\": {\"command\": \"uvx\", \"args\": [\"tcmb-mcp\"]}}}","Save the file, fully quit Claude Desktop and reopen it.","If the server does not appear in chat, check your uvx install path (which uvx)."]}},
+ {id:"troubleshooting",level:"intermediate",mins:7,cat:"fix",
+  title:{fa:"عیب‌یابی: وقتی سرور بالا نمی‌آید",tr:"Sorun giderme: sunucu başlamadığında",en:"Troubleshooting: when a server won't start"},
+  ex:{fa:"رایج‌ترین خطاها و راه‌حل آن‌ها: uvx پیدا نمی‌شود، سرور متصل نمی‌شود، پاسخ خالی برمی‌گردد.",tr:"En yaygın hatalar ve çözümleri: uvx bulunamadı, sunucu bağlanmadı, boş yanıt döndü.",en:"The most common errors and their fixes: uvx not found, server won't connect, empty replies."},
+  steps:{fa:["«uvx: command not found» یعنی uv نصب نیست: pip install uv را اجرا کن و ترمینال را دوباره باز کن.","اگر سرور در Claude Code لیست نمی‌شود، دستور add را دوباره با --scope user اجرا کن.","اگر پاسخ خالی برگشت، اتصال اینترنت را بررسی کن — سرورها داده را زنده از سایت‌ها می‌خوانند.","اگر خطا ادامه داشت، با دستور uvx tcmb-mcp سرور را مستقیم اجرا کن و متن خطا را در گیت‌هاب سرور گزارش کن."],
+         tr:["“uvx: command not found” uv'nin kurulu olmadığı anlamına gelir: pip install uv çalıştırın ve terminali yeniden açın.","Sunucu Claude Code'da listelenmiyorsa add komutunu --scope user ile yeniden çalıştırın.","Boş yanıt geliyorsa internet bağlantısını kontrol edin — sunucular veriyi sitelerden canlı okur.","Hata sürerse sunucuyu uvx tcmb-mcp ile doğrudan çalıştırın ve hata metnini sunucunun GitHub sayfasında bildirin."],
+         en:["“uvx: command not found” means uv is not installed: run pip install uv and reopen the terminal.","If the server is not listed in Claude Code, run the add command again with --scope user.","If replies come back empty, check your internet connection — the servers read data live from the sites.","If the error persists, run the server directly with uvx tcmb-mcp and report the error text on the server's GitHub page."]}}
+];
+
+const ARTICLES = [
+ {id:"what-is-mcp",cat:"basics",date:"2026-11-05",mins:6,cover:"g1",icon:"🔌",
+  title:{fa:"MCP چیست؟ به زبان ساده",tr:"MCP nedir? Sade bir dille",en:"What is MCP, in plain language"},
+  ex:{fa:"پروتکل اتصال هوش مصنوعی به دنیای واقعی — بدون اصطلاحات پیچیده، با مثال‌های واقعی.",tr:"Yapay zekâyı gerçek dünyaya bağlayan protokol — karmaşık terimler olmadan, gerçek örneklerle.",en:"The protocol that connects AI to the real world — no jargon, with real examples."},
+  body:{fa:["مدل‌های هوش مصنوعی متن می‌نویسند، اما به‌تنهایی به دنیای بیرون دسترسی ندارند: نمی‌دانند قیمت دلار امروز چقدر است، در فروشگاه چه کالایی موجود است یا فردا چه اتوبوسی از استانبول به آنکارا می‌رود. MCP یا «پروتکل زمینهٔ مدل» (Model Context Protocol) یک قرارداد استاندارد است که به دستیار هوش مصنوعی اجازه می‌دهد با ابزارهای بیرونی صحبت کند.","به زبان ساده: MCP یک «پریز استاندارد» است. هر سرویس — فروشگاه، سایت آگهی، بانک مرکزی — یک «دوشاخه» می‌سازد و دستیار شما می‌تواند آن را وصل کند و سؤال شما را به یک فراخوانی ابزار تبدیل کند. بدون MCP، هر اتصال یک کار سفارشی و یک‌باره بود؛ با MCP، یک بار وصل می‌شوی و همه‌جا کار می‌کند.","سرورهای این کاتالوگ دقیقاً همین کار را می‌کنند: هر کدام یک سرویس ترکیه را — مثلاً Hepsiburada یا obilet — به دستیار شما وصل می‌کنند. همه فقط‌خواندنی‌اند: داده می‌خوانند، اما هرگز وارد حساب شما نمی‌شوند، خرید نمی‌کنند و چیزی را تغییر نمی‌دهند.","برای شروع، کافی است یک سرور را با uvx نصب کنی و آن را به Claude Code یا Cursor وصل کنی. از آن لحظه، به‌جای باز کردن ده تب مرورگر، از دستیارت می‌پرسی — و جواب را با عدد و منبع می‌گیری."],
+         tr:["Yapay zekâ modelleri metin yazar, ancak tek başlarına dış dünyaya erişemezler: bugünkü dolar kurunu, mağazada hangi ürünün stokta olduğunu veya yarın İstanbul'dan Ankara'ya hangi otobüsün gittiğini bilemezler. MCP (Model Context Protocol — Model Bağlam Protokolü), yapay zekâ asistanının dış araçlarla konuşmasını sağlayan standart bir sözleşmedir.","Basitçe söylemek gerekirse MCP standart bir “priz”dir. Her hizmet — mağaza, ilan sitesi, merkez bankası — bir “fiş” yapar ve asistanınız onu takıp sorunuzu bir araç çağrısına dönüştürebilir. MCP olmadan her bağlantı özel ve tek seferlik bir işti; MCP ile bir kez bağlanırsınız ve her yerde çalışır.","Bu katalogdaki sunucular tam olarak bunu yapar: her biri bir Türkiye servisini — örneğin Hepsiburada veya obilet — asistanınıza bağlar. Hepsi salt okunurdur: veri okurlar ama asla hesabınıza girmez, satın alma yapmaz ve hiçbir şeyi değiştirmezler.","Başlamak için bir sunucuyu uvx ile kurup Claude Code veya Cursor'a bağlamanız yeterlidir. O andan itibaren on sekme açmak yerine asistanınıza sorarsınız — ve yanıtı sayı ve kaynakla alırsınız."],
+         en:["AI models write text, but on their own they cannot reach the outside world: they don't know today's dollar rate, which products are in stock, or which bus leaves Istanbul for Ankara tomorrow. MCP — the Model Context Protocol — is a standard contract that lets an AI assistant talk to outside tools.","Simply put, MCP is a standard “socket”. Every service — a shop, a listings site, a central bank — builds a “plug”, and your assistant can connect it and turn your question into a tool call. Without MCP, every connection was a custom one-off job; with MCP, you connect once and it works everywhere.","The servers in this catalog do exactly that: each one connects a Turkish service — Hepsiburada or obilet, for example — to your assistant. All of them are read-only: they read data but never log in to your account, never buy anything and never change anything.","To start, just install a server with uvx and connect it to Claude Code or Cursor. From then on, instead of opening ten browser tabs, you ask your assistant — and get the answer with numbers and a source."]}},
+ {id:"choose-client",cat:"guides",date:"2026-11-04",mins:5,cover:"g2",icon:"🧭",
+  title:{fa:"کدام کلاینت MCP برای شما مناسب است؟",tr:"Hangi MCP istemcisi size uygun?",en:"Which MCP client is right for you?"},
+  ex:{fa:"Claude Code، Cursor، Claude Desktop یا VS Code — انتخاب درست به روش کارت بستگی دارد.",tr:"Claude Code, Cursor, Claude Desktop veya VS Code — doğru seçim çalışma şeklinize bağlıdır.",en:"Claude Code, Cursor, Claude Desktop or VS Code — the right choice depends on how you work."},
+  body:{fa:["اگر بیشتر در ترمینال کار می‌کنی، Claude Code سریع‌ترین راه است: یک دستور، و سرور وصل است. برای کسانی که با خط فرمان راحت‌اند، هیچ راه ساده‌تری نیست.","اگر برنامه‌نویس هستی و در ویرایشگر کد زندگی می‌کنی، Cursor یا VS Code انتخاب طبیعی است؛ سرور در کنار کدت قرار می‌گیرد و می‌توانی از دستیار بخواهی هم‌زمان کد و دادهٔ واقعی را ببیند.","اگر فقط می‌خواهی گفت‌وگو کنی و سؤال بپرسی، Claude Desktop ساده‌ترین گزینه است: یک بار فایل پیکربندی را ویرایش می‌کنی و بعد همه‌چیز در چت است.","یک نکتهٔ مهم: سرورهای محلی (stdio) فقط روی کامپیوتر خودت اجرا می‌شوند. نسخهٔ وب ChatGPT و Gemini فعلاً با این سرورها تأیید نشده‌اند — پس اگر از نسخهٔ وب استفاده می‌کنی، سراغ کلاینت‌های دسکتاپ یا خط فرمان برو."],
+         tr:["Çoğunlukla terminalde çalışıyorsanız Claude Code en hızlı yoldur: tek komut ve sunucu bağlanır. Komut satırıyla rahat olanlar için daha kolayı yoktur.","Programcıysanız ve kod düzenleyicide yaşıyorsanız Cursor veya VS Code doğal seçimdir; sunucu kodunuzun yanında durur ve asistandan kodu ve gerçek veriyi aynı anda görmesini isteyebilirsiniz.","Yalnızca sohbet etmek ve soru sormak istiyorsanız Claude Desktop en basit seçenektir: yapılandırma dosyasını bir kez düzenlersiniz, sonrası sohbettedir.","Önemli bir not: yerel (stdio) sunucular yalnızca kendi bilgisayarınızda çalışır. ChatGPT ve Gemini'nin web sürümleri bu sunucularla henüz doğrulanmadı — web sürümü kullanıyorsanız masaüstü veya komut satırı istemcilerini tercih edin."],
+         en:["If you mostly live in the terminal, Claude Code is the fastest path: one command and the server is connected. For anyone comfortable with the command line, there is nothing simpler.","If you are a programmer who lives in a code editor, Cursor or VS Code is the natural choice; the server sits next to your code and you can ask the assistant to see code and real data at the same time.","If you only want to chat and ask questions, Claude Desktop is the simplest option: you edit the config file once, and afterwards everything happens in the chat.","One important note: local (stdio) servers run only on your own computer. The web versions of ChatGPT and Gemini are not yet verified with these servers — so if you use the web version, pick a desktop or command-line client instead."]}},
+ {id:"turkey-servers",cat:"guides",date:"2026-11-03",mins:7,cover:"g3",icon:"🇹🇷",
+  title:{fa:"سرورهای ترکیه چطور کار می‌کنند؟",tr:"Türkiye sunucuları nasıl çalışır?",en:"How do the Turkey servers work?"},
+  ex:{fa:"پشت صحنهٔ هشت سرور فقط‌خواندنی: از کجا داده می‌خوانند، چه چیزی را نمی‌توانند انجام دهند و چرا امن‌اند.",tr:"Sekiz salt okunur sunucunun perde arkası: veriyi nereden okurlar, neyi yapamazlar ve neden güvenlidirler.",en:"Behind the scenes of eight read-only servers: where they read data, what they cannot do, and why they are safe."},
+  body:{fa:["هر سرور این کاتالوگ یک برنامهٔ کوچک پایتون است که با uvx اجرا می‌شود. وقتی دستیارت سؤالی می‌پرسد — مثلاً «ارزان‌ترین هدفون بی‌سیم چنده؟» — سرور به سایت مربوطه سر می‌زند، صفحه را می‌خواند و جواب ساخت‌یافته برمی‌گرداند.","داده‌ها همیشه زنده‌اند: نرخ ارز از XML رسمی بانک مرکزی ترکیه خوانده می‌شود، قیمت کالا از صفحهٔ فروشگاه، و ساعت اتوبوس از obilet. هیچ پایگاه دادهٔ قدیمی و هیچ عدد حدسی در میان نیست.","مهم‌ترین اصل طراحی این سرورها «فقط‌خواندنی» بودن است. آن‌ها هیچ حساب کاربری، رمز عبور یا توکنی ندارند؛ نمی‌توانند وارد حسابت شوی، خرید کنند یا رزرو انجام دهند. بدترین کاری که یک سرور خراب می‌تواند بکند، برگرداندن یک جواب اشتباه است — و تو همیشه می‌توانی آن را با باز کردن سایت بررسی کنی.","همهٔ سرورها متن‌باز‌اند و کدشان در گیت‌هاب است. اگر کنجکاوی، می‌توانی دقیقاً ببینی هر ابزار چه درخواستی می‌فرستد و چه چیزی برمی‌گرداند. شفافیت، به‌جای اعتماد کورکورانه، اصل این پروژه است."],
+         tr:["Bu katalogdaki her sunucu uvx ile çalışan küçük bir Python programıdır. Asistanınız bir soru sorduğunda — örneğin “en ucuz kablosuz kulaklık ne kadar?” — sunucu ilgili siteye gider, sayfayı okur ve yapılandırılmış bir yanıt döndürür.","Veriler her zaman canlıdır: döviz kuru Türkiye Cumhuriyet Merkez Bankası'nın resmi XML'inden, ürün fiyatı mağaza sayfasından, otobüs saati obilet'ten okunur. Eski bir veritabanı ve tahminî sayı yoktur.","Bu sunucuların en önemli tasarım ilkesi “salt okunur” olmalarıdır. Hiçbir kullanıcı hesabı, şifre veya jetonları yoktur; hesabınıza giremez, satın alma yapamaz veya rezervasyon yapamazlar. Bozuk bir sunucunun yapabileceği en kötü şey yanlış bir yanıt döndürmektir — ve bunu siteyi açarak her zaman doğrulayabilirsiniz.","Tüm sunucular açık kaynaklıdır ve kodları GitHub'dadır. Merak ediyorsanız her aracın tam olarak hangi isteği gönderdiğini ve ne döndürdüğünü görebilirsiniz. Kör güven yerine şeffaflık bu projenin ilkesidir."],
+         en:["Each server in this catalog is a small Python program that runs with uvx. When your assistant asks a question — “what is the cheapest wireless earphone?” — the server visits the relevant site, reads the page and returns a structured answer.","The data is always live: exchange rates come from the Central Bank of Türkiye's official XML, product prices from the shop page, and bus times from obilet. There is no stale database and no guessed numbers.","The most important design principle of these servers is that they are read-only. They have no user account, no password and no token; they cannot log in to your account, buy anything or make a reservation. The worst thing a broken server can do is return a wrong answer — and you can always check it by opening the site.","All servers are open source and their code is on GitHub. If you are curious, you can see exactly what request each tool sends and what it returns. Transparency, instead of blind trust, is this project's principle."]}}
+];
+
+
+/* ---------------- I18N ---------------- */
+const I18N = {
+fa:{
+ a11y_skip:"پرش به محتوا", brand_tag:"کاتالوگ MCP ترکیه",
+ nav_home:"خانه", nav_marketplace:"بازارچه MCP", nav_categories:"دسته‌بندی‌ها", nav_skills:"مهارت‌ها",
+ nav_tutorials:"آموزش‌ها", nav_blog:"وبلاگ", nav_about:"درباره ما", nav_contact:"تماس",
+ nav_login:"ورود", nav_register:"ثبت‌نام", nav_dashboard:"داشبورد", nav_favorites:"علاقه‌مندی‌ها",
+ nav_profile:"پروفایل", nav_logout:"خروج", nav_menu:"منو",
+ hero_title:"هوش مصنوعی را به دنیای واقعی متصل کن",
+ hero_sub:"سرورهای MCP فقط‌خواندنی برای سرویس‌های ترکیه: خرید، خودرو، املاک، سفر و نرخ ارز — وصل‌شونده به Claude Code، Cursor و Claude Desktop. بدون کلید API، بدون حساب.",
+ hero_search_ph:"نام سرویس یا ابزار را جست‌وجو کن؛ مثلاً بلیط اتوبوس…",
+ hero_cta1:"کاوش ابزارهای MCP", hero_cta2:"چطور کار می‌کند؟",
+ stat_servers:"سرور MCP", stat_tools:"ابزار", stat_skills:"مهارت ایجنت", stat_langs:"زبان",
+ demo_title:"زنده امتحان کن", demo_note:"مقادیر زیر در ۱۵ آبان ۱۴۰۵ به‌صورت زنده بررسی شده‌اند؛ دادهٔ زنده نیستند.",
+ demo_ask:"این سؤال را خودتان بپرسید", demo_nosignup:"بدون ثبت‌نام", demo_footer:"اجرا روی کامپیوتر شما با uvx؛ بدون کلید API.",
+ cats_title:"دسته‌بندی‌های پلتفرم", cats_sub:"هر دسته یک سرویس واقعی ترکیه را در دسترس دستیار هوش مصنوعی‌ات می‌گذارد.",
+ cat_shopping:"خرید آنلاین", cat_shopping_d:"فروشگاه‌های Hepsiburada، n11 و ÇiçekSepeti",
+ cat_cars:"خودرو", cat_cars_d:"آگهی‌های خودروی دست‌دوم arabam.com",
+ cat_real_estate:"املاک", cat_real_estate_d:"آگهی‌های فروش و اجارهٔ emlakjet.com",
+ cat_services:"خدمات محلی", cat_services_d:"متخصصان و راهنمای قیمت armut.com",
+ cat_travel:"سفر و بلیط", cat_travel_d:"اتوبوس و پرواز از obilet.com",
+ cat_finance:"مالی و ارز", cat_finance_d:"نرخ رسمی بانک مرکزی ترکیه",
+ cat_productivity:"بهره‌وری", cat_productivity_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
+ cat_communication:"ارتباطات", cat_communication_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
+ cat_development:"توسعه", cat_development_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
+ cat_data:"داده و تحلیل", cat_data_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
+ cat_coming:"به‌زودی", cat_servers:"سرور", view_all:"مشاهدهٔ همه",
+ feat_title:"سرورهای منتخب MCP", feat_sub:"هشت سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
+ feat_badge:"منتخب", status_available:"در دسترس", tools_count:"ابزار",
+ details:"جزئیات", docs:"مستندات", connect:"اتصال", add_fav:"افزودن به علاقه‌مندی‌ها", remove_fav:"حذف از علاقه‌مندی‌ها",
+ plat_title:"با کدام دستیار هوش مصنوعی کار می‌کند؟", plat_sub:"سرورها روی کامپیوتر شما با uvx اجرا می‌شوند و از راه stdio وصل می‌شوند.",
+ plat_verified:"سازگاری تأییدشده", plat_unverified:"تأییدنشده / برنامه‌ریزی‌شده",
+ plat_verified_note:"این کلاینت‌ها با سرورهای stdio محلی آزمایش شده‌اند.",
+ plat_unverified_note:"نسخهٔ وب این سرویس‌ها با سرورهای محلی stdio تأیید نشده است — ادعای سازگاری نمی‌کنیم.",
+ how_title:"چطور کار می‌کند؟", how_sub:"سه قدم تا اولین سؤال واقعی از دستیارت.",
+ how_s1_t:"۱. یک سرور MCP پیدا کن", how_s1_d:"در بازارچه بگرد؛ هر سرور یک سرویس ترکیه را پوشش می‌دهد و فهرست ابزارهایش مشخص است.",
+ how_s2_t:"۲. آن را به دستیارت وصل کن", how_s2_d:"با یک دستور uvx در Claude Code، یا با چند کلیک در Cursor و Claude Desktop.",
+ how_s3_t:"۳. از هوش مصنوعی استفاده کن", how_s3_d:"به‌جای باز کردن ده تب، بپرس — جواب را با عدد، قیمت و منبع می‌گیری.",
+ skills_title:"بازارچهٔ مهارت‌ها", skills_sub:"مهارت‌های واقعی ایجنت که یک خلأ اثبات‌شده در اکوسیستم Claude را پر می‌کنند.",
+ skill_compat:"سازگار با", skill_gap:"خلأیی که پر می‌کند", skill_repo:"گیت‌هاب", skill_tests:"تست",
+ tut_title:"آموزش‌ها و مرکز یادگیری", tut_sub:"راهنمای قدم‌به‌قدم نصب و اتصال — همه با دستورهای واقعی و آزمایش‌شده.",
+ tut_level:"سطح", tut_beginner:"مبتدی", tut_intermediate:"متوسط", tut_steps:"مراحل",
+ blog_title:"وبلاگ و مقاله‌ها", blog_sub:"یادداشت‌های آموزشی دربارهٔ MCP، کلاینت‌ها و سرورهای ترکیه.",
+ read_time:"دقیقه خواندن", featured_art:"منتخب",
+ foot_about:"Turkey MCP مرجع کامل سرورهای MCP غیررسمی و فقط‌خواندنی برای سرویس‌های وب ترکیه است — ساختهٔ محمد عباسی. سه‌زبانه، متن‌باز و بدون کلید API.",
+ foot_platform:"پلتفرم", foot_resources:"منابع", foot_company:"پروژه", foot_legal:"قانونی",
+ foot_privacy:"حریم خصوصی", foot_terms:"شرایط استفاده", foot_rights:"همهٔ حقوق محفوظ است.",
+ foot_follow:"ما را دنبال کن",
+ mp_title:"بازارچهٔ MCP", mp_sub:"همهٔ سرورهای کاتالوگ — جست‌وجو، فیلتر و مرتب‌سازی.",
+ mp_search_ph:"جست‌وجو در سرورها، مهارت‌ها، آموزش‌ها و مقاله‌ها…",
+ f_category:"دسته‌بندی", f_platform:"پلتفرم", f_connection:"نوع اتصال", f_status:"وضعیت",
+ f_all:"همه", f_stdio:"stdio (محلی)", f_available:"در دسترس",
+ sort:"مرتب‌سازی", sort_popular:"بیشترین ابزار (نمایندهٔ محبوبیت)", sort_newest:"جدیدترین در کاتالوگ", sort_alpha:"الفبایی",
+ results:"نتیجه", no_results:"چیزی پیدا نشد", no_results_hint:"فیلترها را بردار یا عبارت دیگری امتحان کن — مثلاً «اتوبوس»، «ارز» یا «گل».",
+ sugg:"پیشنهادها",
+ tool_tools:"ابزارهای سرور", tool_install:"نصب و اتصال", tool_repo:"ریپوی گیت‌هاب", tool_pypi:"صفحهٔ PyPI",
+ tool_version:"نسخه", tool_last:"آخرین بررسی", tool_copy:"کپی", tool_copied:"کپی شد",
+ tool_conn:"روش اتصال", tool_conn_d:"سرور محلی stdio — با uvx اجرا می‌شود، بدون کلید API و بدون حساب.",
+ tool_cat:"دسته‌بندی", tool_status:"وضعیت", tool_platforms:"پلتفرم‌های تأییدشده",
+ back:"بازگشت",
+ cats_page_title:"دسته‌بندی‌ها", cats_page_sub:"شش دستهٔ واقعی با سرور زنده، و دسته‌هایی که هنوز در این کاتالوگ نیستند.",
+ skills_page_title:"بازارچهٔ مهارت‌ها", skills_page_sub:"مهارت‌های ایجنت ساخته‌شده برای خلأهای واقعی اکوسیستم Claude.",
+ skills_search_ph:"جست‌وجو در مهارت‌ها…",
+ tut_page_title:"آموزش‌ها", tut_page_sub:"از نصب تا عیب‌یابی — همه با دستورهای واقعی.",
+ blog_page_title:"وبلاگ", blog_page_sub:"مقاله‌های آموزشی دربارهٔ MCP و سرورهای ترکیه.",
+ about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
+ about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
+ about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
+ about_catalog_t:"کاتالوگ", about_catalog_d:"۸ سرور، ۳۹ ابزار، همه فقط‌خواندنی و روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی (۲۴ تا ۳۷ تست) تأیید شده است.",
+ contact_title:"تماس با ما", contact_sub:"سؤال، پیشنهاد یا گزارش مشکل — پیامت را بفرست؛ فعلاً فقط در همین صفحه تأیید می‌شود و به جایی ارسال نمی‌شود.",
+ contact_name:"نام", contact_email:"ایمیل", contact_subject:"موضوع", contact_message:"پیام",
+ contact_send:"ارسال پیام", contact_sent:"پیامت دریافت شد — ممنون! توجه: این نسخه بدون بک‌اند است و پیام ذخیره نمی‌شود.",
+ contact_note:"این فرم نمایشی است؛ بدون سرور، پیام به جایی ارسال نمی‌شود.",
+ err_required:"این فیلد الزامی است.", err_email:"ایمیل معتبر وارد کن.", err_msg_len:"پیام باید حداقل ۱۰ کاراکتر باشد.",
+ auth_login_t:"ورود به حساب", auth_login_s:"به حساب نمایشی خودت وارد شو.",
+ auth_reg_t:"ساخت حساب", auth_reg_s:"یک حساب نمایشی بساز — فقط در همین مرورگر ذخیره می‌شود.",
+ auth_name:"نام نمایشی", auth_email:"ایمیل", auth_pass:"گذرواژه", auth_pass2:"تکرار گذرواژه",
+ auth_login_btn:"ورود", auth_reg_btn:"ثبت‌نام",
+ auth_no_acc:"حساب نداری؟ ثبت‌نام کن", auth_has_acc:"حساب داری؟ وارد شو",
+ auth_err_email:"ایمیل معتبر وارد کن.", auth_err_pass:"گذرواژه حداقل ۶ کاراکتر باشد.",
+ auth_err_name:"نام را وارد کن.", auth_err_match:"گذرواژه‌ها یکی نیستند.",
+ auth_err_exists:"این ایمیل قبلاً ثبت شده است.", auth_err_invalid:"ایمیل یا گذرواژه اشتباه است.",
+ auth_ok_reg:"حسابت ساخته شد — خوش آمدی!", auth_ok_login:"خوش برگشتی!",
+ auth_demo:"حساب نمایشی: ورود و ثبت‌نام فقط در همین مرورگر (localStorage) ذخیره می‌شوند و رمز عبور به‌صورت امن هش نمی‌شود. نسخهٔ نهایی به بک‌اند واقعی نیاز دارد.",
+ auth_req:"برای دیدن این صفحه باید وارد شوی.", auth_req_go:"رفتن به ورود",
+ dash_title:"داشبورد", dash_welcome:"سلام", dash_favs:"علاقه‌مندی‌ها", dash_recent:"اخیراً دیده‌شده",
+ dash_account:"حساب من", dash_none:"هنوز چیزی اینجا نیست.", dash_none_hint:"از بازارچه یا مهارت‌ها، سرور و مهارت موردعلاقه‌ات را ستاره‌دار کن.",
+ dash_go:"رفتن به بازارچه",
+ fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
+ fav_empty:"هنوز علاقه‌مندی نداری.", fav_empty_hint:"روی ستارهٔ هر سرور یا مهارت بزن تا اینجا ذخیره شود.",
+ prof_title:"پروفایل", prof_sub:"نام نمایشی و ترجیح‌هایت را تغییر بده.",
+ prof_name:"نام نمایشی", prof_lang:"زبان", prof_theme:"تم", prof_save:"ذخیره", prof_saved:"ذخیره شد.",
+ prof_pass_t:"تغییر گذرواژه", prof_cur:"گذرواژهٔ فعلی", prof_new:"گذرواژهٔ جدید", prof_err_cur:"گذرواژهٔ فعلی اشتباه است.",
+ nf_title:"صفحه پیدا نشد", nf_sub:"نشانی‌ای که باز کردی در این کاتالوگ وجود ندارد.", nf_home:"رفتن به خانه",
+ theme_light:"روشن", theme_dark:"تیره", lang_name:"زبان",
+ logout_ok:"با موفقیت خارج شدی.", fav_added:"به علاقه‌مندی‌ها اضافه شد.", fav_removed:"از علاقه‌مندی‌ها حذف شد.",
+ search_in:"جست‌وجو در", match_servers:"سرورها", match_skills:"مهارت‌ها", match_tuts:"آموزش‌ها", match_arts:"مقاله‌ها"
+},
+tr:{
+ a11y_skip:"İçeriğe atla", brand_tag:"Türkiye MCP Kataloğu",
+ nav_home:"Ana Sayfa", nav_marketplace:"MCP Pazaryeri", nav_categories:"Kategoriler", nav_skills:"Beceriler",
+ nav_tutorials:"Eğitimler", nav_blog:"Blog", nav_about:"Hakkımızda", nav_contact:"İletişim",
+ nav_login:"Giriş Yap", nav_register:"Kayıt Ol", nav_dashboard:"Panel", nav_favorites:"Favoriler",
+ nav_profile:"Profil", nav_logout:"Çıkış", nav_menu:"Menü",
+ hero_title:"Yapay Zekâyı Gerçek Dünyaya Bağla",
+ hero_sub:"Türkiye servisleri için salt okunur MCP sunucuları: alışveriş, otomobil, emlak, seyahat ve döviz — Claude Code, Cursor ve Claude Desktop'a bağlanır. API anahtarı yok, hesap yok.",
+ hero_search_ph:"Servis veya araç arayın; örn. otobüs bileti…",
+ hero_cta1:"MCP Araçlarını Keşfet", hero_cta2:"Nasıl Çalışır?",
+ stat_servers:"MCP sunucusu", stat_tools:"araç", stat_skills:"ajan becerisi", stat_langs:"dil",
+ demo_title:"Canlı deneyin", demo_note:"Aşağıdaki değerler 6 Kasım 2026'da canlı doğrulanmıştır; canlı veri değildir.",
+ demo_ask:"Bu soruyu kendiniz sorun", demo_nosignup:"Kayıt yok", demo_footer:"uvx ile bilgisayarınızda çalışır; API anahtarı yok.",
+ cats_title:"Platform Kategorileri", cats_sub:"Her kategori, bir gerçek Türkiye servisini yapay zekâ asistanınızın eline verir.",
+ cat_shopping:"İnternet Alışverişi", cat_shopping_d:"Hepsiburada, n11 ve ÇiçekSepeti mağazaları",
+ cat_cars:"Otomobil", cat_cars_d:"arabam.com ikinci el otomobil ilanları",
+ cat_real_estate:"Emlak", cat_real_estate_d:"emlakjet.com satılık ve kiralık ilanlar",
+ cat_services:"Yerel Hizmetler", cat_services_d:"armut.com uzmanları ve fiyat rehberleri",
+ cat_travel:"Seyahat ve Bilet", cat_travel_d:"obilet.com otobüs ve uçak",
+ cat_finance:"Finans ve Döviz", cat_finance_d:"Türkiye Cumhuriyet Merkez Bankası resmi kurları",
+ cat_productivity:"Verimlilik", cat_productivity_d:"Yakında — bu katalog için planlanmadı",
+ cat_communication:"İletişim", cat_communication_d:"Yakında — bu katalog için planlanmadı",
+ cat_development:"Geliştirme", cat_development_d:"Yakında — bu katalog için planlanmadı",
+ cat_data:"Veri ve Analitik", cat_data_d:"Yakında — bu katalog için planlanmadı",
+ cat_coming:"Yakında", cat_servers:"sunucu", view_all:"Tümünü Gör",
+ feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş sekiz salt okunur sunucu — doğrulanmamış iddia yok.",
+ feat_badge:"Öne Çıkan", status_available:"Kullanılabilir", tools_count:"araç",
+ details:"Detaylar", docs:"Belgeler", connect:"Bağlan", add_fav:"Favorilere ekle", remove_fav:"Favorilerden çıkar",
+ plat_title:"Hangi yapay zekâ asistanıyla çalışır?", plat_sub:"Sunucular bilgisayarınızda uvx ile çalışır ve stdio üzerinden bağlanır.",
+ plat_verified:"Doğrulanmış uyumluluk", plat_unverified:"Doğrulanmamış / planlanan",
+ plat_verified_note:"Bu istemciler yerel stdio sunucularıyla test edilmiştir.",
+ plat_unverified_note:"Bu hizmetlerin web sürümleri yerel stdio sunucularıyla doğrulanmadı — uyumluluk iddia etmiyoruz.",
+ how_title:"Nasıl Çalışır?", how_sub:"İlk gerçek sorunuza üç adım.",
+ how_s1_t:"1. Bir MCP sunucusu bulun", how_s1_d:"Pazaryerine göz atın; her sunucu bir Türkiye servisini kapsar ve araç listesi bellidir.",
+ how_s2_t:"2. Asistanınıza bağlayın", how_s2_d:"Claude Code'da tek bir uvx komutuyla veya Cursor ile Claude Desktop'ta birkaç tıklamayla.",
+ how_s3_t:"3. Yapay zekâyı kullanın", how_s3_d:"On sekme açmak yerine sorun — yanıtı sayı, fiyat ve kaynakla alın.",
+ skills_title:"Beceri Pazaryeri", skills_sub:"Claude ekosistemindeki kanıtlanmış bir boşluğu dolduran gerçek ajan becerileri.",
+ skill_compat:"Uyumlu", skill_gap:"Doldurduğu boşluk", skill_repo:"GitHub", skill_tests:"test",
+ tut_title:"Eğitimler ve Öğrenme Merkezi", tut_sub:"Kurulum ve bağlantı için adım adım kılavuzlar — hepsi gerçek, test edilmiş komutlarla.",
+ tut_level:"Seviye", tut_beginner:"Başlangıç", tut_intermediate:"Orta", tut_steps:"Adımlar",
+ blog_title:"Blog ve Makaleler", blog_sub:"MCP, istemciler ve Türkiye sunucuları hakkında eğitici yazılar.",
+ read_time:"dakikalık okuma", featured_art:"Öne Çıkan",
+ foot_about:"Turkey MCP, Türkiye web servisleri için resmi olmayan, salt okunur MCP sunucularının eksiksiz referansıdır — Mohammad Abbasi tarafından hazırlandı. Üç dilli, açık kaynaklı, API anahtarı yok.",
+ foot_platform:"Platform", foot_resources:"Kaynaklar", foot_company:"Proje", foot_legal:"Yasal",
+ foot_privacy:"Gizlilik", foot_terms:"Kullanım Şartları", foot_rights:"Tüm hakları saklıdır.",
+ foot_follow:"Bizi takip edin",
+ mp_title:"MCP Pazaryeri", mp_sub:"Katalogdaki tüm sunucular — arayın, filtreleyin, sıralayın.",
+ mp_search_ph:"Sunucularda, becerilerde, eğitimlerde ve makalelerde arayın…",
+ f_category:"Kategori", f_platform:"Platform", f_connection:"Bağlantı türü", f_status:"Durum",
+ f_all:"Tümü", f_stdio:"stdio (yerel)", f_available:"Kullanılabilir",
+ sort:"Sırala", sort_popular:"En çok araç (popülerlik göstergesi)", sort_newest:"Katalogdaki en yeni", sort_alpha:"Alfabetik",
+ results:"sonuç", no_results:"Sonuç bulunamadı", no_results_hint:"Filtreleri kaldırın veya başka bir ifade deneyin — örn. “otobüs”, “döviz” veya “çiçek”.",
+ sugg:"Öneriler",
+ tool_tools:"Sunucu araçları", tool_install:"Kurulum ve bağlantı", tool_repo:"GitHub deposu", tool_pypi:"PyPI sayfası",
+ tool_version:"Sürüm", tool_last:"Son kontrol", tool_copy:"Kopyala", tool_copied:"Kopyalandı",
+ tool_conn:"Bağlantı yöntemi", tool_conn_d:"Yerel stdio sunucusu — uvx ile çalışır, API anahtarı ve hesap gerekmez.",
+ tool_cat:"Kategori", tool_status:"Durum", tool_platforms:"Doğrulanmış platformlar",
+ back:"Geri",
+ cats_page_title:"Kategoriler", cats_page_sub:"Canlı sunuculu altı gerçek kategori ve bu katalogda henüz olmayanlar.",
+ skills_page_title:"Beceri Pazaryeri", skills_page_sub:"Claude ekosistemindeki gerçek boşluklar için geliştirilmiş ajan becerileri.",
+ skills_search_ph:"Becerilerde arayın…",
+ tut_page_title:"Eğitimler", tut_page_sub:"Kurulumdan sorun gidermeye — hepsi gerçek komutlarla.",
+ blog_page_title:"Blog", blog_page_sub:"MCP ve Türkiye sunucuları hakkında eğitici makaleler.",
+ about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
+ about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
+ about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
+ about_catalog_t:"Katalog", about_catalog_d:"8 sunucu, 39 araç — hepsi salt okunur ve PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle (24–37 test) doğrulanmıştır.",
+ contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi — mesajınızı gönderin; şimdilik yalnızca bu sayfada onaylanır, hiçbir yere gönderilmez.",
+ contact_name:"Ad", contact_email:"E-posta", contact_subject:"Konu", contact_message:"Mesaj",
+ contact_send:"Mesajı Gönder", contact_sent:"Mesajınız alındı — teşekkürler! Not: Bu sürümün arka ucu yoktur ve mesaj kaydedilmez.",
+ contact_note:"Bu form tanıtım amaçlıdır; arka uç olmadan mesaj hiçbir yere gönderilmez.",
+ err_required:"Bu alan zorunludur.", err_email:"Geçerli bir e-posta girin.", err_msg_len:"Mesaj en az 10 karakter olmalıdır.",
+ auth_login_t:"Hesabınıza Giriş Yapın", auth_login_s:"Tanıtım hesabınıza giriş yapın.",
+ auth_reg_t:"Hesap Oluşturun", auth_reg_s:"Tanıtım hesabı oluşturun — yalnızca bu tarayıcıda saklanır.",
+ auth_name:"Görünen ad", auth_email:"E-posta", auth_pass:"Şifre", auth_pass2:"Şifreyi tekrar girin",
+ auth_login_btn:"Giriş Yap", auth_reg_btn:"Kayıt Ol",
+ auth_no_acc:"Hesabınız yok mu? Kayıt olun", auth_has_acc:"Hesabınız var mı? Giriş yapın",
+ auth_err_email:"Geçerli bir e-posta girin.", auth_err_pass:"Şifre en az 6 karakter olmalıdır.",
+ auth_err_name:"Adınızı girin.", auth_err_match:"Şifreler eşleşmiyor.",
+ auth_err_exists:"Bu e-posta zaten kayıtlı.", auth_err_invalid:"E-posta veya şifre hatalı.",
+ auth_ok_reg:"Hesabınız oluşturuldu — hoş geldiniz!", auth_ok_login:"Tekrar hoş geldiniz!",
+ auth_demo:"Tanıtım hesabı: giriş ve kayıt yalnızca bu tarayıcıda (localStorage) saklanır ve şifre güvenli şekilde hash'lenmez. Son sürüm gerçek bir arka uç gerektirir.",
+ auth_req:"Bu sayfayı görmek için giriş yapmalısınız.", auth_req_go:"Girişe git",
+ dash_title:"Panel", dash_welcome:"Merhaba", dash_favs:"Favoriler", dash_recent:"Son görüntülenenler",
+ dash_account:"Hesabım", dash_none:"Burada henüz bir şey yok.", dash_none_hint:"Pazaryerinden veya becerilerden sevdiğiniz sunucu ve becerileri yıldızlayın.",
+ dash_go:"Pazaryerine git",
+ fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
+ fav_empty:"Henüz favoriniz yok.", fav_empty_hint:"Herhangi bir sunucu veya becerinin yıldızına dokunun, burada saklansın.",
+ prof_title:"Profil", prof_sub:"Görünen adınızı ve tercihlerinizi değiştirin.",
+ prof_name:"Görünen ad", prof_lang:"Dil", prof_theme:"Tema", prof_save:"Kaydet", prof_saved:"Kaydedildi.",
+ prof_pass_t:"Şifre değiştir", prof_cur:"Mevcut şifre", prof_new:"Yeni şifre", prof_err_cur:"Mevcut şifre hatalı.",
+ nf_title:"Sayfa bulunamadı", nf_sub:"Açtığınız adres bu katalogda yok.", nf_home:"Ana sayfaya git",
+ theme_light:"Açık", theme_dark:"Koyu", lang_name:"Dil",
+ logout_ok:"Başarıyla çıkış yaptınız.", fav_added:"Favorilere eklendi.", fav_removed:"Favorilerden çıkarıldı.",
+ search_in:"Arama", match_servers:"Sunucular", match_skills:"Beceriler", match_tuts:"Eğitimler", match_arts:"Makaleler"
+},
+en:{
+ a11y_skip:"Skip to content", brand_tag:"Turkey MCP Catalog",
+ nav_home:"Home", nav_marketplace:"MCP Marketplace", nav_categories:"Categories", nav_skills:"Skills",
+ nav_tutorials:"Tutorials", nav_blog:"Blog", nav_about:"About Us", nav_contact:"Contact",
+ nav_login:"Log In", nav_register:"Sign Up", nav_dashboard:"Dashboard", nav_favorites:"Favorites",
+ nav_profile:"Profile", nav_logout:"Log Out", nav_menu:"Menu",
+ hero_title:"Connect AI to the World",
+ hero_sub:"Read-only MCP servers for Turkish services: shopping, cars, real estate, travel and exchange rates — connecting to Claude Code, Cursor and Claude Desktop. No API key, no account.",
+ hero_search_ph:"Search a service or tool; e.g. bus ticket…",
+ hero_cta1:"Explore MCP Tools", hero_cta2:"How It Works",
+ stat_servers:"MCP servers", stat_tools:"tools", stat_skills:"agent skills", stat_langs:"languages",
+ demo_title:"Try it live", demo_note:"Values below were verified live on 6 Nov 2026; they are not live data.",
+ demo_ask:"Ask this yourself", demo_nosignup:"No sign-up", demo_footer:"Runs on your computer with uvx; no API key.",
+ cats_title:"Platform Categories", cats_sub:"Every category puts one real Turkish service in your AI assistant's hands.",
+ cat_shopping:"Online Shopping", cat_shopping_d:"Hepsiburada, n11 and ÇiçekSepeti stores",
+ cat_cars:"Cars", cat_cars_d:"Used-car listings from arabam.com",
+ cat_real_estate:"Real Estate", cat_real_estate_d:"Sale and rental listings from emlakjet.com",
+ cat_services:"Local Services", cat_services_d:"Pros and price guides from armut.com",
+ cat_travel:"Travel & Tickets", cat_travel_d:"Bus and flights from obilet.com",
+ cat_finance:"Finance & FX", cat_finance_d:"Official rates from the Central Bank of Türkiye",
+ cat_productivity:"Productivity", cat_productivity_d:"Coming soon — not planned for this catalog",
+ cat_communication:"Communication", cat_communication_d:"Coming soon — not planned for this catalog",
+ cat_development:"Development", cat_development_d:"Coming soon — not planned for this catalog",
+ cat_data:"Data & Analytics", cat_data_d:"Coming soon — not planned for this catalog",
+ cat_coming:"Coming soon", cat_servers:"servers", view_all:"View All",
+ feat_title:"Featured MCP Servers", feat_sub:"Eight read-only servers built with real tests — no unverified claims.",
+ feat_badge:"Featured", status_available:"Available", tools_count:"tools",
+ details:"Details", docs:"Docs", connect:"Connect", add_fav:"Add to favorites", remove_fav:"Remove from favorites",
+ plat_title:"Which AI assistant does it work with?", plat_sub:"Servers run on your computer with uvx and connect over stdio.",
+ plat_verified:"Verified compatibility", plat_unverified:"Unverified / planned",
+ plat_verified_note:"These clients were tested with local stdio servers.",
+ plat_unverified_note:"The web versions of these services are not verified with local stdio servers — we make no compatibility claim.",
+ how_title:"How It Works", how_sub:"Three steps to your first real question to your assistant.",
+ how_s1_t:"1. Find an MCP server", how_s1_d:"Browse the marketplace; each server covers one Turkish service and its tool list is shown.",
+ how_s2_t:"2. Connect it to your assistant", how_s2_d:"One uvx command in Claude Code, or a few clicks in Cursor and Claude Desktop.",
+ how_s3_t:"3. Use AI", how_s3_d:"Instead of opening ten tabs, ask — and get the answer with numbers, prices and a source.",
+ skills_title:"Skills Marketplace", skills_sub:"Real agent skills that fill a proven gap in the Claude ecosystem.",
+ skill_compat:"Compatible with", skill_gap:"The gap it fills", skill_repo:"GitHub", skill_tests:"tests",
+ tut_title:"Tutorials & Learning Center", tut_sub:"Step-by-step setup and connection guides — all with real, tested commands.",
+ tut_level:"Level", tut_beginner:"Beginner", tut_intermediate:"Intermediate", tut_steps:"Steps",
+ blog_title:"Blog & Articles", blog_sub:"Educational notes on MCP, clients and the Turkey servers.",
+ read_time:"min read", featured_art:"Featured",
+ foot_about:"Turkey MCP is the complete reference for unofficial, read-only MCP servers for Turkish web services — built by Mohammad Abbasi. Trilingual, open source, no API key.",
+ foot_platform:"Platform", foot_resources:"Resources", foot_company:"Project", foot_legal:"Legal",
+ foot_privacy:"Privacy Policy", foot_terms:"Terms of Service", foot_rights:"All rights reserved.",
+ foot_follow:"Follow us",
+ mp_title:"MCP Marketplace", mp_sub:"Every server in the catalog — search, filter and sort.",
+ mp_search_ph:"Search servers, skills, tutorials and articles…",
+ f_category:"Category", f_platform:"Platform", f_connection:"Connection type", f_status:"Status",
+ f_all:"All", f_stdio:"stdio (local)", f_available:"Available",
+ sort:"Sort", sort_popular:"Most tools (popularity proxy)", sort_newest:"Newest in catalog", sort_alpha:"Alphabetical",
+ results:"results", no_results:"Nothing found", no_results_hint:"Clear the filters or try another phrase — e.g. “bus”, “currency” or “flowers”.",
+ sugg:"Suggestions",
+ tool_tools:"Server tools", tool_install:"Install & connect", tool_repo:"GitHub repo", tool_pypi:"PyPI page",
+ tool_version:"Version", tool_last:"Last checked", tool_copy:"Copy", tool_copied:"Copied",
+ tool_conn:"Connection method", tool_conn_d:"Local stdio server — runs with uvx, no API key and no account.",
+ tool_cat:"Category", tool_status:"Status", tool_platforms:"Verified platforms",
+ back:"Back",
+ cats_page_title:"Categories", cats_page_sub:"Six real categories with live servers, and ones not in this catalog yet.",
+ skills_page_title:"Skills Marketplace", skills_page_sub:"Agent skills built for real gaps in the Claude ecosystem.",
+ skills_search_ph:"Search skills…",
+ tut_page_title:"Tutorials", tut_page_sub:"From setup to troubleshooting — all with real commands.",
+ blog_page_title:"Blog", blog_page_sub:"Educational articles about MCP and the Turkey servers.",
+ about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
+ about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
+ about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
+ about_catalog_t:"The catalog", about_catalog_d:"8 servers, 39 tools — all read-only and published on PyPI. Every server's code is on GitHub and each server is verified with real tests (24–37 tests).",
+ contact_title:"Contact Us", contact_sub:"Questions, suggestions or bug reports — send your message; for now it is only confirmed on this page and sent nowhere.",
+ contact_name:"Name", contact_email:"Email", contact_subject:"Subject", contact_message:"Message",
+ contact_send:"Send Message", contact_sent:"Your message was received — thank you! Note: this version has no backend, so the message is not stored.",
+ contact_note:"This form is a demo; without a server, the message is sent nowhere.",
+ err_required:"This field is required.", err_email:"Enter a valid email.", err_msg_len:"The message must be at least 10 characters.",
+ auth_login_t:"Log In to Your Account", auth_login_s:"Sign in to your demo account.",
+ auth_reg_t:"Create an Account", auth_reg_s:"Create a demo account — stored only in this browser.",
+ auth_name:"Display name", auth_email:"Email", auth_pass:"Password", auth_pass2:"Repeat password",
+ auth_login_btn:"Log In", auth_reg_btn:"Sign Up",
+ auth_no_acc:"No account? Sign up", auth_has_acc:"Have an account? Log in",
+ auth_err_email:"Enter a valid email.", auth_err_pass:"Password must be at least 6 characters.",
+ auth_err_name:"Enter your name.", auth_err_match:"Passwords do not match.",
+ auth_err_exists:"This email is already registered.", auth_err_invalid:"Wrong email or password.",
+ auth_ok_reg:"Your account was created — welcome!", auth_ok_login:"Welcome back!",
+ auth_demo:"Demo account: login and registration are stored only in this browser (localStorage) and the password is not securely hashed. The production version needs a real backend.",
+ auth_req:"You need to log in to see this page.", auth_req_go:"Go to log in",
+ dash_title:"Dashboard", dash_welcome:"Hello", dash_favs:"Favorites", dash_recent:"Recently viewed",
+ dash_account:"My account", dash_none:"Nothing here yet.", dash_none_hint:"Star servers and skills you like in the marketplace or skills pages.",
+ dash_go:"Go to marketplace",
+ fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
+ fav_empty:"No favorites yet.", fav_empty_hint:"Tap the star on any server or skill to save it here.",
+ prof_title:"Profile", prof_sub:"Change your display name and preferences.",
+ prof_name:"Display name", prof_lang:"Language", prof_theme:"Theme", prof_save:"Save", prof_saved:"Saved.",
+ prof_pass_t:"Change password", prof_cur:"Current password", prof_new:"New password", prof_err_cur:"Current password is wrong.",
+ nf_title:"Page not found", nf_sub:"The address you opened does not exist in this catalog.", nf_home:"Go home",
+ theme_light:"Light", theme_dark:"Dark", lang_name:"Language",
+ logout_ok:"You logged out.", fav_added:"Added to favorites.", fav_removed:"Removed from favorites.",
+ search_in:"Search in", match_servers:"Servers", match_skills:"Skills", match_tuts:"Tutorials", match_arts:"Articles"
+}};
+const LANGS = {fa:{name:"فارسی",dir:"rtl",locale:"fa-IR"},tr:{name:"Türkçe",dir:"ltr",locale:"tr-TR"},en:{name:"English",dir:"ltr",locale:"en-US"}};
+
+/* ---------------- state & helpers ---------------- */
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v==null?d:JSON.parse(v); }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const state = {
+  lang: store.get("tmp_lang", null) || ((navigator.language||"fa").slice(0,2)==="tr"?"tr":(navigator.language||"").slice(0,2)==="en"?"en":"fa"),
+  theme: store.get("tmp_theme", null) || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
+  user: store.get("tmp_session_v1", null),
+  page: "home", param: null
+};
+if(!["fa","tr","en"].includes(state.lang)) state.lang = "fa";
+function t(k){ const d = I18N[state.lang]||I18N.en; return d[k]!==undefined?d[k]:(I18N.en[k]!==undefined?I18N.en[k]:k); }
+function L(obj){ return obj ? (obj[state.lang]!==undefined?obj[state.lang]:obj.en) : ""; }
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
+function loc(){ return LANGS[state.lang].locale; }
+function fmtNum(n){ try{ return new Intl.NumberFormat(loc()).format(n); }catch(e){ return String(n); } }
+function fmtDate(iso){ try{ return new Intl.DateTimeFormat(loc(),{year:"numeric",month:"long",day:"numeric"}).format(new Date(iso+"T00:00:00")); }catch(e){ return iso; } }
+function hashFor(page, param){ return "#/" + state.lang + "/" + page + (param?"/"+param:""); }
+function catName(id){ return t("cat_"+id.replace("-","_")) || id; }
+function catDesc(id){ return t("cat_"+id.replace("-","_")+"_d") || ""; }
+function serverDesc(s){ return state.lang==="fa"?s.desc_fa:state.lang==="tr"?s.desc_tr:s.desc; }
+function toolSum(tl){ return state.lang==="fa"?tl.sf:state.lang==="tr"?tl.st:tl.s; }
+function skillTag(k){ return state.lang==="fa"?k.tag_fa:state.lang==="tr"?k.tag_tr:k.tag; }
+function skillGap(k){ return state.lang==="fa"?k.gap_fa:state.lang==="tr"?k.gap_tr:k.gap; }
+function hashPass(p){ let h=5381; for(let i=0;i<p.length;i++){ h=((h<<5)+h+p.charCodeAt(i))>>>0; } return "d"+h.toString(16); }
+function users(){ return store.get("tmp_users_v1", []); }
+function saveUsers(u){ store.set("tmp_users_v1", u); }
+function favs(){ return store.get("tmp_favs_v1", []); }
+function isFav(type,id){ return favs().some(f=>f.type===type&&f.id===id); }
+function recent(){ return store.get("tmp_recent_v1", []); }
+function pushRecent(type,id){ let r = recent().filter(x=>!(x.type===type&&x.id===id)); r.unshift({type,id,at:Date.now()}); store.set("tmp_recent_v1", r.slice(0,8)); }
+function toast(msg){ const el=document.getElementById("toast"); if(!el) return; el.textContent=msg; el.classList.add("show"); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove("show"),2600); }
+function copyText(txt, msg){ const done=()=>toast(msg||t("tool_copied"));
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(()=>fallbackCopy(txt,done)); }
+  else fallbackCopy(txt,done); }
+function fallbackCopy(txt, done){ const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{ document.execCommand("copy"); }catch(e){} document.body.removeChild(ta); done(); }
+
+/* ---------------- router ---------------- */
+const PAGES = ["home","marketplace","tool","categories","skills","skill","tutorials","tutorial","blog","article","about","contact","login","register","dashboard","favorites","profile"];
+function parseHash(){
+  const h = (location.hash||"").replace(/^#\/?/,"");
+  const parts = h.split("/").filter(Boolean);
+  let lang = parts[0], page = parts[1]||"home", param = parts[2]||null;
+  if(!["fa","tr","en"].includes(lang)){ lang = state.lang; page = parts[0]||"home"; param = parts[1]||null; }
+  if(!PAGES.includes(page)){ state.page="404"; state.param=page; state.lang=lang; return; }
+  state.lang = lang; state.page = page; state.param = param;
+}
+function go(page, param){ location.hash = hashFor(page, param); window.scrollTo({top:0}); }
+
+/* ---------------- shared components ---------------- */
+function headerHTML(){
+  const u = state.user;
+  const navItems = [["home","nav_home"],["marketplace","nav_marketplace"],["categories","nav_categories"],["skills","nav_skills"],["tutorials","nav_tutorials"],["blog","nav_blog"],["about","nav_about"],["contact","nav_contact"]];
+  const nav = navItems.map(([p,k])=>`<a href="${hashFor(p)}" class="${state.page===p||(p==="marketplace"&&state.page==="tool")||(p==="skills"&&state.page==="skill")||(p==="tutorials"&&state.page==="tutorial")||(p==="blog"&&state.page==="article")?"active":""}">${t(k)}</a>`).join("");
+  const authBtns = u
+    ? `<a class="btn btn-ghost btn-sm" href="${hashFor("dashboard")}">${esc(u.name)} · ${t("nav_dashboard")}</a>
+       <button class="icon-btn" onclick="App.logout()" title="${t("nav_logout")}" aria-label="${t("nav_logout")}">⎋</button>`
+    : `<a class="btn btn-ghost btn-sm btn-login-text" href="${hashFor("login")}">${t("nav_login")}</a>
+       <a class="btn btn-primary btn-sm" href="${hashFor("register")}">${t("nav_register")}</a>`;
+  return `<header class="site"><div class="wrap nav">
+    <a class="brand" href="${hashFor("home")}"><span class="mark">T</span><span>Turkey MCP<small>${t("brand_tag")}</small></span></a>
+    <nav class="main" aria-label="main">${nav}</nav>
+    <div class="nav-right">
+      <select class="lang-select" aria-label="${t("lang_name")}" onchange="App.setLang(this.value)">
+        ${Object.keys(LANGS).map(l=>`<option value="${l}" ${l===state.lang?"selected":""}>${LANGS[l].name}</option>`).join("")}
+      </select>
+      <button class="icon-btn" onclick="App.toggleTheme()" aria-label="${state.theme==="dark"?t("theme_light"):t("theme_dark")}" title="${state.theme==="dark"?t("theme_light"):t("theme_dark")}">${state.theme==="dark"?"☀️":"🌙"}</button>
+      ${authBtns}
+      <button class="icon-btn burger" onclick="App.toggleMenu()" aria-label="${t("nav_menu")}">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">${navItems.map(([p,k])=>`<a href="${hashFor(p)}">${t(k)}</a>`).join("")}
+    ${u?`<a href="${hashFor("dashboard")}">${t("nav_dashboard")}</a><a href="${hashFor("favorites")}">${t("nav_favorites")}</a><a href="${hashFor("profile")}">${t("nav_profile")}</a>`
+       :`<a href="${hashFor("login")}">${t("nav_login")}</a><a href="${hashFor("register")}">${t("nav_register")}</a>`}
+  </div></header>`;
+}
+function footerHTML(){
+  const col = (title, links)=>`<div><h4>${title}</h4>${links.map(([href,label])=>`<a href="${href}">${label}</a>`).join("")}</div>`;
+  return `<footer class="site"><div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="${hashFor("home")}"><span class="mark">T</span><span>Turkey MCP<small>${t("brand_tag")}</small></span></a>
+        <p style="margin-top:14px">${t("foot_about")}</p>
+        <div class="socials">
+          <a href="https://github.com/mohammad-abbasi-sh/turkey-mcp" target="_blank" rel="noopener" aria-label="GitHub">⌥</a>
+          <a href="https://github.com/mohammad-abbasi-sh" target="_blank" rel="noopener" aria-label="GitHub profile">◉</a>
+          <a href="https://www.linkedin.com/in/mohammad-abbasi-sh/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      ${col(t("foot_platform"), [[hashFor("marketplace"),t("nav_marketplace")],[hashFor("categories"),t("nav_categories")],[hashFor("skills"),t("nav_skills")],[hashFor("tutorials"),t("nav_tutorials")]])}
+      ${col(t("foot_resources"), [[hashFor("blog"),t("nav_blog")],[hashFor("tutorials"),t("tut_title")],["https://github.com/mohammad-abbasi-sh/turkey-mcp",t("tool_repo")],["https://pypi.org/user/mohammad-abbasi-sh/","PyPI"]])}
+      ${col(t("foot_company"), [[hashFor("about"),t("nav_about")],[hashFor("contact"),t("nav_contact")],["#",t("foot_privacy")],["#",t("foot_terms")]])}
+    </div>
+    <div class="foot-bottom">
+      <span>© ${new Date().getFullYear()} Turkey MCP — ${t("foot_rights")}</span>
+      <span><a href="${hashFor("home")}" style="color:var(--muted)">Turkey MCP</a> · EN / TR / FA</span>
+    </div>
+  </div></footer>`;
+}
+function starBtn(type,id){
+  const on = isFav(type,id);
+  return `<button class="star-btn ${on?"on":""}" onclick="App.toggleFav('${type}','${id}',event)" aria-label="${on?t("remove_fav"):t("add_fav")}" title="${on?t("remove_fav"):t("add_fav")}">${on?"★":"☆"}</button>`;
+}
+function serverCard(s){
+  return `<article class="card">
+    <div class="card-top">
+      <span class="tile" style="background:${s.color}">${s.letter}</span>
+      <div style="flex:1;min-width:0"><h3>${esc(s.title.split(" — ")[0])}</h3><p class="latin">${esc(s.id)}</p></div>
+      ${starBtn("server", s.id)}
+    </div>
+    <p class="desc">${esc(serverDesc(s))}</p>
+    <p class="meta-row"><span class="ic">▦</span> ${esc(catName(s.cat))} · ${fmtNum(s.tools.length)} ${t("tools_count")}</p>
+    <p class="meta-row"><span class="ic">✓</span> ${t("status_available")} · stdio · uvx</p>
+    <div class="card-bottom">
+      ${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span>`:`<span class="chip">${esc(catName(s.cat))}</span>`}
+      <a class="btn btn-primary btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a>
+    </div>
+  </article>`;
+}
+function skillCard(k){
+  return `<article class="card">
+    <div class="card-top">
+      <span class="tile" style="background:linear-gradient(135deg,#6657E8,#19C6B3)">✦</span>
+      <div style="flex:1;min-width:0"><h3>${esc(k.id)}</h3><p class="latin">github.com/mohammad-abbasi-sh/${esc(k.id)}</p></div>
+      ${starBtn("skill", k.id)}
+    </div>
+    <p class="desc">${esc(skillTag(k))}</p>
+    <p class="meta-row"><span class="ic">✓</span> ${t("skill_compat")}: Claude Code · Claude.ai · Cursor</p>
+    ${k.tests!=="—"?`<p class="meta-row"><span class="ic">✓</span> ${fmtNum(parseInt(k.tests,10))} ${t("skill_tests")}</p>`:""}
+    <div class="card-bottom">
+      <span class="chip">${esc(k.cat)}</span>
+      <a class="btn btn-primary btn-sm" href="${hashFor("skill", k.id)}">${t("details")}</a>
+    </div>
+  </article>`;
+}
+function catCard(c){
+  const n = catCount(c.id);
+  return `<article class="card cat-card" onclick="App.openCategory('${c.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')App.openCategory('${c.id}')">
+    <span class="ic" style="background:${c.color}22;color:${c.color}">${c.icon}</span>
+    <h3>${esc(catName(c.id))}</h3>
+    <p>${esc(catDesc(c.id))}</p>
+    ${c.soon?`<span class="badge badge-soon">${t("cat_coming")}</span>`:`<span class="chip">${fmtNum(n)} ${t("cat_servers")}</span>`}
+  </article>`;
+}
+function emptyHTML(hint){
+  return `<div class="empty"><div class="big">🔍</div><h3>${t("no_results")}</h3><p>${hint||t("no_results_hint")}</p></div>`;
+}
+function sectionHead(eyebrow, title, sub, link){
+  return `<div class="section-head"><div><span class="eyebrow"><span class="dot"></span>${eyebrow}</span><h2>${title}</h2><p>${sub||""}</p></div>${link||""}</div>`;
+}
+
+/* ---------------- page renderers ---------------- */
+function heroHTML(){
+  const featured = SERVERS.filter(s=>s.featured);
+  return `<section class="hero"><div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Turkey MCP · ${fmtNum(SERVERS.length)} ${t("stat_servers")} · ${fmtNum(TOTAL_TOOLS)} ${t("stat_tools")}</span>
+      <h1>${t("hero_title").replace("World","<span class=\"grad\">World</span>").replace("دنیای واقعی","<span class=\"grad\">دنیای واقعی</span>").replace("Gerçek Dünyaya","<span class=\"grad\">Gerçek Dünyaya</span>")}</h1>
+      <p class="sub">${t("hero_sub")}</p>
+      <form class="hero-search" onsubmit="return App.heroSearch(event)">
+        <input id="hero-q" type="search" placeholder="${esc(t("hero_search_ph"))}" aria-label="${esc(t("hero_search_ph"))}">
+        <button class="btn btn-primary" type="submit">🔍 ${t("search_in")}</button>
+      </form>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="${hashFor("marketplace")}">${t("hero_cta1")}</a>
+        <a class="btn btn-ghost" href="#how">${t("hero_cta2")}</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>${fmtNum(SERVERS.length)}</b><span>${t("stat_servers")}</span></div>
+        <div><b>${fmtNum(TOTAL_TOOLS)}</b><span>${t("stat_tools")}</span></div>
+        <div><b>${fmtNum(SKILLS.length)}</b><span>${t("stat_skills")}</span></div>
+        <div><b>3</b><span>${t("stat_langs")}</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="demo" id="demo-card">
+        <div class="demo-tabs" id="demo-tabs"></div>
+        <div class="demo-body" id="demo-body"></div>
+        <div class="demo-foot">
+          <a class="btn btn-primary" href="${hashFor("marketplace")}">${t("connect")}</a>
+          <span>${t("demo_footer")}</span>
+        </div>
+      </div>
+      <p style="color:var(--muted);font-size:12.5px;margin-top:10px">${t("demo_note")}</p>
+    </div>
+  </div></section>`;
+}
+function homeHTML(){
+  const feat = SERVERS.filter(s=>s.featured).concat(SERVERS.filter(s=>!s.featured).slice(0,2));
+  return heroHTML() + `
+  <section class="section"><div class="wrap">
+    ${sectionHead("●", t("cats_title"), t("cats_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("categories")}">${t("view_all")}</a>`)}
+    <div class="grid grid-4">${CATEGORIES.map(catCard).join("")}</div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    ${sectionHead("★", t("feat_title"), t("feat_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("marketplace")}">${t("view_all")}</a>`)}
+    <div class="grid grid-4">${feat.map(serverCard).join("")}</div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    ${sectionHead("◆", t("plat_title"), t("plat_sub"))}
+    <h3 style="font-size:16px;margin-bottom:12px"><span class="badge badge-verified">✓ ${t("plat_verified")}</span></h3>
+    <div class="plat-grid">${PLATFORMS_VERIFIED.map(p=>`<article class="card plat-card"><span class="logo">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><span class="badge badge-verified">✓ ${t("plat_verified")}</span></article>`).join("")}</div>
+    <p style="color:var(--muted);font-size:13.5px;margin:14px 0 8px">${t("plat_verified_note")}</p>
+    <h3 style="font-size:16px;margin:18px 0 12px"><span class="badge badge-unverified">! ${t("plat_unverified")}</span></h3>
+    <div class="plat-grid">${PLATFORMS_UNVERIFIED.map(p=>`<article class="card plat-card"><span class="logo" style="opacity:.55">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><span class="badge badge-unverified">! ${t("plat_unverified")}</span></article>`).join("")}</div>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:14px">${t("plat_unverified_note")}</p>
+  </div></section>
+  <section class="section" id="how"><div class="wrap">
+    ${sectionHead("→", t("how_title"), t("how_sub"))}
+    <div class="steps">
+      <article class="card step"><span class="n">1</span><h3>${t("how_s1_t")}</h3><p>${t("how_s1_d")}</p></article>
+      <article class="card step"><span class="n">2</span><h3>${t("how_s2_t")}</h3><p>${t("how_s2_d")}</p></article>
+      <article class="card step"><span class="n">3</span><h3>${t("how_s3_t")}</h3><p>${t("how_s3_d")}</p></article>
+    </div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    ${sectionHead("✦", t("skills_title"), t("skills_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("skills")}">${t("view_all")}</a>`)}
+    <div class="grid grid-3">${SKILLS.slice(0,3).map(skillCard).join("")}</div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    ${sectionHead("▤", t("tut_title"), t("tut_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("tutorials")}">${t("view_all")}</a>`)}
+    <div class="grid grid-3">${TUTORIALS.slice(0,3).map(tutCard).join("")}</div>
+  </div></section>
+  <section class="section"><div class="wrap">
+    ${sectionHead("✎", t("blog_title"), t("blog_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("blog")}">${t("view_all")}</a>`)}
+    <div class="grid grid-3">${ARTICLES.map(artCard).join("")}</div>
+  </div></section>`;
+}
+function tutCard(x){
+  return `<article class="card">
+    <div class="cover ${x.id==="install-uvx"?"g4":x.id==="claude-code"?"g1":x.id==="cursor"?"g2":x.id==="claude-desktop"?"g5":"g3"}">${x.id==="install-uvx"?"⬇":x.id==="claude-code"?"⌘":x.id==="cursor"?"▸":x.id==="claude-desktop"?"▣":"🛠"}</div>
+    <h3>${esc(L(x.title))}</h3>
+    <p class="desc">${esc(L(x.ex))}</p>
+    <p class="meta-row"><span class="ic">◷</span> ${fmtNum(x.mins)} ${t("read_time")} · ${x.level==="beginner"?t("tut_beginner"):t("tut_intermediate")}</p>
+    <div class="card-bottom"><span class="chip">${esc(x.cat)}</span><a class="btn btn-primary btn-sm" href="${hashFor("tutorial", x.id)}">${t("details")}</a></div>
+  </article>`;
+}
+function artCard(a, i){
+  return `<article class="card">
+    <div class="cover ${a.cover}">${a.icon}</div>
+    <h3>${esc(L(a.title))}</h3>
+    <p class="desc">${esc(L(a.ex))}</p>
+    <p class="meta-row"><span class="ic">📅</span> ${fmtDate(a.date)} · ${fmtNum(a.mins)} ${t("read_time")}</p>
+    <div class="card-bottom">${i===0?`<span class="badge badge-feat">★ ${t("featured_art")}</span>`:`<span class="chip">${esc(a.cat)}</span>`}<a class="btn btn-primary btn-sm" href="${hashFor("article", a.id)}">${t("details")}</a></div>
+  </article>`;
+}
+
+/* marketplace state */
+const mp = { q:"", cat:"all", platform:"all", conn:"all", status:"all", sort:"popular" };
+function mpFiltered(){
+  let list = SERVERS.slice();
+  const q = mp.q.trim().toLowerCase();
+  if(q) list = list.filter(s => (s.id+" "+s.title+" "+s.title_tr+" "+serverDesc(s)+" "+s.tools.map(x=>x.n+" "+toolSum(x)).join(" ")).toLowerCase().includes(q));
+  if(mp.cat!=="all") list = list.filter(s=>s.cat===mp.cat);
+  if(mp.status==="available") list = list.filter(()=>true);
+  if(mp.sort==="popular") list.sort((a,b)=>b.tools.length-a.tools.length || a.id.localeCompare(b.id));
+  if(mp.sort==="newest") list.sort((a,b)=>b.added-a.added);
+  if(mp.sort==="alpha") list.sort((a,b)=>a.id.localeCompare(b.id));
+  return list;
+}
+function mpMatches(q){
+  const s = q.trim().toLowerCase(); if(!s) return {skills:[],tuts:[],arts:[]};
+  return {
+    skills: SKILLS.filter(k=>(k.id+" "+skillTag(k)).toLowerCase().includes(s)),
+    tuts: TUTORIALS.filter(x=>(L(x.title)+" "+L(x.ex)).toLowerCase().includes(s)),
+    arts: ARTICLES.filter(a=>(L(a.title)+" "+L(a.ex)).toLowerCase().includes(s))
+  };
+}
+function mpResultsHTML(){
+  const list = mpFiltered();
+  const m = mpMatches(mp.q);
+  let h = `<p style="color:var(--muted);font-size:14px;margin-bottom:16px">${fmtNum(list.length)} ${t("results")}</p>`;
+  if(!list.length && !m.skills.length && !m.tuts.length && !m.arts.length) return h + emptyHTML();
+  if(list.length) h += `<div class="grid grid-4">${list.map(serverCard).join("")}</div>`;
+  const extra = [];
+  if(m.skills.length) extra.push(`<h3 style="margin:26px 0 12px">${t("match_skills")} (${fmtNum(m.skills.length)})</h3><div class="grid grid-3">${m.skills.map(skillCard).join("")}</div>`);
+  if(m.tuts.length) extra.push(`<h3 style="margin:26px 0 12px">${t("match_tuts")} (${fmtNum(m.tuts.length)})</h3><div class="grid grid-3">${m.tuts.map(tutCard).join("")}</div>`);
+  if(m.arts.length) extra.push(`<h3 style="margin:26px 0 12px">${t("match_arts")} (${fmtNum(m.arts.length)})</h3><div class="grid grid-3">${m.arts.map(artCard).join("")}</div>`);
+  return h + extra.join("");
+}
+function marketplaceHTML(){
+  const opt = (v,cur,label)=>`<option value="${v}" ${v===cur?"selected":""}>${label}</option>`;
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("▦", t("mp_title"), t("mp_sub"))}
+    <div class="toolbar">
+      <div class="search-box"><span class="mag">🔍</span><input id="mp-q" type="search" placeholder="${esc(t("mp_search_ph"))}" value="${esc(mp.q)}" oninput="App.mpSearch(this.value)" aria-label="${esc(t("mp_search_ph"))}"></div>
+      <select id="mp-cat" onchange="App.mpFilter('cat',this.value)" aria-label="${t("f_category")}">${opt("all",mp.cat,t("f_all"))}${CATEGORIES.filter(c=>!c.soon).map(c=>opt(c.id,mp.cat,catName(c.id))).join("")}</select>
+      <select onchange="App.mpFilter('platform',this.value)" aria-label="${t("f_platform")}">${opt("all",mp.platform,t("f_all"))}${PLATFORMS_VERIFIED.map(p=>opt(p.id,mp.platform,p.name)).join("")}</select>
+      <select onchange="App.mpFilter('conn',this.value)" aria-label="${t("f_connection")}">${opt("all",mp.conn,t("f_all"))}${opt("stdio",mp.conn,t("f_stdio"))}</select>
+      <select onchange="App.mpFilter('status',this.value)" aria-label="${t("f_status")}">${opt("all",mp.status,t("f_all"))}${opt("available",mp.status,t("f_available"))}</select>
+      <select onchange="App.mpFilter('sort',this.value)" aria-label="${t("sort")}">${opt("popular",mp.sort,t("sort_popular"))}${opt("newest",mp.sort,t("sort_newest"))}${opt("alpha",mp.sort,t("sort_alpha"))}</select>
+    </div>
+    <div id="mp-results">${mpResultsHTML()}</div>
+  </div></section>`;
+}
+function toolHTML(id){
+  const s = SERVERS.find(x=>x.id===id);
+  if(!s) return notFoundHTML();
+  pushRecent("server", id);
+  const cmd = `claude mcp add --transport stdio --scope user ${s.id.replace("-mcp","")} -- uvx ${s.pypi}`;
+  const cfg = `{\n  "mcpServers": {\n    "${s.id.replace("-mcp","")}": {\n      "command": "uvx",\n      "args": ["${s.pypi}"]\n    }\n  }\n}`;
+  return `<section class="section"><div class="wrap">
+    <p><a href="${hashFor("marketplace")}">← ${t("back")}</a></p>
+    <div class="detail-head">
+      <span class="tile" style="background:${s.color}">${s.letter}</span>
+      <div style="flex:1;min-width:240px">
+        <h1>${esc(s.title)}</h1>
+        <p class="latin">${esc(s.id)} · v0.1.0</p>
+        <p>${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span> `:""}<span class="badge badge-ok">✓ ${t("status_available")}</span> <span class="chip">${esc(catName(s.cat))}</span></p>
+      </div>
+      ${starBtn("server", s.id)}
+    </div>
+    <p style="color:var(--muted);max-width:760px">${esc(serverDesc(s))}</p>
+    <div class="grid grid-2" style="margin-top:26px">
+      <div>
+        <h2 style="font-size:20px">${t("tool_tools")} (${fmtNum(s.tools.length)})</h2>
+        <div class="card" style="padding:8px 18px"><table class="tools-table"><thead><tr><th>Tool</th><th>${t("details")}</th></tr></thead><tbody>
+        ${s.tools.map(x=>`<tr><td><code>${esc(x.n)}</code></td><td>${esc(toolSum(x))}</td></tr>`).join("")}
+        </tbody></table></div>
+        <h2 style="font-size:20px;margin-top:26px">${t("tool_platforms")}</h2>
+        <p>${PLATFORMS_VERIFIED.map(p=>`<span class="chip" style="margin:0 6px 6px 0">✓ ${esc(p.name)}</span>`).join("")}</p>
+        <p style="color:var(--muted);font-size:13.5px">${t("plat_unverified_note")}</p>
+      </div>
+      <div>
+        <h2 style="font-size:20px">${t("tool_install")}</h2>
+        <div class="install-box"><h3>Claude Code</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy('${esc(cmd)}')">${t("tool_copy")}</button></div></div>
+        <div class="install-box"><h3>Cursor / Claude Desktop</h3><div class="copy-row"><pre><code>${esc(cfg)}</code></pre><button class="copy-btn" onclick="App.copy(${JSON.stringify(cfg).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
+        <div class="install-box"><h3>${t("tool_conn")}</h3><p style="color:var(--muted);font-size:14px;margin:0">${t("tool_conn_d")}</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
+          <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a>
+        </div>
+        <p style="color:var(--muted);font-size:13px;margin-top:14px">${t("tool_last")}: ${fmtDate("2026-11-06")}</p>
+      </div>
+    </div>
+  </div></section>`;
+}
+function categoriesHTML(){
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("▦", t("cats_page_title"), t("cats_page_sub"))}
+    <div class="grid grid-4">${CATEGORIES.map(catCard).join("")}</div>
+  </div></section>`;
+}
+function skillsHTML(){
+  const q = (skillsHTML._q||"").trim().toLowerCase();
+  const cat = skillsHTML._cat||"all";
+  let list = SKILLS.filter(k => (!q || (k.id+" "+skillTag(k)+" "+skillGap(k)).toLowerCase().includes(q)) && (cat==="all"||k.cat===cat));
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("✦", t("skills_page_title"), t("skills_page_sub"))}
+    <div class="toolbar">
+      <div class="search-box"><span class="mag">🔍</span><input type="search" placeholder="${esc(t("skills_search_ph"))}" value="${esc(skillsHTML._q||"")}" oninput="App.skillSearch(this.value)"></div>
+      <select onchange="App.skillFilter(this.value)" aria-label="${t("f_category")}">
+        <option value="all">${t("f_all")}</option>
+        ${SKILL_CATS.map(c=>`<option value="${c}" ${c===cat?"selected":""}>${esc(c)}</option>`).join("")}
+      </select>
+    </div>
+    <div id="skills-results">${list.length?`<div class="grid grid-3">${list.map(skillCard).join("")}</div>`:emptyHTML()}</div>
+  </div></section>`;
+}
+function skillHTML(id){
+  const k = SKILLS.find(x=>x.id===id);
+  if(!k) return notFoundHTML();
+  pushRecent("skill", id);
+  return `<section class="section"><div class="wrap">
+    <p><a href="${hashFor("skills")}">← ${t("back")}</a></p>
+    <div class="detail-head">
+      <span class="tile" style="background:linear-gradient(135deg,#6657E8,#19C6B3)">✦</span>
+      <div style="flex:1;min-width:240px"><h1>${esc(k.id)}</h1><p class="latin">github.com/mohammad-abbasi-sh/${esc(k.id)}</p></div>
+      ${starBtn("skill", k.id)}
+    </div>
+    <p style="color:var(--muted);max-width:760px">${esc(skillTag(k))}</p>
+    <div class="grid grid-2" style="margin-top:26px">
+      <div class="card"><h3 style="margin-bottom:10px">${t("skill_gap")}</h3><p style="color:var(--muted)">${esc(skillGap(k))}</p>
+        <p class="meta-row"><span class="ic">✓</span> ${t("skill_compat")}: Claude Code · Claude.ai · Cursor</p>
+        ${k.tests!=="—"?`<p class="meta-row"><span class="ic">✓</span> ${fmtNum(parseInt(k.tests,10))} ${t("skill_tests")}</p>`:""}
+      </div>
+      <div class="card"><h3 style="margin-bottom:10px">${t("skill_repo")}</h3>
+        <p style="color:var(--muted)">SKILL.md · ${t("tool_install")} · Cursor .mdc · Claude.ai zip</p>
+        <a class="btn btn-primary btn-sm" href="${k.repo}" target="_blank" rel="noopener">${k.repo.replace("https://github.com/","")} ↗</a>
+      </div>
+    </div>
+  </div></section>`;
+}
+
+function tutorialsHTML(){
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("▤", t("tut_page_title"), t("tut_page_sub"))}
+    <div class="grid grid-3">${TUTORIALS.map(tutCard).join("")}</div>
+  </div></section>`;
+}
+function tutorialHTML(id){
+  const x = TUTORIALS.find(v=>v.id===id);
+  if(!x) return notFoundHTML();
+  pushRecent("tutorial", id);
+  return `<section class="section"><div class="wrap">
+    <p><a href="${hashFor("tutorials")}">← ${t("back")}</a></p>
+    <div class="article-body">
+      <span class="eyebrow"><span class="dot"></span>${x.level==="beginner"?t("tut_beginner"):t("tut_intermediate")} · ${fmtNum(x.mins)} ${t("read_time")}</span>
+      <h1>${esc(L(x.title))}</h1>
+      <p style="color:var(--muted);font-size:17px">${esc(L(x.ex))}</p>
+      <h2>${t("tut_steps")}</h2>
+      <ol>${L(x.steps).map(s=>`<li>${esc(s)}</li>`).join("")}</ol>
+      <p style="margin-top:26px"><a class="btn btn-primary btn-sm" href="${hashFor("marketplace")}">${t("hero_cta1")}</a></p>
+    </div>
+  </div></section>`;
+}
+function blogHTML(){
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("✎", t("blog_page_title"), t("blog_page_sub"))}
+    <div class="grid grid-3">${ARTICLES.map(artCard).join("")}</div>
+  </div></section>`;
+}
+function articleHTML(id){
+  const a = ARTICLES.find(v=>v.id===id);
+  if(!a) return notFoundHTML();
+  pushRecent("article", id);
+  return `<section class="section"><div class="wrap">
+    <p><a href="${hashFor("blog")}">← ${t("back")}</a></p>
+    <div class="article-body">
+      <div class="cover ${a.cover}" style="margin:0 0 22px;border-radius:18px">${a.icon}</div>
+      <h1>${esc(L(a.title))}</h1>
+      <div class="post-meta"><span>📅 ${fmtDate(a.date)}</span><span>◷ ${fmtNum(a.mins)} ${t("read_time")}</span><span>✎ Mohammad Abbasi</span></div>
+      ${L(a.body).map(p=>`<p>${esc(p)}</p>`).join("")}
+      <p style="margin-top:26px"><a class="btn btn-primary btn-sm" href="${hashFor("marketplace")}">${t("hero_cta1")}</a></p>
+    </div>
+  </div></section>`;
+}
+function aboutHTML(){
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("◉", t("about_title"), t("about_sub"))}
+    <div class="grid grid-3">
+      <article class="card"><h3>${t("about_mission_t")}</h3><p class="desc">${t("about_mission_d")}</p></article>
+      <article class="card"><h3>${t("about_builder_t")}</h3><p class="desc">${t("about_builder_d")}</p></article>
+      <article class="card"><h3>${t("about_catalog_t")}</h3><p class="desc">${t("about_catalog_d")}</p></article>
+    </div>
+    <div class="stat-grid" style="margin-top:26px">
+      <div class="stat"><b>${fmtNum(SERVERS.length)}</b><span>${t("stat_servers")}</span></div>
+      <div class="stat"><b>${fmtNum(TOTAL_TOOLS)}</b><span>${t("stat_tools")}</span></div>
+      <div class="stat"><b>${fmtNum(SKILLS.length)}</b><span>${t("stat_skills")}</span></div>
+    </div>
+  </div></section>`;
+}
+function contactHTML(){
+  return `<section class="section"><div class="wrap">
+    <div class="form-card" style="max-width:620px">
+      <h1>${t("contact_title")}</h1>
+      <p class="sub">${t("contact_sub")}</p>
+      <div id="contact-alert"></div>
+      <form onsubmit="return App.submitContact(event)" novalidate>
+        <div class="field" id="f-c-name"><label for="c-name">${t("contact_name")}</label><input id="c-name" type="text" autocomplete="name"><p class="err">${t("err_required")}</p></div>
+        <div class="field" id="f-c-email"><label for="c-email">${t("contact_email")}</label><input id="c-email" type="email" autocomplete="email" dir="ltr" style="text-align:start"><p class="err">${t("err_email")}</p></div>
+        <div class="field" id="f-c-subject"><label for="c-subject">${t("contact_subject")}</label><input id="c-subject" type="text"><p class="err">${t("err_required")}</p></div>
+        <div class="field" id="f-c-msg"><label for="c-msg">${t("contact_message")}</label><textarea id="c-msg" rows="5"></textarea><p class="err">${t("err_msg_len")}</p></div>
+        <button class="btn btn-primary btn-block" type="submit">${t("contact_send")}</button>
+      </form>
+      <p class="note">${t("contact_note")}</p>
+    </div>
+  </div></section>`;
+}
+function needLoginHTML(){
+  return `<section class="section"><div class="wrap"><div class="form-card" style="text-align:center">
+    <h1>🔒 ${t("auth_req")}</h1>
+    <p class="sub">${t("auth_demo")}</p>
+    <a class="btn btn-primary" href="${hashFor("login")}">${t("auth_req_go")}</a>
+  </div></div></section>`;
+}
+function loginHTML(){
+  return `<section class="section"><div class="wrap"><div class="form-card">
+    <h1>${t("auth_login_t")}</h1><p class="sub">${t("auth_login_s")}</p>
+    <div id="login-alert"></div>
+    <form onsubmit="return App.submitLogin(event)" novalidate>
+      <div class="field" id="f-l-email"><label for="l-email">${t("auth_email")}</label><input id="l-email" type="email" autocomplete="email" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_email")}</p></div>
+      <div class="field" id="f-l-pass"><label for="l-pass">${t("auth_pass")}</label><input id="l-pass" type="password" autocomplete="current-password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_pass")}</p></div>
+      <button class="btn btn-primary btn-block" type="submit">${t("auth_login_btn")}</button>
+    </form>
+    <p style="text-align:center;margin-top:16px"><a href="${hashFor("register")}">${t("auth_no_acc")}</a></p>
+    <p class="note">${t("auth_demo")}</p>
+  </div></div></section>`;
+}
+function registerHTML(){
+  return `<section class="section"><div class="wrap"><div class="form-card">
+    <h1>${t("auth_reg_t")}</h1><p class="sub">${t("auth_reg_s")}</p>
+    <div id="reg-alert"></div>
+    <form onsubmit="return App.submitRegister(event)" novalidate>
+      <div class="field" id="f-r-name"><label for="r-name">${t("auth_name")}</label><input id="r-name" type="text" autocomplete="name"><p class="err">${t("auth_err_name")}</p></div>
+      <div class="field" id="f-r-email"><label for="r-email">${t("auth_email")}</label><input id="r-email" type="email" autocomplete="email" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_email")}</p></div>
+      <div class="field" id="f-r-pass"><label for="r-pass">${t("auth_pass")}</label><input id="r-pass" type="password" autocomplete="new-password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_pass")}</p></div>
+      <div class="field" id="f-r-pass2"><label for="r-pass2">${t("auth_pass2")}</label><input id="r-pass2" type="password" autocomplete="new-password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_match")}</p></div>
+      <button class="btn btn-primary btn-block" type="submit">${t("auth_reg_btn")}</button>
+    </form>
+    <p style="text-align:center;margin-top:16px"><a href="${hashFor("login")}">${t("auth_has_acc")}</a></p>
+    <p class="note">${t("auth_demo")}</p>
+  </div></div></section>`;
+}
+function favItemsHTML(){
+  const f = favs();
+  if(!f.length) return `<div class="empty"><div class="big">☆</div><h3>${t("fav_empty")}</h3><p>${t("fav_empty_hint")}</p><a class="btn btn-primary btn-sm" href="${hashFor("marketplace")}">${t("dash_go")}</a></div>`;
+  const cards = f.map(x=>{
+    if(x.type==="server"){ const s=SERVERS.find(v=>v.id===x.id); return s?serverCard(s):""; }
+    const k=SKILLS.find(v=>v.id===x.id); return k?skillCard(k):"";
+  }).join("");
+  return `<div class="grid grid-3">${cards}</div>`;
+}
+function recentHTML(){
+  const r = recent();
+  if(!r.length) return `<p style="color:var(--muted)">${t("dash_none")}</p>`;
+  return `<div class="grid grid-3">${r.map(x=>{
+    if(x.type==="server"){ const s=SERVERS.find(v=>v.id===x.id); return s?serverCard(s):""; }
+    if(x.type==="skill"){ const k=SKILLS.find(v=>v.id===x.id); return k?skillCard(k):""; }
+    if(x.type==="tutorial"){ const v=TUTORIALS.find(y=>y.id===x.id); return v?tutCard(v):""; }
+    const a=ARTICLES.find(y=>y.id===x.id); return a?artCard(a,1):"";
+  }).join("")}</div>`;
+}
+function dashboardHTML(){
+  if(!state.user) return needLoginHTML();
+  const f = favs(), r = recent();
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("◉", t("dash_title")+" — "+t("dash_welcome")+", "+esc(state.user.name), state.user.email)}
+    <div class="stat-grid">
+      <div class="stat"><b>${fmtNum(f.length)}</b><span>${t("dash_favs")}</span></div>
+      <div class="stat"><b>${fmtNum(r.length)}</b><span>${t("dash_recent")}</span></div>
+      <div class="stat"><b>${fmtNum(SERVERS.length)}</b><span>${t("stat_servers")}</span></div>
+    </div>
+    <h2 style="font-size:20px;margin-bottom:14px">${t("dash_favs")}</h2>
+    ${f.length?favItemsHTML():`<p style="color:var(--muted)">${t("dash_none")} ${t("dash_none_hint")}</p><p><a class="btn btn-primary btn-sm" href="${hashFor("marketplace")}">${t("dash_go")}</a></p>`}
+    <h2 style="font-size:20px;margin:30px 0 14px">${t("dash_recent")}</h2>
+    ${recentHTML()}
+  </div></section>`;
+}
+function favoritesHTML(){
+  if(!state.user) return needLoginHTML();
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("★", t("fav_title"), t("fav_sub"))}
+    ${favItemsHTML()}
+  </div></section>`;
+}
+function profileHTML(){
+  if(!state.user) return needLoginHTML();
+  const u = state.user;
+  return `<section class="section"><div class="wrap"><div class="form-card" style="max-width:560px">
+    <h1>${t("prof_title")}</h1><p class="sub">${t("prof_sub")}</p>
+    <div id="prof-alert"></div>
+    <form onsubmit="return App.submitProfile(event)" novalidate>
+      <div class="field"><label for="p-name">${t("prof_name")}</label><input id="p-name" type="text" value="${esc(u.name)}"></div>
+      <div class="field"><label for="p-lang">${t("prof_lang")}</label><select id="p-lang">${Object.keys(LANGS).map(l=>`<option value="${l}" ${l===state.lang?"selected":""}>${LANGS[l].name}</option>`).join("")}</select></div>
+      <div class="field"><label for="p-theme">${t("prof_theme")}</label><select id="p-theme"><option value="light" ${state.theme==="light"?"selected":""}>${t("theme_light")}</option><option value="dark" ${state.theme==="dark"?"selected":""}>${t("theme_dark")}</option></select></div>
+      <button class="btn btn-primary btn-block" type="submit">${t("prof_save")}</button>
+    </form>
+    <h2 style="font-size:18px;margin:28px 0 12px">${t("prof_pass_t")}</h2>
+    <div id="pass-alert"></div>
+    <form onsubmit="return App.submitPassword(event)" novalidate>
+      <div class="field" id="f-p-cur"><label for="p-cur">${t("prof_cur")}</label><input id="p-cur" type="password" dir="ltr" style="text-align:start"><p class="err">${t("prof_err_cur")}</p></div>
+      <div class="field" id="f-p-new"><label for="p-new">${t("prof_new")}</label><input id="p-new" type="password" dir="ltr" style="text-align:start"><p class="err">${t("auth_err_pass")}</p></div>
+      <button class="btn btn-ghost btn-block" type="submit">${t("prof_save")}</button>
+    </form>
+  </div></div></section>`;
+}
+function notFoundHTML(){
+  return `<section class="section"><div class="wrap" style="text-align:center;padding:60px 0">
+    <div style="font-size:72px">🧭</div>
+    <h1>${t("nf_title")}</h1><p style="color:var(--muted)">${t("nf_sub")}</p>
+    <a class="btn btn-primary" href="${hashFor("home")}">${t("nf_home")}</a>
+  </div></section>`;
+}
+
+/* ---------------- demo typing ---------------- */
+let demoIdx = 0, demoTimer = null, typeToken = 0;
+function typeText(el, text, speed, token){
+  return new Promise(res=>{
+    let i=0;
+    (function tick(){
+      if(token!==typeToken || !document.body.contains(el)) return res();
+      el.textContent = text.slice(0, ++i);
+      if(i<text.length) setTimeout(tick, speed); else res();
+    })();
+  });
+}
+function hlCode(code){
+  const m = code.match(/^([a-z0-9_]+)(\(.*\))$/);
+  if(!m) return esc(code);
+  let args = esc(m[2]).replace(/(&quot;|")([^"]*)(&quot;|")/g, '<span class="str">"$2"</span>');
+  return '<span class="fn">'+esc(m[1])+'</span><span class="arg">'+args+'</span>';
+}
+async function showDemo(){
+  const token = ++typeToken;
+  const body = document.getElementById("demo-body");
+  const tabs = document.getElementById("demo-tabs");
+  if(!body || !tabs) return;
+  const d = DEMOS[demoIdx];
+  tabs.innerHTML = DEMOS.map((x,i)=>`<button data-i="${i}" class="${i===demoIdx?"active":""}" onclick="App.demoTab(${i})">${esc(x.tab[state.lang])}</button>`).join("");
+  body.innerHTML = `<p class="q"><span class="typed"></span><span class="cursor"></span></p><pre style="visibility:hidden"><code></code></pre><p class="status"></p><p class="a"></p><p class="ask"></p>`;
+  await typeText(body.querySelector(".typed"), d.q[state.lang], 26, token);
+  if(token!==typeToken || !document.body.contains(body)) return;
+  const pre = body.querySelector("pre");
+  pre.style.visibility = "visible";
+  pre.querySelector("code").innerHTML = hlCode(d.code);
+  body.querySelector(".status").textContent = d.status[state.lang];
+  body.querySelector(".a").textContent = d.a[state.lang];
+  body.querySelector(".ask").innerHTML = `<a href="${hashFor("marketplace")}">${esc(t("demo_ask"))}</a> · ${esc(t("demo_nosignup"))}`;
+}
+function startDemo(){
+  clearInterval(demoTimer);
+  demoTimer = setInterval(()=>{ demoIdx = (demoIdx+1)%DEMOS.length; showDemo(); }, 11000);
+  showDemo();
+}
+function stopDemo(){ clearInterval(demoTimer); typeToken++; }
+
+/* ---------------- render ---------------- */
+function pageHTML(){
+  switch(state.page){
+    case "home": return homeHTML();
+    case "marketplace": return marketplaceHTML();
+    case "tool": return toolHTML(state.param);
+    case "categories": return categoriesHTML();
+    case "skills": return skillsHTML();
+    case "skill": return skillHTML(state.param);
+    case "tutorials": return tutorialsHTML();
+    case "tutorial": return tutorialHTML(state.param);
+    case "blog": return blogHTML();
+    case "article": return articleHTML(state.param);
+    case "about": return aboutHTML();
+    case "contact": return contactHTML();
+    case "login": return loginHTML();
+    case "register": return registerHTML();
+    case "dashboard": return dashboardHTML();
+    case "favorites": return favoritesHTML();
+    case "profile": return profileHTML();
+    default: return notFoundHTML();
+  }
+}
+function pageTitle(){
+  const base = "Turkey MCP";
+  const map = {home:t("hero_title"),marketplace:t("mp_title"),categories:t("cats_page_title"),skills:t("skills_page_title"),tutorials:t("tut_page_title"),blog:t("blog_page_title"),about:t("about_title"),contact:t("contact_title"),login:t("auth_login_t"),register:t("auth_reg_t"),dashboard:t("dash_title"),favorites:t("fav_title"),profile:t("prof_title"),"404":t("nf_title")};
+  if(state.page==="tool"){ const s=SERVERS.find(x=>x.id===state.param); return s? s.title+" — "+base : base; }
+  if(state.page==="skill"){ const k=SKILLS.find(x=>x.id===state.param); return k? k.id+" — "+base : base; }
+  if(state.page==="tutorial"){ const x=TUTORIALS.find(v=>v.id===state.param); return x? L(x.title)+" — "+base : base; }
+  if(state.page==="article"){ const a=ARTICLES.find(v=>v.id===state.param); return a? L(a.title)+" — "+base : base; }
+  return (map[state.page]||t("hero_title"))+" — "+base;
+}
+function render(){
+  parseHash();
+  stopDemo();
+  document.documentElement.lang = state.lang;
+  document.documentElement.dir = LANGS[state.lang].dir;
+  document.documentElement.setAttribute("data-theme", state.theme);
+  document.title = pageTitle();
+  const md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute("content", t("hero_sub"));
+  const app = document.getElementById("app");
+  app.innerHTML = headerHTML() + '<main id="main">' + pageHTML() + '</main>' + footerHTML();
+  const skip = document.querySelector(".skip"); if(skip) skip.textContent = t("a11y_skip");
+  if(state.page==="home") startDemo();
+}
+
+/* ---------------- App actions ---------------- */
+function setField(id, ok){
+  const f = document.getElementById(id); if(!f) return;
+  f.classList.toggle("invalid", !ok);
+}
+function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+window.App = {
+  setLang(l){ if(!LANGS[l]) return; state.lang=l; store.set("tmp_lang", l);
+    const h=(location.hash||"").replace(/^#\/?/,""); const parts=h.split("/").filter(Boolean);
+    if(["fa","tr","en"].includes(parts[0])) parts[0]=l; else parts.unshift(l);
+    location.hash = "#/"+parts.join("/"); render(); },
+  toggleTheme(){ state.theme = state.theme==="dark"?"light":"dark"; store.set("tmp_theme", state.theme); document.documentElement.setAttribute("data-theme", state.theme); },
+  toggleMenu(){ const m=document.getElementById("mobile-menu"); if(m) m.classList.toggle("open"); },
+  toggleFav(type,id,ev){ if(ev) ev.stopPropagation();
+    let f = favs(); const i = f.findIndex(x=>x.type===type&&x.id===id);
+    if(i>=0){ f.splice(i,1); toast(t("fav_removed")); } else { f.push({type,id}); toast(t("fav_added")); }
+    store.set("tmp_favs_v1", f); render(); },
+  copy(txt){ copyText(txt); },
+  demoTab(i){ demoIdx=i; showDemo(); },
+  heroSearch(ev){ ev.preventDefault(); const q=document.getElementById("hero-q"); mp.q=q?q.value:""; mp.cat="all"; go("marketplace"); render(); return false; },
+  openCategory(id){ mp.cat=id; mp.q=""; go("marketplace"); render(); },
+  mpSearch(v){ mp.q=v; const el=document.getElementById("mp-results"); if(el) el.innerHTML=mpResultsHTML(); },
+  mpFilter(k,v){ mp[k]=v; const el=document.getElementById("mp-results"); if(el) el.innerHTML=mpResultsHTML(); },
+  skillSearch(v){ skillsHTML._q=v; const el=document.getElementById("skills-results"); if(!el) return;
+    const q=v.trim().toLowerCase(); const cat=skillsHTML._cat||"all";
+    const list=SKILLS.filter(k=>(!q||(k.id+" "+skillTag(k)+" "+skillGap(k)).toLowerCase().includes(q))&&(cat==="all"||k.cat===cat));
+    el.innerHTML = list.length?`<div class="grid grid-3">${list.map(skillCard).join("")}</div>`:emptyHTML(); },
+  skillFilter(v){ skillsHTML._cat=v; App.skillSearch(skillsHTML._q||""); },
+  logout(){ store.set("tmp_session_v1", null); state.user=null; toast(t("logout_ok")); go("home"); render(); },
+  submitContact(ev){ ev.preventDefault();
+    const name=document.getElementById("c-name").value.trim();
+    const email=document.getElementById("c-email").value.trim();
+    const subj=document.getElementById("c-subject").value.trim();
+    const msg=document.getElementById("c-msg").value.trim();
+    setField("f-c-name", !!name); setField("f-c-email", validEmail(email));
+    setField("f-c-subject", !!subj); setField("f-c-msg", msg.length>=10);
+    if(!name||!validEmail(email)||!subj||msg.length<10) return false;
+    document.getElementById("contact-alert").innerHTML = `<div class="alert alert-ok">${t("contact_sent")}</div>`;
+    ev.target.reset(); return false; },
+  submitLogin(ev){ ev.preventDefault();
+    const email=document.getElementById("l-email").value.trim().toLowerCase();
+    const pass=document.getElementById("l-pass").value;
+    setField("f-l-email", validEmail(email)); setField("f-l-pass", pass.length>=6);
+    const box=document.getElementById("login-alert");
+    if(!validEmail(email)||pass.length<6) return false;
+    const u=users().find(x=>x.email===email);
+    if(!u||u.pass!==hashPass(pass)){ box.innerHTML=`<div class="alert alert-err">${t("auth_err_invalid")}</div>`; return false; }
+    state.user={name:u.name,email:u.email}; store.set("tmp_session_v1", state.user);
+    toast(t("auth_ok_login")); go("dashboard"); render(); return false; },
+  submitRegister(ev){ ev.preventDefault();
+    const name=document.getElementById("r-name").value.trim();
+    const email=document.getElementById("r-email").value.trim().toLowerCase();
+    const p1=document.getElementById("r-pass").value, p2=document.getElementById("r-pass2").value;
+    setField("f-r-name", !!name); setField("f-r-email", validEmail(email));
+    setField("f-r-pass", p1.length>=6); setField("f-r-pass2", p2===p1&&p2.length>=6);
+    const box=document.getElementById("reg-alert");
+    if(!name||!validEmail(email)||p1.length<6||p2!==p1) return false;
+    const us=users();
+    if(us.some(x=>x.email===email)){ box.innerHTML=`<div class="alert alert-err">${t("auth_err_exists")}</div>`; return false; }
+    us.push({name,email,pass:hashPass(p1)}); saveUsers(us);
+    state.user={name,email}; store.set("tmp_session_v1", state.user);
+    toast(t("auth_ok_reg")); go("dashboard"); render(); return false; },
+  submitProfile(ev){ ev.preventDefault();
+    const name=document.getElementById("p-name").value.trim();
+    if(!name) return false;
+    const lang=document.getElementById("p-lang").value;
+    const theme=document.getElementById("p-theme").value;
+    const us=users(); const u=us.find(x=>x.email===state.user.email);
+    if(u){ u.name=name; saveUsers(us); }
+    state.user={name,email:state.user.email}; store.set("tmp_session_v1", state.user);
+    if(lang!==state.lang){ App.setLang(lang); return false; }
+    if(theme!==state.theme){ state.theme=theme; store.set("tmp_theme", theme); }
+    document.getElementById("prof-alert").innerHTML=`<div class="alert alert-ok">${t("prof_saved")}</div>`;
+    render(); return false; },
+  submitPassword(ev){ ev.preventDefault();
+    const cur=document.getElementById("p-cur").value, nw=document.getElementById("p-new").value;
+    const us=users(); const u=us.find(x=>x.email===state.user.email);
+    setField("f-p-cur", !!u&&u.pass===hashPass(cur)); setField("f-p-new", nw.length>=6);
+    if(!u||u.pass!==hashPass(cur)||nw.length<6) return false;
+    u.pass=hashPass(nw); saveUsers(us);
+    document.getElementById("pass-alert").innerHTML=`<div class="alert alert-ok">${t("prof_saved")}</div>`;
+    ev.target.reset(); return false; }
+};
+
+/* ---------------- init ---------------- */
+window.addEventListener("hashchange", ()=>{ render(); window.scrollTo({top:0}); });
+if(!location.hash) location.hash = "#/"+state.lang+"/";
+render();
+</script>
+</body>
+</html>
