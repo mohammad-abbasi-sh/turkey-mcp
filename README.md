@@ -17,6 +17,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [armut-mcp](https://github.com/mohammad-abbasi-sh/armut-mcp) | armut.com — local services, pros & price guides | 6 | `uvx armut-mcp` |
 | [hepsiburada-mcp](https://github.com/mohammad-abbasi-sh/hepsiburada-mcp) | hepsiburada.com — shopping search, details, reviews & price stats | 5 | `uvx hepsiburada-mcp` |
 | [n11-mcp](https://github.com/mohammad-abbasi-sh/n11-mcp) | n11.com — shopping search, details, reviews & price stats | 5 | `uvx n11-mcp` |
+| [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp) | ciceksepeti.com — flowers & gifts search, details, reviews & price stats | 5 | `uvx ciceksepeti-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
