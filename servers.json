@@ -267,6 +267,292 @@
      "summary": "Most-travelled bus routes with prices"
     }
    ]
+  },
+  {
+   "name": "secretcv-mcp",
+   "title": "secretcv.com — job search, listings & sectors",
+   "title_tr": "secretcv.com — iş ilanları, arama ve sektörler",
+   "description": "Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
+   "repository": "https://github.com/mohammad-abbasi-sh/secretcv-mcp",
+   "pypi": "secretcv-mcp",
+   "tools": [
+    {
+     "name": "secretcv_search_jobs",
+     "summary": "Search jobs by keyword"
+    },
+    {
+     "name": "secretcv_latest_jobs",
+     "summary": "Latest job listings, newest first"
+    },
+    {
+     "name": "secretcv_get_job",
+     "summary": "Full detail for one job"
+    },
+    {
+     "name": "secretcv_list_sectors",
+     "summary": "All sectors with job counts"
+    },
+    {
+     "name": "secretcv_list_cities",
+     "summary": "All cities with job counts"
+    }
+   ]
+  },
+  {
+   "name": "biletix-mcp",
+   "title": "biletix.com — events, tickets & venues",
+   "title_tr": "biletix.com — etkinlikler, biletler ve mekânlar",
+   "description": "Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
+   "repository": "https://github.com/mohammad-abbasi-sh/biletix-mcp",
+   "pypi": "biletix-mcp",
+   "tools": [
+    {
+     "name": "biletix_trending",
+     "summary": "Trending featured events"
+    },
+    {
+     "name": "biletix_search_events",
+     "summary": "Search events in featured listings"
+    },
+    {
+     "name": "biletix_get_event",
+     "summary": "Full detail for one event"
+    },
+    {
+     "name": "biletix_list_by_category",
+     "summary": "Events by category"
+    },
+    {
+     "name": "biletix_list_venues",
+     "summary": "All venues"
+    },
+    {
+     "name": "biletix_venue_events",
+     "summary": "Events at one venue"
+    }
+   ]
+  },
+  {
+   "name": "sozcu-mcp",
+   "title": "sozcu.com.tr — news headlines, articles & market rates",
+   "title_tr": "sozcu.com.tr — haberler, makaleler ve piyasa kurları",
+   "description": "Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
+   "repository": "https://github.com/mohammad-abbasi-sh/sozcu-mcp",
+   "pypi": "sozcu-mcp",
+   "tools": [
+    {
+     "name": "sozcu_headlines",
+     "summary": "Headlines by section"
+    },
+    {
+     "name": "sozcu_latest",
+     "summary": "Latest news from the dated archive"
+    },
+    {
+     "name": "sozcu_get_article",
+     "summary": "Full article text"
+    },
+    {
+     "name": "sozcu_search_news",
+     "summary": "Search the news archive"
+    },
+    {
+     "name": "sozcu_market_rates",
+     "summary": "Live market ticker rates"
+    }
+   ]
+  },
+  {
+   "name": "eleman-net-mcp",
+   "title": "eleman.net — job listings, sectors & cities",
+   "title_tr": "eleman.net — iş ilanları, sektörler ve şehirler",
+   "description": "Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
+   "repository": "https://github.com/mohammad-abbasi-sh/eleman-net-mcp",
+   "pypi": "eleman-net-mcp",
+   "tools": [
+    {
+     "name": "eleman_search_jobs",
+     "summary": "Search jobs by keyword"
+    },
+    {
+     "name": "eleman_get_job",
+     "summary": "Full detail for one job"
+    },
+    {
+     "name": "eleman_list_sectors",
+     "summary": "All sectors"
+    },
+    {
+     "name": "eleman_list_cities",
+     "summary": "All cities"
+    },
+    {
+     "name": "eleman_new_listings",
+     "summary": "Newest listings"
+    }
+   ]
+  },
+  {
+   "name": "mackolik-mcp",
+   "title": "mackolik.com — live scores, results, fixtures & standings",
+   "title_tr": "mackolik.com — canlı skorlar, sonuçlar, fikstür ve puan durumu",
+   "description": "Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
+   "repository": "https://github.com/mohammad-abbasi-sh/mackolik-mcp",
+   "pypi": "mackolik-mcp",
+   "tools": [
+    {
+     "name": "mackolik_live_scores",
+     "summary": "Live matches right now"
+    },
+    {
+     "name": "mackolik_results",
+     "summary": "Results for a date"
+    },
+    {
+     "name": "mackolik_fixtures",
+     "summary": "Upcoming fixtures"
+    },
+    {
+     "name": "mackolik_standings",
+     "summary": "League standings"
+    },
+    {
+     "name": "mackolik_match_detail",
+     "summary": "Detail for one match"
+    }
+   ]
+  },
+  {
+   "name": "donanimhaber-mcp",
+   "title": "donanimhaber.com — tech news, articles & hot forum topics",
+   "title_tr": "donanimhaber.com — teknoloji haberleri, makaleler ve popüler forum konuları",
+   "description": "Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
+   "repository": "https://github.com/mohammad-abbasi-sh/donanimhaber-mcp",
+   "pypi": "donanimhaber-mcp",
+   "tools": [
+    {
+     "name": "donanimhaber_latest",
+     "summary": "Latest tech articles"
+    },
+    {
+     "name": "donanimhaber_search_news",
+     "summary": "Search news (Turkish-aware filter)"
+    },
+    {
+     "name": "donanimhaber_get_article",
+     "summary": "Full article text"
+    },
+    {
+     "name": "donanimhaber_section",
+     "summary": "Articles in one section"
+    },
+    {
+     "name": "donanimhaber_sections",
+     "summary": "All sections"
+    },
+    {
+     "name": "donanimhaber_forum_hot",
+     "summary": "Hot forum topics"
+    }
+   ]
+  },
+  {
+   "name": "yemek-com-mcp",
+   "title": "Yemek.com — Turkish recipes, categories & videos",
+   "title_tr": "Yemek.com — Türk yemek tarifleri, kategoriler ve videolar",
+   "description": "Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
+   "repository": "https://github.com/mohammad-abbasi-sh/yemek-com-mcp",
+   "pypi": "yemek-com-mcp",
+   "tools": [
+    {
+     "name": "yemek_search_recipes",
+     "summary": "Search recipes by keyword"
+    },
+    {
+     "name": "yemek_get_recipe",
+     "summary": "Full recipe: ingredients, steps, rating"
+    },
+    {
+     "name": "yemek_list_categories",
+     "summary": "All recipe categories"
+    },
+    {
+     "name": "yemek_list_trending",
+     "summary": "Trending recipes"
+    },
+    {
+     "name": "yemek_list_videos",
+     "summary": "Recipe videos"
+    },
+    {
+     "name": "yemek_list_popular",
+     "summary": "Most popular recipes"
+    }
+   ]
+  },
+  {
+   "name": "hurriyet-mcp",
+   "title": "Hürriyet — news headlines, articles & search",
+   "title_tr": "Hürriyet — haberler, makaleler ve arama",
+   "description": "Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
+   "repository": "https://github.com/mohammad-abbasi-sh/hurriyet-mcp",
+   "pypi": "hurriyet-mcp",
+   "tools": [
+    {
+     "name": "hurriyet_get_headlines",
+     "summary": "Headlines by section"
+    },
+    {
+     "name": "hurriyet_get_article",
+     "summary": "Full article text"
+    },
+    {
+     "name": "hurriyet_search_news",
+     "summary": "Search news by keyword"
+    },
+    {
+     "name": "hurriyet_get_latest",
+     "summary": "Latest news from the homepage"
+    },
+    {
+     "name": "hurriyet_list_categories",
+     "summary": "All news sections"
+    }
+   ]
+  },
+  {
+   "name": "sok-mcp",
+   "title": "ŞOK — grocery products, categories, campaigns & prices",
+   "title_tr": "ŞOK — market ürünleri, kategoriler, kampanyalar ve fiyatlar",
+   "description": "Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
+   "repository": "https://github.com/mohammad-abbasi-sh/sok-mcp",
+   "pypi": "sok-mcp",
+   "tools": [
+    {
+     "name": "sok_search_products",
+     "summary": "Search products by keyword"
+    },
+    {
+     "name": "sok_get_product",
+     "summary": "Full detail for one product"
+    },
+    {
+     "name": "sok_list_categories",
+     "summary": "All 19 categories"
+    },
+    {
+     "name": "sok_category_products",
+     "summary": "Products in one category"
+    },
+    {
+     "name": "sok_list_promotions",
+     "summary": "Current campaigns"
+    },
+    {
+     "name": "sok_price_stats",
+     "summary": "Price stats for a query in TRY"
+    }
+   ]
   }
  ]
 }
