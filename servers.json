@@ -553,6 +553,88 @@
      "summary": "Price stats for a query in TRY"
     }
    ]
+  },
+  {
+   "name": "jolly-tur-mcp",
+   "title": "Jolly Tur — hotels, live prices & campaigns",
+   "title_tr": "Jolly Tur — oteller, canlı fiyatlar ve kampanyalar",
+   "description": "Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
+   "repository": "https://github.com/mohammad-abbasi-sh/jolly-tur-mcp",
+   "pypi": "jolly-tur-mcp",
+   "tools": [
+    {
+     "name": "jolly_search_hotels",
+     "summary": "Search hotels with live prices"
+    },
+    {
+     "name": "jolly_get_hotel",
+     "summary": "Full detail for one hotel"
+    },
+    {
+     "name": "jolly_list_campaigns",
+     "summary": "Current campaigns"
+    }
+   ]
+  },
+  {
+   "name": "migros-mcp",
+   "title": "Migros Sanal Market — products, prices, promos & categories",
+   "title_tr": "Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
+   "description": "Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories.",
+   "repository": "https://github.com/mohammad-abbasi-sh/migros-mcp",
+   "pypi": "migros-mcp",
+   "tools": [
+    {
+     "name": "migros_search_products",
+     "summary": "Search products by keyword"
+    },
+    {
+     "name": "migros_get_product",
+     "summary": "Full detail for one product"
+    },
+    {
+     "name": "migros_list_categories",
+     "summary": "All 11 categories"
+    },
+    {
+     "name": "migros_list_promotions",
+     "summary": "Current promotions"
+    },
+    {
+     "name": "migros_price_stats",
+     "summary": "Price stats for a query in TRY"
+    }
+   ]
+  },
+  {
+   "name": "paribu-cineverse-mcp",
+   "title": "Paribu Cineverse — now showing, coming soon & showtimes",
+   "title_tr": "Paribu Cineverse — vizyondakiler, yakında gelecekler ve seanslar",
+   "description": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
+   "repository": "https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp",
+   "pypi": "paribu-cineverse-mcp",
+   "tools": [
+    {
+     "name": "cineverse_list_now_showing",
+     "summary": "Films now showing"
+    },
+    {
+     "name": "cineverse_list_coming_soon",
+     "summary": "Coming soon films"
+    },
+    {
+     "name": "cineverse_get_movie",
+     "summary": "Full detail for one film"
+    },
+    {
+     "name": "cineverse_list_cinemas",
+     "summary": "All cinemas, optional city filter"
+    },
+    {
+     "name": "cineverse_get_showtimes",
+     "summary": "Showtimes for a film/cinema"
+    }
+   ]
   }
  ]
 }
