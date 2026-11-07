@@ -19,6 +19,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [n11-mcp](https://github.com/mohammad-abbasi-sh/n11-mcp) | n11.com — shopping search, details, reviews & price stats | 5 | `uvx n11-mcp` |
 | [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp) | ciceksepeti.com — flowers & gifts search, details, reviews & price stats | 5 | `uvx ciceksepeti-mcp` |
 | [obilet-mcp](https://github.com/mohammad-abbasi-sh/obilet-mcp) | obilet.com — bus journeys, locations, prices & flight summary | 5 | `uvx obilet-mcp` |
+| [biletall-mcp](https://github.com/mohammad-abbasi-sh/biletall-mcp) | biletall.com — bus & flight tickets, routes & prices | 5 | `uvx biletall-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
