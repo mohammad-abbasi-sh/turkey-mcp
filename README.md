@@ -20,6 +20,15 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp) | ciceksepeti.com — flowers & gifts search, details, reviews & price stats | 5 | `uvx ciceksepeti-mcp` |
 | [obilet-mcp](https://github.com/mohammad-abbasi-sh/obilet-mcp) | obilet.com — bus journeys, locations, prices & flight summary | 5 | `uvx obilet-mcp` |
 | [biletall-mcp](https://github.com/mohammad-abbasi-sh/biletall-mcp) | biletall.com — bus & flight tickets, routes & prices | 5 | `uvx biletall-mcp` |
+| [secretcv-mcp](https://github.com/mohammad-abbasi-sh/secretcv-mcp) | secretcv.com — job search, listings & sectors | 5 | `uvx secretcv-mcp` |
+| [biletix-mcp](https://github.com/mohammad-abbasi-sh/biletix-mcp) | biletix.com — events, tickets & venues | 6 | `uvx biletix-mcp` |
+| [sozcu-mcp](https://github.com/mohammad-abbasi-sh/sozcu-mcp) | sozcu.com.tr — news headlines, articles & market rates | 5 | `uvx sozcu-mcp` |
+| [eleman-net-mcp](https://github.com/mohammad-abbasi-sh/eleman-net-mcp) | eleman.net — job listings, sectors & cities | 5 | `uvx eleman-net-mcp` |
+| [mackolik-mcp](https://github.com/mohammad-abbasi-sh/mackolik-mcp) | mackolik.com — live scores, results, fixtures & standings | 5 | `uvx mackolik-mcp` |
+| [donanimhaber-mcp](https://github.com/mohammad-abbasi-sh/donanimhaber-mcp) | donanimhaber.com — tech news, articles & hot forum topics | 6 | `uvx donanimhaber-mcp` |
+| [yemek-com-mcp](https://github.com/mohammad-abbasi-sh/yemek-com-mcp) | Yemek.com — Turkish recipes, categories & videos | 6 | `uvx yemek-com-mcp` |
+| [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp) | Hürriyet — news headlines, articles & search | 5 | `uvx hurriyet-mcp` |
+| [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp) | ŞOK — grocery products, categories, campaigns & prices | 6 | `uvx sok-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
