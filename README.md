@@ -29,6 +29,9 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [yemek-com-mcp](https://github.com/mohammad-abbasi-sh/yemek-com-mcp) | Yemek.com — Turkish recipes, categories & videos | 6 | `uvx yemek-com-mcp` |
 | [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp) | Hürriyet — news headlines, articles & search | 5 | `uvx hurriyet-mcp` |
 | [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp) | ŞOK — grocery products, categories, campaigns & prices | 6 | `uvx sok-mcp` |
+| [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp) | Jolly Tur — hotels, live prices & campaigns | 3 | `uvx jolly-tur-mcp` |
+| [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories | 5 | `uvx migros-mcp` |
+| [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
