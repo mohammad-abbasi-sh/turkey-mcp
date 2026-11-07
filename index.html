@@ -43,6 +43,7 @@
   --shadow:0 10px 30px rgba(0,0,0,.35); --shadow-lg:0 24px 60px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
+  html,body{overflow-x:clip}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);line-height:1.75;font-family:var(--font-lat);transition:background .35s ease,color .35s ease}
 [dir="rtl"] body,[lang="fa"] body{font-family:var(--font-fa)}
@@ -140,7 +141,7 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 .card .desc{color:var(--muted);font-size:14px;margin:8px 0 14px;flex:1}
 .tile{width:48px;height:48px;min-width:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:800;color:#fff}
 .card-top{display:flex;gap:12px;align-items:flex-start}
-.card-top .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start}
+.card-top .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start;overflow-wrap:anywhere}
 .meta-row{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);margin:0 0 4px}
 .meta-row .ic{font-size:14px}
 .card-bottom{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
@@ -193,7 +194,8 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 .detail-head .tile{width:64px;height:64px;border-radius:18px;font-size:28px}
 .detail-head h1{font-size:30px;margin:0}
 .detail-head .latin{color:var(--muted);direction:ltr;text-align:start}
-.tools-table{width:100%;border-collapse:collapse;font-size:14px}
+.table-scroll{overflow-x:auto}
+  .tools-table{width:100%;border-collapse:collapse;font-size:14px}
 .tools-table th,.tools-table td{text-align:start;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 .tools-table th{color:var(--muted);font-size:13px}
 .tools-table code{white-space:nowrap}
@@ -274,6 +276,12 @@ footer.site{margin-top:90px;border-top:1px solid var(--line);background:var(--ca
   .foot-grid{grid-template-columns:1fr}
   .hero-search{flex-direction:column;border-radius:20px;padding:10px}
   .hero-search .btn{width:100%}
+  .brand{font-size:16px;gap:8px}
+  .brand .mark{width:34px;height:34px}
+  .brand small{display:none}
+  .nav-right{gap:6px}
+  .icon-btn{width:36px;height:36px;font-size:15px}
+  .lang-select{padding:0 4px;font-size:12px}
 }
 </style>
 </head>
@@ -1098,9 +1106,9 @@ function toolHTML(id){
     <div class="grid grid-2" style="margin-top:26px">
       <div>
         <h2 style="font-size:20px">${t("tool_tools")} (${fmtNum(s.tools.length)})</h2>
-        <div class="card" style="padding:8px 18px"><table class="tools-table"><thead><tr><th>Tool</th><th>${t("details")}</th></tr></thead><tbody>
+        <div class="card" style="padding:8px 18px"><div class="table-scroll"><table class="tools-table"><thead><tr><th>Tool</th><th>${t("details")}</th></tr></thead><tbody>
         ${s.tools.map(x=>`<tr><td><code>${esc(x.n)}</code></td><td>${esc(toolSum(x))}</td></tr>`).join("")}
-        </tbody></table></div>
+        </tbody></table></div></div>
         <h2 style="font-size:20px;margin-top:26px">${t("tool_platforms")}</h2>
         <p>${PLATFORMS_VERIFIED.map(p=>`<span class="chip" style="margin:0 6px 6px 0">✓ ${esc(p.name)}</span>`).join("")}</p>
         <p style="color:var(--muted);font-size:13.5px">${t("plat_unverified_note")}</p>
