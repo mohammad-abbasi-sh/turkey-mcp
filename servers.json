@@ -237,6 +237,36 @@
      "summary": "Flight summary: count, min/max price, durations, airlines"
     }
    ]
+  },
+  {
+   "name": "biletall-mcp",
+   "title": "biletall.com — bus & flight tickets, routes & prices",
+   "title_tr": "biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
+   "description": "Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
+   "repository": "https://github.com/mohammad-abbasi-sh/biletall-mcp",
+   "pypi": "biletall-mcp",
+   "tools": [
+    {
+     "name": "biletall_search_locations",
+     "summary": "Search locations by name (offline, 1,726 slugs)"
+    },
+    {
+     "name": "biletall_bus_route",
+     "summary": "Cheapest bus journeys for a route, today"
+    },
+    {
+     "name": "biletall_flight_route",
+     "summary": "Cheapest flights for a route, with dates"
+    },
+    {
+     "name": "biletall_price_stats",
+     "summary": "Price stats for a bus route: min/median/mean/max in TRY"
+    },
+    {
+     "name": "biletall_popular_routes",
+     "summary": "Most-travelled bus routes with prices"
+    }
+   ]
   }
  ]
 }
