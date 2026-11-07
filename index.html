@@ -132,6 +132,7 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 .demo-foot .btn{padding:9px 20px;font-size:14px}
 /* ---------- cards / grids ---------- */
 .grid{display:grid;gap:18px}
+  .grid>*,.plat-grid>*,.steps>*{min-width:0}
 .grid-4{grid-template-columns:repeat(4,1fr)}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .grid-2{grid-template-columns:repeat(2,1fr)}
@@ -202,6 +203,7 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 .install-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}
 .install-box h3{font-size:16px;margin-bottom:10px}
 .copy-row{display:flex;gap:8px;align-items:stretch}
+  .copy-row>*{min-width:0}
 .copy-row pre{flex:1;margin:0}
 .copy-btn{border:1px solid var(--line);background:var(--elev);border-radius:12px;padding:0 16px;font-weight:700;color:var(--text)}
 /* forms */
