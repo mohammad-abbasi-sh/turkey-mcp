@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Turkey MCP — Connect AI to the World</title>
-<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 8 servers, 39 tools, in English, Türkçe and فارسی.">
+<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 22 servers, 111 tools, in English, Türkçe and فارسی.">
 <link rel="canonical" href="https://github.com/mohammad-abbasi-sh/turkey-mcp">
 <link rel="alternate" hreflang="fa" href="#/fa/">
 <link rel="alternate" hreflang="tr" href="#/tr/">
@@ -12,18 +12,18 @@
 <link rel="alternate" hreflang="x-default" href="#/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Turkey MCP — Connect AI to the World">
-<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance. 8 servers, 39 tools. English, Türkçe, فارسی.">
+<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 22 servers, 111 tools. English, Türkçe, فارسی.">
 <meta property="og:locale" content="fa_IR">
 <meta property="og:locale:alternate" content="tr_TR">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Turkey MCP — Connect AI to the World">
-<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 8 servers, 39 tools. EN / TR / FA.">
+<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 22 servers, 111 tools. EN / TR / FA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://github.com/mohammad-abbasi-sh/turkey-mcp","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 8 servers, 39 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://github.com/mohammad-abbasi-sh/turkey-mcp","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 22 servers, 111 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
 </script>
 <style>
 :root{
@@ -397,7 +397,205 @@ const SERVERS = [
    {n:"obilet_search_bus_journeys",s:"Bus journeys for a route + date, sorted by price, departure or duration",sf:"سفرهای اتوبوس یک مسیر و تاریخ، مرتب بر اساس قیمت، حرکت یا مدت",st:"Bir güzergâh ve tarih için otobüs seferleri; fiyat, kalkış veya süreye göre sıralı"},
    {n:"obilet_journey_detail",s:"Full detail of one journey: stops, prices, features",sf:"جزئیات کامل یک سفر: توقف‌ها، قیمت‌ها، امکانات",st:"Bir seferin tam detayı: duraklar, fiyatlar, özellikler"},
    {n:"obilet_price_stats",s:"Price stats for a route + date: min/median/mean/max in TRY",sf:"آمار قیمت یک مسیر و تاریخ: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir güzergâh ve tarih için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
-   {n:"obilet_flight_summary",s:"Flight summary: count, min/max price, durations, airlines",sf:"خلاصهٔ پروازها: تعداد، کمترین/بیشترین قیمت، مدت‌ها، شرکت‌ها",st:"Uçuş özeti: sayı, min/maks fiyat, süreler, havayolları"}]}
+   {n:"obilet_flight_summary",s:"Flight summary: count, min/max price, durations, airlines",sf:"خلاصهٔ پروازها: تعداد، کمترین/بیشترین قیمت، مدت‌ها، شرکت‌ها",st:"Uçuş özeti: sayı, min/maks fiyat, süreler, havayolları"}]},
+{ id:"biletall-mcp", cat:"travel", color:"#0369A1", letter:"🚌", featured:false, added:9,
+  title:"biletall.com — bus & flight tickets, routes & prices",
+  title_tr:"biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
+  desc:"Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
+  desc_fa:"جست‌وجوی بلیط اتوبوس و پرواز در biletall.com: ارزان‌ترین سفرها برای یک مسیر، آمار قیمت، و پرترددترین مسیرها با قیمت (لیر).",
+  desc_tr:"biletall.com'da otobüs ve uçak bileti arama: bir güzergâh için en ucuz seferler, fiyat istatistikleri ve fiyatlarıyla en çok seyahat edilen güzergâhlar (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/biletall-mcp", pypi:"biletall-mcp",
+  tools:[
+   {n:"biletall_search_locations",s:"Search locations by name (offline, 1,726 slugs)",sf:"جست‌وجوی مکان‌ها با نام (آفلاین، ۱٬۷۲۶ شناسه)",st:"Konumları adla ara (çevrimdışı, 1.726 kısaltma)"},
+   {n:"biletall_bus_route",s:"Cheapest bus journeys for a route, today",sf:"ارزان‌ترین سفرهای اتوبوس یک مسیر، امروز",st:"Bir güzergâh için bugünün en ucuz otobüs seferleri"},
+   {n:"biletall_flight_route",s:"Cheapest flights for a route, with dates",sf:"ارزان‌ترین پروازهای یک مسیر، با تاریخ‌ها",st:"Bir güzergâh için tarihleriyle en ucuz uçuşlar"},
+   {n:"biletall_price_stats",s:"Price stats for a bus route: min/median/mean/max in TRY",sf:"آمار قیمت یک مسیر اتوبوس: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir otobüs güzergâhı için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
+   {n:"biletall_popular_routes",s:"Most-travelled bus routes with prices",sf:"پرترددترین مسیرهای اتوبوس با قیمت",st:"Fiyatlarıyla en çok seyahat edilen otobüs güzergâhları"}
+  ]},
+{ id:"secretcv-mcp", cat:"jobs", color:"#B45309", letter:"💼", featured:false, added:10,
+  title:"secretcv.com — job search, listings & sectors",
+  title_tr:"secretcv.com — iş ilanları, arama ve sektörler",
+  desc:"Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
+  desc_fa:"جست‌وجوی آگهی‌های شغلی secretcv.com: جست‌وجو با کلیدواژه، تازه‌ترین آگهی‌ها، جزئیات کامل یک شغل، و فهرست بخش‌ها و شهرها با تعداد آگهی.",
+  desc_tr:"secretcv.com iş ilanlarında arama: anahtar kelimeyle arama, en yeni ilanlar, bir işin tam detayı ve iş sayılarıyla sektör ve şehir listeleri.",
+  repo:"https://github.com/mohammad-abbasi-sh/secretcv-mcp", pypi:"secretcv-mcp",
+  tools:[
+   {n:"secretcv_search_jobs",s:"Search jobs by keyword",sf:"جست‌وجوی شغل‌ها با کلیدواژه",st:"Anahtar kelimeyle iş ara"},
+   {n:"secretcv_latest_jobs",s:"Latest job listings, newest first",sf:"تازه‌ترین آگهی‌های شغلی، از جدیدترین",st:"En yeni iş ilanları, yeniden eskiye"},
+   {n:"secretcv_get_job",s:"Full detail for one job",sf:"جزئیات کامل یک شغل",st:"Bir işin tam detayı"},
+   {n:"secretcv_list_sectors",s:"All sectors with job counts",sf:"همهٔ بخش‌ها با تعداد آگهی",st:"İş sayılarıyla tüm sektörler"},
+   {n:"secretcv_list_cities",s:"All cities with job counts",sf:"همهٔ شهرها با تعداد آگهی",st:"İş sayılarıyla tüm şehirler"}
+  ]},
+{ id:"biletix-mcp", cat:"entertainment", color:"#BE185D", letter:"🎫", featured:false, added:11,
+  title:"biletix.com — events, tickets & venues",
+  title_tr:"biletix.com — etkinlikler, biletler ve mekânlar",
+  desc:"Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
+  desc_fa:"رویدادهای Biletix: کنسرت، تئاتر و ورزش — رویدادهای پرطرفدار، جست‌وجو، جزئیات کامل یک رویداد، دسته‌ها و سالن‌ها.",
+  desc_tr:"Biletix etkinlikleri: konser, tiyatro ve spor — trend etkinlikler, arama, bir etkinliğin tam detayı, kategoriler ve mekânlar.",
+  repo:"https://github.com/mohammad-abbasi-sh/biletix-mcp", pypi:"biletix-mcp",
+  tools:[
+   {n:"biletix_trending",s:"Trending featured events",sf:"رویدادهای پرطرفدار",st:"Trend öne çıkan etkinlikler"},
+   {n:"biletix_search_events",s:"Search events in featured listings",sf:"جست‌وجوی رویدادها در فهرست منتخب",st:"Öne çıkan listelerde etkinlik ara"},
+   {n:"biletix_get_event",s:"Full detail for one event",sf:"جزئیات کامل یک رویداد",st:"Bir etkinliğin tam detayı"},
+   {n:"biletix_list_by_category",s:"Events by category",sf:"رویدادها بر اساس دسته",st:"Kategoriye göre etkinlikler"},
+   {n:"biletix_list_venues",s:"All venues",sf:"همهٔ سالن‌ها",st:"Tüm mekânlar"},
+   {n:"biletix_venue_events",s:"Events at one venue",sf:"رویدادهای یک سالن",st:"Bir mekândaki etkinlikler"}
+  ]},
+{ id:"sozcu-mcp", cat:"news", color:"#1E40AF", letter:"📰", featured:false, added:12,
+  title:"sozcu.com.tr — news headlines, articles & market rates",
+  title_tr:"sozcu.com.tr — haberler, makaleler ve piyasa kurları",
+  desc:"Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
+  desc_fa:"اخبار Sözcü: تیترها بر اساس بخش، تازه‌ترین اخبار از بایگانی تاریخ‌دار، متن کامل مقاله، جست‌وجو در بایگانی و نرخ‌های زندهٔ بازار.",
+  desc_tr:"Sözcü haberleri: bölüme göre manşetler, tarihli arşivden en son haberler, makalenin tam metni, arşivde arama ve canlı piyasa kurları.",
+  repo:"https://github.com/mohammad-abbasi-sh/sozcu-mcp", pypi:"sozcu-mcp",
+  tools:[
+   {n:"sozcu_headlines",s:"Headlines by section",sf:"تیترها بر اساس بخش",st:"Bölüme göre manşetler"},
+   {n:"sozcu_latest",s:"Latest news from the dated archive",sf:"تازه‌ترین اخبار از بایگانی تاریخ‌دار",st:"Tarihli arşivden en son haberler"},
+   {n:"sozcu_get_article",s:"Full article text",sf:"متن کامل مقاله",st:"Makalenin tam metni"},
+   {n:"sozcu_search_news",s:"Search the news archive",sf:"جست‌وجو در بایگانی اخبار",st:"Haber arşivinde ara"},
+   {n:"sozcu_market_rates",s:"Live market ticker rates",sf:"نرخ‌های زندهٔ بازار",st:"Canlı piyasa kurları"}
+  ]},
+{ id:"eleman-net-mcp", cat:"jobs", color:"#065F46", letter:"👷", featured:false, added:13,
+  title:"eleman.net — job listings, sectors & cities",
+  title_tr:"eleman.net — iş ilanları, sektörler ve şehirler",
+  desc:"Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
+  desc_fa:"آگهی‌های شغلی eleman.net: جست‌وجو با کلیدواژه، جزئیات کامل یک شغل، فهرست بخش‌ها و شهرها، و تازه‌ترین آگهی‌ها.",
+  desc_tr:"eleman.net iş ilanları: anahtar kelimeyle arama, bir işin tam detayı, sektör ve şehir listeleri ve en yeni ilanlar.",
+  repo:"https://github.com/mohammad-abbasi-sh/eleman-net-mcp", pypi:"eleman-net-mcp",
+  tools:[
+   {n:"eleman_search_jobs",s:"Search jobs by keyword",sf:"جست‌وجوی شغل‌ها با کلیدواژه",st:"Anahtar kelimeyle iş ara"},
+   {n:"eleman_get_job",s:"Full detail for one job",sf:"جزئیات کامل یک شغل",st:"Bir işin tam detayı"},
+   {n:"eleman_list_sectors",s:"All sectors",sf:"همهٔ بخش‌ها",st:"Tüm sektörler"},
+   {n:"eleman_list_cities",s:"All cities",sf:"همهٔ شهرها",st:"Tüm şehirler"},
+   {n:"eleman_new_listings",s:"Newest listings",sf:"تازه‌ترین آگهی‌ها",st:"En yeni ilanlar"}
+  ]},
+{ id:"mackolik-mcp", cat:"sports", color:"#15803D", letter:"⚽", featured:false, added:14,
+  title:"mackolik.com — live scores, results, fixtures & standings",
+  title_tr:"mackolik.com — canlı skorlar, sonuçlar, fikstür ve puan durumu",
+  desc:"Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
+  desc_fa:"نتایج زندهٔ Mackolik: مسابقات در حال برگزاری، نتایج یک روز، بازی‌های آینده، جدول لیگ‌ها و جزئیات یک مسابقه.",
+  desc_tr:"Mackolik canlı skorlar: şu an oynanan maçlar, bir günün sonuçları, yaklaşan fikstürler, lig puan durumları ve bir maçın detayı.",
+  repo:"https://github.com/mohammad-abbasi-sh/mackolik-mcp", pypi:"mackolik-mcp",
+  tools:[
+   {n:"mackolik_live_scores",s:"Live matches right now",sf:"مسابقات زنده همین حالا",st:"Şu an oynanan canlı maçlar"},
+   {n:"mackolik_results",s:"Results for a date",sf:"نتایج یک روز",st:"Bir tarihin sonuçları"},
+   {n:"mackolik_fixtures",s:"Upcoming fixtures",sf:"بازی‌های آینده",st:"Yaklaşan fikstürler"},
+   {n:"mackolik_standings",s:"League standings",sf:"جدول لیگ‌ها",st:"Lig puan durumları"},
+   {n:"mackolik_match_detail",s:"Detail for one match",sf:"جزئیات یک مسابقه",st:"Bir maçın detayı"}
+  ]},
+{ id:"donanimhaber-mcp", cat:"news", color:"#4F46E5", letter:"💻", featured:false, added:15,
+  title:"donanimhaber.com — tech news, articles & hot forum topics",
+  title_tr:"donanimhaber.com — teknoloji haberleri, makaleler ve popüler forum konuları",
+  desc:"Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
+  desc_fa:"اخبار فناوری DonanımHaber: تازه‌ترین مقاله‌ها، جست‌وجوی اخبار، متن کامل مقاله، مقاله‌های یک بخش، همهٔ بخش‌ها و موضوعات داغ انجمن.",
+  desc_tr:"DonanımHaber teknoloji haberleri: en son makaleler, haber araması, makalenin tam metni, bir bölümün makaleleri, tüm bölümler ve forumun sıcak konuları.",
+  repo:"https://github.com/mohammad-abbasi-sh/donanimhaber-mcp", pypi:"donanimhaber-mcp",
+  tools:[
+   {n:"donanimhaber_latest",s:"Latest tech articles",sf:"تازه‌ترین مقاله‌های فناوری",st:"En son teknoloji makaleleri"},
+   {n:"donanimhaber_search_news",s:"Search news (Turkish-aware filter)",sf:"جست‌وجوی اخبار (فیلتر آگاه به ترکی)",st:"Haber ara (Türkçe duyarlı filtre)"},
+   {n:"donanimhaber_get_article",s:"Full article text",sf:"متن کامل مقاله",st:"Makalenin tam metni"},
+   {n:"donanimhaber_section",s:"Articles in one section",sf:"مقاله‌های یک بخش",st:"Bir bölümün makaleleri"},
+   {n:"donanimhaber_sections",s:"All sections",sf:"همهٔ بخش‌ها",st:"Tüm bölümler"},
+   {n:"donanimhaber_forum_hot",s:"Hot forum topics",sf:"موضوعات داغ انجمن",st:"Forumun sıcak konuları"}
+  ]},
+{ id:"yemek-com-mcp", cat:"food", color:"#C2410C", letter:"🍳", featured:false, added:16,
+  title:"Yemek.com — Turkish recipes, categories & videos",
+  title_tr:"Yemek.com — Türk yemek tarifleri, kategoriler ve videolar",
+  desc:"Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
+  desc_fa:"رسپی‌های Yemek.com: جست‌وجوی رسپی با کلیدواژه، رسپی کامل با مواد و مراحل و امتیاز، دسته‌ها، رسپی‌های پرطرفدار، ویدیوها و محبوب‌ترین‌ها.",
+  desc_tr:"Yemek.com tarifleri: anahtar kelimeyle tarif ara, malzemeler, adımlar ve puanla tam tarif, kategoriler, trend tarifler, videolar ve en popülerler.",
+  repo:"https://github.com/mohammad-abbasi-sh/yemek-com-mcp", pypi:"yemek-com-mcp",
+  tools:[
+   {n:"yemek_search_recipes",s:"Search recipes by keyword",sf:"جست‌وجوی رسپی با کلیدواژه",st:"Anahtar kelimeyle tarif ara"},
+   {n:"yemek_get_recipe",s:"Full recipe: ingredients, steps, rating",sf:"رسپی کامل: مواد، مراحل، امتیاز",st:"Tam tarif: malzemeler, adımlar, puan"},
+   {n:"yemek_list_categories",s:"All recipe categories",sf:"همهٔ دسته‌های رسپی",st:"Tüm tarif kategorileri"},
+   {n:"yemek_list_trending",s:"Trending recipes",sf:"رسپی‌های پرطرفدار",st:"Trend tarifler"},
+   {n:"yemek_list_videos",s:"Recipe videos",sf:"ویدیوهای رسپی",st:"Tarif videoları"},
+   {n:"yemek_list_popular",s:"Most popular recipes",sf:"محبوب‌ترین رسپی‌ها",st:"En popüler tarifler"}
+  ]},
+{ id:"hurriyet-mcp", cat:"news", color:"#991B1B", letter:"🗞️", featured:false, added:17,
+  title:"Hürriyet — news headlines, articles & search",
+  title_tr:"Hürriyet — haberler, makaleler ve arama",
+  desc:"Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
+  desc_fa:"اخبار Hürriyet: تیترها بر اساس بخش، متن کامل مقاله، جست‌وجوی اخبار با کلیدواژه، تازه‌ترین اخبار از صفحهٔ اصلی و همهٔ بخش‌های خبری.",
+  desc_tr:"Hürriyet haberleri: bölüme göre manşetler, makalenin tam metni, anahtar kelimeyle haber araması, ana sayfadan en son haberler ve tüm haber bölümleri.",
+  repo:"https://github.com/mohammad-abbasi-sh/hurriyet-mcp", pypi:"hurriyet-mcp",
+  tools:[
+   {n:"hurriyet_get_headlines",s:"Headlines by section",sf:"تیترها بر اساس بخش",st:"Bölüme göre manşetler"},
+   {n:"hurriyet_get_article",s:"Full article text",sf:"متن کامل مقاله",st:"Makalenin tam metni"},
+   {n:"hurriyet_search_news",s:"Search news by keyword",sf:"جست‌وجوی اخبار با کلیدواژه",st:"Anahtar kelimeyle haber ara"},
+   {n:"hurriyet_get_latest",s:"Latest news from the homepage",sf:"تازه‌ترین اخبار از صفحهٔ اصلی",st:"Ana sayfadan en son haberler"},
+   {n:"hurriyet_list_categories",s:"All news sections",sf:"همهٔ بخش‌های خبری",st:"Tüm haber bölümleri"}
+  ]},
+{ id:"sok-mcp", cat:"grocery", color:"#B91C1C", letter:"🛒", featured:false, added:18,
+  title:"ŞOK — grocery products, categories, campaigns & prices",
+  title_tr:"ŞOK — market ürünleri, kategoriler, kampanyalar ve fiyatlar",
+  desc:"Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
+  desc_fa:"سوپرمارکت ŞOK: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۹ دسته، کالاهای یک دسته، کمپین‌های جاری و آمار قیمت (لیر).",
+  desc_tr:"ŞOK market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 19 kategori, bir kategorinin ürünleri, güncel kampanyalar ve fiyat istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/sok-mcp", pypi:"sok-mcp",
+  tools:[
+   {n:"sok_search_products",s:"Search products by keyword",sf:"جست‌وجوی کالا با کلیدواژه",st:"Anahtar kelimeyle ürün ara"},
+   {n:"sok_get_product",s:"Full detail for one product",sf:"جزئیات کامل یک کالا",st:"Bir ürünün tam detayı"},
+   {n:"sok_list_categories",s:"All 19 categories",sf:"همهٔ ۱۹ دسته",st:"19 kategorinin tamamı"},
+   {n:"sok_category_products",s:"Products in one category",sf:"کالاهای یک دسته",st:"Bir kategorinin ürünleri"},
+   {n:"sok_list_promotions",s:"Current campaigns",sf:"کمپین‌های جاری",st:"Güncel kampanyalar"},
+   {n:"sok_price_stats",s:"Price stats for a query in TRY",sf:"آمار قیمت یک جست‌وجو به لیر",st:"Bir sorgu için fiyat istatistikleri (TL)"}
+  ]},
+{ id:"jolly-tur-mcp", cat:"travel", color:"#0E7490", letter:"🏨", featured:false, added:19,
+  title:"Jolly Tur — hotels, live prices & campaigns",
+  title_tr:"Jolly Tur — oteller, canlı fiyatlar ve kampanyalar",
+  desc:"Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
+  desc_fa:"هتل‌های Jolly Tur: جست‌وجوی هتل با قیمت‌های زنده، جزئیات کامل یک هتل و کمپین‌های جاری.",
+  desc_tr:"Jolly Tur otelleri: canlı fiyatlarla otel ara, bir otelin tam detayı ve güncel kampanyalar.",
+  repo:"https://github.com/mohammad-abbasi-sh/jolly-tur-mcp", pypi:"jolly-tur-mcp",
+  tools:[
+   {n:"jolly_search_hotels",s:"Search hotels with live prices",sf:"جست‌وجوی هتل با قیمت‌های زنده",st:"Canlı fiyatlarla otel ara"},
+   {n:"jolly_get_hotel",s:"Full detail for one hotel",sf:"جزئیات کامل یک هتل",st:"Bir otelin tam detayı"},
+   {n:"jolly_list_campaigns",s:"Current campaigns",sf:"کمپین‌های جاری",st:"Güncel kampanyalar"}
+  ]},
+{ id:"migros-mcp", cat:"grocery", color:"#65A30D", letter:"🛒", featured:false, added:20,
+  title:"Migros Sanal Market — products, prices, promos & categories",
+  title_tr:"Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
+  desc:"Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories.",
+  desc_fa:"سوپرمارکت Migros Sanal Market: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۱ دسته، تبلیغات جاری و آمار قیمت (لیر).",
+  desc_tr:"Migros Sanal Market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 11 kategori, güncel promosyonlar ve fiyat istatistikleri (TL).",
+  repo:"https://github.com/mohammad-abbasi-sh/migros-mcp", pypi:"migros-mcp",
+  tools:[
+   {n:"migros_search_products",s:"Search products by keyword",sf:"جست‌وجوی کالا با کلیدواژه",st:"Anahtar kelimeyle ürün ara"},
+   {n:"migros_get_product",s:"Full detail for one product",sf:"جزئیات کامل یک کالا",st:"Bir ürünün tam detayı"},
+   {n:"migros_list_categories",s:"All 11 categories",sf:"همهٔ ۱۱ دسته",st:"11 kategorinin tamamı"},
+   {n:"migros_list_promotions",s:"Current promotions",sf:"تبلیغات جاری",st:"Güncel promosyonlar"},
+   {n:"migros_price_stats",s:"Price stats for a query in TRY",sf:"آمار قیمت یک جست‌وجو به لیر",st:"Bir sorgu için fiyat istatistikleri (TL)"}
+  ]},
+{ id:"paribu-cineverse-mcp", cat:"entertainment", color:"#7E22CE", letter:"🎬", featured:false, added:21,
+  title:"Paribu Cineverse — now showing, coming soon & showtimes",
+  title_tr:"Paribu Cineverse — vizyondakiler, yakında gelecekler ve seanslar",
+  desc:"Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
+  desc_fa:"سینماهای Paribu Cineverse: فیلم‌های در حال اکران، فیلم‌های آینده، جزئیات کامل یک فیلم، همهٔ سینماها و ساعت نمایش فیلم‌ها.",
+  desc_tr:"Paribu Cineverse sinemaları: vizyondaki filmler, yakında gelecek filmler, bir filmin tam detayı, tüm sinemalar ve film seansları.",
+  repo:"https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp", pypi:"paribu-cineverse-mcp",
+  tools:[
+   {n:"cineverse_list_now_showing",s:"Films now showing",sf:"فیلم‌های در حال اکران",st:"Vizyondaki filmler"},
+   {n:"cineverse_list_coming_soon",s:"Coming soon films",sf:"فیلم‌های آینده",st:"Yakında gelecek filmler"},
+   {n:"cineverse_get_movie",s:"Full detail for one film",sf:"جزئیات کامل یک فیلم",st:"Bir filmin tam detayı"},
+   {n:"cineverse_list_cinemas",s:"All cinemas, optional city filter",sf:"همهٔ سینماها، با فیلتر شهر",st:"Tüm sinemalar, isteğe bağlı şehir filtresi"},
+   {n:"cineverse_get_showtimes",s:"Showtimes for a film/cinema",sf:"ساعت نمایش یک فیلم/سینما",st:"Bir film/sinema için seanslar"}
+  ]},
+{ id:"trthaber-mcp", cat:"news", color:"#9F1239", letter:"📺", featured:false, added:22,
+  title:"TRT Haber — headlines, breaking news & full articles",
+  title_tr:"TRT Haber — manşetler, son dakika ve haber metinleri",
+  desc:"Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
+  desc_fa:"اخبار TRT Haber: تیترها بر اساس دسته، خبرهای فوری از جدیدترین، متن کامل یک مقاله، جست‌وجوی اخبار با کلیدواژه و ۱۸ دستهٔ خبری.",
+  desc_tr:"TRT Haber: kategoriye göre manşetler, en yeni son dakika haberleri, bir makalenin tam metni, anahtar kelimeyle haber araması ve 18 haber kategorisi.",
+  repo:"https://github.com/mohammad-abbasi-sh/trthaber-mcp", pypi:"trthaber-mcp",
+  tools:[
+   {n:"trthaber_headlines",s:"Headlines by category",sf:"تیترها بر اساس دسته",st:"Kategoriye göre manşetler"},
+   {n:"trthaber_latest",s:"Breaking news, newest first",sf:"خبرهای فوری، از جدیدترین",st:"Son dakika haberleri, yeniden eskiye"},
+   {n:"trthaber_get_article",s:"Full text of one article",sf:"متن کامل یک مقاله",st:"Bir makalenin tam metni"},
+   {n:"trthaber_search_news",s:"Keyword search over current news",sf:"جست‌وجوی اخبار جاری با کلیدواژه",st:"Güncel haberlerde anahtar kelimeyle arama"},
+   {n:"trthaber_list_categories",s:"The 18 news categories",sf:"۱۸ دستهٔ خبری",st:"18 haber kategorisi"}
+  ]}
 ];
 const TOTAL_TOOLS = SERVERS.reduce((a,s)=>a+s.tools.length,0);
 
@@ -408,6 +606,12 @@ const CATEGORIES = [
  {id:"services",icon:"🔧",color:"#059669",soon:false},
  {id:"travel",icon:"🚌",color:"#0284C7",soon:false},
  {id:"finance",icon:"💱",color:"#0D9488",soon:false},
+ {id:"news",icon:"📰",color:"#1E40AF",soon:false},
+ {id:"jobs",icon:"💼",color:"#B45309",soon:false},
+ {id:"food",icon:"🍳",color:"#C2410C",soon:false},
+ {id:"grocery",icon:"🛒",color:"#16A34A",soon:false},
+ {id:"entertainment",icon:"🎬",color:"#7E22CE",soon:false},
+ {id:"sports",icon:"⚽",color:"#15803D",soon:false},
  {id:"productivity",icon:"⚡",color:"#7C3AED",soon:true},
  {id:"communication",icon:"💬",color:"#EC4899",soon:true},
  {id:"development",icon:"💻",color:"#0EA5E9",soon:true},
@@ -558,7 +762,7 @@ const ARTICLES = [
          en:["If you mostly live in the terminal, Claude Code is the fastest path: one command and the server is connected. For anyone comfortable with the command line, there is nothing simpler.","If you are a programmer who lives in a code editor, Cursor or VS Code is the natural choice; the server sits next to your code and you can ask the assistant to see code and real data at the same time.","If you only want to chat and ask questions, Claude Desktop is the simplest option: you edit the config file once, and afterwards everything happens in the chat.","One important note: local (stdio) servers run only on your own computer. The web versions of ChatGPT and Gemini are not yet verified with these servers — so if you use the web version, pick a desktop or command-line client instead."]}},
  {id:"turkey-servers",cat:"guides",date:"2026-11-03",mins:7,cover:"g3",icon:"🇹🇷",
   title:{fa:"سرورهای ترکیه چطور کار می‌کنند؟",tr:"Türkiye sunucuları nasıl çalışır?",en:"How do the Turkey servers work?"},
-  ex:{fa:"پشت صحنهٔ هشت سرور فقط‌خواندنی: از کجا داده می‌خوانند، چه چیزی را نمی‌توانند انجام دهند و چرا امن‌اند.",tr:"Sekiz salt okunur sunucunun perde arkası: veriyi nereden okurlar, neyi yapamazlar ve neden güvenlidirler.",en:"Behind the scenes of eight read-only servers: where they read data, what they cannot do, and why they are safe."},
+  ex:{fa:"پشت صحنهٔ بیست‌ودو سرور فقط‌خواندنی: از کجا داده می‌خوانند، چه چیزی را نمی‌توانند انجام دهند و چرا امن‌اند.",tr:"Yirmi iki salt okunur sunucunun perde arkası: veriyi nereden okurlar, neyi yapamazlar ve neden güvenlidirler.",en:"Behind the scenes of twenty-two read-only servers: where they read data, what they cannot do, and why they are safe."},
   body:{fa:["هر سرور این کاتالوگ یک برنامهٔ کوچک پایتون است که با uvx اجرا می‌شود. وقتی دستیارت سؤالی می‌پرسد — مثلاً «ارزان‌ترین هدفون بی‌سیم چنده؟» — سرور به سایت مربوطه سر می‌زند، صفحه را می‌خواند و جواب ساخت‌یافته برمی‌گرداند.","داده‌ها همیشه زنده‌اند: نرخ ارز از XML رسمی بانک مرکزی ترکیه خوانده می‌شود، قیمت کالا از صفحهٔ فروشگاه، و ساعت اتوبوس از obilet. هیچ پایگاه دادهٔ قدیمی و هیچ عدد حدسی در میان نیست.","مهم‌ترین اصل طراحی این سرورها «فقط‌خواندنی» بودن است. آن‌ها هیچ حساب کاربری، رمز عبور یا توکنی ندارند؛ نمی‌توانند وارد حسابت شوی، خرید کنند یا رزرو انجام دهند. بدترین کاری که یک سرور خراب می‌تواند بکند، برگرداندن یک جواب اشتباه است — و تو همیشه می‌توانی آن را با باز کردن سایت بررسی کنی.","همهٔ سرورها متن‌باز‌اند و کدشان در گیت‌هاب است. اگر کنجکاوی، می‌توانی دقیقاً ببینی هر ابزار چه درخواستی می‌فرستد و چه چیزی برمی‌گرداند. شفافیت، به‌جای اعتماد کورکورانه، اصل این پروژه است."],
          tr:["Bu katalogdaki her sunucu uvx ile çalışan küçük bir Python programıdır. Asistanınız bir soru sorduğunda — örneğin “en ucuz kablosuz kulaklık ne kadar?” — sunucu ilgili siteye gider, sayfayı okur ve yapılandırılmış bir yanıt döndürür.","Veriler her zaman canlıdır: döviz kuru Türkiye Cumhuriyet Merkez Bankası'nın resmi XML'inden, ürün fiyatı mağaza sayfasından, otobüs saati obilet'ten okunur. Eski bir veritabanı ve tahminî sayı yoktur.","Bu sunucuların en önemli tasarım ilkesi “salt okunur” olmalarıdır. Hiçbir kullanıcı hesabı, şifre veya jetonları yoktur; hesabınıza giremez, satın alma yapamaz veya rezervasyon yapamazlar. Bozuk bir sunucunun yapabileceği en kötü şey yanlış bir yanıt döndürmektir — ve bunu siteyi açarak her zaman doğrulayabilirsiniz.","Tüm sunucular açık kaynaklıdır ve kodları GitHub'dadır. Merak ediyorsanız her aracın tam olarak hangi isteği gönderdiğini ve ne döndürdüğünü görebilirsiniz. Kör güven yerine şeffaflık bu projenin ilkesidir."],
          en:["Each server in this catalog is a small Python program that runs with uvx. When your assistant asks a question — “what is the cheapest wireless earphone?” — the server visits the relevant site, reads the page and returns a structured answer.","The data is always live: exchange rates come from the Central Bank of Türkiye's official XML, product prices from the shop page, and bus times from obilet. There is no stale database and no guessed numbers.","The most important design principle of these servers is that they are read-only. They have no user account, no password and no token; they cannot log in to your account, buy anything or make a reservation. The worst thing a broken server can do is return a wrong answer — and you can always check it by opening the site.","All servers are open source and their code is on GitHub. If you are curious, you can see exactly what request each tool sends and what it returns. Transparency, instead of blind trust, is this project's principle."]}}
@@ -585,14 +789,20 @@ fa:{
  cat_cars:"خودرو", cat_cars_d:"آگهی‌های خودروی دست‌دوم arabam.com",
  cat_real_estate:"املاک", cat_real_estate_d:"آگهی‌های فروش و اجارهٔ emlakjet.com",
  cat_services:"خدمات محلی", cat_services_d:"متخصصان و راهنمای قیمت armut.com",
- cat_travel:"سفر و بلیط", cat_travel_d:"اتوبوس و پرواز از obilet.com",
+ cat_travel:"سفر و بلیط", cat_travel_d:"اتوبوس و پرواز از obilet.com و biletall.com، هتل از Jolly Tur",
  cat_finance:"مالی و ارز", cat_finance_d:"نرخ رسمی بانک مرکزی ترکیه",
+ cat_news:"اخبار", cat_news_d:"Sözcü، Hürriyet، TRT Haber و DonanımHaber",
+ cat_jobs:"کاریابی", cat_jobs_d:"آگهی‌های شغلی secretcv.com و eleman.net",
+ cat_food:"غذا و رسپی", cat_food_d:"رسپی‌های Yemek.com",
+ cat_grocery:"سوپرمارکت", cat_grocery_d:"کالاهای ŞOK و Migros Sanal Market",
+ cat_entertainment:"سرگرمی", cat_entertainment_d:"رویدادهای Biletix و سینماهای Paribu Cineverse",
+ cat_sports:"ورزش", cat_sports_d:"نتایج زندهٔ Mackolik",
  cat_productivity:"بهره‌وری", cat_productivity_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_communication:"ارتباطات", cat_communication_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_development:"توسعه", cat_development_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_data:"داده و تحلیل", cat_data_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_coming:"به‌زودی", cat_servers:"سرور", cat_server_one:"سرور", view_all:"مشاهدهٔ همه",
- feat_title:"سرورهای منتخب MCP", feat_sub:"هشت سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
+ feat_title:"سرورهای منتخب MCP", feat_sub:"۲۲ سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
  feat_badge:"منتخب", status_available:"در دسترس", tools_count:"ابزار",
  details:"جزئیات", docs:"مستندات", connect:"اتصال", add_fav:"افزودن به علاقه‌مندی‌ها", remove_fav:"حذف از علاقه‌مندی‌ها",
  plat_title:"با کدام دستیار هوش مصنوعی کار می‌کند؟", plat_sub:"سرورها روی کامپیوتر شما با uvx اجرا می‌شوند و از راه stdio وصل می‌شوند.",
@@ -633,7 +843,7 @@ fa:{
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
  about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
- about_catalog_t:"کاتالوگ", about_catalog_d:"۸ سرور، ۳۹ ابزار، همه فقط‌خواندنی و روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی (۲۴ تا ۳۷ تست) تأیید شده است.",
+ about_catalog_t:"کاتالوگ", about_catalog_d:"۲۲ سرور، ۱۱۱ ابزار، همه فقط‌خواندنی؛ ۲۱ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است.",
  contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
  fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
@@ -661,14 +871,20 @@ tr:{
  cat_cars:"Otomobil", cat_cars_d:"arabam.com ikinci el otomobil ilanları",
  cat_real_estate:"Emlak", cat_real_estate_d:"emlakjet.com satılık ve kiralık ilanlar",
  cat_services:"Yerel Hizmetler", cat_services_d:"armut.com uzmanları ve fiyat rehberleri",
- cat_travel:"Seyahat ve Bilet", cat_travel_d:"obilet.com otobüs ve uçak",
+ cat_travel:"Seyahat ve Bilet", cat_travel_d:"obilet.com ve biletall.com'dan otobüs ve uçak, Jolly Tur'dan otel",
  cat_finance:"Finans ve Döviz", cat_finance_d:"Türkiye Cumhuriyet Merkez Bankası resmi kurları",
+ cat_news:"Haberler", cat_news_d:"Sözcü, Hürriyet, TRT Haber ve DonanımHaber",
+ cat_jobs:"İş İlanları", cat_jobs_d:"secretcv.com ve eleman.net iş ilanları",
+ cat_food:"Yemek ve Tarifler", cat_food_d:"Yemek.com tarifleri",
+ cat_grocery:"Market", cat_grocery_d:"ŞOK ve Migros Sanal Market ürünleri",
+ cat_entertainment:"Eğlence", cat_entertainment_d:"Biletix etkinlikleri ve Paribu Cineverse sinemaları",
+ cat_sports:"Spor", cat_sports_d:"Mackolik canlı skorları",
  cat_productivity:"Verimlilik", cat_productivity_d:"Yakında — bu katalog için planlanmadı",
  cat_communication:"İletişim", cat_communication_d:"Yakında — bu katalog için planlanmadı",
  cat_development:"Geliştirme", cat_development_d:"Yakında — bu katalog için planlanmadı",
  cat_data:"Veri ve Analitik", cat_data_d:"Yakında — bu katalog için planlanmadı",
  cat_coming:"Yakında", cat_servers:"sunucu", cat_server_one:"sunucu", view_all:"Tümünü Gör",
- feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş sekiz salt okunur sunucu — doğrulanmamış iddia yok.",
+ feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş 22 salt okunur sunucu — doğrulanmamış iddia yok.",
  feat_badge:"Öne Çıkan", status_available:"Kullanılabilir", tools_count:"araç",
  details:"Detaylar", docs:"Belgeler", connect:"Bağlan", add_fav:"Favorilere ekle", remove_fav:"Favorilerden çıkar",
  plat_title:"Hangi yapay zekâ asistanıyla çalışır?", plat_sub:"Sunucular bilgisayarınızda uvx ile çalışır ve stdio üzerinden bağlanır.",
@@ -709,7 +925,7 @@ tr:{
  about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
  about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
- about_catalog_t:"Katalog", about_catalog_d:"8 sunucu, 39 araç — hepsi salt okunur ve PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle (24–37 test) doğrulanmıştır.",
+ about_catalog_t:"Katalog", about_catalog_d:"22 sunucu, 111 araç — hepsi salt okunur; 21 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır.",
  contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
  fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
@@ -737,14 +953,20 @@ en:{
  cat_cars:"Cars", cat_cars_d:"Used-car listings from arabam.com",
  cat_real_estate:"Real Estate", cat_real_estate_d:"Sale and rental listings from emlakjet.com",
  cat_services:"Local Services", cat_services_d:"Pros and price guides from armut.com",
- cat_travel:"Travel & Tickets", cat_travel_d:"Bus and flights from obilet.com",
+ cat_travel:"Travel & Tickets", cat_travel_d:"Bus and flights from obilet.com and biletall.com, hotels from Jolly Tur",
  cat_finance:"Finance & FX", cat_finance_d:"Official rates from the Central Bank of Türkiye",
+ cat_news:"News", cat_news_d:"Sözcü, Hürriyet, TRT Haber and DonanımHaber",
+ cat_jobs:"Jobs", cat_jobs_d:"Job listings from secretcv.com and eleman.net",
+ cat_food:"Food & Recipes", cat_food_d:"Recipes from Yemek.com",
+ cat_grocery:"Grocery", cat_grocery_d:"Products from ŞOK and Migros Sanal Market",
+ cat_entertainment:"Entertainment", cat_entertainment_d:"Biletix events and Paribu Cineverse cinemas",
+ cat_sports:"Sports", cat_sports_d:"Live scores from Mackolik",
  cat_productivity:"Productivity", cat_productivity_d:"Coming soon — not planned for this catalog",
  cat_communication:"Communication", cat_communication_d:"Coming soon — not planned for this catalog",
  cat_development:"Development", cat_development_d:"Coming soon — not planned for this catalog",
  cat_data:"Data & Analytics", cat_data_d:"Coming soon — not planned for this catalog",
  cat_coming:"Coming soon", cat_servers:"servers", cat_server_one:"server", view_all:"View All",
- feat_title:"Featured MCP Servers", feat_sub:"Eight read-only servers built with real tests — no unverified claims.",
+ feat_title:"Featured MCP Servers", feat_sub:"Twenty-two read-only servers built with real tests — no unverified claims.",
  feat_badge:"Featured", status_available:"Available", tools_count:"tools",
  details:"Details", docs:"Docs", connect:"Connect", add_fav:"Add to favorites", remove_fav:"Remove from favorites",
  plat_title:"Which AI assistant does it work with?", plat_sub:"Servers run on your computer with uvx and connect over stdio.",
@@ -785,7 +1007,7 @@ en:{
  about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
  about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
- about_catalog_t:"The catalog", about_catalog_d:"8 servers, 39 tools — all read-only and published on PyPI. Every server's code is on GitHub and each server is verified with real tests (24–37 tests).",
+ about_catalog_t:"The catalog", about_catalog_d:"22 servers, 111 tools — all read-only; 21 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests.",
  contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
  fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
