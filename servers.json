@@ -635,6 +635,36 @@
      "summary": "Showtimes for a film/cinema"
     }
    ]
+  },
+  {
+   "name": "trthaber-mcp",
+   "title": "TRT Haber — headlines, breaking news & full articles",
+   "title_tr": "TRT Haber — manşetler, son dakika ve haber metinleri",
+   "description": "Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
+   "repository": "https://github.com/mohammad-abbasi-sh/trthaber-mcp",
+   "pypi": "trthaber-mcp",
+   "tools": [
+    {
+     "name": "trthaber_headlines",
+     "summary": "Headlines by category"
+    },
+    {
+     "name": "trthaber_latest",
+     "summary": "Breaking news, newest first"
+    },
+    {
+     "name": "trthaber_get_article",
+     "summary": "Full text of one article"
+    },
+    {
+     "name": "trthaber_search_news",
+     "summary": "Keyword search over current news"
+    },
+    {
+     "name": "trthaber_list_categories",
+     "summary": "The 18 news categories"
+    }
+   ]
   }
  ]
 }
