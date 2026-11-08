@@ -32,6 +32,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp) | Jolly Tur — hotels, live prices & campaigns | 3 | `uvx jolly-tur-mcp` |
 | [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories | 5 | `uvx migros-mcp` |
 | [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp` |
+| [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp) | trthaber.com (TRT Haber) — headlines, breaking news, articles & search | 5 | `uvx trthaber-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
