@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohammad-abbasi-sh.github.io/turkey-mcp/sitemap.xml
