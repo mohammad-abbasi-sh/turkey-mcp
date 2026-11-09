@@ -665,6 +665,36 @@
      "summary": "The 18 news categories"
     }
    ]
-  }
+  },
+ {
+  "name": "tff-mcp",
+  "title": "Turkish Football Federation — standings, fixtures & match details",
+  "title_tr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
+  "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
+  "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
+  "pypi": "tff-mcp",
+  "tools": [
+   {
+    "name": "tff_list_leagues",
+    "summary": "The 18 covered leagues"
+   },
+   {
+    "name": "tff_standings",
+    "summary": "League standings (puan cetveli)"
+   },
+   {
+    "name": "tff_fixtures",
+    "summary": "Fixtures and results by week"
+   },
+   {
+    "name": "tff_match_detail",
+    "summary": "Full match detail: officials, goals, lineups"
+   },
+   {
+    "name": "tff_top_scorers",
+    "summary": "Top scorers (gol krallığı)"
+   }
+  ]
+ }
  ]
 }
