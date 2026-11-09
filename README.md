@@ -33,6 +33,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories | 5 | `uvx migros-mcp` |
 | [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp` |
 | [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp) | trthaber.com (TRT Haber) — headlines, breaking news, articles & search | 5 | `uvx trthaber-mcp` |
+| [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp) | tff.org (TFF) — standings, fixtures, match details & top scorers | 5 | `uvx tff-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
