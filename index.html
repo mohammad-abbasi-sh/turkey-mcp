@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Turkey MCP — Connect AI to the World</title>
-<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 22 servers, 111 tools, in English, Türkçe and فارسی.">
+<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 23 servers, 116 tools, in English, Türkçe and فارسی.">
 <link rel="canonical" href="https://github.com/mohammad-abbasi-sh/turkey-mcp">
 <link rel="alternate" hreflang="fa" href="#/fa/">
 <link rel="alternate" hreflang="tr" href="#/tr/">
@@ -12,18 +12,18 @@
 <link rel="alternate" hreflang="x-default" href="#/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Turkey MCP — Connect AI to the World">
-<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 22 servers, 111 tools. English, Türkçe, فارسی.">
+<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 23 servers, 116 tools. English, Türkçe, فارسی.">
 <meta property="og:locale" content="fa_IR">
 <meta property="og:locale:alternate" content="tr_TR">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Turkey MCP — Connect AI to the World">
-<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 22 servers, 111 tools. EN / TR / FA.">
+<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 23 servers, 116 tools. EN / TR / FA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://github.com/mohammad-abbasi-sh/turkey-mcp","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 22 servers, 111 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://github.com/mohammad-abbasi-sh/turkey-mcp","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 23 servers, 116 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
 </script>
 <style>
 :root{
@@ -595,6 +595,20 @@ const SERVERS = [
    {n:"trthaber_get_article",s:"Full text of one article",sf:"متن کامل یک مقاله",st:"Bir makalenin tam metni"},
    {n:"trthaber_search_news",s:"Keyword search over current news",sf:"جست‌وجوی اخبار جاری با کلیدواژه",st:"Güncel haberlerde anahtar kelimeyle arama"},
    {n:"trthaber_list_categories",s:"The 18 news categories",sf:"۱۸ دستهٔ خبری",st:"18 haber kategorisi"}
+  ]},
+{ id:"tff-mcp", cat:"sports", color:"#DC2626", letter:"🏆", featured:false, added:23,
+  title:"Turkish Football Federation — standings, fixtures & match details",
+  title_tr:"TFF — puan durumu, fikstür ve maç detayları",
+  desc:"Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
+  desc_fa:"فدراسیون فوتبال ترکیه (TFF): جدول لیگ‌ها، بازی‌ها و نتایج هفتگی، جزئیات کامل یک بازی و گلزنان برتر — ۱۸ لیگ.",
+  desc_tr:"Türkiye Futbol Federasyonu (TFF): lig puan durumları, haftalık fikstür ve sonuçlar, bir maçın tam detayı ve gol krallığı — 18 lig.",
+  repo:"https://github.com/mohammad-abbasi-sh/tff-mcp", pypi:"tff-mcp",
+  tools:[
+   {n:"tff_list_leagues",s:"The 18 covered leagues",sf:"۱۸ لیگ تحت پوشش",st:"Kapsanan 18 lig"},
+   {n:"tff_standings",s:"League standings (puan cetveli)",sf:"جدول لیگ",st:"Lig puan durumu"},
+   {n:"tff_fixtures",s:"Fixtures and results by week",sf:"بازی‌ها و نتایج هفته",st:"Haftanın fikstürü ve sonuçları"},
+   {n:"tff_match_detail",s:"Full match detail: officials, goals, lineups",sf:"جزئیات کامل یک بازی: داوران، گل‌ها، ترکیب",st:"Bir maçın tam detayı: hakemler, goller, kadrolar"},
+   {n:"tff_top_scorers",s:"Top scorers (gol krallığı)",sf:"گلزنان برتر",st:"Gol krallığı"}
   ]}
 ];
 const TOTAL_TOOLS = SERVERS.reduce((a,s)=>a+s.tools.length,0);
@@ -796,13 +810,13 @@ fa:{
  cat_food:"غذا و رسپی", cat_food_d:"رسپی‌های Yemek.com",
  cat_grocery:"سوپرمارکت", cat_grocery_d:"کالاهای ŞOK و Migros Sanal Market",
  cat_entertainment:"سرگرمی", cat_entertainment_d:"رویدادهای Biletix و سینماهای Paribu Cineverse",
- cat_sports:"ورزش", cat_sports_d:"نتایج زندهٔ Mackolik",
+ cat_sports:"ورزش", cat_sports_d:"نتایج زندهٔ Mackolik و لیگ‌های TFF",
  cat_productivity:"بهره‌وری", cat_productivity_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_communication:"ارتباطات", cat_communication_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_development:"توسعه", cat_development_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_data:"داده و تحلیل", cat_data_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_coming:"به‌زودی", cat_servers:"سرور", cat_server_one:"سرور", view_all:"مشاهدهٔ همه",
- feat_title:"سرورهای منتخب MCP", feat_sub:"۲۲ سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
+ feat_title:"سرورهای منتخب MCP", feat_sub:"۲۳ سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
  feat_badge:"منتخب", status_available:"در دسترس", tools_count:"ابزار",
  details:"جزئیات", docs:"مستندات", connect:"اتصال", add_fav:"افزودن به علاقه‌مندی‌ها", remove_fav:"حذف از علاقه‌مندی‌ها",
  plat_title:"با کدام دستیار هوش مصنوعی کار می‌کند؟", plat_sub:"سرورها روی کامپیوتر شما با uvx اجرا می‌شوند و از راه stdio وصل می‌شوند.",
@@ -843,7 +857,7 @@ fa:{
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
  about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
- about_catalog_t:"کاتالوگ", about_catalog_d:"۲۲ سرور، ۱۱۱ ابزار، همه فقط‌خواندنی؛ ۲۱ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است.",
+ about_catalog_t:"کاتالوگ", about_catalog_d:"۲۳ سرور، ۱۱۶ ابزار، همه فقط‌خواندنی؛ ۲۳ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است.",
  contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
  fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
@@ -878,13 +892,13 @@ tr:{
  cat_food:"Yemek ve Tarifler", cat_food_d:"Yemek.com tarifleri",
  cat_grocery:"Market", cat_grocery_d:"ŞOK ve Migros Sanal Market ürünleri",
  cat_entertainment:"Eğlence", cat_entertainment_d:"Biletix etkinlikleri ve Paribu Cineverse sinemaları",
- cat_sports:"Spor", cat_sports_d:"Mackolik canlı skorları",
+ cat_sports:"Spor", cat_sports_d:"Mackolik canlı skorları ve TFF ligleri",
  cat_productivity:"Verimlilik", cat_productivity_d:"Yakında — bu katalog için planlanmadı",
  cat_communication:"İletişim", cat_communication_d:"Yakında — bu katalog için planlanmadı",
  cat_development:"Geliştirme", cat_development_d:"Yakında — bu katalog için planlanmadı",
  cat_data:"Veri ve Analitik", cat_data_d:"Yakında — bu katalog için planlanmadı",
  cat_coming:"Yakında", cat_servers:"sunucu", cat_server_one:"sunucu", view_all:"Tümünü Gör",
- feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş 22 salt okunur sunucu — doğrulanmamış iddia yok.",
+ feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş 23 salt okunur sunucu — doğrulanmamış iddia yok.",
  feat_badge:"Öne Çıkan", status_available:"Kullanılabilir", tools_count:"araç",
  details:"Detaylar", docs:"Belgeler", connect:"Bağlan", add_fav:"Favorilere ekle", remove_fav:"Favorilerden çıkar",
  plat_title:"Hangi yapay zekâ asistanıyla çalışır?", plat_sub:"Sunucular bilgisayarınızda uvx ile çalışır ve stdio üzerinden bağlanır.",
@@ -925,7 +939,7 @@ tr:{
  about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
  about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
- about_catalog_t:"Katalog", about_catalog_d:"22 sunucu, 111 araç — hepsi salt okunur; 21 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır.",
+ about_catalog_t:"Katalog", about_catalog_d:"23 sunucu, 116 araç — hepsi salt okunur; 23 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır.",
  contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
  fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
@@ -960,13 +974,13 @@ en:{
  cat_food:"Food & Recipes", cat_food_d:"Recipes from Yemek.com",
  cat_grocery:"Grocery", cat_grocery_d:"Products from ŞOK and Migros Sanal Market",
  cat_entertainment:"Entertainment", cat_entertainment_d:"Biletix events and Paribu Cineverse cinemas",
- cat_sports:"Sports", cat_sports_d:"Live scores from Mackolik",
+ cat_sports:"Sports", cat_sports_d:"Live scores from Mackolik and TFF leagues",
  cat_productivity:"Productivity", cat_productivity_d:"Coming soon — not planned for this catalog",
  cat_communication:"Communication", cat_communication_d:"Coming soon — not planned for this catalog",
  cat_development:"Development", cat_development_d:"Coming soon — not planned for this catalog",
  cat_data:"Data & Analytics", cat_data_d:"Coming soon — not planned for this catalog",
  cat_coming:"Coming soon", cat_servers:"servers", cat_server_one:"server", view_all:"View All",
- feat_title:"Featured MCP Servers", feat_sub:"Twenty-two read-only servers built with real tests — no unverified claims.",
+ feat_title:"Featured MCP Servers", feat_sub:"Twenty-three read-only servers built with real tests — no unverified claims.",
  feat_badge:"Featured", status_available:"Available", tools_count:"tools",
  details:"Details", docs:"Docs", connect:"Connect", add_fav:"Add to favorites", remove_fav:"Remove from favorites",
  plat_title:"Which AI assistant does it work with?", plat_sub:"Servers run on your computer with uvx and connect over stdio.",
@@ -1007,7 +1021,7 @@ en:{
  about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
  about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
- about_catalog_t:"The catalog", about_catalog_d:"22 servers, 111 tools — all read-only; 21 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests.",
+ about_catalog_t:"The catalog", about_catalog_d:"23 servers, 116 tools — all read-only; 23 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests.",
  contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
  fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
