@@ -666,35 +666,73 @@
     }
    ]
   },
- {
-  "name": "tff-mcp",
-  "title": "Turkish Football Federation — standings, fixtures & match details",
-  "title_tr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
-  "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
-  "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
-  "pypi": "tff-mcp",
-  "tools": [
-   {
-    "name": "tff_list_leagues",
-    "summary": "The 18 covered leagues"
-   },
-   {
-    "name": "tff_standings",
-    "summary": "League standings (puan cetveli)"
-   },
-   {
-    "name": "tff_fixtures",
-    "summary": "Fixtures and results by week"
-   },
-   {
-    "name": "tff_match_detail",
-    "summary": "Full match detail: officials, goals, lineups"
-   },
-   {
-    "name": "tff_top_scorers",
-    "summary": "Top scorers (gol krallığı)"
-   }
-  ]
- }
+  {
+   "name": "tff-mcp",
+   "title": "Turkish Football Federation — standings, fixtures & match details",
+   "title_tr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
+   "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
+   "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
+   "pypi": "tff-mcp",
+   "tools": [
+    {
+     "name": "tff_list_leagues",
+     "summary": "The 18 covered leagues"
+    },
+    {
+     "name": "tff_standings",
+     "summary": "League standings (puan cetveli)"
+    },
+    {
+     "name": "tff_fixtures",
+     "summary": "Fixtures and results by week"
+    },
+    {
+     "name": "tff_match_detail",
+     "summary": "Full match detail: officials, goals, lineups"
+    },
+    {
+     "name": "tff_top_scorers",
+     "summary": "Top scorers (gol krallığı)"
+    }
+   ]
+  },
+  {
+   "name": "bim-mcp",
+   "title": "bim.com.tr (BİM) — weekly Aktüel deals, prices & categories",
+   "title_tr": "bim.com.tr (BİM) — haftalık Aktüel ürünler, fiyatlar ve kategoriler",
+   "description": "Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.",
+   "repository": "https://github.com/mohammad-abbasi-sh/bim-mcp",
+   "pypi": "bim-mcp",
+   "tools": [
+    {
+     "name": "bim_list_aktuel_dates",
+     "summary": "Aktüel + İndirim date periods with keys"
+    },
+    {
+     "name": "bim_aktuel_products",
+     "summary": "Priced Aktüel products for one week (filter + sort)"
+    },
+    {
+     "name": "bim_product_detail",
+     "summary": "Full detail for one Aktüel product"
+    },
+    {
+     "name": "bim_price_stats",
+     "summary": "Price stats for one Aktüel week (TRY)"
+    },
+    {
+     "name": "bim_list_categories",
+     "summary": "The 11 product-range categories"
+    },
+    {
+     "name": "bim_list_cities",
+     "summary": "The 81 provinces in the store finder"
+    },
+    {
+     "name": "bim_health",
+     "summary": "Check whether bim.com.tr is reachable"
+    }
+   ]
+  }
  ]
 }
