@@ -34,6 +34,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp==0.1.0` |
 | [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp) | trthaber.com (TRT Haber) — headlines, breaking news, articles & search | 5 | `uvx trthaber-mcp==0.1.0` |
 | [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp) | tff.org (TFF) — standings, fixtures, match details & top scorers | 5 | `uvx tff-mcp==0.1.0` |
+| [bim-mcp](https://github.com/mohammad-abbasi-sh/bim-mcp) | bim.com.tr (BİM) — weekly Aktüel deals, prices & categories | 7 | `uvx bim-mcp==0.1.0` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
