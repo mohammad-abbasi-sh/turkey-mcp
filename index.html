@@ -889,9 +889,9 @@ fa:{
  ask_ph:"مثلاً: ارزان‌ترین بلیت استانبول به آنکارا…", ask_btn:"پیدا کن", ask_examples:"مثلاً:", ask_start:"سؤالت را بالا بنویس یا روی یکی از مثال‌ها بزن.",
  ask_top:"بهترین سرورها برای سؤال شما", ask_why:"چرا این سرور؟", ask_install:"نصب با uvx",
  ask_hint:"⚠️ این صفحه فقط سرور درست را برای سؤال شما پیدا می‌کند — قیمت یا جواب زنده نمی‌دهد. برای دادهٔ زنده، سرور را با uvx نصب کن یا سایت اصلی را باز کن.",
- ask_no_match:"برای این سؤال سروری پیدا نشد", ask_no_match_hint:"شاید این سؤال خارج از سرویس‌های ترکیه باشد — یا جور دیگری بپرس. دسته‌بندی‌ها را ببین یا روتر ایران را امتحان کن.",
- ask_browse:"مرور کاتالوگ", ask_iran:"روتر ایران (hamechi)", ask_cross:"بپرس در سایت‌های دیگر شبکه:",
- ask_x_de:"🇩🇪 آلمان — بپرس", ask_x_ir:"🇮🇷 روتر ایران",
+ ask_no_match:"برای این سؤال سروری پیدا نشد", ask_no_match_hint:"شاید این سؤال خارج از سرویس‌های ترکیه باشد — یا جور دیگری بپرس. دسته‌بندی‌ها را ببین.",
+ ask_browse:"مرور کاتالوگ", ask_cross:"بپرس در سایت‌های دیگر شبکه:",
+ ask_x_de:"🇩🇪 آلمان — بپرس",
 },
 tr:{
  a11y_skip:"İçeriğe atla", brand_tag:"Türkiye MCP Kataloğu",
@@ -978,9 +978,9 @@ tr:{
  ask_ph:"Örn: İstanbul–Ankara en ucuz uçak bileti…", ask_btn:"Bul", ask_examples:"Örnekler:", ask_start:"Sorunu yukarıya yaz veya örneklerden birine dokun.",
  ask_top:"Sorunuz için en iyi sunucular", ask_why:"Neden bu sunucu?", ask_install:"uvx ile kur",
  ask_hint:"⚠️ Bu sayfa yalnızca sorunuz için doğru sunucuyu bulur — canlı fiyat veya yanıt vermez. Canlı veri için sunucuyu uvx ile kurun veya asıl siteyi açın.",
- ask_no_match:"Bu soru için sunucu bulunamadı", ask_no_match_hint:"Belki bu soru Türkiye servislerinin dışındadır — ya da farklı sorun. Kategorilere bakın veya İran yönlendiriciyi deneyin.",
- ask_browse:"Kataloğa göz at", ask_iran:"İran yönlendirici (hamechi)", ask_cross:"Ağın diğer sitelerinde sor:",
- ask_x_de:"🇩🇪 Almanya — Sor", ask_x_ir:"🇮🇷 İran yönlendirici",
+ ask_no_match:"Bu soru için sunucu bulunamadı", ask_no_match_hint:"Belki bu soru Türkiye servislerinin dışındadır — ya da farklı sorun. Kategorilere bakın.",
+ ask_browse:"Kataloğa göz at", ask_cross:"Ağın diğer sitelerinde sor:",
+ ask_x_de:"🇩🇪 Almanya — Sor",
 },
 en:{
  a11y_skip:"Skip to content", brand_tag:"Turkey MCP Catalog",
@@ -1067,9 +1067,9 @@ en:{
  ask_ph:"E.g.: cheapest flight Istanbul to Ankara…", ask_btn:"Find", ask_examples:"Try:", ask_start:"Type your question above or tap an example.",
  ask_top:"Best servers for your question", ask_why:"Why this server?", ask_install:"Install with uvx",
  ask_hint:"⚠️ This page only finds the right server for your question — it does not fetch live prices or answers. For live data, install the server with uvx or open the service's own site.",
- ask_no_match:"No server found for this question", ask_no_match_hint:"This question may be outside Turkish services — or try asking it differently. Browse the categories or try the Iran router.",
- ask_browse:"Browse the catalog", ask_iran:"Iran router demo", ask_cross:"Ask on the network's other sites:",
- ask_x_de:"🇩🇪 Germany — Ask", ask_x_ir:"🇮🇷 Iran router",
+ ask_no_match:"No server found for this question", ask_no_match_hint:"This question may be outside Turkish services — or try asking it differently. Browse the categories.",
+ ask_browse:"Browse the catalog", ask_cross:"Ask on the network's other sites:",
+ ask_x_de:"🇩🇪 Germany — Ask",
 }};
 const LANGS = {fa:{name:"فارسی",dir:"rtl",locale:"fa-IR"},tr:{name:"Türkçe",dir:"ltr",locale:"tr-TR"},en:{name:"English",dir:"ltr",locale:"en-US"}};
 
@@ -1674,7 +1674,6 @@ function askNoMatchHTML(){
   <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px">${liveCats.map(c=>`<a class="chip" href="${hashFor("categories")}">${esc(c.icon)} ${esc(catName(c.id))}</a>`).join("")}</div>
   <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px">
     <a class="btn btn-primary btn-sm" href="${hashFor("marketplace")}">${t("ask_browse")}</a>
-    <a class="btn btn-ghost btn-sm" href="https://mohammad-abbasi-sh.github.io/iran-mcp-router/" target="_blank" rel="noopener">${t("ask_iran")} ↗</a>
   </div></div>`;
 }
 function askResultsHTML(q, res){
@@ -1698,7 +1697,7 @@ function askHTML(){
     <p style="margin-top:4px"><strong>${t("ask_examples")}</strong></p>
     <div style="display:flex;gap:8px;flex-wrap:wrap">${chips.map(c=>`<button type="button" class="chip" style="cursor:pointer" onclick="App.askChip(this.textContent)">${esc(c)}</button>`).join("")}</div>
     <div id="ask-results" style="margin-top:26px">${askResultsHTML(q,res)}</div>
-    <div class="note">${t("ask_cross")} <a href="https://mohammad-abbasi-sh.github.io/germany-mcp/#/ask/" target="_blank" rel="noopener">${t("ask_x_de")}</a> · <a href="https://mohammad-abbasi-sh.github.io/iran-mcp-router/" target="_blank" rel="noopener">${t("ask_x_ir")}</a></div>
+    <div class="note">${t("ask_cross")} <a href="https://mohammad-abbasi-sh.github.io/germany-mcp/#/ask/" target="_blank" rel="noopener">${t("ask_x_de")}</a></div>
   </div></section>`;
 }
 
