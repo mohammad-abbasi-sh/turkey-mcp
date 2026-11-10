@@ -886,7 +886,7 @@ fa:{
  fav_added:"به علاقه‌مندی‌ها اضافه شد.", fav_removed:"از علاقه‌مندی‌ها حذف شد.",
  search_in:"جستجو در", match_servers:"سرورها", match_skills:"مهارت‌ها", match_tuts:"آموزش‌ها", match_arts:"مقاله‌ها",
  ask_title:"بپرس — سرور درست را پیدا کن", ask_sub:"سؤالت را به فارسی، ترکی یا انگلیسی بپرس؛ ما از بین سرورهای کاتالوگ، سروری را پیدا می‌کنیم که جواب سؤال تو را می‌داند.",
- ask_ph:"مثلاً: ارزان‌ترین بلیت تهران به مشهد…", ask_btn:"پیدا کن", ask_examples:"مثلاً:", ask_start:"سؤالت را بالا بنویس یا روی یکی از مثال‌ها بزن.",
+ ask_ph:"مثلاً: ارزان‌ترین بلیت استانبول به آنکارا…", ask_btn:"پیدا کن", ask_examples:"مثلاً:", ask_start:"سؤالت را بالا بنویس یا روی یکی از مثال‌ها بزن.",
  ask_top:"بهترین سرورها برای سؤال شما", ask_why:"چرا این سرور؟", ask_install:"نصب با uvx",
  ask_hint:"⚠️ این صفحه فقط سرور درست را برای سؤال شما پیدا می‌کند — قیمت یا جواب زنده نمی‌دهد. برای دادهٔ زنده، سرور را با uvx نصب کن یا سایت اصلی را باز کن.",
  ask_no_match:"برای این سؤال سروری پیدا نشد", ask_no_match_hint:"شاید این سؤال خارج از سرویس‌های ترکیه باشد — یا جور دیگری بپرس. دسته‌بندی‌ها را ببین یا روتر ایران را امتحان کن.",
@@ -1592,15 +1592,15 @@ function stopDemo(){ clearInterval(demoTimer); typeToken++; }
 /* ---------------- Ask — find the right server ---------------- */
 const ASK_STATE = {q:""};
 const ASK_CHIPS = {
- fa:["ارزان‌ترین بلیت تهران به مشهد","قیمت پژو ۲۰۷ امروز","گوشی سامسونگ زیر ۷۰ میلیون","کوبیده زیر ۵۰۰ هزار تومان","قیمت دلار و طلا امروز","نتایج فوتبال امروز","آگهی استخدام برنامه‌نویس","خبرهای امروز"],
- tr:["İstanbul–Ankara en ucuz uçak bileti","Peugeot 207 fiyatı bugün","70 bin TL altı Samsung telefon","500 TL altı kebap","Bugün dolar ve altın fiyatı","Bugünkü futbol sonuçları","Yazılımcı iş ilanları","Bugünün haberleri"],
- en:["Cheapest flight Istanbul to Ankara","Peugeot 207 price today","Samsung phone under 70 million","Kebab under 500 thousand","Dollar and gold price today","Today's football results","Software developer jobs","Today's news"]
+ fa:["ارزان‌ترین بلیت استانبول به آنکارا","قیمت فیات اگه‌آ امروز","گوشی سامسونگ زیر ۷۰ هزار لیر","سفارش کباب زیر ۵۰۰ لیر","قیمت دلار و طلا امروز","نتایج فوتبال امروز","آگهی استخدام برنامه‌نویس","خبرهای امروز"],
+ tr:["İstanbul–Ankara en ucuz uçak bileti","Fiat Egea fiyatı bugün","70 bin TL altı Samsung telefon","500 TL altı kebap","Bugün dolar ve altın fiyatı","Bugünkü futbol sonuçları","Yazılımcı iş ilanları","Bugünün haberleri"],
+ en:["Cheapest flight Istanbul to Ankara","Fiat Egea price today","Samsung phone under 70,000 lira","Kebab under 500 lira","Dollar and gold price today","Today's football results","Software developer jobs","Today's news"]
 };
 const ASK_INTENTS = [
  {cats:["travel"], kw:{fa:["بلیت","بلیط","پرواز","اتوبوس","سفر","هواپیما","قطار"],tr:["bilet","uçuş","uçak","otobüs","seyahat","tren"],en:["flight","ticket","bus","travel","plane","train","journey"]}},
- {cats:["cars"], kw:{fa:["ماشین","خودرو","پژو","پراید"],tr:["araba","otomobil","ikinci el","araç"],en:["car","automobile","vehicle","second hand"]}},
- {cats:["shopping"], kw:{fa:["خرید","گوشی","موبایل","لپ تاپ","هدفون","تخفیف","فروشگاه"],tr:["alışveriş","telefon","laptop","kulaklık","indirim","mağaza"],en:["shop","phone","laptop","headphone","discount","store","buy"]}},
- {cats:["food"], kw:{fa:["غذا","کوبیده","رستوران","پیتزا","سفارش غذا","فست فود"],tr:["yemek","kebap","restoran","pizza","sipariş"],en:["food","kebab","restaurant","pizza","order food"]}},
+ {cats:["cars"], kw:{fa:["ماشین","خودرو","پژو","فیات"],tr:["araba","otomobil","ikinci el","araç","fiat","egea"],en:["car","automobile","vehicle","second hand","fiat","egea"]}},
+ {cats:["shopping"], kw:{fa:["خرید","گوشی","موبایل","سامسونگ","لپ تاپ","هدفون","تخفیف","فروشگاه"],tr:["alışveriş","telefon","samsung","laptop","kulaklık","indirim","mağaza"],en:["shop","phone","samsung","laptop","headphone","discount","store","buy"]}},
+ {cats:["food"], kw:{fa:["غذا","کباب","رستوران","پیتزا","سفارش غذا","فست فود"],tr:["yemek","kebap","restoran","pizza","sipariş"],en:["food","kebab","restaurant","pizza","order food"]}},
  {cats:["finance"], kw:{fa:["دلار","طلا","سکه","ارز","لیر","نرخ"],tr:["dolar","altın","döviz","lira","kur"],en:["dollar","gold","coin","currency","exchange","rate","forex"]}},
  {cats:["sports"], kw:{fa:["فوتبال","لیگ","جدول","گلزن","نتیجه بازی"],tr:["futbol","lig","puan durumu","gol kralı","skor","maç"],en:["football","soccer","league","table","scorer","score","match"]}},
  {cats:["jobs"], kw:{fa:["شغل","استخدام","کار","آگهی استخدام","برنامه نویس"],tr:["iş","kariyer","iş ilanı","yazılımcı"],en:["job","career","hiring","employment","developer"]}},
