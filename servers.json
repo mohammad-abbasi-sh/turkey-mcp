@@ -733,6 +733,40 @@
      "summary": "Check whether bim.com.tr is reachable"
     }
    ]
+  },
+  {
+   "name": "tabii-mcp",
+   "title": "tabii.com (TRT) — streaming catalog, live channels & people",
+   "title_tr": "tabii.com (TRT) — dizi/film kataloğu, canlı kanallar ve oyuncular",
+   "description": "Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.",
+   "repository": "https://github.com/mohammad-abbasi-sh/tabii-mcp",
+   "pypi": "tabii-mcp",
+   "tools": [
+    {
+     "name": "tabii_search_content",
+     "summary": "Search the catalog by original Turkish title"
+    },
+    {
+     "name": "tabii_get_show",
+     "summary": "Full detail for one title (seasons, episodes, cast)"
+    },
+    {
+     "name": "tabii_homepage",
+     "summary": "Current homepage sections (exclusive, series, movies...)"
+    },
+    {
+     "name": "tabii_live_channels",
+     "summary": "The 15 live TRT channels with HLS stream URLs"
+    },
+    {
+     "name": "tabii_get_person",
+     "summary": "One cast/crew member by id, with filmography"
+    },
+    {
+     "name": "tabii_health",
+     "summary": "Check whether tabii.com is reachable"
+    }
+   ]
   }
  ]
 }
