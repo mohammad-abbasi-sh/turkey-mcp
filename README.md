@@ -11,30 +11,31 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 
 | Server | Service | Tools | Install |
 |--------|---------|-------|---------|
-| [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp) | Central Bank of Türkiye — official FX rates | 4 | `uvx tcmb-mcp==0.1.2` |
-| [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp) | arabam.com — used-car listings & market prices | 5 | `uvx arabam-mcp==0.1.1` |
-| [emlakjet-mcp](https://github.com/mohammad-abbasi-sh/emlakjet-mcp) | emlakjet.com — real-estate listings, districts & price stats | 4 | `uvx emlakjet-mcp==0.1.1` |
-| [armut-mcp](https://github.com/mohammad-abbasi-sh/armut-mcp) | armut.com — local services, pros & price guides | 6 | `uvx armut-mcp==0.1.1` |
-| [hepsiburada-mcp](https://github.com/mohammad-abbasi-sh/hepsiburada-mcp) | hepsiburada.com — shopping search, details, reviews & price stats | 5 | `uvx hepsiburada-mcp==0.1.1` |
-| [n11-mcp](https://github.com/mohammad-abbasi-sh/n11-mcp) | n11.com — shopping search, details, reviews & price stats | 5 | `uvx n11-mcp==0.1.1` |
-| [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp) | ciceksepeti.com — flowers & gifts search, details, reviews & price stats | 5 | `uvx ciceksepeti-mcp==0.1.1` |
-| [obilet-mcp](https://github.com/mohammad-abbasi-sh/obilet-mcp) | obilet.com — bus journeys, locations, prices & flight summary | 5 | `uvx obilet-mcp==0.1.1` |
-| [biletall-mcp](https://github.com/mohammad-abbasi-sh/biletall-mcp) | biletall.com — bus & flight tickets, routes & prices | 5 | `uvx biletall-mcp==0.1.1` |
-| [secretcv-mcp](https://github.com/mohammad-abbasi-sh/secretcv-mcp) | secretcv.com — job search, listings & sectors | 5 | `uvx secretcv-mcp==0.1.1` |
-| [biletix-mcp](https://github.com/mohammad-abbasi-sh/biletix-mcp) | biletix.com — events, tickets & venues | 6 | `uvx biletix-mcp==0.1.1` |
-| [sozcu-mcp](https://github.com/mohammad-abbasi-sh/sozcu-mcp) | sozcu.com.tr — news headlines, articles & market rates | 5 | `uvx sozcu-mcp==0.1.1` |
-| [eleman-net-mcp](https://github.com/mohammad-abbasi-sh/eleman-net-mcp) | eleman.net — job listings, sectors & cities | 5 | `uvx eleman-net-mcp==0.1.1` |
-| [mackolik-mcp](https://github.com/mohammad-abbasi-sh/mackolik-mcp) | mackolik.com — live scores, results, fixtures & standings | 5 | `uvx mackolik-mcp==0.1.1` |
-| [donanimhaber-mcp](https://github.com/mohammad-abbasi-sh/donanimhaber-mcp) | donanimhaber.com — tech news, articles & hot forum topics | 6 | `uvx donanimhaber-mcp==0.1.1` |
-| [yemek-com-mcp](https://github.com/mohammad-abbasi-sh/yemek-com-mcp) | Yemek.com — Turkish recipes, categories & videos | 6 | `uvx yemek-com-mcp==0.1.1` |
-| [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp) | Hürriyet — news headlines, articles & search | 5 | `uvx hurriyet-mcp==0.1.1` |
-| [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp) | ŞOK — grocery products, categories, campaigns & prices | 6 | `uvx sok-mcp==0.1.1` |
-| [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp) | Jolly Tur — hotels, live prices & campaigns | 3 | `uvx jolly-tur-mcp==0.1.1` |
-| [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories | 5 | `uvx migros-mcp==0.1.1` |
-| [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp==0.1.1` |
-| [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp) | trthaber.com (TRT Haber) — headlines, breaking news, articles & search | 5 | `uvx trthaber-mcp==0.1.1` |
-| [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp) | tff.org (TFF) — standings, fixtures, match details & top scorers | 5 | `uvx tff-mcp==0.1.1` |
+| [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp) | Central Bank of Türkiye — official FX rates | 4 | `uvx tcmb-mcp==0.1.1` |
+| [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp) | arabam.com — used-car listings & market prices | 5 | `uvx arabam-mcp==0.1.0` |
+| [emlakjet-mcp](https://github.com/mohammad-abbasi-sh/emlakjet-mcp) | emlakjet.com — real-estate listings, districts & price stats | 4 | `uvx emlakjet-mcp==0.1.0` |
+| [armut-mcp](https://github.com/mohammad-abbasi-sh/armut-mcp) | armut.com — local services, pros & price guides | 6 | `uvx armut-mcp==0.1.0` |
+| [hepsiburada-mcp](https://github.com/mohammad-abbasi-sh/hepsiburada-mcp) | hepsiburada.com — shopping search, details, reviews & price stats | 5 | `uvx hepsiburada-mcp==0.1.0` |
+| [n11-mcp](https://github.com/mohammad-abbasi-sh/n11-mcp) | n11.com — shopping search, details, reviews & price stats | 5 | `uvx n11-mcp==0.1.0` |
+| [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp) | ciceksepeti.com — flowers & gifts search, details, reviews & price stats | 5 | `uvx ciceksepeti-mcp==0.1.0` |
+| [obilet-mcp](https://github.com/mohammad-abbasi-sh/obilet-mcp) | obilet.com — bus journeys, locations, prices & flight summary | 5 | `uvx obilet-mcp==0.1.0` |
+| [biletall-mcp](https://github.com/mohammad-abbasi-sh/biletall-mcp) | biletall.com — bus & flight tickets, routes & prices | 5 | `uvx biletall-mcp==0.1.0` |
+| [secretcv-mcp](https://github.com/mohammad-abbasi-sh/secretcv-mcp) | secretcv.com — job search, listings & sectors | 5 | `uvx secretcv-mcp==0.1.0` |
+| [biletix-mcp](https://github.com/mohammad-abbasi-sh/biletix-mcp) | biletix.com — events, tickets & venues | 6 | `uvx biletix-mcp==0.1.0` |
+| [sozcu-mcp](https://github.com/mohammad-abbasi-sh/sozcu-mcp) | sozcu.com.tr — news headlines, articles & market rates | 5 | `uvx sozcu-mcp==0.1.0` |
+| [eleman-net-mcp](https://github.com/mohammad-abbasi-sh/eleman-net-mcp) | eleman.net — job listings, sectors & cities | 5 | `uvx eleman-net-mcp==0.1.0` |
+| [mackolik-mcp](https://github.com/mohammad-abbasi-sh/mackolik-mcp) | mackolik.com — live scores, results, fixtures & standings | 5 | `uvx mackolik-mcp==0.1.0` |
+| [donanimhaber-mcp](https://github.com/mohammad-abbasi-sh/donanimhaber-mcp) | donanimhaber.com — tech news, articles & hot forum topics | 6 | `uvx donanimhaber-mcp==0.1.0` |
+| [yemek-com-mcp](https://github.com/mohammad-abbasi-sh/yemek-com-mcp) | Yemek.com — Turkish recipes, categories & videos | 6 | `uvx yemek-com-mcp==0.1.0` |
+| [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp) | Hürriyet — news headlines, articles & search | 5 | `uvx hurriyet-mcp==0.1.0` |
+| [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp) | ŞOK — grocery products, categories, campaigns & prices | 6 | `uvx sok-mcp==0.1.0` |
+| [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp) | Jolly Tur — hotels, live prices & campaigns | 3 | `uvx jolly-tur-mcp==0.1.0` |
+| [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories | 5 | `uvx migros-mcp==0.1.0` |
+| [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp==0.1.0` |
+| [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp) | trthaber.com (TRT Haber) — headlines, breaking news, articles & search | 5 | `uvx trthaber-mcp==0.1.0` |
+| [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp) | tff.org (TFF) — standings, fixtures, match details & top scorers | 5 | `uvx tff-mcp==0.1.0` |
 | [bim-mcp](https://github.com/mohammad-abbasi-sh/bim-mcp) | bim.com.tr (BİM) — weekly Aktüel deals, prices & categories | 7 | `uvx bim-mcp==0.1.0` |
+| [tabii-mcp](https://github.com/mohammad-abbasi-sh/tabii-mcp) | tabii.com (TRT) — streaming catalog, live channels & people | 6 | `uvx tabii-mcp==0.1.0` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
