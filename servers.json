@@ -767,6 +767,40 @@
      "summary": "Check whether tabii.com is reachable"
     }
    ]
+  },
+  {
+   "name": "eksisozluk-mcp",
+   "title": "eksisozluk.com (Ekşi Sözlük) — topics, entries & search",
+   "title_tr": "eksisozluk.com — gündem başlıkları, entry'ler ve arama",
+   "description": "Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.",
+   "repository": "https://github.com/mohammad-abbasi-sh/eksisozluk-mcp",
+   "pypi": "eksisozluk-mcp",
+   "tools": [
+    {
+     "name": "eksisozluk_trending",
+     "summary": "Gündem — trending topics with entry counts"
+    },
+    {
+     "name": "eksisozluk_search_topics",
+     "summary": "Search topic titles (partial matches welcome)"
+    },
+    {
+     "name": "eksisozluk_get_topic",
+     "summary": "Entries of one topic (recent / şükela sorts, pages)"
+    },
+    {
+     "name": "eksisozluk_channel_topics",
+     "summary": "Topics of one channel (spor, siyaset, ...)"
+    },
+    {
+     "name": "eksisozluk_debe",
+     "summary": "Yesterday's most-liked entries, grouped by topic"
+    },
+    {
+     "name": "eksisozluk_health",
+     "summary": "Check whether eksisozluk.com is reachable"
+    }
+   ]
   }
  ]
 }
