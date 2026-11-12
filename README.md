@@ -36,6 +36,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp) | tff.org (TFF) — standings, fixtures, match details & top scorers | 5 | `uvx tff-mcp==0.1.0` |
 | [bim-mcp](https://github.com/mohammad-abbasi-sh/bim-mcp) | bim.com.tr (BİM) — weekly Aktüel deals, prices & categories | 7 | `uvx bim-mcp==0.1.0` |
 | [tabii-mcp](https://github.com/mohammad-abbasi-sh/tabii-mcp) | tabii.com (TRT) — streaming catalog, live channels & people | 6 | `uvx tabii-mcp==0.1.0` |
+| [eksisozluk-mcp](https://github.com/mohammad-abbasi-sh/eksisozluk-mcp) | eksisozluk.com (Ekşi Sözlük) — topics, entries & search | 6 | `uvx eksisozluk-mcp==0.1.0` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
