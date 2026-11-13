@@ -801,6 +801,40 @@
      "summary": "Check whether eksisozluk.com is reachable"
     }
    ]
+  },
+  {
+   "description": "Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements.",
+   "name": "iskur-mcp",
+   "pypi": "iskur-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/iskur-mcp",
+   "title": "İŞKUR — open job listings, details & announcements",
+   "title_tr": "İŞKUR — açık iş ilanları, iş detayı ve duyurular",
+   "tools": [
+    {
+     "name": "iskur_search_jobs",
+     "summary": "Search open job listings (keyword, city, date range, work type, education)"
+    },
+    {
+     "name": "iskur_latest_jobs",
+     "summary": "Jobs posted in the last 24 hours, optionally in one city"
+    },
+    {
+     "name": "iskur_get_job",
+     "summary": "Detail of one listing (description, skills, occupation, education)"
+    },
+    {
+     "name": "iskur_list_cities",
+     "summary": "The 81 provinces with codes"
+    },
+    {
+     "name": "iskur_list_announcements",
+     "summary": "İŞKUR official announcements"
+    },
+    {
+     "name": "iskur_health",
+     "summary": "Check whether the İŞKUR job portal is reachable"
+    }
+   ]
   }
  ]
 }
