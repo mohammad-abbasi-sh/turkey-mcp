@@ -37,6 +37,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [bim-mcp](https://github.com/mohammad-abbasi-sh/bim-mcp) | bim.com.tr (BİM) — weekly Aktüel deals, prices & categories | 7 | `uvx bim-mcp==0.1.0` |
 | [tabii-mcp](https://github.com/mohammad-abbasi-sh/tabii-mcp) | tabii.com (TRT) — streaming catalog, live channels & people | 6 | `uvx tabii-mcp==0.1.0` |
 | [eksisozluk-mcp](https://github.com/mohammad-abbasi-sh/eksisozluk-mcp) | eksisozluk.com (Ekşi Sözlük) — topics, entries & search | 6 | `uvx eksisozluk-mcp==0.1.0` |
+| [iskur-mcp](https://github.com/mohammad-abbasi-sh/iskur-mcp) | iskur.gov.tr (İŞKUR) — open job listings, details & announcements | 6 | `uvx iskur-mcp==0.1.0` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
