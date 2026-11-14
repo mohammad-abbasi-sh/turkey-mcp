@@ -38,6 +38,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [tabii-mcp](https://github.com/mohammad-abbasi-sh/tabii-mcp) | tabii.com (TRT) — streaming catalog, live channels & people | 6 | `uvx tabii-mcp==0.1.0` |
 | [eksisozluk-mcp](https://github.com/mohammad-abbasi-sh/eksisozluk-mcp) | eksisozluk.com (Ekşi Sözlük) — topics, entries & search | 6 | `uvx eksisozluk-mcp==0.1.0` |
 | [iskur-mcp](https://github.com/mohammad-abbasi-sh/iskur-mcp) | iskur.gov.tr (İŞKUR) — open job listings, details & announcements | 6 | `uvx iskur-mcp==0.1.0` |
+| [beyazperde-mcp](https://github.com/mohammad-abbasi-sh/beyazperde-mcp) | beyazperde.com (Beyazperde) — now showing, search, showtimes & news | 7 | `uvx beyazperde-mcp==0.1.0` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
