@@ -835,6 +835,44 @@
      "summary": "Check whether the İŞKUR job portal is reachable"
     }
    ]
+  },
+  {
+   "description": "Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities.",
+   "name": "beyazperde-mcp",
+   "pypi": "beyazperde-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/beyazperde-mcp",
+   "title": "Beyazperde — now showing, search, showtimes & news",
+   "title_tr": "Beyazperde — vizyondakiler, film arama, seanslar ve haberler",
+   "tools": [
+    {
+     "name": "beyazperde_now_showing",
+     "summary": "Movies now showing in Turkish cinemas (title, release date, duration, genres, director, cast)"
+    },
+    {
+     "name": "beyazperde_search_movies",
+     "summary": "Search movies by title (Turkish title, original title, year, director, genres)"
+    },
+    {
+     "name": "beyazperde_get_movie",
+     "summary": "Detail of one movie (synopsis, director, cast, genres, duration, ratings)"
+    },
+    {
+     "name": "beyazperde_showtimes",
+     "summary": "Today's showtimes for a movie in a city (cinemas, versions, times)"
+    },
+    {
+     "name": "beyazperde_latest_news",
+     "summary": "Latest cinema news from Beyazperde"
+    },
+    {
+     "name": "beyazperde_list_cities",
+     "summary": "The 85 cities (with geocodes) showtimes can be listed for"
+    },
+    {
+     "name": "beyazperde_health",
+     "summary": "Check whether beyazperde.com is reachable"
+    }
+   ]
   }
  ]
 }
