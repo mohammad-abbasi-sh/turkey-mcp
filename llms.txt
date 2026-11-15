@@ -1,0 +1,45 @@
+# Turkey MCP
+
+> 29 read-only MCP servers (155 tools) for Turkish web services — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+
+- [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp): Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key). (4 tools)
+- [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp): Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY). (5 tools)
+- [emlakjet-mcp](https://github.com/mohammad-abbasi-sh/emlakjet-mcp): Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY). (4 tools)
+- [armut-mcp](https://github.com/mohammad-abbasi-sh/armut-mcp): Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY). (6 tools)
+- [hepsiburada-mcp](https://github.com/mohammad-abbasi-sh/hepsiburada-mcp): Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). (5 tools)
+- [n11-mcp](https://github.com/mohammad-abbasi-sh/n11-mcp): Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY). (5 tools)
+- [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp): Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY). (5 tools)
+- [obilet-mcp](https://github.com/mohammad-abbasi-sh/obilet-mcp): Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines). (5 tools)
+- [biletall-mcp](https://github.com/mohammad-abbasi-sh/biletall-mcp): Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes. (5 tools)
+- [secretcv-mcp](https://github.com/mohammad-abbasi-sh/secretcv-mcp): Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors. (5 tools)
+- [biletix-mcp](https://github.com/mohammad-abbasi-sh/biletix-mcp): Unofficial read-only MCP server for biletix.com events: trending, search, venues. (6 tools)
+- [sozcu-mcp](https://github.com/mohammad-abbasi-sh/sozcu-mcp): Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates. (5 tools)
+- [eleman-net-mcp](https://github.com/mohammad-abbasi-sh/eleman-net-mcp): Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities. (5 tools)
+- [mackolik-mcp](https://github.com/mohammad-abbasi-sh/mackolik-mcp): Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings. (5 tools)
+- [donanimhaber-mcp](https://github.com/mohammad-abbasi-sh/donanimhaber-mcp): Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles. (6 tools)
+- [yemek-com-mcp](https://github.com/mohammad-abbasi-sh/yemek-com-mcp): Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories. (6 tools)
+- [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp): Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search. (5 tools)
+- [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp): Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices. (6 tools)
+- [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp): Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns. (3 tools)
+- [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp): Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories. (5 tools)
+- [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp): Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes. (5 tools)
+- [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp): Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search. (5 tools)
+- [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp): Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers. (5 tools)
+- [bim-mcp](https://github.com/mohammad-abbasi-sh/bim-mcp): Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces. (7 tools)
+- [tabii-mcp](https://github.com/mohammad-abbasi-sh/tabii-mcp): Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people. (6 tools)
+- [eksisozluk-mcp](https://github.com/mohammad-abbasi-sh/eksisozluk-mcp): Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe. (6 tools)
+- [iskur-mcp](https://github.com/mohammad-abbasi-sh/iskur-mcp): Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements. (6 tools)
+- [beyazperde-mcp](https://github.com/mohammad-abbasi-sh/beyazperde-mcp): Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities. (7 tools)
+- [nefisyemektarifleri-mcp](https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp): Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories. (7 tools)
+
+## Install
+
+- Claude Code: `claude mcp add --transport stdio --scope user <name> -- uvx <package>`
+- Any MCP client: add `{"command": "uvx", "args": ["<package>"]}` under `mcpServers` in the client's config.
+- All servers at once: clone https://github.com/mohammad-abbasi-sh/turkey-mcp and open it in Claude Code — `.mcp.json` registers every server.
+
+## Links
+
+- Catalog: https://mohammad-abbasi-sh.github.io/turkey-mcp/
+- Ask (find the right server): https://mohammad-abbasi-sh.github.io/turkey-mcp/#/ask/
+- GitHub: https://github.com/mohammad-abbasi-sh/turkey-mcp
