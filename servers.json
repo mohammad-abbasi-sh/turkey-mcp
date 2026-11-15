@@ -873,6 +873,44 @@
      "summary": "Check whether beyazperde.com is reachable"
     }
    ]
+  },
+  {
+   "name": "nefisyemektarifleri-mcp",
+   "title": "Nefis Yemek Tarifleri — Turkish recipes, search, categories & daily menu",
+   "title_tr": "Nefis Yemek Tarifleri — tarif arama, kategoriler ve günlük menü",
+   "description": "Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.",
+   "repository": "https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp",
+   "pypi": "nefisyemektarifleri-mcp",
+   "tools": [
+    {
+     "name": "nefis_search_recipes",
+     "summary": "Search recipes by dish or ingredient (13 per page, paginated)"
+    },
+    {
+     "name": "nefis_get_recipe",
+     "summary": "Full recipe: ingredients with amounts, steps, tips, times, servings, rating, nutrition"
+    },
+    {
+     "name": "nefis_list_categories",
+     "summary": "Full recipe-category tree (24 top-level, 74 subcategories)"
+    },
+    {
+     "name": "nefis_category_recipes",
+     "summary": "Recipes in one category, sorted popular/trending/newest"
+    },
+    {
+     "name": "nefis_trending",
+     "summary": "Most-made recipes (En Çok Yapılanlar, 24)"
+    },
+    {
+     "name": "nefis_daily_menu",
+     "summary": "Today's Bugün Ne Pişirsem? menu (25 recipes)"
+    },
+    {
+     "name": "nefis_health",
+     "summary": "Check whether nefisyemektarifleri.com is reachable right now"
+    }
+   ]
   }
  ]
 }
