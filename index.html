@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Turkey MCP — Connect AI to the World</title>
-<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 29 servers, 162 tools, in English, Türkçe and فارسی.">
+<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 29 servers, 167 tools, in English, Türkçe and فارسی.">
 <link rel="canonical" href="https://mohammad-abbasi-sh.github.io/turkey-mcp/">
 <link rel="icon" href="favicon.ico">
 <link rel="alternate" hreflang="fa" href="#/fa/">
@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="x-default" href="#/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Turkey MCP — Connect AI to the World">
-<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 29 servers, 162 tools. English, Türkçe, فارسی.">
+<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 29 servers, 167 tools. English, Türkçe, فارسی.">
 <meta property="og:image" content="https://mohammad-abbasi-sh.github.io/turkey-mcp/og-image.png">
 <meta name="twitter:image" content="https://mohammad-abbasi-sh.github.io/turkey-mcp/og-image.png">
 <meta property="og:locale" content="fa_IR">
@@ -21,12 +21,12 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Turkey MCP — Connect AI to the World">
-<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 29 servers, 162 tools. EN / TR / FA.">
+<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 29 servers, 167 tools. EN / TR / FA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 29 servers, 162 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 29 servers, 167 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
 </script>
 <style>
 :root{
@@ -569,19 +569,25 @@ const SERVERS = [
    {n:"jolly_get_hotel",s:"Full detail for one hotel",sf:"جزئیات کامل یک هتل",st:"Bir otelin tam detayı"},
    {n:"jolly_list_campaigns",s:"Current campaigns",sf:"کمپین‌های جاری",st:"Güncel kampanyalar"}
   ]},
-{ id:"migros-mcp", cat:"grocery", color:"#65A30D", letter:"🛒", featured:false, added:20,
+{ id:"migros-mcp", cat:"grocery", color:"#65A30D", letter:"🛒", featured:false, account:true, added:20,
   title:"Migros Sanal Market — products, prices, promos & categories",
   title_tr:"Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
-  desc:"Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories.",
-  desc_fa:"سوپرمارکت Migros Sanal Market: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۱ دسته، تبلیغات جاری و آمار قیمت (لیر).",
-  desc_tr:"Migros Sanal Market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 11 kategori, güncel promosyonlar ve fiyat istatistikleri (TL).",
+  desc:"Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie.",
+  desc_fa:"سوپرمارکت Migros Sanal Market: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۱ دسته، تبلیغات جاری و آمار قیمت (لیر). اقدامات حساب اختیاری با نشست محلی: مشاهده/افزودن/حذف اقلام سبد، تغییر تعداد و شروع پرداخت (فقط لینک پرداخت؛ هرگز پرداخت نمی‌کند).",
+  desc_tr:"Migros Sanal Market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 11 kategori, güncel promosyonlar ve fiyat istatistikleri (TL). İsteğe bağlı yerel oturumlu hesap işlemleri: sepeti görüntüleme/ekleme/silme, miktar değiştirme ve ödeme başlatma (yalnızca ödeme bağlantısı; asla ödeme yapmaz).",
   repo:"https://github.com/mohammad-abbasi-sh/migros-mcp", pypi:"migros-mcp",
+  env:{"MIGROS_SESSION":"YOUR_SESSION_COOKIE_HERE"},
   tools:[
    {n:"migros_search_products",s:"Search products by keyword",sf:"جست‌وجوی کالا با کلیدواژه",st:"Anahtar kelimeyle ürün ara"},
    {n:"migros_get_product",s:"Full detail for one product",sf:"جزئیات کامل یک کالا",st:"Bir ürünün tam detayı"},
    {n:"migros_list_categories",s:"All 11 categories",sf:"همهٔ ۱۱ دسته",st:"11 kategorinin tamamı"},
    {n:"migros_list_promotions",s:"Current promotions",sf:"تبلیغات جاری",st:"Güncel promosyonlar"},
-   {n:"migros_price_stats",s:"Price stats for a query in TRY",sf:"آمار قیمت یک جست‌وجو به لیر",st:"Bir sorgu için fiyat istatistikleri (TL)"}
+   {n:"migros_price_stats",s:"Price stats for a query in TRY",sf:"آمار قیمت یک جست‌وجو به لیر",st:"Bir sorgu için fiyat istatistikleri (TL)"},
+   {n:"migros_view_cart",s:"View your cart: items, quantities, totals",sf:"مشاهدهٔ سبد خرید: اقلام، تعداد، جمع",st:"Sepeti görüntüle: ürünler, adetler, toplamlar"},
+   {n:"migros_add_to_cart",s:"Add a product to your cart (confirm=true)",sf:"افزودن کالا به سبد خرید (تأیید لازم است)",st:"Sepete ürün ekle (onay gerekli)"},
+   {n:"migros_remove_from_cart",s:"Remove a product from your cart (confirm=true)",sf:"حذف کالا از سبد خرید (تأیید لازم است)",st:"Sepetten ürün çıkar (onay gerekli)"},
+   {n:"migros_update_cart_quantity",s:"Change a cart item's quantity (confirm=true)",sf:"تغییر تعداد یک قلم سبد (تأیید لازم است)",st:"Sepet ürününün adedini değiştir (onay gerekli)"},
+   {n:"migros_create_order",s:"Start checkout: returns the payment link, never pays",sf:"شروع پرداخت: فقط لینک پرداخت، هرگز پرداخت نمی‌کند",st:"Ödemeyi başlat: yalnızca ödeme bağlantısı, asla ödeme yapmaz"}
   ]},
 { id:"paribu-cineverse-mcp", cat:"entertainment", color:"#7E22CE", letter:"🎬", featured:false, added:21,
   title:"Paribu Cineverse — now showing, coming soon & showtimes",
@@ -984,7 +990,7 @@ fa:{
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
  about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
- about_catalog_t:"کاتالوگ", about_catalog_d:"۲۹ سرور، ۱۶۲ ابزار، به‌طور پیش‌فرض فقط‌خواندنی؛ ۲۹ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است. hepsiburada-mcp همچنین اقدامات حساب اختیاری با نشست محلی (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد — بدون نشست مرورگر شما غیرفعال است.",
+ about_catalog_t:"کاتالوگ", about_catalog_d:"۲۹ سرور، ۱۶۷ ابزار، به‌طور پیش‌فرض فقط‌خواندنی؛ ۲۹ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است. hepsiburada-mcp همچنین اقدامات حساب اختیاری با نشست محلی (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد — بدون نشست مرورگر شما غیرفعال است.",
  contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
  fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
@@ -1104,7 +1110,7 @@ tr:{
  about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
  about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
- about_catalog_t:"Katalog", about_catalog_d:"29 sunucu, 162 araç — varsayılan olarak salt okunur; 29 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır. hepsiburada-mcp ayrıca isteğe bağlı yerel oturumlu hesap işlemleri (sepet + favoriler) sunar — kendi tarayıcı oturumunuz olmadan pasiftir.",
+ about_catalog_t:"Katalog", about_catalog_d:"29 sunucu, 167 araç — varsayılan olarak salt okunur; 29 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır. hepsiburada-mcp ayrıca isteğe bağlı yerel oturumlu hesap işlemleri (sepet + favoriler) sunar — kendi tarayıcı oturumunuz olmadan pasiftir.",
  contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
  fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
@@ -1224,7 +1230,7 @@ en:{
  about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
  about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
- about_catalog_t:"The catalog", about_catalog_d:"29 servers, 162 tools — read-only by default; 29 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests. hepsiburada-mcp also offers optional local-session account actions (cart + favorites) — inert without your own browser session.",
+ about_catalog_t:"The catalog", about_catalog_d:"29 servers, 167 tools — read-only by default; 29 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests. hepsiburada-mcp also offers optional local-session account actions (cart + favorites) — inert without your own browser session.",
  contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
  fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
