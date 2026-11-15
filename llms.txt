@@ -1,6 +1,6 @@
 # Turkey MCP
 
-> 29 MCP servers (162 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+> 29 MCP servers (167 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
 - [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp): Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key). (4 tools)
 - [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp): Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY). (5 tools)
@@ -21,7 +21,7 @@
 - [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp): Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search. (5 tools)
 - [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp): Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices. (6 tools)
 - [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp): Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns. (3 tools)
-- [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp): Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories. (5 tools)
+- [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp): Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie. (10 tools)
 - [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp): Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes. (5 tools)
 - [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp): Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search. (5 tools)
 - [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp): Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers. (5 tools)
