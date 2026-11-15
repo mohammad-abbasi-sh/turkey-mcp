@@ -121,7 +121,10 @@
       "command": "uvx",
       "args": [
         "migros-mcp"
-      ]
+      ],
+      "env": {
+        "MIGROS_SESSION": "YOUR_SESSION_COOKIE_HERE"
+      }
     },
     "paribu-cineverse": {
       "command": "uvx",
