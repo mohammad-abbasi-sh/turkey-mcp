@@ -39,6 +39,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [eksisozluk-mcp](https://github.com/mohammad-abbasi-sh/eksisozluk-mcp) | eksisozluk.com (Ekşi Sözlük) — topics, entries & search | 6 | `uvx eksisozluk-mcp==0.1.0` |
 | [iskur-mcp](https://github.com/mohammad-abbasi-sh/iskur-mcp) | iskur.gov.tr (İŞKUR) — open job listings, details & announcements | 6 | `uvx iskur-mcp==0.1.0` |
 | [beyazperde-mcp](https://github.com/mohammad-abbasi-sh/beyazperde-mcp) | beyazperde.com (Beyazperde) — now showing, search, showtimes & news | 7 | `uvx beyazperde-mcp==0.1.0` |
+| [nefisyemektarifleri-mcp](https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp) | nefisyemektarifleri.com (Nefis Yemek Tarifleri) — recipe search, full recipes, categories & daily menu | 7 | `uvx nefisyemektarifleri-mcp==0.1.0` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
