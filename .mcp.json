@@ -1,0 +1,178 @@
+{
+  "mcpServers": {
+    "tcmb": {
+      "command": "uvx",
+      "args": [
+        "tcmb-mcp"
+      ]
+    },
+    "arabam": {
+      "command": "uvx",
+      "args": [
+        "arabam-mcp"
+      ]
+    },
+    "emlakjet": {
+      "command": "uvx",
+      "args": [
+        "emlakjet-mcp"
+      ]
+    },
+    "armut": {
+      "command": "uvx",
+      "args": [
+        "armut-mcp"
+      ]
+    },
+    "hepsiburada": {
+      "command": "uvx",
+      "args": [
+        "hepsiburada-mcp"
+      ]
+    },
+    "n11": {
+      "command": "uvx",
+      "args": [
+        "n11-mcp"
+      ]
+    },
+    "ciceksepeti": {
+      "command": "uvx",
+      "args": [
+        "ciceksepeti-mcp"
+      ]
+    },
+    "obilet": {
+      "command": "uvx",
+      "args": [
+        "obilet-mcp"
+      ]
+    },
+    "biletall": {
+      "command": "uvx",
+      "args": [
+        "biletall-mcp"
+      ]
+    },
+    "secretcv": {
+      "command": "uvx",
+      "args": [
+        "secretcv-mcp"
+      ]
+    },
+    "biletix": {
+      "command": "uvx",
+      "args": [
+        "biletix-mcp"
+      ]
+    },
+    "sozcu": {
+      "command": "uvx",
+      "args": [
+        "sozcu-mcp"
+      ]
+    },
+    "eleman-net": {
+      "command": "uvx",
+      "args": [
+        "eleman-net-mcp"
+      ]
+    },
+    "mackolik": {
+      "command": "uvx",
+      "args": [
+        "mackolik-mcp"
+      ]
+    },
+    "donanimhaber": {
+      "command": "uvx",
+      "args": [
+        "donanimhaber-mcp"
+      ]
+    },
+    "yemek-com": {
+      "command": "uvx",
+      "args": [
+        "yemek-com-mcp"
+      ]
+    },
+    "hurriyet": {
+      "command": "uvx",
+      "args": [
+        "hurriyet-mcp"
+      ]
+    },
+    "sok": {
+      "command": "uvx",
+      "args": [
+        "sok-mcp"
+      ]
+    },
+    "jolly-tur": {
+      "command": "uvx",
+      "args": [
+        "jolly-tur-mcp"
+      ]
+    },
+    "migros": {
+      "command": "uvx",
+      "args": [
+        "migros-mcp"
+      ]
+    },
+    "paribu-cineverse": {
+      "command": "uvx",
+      "args": [
+        "paribu-cineverse-mcp"
+      ]
+    },
+    "trthaber": {
+      "command": "uvx",
+      "args": [
+        "trthaber-mcp"
+      ]
+    },
+    "tff": {
+      "command": "uvx",
+      "args": [
+        "tff-mcp"
+      ]
+    },
+    "bim": {
+      "command": "uvx",
+      "args": [
+        "bim-mcp"
+      ]
+    },
+    "tabii": {
+      "command": "uvx",
+      "args": [
+        "tabii-mcp"
+      ]
+    },
+    "eksisozluk": {
+      "command": "uvx",
+      "args": [
+        "eksisozluk-mcp"
+      ]
+    },
+    "iskur": {
+      "command": "uvx",
+      "args": [
+        "iskur-mcp"
+      ]
+    },
+    "beyazperde": {
+      "command": "uvx",
+      "args": [
+        "beyazperde-mcp"
+      ]
+    },
+    "nefisyemektarifleri": {
+      "command": "uvx",
+      "args": [
+        "nefisyemektarifleri-mcp"
+      ]
+    }
+  }
+}
