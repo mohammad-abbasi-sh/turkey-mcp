@@ -1,6 +1,6 @@
 {
  "catalog": "turkey-mcp",
- "description": "Unofficial read-only MCP servers for Turkish web services (EN/TR/FA)",
+ "description": "Unofficial MCP servers for Turkish web services, read-only by default (EN/TR/FA)",
  "servers": [
   {
    "description": "Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).",
@@ -29,12 +29,12 @@
    ]
   },
   {
+   "description": "Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
    "name": "arabam-mcp",
+   "pypi": "arabam-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/arabam-mcp",
    "title": "arabam.com — used-car listings & market prices",
    "title_tr": "arabam.com — ikinci el otomobil ilanları ve piyasa fiyatları",
-   "description": "Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
-   "repository": "https://github.com/mohammad-abbasi-sh/arabam-mcp",
-   "pypi": "arabam-mcp",
    "tools": [
     {
      "name": "arabam_search",
@@ -59,12 +59,12 @@
    ]
   },
   {
+   "description": "Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
    "name": "emlakjet-mcp",
+   "pypi": "emlakjet-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/emlakjet-mcp",
    "title": "emlakjet.com — real-estate listings, districts & price stats",
    "title_tr": "emlakjet.com — emlak ilanları, ilçeler ve fiyat istatistikleri",
-   "description": "Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
-   "repository": "https://github.com/mohammad-abbasi-sh/emlakjet-mcp",
-   "pypi": "emlakjet-mcp",
    "tools": [
     {
      "name": "emlakjet_search",
@@ -85,12 +85,12 @@
    ]
   },
   {
+   "description": "Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
    "name": "armut-mcp",
+   "pypi": "armut-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/armut-mcp",
    "title": "armut.com — local services, pros & price guides",
    "title_tr": "armut.com — yerel hizmetler, profesyoneller ve fiyat rehberleri",
-   "description": "Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
-   "repository": "https://github.com/mohammad-abbasi-sh/armut-mcp",
-   "pypi": "armut-mcp",
    "tools": [
     {
      "name": "armut_search_services",
@@ -119,12 +119,16 @@
    ]
   },
   {
+   "account_actions": true,
+   "description": "Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). Optional local-session account actions: view/add/remove cart items and manage favorites (needs your own browser session cookie).",
+   "env": {
+    "HEPSIBURADA_SESSION": "YOUR_SESSION_COOKIE_HERE"
+   },
    "name": "hepsiburada-mcp",
+   "pypi": "hepsiburada-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/hepsiburada-mcp",
    "title": "hepsiburada.com — shopping search, product details & price stats",
    "title_tr": "hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
-   "description": "Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY).",
-   "repository": "https://github.com/mohammad-abbasi-sh/hepsiburada-mcp",
-   "pypi": "hepsiburada-mcp",
    "tools": [
     {
      "name": "hepsiburada_search",
@@ -145,16 +149,44 @@
     {
      "name": "hepsiburada_product_reviews",
      "summary": "Recent customer reviews: author, rating, text, date"
+    },
+    {
+     "name": "hepsiburada_view_cart",
+     "summary": "View your cart: items, quantities, prices (TRY)"
+    },
+    {
+     "name": "hepsiburada_add_to_cart",
+     "summary": "Add a product to your cart (confirm required)"
+    },
+    {
+     "name": "hepsiburada_remove_from_cart",
+     "summary": "Remove one item from your cart (confirm required)"
+    },
+    {
+     "name": "hepsiburada_update_cart_quantity",
+     "summary": "Change a cart item's quantity (confirm required)"
+    },
+    {
+     "name": "hepsiburada_list_favorites",
+     "summary": "List your favorite product SKUs"
+    },
+    {
+     "name": "hepsiburada_add_favorite",
+     "summary": "Add a product to favorites (confirm required)"
+    },
+    {
+     "name": "hepsiburada_remove_favorite",
+     "summary": "Remove a product from favorites (confirm required)"
     }
    ]
   },
   {
+   "description": "Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
    "name": "n11-mcp",
+   "pypi": "n11-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/n11-mcp",
    "title": "n11.com — shopping search, product details & price stats",
    "title_tr": "n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
-   "description": "Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
-   "repository": "https://github.com/mohammad-abbasi-sh/n11-mcp",
-   "pypi": "n11-mcp",
    "tools": [
     {
      "name": "n11_search",
@@ -179,12 +211,12 @@
    ]
   },
   {
+   "description": "Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
    "name": "ciceksepeti-mcp",
+   "pypi": "ciceksepeti-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp",
    "title": "ciceksepeti.com — flowers & gifts search, details & price stats",
    "title_tr": "ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
-   "description": "Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
-   "repository": "https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp",
-   "pypi": "ciceksepeti-mcp",
    "tools": [
     {
      "name": "ciceksepeti_search",
@@ -209,12 +241,12 @@
    ]
   },
   {
+   "description": "Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
    "name": "obilet-mcp",
+   "pypi": "obilet-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/obilet-mcp",
    "title": "obilet.com — bus journeys, locations & flight summary",
    "title_tr": "obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
-   "description": "Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
-   "repository": "https://github.com/mohammad-abbasi-sh/obilet-mcp",
-   "pypi": "obilet-mcp",
    "tools": [
     {
      "name": "obilet_search_locations",
@@ -239,12 +271,12 @@
    ]
   },
   {
+   "description": "Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
    "name": "biletall-mcp",
+   "pypi": "biletall-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/biletall-mcp",
    "title": "biletall.com — bus & flight tickets, routes & prices",
    "title_tr": "biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
-   "description": "Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
-   "repository": "https://github.com/mohammad-abbasi-sh/biletall-mcp",
-   "pypi": "biletall-mcp",
    "tools": [
     {
      "name": "biletall_search_locations",
@@ -269,12 +301,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
    "name": "secretcv-mcp",
+   "pypi": "secretcv-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/secretcv-mcp",
    "title": "secretcv.com — job search, listings & sectors",
    "title_tr": "secretcv.com — iş ilanları, arama ve sektörler",
-   "description": "Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
-   "repository": "https://github.com/mohammad-abbasi-sh/secretcv-mcp",
-   "pypi": "secretcv-mcp",
    "tools": [
     {
      "name": "secretcv_search_jobs",
@@ -299,12 +331,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
    "name": "biletix-mcp",
+   "pypi": "biletix-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/biletix-mcp",
    "title": "biletix.com — events, tickets & venues",
    "title_tr": "biletix.com — etkinlikler, biletler ve mekânlar",
-   "description": "Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
-   "repository": "https://github.com/mohammad-abbasi-sh/biletix-mcp",
-   "pypi": "biletix-mcp",
    "tools": [
     {
      "name": "biletix_trending",
@@ -333,12 +365,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
    "name": "sozcu-mcp",
+   "pypi": "sozcu-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/sozcu-mcp",
    "title": "sozcu.com.tr — news headlines, articles & market rates",
    "title_tr": "sozcu.com.tr — haberler, makaleler ve piyasa kurları",
-   "description": "Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
-   "repository": "https://github.com/mohammad-abbasi-sh/sozcu-mcp",
-   "pypi": "sozcu-mcp",
    "tools": [
     {
      "name": "sozcu_headlines",
@@ -363,12 +395,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
    "name": "eleman-net-mcp",
+   "pypi": "eleman-net-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/eleman-net-mcp",
    "title": "eleman.net — job listings, sectors & cities",
    "title_tr": "eleman.net — iş ilanları, sektörler ve şehirler",
-   "description": "Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
-   "repository": "https://github.com/mohammad-abbasi-sh/eleman-net-mcp",
-   "pypi": "eleman-net-mcp",
    "tools": [
     {
      "name": "eleman_search_jobs",
@@ -393,12 +425,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
    "name": "mackolik-mcp",
+   "pypi": "mackolik-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/mackolik-mcp",
    "title": "mackolik.com — live scores, results, fixtures & standings",
    "title_tr": "mackolik.com — canlı skorlar, sonuçlar, fikstür ve puan durumu",
-   "description": "Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
-   "repository": "https://github.com/mohammad-abbasi-sh/mackolik-mcp",
-   "pypi": "mackolik-mcp",
    "tools": [
     {
      "name": "mackolik_live_scores",
@@ -423,12 +455,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
    "name": "donanimhaber-mcp",
+   "pypi": "donanimhaber-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/donanimhaber-mcp",
    "title": "donanimhaber.com — tech news, articles & hot forum topics",
    "title_tr": "donanimhaber.com — teknoloji haberleri, makaleler ve popüler forum konuları",
-   "description": "Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
-   "repository": "https://github.com/mohammad-abbasi-sh/donanimhaber-mcp",
-   "pypi": "donanimhaber-mcp",
    "tools": [
     {
      "name": "donanimhaber_latest",
@@ -457,12 +489,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
    "name": "yemek-com-mcp",
+   "pypi": "yemek-com-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/yemek-com-mcp",
    "title": "Yemek.com — Turkish recipes, categories & videos",
    "title_tr": "Yemek.com — Türk yemek tarifleri, kategoriler ve videolar",
-   "description": "Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
-   "repository": "https://github.com/mohammad-abbasi-sh/yemek-com-mcp",
-   "pypi": "yemek-com-mcp",
    "tools": [
     {
      "name": "yemek_search_recipes",
@@ -491,12 +523,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
    "name": "hurriyet-mcp",
+   "pypi": "hurriyet-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/hurriyet-mcp",
    "title": "Hürriyet — news headlines, articles & search",
    "title_tr": "Hürriyet — haberler, makaleler ve arama",
-   "description": "Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
-   "repository": "https://github.com/mohammad-abbasi-sh/hurriyet-mcp",
-   "pypi": "hurriyet-mcp",
    "tools": [
     {
      "name": "hurriyet_get_headlines",
@@ -521,12 +553,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
    "name": "sok-mcp",
+   "pypi": "sok-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/sok-mcp",
    "title": "ŞOK — grocery products, categories, campaigns & prices",
    "title_tr": "ŞOK — market ürünleri, kategoriler, kampanyalar ve fiyatlar",
-   "description": "Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
-   "repository": "https://github.com/mohammad-abbasi-sh/sok-mcp",
-   "pypi": "sok-mcp",
    "tools": [
     {
      "name": "sok_search_products",
@@ -555,12 +587,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
    "name": "jolly-tur-mcp",
+   "pypi": "jolly-tur-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/jolly-tur-mcp",
    "title": "Jolly Tur — hotels, live prices & campaigns",
    "title_tr": "Jolly Tur — oteller, canlı fiyatlar ve kampanyalar",
-   "description": "Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
-   "repository": "https://github.com/mohammad-abbasi-sh/jolly-tur-mcp",
-   "pypi": "jolly-tur-mcp",
    "tools": [
     {
      "name": "jolly_search_hotels",
@@ -577,12 +609,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories.",
    "name": "migros-mcp",
+   "pypi": "migros-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/migros-mcp",
    "title": "Migros Sanal Market — products, prices, promos & categories",
    "title_tr": "Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
-   "description": "Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories.",
-   "repository": "https://github.com/mohammad-abbasi-sh/migros-mcp",
-   "pypi": "migros-mcp",
    "tools": [
     {
      "name": "migros_search_products",
@@ -607,12 +639,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
    "name": "paribu-cineverse-mcp",
+   "pypi": "paribu-cineverse-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp",
    "title": "Paribu Cineverse — now showing, coming soon & showtimes",
    "title_tr": "Paribu Cineverse — vizyondakiler, yakında gelecekler ve seanslar",
-   "description": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
-   "repository": "https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp",
-   "pypi": "paribu-cineverse-mcp",
    "tools": [
     {
      "name": "cineverse_list_now_showing",
@@ -637,12 +669,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
    "name": "trthaber-mcp",
+   "pypi": "trthaber-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/trthaber-mcp",
    "title": "TRT Haber — headlines, breaking news & full articles",
    "title_tr": "TRT Haber — manşetler, son dakika ve haber metinleri",
-   "description": "Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
-   "repository": "https://github.com/mohammad-abbasi-sh/trthaber-mcp",
-   "pypi": "trthaber-mcp",
    "tools": [
     {
      "name": "trthaber_headlines",
@@ -667,12 +699,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
    "name": "tff-mcp",
+   "pypi": "tff-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
    "title": "Turkish Football Federation — standings, fixtures & match details",
    "title_tr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
-   "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
-   "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
-   "pypi": "tff-mcp",
    "tools": [
     {
      "name": "tff_list_leagues",
@@ -697,12 +729,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.",
    "name": "bim-mcp",
+   "pypi": "bim-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/bim-mcp",
    "title": "bim.com.tr (BİM) — weekly Aktüel deals, prices & categories",
    "title_tr": "bim.com.tr (BİM) — haftalık Aktüel ürünler, fiyatlar ve kategoriler",
-   "description": "Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.",
-   "repository": "https://github.com/mohammad-abbasi-sh/bim-mcp",
-   "pypi": "bim-mcp",
    "tools": [
     {
      "name": "bim_list_aktuel_dates",
@@ -735,12 +767,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.",
    "name": "tabii-mcp",
+   "pypi": "tabii-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/tabii-mcp",
    "title": "tabii.com (TRT) — streaming catalog, live channels & people",
    "title_tr": "tabii.com (TRT) — dizi/film kataloğu, canlı kanallar ve oyuncular",
-   "description": "Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.",
-   "repository": "https://github.com/mohammad-abbasi-sh/tabii-mcp",
-   "pypi": "tabii-mcp",
    "tools": [
     {
      "name": "tabii_search_content",
@@ -769,12 +801,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.",
    "name": "eksisozluk-mcp",
+   "pypi": "eksisozluk-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/eksisozluk-mcp",
    "title": "eksisozluk.com (Ekşi Sözlük) — topics, entries & search",
    "title_tr": "eksisozluk.com — gündem başlıkları, entry'ler ve arama",
-   "description": "Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.",
-   "repository": "https://github.com/mohammad-abbasi-sh/eksisozluk-mcp",
-   "pypi": "eksisozluk-mcp",
    "tools": [
     {
      "name": "eksisozluk_trending",
@@ -875,12 +907,12 @@
    ]
   },
   {
+   "description": "Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.",
    "name": "nefisyemektarifleri-mcp",
+   "pypi": "nefisyemektarifleri-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp",
    "title": "Nefis Yemek Tarifleri — Turkish recipes, search, categories & daily menu",
    "title_tr": "Nefis Yemek Tarifleri — tarif arama, kategoriler ve günlük menü",
-   "description": "Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.",
-   "repository": "https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp",
-   "pypi": "nefisyemektarifleri-mcp",
    "tools": [
     {
      "name": "nefis_search_recipes",
