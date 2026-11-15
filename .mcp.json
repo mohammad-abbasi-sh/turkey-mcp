@@ -28,7 +28,10 @@
       "command": "uvx",
       "args": [
         "hepsiburada-mcp"
-      ]
+      ],
+      "env": {
+        "HEPSIBURADA_SESSION": "YOUR_SESSION_COOKIE_HERE"
+      }
     },
     "n11": {
       "command": "uvx",
