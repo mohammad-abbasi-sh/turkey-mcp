@@ -15,7 +15,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp) | arabam.com — used-car listings & market prices | 5 | `uvx arabam-mcp==0.1.0` |
 | [emlakjet-mcp](https://github.com/mohammad-abbasi-sh/emlakjet-mcp) | emlakjet.com — real-estate listings, districts & price stats | 4 | `uvx emlakjet-mcp==0.1.0` |
 | [armut-mcp](https://github.com/mohammad-abbasi-sh/armut-mcp) | armut.com — local services, pros & price guides | 6 | `uvx armut-mcp==0.1.0` |
-| [hepsiburada-mcp](https://github.com/mohammad-abbasi-sh/hepsiburada-mcp) | hepsiburada.com — shopping search, details, reviews & price stats | 5 | `uvx hepsiburada-mcp==0.1.0` |
+| [hepsiburada-mcp](https://github.com/mohammad-abbasi-sh/hepsiburada-mcp) | hepsiburada.com — shopping search, details, reviews & price stats; cart + favorites (local-session account actions) | 12 | `uvx hepsiburada-mcp==0.2.0` |
 | [n11-mcp](https://github.com/mohammad-abbasi-sh/n11-mcp) | n11.com — shopping search, details, reviews & price stats | 5 | `uvx n11-mcp==0.1.0` |
 | [ciceksepeti-mcp](https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp) | ciceksepeti.com — flowers & gifts search, details, reviews & price stats | 5 | `uvx ciceksepeti-mcp==0.1.0` |
 | [obilet-mcp](https://github.com/mohammad-abbasi-sh/obilet-mcp) | obilet.com — bus journeys, locations, prices & flight summary | 5 | `uvx obilet-mcp==0.1.0` |
@@ -30,7 +30,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [hurriyet-mcp](https://github.com/mohammad-abbasi-sh/hurriyet-mcp) | Hürriyet — news headlines, articles & search | 5 | `uvx hurriyet-mcp==0.1.0` |
 | [sok-mcp](https://github.com/mohammad-abbasi-sh/sok-mcp) | ŞOK — grocery products, categories, campaigns & prices | 6 | `uvx sok-mcp==0.1.0` |
 | [jolly-tur-mcp](https://github.com/mohammad-abbasi-sh/jolly-tur-mcp) | Jolly Tur — hotels, live prices & campaigns | 3 | `uvx jolly-tur-mcp==0.1.0` |
-| [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories | 5 | `uvx migros-mcp==0.1.0` |
+| [migros-mcp](https://github.com/mohammad-abbasi-sh/migros-mcp) | Migros Sanal Market — products, prices, promos & categories; cart + checkout link (local-session account actions) | 10 | `uvx migros-mcp==0.2.0` |
 | [paribu-cineverse-mcp](https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp) | Paribu Cineverse — now showing, coming soon & showtimes | 5 | `uvx paribu-cineverse-mcp==0.1.0` |
 | [trthaber-mcp](https://github.com/mohammad-abbasi-sh/trthaber-mcp) | trthaber.com (TRT Haber) — headlines, breaking news, articles & search | 5 | `uvx trthaber-mcp==0.1.0` |
 | [tff-mcp](https://github.com/mohammad-abbasi-sh/tff-mcp) | tff.org (TFF) — standings, fixtures, match details & top scorers | 5 | `uvx tff-mcp==0.1.0` |
