@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Turkey MCP — Connect AI to the World</title>
-<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 29 servers, 155 tools, in English, Türkçe and فارسی.">
+<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 29 servers, 162 tools, in English, Türkçe and فارسی.">
 <link rel="canonical" href="https://mohammad-abbasi-sh.github.io/turkey-mcp/">
 <link rel="icon" href="favicon.ico">
 <link rel="alternate" hreflang="fa" href="#/fa/">
@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="x-default" href="#/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Turkey MCP — Connect AI to the World">
-<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 29 servers, 155 tools. English, Türkçe, فارسی.">
+<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 29 servers, 162 tools. English, Türkçe, فارسی.">
 <meta property="og:image" content="https://mohammad-abbasi-sh.github.io/turkey-mcp/og-image.png">
 <meta name="twitter:image" content="https://mohammad-abbasi-sh.github.io/turkey-mcp/og-image.png">
 <meta property="og:locale" content="fa_IR">
@@ -21,12 +21,12 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Turkey MCP — Connect AI to the World">
-<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 29 servers, 155 tools. EN / TR / FA.">
+<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 29 servers, 162 tools. EN / TR / FA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 29 servers, 155 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 29 servers, 162 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
 </script>
 <style>
 :root{
@@ -157,6 +157,8 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 .badge-ok{background:var(--secondary-soft);color:#0B7A6E}
 [data-theme="dark"] .badge-ok{color:var(--secondary)}
 .badge-soon{background:var(--primary-soft);color:var(--primary)}
+.badge-acct{background:#FEF3C7;color:#92400E}
+[data-theme="dark"] .badge-acct{background:#3A2E12;color:#FCD34D}
 .badge-verified{background:var(--secondary-soft);color:#0B7A6E}
 [data-theme="dark"] .badge-verified{color:var(--secondary)}
 .badge-unverified{background:#FDECEC;color:#B42318}
@@ -350,71 +352,27 @@ const SERVERS = [
    {n:"armut_service_faq",s:"FAQs for a service, with answers",sf:"سؤالات متداول یک خدمت با پاسخ",st:"Bir hizmetin SSS'leri ve yanıtları"},
    {n:"armut_price_guide",s:"Price guide: 12 monthly averages, quotes, example jobs",sf:"راهنمای قیمت: میانگین ۱۲ ماهه، قیمت‌های نمونه، نمونه‌کارها",st:"Fiyat rehberi: 12 aylık ortalama, teklifler, örnek işler"},
    {n:"armut_trending_services",s:"Trending/popular services and most-searched combos",sf:"خدمات پرطرفدار و پرجست‌وجوترین ترکیب‌ها",st:"Trend ve popüler hizmetler ile en çok aranan kombinasyonlar"}]},
-{ id:"hepsiburada-mcp", cat:"shopping", color:"#EA580C", letter:"🛒", featured:true, added:5,
+{ id:"hepsiburada-mcp", cat:"shopping", color:"#EA580C", letter:"🛒", featured:true, account:true, added:5,
   title:"hepsiburada.com — shopping search, product details & price stats",
   title_tr:"hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
-  desc:"Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY).",
-  desc_fa:"جست‌وجوی کالاهای hepsiburada.com، خواندن جزئیات (قیمت، موجودی، فروشنده، GTIN)، نظرات، مرور ۹ دسته و آمار قیمت (لیر).",
-  desc_tr:"hepsiburada.com ürünlerinde arama, detayları okuma (fiyat, stok, satıcı, GTIN), yorumlar, 9 kategori gezgini ve fiyat istatistikleri (TL).",
+  desc:"Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). Optional local-session account actions: cart + favorites.",
+  desc_fa:"جست‌وجوی کالاهای hepsiburada.com، خواندن جزئیات (قیمت، موجودی، فروشنده، GTIN)، نظرات، مرور ۹ دسته و آمار قیمت (لیر). اقدامات حساب اختیاری با نشست محلی: سبد خرید و علاقه‌مندی‌ها.",
+  desc_tr:"hepsiburada.com ürünlerinde arama, detayları okuma (fiyat, stok, satıcı, GTIN), yorumlar, 9 kategori gezgini ve fiyat istatistikleri (TL). İsteğe bağlı yerel oturumlu hesap işlemleri: sepet + favoriler.",
   repo:"https://github.com/mohammad-abbasi-sh/hepsiburada-mcp", pypi:"hepsiburada-mcp",
+  env:{"HEPSIBURADA_SESSION":"YOUR_SESSION_COOKIE_HERE"},
   tools:[
    {n:"hepsiburada_search",s:"Search products by keyword, sort by price or relevance",sf:"جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",st:"Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"},
    {n:"hepsiburada_product_detail",s:"Detail of one product: price, stock, seller, GTIN, highlights",sf:"جزئیات یک کالا: قیمت، موجودی، فروشنده، GTIN، نکات مهم",st:"Bir ürünün detayı: fiyat, stok, satıcı, GTIN, öne çıkanlar"},
    {n:"hepsiburada_list_categories",s:"The 9 top categories with URLs and ids",sf:"۹ دستهٔ اصلی با نشانی و شناسه",st:"URL ve kimlikleriyle 9 ana kategori"},
    {n:"hepsiburada_price_stats",s:"Price stats for a query: min/median/mean/max in TRY",sf:"آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
-   {n:"hepsiburada_product_reviews",s:"Recent customer reviews: author, rating, text, date",sf:"نظرات اخیر مشتریان: نویسنده، امتیاز، متن، تاریخ",st:"Son müşteri yorumları: yazar, puan, metin, tarih"}]},
-{ id:"n11-mcp", cat:"shopping", color:"#7C3AED", letter:"🛍️", featured:false, added:6,
-  title:"n11.com — shopping search, product details & price stats",
-  title_tr:"n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
-  desc:"Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
-  desc_fa:"جست‌وجوی کالاهای n11.com، خواندن جزئیات (قیمت، قیمت فهرست، موجودی، فروشنده، امتیاز)، نظرات، مرور ۱۱ دسته و آمار قیمت (لیر).",
-  desc_tr:"n11.com ürünlerinde arama, detayları okuma (fiyat, liste fiyatı, stok, satıcı, puan), yorumlar, 11 kategori gezgini ve fiyat istatistikleri (TL).",
-  repo:"https://github.com/mohammad-abbasi-sh/n11-mcp", pypi:"n11-mcp",
-  tools:[
-   {n:"n11_search",s:"Search products by keyword, sort by price or relevance",sf:"جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",st:"Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"},
-   {n:"n11_product_detail",s:"Detail of one product: price, stock, seller, rating, category",sf:"جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",st:"Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"},
-   {n:"n11_list_categories",s:"The 11 top categories with URLs and slugs",sf:"۱۱ دستهٔ اصلی با نشانی و شناسه",st:"URL ve kısaltmalarıyla 11 ana kategori"},
-   {n:"n11_price_stats",s:"Price stats for a query: min/median/mean/max in TRY",sf:"آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
-   {n:"n11_product_reviews",s:"Recent customer reviews: reviewer and star rating",sf:"نظرات اخیر مشتریان: نظر‌دهنده و امتیاز ستاره‌ای",st:"Son müşteri yorumları: yorumcu ve yıldız puanı"}]},
-{ id:"ciceksepeti-mcp", cat:"shopping", color:"#DB2777", letter:"💐", featured:false, added:7,
-  title:"ciceksepeti.com — flowers & gifts search, details & price stats",
-  title_tr:"ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
-  desc:"Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
-  desc_fa:"جست‌وجوی گل و هدیه در ciceksepeti.com، خواندن جزئیات (قیمت، موجودی، فروشنده، امتیاز)، نظرات، مرور ۸۹ دسته و آمار قیمت (لیر).",
-  desc_tr:"ciceksepeti.com'da çiçek ve hediye arama, detayları okuma (fiyat, stok, satıcı, puan), yorumlar, 89 kategori gezgini ve fiyat istatistikleri (TL).",
-  repo:"https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp", pypi:"ciceksepeti-mcp",
-  tools:[
-   {n:"ciceksepeti_search",s:"Search flowers & gifts by keyword, sort by price or relevance",sf:"جست‌وجوی گل و هدیه با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",st:"Anahtar kelimeyle çiçek ve hediye ara, fiyata veya ilgiye göre sırala"},
-   {n:"ciceksepeti_product_detail",s:"Detail of one product: price, stock, seller, rating, category",sf:"جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",st:"Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"},
-   {n:"ciceksepeti_list_categories",s:"89 flower/plant/gift categories with URLs and slugs",sf:"۸۹ دستهٔ گل/گیاه/هدیه با نشانی و شناسه",st:"URL ve kısaltmalarıyla 89 çiçek/bitki/hediye kategorisi"},
-   {n:"ciceksepeti_price_stats",s:"Price stats for a query: min/median/mean/max in TRY",sf:"آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
-   {n:"ciceksepeti_product_reviews",s:"Recent customer reviews: reviewer, star rating, date",sf:"نظرات اخیر مشتریان: نظر‌دهنده، امتیاز ستاره‌ای، تاریخ",st:"Son müşteri yorumları: yorumcu, yıldız puanı, tarih"}]},
-{ id:"obilet-mcp", cat:"travel", color:"#0284C7", letter:"🚌", featured:false, added:8,
-  title:"obilet.com — bus journeys, locations & flight summary",
-  title_tr:"obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
-  desc:"Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
-  desc_fa:"جست‌وجوی مکان‌های اتوبوس obilet.com، فهرست سفرهای اتوبوس یک مسیر و تاریخ (شرکت، صندلی، قیمت به لیر، توقف‌ها)، جزئیات سفر، آمار قیمت و خلاصهٔ پروازها (تعداد، قیمت، شرکت‌ها).",
-  desc_tr:"obilet.com otobüs konumlarında arama, bir güzergâh ve tarih için otobüs seferleri (firma, koltuk, TL fiyat, duraklar), sefer detayları, fiyat istatistikleri ve uçuş özeti (sayı, fiyatlar, havayolları).",
-  repo:"https://github.com/mohammad-abbasi-sh/obilet-mcp", pypi:"obilet-mcp",
-  tools:[
-   {n:"obilet_search_locations",s:"Search bus/flight locations by name",sf:"جست‌وجوی مکان‌های اتوبوس/پرواز با نام",st:"Otobüs/uçuş konumlarını adla ara"},
-   {n:"obilet_search_bus_journeys",s:"Bus journeys for a route + date, sorted by price, departure or duration",sf:"سفرهای اتوبوس یک مسیر و تاریخ، مرتب بر اساس قیمت، حرکت یا مدت",st:"Bir güzergâh ve tarih için otobüs seferleri; fiyat, kalkış veya süreye göre sıralı"},
-   {n:"obilet_journey_detail",s:"Full detail of one journey: stops, prices, features",sf:"جزئیات کامل یک سفر: توقف‌ها، قیمت‌ها، امکانات",st:"Bir seferin tam detayı: duraklar, fiyatlar, özellikler"},
-   {n:"obilet_price_stats",s:"Price stats for a route + date: min/median/mean/max in TRY",sf:"آمار قیمت یک مسیر و تاریخ: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir güzergâh ve tarih için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
-   {n:"obilet_flight_summary",s:"Flight summary: count, min/max price, durations, airlines",sf:"خلاصهٔ پروازها: تعداد، کمترین/بیشترین قیمت، مدت‌ها، شرکت‌ها",st:"Uçuş özeti: sayı, min/maks fiyat, süreler, havayolları"}]},
-{ id:"biletall-mcp", cat:"travel", color:"#0369A1", letter:"🚌", featured:false, added:9,
-  title:"biletall.com — bus & flight tickets, routes & prices",
-  title_tr:"biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
-  desc:"Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
-  desc_fa:"جست‌وجوی بلیط اتوبوس و پرواز در biletall.com: ارزان‌ترین سفرها برای یک مسیر، آمار قیمت، و پرترددترین مسیرها با قیمت (لیر).",
-  desc_tr:"biletall.com'da otobüs ve uçak bileti arama: bir güzergâh için en ucuz seferler, fiyat istatistikleri ve fiyatlarıyla en çok seyahat edilen güzergâhlar (TL).",
-  repo:"https://github.com/mohammad-abbasi-sh/biletall-mcp", pypi:"biletall-mcp",
-  tools:[
-   {n:"biletall_search_locations",s:"Search locations by name (offline, 1,726 slugs)",sf:"جست‌وجوی مکان‌ها با نام (آفلاین، ۱٬۷۲۶ شناسه)",st:"Konumları adla ara (çevrimdışı, 1.726 kısaltma)"},
-   {n:"biletall_bus_route",s:"Cheapest bus journeys for a route, today",sf:"ارزان‌ترین سفرهای اتوبوس یک مسیر، امروز",st:"Bir güzergâh için bugünün en ucuz otobüs seferleri"},
-   {n:"biletall_flight_route",s:"Cheapest flights for a route, with dates",sf:"ارزان‌ترین پروازهای یک مسیر، با تاریخ‌ها",st:"Bir güzergâh için tarihleriyle en ucuz uçuşlar"},
-   {n:"biletall_price_stats",s:"Price stats for a bus route: min/median/mean/max in TRY",sf:"آمار قیمت یک مسیر اتوبوس: کمترین/میانه/میانگین/بیشترین به لیر",st:"Bir otobüs güzergâhı için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"},
-   {n:"biletall_popular_routes",s:"Most-travelled bus routes with prices",sf:"پرترددترین مسیرهای اتوبوس با قیمت",st:"Fiyatlarıyla en çok seyahat edilen otobüs güzergâhları"}
+   {n:"hepsiburada_product_reviews",s:"Recent customer reviews: author, rating, text, date",sf:"نظرات اخیر مشتریان: نویسنده، امتیاز، متن، تاریخ",st:"Son müşteri yorumları: yazar, puan, metin, tarih"},
+   {n:"hepsiburada_view_cart",s:"View your cart: items, quantities, prices (TRY)",sf:"مشاهدهٔ سبد خرید: کالاها، تعداد، قیمت (لیر)",st:"Sepetinizi görüntüleyin: ürünler, adetler, fiyatlar (TL)"},
+   {n:"hepsiburada_add_to_cart",s:"Add a product to your cart (confirm required)",sf:"افزودن کالا به سبد خرید (نیازمند تأیید)",st:"Sepetinize ürün ekleyin (onay gerekli)"},
+   {n:"hepsiburada_remove_from_cart",s:"Remove one item from your cart (confirm required)",sf:"حذف یک کالا از سبد خرید (نیازمند تأیید)",st:"Sepetinizden bir ürün çıkarın (onay gerekli)"},
+   {n:"hepsiburada_update_cart_quantity",s:"Change a cart item's quantity (confirm required)",sf:"تغییر تعداد یک کالای سبد خرید (نیازمند تأیید)",st:"Bir sepet ürününün adedini değiştirin (onay gerekli)"},
+   {n:"hepsiburada_list_favorites",s:"List your favorite product SKUs",sf:"فهرست کدهای کالاهای موردعلاقه",st:"Favori ürün SKU'larınızı listeleyin"},
+   {n:"hepsiburada_add_favorite",s:"Add a product to favorites (confirm required)",sf:"افزودن کالا به علاقه‌مندی‌ها (نیازمند تأیید)",st:"Bir ürünü favorilere ekleyin (onay gerekli)"},
+   {n:"hepsiburada_remove_favorite",s:"Remove a product from favorites (confirm required)",sf:"حذف کالا از علاقه‌مندی‌ها (نیازمند تأیید)",st:"Bir ürünü favorilerden çıkarın (onay gerekli)"}
   ]},
 { id:"secretcv-mcp", cat:"jobs", color:"#B45309", letter:"💼", featured:false, added:10,
   title:"secretcv.com — job search, listings & sectors",
@@ -827,7 +785,7 @@ const DEMOS = [
 
 const FAQ = [
  {q:{fa:"برای استفاده از سرورها کلید API لازم است؟",tr:"Sunucuları kullanmak için API anahtarı gerekir mi?",en:"Do I need an API key to use the servers?"},a:{fa:"نه. همهٔ سرورها روی کامپیوتر خودت با uvx اجرا می‌شوند؛ بدون کلید API، بدون حساب و بدون ثبت‌نام.",tr:"Hayır. Tüm sunucular uvx ile kendi bilgisayarınızda çalışır — API anahtarı yok, hesap yok, kayıt yok.",en:"No. Every server runs on your own computer with uvx — no API key, no account, no sign-up."}},
- {q:{fa:"سرورها فقط‌خواندنی‌اند؟",tr:"Sunucular salt okunur mu?",en:"Are the servers read-only?"},a:{fa:"بله. سرورها فقط دادهٔ عمومی سایت‌ها را می‌خوانند؛ چیزی نمی‌خرند، رزرو نمی‌کنند و در هیچ حسابی تغییری نمی‌دهند.",tr:"Evet. Sunucular yalnızca sitelerin herkese açık verilerini okur; hiçbir şey satın almaz, rezerve etmez ve hiçbir hesapta değişiklik yapmaz.",en:"Yes. The servers only read the sites' public data; they never buy, book, or change anything in an account."}},
+ {q:{fa:"سرورها فقط‌خواندنی‌اند؟",tr:"Sunucular salt okunur mu?",en:"Are the servers read-only?"},a:{fa:"بله. سرورها فقط دادهٔ عمومی سایت‌ها را می‌خوانند؛ چیزی نمی‌خرند، رزرو نمی‌کنند و در هیچ حسابی تغییری نمی‌دهند. یک استثنا: hepsiburada-mcp اقدامات حساب اختیاری (سبد خرید و علاقه‌مندی‌ها) دارد که فقط با کوکی نشست مرورگر خودت کار می‌کنند — بدون آن، مثل بقیه فقط‌خواندنی است.",tr:"Evet. Sunucular yalnızca sitelerin herkese açık verilerini okur; hiçbir şey satın almaz, rezerve etmez ve hiçbir hesapta değişiklik yapmaz. Tek istisna: hepsiburada-mcp, yalnızca kendi tarayıcı oturum çerezinizle çalışan isteğe bağlı hesap işlemleri (sepet + favoriler) sunar — olmadan diğerleri gibi salt okunurdur.",en:"Yes. The servers only read the sites' public data; they never buy, book, or change anything in an account. One exception: hepsiburada-mcp offers optional account actions (cart + favorites) that work only with your own browser session cookie — without it, it is read-only like the rest."}},
  {q:{fa:"این سرورها رسمی‌اند؟",tr:"Bu sunucular resmi mi?",en:"Are these servers official?"},a:{fa:"نه؛ غیررسمی و ساختهٔ جامعه‌اند و از همان نشانی‌هایی استفاده می‌کنند که خود سایت‌ها به کار می‌برند. اگر سایتی تغییر کند، سرورش ممکن است از کار بیفتد؛ اینجا نگهداری و به‌روز می‌شوند.",tr:"Hayır; resmi değiller, topluluk yapımıdır ve sitelerin kendi kullandığı adresleri kullanırlar. Bir site değişirse sunucusu bozulabilir; burada bakımı yapılır ve güncellenir.",en:"No; they are unofficial, community-built, and use the same endpoints the sites themselves use. If a site changes, its server may break; they are maintained and updated here."}},
  {q:{fa:"چطور یک سرور را وصل کنم؟",tr:"Bir sunucuyu nasıl bağlarım?",en:"How do I connect a server?"},a:{fa:"از صفحهٔ «اتصال»، برنامه‌ات را انتخاب کن و قدم‌ها را دنبال کن — معمولاً یک دستور ترمینال یا چند خط تنظیمات است.",tr:"«Bağlan» sayfasından uygulamanı seç ve adımları izle — genellikle bir terminal komutu ya da birkaç satır ayar yeter.",en:"Pick your app on the «Connect» page and follow the steps — usually one terminal command or a few lines of config."}},
  {q:{fa:"با کدام برنامه‌ها کار می‌کند؟",tr:"Hangi uygulamalarla çalışır?",en:"Which apps does it work with?"},a:{fa:"هر کلاینت MCP که سرور stdio محلی را پشتیبانی کند: Claude Code، Claude Desktop، Cursor و VS Code اینجا تأیید شده‌اند؛ Windsurf، Codex CLI و Gemini CLI هم با تنظیم استاندارد کار می‌کنند.",tr:"Yerel stdio sunucusunu destekleyen her MCP istemcisiyle: Claude Code, Claude Desktop, Cursor ve VS Code burada doğrulandı; Windsurf, Codex CLI ve Gemini CLI de standart ayarla çalışır.",en:"Any MCP client that supports local stdio servers: Claude Code, Claude Desktop, Cursor and VS Code are verified here; Windsurf, Codex CLI and Gemini CLI also work with the standard config."}},
@@ -893,9 +851,9 @@ const ARTICLES = [
  {id:"turkey-servers",cat:"guides",date:"2026-11-03",mins:7,cover:"g3",icon:"🇹🇷",
   title:{fa:"سرورهای ترکیه چطور کار می‌کنند؟",tr:"Türkiye sunucuları nasıl çalışır?",en:"How do the Turkey servers work?"},
   ex:{fa:"پشت صحنهٔ بیست‌ودو سرور فقط‌خواندنی: از کجا داده می‌خوانند، چه چیزی را نمی‌توانند انجام دهند و چرا امن‌اند.",tr:"Yirmi iki salt okunur sunucunun perde arkası: veriyi nereden okurlar, neyi yapamazlar ve neden güvenlidirler.",en:"Behind the scenes of twenty-two read-only servers: where they read data, what they cannot do, and why they are safe."},
-  body:{fa:["هر سرور این کاتالوگ یک برنامهٔ کوچک پایتون است که با uvx اجرا می‌شود. وقتی دستیارت سؤالی می‌پرسد — مثلاً «ارزان‌ترین هدفون بی‌سیم چنده؟» — سرور به سایت مربوطه سر می‌زند، صفحه را می‌خواند و جواب ساخت‌یافته برمی‌گرداند.","داده‌ها همیشه زنده‌اند: نرخ ارز از XML رسمی بانک مرکزی ترکیه خوانده می‌شود، قیمت کالا از صفحهٔ فروشگاه، و ساعت اتوبوس از obilet. هیچ پایگاه دادهٔ قدیمی و هیچ عدد حدسی در میان نیست.","مهم‌ترین اصل طراحی این سرورها «فقط‌خواندنی» بودن است. آن‌ها هیچ حساب کاربری، رمز عبور یا توکنی ندارند؛ نمی‌توانند وارد حسابت شوی، خرید کنند یا رزرو انجام دهند. بدترین کاری که یک سرور خراب می‌تواند بکند، برگرداندن یک جواب اشتباه است — و تو همیشه می‌توانی آن را با باز کردن سایت بررسی کنی.","همهٔ سرورها متن‌باز‌اند و کدشان در گیت‌هاب است. اگر کنجکاوی، می‌توانی دقیقاً ببینی هر ابزار چه درخواستی می‌فرستد و چه چیزی برمی‌گرداند. شفافیت، به‌جای اعتماد کورکورانه، اصل این پروژه است."],
-         tr:["Bu katalogdaki her sunucu uvx ile çalışan küçük bir Python programıdır. Asistanınız bir soru sorduğunda — örneğin “en ucuz kablosuz kulaklık ne kadar?” — sunucu ilgili siteye gider, sayfayı okur ve yapılandırılmış bir yanıt döndürür.","Veriler her zaman canlıdır: döviz kuru Türkiye Cumhuriyet Merkez Bankası'nın resmi XML'inden, ürün fiyatı mağaza sayfasından, otobüs saati obilet'ten okunur. Eski bir veritabanı ve tahminî sayı yoktur.","Bu sunucuların en önemli tasarım ilkesi “salt okunur” olmalarıdır. Hiçbir kullanıcı hesabı, şifre veya jetonları yoktur; hesabınıza giremez, satın alma yapamaz veya rezervasyon yapamazlar. Bozuk bir sunucunun yapabileceği en kötü şey yanlış bir yanıt döndürmektir — ve bunu siteyi açarak her zaman doğrulayabilirsiniz.","Tüm sunucular açık kaynaklıdır ve kodları GitHub'dadır. Merak ediyorsanız her aracın tam olarak hangi isteği gönderdiğini ve ne döndürdüğünü görebilirsiniz. Kör güven yerine şeffaflık bu projenin ilkesidir."],
-         en:["Each server in this catalog is a small Python program that runs with uvx. When your assistant asks a question — “what is the cheapest wireless earphone?” — the server visits the relevant site, reads the page and returns a structured answer.","The data is always live: exchange rates come from the Central Bank of Türkiye's official XML, product prices from the shop page, and bus times from obilet. There is no stale database and no guessed numbers.","The most important design principle of these servers is that they are read-only. They have no user account, no password and no token; they cannot log in to your account, buy anything or make a reservation. The worst thing a broken server can do is return a wrong answer — and you can always check it by opening the site.","All servers are open source and their code is on GitHub. If you are curious, you can see exactly what request each tool sends and what it returns. Transparency, instead of blind trust, is this project's principle."]}}
+  body:{fa:["هر سرور این کاتالوگ یک برنامهٔ کوچک پایتون است که با uvx اجرا می‌شود. وقتی دستیارت سؤالی می‌پرسد — مثلاً «ارزان‌ترین هدفون بی‌سیم چنده؟» — سرور به سایت مربوطه سر می‌زند، صفحه را می‌خواند و جواب ساخت‌یافته برمی‌گرداند.","داده‌ها همیشه زنده‌اند: نرخ ارز از XML رسمی بانک مرکزی ترکیه خوانده می‌شود، قیمت کالا از صفحهٔ فروشگاه، و ساعت اتوبوس از obilet. هیچ پایگاه دادهٔ قدیمی و هیچ عدد حدسی در میان نیست.","مهم‌ترین اصل طراحی این سرورها «فقط‌خواندنی» بودن است. آن‌ها هیچ حساب کاربری، رمز عبور یا توکنی ندارند؛ نمی‌توانند وارد حسابت شوی، خرید کنند یا رزرو انجام دهند. یک استثنا: hepsiburada-mcp اقدامات حساب اختیاری (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد که فقط وقتی کار می‌کنند که کوکی نشست مرورگر خودت را به پیکربندی آن اضافه کنی — بدون آن، مثل بقیه فقط‌خواندنی می‌ماند. بدترین کاری که یک سرور خراب می‌تواند بکند، برگرداندن یک جواب اشتباه است — و تو همیشه می‌توانی آن را با باز کردن سایت بررسی کنی.","همهٔ سرورها متن‌باز‌اند و کدشان در گیت‌هاب است. اگر کنجکاوی، می‌توانی دقیقاً ببینی هر ابزار چه درخواستی می‌فرستد و چه چیزی برمی‌گرداند. شفافیت، به‌جای اعتماد کورکورانه، اصل این پروژه است."],
+         tr:["Bu katalogdaki her sunucu uvx ile çalışan küçük bir Python programıdır. Asistanınız bir soru sorduğunda — örneğin “en ucuz kablosuz kulaklık ne kadar?” — sunucu ilgili siteye gider, sayfayı okur ve yapılandırılmış bir yanıt döndürür.","Veriler her zaman canlıdır: döviz kuru Türkiye Cumhuriyet Merkez Bankası'nın resmi XML'inden, ürün fiyatı mağaza sayfasından, otobüs saati obilet'ten okunur. Eski bir veritabanı ve tahminî sayı yoktur.","Bu sunucuların en önemli tasarım ilkesi “salt okunur” olmalarıdır. Hiçbir kullanıcı hesabı, şifre veya jetonları yoktur; hesabınıza giremez, satın alma yapamaz veya rezervasyon yapamazlar. Tek istisna: hepsiburada-mcp, kendi tarayıcı oturum çerezinizi yapılandırmasına eklediğinizde çalışan isteğe bağlı hesap işlemleri (sepet + favoriler) sunar — olmadan diğerleri gibi salt okunur kalır. Bozuk bir sunucunun yapabileceği en kötü şey yanlış bir yanıt döndürmektir — ve bunu siteyi açarak her zaman doğrulayabilirsiniz.","Tüm sunucular açık kaynaklıdır ve kodları GitHub'dadır. Merak ediyorsanız her aracın tam olarak hangi isteği gönderdiğini ve ne döndürdüğünü görebilirsiniz. Kör güven yerine şeffaflık bu projenin ilkesidir."],
+         en:["Each server in this catalog is a small Python program that runs with uvx. When your assistant asks a question — “what is the cheapest wireless earphone?” — the server visits the relevant site, reads the page and returns a structured answer.","The data is always live: exchange rates come from the Central Bank of Türkiye's official XML, product prices from the shop page, and bus times from obilet. There is no stale database and no guessed numbers.","The most important design principle of these servers is that they are read-only. They have no user account, no password and no token; they cannot log in to your account, buy anything or make a reservation. One exception: hepsiburada-mcp offers optional account actions (cart + favorites) that work only when you add your own browser session cookie to its config — without it, it stays read-only like the rest. The worst thing a broken server can do is return a wrong answer — and you can always check it by opening the site.","All servers are open source and their code is on GitHub. If you are curious, you can see exactly what request each tool sends and what it returns. Transparency, instead of blind trust, is this project's principle."]}}
 ];
 
 
@@ -973,7 +931,7 @@ fa:{
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
  about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
- about_catalog_t:"کاتالوگ", about_catalog_d:"۲۹ سرور، ۱۵۵ ابزار، همه فقط‌خواندنی؛ ۲۹ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است.",
+ about_catalog_t:"کاتالوگ", about_catalog_d:"۲۹ سرور، ۱۶۲ ابزار، به‌طور پیش‌فرض فقط‌خواندنی؛ ۲۹ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است. hepsiburada-mcp همچنین اقدامات حساب اختیاری با نشست محلی (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد — بدون نشست مرورگر شما غیرفعال است.",
  contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
  fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
@@ -991,7 +949,7 @@ fa:{
  ask_x_de:"🇩🇪 آلمان — بپرس",
  nav_connect:"اتصال",
  badge_nokey:"بدون کلید API",
- badge_local:"اجرا روی کامپیوتر شما",
+ badge_local:"اجرا روی کامپیوتر شما", badge_account:"اقدامات حساب",
  suggest_server:"پیشنهاد سرور تازه",
  conn_title:"دستیارت را وصل کن",
  conn_sub:"برنامه‌ات را انتخاب کن تا قدم‌به‌قدم ببینی چطور یک سرور را اضافه کنی. همهٔ سرورها محلی و فقط‌خواندنی‌اند؛ بدون کلید API و بدون حساب.",
@@ -1093,7 +1051,7 @@ tr:{
  about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
  about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
- about_catalog_t:"Katalog", about_catalog_d:"29 sunucu, 155 araç — hepsi salt okunur; 29 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır.",
+ about_catalog_t:"Katalog", about_catalog_d:"29 sunucu, 162 araç — varsayılan olarak salt okunur; 29 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır. hepsiburada-mcp ayrıca isteğe bağlı yerel oturumlu hesap işlemleri (sepet + favoriler) sunar — kendi tarayıcı oturumunuz olmadan pasiftir.",
  contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
  fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
@@ -1111,7 +1069,7 @@ tr:{
  ask_x_de:"🇩🇪 Almanya — Sor",
  nav_connect:"Bağlan",
  badge_nokey:"API anahtarı yok",
- badge_local:"Bilgisayarınızda çalışır",
+ badge_local:"Bilgisayarınızda çalışır", badge_account:"Hesap işlemleri",
  suggest_server:"Yeni sunucu öner",
  conn_title:"Asistanını bağla",
  conn_sub:"Bir sunucunun nasıl ekleneceğini adım adım görmek için uygulamanı seç. Tüm sunucular yerel ve salt okunurdur — API anahtarı yok, hesap yok.",
@@ -1213,7 +1171,7 @@ en:{
  about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
  about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
- about_catalog_t:"The catalog", about_catalog_d:"29 servers, 155 tools — all read-only; 29 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests.",
+ about_catalog_t:"The catalog", about_catalog_d:"29 servers, 162 tools — read-only by default; 29 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests. hepsiburada-mcp also offers optional local-session account actions (cart + favorites) — inert without your own browser session.",
  contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
  fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
@@ -1231,7 +1189,7 @@ en:{
  ask_x_de:"🇩🇪 Germany — Ask",
  nav_connect:"Connect",
  badge_nokey:"No API key",
- badge_local:"Runs on your computer",
+ badge_local:"Runs on your computer", badge_account:"Account actions",
  suggest_server:"Suggest a server",
  conn_title:"Connect your assistant",
  conn_sub:"Pick your app to see step by step how to add a server. Every server runs locally and is read-only — no API key, no account.",
@@ -1372,7 +1330,7 @@ function serverCard(s){
     <p class="meta-row"><span class="ic">▦</span> ${esc(catName(s.cat))} · ${fmtNum(s.tools.length)} ${t("tools_count")}</p>
     <p class="meta-row"><span class="ic">✓</span> ${t("status_available")} · stdio · uvx · ${t("badge_nokey")}</p>
     <div class="card-bottom">
-      ${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span>`:`<span class="chip">${esc(catName(s.cat))}</span>`}
+      ${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span>`:`<span class="chip">${esc(catName(s.cat))}</span>`}${s.account?` <span class="badge badge-acct">🔑 ${t("badge_account")}</span>`:""}
       <a class="btn btn-primary btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a>
     </div>
   </article>`;
@@ -1558,7 +1516,8 @@ function toolHTML(id){
   if(!s) return notFoundHTML();
   pushRecent("server", id);
   const cmd = `claude mcp add --transport stdio --scope user ${s.id.replace("-mcp","")} -- uvx ${s.pypi}`;
-  const cfg = `{\n  "mcpServers": {\n    "${s.id.replace("-mcp","")}": {\n      "command": "uvx",\n      "args": ["${s.pypi}"]\n    }\n  }\n}`;
+  const envJson = s.env ? ",\n      \"env\": " + JSON.stringify(s.env, null, 2).split("\n").join("\n      ") : "";
+  const cfg = `{\n  "mcpServers": {\n    "${s.id.replace("-mcp","")}": {\n      "command": "uvx",\n      "args": ["${s.pypi}"]${envJson}\n    }\n  }\n}`;
   return `<section class="section"><div class="wrap">
     <p><a href="${hashFor("marketplace")}">← ${t("back")}</a></p>
     <div class="detail-head">
@@ -1566,7 +1525,7 @@ function toolHTML(id){
       <div style="flex:1;min-width:0">
         <h1>${esc(s.title)}</h1>
         <p class="latin">${esc(s.id)} · v0.1.0</p>
-        <p>${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span> `:""}<span class="badge badge-ok">✓ ${t("status_available")}</span> <span class="chip">💻 ${t("badge_local")}</span> <span class="chip">${esc(catName(s.cat))}</span></p>
+        <p>${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span> `:""}${s.account?`<span class="badge badge-acct">🔑 ${t("badge_account")}</span> `:""}<span class="badge badge-ok">✓ ${t("status_available")}</span> <span class="chip">💻 ${t("badge_local")}</span> <span class="chip">${esc(catName(s.cat))}</span></p>
       </div>
       ${starBtn("server", s.id)}
     </div>
@@ -1901,10 +1860,14 @@ function askHTML(){
 const CONNECT_STATE = {app:"claude-code"};
 function connSnippet(app, s){
   const short = s.id.replace("-mcp","");
-  if(app.kind==="cli") return "claude mcp add --transport stdio --scope user "+short+" -- uvx "+s.pypi;
-  if(app.kind==="toml") return '[mcp_servers.'+short+']\ncommand = "uvx"\nargs = ["'+s.pypi+'"]';
-  if(app.kind==="vscode") return '{\n  "servers": {\n    "'+short+'": {\n      "type": "stdio",\n      "command": "uvx",\n      "args": ["'+s.pypi+'"]\n    }\n  }\n}';
-  return '{\n  "mcpServers": {\n    "'+short+'": {\n      "command": "uvx",\n      "args": ["'+s.pypi+'"]\n    }\n  }\n}';
+  const envKeys = s.env ? Object.keys(s.env) : [];
+  const envJson = envKeys.length ? ',\n      "env": {' + envKeys.map(k=>'\n        "'+k+'": "'+s.env[k]+'"').join(',') + '\n      }' : '';
+  const envToml = envKeys.length ? '\nenv = {' + envKeys.map(k=>k+' = "'+s.env[k]+'"').join(', ') + '}' : '';
+  const envCli = envKeys.length ? envKeys.map(k=>' -e '+k+'='+s.env[k]).join('') : '';
+  if(app.kind==="cli") return "claude mcp add --transport stdio --scope user "+short+envCli+" -- uvx "+s.pypi;
+  if(app.kind==="toml") return '[mcp_servers.'+short+']\ncommand = "uvx"\nargs = ["'+s.pypi+'"]'+envToml;
+  if(app.kind==="vscode") return '{\n  "servers": {\n    "'+short+'": {\n      "type": "stdio",\n      "command": "uvx",\n      "args": ["'+s.pypi+'"]'+envJson+'\n    }\n  }\n}';
+  return '{\n  "mcpServers": {\n    "'+short+'": {\n      "command": "uvx",\n      "args": ["'+s.pypi+'"]'+envJson+'\n    }\n  }\n}';
 }
 function connectHTML(){
   const s = SERVERS.find(x=>x.featured) || SERVERS[0];
