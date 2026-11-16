@@ -1,6 +1,6 @@
 # Turkey MCP
 
-> 29 MCP servers (167 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+> 30 MCP servers (174 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
 - [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp): Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key). (4 tools)
 - [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp): Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY). (5 tools)
@@ -31,6 +31,7 @@
 - [iskur-mcp](https://github.com/mohammad-abbasi-sh/iskur-mcp): Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements. (6 tools)
 - [beyazperde-mcp](https://github.com/mohammad-abbasi-sh/beyazperde-mcp): Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities. (7 tools)
 - [nefisyemektarifleri-mcp](https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp): Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories. (7 tools)
+- [paribu-mcp](https://github.com/mohammad-abbasi-sh/paribu-mcp): Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets. (7 tools)
 
 ## Install
 
