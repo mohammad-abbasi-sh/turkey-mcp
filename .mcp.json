@@ -179,6 +179,12 @@
       "args": [
         "nefisyemektarifleri-mcp"
       ]
+    },
+    "paribu": {
+      "command": "uvx",
+      "args": [
+        "paribu-mcp"
+      ]
     }
   }
 }
