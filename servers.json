@@ -609,7 +609,7 @@
    ]
   },
   {
-   "description": "Unofficial read-only MCP server for Migros Sanal Market — search, prices, promos, categories.",
+   "description": "Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie.",
    "name": "migros-mcp",
    "pypi": "migros-mcp",
    "repository": "https://github.com/mohammad-abbasi-sh/migros-mcp",
@@ -635,8 +635,32 @@
     {
      "name": "migros_price_stats",
      "summary": "Price stats for a query in TRY"
+    },
+    {
+     "name": "migros_view_cart",
+     "summary": "View your cart: items, quantities, totals"
+    },
+    {
+     "name": "migros_add_to_cart",
+     "summary": "Add a product to your cart (confirm=true)"
+    },
+    {
+     "name": "migros_remove_from_cart",
+     "summary": "Remove a product from your cart (confirm=true)"
+    },
+    {
+     "name": "migros_update_cart_quantity",
+     "summary": "Change a cart item's quantity (confirm=true)"
+    },
+    {
+     "name": "migros_create_order",
+     "summary": "Start checkout: returns the payment link, never pays"
     }
-   ]
+   ],
+   "env": {
+    "MIGROS_SESSION": "YOUR_SESSION_COOKIE_HERE"
+   },
+   "account_actions": true
   },
   {
    "description": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
@@ -943,6 +967,44 @@
      "summary": "Check whether nefisyemektarifleri.com is reachable right now"
     }
    ]
-  }
+  },
+   {
+    "description": "Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets.",
+    "name": "paribu-mcp",
+    "pypi": "paribu-mcp",
+    "repository": "https://github.com/mohammad-abbasi-sh/paribu-mcp",
+    "title": "Paribu — crypto exchange: tickers, order books, trades & markets",
+    "title_tr": "Paribu — kripto borsası: fiyatlar, emir defteri, işlemler ve piyasalar",
+    "tools": [
+     {
+      "name": "paribu_get_ticker",
+      "summary": "24h ticker for one market, or a ranked list of all 266 markets"
+     },
+     {
+      "name": "paribu_get_orderbook",
+      "summary": "Live order book: best bid/ask, spread, mid price, levels"
+     },
+     {
+      "name": "paribu_get_recent_trades",
+      "summary": "Most recent public trades, newest first (1–20)"
+     },
+     {
+      "name": "paribu_list_markets",
+      "summary": "Full 467-pair catalogue with precision, steps, labels"
+     },
+     {
+      "name": "paribu_get_currency",
+      "summary": "Currency metadata: networks, withdrawal fees, limits"
+     },
+     {
+      "name": "paribu_market_movers",
+      "summary": "Top gainers / losers over the last 24h by percentage"
+     },
+     {
+      "name": "paribu_health",
+      "summary": "Check whether api.paribu.com is reachable"
+     }
+    ]
+   }
  ]
 }
