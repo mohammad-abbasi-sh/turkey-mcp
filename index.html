@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F5F7FC">
 <title>Turkey MCP — Connect AI to the World</title>
 <meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 30 servers, 174 tools, in English, Türkçe and فارسی.">
 <link rel="canonical" href="https://mohammad-abbasi-sh.github.io/turkey-mcp/">
@@ -31,7 +32,7 @@
 <style>
 :root{
   --bg:#F5F7FC; --card:#FFFFFF; --elev:#FFFFFF; --text:#101B35; --muted:#5A6B8C;
-  --line:#E4E9F4; --primary:#6657E8; --primary-2:#7C6FF0; --primary-soft:#EFEDFD;
+  --line:#E4E9F4; --primary:#6657E8; --primary-2:#7C6FF0; --primary-ink:#5748D6; --primary-soft:#EFEDFD;
   --secondary:#19C6B3; --secondary-soft:#E2F8F5; --accent:#FFB86B; --accent-soft:#FFF3E2;
   --navy:#101B35; --danger:#E5484D; --ok:#0E9F6E;
   --shadow:0 10px 30px rgba(16,27,53,.08); --shadow-lg:0 24px 60px rgba(16,27,53,.14);
@@ -41,7 +42,7 @@
 }
 [data-theme="dark"]{
   --bg:#0B1120; --card:#141E32; --elev:#1B2940; --text:#F5F7FC; --muted:#9AA8C7;
-  --line:#24314F; --primary:#8B80FF; --primary-2:#A39CFF; --primary-soft:#23264D;
+  --line:#24314F; --primary:#8B80FF; --primary-2:#A39CFF; --primary-ink:#A39CFF; --primary-soft:#23264D;
   --secondary:#32DCC7; --secondary-soft:#123B38; --accent:#FFB86B; --accent-soft:#3A2B17;
   --shadow:0 10px 30px rgba(0,0,0,.35); --shadow-lg:0 24px 60px rgba(0,0,0,.5);
 }
@@ -67,7 +68,7 @@ pre code{background:none;padding:0;color:inherit}
 .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
 .section-head h2{font-size:30px;margin:0}
 .section-head p{color:var(--muted);margin:6px 0 0;max-width:640px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--primary);background:var(--primary-soft);border-radius:999px;padding:5px 14px;margin-bottom:14px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--primary-ink);background:var(--primary-soft);border-radius:999px;padding:5px 14px;margin-bottom:14px}
 .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--secondary)}
 /* ---------- header / nav ---------- */
 header.site{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
@@ -77,9 +78,9 @@ header.site{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);-webkit-
 .brand .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#9B8CFF 55%,var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:19px;box-shadow:0 6px 16px rgba(102,87,232,.35)}
 .brand small{display:block;font-size:11px;font-weight:600;color:var(--muted);line-height:1}
 nav.main{display:flex;gap:2px;margin-inline-start:8px}
-nav.main a{color:var(--muted);font-size:14.5px;font-weight:600;padding:8px 12px;border-radius:999px;text-decoration:none;white-space:nowrap}
+nav.main a{color:var(--muted);font-size:14.5px;font-weight:600;padding:8px 10px;border-radius:999px;text-decoration:none;white-space:nowrap}
 nav.main a:hover{color:var(--text);background:var(--primary-soft);text-decoration:none}
-nav.main a.active{color:var(--primary);background:var(--primary-soft)}
+nav.main a.active{color:var(--primary-ink);background:var(--primary-soft)}
 .nav-right{margin-inline-start:auto;display:flex;align-items:center;gap:8px}
 .icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);display:inline-flex;align-items:center;justify-content:center;font-size:17px}
 .icon-btn:hover{border-color:var(--primary)}
@@ -152,18 +153,18 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 .card-bottom .count{color:var(--muted);font-size:13px}
 .card-bottom .btn{margin-inline-start:auto}
 .badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
-.badge-feat{background:var(--accent-soft);color:#B26A00}
+.badge-feat{background:var(--accent-soft);color:#8A5200}
 [data-theme="dark"] .badge-feat{color:var(--accent)}
 .badge-ok{background:var(--secondary-soft);color:#0B7A6E}
 [data-theme="dark"] .badge-ok{color:var(--secondary)}
-.badge-soon{background:var(--primary-soft);color:var(--primary)}
+.badge-soon{background:var(--primary-soft);color:var(--primary-ink)}
 .badge-acct{background:#FEF3C7;color:#92400E}
 [data-theme="dark"] .badge-acct{background:#3A2E12;color:#FCD34D}
 .badge-verified{background:var(--secondary-soft);color:#0B7A6E}
 [data-theme="dark"] .badge-verified{color:var(--secondary)}
 .badge-unverified{background:#FDECEC;color:#B42318}
 [data-theme="dark"] .badge-unverified{background:#3A1D1D;color:#FF9A94}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--primary-soft);color:var(--primary);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--primary-soft);color:var(--primary-ink);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;white-space:nowrap}
 .chip.mint{background:var(--secondary-soft);color:#0B7A6E}
 [data-theme="dark"] .chip.mint{color:var(--secondary)}
 .star-btn{border:1px solid var(--line);background:var(--card);border-radius:10px;width:36px;height:36px;font-size:17px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center}
@@ -224,7 +225,7 @@ nav.main a.active{color:var(--primary);background:var(--primary-soft)}
 [data-theme="dark"] .alert-ok{color:var(--secondary)}
 .alert-err{background:#FDECEC;color:#B42318}
 [data-theme="dark"] .alert-err{background:#3A1D1D;color:#FF9A94}
-.alert-info{background:var(--primary-soft);color:var(--primary)}
+.alert-info{background:var(--primary-soft);color:var(--primary-ink)}
 .note{font-size:13px;color:var(--muted);background:var(--primary-soft);border-radius:12px;padding:12px 14px;margin-top:16px}
 /* blog / tutorial */
 .article-body{max-width:760px}
@@ -261,10 +262,38 @@ footer.site{margin-top:90px;border-top:1px solid var(--line);background:var(--ca
 .skip{position:absolute;inset-inline-start:-9999px}
 .skip:focus{position:fixed;inset-inline-start:16px;top:16px;z-index:200;background:var(--primary);color:#fff;padding:10px 18px;border-radius:999px}
 :focus-visible{outline:3px solid var(--primary);outline-offset:2px;border-radius:6px}
+
+/* connect tracks */
+.track-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 26px}
+.track-tab{text-align:start;background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:20px 22px;cursor:pointer;transition:border-color .2s,box-shadow .2s;color:var(--text)}
+.track-tab:hover{border-color:var(--primary)}
+.track-tab.active{border-color:var(--primary);background:var(--primary-soft);box-shadow:var(--shadow)}
+.track-tab .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--primary-ink);background:var(--primary-soft);border-radius:999px;padding:2px 10px;margin-bottom:10px}
+.track-tab.active .tag{background:var(--card)}
+.track-tab .tt{display:block;font-size:18px;font-weight:800;margin:0 0 6px}
+.track-tab .td{display:block;color:var(--muted);font-size:14px}
+.big-steps{list-style:none;padding:0;margin:0 0 26px;counter-reset:bigstep}
+.big-steps>li{counter-increment:bigstep;position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 22px 76px;margin-bottom:16px;box-shadow:var(--shadow)}
+[dir="rtl"] .big-steps>li{padding:22px 76px 22px 22px}
+.big-steps>li::before{content:counter(bigstep);position:absolute;inset-inline-start:22px;top:20px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+.big-steps h3{font-size:17px;margin:0 0 8px}
+.big-steps p{color:var(--muted);font-size:14.5px}
+.big-steps p:last-child{margin-bottom:0}
+.callout{background:var(--accent-soft);border:1px solid #F5D9A8;border-radius:var(--radius);padding:16px 18px;font-size:14.5px;margin:0 0 22px}
+[data-theme="dark"] .callout{border-color:#5C4520}
+.paths{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 4px}
+.paths th,.paths td{text-align:start;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.paths th{color:var(--muted);font-size:13px}
+.paths code{white-space:nowrap}
+.os-block{margin:12px 0}
+.os-block h4{font-size:14.5px;margin:0 0 6px}
+
 /* responsive */
-@media (max-width:1020px){
+@media (max-width:1280px){
   nav.main{display:none}
   .burger{display:inline-flex}
+}
+@media (max-width:1020px){
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .hero h1{font-size:40px}
   .grid-4{grid-template-columns:repeat(2,1fr)}
@@ -290,6 +319,14 @@ footer.site{margin-top:90px;border-top:1px solid var(--line);background:var(--ca
   .icon-btn{width:44px;height:44px;font-size:17px}
   .lang-select{padding:0 4px;font-size:12px}
   .fav-btn{display:none}
+  .nav{gap:8px}
+  .detail-head h1{font-size:24px}
+  .copy-row{flex-direction:column}
+  .copy-row .copy-btn{padding:11px 16px}
+  .track-grid{grid-template-columns:1fr}
+  .big-steps>li{padding:64px 18px 18px}
+  [dir="rtl"] .big-steps>li{padding:64px 18px 18px}
+  .big-steps>li::before{top:14px;inset-inline-start:18px;width:36px;height:36px;font-size:16px}
 }
 </style>
 </head>
@@ -757,7 +794,7 @@ const CATEGORIES = [
  {id:"entertainment",icon:"🎬",color:"#7E22CE",soon:false},
  {id:"sports",icon:"⚽",color:"#15803D",soon:false},
  {id:"productivity",icon:"⚡",color:"#7C3AED",soon:true},
- {id:"communication",icon:"💬",color:"#EC4899",soon:true},
+ {id:"communication",icon:"💬",color:"#EC4899",soon:false},
  {id:"development",icon:"💻",color:"#0EA5E9",soon:true},
  {id:"data",icon:"📊",color:"#F59E0B",soon:true}
 ];
@@ -767,7 +804,7 @@ const PLATFORMS_VERIFIED = [
  {id:"claude-code",name:"Claude Code",icon:"⌘",desc:{fa:"ایجنت خط فرمان — با یک دستور ترمینال وصل می‌شود.",tr:"Komut satırı ajanı — tek bir terminal komutuyla bağlanın.",en:"CLI agent — connect with one terminal command."}},
  {id:"cursor",name:"Cursor",icon:"▸",desc:{fa:"ویرایشگر کد هوش مصنوعی — سرور را در تنظیمات MCP اضافه کنید.",tr:"Yapay zekâ kod düzenleyicisi — sunucuyu MCP ayarlarından ekleyin.",en:"AI code editor — add the server in MCP settings."}},
  {id:"claude-desktop",name:"Claude Desktop",icon:"▣",desc:{fa:"برنامهٔ دسکتاپ — سرور را به فایل تنظیماتش اضافه کنید.",tr:"Masaüstü uygulaması — sunucuyu yapılandırma dosyasına ekleyin.",en:"Desktop app — add the server to its config file."}},
- {id:"vscode",name:"VS Code",icon:"◈",desc:{fa:"هر ویرایشگر سازگار با MCP، با یک تنظیم stdio.",tr:"stdio yapılandırmasıyla MCP uyumlu her düzenleyici.",en:"Any MCP-compatible editor via a stdio config."}}
+ {id:"vscode",name:"VS Code",icon:"◈",desc:{fa:"ویرایشگر کد — فایل «.vscode/mcp.json» را در پوشهٔ پروژه بساز.",tr:"Kod düzenleyici — proje klasöründe «.vscode/mcp.json» oluştur.",en:"Code editor — create «.vscode/mcp.json» in your project folder."}}
 ];
 const PLATFORMS_UNVERIFIED = [
  {id:"chatgpt",name:"ChatGPT",icon:"✦",desc:{fa:"وب‌اپ — سرورهای stdio محلی اینجا تأیید نشده‌اند.",tr:"Web uygulaması — yerel stdio sunucuları burada doğrulanmadı.",en:"Web app — local stdio servers are not verified here."}},
@@ -862,7 +899,7 @@ const FAQ = [
  {q:{fa:"برای استفاده از سرورها کلید API لازم است؟",tr:"Sunucuları kullanmak için API anahtarı gerekir mi?",en:"Do I need an API key to use the servers?"},a:{fa:"نه. همهٔ سرورها روی کامپیوتر خودت با uvx اجرا می‌شوند؛ بدون کلید API، بدون حساب و بدون ثبت‌نام.",tr:"Hayır. Tüm sunucular uvx ile kendi bilgisayarınızda çalışır — API anahtarı yok, hesap yok, kayıt yok.",en:"No. Every server runs on your own computer with uvx — no API key, no account, no sign-up."}},
  {q:{fa:"سرورها فقط‌خواندنی‌اند؟",tr:"Sunucular salt okunur mu?",en:"Are the servers read-only?"},a:{fa:"بله. سرورها فقط دادهٔ عمومی سایت‌ها را می‌خوانند؛ چیزی نمی‌خرند، رزرو نمی‌کنند و در هیچ حسابی تغییری نمی‌دهند. یک استثنا: hepsiburada-mcp اقدامات حساب اختیاری (سبد خرید و علاقه‌مندی‌ها) دارد که فقط با کوکی نشست مرورگر خودت کار می‌کنند — بدون آن، مثل بقیه فقط‌خواندنی است.",tr:"Evet. Sunucular yalnızca sitelerin herkese açık verilerini okur; hiçbir şey satın almaz, rezerve etmez ve hiçbir hesapta değişiklik yapmaz. Tek istisna: hepsiburada-mcp, yalnızca kendi tarayıcı oturum çerezinizle çalışan isteğe bağlı hesap işlemleri (sepet + favoriler) sunar — olmadan diğerleri gibi salt okunurdur.",en:"Yes. The servers only read the sites' public data; they never buy, book, or change anything in an account. One exception: hepsiburada-mcp offers optional account actions (cart + favorites) that work only with your own browser session cookie — without it, it is read-only like the rest."}},
  {q:{fa:"این سرورها رسمی‌اند؟",tr:"Bu sunucular resmi mi?",en:"Are these servers official?"},a:{fa:"نه؛ غیررسمی و ساختهٔ جامعه‌اند و از همان نشانی‌هایی استفاده می‌کنند که خود سایت‌ها به کار می‌برند. اگر سایتی تغییر کند، سرورش ممکن است از کار بیفتد؛ اینجا نگهداری و به‌روز می‌شوند.",tr:"Hayır; resmi değiller, topluluk yapımıdır ve sitelerin kendi kullandığı adresleri kullanırlar. Bir site değişirse sunucusu bozulabilir; burada bakımı yapılır ve güncellenir.",en:"No; they are unofficial, community-built, and use the same endpoints the sites themselves use. If a site changes, its server may break; they are maintained and updated here."}},
- {q:{fa:"چطور یک سرور را وصل کنم؟",tr:"Bir sunucuyu nasıl bağlarım?",en:"How do I connect a server?"},a:{fa:"از صفحهٔ «اتصال»، برنامه‌ات را انتخاب کن و قدم‌ها را دنبال کن — معمولاً یک دستور ترمینال یا چند خط تنظیمات است.",tr:"«Bağlan» sayfasından uygulamanı seç ve adımları izle — genellikle bir terminal komutu ya da birkaç satır ayar yeter.",en:"Pick your app on the «Connect» page and follow the steps — usually one terminal command or a few lines of config."}},
+ {q:{fa:"چطور یک سرور را وصل کنم؟",tr:"Bir sunucuyu nasıl bağlarım?",en:"How do I connect a server?"},a:{fa:"صفحهٔ «اتصال» دو راهنما دارد: «شروع ساده» برای Claude Desktop قدم‌به‌قدم و بدون دانش فنی است؛ «راهنمای فنی» هم دستورها و تنظیمات همهٔ برنامه‌ها را دارد.",tr:"«Bağlan» sayfasında iki kılavuz var: «Kolay başlangıç», Claude Desktop için adım adım ve teknik bilgi gerektirmez; «Teknik kılavuz» ise tüm uygulamaların komutlarını ve ayarlarını içerir.",en:"The «Connect» page has two guides: «Easy start» is step-by-step for Claude Desktop with no technical knowledge needed; the «Technical guide» has the commands and settings for every app."}},
  {q:{fa:"با کدام برنامه‌ها کار می‌کند؟",tr:"Hangi uygulamalarla çalışır?",en:"Which apps does it work with?"},a:{fa:"هر کلاینت MCP که سرور stdio محلی را پشتیبانی کند: Claude Code، Claude Desktop، Cursor و VS Code اینجا تأیید شده‌اند؛ Windsurf، Codex CLI و Gemini CLI هم با تنظیم استاندارد کار می‌کنند.",tr:"Yerel stdio sunucusunu destekleyen her MCP istemcisiyle: Claude Code, Claude Desktop, Cursor ve VS Code burada doğrulandı; Windsurf, Codex CLI ve Gemini CLI de standart ayarla çalışır.",en:"Any MCP client that supports local stdio servers: Claude Code, Claude Desktop, Cursor and VS Code are verified here; Windsurf, Codex CLI and Gemini CLI also work with the standard config."}},
  {q:{fa:"چطور یک سرور تازه پیشنهاد دهم؟",tr:"Yeni bir sunucu nasıl öneririm?",en:"How do I suggest a new server?"},a:{fa:"در گیت‌هاب یک ایشو باز کن و بگو چه سرویسی، چه داده‌ای و چرا به درد می‌خورد.",tr:"GitHub'da bir issue aç ve hangi hizmeti, hangi veriyi ve neden işe yarayacağını yaz.",en:"Open an issue on GitHub and say which service, which data, and why it would be useful."}}
 ];
@@ -925,7 +962,7 @@ const ARTICLES = [
          en:["If you mostly live in the terminal, Claude Code is the fastest path: one command and the server is connected. For anyone comfortable with the command line, there is nothing simpler.","If you are a programmer who lives in a code editor, Cursor or VS Code is the natural choice; the server sits next to your code and you can ask the assistant to see code and real data at the same time.","If you only want to chat and ask questions, Claude Desktop is the simplest option: you edit the config file once, and afterwards everything happens in the chat.","One important note: local (stdio) servers run only on your own computer. The web versions of ChatGPT and Gemini are not yet verified with these servers — so if you use the web version, pick a desktop or command-line client instead."]}},
  {id:"turkey-servers",cat:"guides",date:"2026-11-03",mins:7,cover:"g3",icon:"🇹🇷",
   title:{fa:"سرورهای ترکیه چطور کار می‌کنند؟",tr:"Türkiye sunucuları nasıl çalışır?",en:"How do the Turkey servers work?"},
-  ex:{fa:"پشت صحنهٔ بیست‌ودو سرور فقط‌خواندنی: از کجا داده می‌خوانند، چه چیزی را نمی‌توانند انجام دهند و چرا امن‌اند.",tr:"Yirmi iki salt okunur sunucunun perde arkası: veriyi nereden okurlar, neyi yapamazlar ve neden güvenlidirler.",en:"Behind the scenes of twenty-two read-only servers: where they read data, what they cannot do, and why they are safe."},
+  ex:{fa:"پشت صحنهٔ سرورهای فقط‌خواندنی: از کجا داده می‌خوانند، چه چیزی را نمی‌توانند انجام دهند و چرا امن‌اند.",tr:"Salt okunur sunucuların perde arkası: veriyi nereden okurlar, neyi yapamazlar ve neden güvenlidirler.",en:"Behind the scenes of the read-only servers: where they read data, what they cannot do, and why they are safe."},
   body:{fa:["هر سرور این کاتالوگ یک برنامهٔ کوچک پایتون است که با uvx اجرا می‌شود. وقتی دستیارت سؤالی می‌پرسد — مثلاً «ارزان‌ترین هدفون بی‌سیم چنده؟» — سرور به سایت مربوطه سر می‌زند، صفحه را می‌خواند و جواب ساخت‌یافته برمی‌گرداند.","داده‌ها همیشه زنده‌اند: نرخ ارز از XML رسمی بانک مرکزی ترکیه خوانده می‌شود، قیمت کالا از صفحهٔ فروشگاه، و ساعت اتوبوس از obilet. هیچ پایگاه دادهٔ قدیمی و هیچ عدد حدسی در میان نیست.","مهم‌ترین اصل طراحی این سرورها «فقط‌خواندنی» بودن است. آن‌ها هیچ حساب کاربری، رمز عبور یا توکنی ندارند؛ نمی‌توانند وارد حسابت شوی، خرید کنند یا رزرو انجام دهند. یک استثنا: hepsiburada-mcp اقدامات حساب اختیاری (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد که فقط وقتی کار می‌کنند که کوکی نشست مرورگر خودت را به پیکربندی آن اضافه کنی — بدون آن، مثل بقیه فقط‌خواندنی می‌ماند. بدترین کاری که یک سرور خراب می‌تواند بکند، برگرداندن یک جواب اشتباه است — و تو همیشه می‌توانی آن را با باز کردن سایت بررسی کنی.","همهٔ سرورها متن‌باز‌اند و کدشان در گیت‌هاب است. اگر کنجکاوی، می‌توانی دقیقاً ببینی هر ابزار چه درخواستی می‌فرستد و چه چیزی برمی‌گرداند. شفافیت، به‌جای اعتماد کورکورانه، اصل این پروژه است."],
          tr:["Bu katalogdaki her sunucu uvx ile çalışan küçük bir Python programıdır. Asistanınız bir soru sorduğunda — örneğin “en ucuz kablosuz kulaklık ne kadar?” — sunucu ilgili siteye gider, sayfayı okur ve yapılandırılmış bir yanıt döndürür.","Veriler her zaman canlıdır: döviz kuru Türkiye Cumhuriyet Merkez Bankası'nın resmi XML'inden, ürün fiyatı mağaza sayfasından, otobüs saati obilet'ten okunur. Eski bir veritabanı ve tahminî sayı yoktur.","Bu sunucuların en önemli tasarım ilkesi “salt okunur” olmalarıdır. Hiçbir kullanıcı hesabı, şifre veya jetonları yoktur; hesabınıza giremez, satın alma yapamaz veya rezervasyon yapamazlar. Tek istisna: hepsiburada-mcp, kendi tarayıcı oturum çerezinizi yapılandırmasına eklediğinizde çalışan isteğe bağlı hesap işlemleri (sepet + favoriler) sunar — olmadan diğerleri gibi salt okunur kalır. Bozuk bir sunucunun yapabileceği en kötü şey yanlış bir yanıt döndürmektir — ve bunu siteyi açarak her zaman doğrulayabilirsiniz.","Tüm sunucular açık kaynaklıdır ve kodları GitHub'dadır. Merak ediyorsanız her aracın tam olarak hangi isteği gönderdiğini ve ne döndürdüğünü görebilirsiniz. Kör güven yerine şeffaflık bu projenin ilkesidir."],
          en:["Each server in this catalog is a small Python program that runs with uvx. When your assistant asks a question — “what is the cheapest wireless earphone?” — the server visits the relevant site, reads the page and returns a structured answer.","The data is always live: exchange rates come from the Central Bank of Türkiye's official XML, product prices from the shop page, and bus times from obilet. There is no stale database and no guessed numbers.","The most important design principle of these servers is that they are read-only. They have no user account, no password and no token; they cannot log in to your account, buy anything or make a reservation. One exception: hepsiburada-mcp offers optional account actions (cart + favorites) that work only when you add your own browser session cookie to its config — without it, it stays read-only like the rest. The worst thing a broken server can do is return a wrong answer — and you can always check it by opening the site.","All servers are open source and their code is on GitHub. If you are curious, you can see exactly what request each tool sends and what it returns. Transparency, instead of blind trust, is this project's principle."]}}
@@ -956,7 +993,7 @@ fa:{
  cat_finance:"مالی و ارز", cat_finance_d:"نرخ رسمی بانک مرکزی ترکیه",
  cat_news:"اخبار", cat_news_d:"Sözcü، Hürriyet، TRT Haber و DonanımHaber",
  cat_jobs:"کاریابی", cat_jobs_d:"آگهی‌های شغلی İŞKUR، secretcv.com و eleman.net",
- cat_food:"غذا و رسپی", cat_food_d:"رسپی‌های Yemek.com",
+ cat_food:"غذا و رسپی", cat_food_d:"رسپی‌های Yemek.com و Nefis Yemek Tarifleri",
  cat_grocery:"سوپرمارکت", cat_grocery_d:"کالاهای ŞOK، Migros Sanal Market و BİM",
  cat_entertainment:"سرگرمی", cat_entertainment_d:"رویدادهای Biletix، سینماهای Paribu Cineverse و استریم tabii",
  cat_sports:"ورزش", cat_sports_d:"نتایج زندهٔ Mackolik و لیگ‌های TFF",
@@ -974,7 +1011,7 @@ fa:{
  plat_unverified_note:"نسخهٔ وب این سرویس‌ها با سرورهای محلی stdio تأیید نشده است — ادعای سازگاری نمی‌کنیم.",
  how_title:"چطور کار می‌کند؟", how_sub:"سه قدم تا اولین سؤال واقعی از دستیارت.",
  how_s1_t:"۱. یک سرور MCP پیدا کن", how_s1_d:"در بازارچه بگرد؛ هر سرور یک سرویس ترکیه را پوشش می‌دهد و فهرست ابزارهایش مشخص است.",
- how_s2_t:"۲. آن را به دستیارت وصل کن", how_s2_d:"با یک دستور uvx در Claude Code، یا با چند کلیک در Cursor و Claude Desktop.",
+ how_s2_t:"۲. آن را به دستیارت وصل کن", how_s2_d:"با یک دستور در Claude Code، یا با ویرایش یک فایل تنظیمات در Claude Desktop و Cursor.",
  how_s3_t:"۳. از هوش مصنوعی استفاده کن", how_s3_d:"به‌جای باز کردن ده تب، بپرس — جواب را با عدد، قیمت و منبع می‌گیری.",
  skills_title:"بازارچهٔ مهارت‌ها", skills_sub:"مهارت‌های واقعی ایجنت که یک خلأ اثبات‌شده در اکوسیستم Claude را پر می‌کنند.",
  skill_compat:"سازگار با", skill_gap:"خلأیی که پر می‌کند", skill_repo:"گیت‌هاب", skill_tests:"تست",
@@ -998,14 +1035,14 @@ fa:{
  tool_conn:"روش اتصال", tool_conn_d:"سرور محلی stdio — با uvx اجرا می‌شود، بدون کلید API و بدون حساب.",
  tool_cat:"دسته‌بندی", tool_status:"وضعیت", tool_platforms:"پلتفرم‌های تأییدشده",
  back:"بازگشت",
- cats_page_title:"دسته‌بندی‌ها", cats_page_sub:"شش دستهٔ واقعی با سرور زنده، و دسته‌هایی که هنوز در این کاتالوگ نیستند.",
+ cats_page_title:"دسته‌بندی‌ها", cats_page_sub:"دسته‌های واقعی با سرور زنده، و دسته‌هایی که هنوز در این کاتالوگ نیستند.",
  skills_page_title:"بازارچهٔ مهارت‌ها", skills_page_sub:"مهارت‌های ایجنت ساخته‌شده برای خلأهای واقعی اکوسیستم Claude.",
  skills_search_ph:"جستجو در مهارت‌ها…",
  tut_page_title:"آموزش‌ها", tut_page_sub:"از نصب تا عیب‌یابی — همه با دستورهای واقعی.",
  blog_page_title:"وبلاگ", blog_page_sub:"مقاله‌های آموزشی دربارهٔ MCP و سرورهای ترکیه.",
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
- about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ را مثل پروژهٔ iran-mcp سپهر ساخت: یک مرجع کامل، نه مجموعه‌ای از نمونه‌کارها.",
+ about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ یک مرجع کامل است، نه مجموعه‌ای از نمونه‌کارها.",
  about_catalog_t:"کاتالوگ", about_catalog_d:"۳۰ سرور، ۱۷۴ ابزار، به‌طور پیش‌فرض فقط‌خواندنی؛ ۲۹ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است. hepsiburada-mcp همچنین اقدامات حساب اختیاری با نشست محلی (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد — بدون نشست مرورگر شما غیرفعال است.",
  contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
@@ -1027,7 +1064,7 @@ fa:{
  badge_local:"اجرا روی کامپیوتر شما", badge_account:"اقدامات حساب",
  suggest_server:"پیشنهاد سرور تازه",
  conn_title:"دستیارت را وصل کن",
- conn_sub:"برنامه‌ات را انتخاب کن تا قدم‌به‌قدم ببینی چطور یک سرور را اضافه کنی. همهٔ سرورها محلی و فقط‌خواندنی‌اند؛ بدون کلید API و بدون حساب.",
+ conn_sub:"دو راهنما داریم: «شروع ساده» برای کسانی که دانش فنی ندارند (با Claude Desktop، قدم‌به‌قدم)، و «راهنمای فنی» برای برنامه‌نویس‌ها. همهٔ سرورها محلی و فقط‌خواندنی‌اند؛ بدون کلید API و بدون حساب.",
  conn_pick:"برنامه‌ات را انتخاب کن",
  conn_prereq_t:"پیش‌نیاز: uvx",
  conn_prereq_d:"uvx سرورها را بدون نصب جداگانه اجرا می‌کند. اگر نصب نیست، با یک دستور نصبش کن و ترمینال را دوباره باز کن.",
@@ -1051,6 +1088,55 @@ fa:{
  conn_sample:"مثال با سرور «{name}» — برای هر سرور دیگر، نام و بسته را عوض کن.",
  conn_llms_t:"برای ایجنت‌های هوش مصنوعی",
  conn_llms_d:"فایل «llms.txt» فهرست کامل کاتالوگ را به زبان ماشین می‌دهد تا ایجنت‌ها سرور درست را پیدا کنند.",
+ search_btn:"جستجو",
+ tool_conn_guide:"راهنمای قدم‌به‌قدم اتصال",
+ conn_how_cta:"شروع ساده — بدون دانش فنی",
+ conn_track_simple_tag:"پیشنهاد ما",
+ conn_track_simple_t:"شروع ساده",
+ conn_track_simple_d:"بدون دانش فنی — با برنامهٔ Claude Desktop، قدم‌به‌قدم.",
+ conn_track_tech_tag:"دستورها و تنظیمات",
+ conn_track_tech_t:"راهنمای فنی",
+ conn_track_tech_d:"برای برنامه‌نویس‌ها — همهٔ برنامه‌ها، دستورها و تنظیمات.",
+ conn_simple_what_t:"MCP یعنی چه؟",
+ conn_simple_what_d:"«MCP» یک راه استاندارد برای وصل کردن دستیار هوش مصنوعی به سرویس‌های واقعی است — مثل یک پریز برق استاندارد: هر سرویس یک «دوشاخه» دارد و دستیار شما آن را وصل می‌کند. بعد از اتصال، به‌جای باز کردن ده تب مرورگر، از دستیارت می‌پرسی — مثلاً «نرخ دلار امروز چنده؟» — و جواب را با عدد و منبع می‌گیری. همهٔ سرورهای این کاتالوگ فقط اطلاعات عمومی سایت‌ها را می‌خوانند؛ چیزی نمی‌خرند و وارد هیچ حسابی نمی‌شوند.",
+ conn_simple_note_web:"یک نکتهٔ مهم: این سرورها روی کامپیوتر خودت اجرا می‌شوند و فقط با برنامه‌های دسکتاپ (مثل Claude Desktop) کار می‌کنند — داخل سایت claude.ai یا ChatGPT در مرورگر کار نمی‌کنند.",
+ conn_simple_steps_t:"قدم‌به‌قدم: اتصال با Claude Desktop",
+ conn_simple_s1_t:"برنامهٔ Claude Desktop را دانلود و نصب کن",
+ conn_simple_s1_d:"از صفحهٔ دانلود رسمی Claude، نسخهٔ ویندوز یا مک را بگیر و مثل هر برنامهٔ دیگری نصبش کن. (برای ویندوز و مک منتشر شده؛ برای لینوکس برنامهٔ رسمی نیست — کاربران لینوکس از راهنمای فنی و Claude Code استفاده کنند.)",
+ conn_simple_s1_btn:"دانلود Claude Desktop",
+ conn_simple_s2_t:"ابزار کوچک «uvx» را نصب کن",
+ conn_simple_s2_d:"سرورها با یک ابزار کوچک و رایگان به اسم uvx اجرا می‌شوند. اول باید آن را نصب کنی — یک بار، برای همیشه. ترمینال (خط فرمان) را باز کن، دستور مخصوص سیستم خودت را بچسبان (Paste) و Enter بزن:",
+ conn_simple_s2_win:"ویندوز: کلید ویندوز را بزن، «PowerShell» را بنویس و بازش کن؛ بعد این دستور را بچسبان:",
+ conn_simple_s2_mac:"مک: کلیدهای Cmd + Space را بزن، «Terminal» را بنویس و بازش کن؛ بعد این دستور را بچسبان:",
+ conn_simple_s2_lin:"لینوکس: کلیدهای Ctrl + Alt + T را بزن تا ترمینال باز شود؛ بعد این دستور را بچسبان:",
+ conn_simple_s2_check:"برای اینکه مطمئن شوی نصب شده، همین را در ترمینال بنویس و Enter بزن: «uvx --version» — اگر یک شمارهٔ نسخه دیدی، یعنی آماده‌ای.",
+ conn_simple_s3_t:"فایل تنظیمات را باز کن",
+ conn_simple_s3_d:"ساده‌ترین راه: خود برنامهٔ Claude Desktop را باز کن و برو به «Settings ← Developer ← Edit Config». فایل تنظیمات باز می‌شود. اگر خواستی دستی پیداش کنی، اینجاها زندگی می‌کند:",
+ conn_simple_s3_os:"سیستم‌عامل",
+ conn_simple_s3_win:"ویندوز",
+ conn_simple_s3_mac:"مک",
+ conn_simple_s3_lin:"لینوکس (ساخت‌های غیررسمی)",
+ conn_simple_s4_t:"این متن را داخل فایل بچسبان",
+ conn_simple_s4_d:"سرورت را انتخاب کن، دکمهٔ «کپی» را بزن، و متن را داخل فایل تنظیمات بچسبان. اگر فایل خالی است، کل متن را بچسبان؛ اگر از قبل چیزی داخلش هست، فقط بخش داخل «mcpServers» را اضافه کن. بعد فایل را ذخیره کن (Ctrl + S در ویندوز و لینوکس، Cmd + S در مک).",
+ conn_simple_server:"سرور:",
+ conn_simple_s5_t:"برنامه را کامل ببند و دوباره باز کن",
+ conn_simple_s5_d:"بستن پنجره کافی نیست: در ویندوز روی آیکون Claude در نوار وظیفه راست‌کلیک کن و «Quit» را بزن؛ در مک کلیدهای Cmd + Q را بزن. بعد برنامه را دوباره باز کن.",
+ conn_simple_s6_t:"امتحانش کن: یک سؤال بپرس",
+ conn_simple_s6_d:"در یک گفت‌وگوی تازه این سؤال را بپرس. اگر جواب با عدد برگشت، اتصال برقرار است.",
+ conn_simple_s6_q:"«نرخ دلار به لیر امروز چنده؟»",
+ conn_simple_s6_q_generic:"سؤالی بپرس که این سرور جوابش را می‌داند — صفحهٔ سرور می‌گوید چه چیزی را می‌تواند جواب بدهد.",
+ conn_simple_tb_t:"مشکلی پیش آمد؟",
+ conn_simple_tb1_t:"برنامه سرور را نمی‌بیند",
+ conn_simple_tb1_d:"برنامه را کامل ببند و دوباره باز کن (قدم ۵) — بستن پنجره کافی نیست. اگر هنوز ندید، مطمئن شو فایل را ذخیره کرده‌ای.",
+ conn_simple_tb2_t:"خطای JSON یا «فایل خراب است»",
+ conn_simple_tb2_d:"فایل تنظیمات باید دقیق و بدون اشتباه تایپی باشد. ساده‌ترین راه: همهٔ متن فایل را پاک کن و دوباره از دکمهٔ «کپی» در قدم ۴ بچسبان. مواظب باش ویرگول یا آکولاد اضافه نماند.",
+ conn_simple_tb3_t:"«uvx پیدا نشد» یا سرور اجرا نمی‌شود",
+ conn_simple_tb3_d:"یعنی ابزار uvx نصب نشده. قدم ۲ را دوباره انجام بده و بعد ترمینال و برنامهٔ Claude Desktop را ببند و دوباره باز کن. با دستور «uvx --version» بررسی کن که نصب شده باشد.",
+ conn_simple_next:"بعد از اولین اتصال موفق، سرورهای دیگر را هم می‌توانی به همین روش اضافه کنی — صفحهٔ هر سرور، متن آمادهٔ خودش را دارد.",
+ conn_simple_to_tech:"با برنامهٔ دیگری وصل می‌شوی؟ راهنمای فنی",
+ conn_tech_intro:"اگر با ترمینال و فایل‌های تنظیمات راحتی، اینجا سریع‌ترین راه برای هر برنامه است.",
+ conn_tech_to_simple:"تازه شروع می‌کنی؟ شروع ساده",
+ conn_prereq_docs:"مستندات uv",
  faq_title:"سؤالات متداول",
  faq_sub:"پاسخ کوتاه به سؤال‌هایی که بیشتر پرسیده می‌شوند.",
 },
@@ -1076,7 +1162,7 @@ tr:{
  cat_finance:"Finans ve Döviz", cat_finance_d:"Türkiye Cumhuriyet Merkez Bankası resmi kurları",
  cat_news:"Haberler", cat_news_d:"Sözcü, Hürriyet, TRT Haber ve DonanımHaber",
  cat_jobs:"İş İlanları", cat_jobs_d:"İŞKUR, secretcv.com ve eleman.net iş ilanları",
- cat_food:"Yemek ve Tarifler", cat_food_d:"Yemek.com tarifleri",
+ cat_food:"Yemek ve Tarifler", cat_food_d:"Yemek.com ve Nefis Yemek Tarifleri tarifleri",
  cat_grocery:"Market", cat_grocery_d:"ŞOK, Migros Sanal Market ve BİM ürünleri",
  cat_entertainment:"Eğlence", cat_entertainment_d:"Biletix etkinlikleri, Paribu Cineverse sinemaları ve tabii streaming",
  cat_sports:"Spor", cat_sports_d:"Mackolik canlı skorları ve TFF ligleri",
@@ -1094,7 +1180,7 @@ tr:{
  plat_unverified_note:"Bu hizmetlerin web sürümleri yerel stdio sunucularıyla doğrulanmadı — uyumluluk iddia etmiyoruz.",
  how_title:"Nasıl Çalışır?", how_sub:"İlk gerçek sorunuza üç adım.",
  how_s1_t:"1. Bir MCP sunucusu bulun", how_s1_d:"Pazaryerine göz atın; her sunucu bir Türkiye servisini kapsar ve araç listesi bellidir.",
- how_s2_t:"2. Asistanınıza bağlayın", how_s2_d:"Claude Code'da tek bir uvx komutuyla veya Cursor ile Claude Desktop'ta birkaç tıklamayla.",
+ how_s2_t:"2. Asistanınıza bağlayın", how_s2_d:"Claude Code'da tek komutla, Claude Desktop ve Cursor'da ise bir ayar dosyasını düzenleyerek.",
  how_s3_t:"3. Yapay zekâyı kullanın", how_s3_d:"On sekme açmak yerine sorun — yanıtı sayı, fiyat ve kaynakla alın.",
  skills_title:"Beceri Pazaryeri", skills_sub:"Claude ekosistemindeki kanıtlanmış bir boşluğu dolduran gerçek ajan becerileri.",
  skill_compat:"Uyumlu", skill_gap:"Doldurduğu boşluk", skill_repo:"GitHub", skill_tests:"test",
@@ -1118,14 +1204,14 @@ tr:{
  tool_conn:"Bağlantı yöntemi", tool_conn_d:"Yerel stdio sunucusu — uvx ile çalışır, API anahtarı ve hesap gerekmez.",
  tool_cat:"Kategori", tool_status:"Durum", tool_platforms:"Doğrulanmış platformlar",
  back:"Geri",
- cats_page_title:"Kategoriler", cats_page_sub:"Canlı sunuculu altı gerçek kategori ve bu katalogda henüz olmayanlar.",
+ cats_page_title:"Kategoriler", cats_page_sub:"Canlı sunuculu gerçek kategoriler ve bu katalogda henüz olmayanlar.",
  skills_page_title:"Beceri Pazaryeri", skills_page_sub:"Claude ekosistemindeki gerçek boşluklar için geliştirilmiş ajan becerileri.",
  skills_search_ph:"Becerilerde arayın…",
  tut_page_title:"Eğitimler", tut_page_sub:"Kurulumdan sorun gidermeye — hepsi gerçek komutlarla.",
  blog_page_title:"Blog", blog_page_sub:"MCP ve Türkiye sunucuları hakkında eğitici makaleler.",
  about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
- about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu kataloğu Sepehr'in iran-mcp projesi gibi kurdu: eksiksiz bir referans, vitrin koleksiyonu değil.",
+ about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu katalog eksiksiz bir referanstır, vitrin koleksiyonu değil.",
  about_catalog_t:"Katalog", about_catalog_d:"30 sunucu, 174 araç — varsayılan olarak salt okunur; 29 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır. hepsiburada-mcp ayrıca isteğe bağlı yerel oturumlu hesap işlemleri (sepet + favoriler) sunar — kendi tarayıcı oturumunuz olmadan pasiftir.",
  contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
@@ -1147,7 +1233,7 @@ tr:{
  badge_local:"Bilgisayarınızda çalışır", badge_account:"Hesap işlemleri",
  suggest_server:"Yeni sunucu öner",
  conn_title:"Asistanını bağla",
- conn_sub:"Bir sunucunun nasıl ekleneceğini adım adım görmek için uygulamanı seç. Tüm sunucular yerel ve salt okunurdur — API anahtarı yok, hesap yok.",
+ conn_sub:"İki kılavuzumuz var: teknik bilgisi olmayanlar için «Kolay başlangıç» (Claude Desktop ile, adım adım) ve geliştiriciler için «Teknik kılavuz». Tüm sunucular yerel ve salt okunurdur — API anahtarı yok, hesap yok.",
  conn_pick:"Uygulamanı seç",
  conn_prereq_t:"Ön koşul: uvx",
  conn_prereq_d:"uvx, sunucuları ayrı bir kurulum olmadan çalıştırır. Kurulu değilse tek komutla kur ve terminali yeniden aç.",
@@ -1171,6 +1257,55 @@ tr:{
  conn_sample:"«{name}» sunucusuyla örnek — başka bir sunucu için adı ve paketi değiştir.",
  conn_llms_t:"Yapay zekâ ajanları için",
  conn_llms_d:"«llms.txt» dosyası, ajanların doğru sunucuyu bulması için kataloğun tamamını makine dilinde verir.",
+ search_btn:"Ara",
+ tool_conn_guide:"Adım adım bağlanma kılavuzu",
+ conn_how_cta:"Kolay başlangıç — teknik bilgi gerekmez",
+ conn_track_simple_tag:"Önerimiz",
+ conn_track_simple_t:"Kolay başlangıç",
+ conn_track_simple_d:"Teknik bilgi gerekmez — Claude Desktop uygulamasıyla, adım adım.",
+ conn_track_tech_tag:"Komutlar ve ayarlar",
+ conn_track_tech_t:"Teknik kılavuz",
+ conn_track_tech_d:"Geliştiriciler için — tüm uygulamalar, komutlar ve ayarlar.",
+ conn_simple_what_t:"MCP nedir?",
+ conn_simple_what_d:"«MCP», yapay zekâ asistanını gerçek hizmetlere bağlamanın standart bir yoludur — standart bir elektrik prizi gibidir: her hizmetin bir «fişi» vardır ve asistanınız onu takar. Bağlandıktan sonra on sekme açmak yerine asistanınıza sorarsınız — örneğin «Bugün dolar kuru ne kadar?» — ve yanıtı sayı ve kaynakla alırsınız. Bu katalogdaki tüm sunucular yalnızca sitelerin herkese açık bilgilerini okur; hiçbir şey satın almaz ve hiçbir hesaba girmez.",
+ conn_simple_note_web:"Önemli bir not: bu sunucular kendi bilgisayarınızda çalışır ve yalnızca masaüstü uygulamalarıyla (ör. Claude Desktop) çalışır — tarayıcıdaki claude.ai veya ChatGPT sitesinde çalışmazlar.",
+ conn_simple_steps_t:"Adım adım: Claude Desktop ile bağlanma",
+ conn_simple_s1_t:"Claude Desktop uygulamasını indirin ve kurun",
+ conn_simple_s1_d:"Claude'un resmi indirme sayfasından Windows veya Mac sürümünü alın ve diğer uygulamalar gibi kurun. (Windows ve Mac için yayınlandı; Linux için resmi uygulama yok — Linux kullanıcıları teknik kılavuzdaki Claude Code yolunu kullansın.)",
+ conn_simple_s1_btn:"Claude Desktop'ı indir",
+ conn_simple_s2_t:"Küçük «uvx» aracını kurun",
+ conn_simple_s2_d:"Sunucular, uvx adlı küçük ve ücretsiz bir araçla çalışır. Önce onu kurmanız gerekir — bir kez, sonsuza dek. Terminali (komut satırı) açın, sisteminize uygun komutu yapıştırın ve Enter'a basın:",
+ conn_simple_s2_win:"Windows: Windows tuşuna basın, «PowerShell» yazıp açın; sonra bu komutu yapıştırın:",
+ conn_simple_s2_mac:"Mac: Cmd + Space tuşlarına basın, «Terminal» yazıp açın; sonra bu komutu yapıştırın:",
+ conn_simple_s2_lin:"Linux: Terminali açmak için Ctrl + Alt + T tuşlarına basın; sonra bu komutu yapıştırın:",
+ conn_simple_s2_check:"Kurulduğundan emin olmak için terminale şunu yazıp Enter'a basın: «uvx --version» — bir sürüm numarası görürseniz hazırsınız.",
+ conn_simple_s3_t:"Ayar dosyasını açın",
+ conn_simple_s3_d:"En kolay yol: Claude Desktop uygulamasını açıp «Settings → Developer → Edit Config» yoluna gidin. Ayar dosyası açılır. Elle bulmak isterseniz burada yaşar:",
+ conn_simple_s3_os:"İşletim sistemi",
+ conn_simple_s3_win:"Windows",
+ conn_simple_s3_mac:"Mac",
+ conn_simple_s3_lin:"Linux (resmi olmayan derlemeler)",
+ conn_simple_s4_t:"Bu metni dosyanın içine yapıştırın",
+ conn_simple_s4_d:"Sunucunuzu seçin, «Kopyala» düğmesine basın ve metni ayar dosyasına yapıştırın. Dosya boşsa metnin tamamını yapıştırın; içinde zaten bir şey varsa yalnızca «mcpServers» içindeki bölümü ekleyin. Sonra dosyayı kaydedin (Windows ve Linux'ta Ctrl + S, Mac'te Cmd + S).",
+ conn_simple_server:"Sunucu:",
+ conn_simple_s5_t:"Uygulamayı tamamen kapatıp yeniden açın",
+ conn_simple_s5_d:"Pencereyi kapatmak yetmez: Windows'ta görev çubuğundaki Claude simgesine sağ tıklayıp «Quit» seçin; Mac'te Cmd + Q tuşlarına basın. Sonra uygulamayı yeniden açın.",
+ conn_simple_s6_t:"Deneyin: bir soru sorun",
+ conn_simple_s6_d:"Yeni bir sohbette bu soruyu sorun. Yanıt sayılarla gelirse bağlantı kurulmuştur.",
+ conn_simple_s6_q:"«Bugün USD/TRY kuru ne kadar?»",
+ conn_simple_s6_q_generic:"Bu sunucunun yanıtlayabileceği bir soru sorun — sunucunun sayfası neyi yanıtlayabileceğini söyler.",
+ conn_simple_tb_t:"Sorun mu çıktı?",
+ conn_simple_tb1_t:"Uygulama sunucuyu görmüyor",
+ conn_simple_tb1_d:"Uygulamayı tamamen kapatıp yeniden açın (5. adım) — pencereyi kapatmak yetmez. Hâlâ görmüyorsa dosyayı kaydettiğinizden emin olun.",
+ conn_simple_tb2_t:"JSON hatası veya «dosya bozuk»",
+ conn_simple_tb2_d:"Ayar dosyası tam ve yazım hatasız olmalı. En kolay çözüm: dosyadaki tüm metni silin ve 4. adımdaki «Kopyala» düğmesiyle yeniden yapıştırın. Fazla virgül veya parantez kalmamasına dikkat edin.",
+ conn_simple_tb3_t:"«uvx bulunamadı» veya sunucu çalışmıyor",
+ conn_simple_tb3_d:"Bu, uvx aracının kurulu olmadığı anlamına gelir. 2. adımı yeniden yapın, sonra terminali ve Claude Desktop uygulamasını kapatıp yeniden açın. «uvx --version» komutuyla kurulduğunu doğrulayın.",
+ conn_simple_next:"İlk bağlantı başarılı olduktan sonra diğer sunucuları da aynı yöntemle ekleyebilirsiniz — her sunucunun sayfasında kendi hazır metni vardır.",
+ conn_simple_to_tech:"Başka bir uygulamayla mı bağlanıyorsunuz? Teknik kılavuz",
+ conn_tech_intro:"Terminal ve ayar dosyalarıyla rahatsanız, her uygulama için en hızlı yol burası.",
+ conn_tech_to_simple:"Yeni mi başlıyorsunuz? Kolay başlangıç",
+ conn_prereq_docs:"uv belgeleri",
  faq_title:"Sık sorulan sorular",
  faq_sub:"En sık sorulan sorulara kısa yanıtlar.",
 },
@@ -1196,7 +1331,7 @@ en:{
  cat_finance:"Finance & FX", cat_finance_d:"Official rates from the Central Bank of Türkiye",
  cat_news:"News", cat_news_d:"Sözcü, Hürriyet, TRT Haber and DonanımHaber",
  cat_jobs:"Jobs", cat_jobs_d:"Job listings from İŞKUR, secretcv.com and eleman.net",
- cat_food:"Food & Recipes", cat_food_d:"Recipes from Yemek.com",
+ cat_food:"Food & Recipes", cat_food_d:"Recipes from Yemek.com and Nefis Yemek Tarifleri",
  cat_grocery:"Grocery", cat_grocery_d:"Products from ŞOK, Migros Sanal Market and BİM",
  cat_entertainment:"Entertainment", cat_entertainment_d:"Biletix events, Paribu Cineverse cinemas and tabii streaming",
  cat_sports:"Sports", cat_sports_d:"Live scores from Mackolik and TFF leagues",
@@ -1214,7 +1349,7 @@ en:{
  plat_unverified_note:"The web versions of these services are not verified with local stdio servers — we make no compatibility claim.",
  how_title:"How It Works", how_sub:"Three steps to your first real question to your assistant.",
  how_s1_t:"1. Find an MCP server", how_s1_d:"Browse the marketplace; each server covers one Turkish service and its tool list is shown.",
- how_s2_t:"2. Connect it to your assistant", how_s2_d:"One uvx command in Claude Code, or a few clicks in Cursor and Claude Desktop.",
+ how_s2_t:"2. Connect it to your assistant", how_s2_d:"One command in Claude Code, or by editing one settings file in Claude Desktop and Cursor.",
  how_s3_t:"3. Use AI", how_s3_d:"Instead of opening ten tabs, ask — and get the answer with numbers, prices and a source.",
  skills_title:"Skills Marketplace", skills_sub:"Real agent skills that fill a proven gap in the Claude ecosystem.",
  skill_compat:"Compatible with", skill_gap:"The gap it fills", skill_repo:"GitHub", skill_tests:"tests",
@@ -1238,14 +1373,14 @@ en:{
  tool_conn:"Connection method", tool_conn_d:"Local stdio server — runs with uvx, no API key and no account.",
  tool_cat:"Category", tool_status:"Status", tool_platforms:"Verified platforms",
  back:"Back",
- cats_page_title:"Categories", cats_page_sub:"Six real categories with live servers, and ones not in this catalog yet.",
+ cats_page_title:"Categories", cats_page_sub:"Real categories with live servers, and ones not in this catalog yet.",
  skills_page_title:"Skills Marketplace", skills_page_sub:"Agent skills built for real gaps in the Claude ecosystem.",
  skills_search_ph:"Search skills…",
  tut_page_title:"Tutorials", tut_page_sub:"From setup to troubleshooting — all with real commands.",
  blog_page_title:"Blog", blog_page_sub:"Educational articles about MCP and the Turkey servers.",
  about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
- about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. He built this catalog the way Sepehr built iran-mcp: a complete reference, not a showcase.",
+ about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. This catalog is a complete reference, not a showcase.",
  about_catalog_t:"The catalog", about_catalog_d:"30 servers, 174 tools — read-only by default; 29 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests. hepsiburada-mcp also offers optional local-session account actions (cart + favorites) — inert without your own browser session.",
  contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
@@ -1267,7 +1402,7 @@ en:{
  badge_local:"Runs on your computer", badge_account:"Account actions",
  suggest_server:"Suggest a server",
  conn_title:"Connect your assistant",
- conn_sub:"Pick your app to see step by step how to add a server. Every server runs locally and is read-only — no API key, no account.",
+ conn_sub:"We have two guides: «Easy start» for people without technical knowledge (with Claude Desktop, step by step), and the «Technical guide» for developers. Every server runs locally and is read-only — no API key, no account.",
  conn_pick:"Pick your app",
  conn_prereq_t:"Prerequisite: uvx",
  conn_prereq_d:"uvx runs the servers with no separate install. If it is not installed, install it with one command and reopen the terminal.",
@@ -1291,6 +1426,55 @@ en:{
  conn_sample:"Example with the «{name}» server — swap the name and package for any other server.",
  conn_llms_t:"For AI agents",
  conn_llms_d:"The «llms.txt» file gives the whole catalog in machine-readable form so agents can find the right server.",
+ search_btn:"Search",
+ tool_conn_guide:"Step-by-step connection guide",
+ conn_how_cta:"Easy start — no technical knowledge needed",
+ conn_track_simple_tag:"Our pick",
+ conn_track_simple_t:"Easy start",
+ conn_track_simple_d:"No technical knowledge needed — with the Claude Desktop app, step by step.",
+ conn_track_tech_tag:"Commands & settings",
+ conn_track_tech_t:"Technical guide",
+ conn_track_tech_d:"For developers — all apps, commands and settings.",
+ conn_simple_what_t:"What is MCP?",
+ conn_simple_what_d:"«MCP» is a standard way to connect your AI assistant to real services — like a standard power socket: every service has a «plug» and your assistant plugs it in. Once connected, instead of opening ten browser tabs you ask your assistant — for example, «What is the dollar rate today?» — and get the answer with numbers and a source. Every server in this catalog only reads the sites' public information; they never buy anything and never log in to any account.",
+ conn_simple_note_web:"One important note: these servers run on your own computer and work only with desktop apps (like Claude Desktop) — they do not work inside the claude.ai or ChatGPT websites in your browser.",
+ conn_simple_steps_t:"Step by step: connecting with Claude Desktop",
+ conn_simple_s1_t:"Download and install the Claude Desktop app",
+ conn_simple_s1_d:"Get the Windows or Mac version from Claude's official download page and install it like any other app. (Released for Windows and Mac; there is no official Linux app — Linux users should follow the Claude Code path in the technical guide.)",
+ conn_simple_s1_btn:"Download Claude Desktop",
+ conn_simple_s2_t:"Install the small «uvx» helper",
+ conn_simple_s2_d:"The servers run with a small free helper called uvx. You need to install it first — once, forever. Open the terminal (command line), paste the command for your system, and press Enter:",
+ conn_simple_s2_win:"Windows: press the Windows key, type «PowerShell» and open it; then paste this command:",
+ conn_simple_s2_mac:"Mac: press Cmd + Space, type «Terminal» and open it; then paste this command:",
+ conn_simple_s2_lin:"Linux: press Ctrl + Alt + T to open a terminal; then paste this command:",
+ conn_simple_s2_check:"To make sure it installed, type this in the terminal and press Enter: «uvx --version» — if you see a version number, you are ready.",
+ conn_simple_s3_t:"Open the settings file",
+ conn_simple_s3_d:"The easiest way: open the Claude Desktop app and go to «Settings → Developer → Edit Config». The settings file opens. If you want to find it by hand, it lives here:",
+ conn_simple_s3_os:"System",
+ conn_simple_s3_win:"Windows",
+ conn_simple_s3_mac:"Mac",
+ conn_simple_s3_lin:"Linux (unofficial builds)",
+ conn_simple_s4_t:"Paste this text into the file",
+ conn_simple_s4_d:"Pick your server, press the «Copy» button, and paste the text into the settings file. If the file is empty, paste the whole text; if it already has something in it, add only the part inside «mcpServers». Then save the file (Ctrl + S on Windows and Linux, Cmd + S on Mac).",
+ conn_simple_server:"Server:",
+ conn_simple_s5_t:"Quit the app completely and reopen it",
+ conn_simple_s5_d:"Closing the window is not enough: on Windows, right-click the Claude icon in the taskbar and choose «Quit»; on Mac, press Cmd + Q. Then open the app again.",
+ conn_simple_s6_t:"Try it: ask a question",
+ conn_simple_s6_d:"Ask this question in a new chat. If the answer comes back with numbers, the connection works.",
+ conn_simple_s6_q:"«What is the USD/TRY rate today?»",
+ conn_simple_s6_q_generic:"Ask a question this server can answer — the server's page says what it can answer.",
+ conn_simple_tb_t:"Something went wrong?",
+ conn_simple_tb1_t:"The app doesn't see the server",
+ conn_simple_tb1_d:"Quit the app completely and reopen it (step 5) — closing the window is not enough. If it still doesn't see it, make sure you saved the file.",
+ conn_simple_tb2_t:"JSON error or «file is broken»",
+ conn_simple_tb2_d:"The settings file must be exact, with no typos. The easiest fix: delete all the text in the file and paste again with the «Copy» button from step 4. Make sure no extra comma or bracket is left behind.",
+ conn_simple_tb3_t:"«uvx not found» or the server won't run",
+ conn_simple_tb3_d:"That means the uvx helper is not installed. Redo step 2, then close and reopen the terminal and the Claude Desktop app. Check with «uvx --version» that it is installed.",
+ conn_simple_next:"After your first successful connection, you can add other servers the same way — each server's page has its own ready-to-paste text.",
+ conn_simple_to_tech:"Connecting with another app? Technical guide",
+ conn_tech_intro:"If you are comfortable with the terminal and config files, this is the fastest path for every app.",
+ conn_tech_to_simple:"Just starting out? Easy start",
+ conn_prereq_docs:"uv docs",
  faq_title:"Frequently asked questions",
  faq_sub:"Short answers to the questions asked most.",
 }};
@@ -1375,14 +1559,14 @@ function footerHTML(){
         <a class="brand" href="${hashFor("home")}"><span class="mark">T</span><span>Turkey MCP<small>${t("brand_tag")}</small></span></a>
         <p style="margin-top:14px">${t("foot_about")}</p>
         <div class="socials">
-          <a href="https://github.com/mohammad-abbasi-sh/turkey-mcp" target="_blank" rel="noopener" aria-label="GitHub">⌥</a>
+          <a href="https://github.com/mohammad-abbasi-sh/turkey-mcp" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
           <a href="https://github.com/mohammad-abbasi-sh" target="_blank" rel="noopener" aria-label="GitHub profile">◉</a>
           <a href="https://www.linkedin.com/in/mohammad-abbasi-sh/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
         </div>
       </div>
       ${col(t("foot_platform"), [[hashFor("marketplace"),t("nav_marketplace")],[hashFor("categories"),t("nav_categories")],[hashFor("skills"),t("nav_skills")],[hashFor("tutorials"),t("nav_tutorials")]])}
       ${col(t("foot_resources"), [[hashFor("blog"),t("nav_blog")],[hashFor("tutorials"),t("tut_title")],["https://github.com/mohammad-abbasi-sh/turkey-mcp",t("tool_repo")],["https://pypi.org/user/mohammad-abbasi-sh/","PyPI"],["https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new",t("suggest_server")]])}
-      ${col(t("foot_company"), [[hashFor("about"),t("nav_about")],[hashFor("contact"),t("nav_contact")],["https://almanibama.ir","Almanibama"],["https://mabbasi.ir","mabbasi.ir"],["#",t("foot_privacy")],["#",t("foot_terms")]])}
+      ${col(t("foot_company"), [[hashFor("about"),t("nav_about")],[hashFor("contact"),t("nav_contact")],["https://almanibama.ir","Almanibama"],["https://mabbasi.ir","mabbasi.ir"]])}
     </div>
     <div class="foot-bottom">
       <span>© ${new Date().getFullYear()} Turkey MCP — ${t("foot_rights")}</span>
@@ -1452,7 +1636,7 @@ function heroHTML(){
       <p class="sub">${t("hero_sub")}</p>
       <form class="hero-search" onsubmit="return App.heroSearch(event)">
         <input id="hero-q" type="search" placeholder="${esc(t("hero_search_ph"))}" aria-label="${esc(t("hero_search_ph"))}">
-        <button class="btn btn-primary" type="submit">🔍 ${t("search_in")}</button>
+        <button class="btn btn-primary" type="submit">🔍 ${t("search_btn")}</button>
       </form>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="${hashFor("marketplace")}">${t("hero_cta1")}</a>
@@ -1470,7 +1654,7 @@ function heroHTML(){
         <div class="demo-tabs" id="demo-tabs"></div>
         <div class="demo-body" id="demo-body"></div>
         <div class="demo-foot">
-          <a class="btn btn-primary" href="${hashFor("marketplace")}">${t("connect")}</a>
+          <a class="btn btn-primary" href="${hashFor("connect")}">${t("connect")}</a>
           <span>${t("demo_footer")}</span>
         </div>
       </div>
@@ -1505,6 +1689,7 @@ function homeHTML(){
       <article class="card step"><span class="n">2</span><h3>${t("how_s2_t")}</h3><p>${t("how_s2_d")}</p></article>
       <article class="card step"><span class="n">3</span><h3>${t("how_s3_t")}</h3><p>${t("how_s3_d")}</p></article>
     </div>
+    <p style="text-align:center;margin-top:22px"><a class="btn btn-primary" href="${hashFor("connect")}">${t("conn_how_cta")} →</a></p>
   </div></section>
   <section class="section"><div class="wrap">
     ${sectionHead("✦", t("skills_title"), t("skills_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("skills")}">${t("view_all")}</a>`)}
@@ -1539,13 +1724,12 @@ function artCard(a, i){
 }
 
 /* marketplace state */
-const mp = { q:"", cat:"all", platform:"all", conn:"all", status:"all", sort:"popular" };
+const mp = { q:"", cat:"all", sort:"popular" };
 function mpFiltered(){
   let list = SERVERS.slice();
   const q = mp.q.trim().toLowerCase();
   if(q) list = list.filter(s => (s.id+" "+s.title+" "+s.title_tr+" "+serverDesc(s)+" "+s.tools.map(x=>x.n+" "+toolSum(x)).join(" ")).toLowerCase().includes(q));
   if(mp.cat!=="all") list = list.filter(s=>s.cat===mp.cat);
-  if(mp.status==="available") list = list.filter(()=>true);
   if(mp.sort==="popular") list.sort((a,b)=>b.tools.length-a.tools.length || a.id.localeCompare(b.id));
   if(mp.sort==="newest") list.sort((a,b)=>b.added-a.added);
   if(mp.sort==="alpha") list.sort((a,b)=>a.id.localeCompare(b.id));
@@ -1578,9 +1762,6 @@ function marketplaceHTML(){
     <div class="toolbar">
       <div class="search-box"><span class="mag">🔍</span><input id="mp-q" type="search" placeholder="${esc(t("mp_search_ph"))}" value="${esc(mp.q)}" oninput="App.mpSearch(this.value)" aria-label="${esc(t("mp_search_ph"))}"></div>
       <select id="mp-cat" onchange="App.mpFilter('cat',this.value)" aria-label="${t("f_category")}">${opt("all",mp.cat,t("f_all"))}${CATEGORIES.filter(c=>!c.soon).map(c=>opt(c.id,mp.cat,catName(c.id))).join("")}</select>
-      <select onchange="App.mpFilter('platform',this.value)" aria-label="${t("f_platform")}">${opt("all",mp.platform,t("f_all"))}${PLATFORMS_VERIFIED.map(p=>opt(p.id,mp.platform,p.name)).join("")}</select>
-      <select onchange="App.mpFilter('conn',this.value)" aria-label="${t("f_connection")}">${opt("all",mp.conn,t("f_all"))}${opt("stdio",mp.conn,t("f_stdio"))}</select>
-      <select onchange="App.mpFilter('status',this.value)" aria-label="${t("f_status")}">${opt("all",mp.status,t("f_all"))}${opt("available",mp.status,t("f_available"))}</select>
       <select onchange="App.mpFilter('sort',this.value)" aria-label="${t("sort")}">${opt("popular",mp.sort,t("sort_popular"))}${opt("newest",mp.sort,t("sort_newest"))}${opt("alpha",mp.sort,t("sort_alpha"))}</select>
     </div>
     <div id="mp-results">${mpResultsHTML()}</div>
@@ -1599,7 +1780,7 @@ function toolHTML(id){
       <span class="tile" style="background:${s.color}">${s.letter}</span>
       <div style="flex:1;min-width:0">
         <h1>${esc(s.title)}</h1>
-        <p class="latin">${esc(s.id)} · v0.1.0</p>
+        <p class="latin">${esc(s.id)}</p>
         <p>${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span> `:""}${s.account?`<span class="badge badge-acct">🔑 ${t("badge_account")}</span> `:""}<span class="badge badge-ok">✓ ${t("status_available")}</span> <span class="chip">💻 ${t("badge_local")}</span> <span class="chip">${esc(catName(s.cat))}</span></p>
       </div>
       ${starBtn("server", s.id)}
@@ -1620,6 +1801,7 @@ function toolHTML(id){
         <div class="install-box"><h3>Claude Code</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy('${esc(cmd)}')">${t("tool_copy")}</button></div></div>
         <div class="install-box"><h3>Cursor / Claude Desktop</h3><div class="copy-row"><pre><code>${esc(cfg)}</code></pre><button class="copy-btn" onclick="App.copy(${JSON.stringify(cfg).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
         <div class="install-box"><h3>${t("tool_conn")}</h3><p style="color:var(--muted);font-size:14px;margin:0">${t("tool_conn_d")}</p></div>
+        <p style="margin:0 0 16px"><a href="${hashFor("connect")}">${t("tool_conn_guide")} →</a></p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn btn-primary btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
           <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a>
@@ -1891,6 +2073,7 @@ function askCard(r){
     <div class="install-box" style="margin-top:14px"><h3>${t("ask_install")}</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy('${esc(cmd)}')">${t("tool_copy")}</button></div></div>
     <div class="card-bottom">
       <a class="btn btn-primary btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a>
+      <a class="btn btn-ghost btn-sm" href="${hashFor("connect")}">${t("nav_connect")}</a>
       <a class="btn btn-ghost btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
       <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a>
     </div>
@@ -1932,7 +2115,9 @@ function askHTML(){
 }
 
 /* ---------------- Connect — pick your app, get the steps ---------------- */
-const CONNECT_STATE = {app:"claude-code"};
+const CONNECT_STATE = {app:"claude-code", track:"simple", simpleServer:"tcmb-mcp"};
+const UVX_INSTALL_SH = "curl -LsSf https://astral.sh/uv/install.sh | sh";
+const UVX_INSTALL_PS = 'powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"';
 function connSnippet(app, s){
   const short = s.id.replace("-mcp","");
   const envKeys = s.env ? Object.keys(s.env) : [];
@@ -1944,17 +2129,67 @@ function connSnippet(app, s){
   if(app.kind==="vscode") return '{\n  "servers": {\n    "'+short+'": {\n      "type": "stdio",\n      "command": "uvx",\n      "args": ["'+s.pypi+'"]'+envJson+'\n    }\n  }\n}';
   return '{\n  "mcpServers": {\n    "'+short+'": {\n      "command": "uvx",\n      "args": ["'+s.pypi+'"]'+envJson+'\n    }\n  }\n}';
 }
-function connectHTML(){
+function connectTrackHTML(){
+  const tr = CONNECT_STATE.track;
+  const tab = (id, tag, title, desc)=>`<button type="button" class="track-tab ${tr===id?"active":""}" onclick="App.connTrack('${id}')">
+    <span class="tag">${tag}</span><span class="tt">${title}</span><span class="td">${desc}</span></button>`;
+  return `<div class="track-grid">
+    ${tab("simple", t("conn_track_simple_tag"), t("conn_track_simple_t"), t("conn_track_simple_d"))}
+    ${tab("tech", t("conn_track_tech_tag"), t("conn_track_tech_t"), t("conn_track_tech_d"))}
+  </div>`;
+}
+function connectSimpleHTML(){
+  const s = SERVERS.find(x=>x.id===CONNECT_STATE.simpleServer) || SERVERS.find(x=>x.featured) || SERVERS[0];
+  const snip = connSnippet({kind:"cfg"}, s);
+  const sq = s.id==="tcmb-mcp" ? t("conn_simple_s6_q") : t("conn_simple_s6_q_generic");
+  const copyBtn = (code)=>`<button class="copy-btn" onclick="App.copy(${JSON.stringify(code).replace(/"/g,"&quot;")})">${t("tool_copy")}</button>`;
+  return `
+    <div class="card" style="margin-bottom:18px"><h3>${t("conn_simple_what_t")}</h3><p style="color:var(--muted);margin:0">${t("conn_simple_what_d")}</p></div>
+    <div class="callout">⚠️ ${t("conn_simple_note_web")}</div>
+    <h2 style="font-size:20px;margin-bottom:14px">${t("conn_simple_steps_t")}</h2>
+    <ol class="big-steps">
+      <li><h3>${t("conn_simple_s1_t")}</h3><p>${t("conn_simple_s1_d")}</p>
+        <p><a class="btn btn-primary btn-sm" href="https://claude.com/download" target="_blank" rel="noopener">${t("conn_simple_s1_btn")} ↗</a></p></li>
+      <li><h3>${t("conn_simple_s2_t")}</h3><p>${t("conn_simple_s2_d")}</p>
+        <div class="os-block"><h4>🪟 ${t("conn_simple_s2_win")}</h4><div class="copy-row"><pre><code>${esc(UVX_INSTALL_PS)}</code></pre>${copyBtn(UVX_INSTALL_PS)}</div></div>
+        <div class="os-block"><h4>🍎 ${t("conn_simple_s2_mac")}</h4><div class="copy-row"><pre><code>${esc(UVX_INSTALL_SH)}</code></pre>${copyBtn(UVX_INSTALL_SH)}</div></div>
+        <div class="os-block"><h4>🐧 ${t("conn_simple_s2_lin")}</h4><div class="copy-row"><pre><code>${esc(UVX_INSTALL_SH)}</code></pre>${copyBtn(UVX_INSTALL_SH)}</div></div>
+        <p>${t("conn_simple_s2_check")}</p></li>
+      <li><h3>${t("conn_simple_s3_t")}</h3><p>${t("conn_simple_s3_d")}</p>
+        <table class="paths"><thead><tr><th>${t("conn_simple_s3_os")}</th><th>${t("conn_file")}</th></tr></thead><tbody>
+        <tr><td>🪟 ${t("conn_simple_s3_win")}</td><td><code>%APPDATA%\\Claude\\claude_desktop_config.json</code></td></tr>
+        <tr><td>🍎 ${t("conn_simple_s3_mac")}</td><td><code>~/Library/Application Support/Claude/claude_desktop_config.json</code></td></tr>
+        <tr><td>🐧 ${t("conn_simple_s3_lin")}</td><td><code>~/.config/Claude/claude_desktop_config.json</code></td></tr>
+        </tbody></table></li>
+      <li><h3>${t("conn_simple_s4_t")}</h3><p>${t("conn_simple_s4_d")}</p>
+        <p><label for="simple-server">${t("conn_simple_server")}</label>
+        <select id="simple-server" onchange="App.connSimpleServer(this.value)" style="max-width:420px">${SERVERS.map(x=>`<option value="${x.id}" ${x.id===s.id?"selected":""}>${esc(x.title.split(" — ")[0])} (${x.id})</option>`).join("")}</select></p>
+        <div class="install-box"><div class="copy-row"><pre><code>${esc(snip)}</code></pre>${copyBtn(snip)}</div></div></li>
+      <li><h3>${t("conn_simple_s5_t")}</h3><p>${t("conn_simple_s5_d")}</p></li>
+      <li><h3>${t("conn_simple_s6_t")}</h3><p>${t("conn_simple_s6_d")}</p>
+        <p><strong>${esc(sq)}</strong></p></li>
+    </ol>
+    <h2 style="font-size:20px;margin-bottom:14px">${t("conn_simple_tb_t")}</h2>
+    <div class="grid grid-3">
+      <article class="card"><h3>${t("conn_simple_tb1_t")}</h3><p class="desc">${t("conn_simple_tb1_d")}</p></article>
+      <article class="card"><h3>${t("conn_simple_tb2_t")}</h3><p class="desc">${t("conn_simple_tb2_d")}</p></article>
+      <article class="card"><h3>${t("conn_simple_tb3_t")}</h3><p class="desc">${t("conn_simple_tb3_d")}</p></article>
+    </div>
+    <p style="color:var(--muted);margin-top:18px">${t("conn_simple_next")}</p>
+    <p style="margin-top:14px"><button type="button" class="btn btn-ghost btn-sm" onclick="App.connTrack('tech')">${t("conn_simple_to_tech")} →</button></p>`;
+}
+function connectTechHTML(){
   const s = SERVERS.find(x=>x.featured) || SERVERS[0];
   const app = CONNECT_APPS.find(a=>a.id===CONNECT_STATE.app) || CONNECT_APPS[0];
   const snip = connSnippet(app, s);
   const steps = app.kind==="cli" ? [t("conn_cli_s1"),t("conn_cli_s2"),t("conn_cli_s3")]
     : [t("conn_cfg_s1").replace("{file}", app.file||""), t("conn_cfg_s2"), t("conn_cfg_s3")];
-  return `<section class="section"><div class="wrap">
-    ${sectionHead("🔌", t("conn_title"), t("conn_sub"))}
+  return `
+    <p style="color:var(--muted);max-width:760px">${t("conn_tech_intro")}</p>
+    <div class="callout">⚠️ ${t("conn_simple_note_web")}</div>
     <div class="card" style="margin-bottom:18px"><h3>${t("conn_prereq_t")}</h3><p style="color:var(--muted)">${t("conn_prereq_d")}</p>
-    <div class="copy-row"><pre><code>curl -LsSf https://astral.sh/uv/install.sh | sh</code></pre><button class="copy-btn" onclick="App.copy('curl -LsSf https://astral.sh/uv/install.sh | sh')">${t("tool_copy")}</button></div>
-    <p style="color:var(--muted);font-size:13px;margin-top:8px">Windows: <code>powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</code></p></div>
+    <div class="copy-row"><pre><code>${esc(UVX_INSTALL_SH)}</code></pre><button class="copy-btn" onclick="App.copy(${JSON.stringify(UVX_INSTALL_SH).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div>
+    <p style="color:var(--muted);font-size:13px;margin-top:8px">Windows: <code>${esc(UVX_INSTALL_PS)}</code> · <a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener">${t("conn_prereq_docs")} ↗</a></p></div>
     <h2 style="font-size:20px">${t("conn_pick")}</h2>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px">${CONNECT_APPS.map(a=>`<button type="button" class="btn ${a.id===app.id?"btn-primary":"btn-ghost"} btn-sm" onclick="App.connApp('${a.id}')">${a.icon} ${a.name}${a.verified?" ✓":""}</button>`).join("")}</div>
     <div class="grid grid-2">
@@ -1977,6 +2212,13 @@ function connectHTML(){
       <div class="card"><h3>${t("conn_all_t")}</h3><p style="color:var(--muted)">${t("conn_all_d")}</p><a class="btn btn-primary btn-sm" href="https://github.com/mohammad-abbasi-sh/turkey-mcp/blob/main/.mcp.json" target="_blank" rel="noopener">.mcp.json ↗</a></div>
       <div class="card"><h3>${t("conn_llms_t")}</h3><p style="color:var(--muted)">${t("conn_llms_d")}</p><a class="btn btn-primary btn-sm" href="llms.txt" target="_blank" rel="noopener">llms.txt ↗</a></div>
     </div>
+    <p style="margin-top:18px"><button type="button" class="btn btn-ghost btn-sm" onclick="App.connTrack('simple')">${t("conn_tech_to_simple")} →</button></p>`;
+}
+function connectHTML(){
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("🔌", t("conn_title"), t("conn_sub"))}
+    ${connectTrackHTML()}
+    ${CONNECT_STATE.track==="simple" ? connectSimpleHTML() : connectTechHTML()}
   </div></section>`;
 }
 
@@ -2040,6 +2282,8 @@ window.App = {
   copy(txt){ copyText(txt); },
   demoTab(i){ demoIdx=i; showDemo(); },
   connApp(id){ CONNECT_STATE.app=id; render(); },
+  connTrack(tr){ CONNECT_STATE.track=tr; render(); },
+  connSimpleServer(id){ CONNECT_STATE.simpleServer=id; render(); },
   heroSearch(ev){ ev.preventDefault(); const q=document.getElementById("hero-q"); mp.q=q?q.value:""; mp.cat="all"; go("marketplace"); render(); return false; },
   askSearch(v){ ASK_STATE.q=v; const el=document.getElementById("ask-results"); if(el) el.innerHTML=askResultsHTML(v,askScore(v)); },
   askChip(txt){ ASK_STATE.q=txt.trim(); const inp=document.getElementById("ask-q"); if(inp) inp.value=ASK_STATE.q; const el=document.getElementById("ask-results"); if(el) el.innerHTML=askResultsHTML(ASK_STATE.q,askScore(ASK_STATE.q)); },
