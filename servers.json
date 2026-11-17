@@ -1,1010 +1,1044 @@
 {
- "catalog": "turkey-mcp",
- "description": "Unofficial MCP servers for Turkish web services, read-only by default (EN/TR/FA)",
- "servers": [
-  {
-   "description": "Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).",
-   "name": "tcmb-mcp",
-   "pypi": "tcmb-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/tcmb-mcp",
-   "title": "Central Bank of Türkiye — official FX rates",
-   "title_tr": "Türkiye Cumhuriyet Merkez Bankası — resmi döviz kurları",
-   "tools": [
+  "catalog": "turkey-mcp",
+  "description": "Unofficial MCP servers for Turkish web services, read-only by default (EN/TR/FA)",
+  "servers": [
     {
-     "name": "tcmb_get_rates",
-     "summary": "Today's FX rates for all currencies"
+      "description": "Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).",
+      "name": "tcmb-mcp",
+      "pypi": "tcmb-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/tcmb-mcp",
+      "title": "Central Bank of Türkiye — official FX rates",
+      "title_tr": "Türkiye Cumhuriyet Merkez Bankası — resmi döviz kurları",
+      "tools": [
+        {
+          "name": "tcmb_get_rates",
+          "summary": "Today's FX rates for all currencies"
+        },
+        {
+          "name": "tcmb_get_rate",
+          "summary": "Rate for one currency code (e.g. USD)"
+        },
+        {
+          "name": "tcmb_list_currencies",
+          "summary": "List all available currency codes"
+        },
+        {
+          "name": "tcmb_get_rates_on",
+          "summary": "Historical rates for a date (YYYYMMDD)"
+        }
+      ]
     },
     {
-     "name": "tcmb_get_rate",
-     "summary": "Rate for one currency code (e.g. USD)"
+      "description": "Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
+      "name": "arabam-mcp",
+      "pypi": "arabam-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/arabam-mcp",
+      "title": "arabam.com — used-car listings & market prices",
+      "title_tr": "arabam.com — ikinci el otomobil ilanları ve piyasa fiyatları",
+      "tools": [
+        {
+          "name": "arabam_search",
+          "summary": "Search listings by brand/model slug, paged"
+        },
+        {
+          "name": "arabam_listing_detail",
+          "summary": "Full 19-field spec table + price for one listing"
+        },
+        {
+          "name": "arabam_list_brands",
+          "summary": "All ~77 brands with counts and slugs"
+        },
+        {
+          "name": "arabam_list_models",
+          "summary": "Models of a brand with counts and slugs"
+        },
+        {
+          "name": "arabam_price_stats",
+          "summary": "Min/max/median/average price over N pages"
+        }
+      ]
     },
     {
-     "name": "tcmb_list_currencies",
-     "summary": "List all available currency codes"
+      "description": "Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
+      "name": "emlakjet-mcp",
+      "pypi": "emlakjet-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/emlakjet-mcp",
+      "title": "emlakjet.com — real-estate listings, districts & price stats",
+      "title_tr": "emlakjet.com — emlak ilanları, ilçeler ve fiyat istatistikleri",
+      "tools": [
+        {
+          "name": "emlakjet_search",
+          "summary": "Search listings by city/district, rooms, price, area"
+        },
+        {
+          "name": "emlakjet_listing_detail",
+          "summary": "Full detail + 14 spec fields for one listing"
+        },
+        {
+          "name": "emlakjet_list_districts",
+          "summary": "Districts of a city with listing pages"
+        },
+        {
+          "name": "emlakjet_price_stats",
+          "summary": "Min/max/median/average price + median per m²"
+        }
+      ]
     },
     {
-     "name": "tcmb_get_rates_on",
-     "summary": "Historical rates for a date (YYYYMMDD)"
+      "description": "Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
+      "name": "armut-mcp",
+      "pypi": "armut-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/armut-mcp",
+      "title": "armut.com — local services, pros & price guides",
+      "title_tr": "armut.com — yerel hizmetler, profesyoneller ve fiyat rehberleri",
+      "tools": [
+        {
+          "name": "armut_search_services",
+          "summary": "Search the 6,759-service catalogue by keyword"
+        },
+        {
+          "name": "armut_service_detail",
+          "summary": "Detail of one service: pro count, rating, reviews"
+        },
+        {
+          "name": "armut_list_pros",
+          "summary": "Top pros for a service, optionally filtered by city"
+        },
+        {
+          "name": "armut_service_faq",
+          "summary": "FAQs for a service, with answers"
+        },
+        {
+          "name": "armut_price_guide",
+          "summary": "Price guide: 12 monthly averages, quotes, example jobs"
+        },
+        {
+          "name": "armut_trending_services",
+          "summary": "Trending/popular services and most-searched combos"
+        }
+      ]
+    },
+    {
+      "account_actions": true,
+      "description": "Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). Optional local-session account actions: view/add/remove cart items and manage favorites (needs your own browser session cookie).",
+      "env": {
+        "HEPSIBURADA_SESSION": "YOUR_SESSION_COOKIE_HERE"
+      },
+      "name": "hepsiburada-mcp",
+      "pypi": "hepsiburada-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/hepsiburada-mcp",
+      "title": "hepsiburada.com — shopping search, product details & price stats",
+      "title_tr": "hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+      "tools": [
+        {
+          "name": "hepsiburada_search",
+          "summary": "Search products by keyword, sort by price or relevance"
+        },
+        {
+          "name": "hepsiburada_product_detail",
+          "summary": "Detail of one product: price, stock, seller, GTIN, highlights"
+        },
+        {
+          "name": "hepsiburada_list_categories",
+          "summary": "The 9 top categories with URLs and ids"
+        },
+        {
+          "name": "hepsiburada_price_stats",
+          "summary": "Price stats for a query: min/median/mean/max in TRY"
+        },
+        {
+          "name": "hepsiburada_product_reviews",
+          "summary": "Recent customer reviews: author, rating, text, date"
+        },
+        {
+          "name": "hepsiburada_view_cart",
+          "summary": "View your cart: items, quantities, prices (TRY)"
+        },
+        {
+          "name": "hepsiburada_add_to_cart",
+          "summary": "Add a product to your cart (confirm required)"
+        },
+        {
+          "name": "hepsiburada_remove_from_cart",
+          "summary": "Remove one item from your cart (confirm required)"
+        },
+        {
+          "name": "hepsiburada_update_cart_quantity",
+          "summary": "Change a cart item's quantity (confirm required)"
+        },
+        {
+          "name": "hepsiburada_list_favorites",
+          "summary": "List your favorite product SKUs"
+        },
+        {
+          "name": "hepsiburada_add_favorite",
+          "summary": "Add a product to favorites (confirm required)"
+        },
+        {
+          "name": "hepsiburada_remove_favorite",
+          "summary": "Remove a product from favorites (confirm required)"
+        }
+      ]
+    },
+    {
+      "description": "Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
+      "name": "n11-mcp",
+      "pypi": "n11-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/n11-mcp",
+      "title": "n11.com — shopping search, product details & price stats",
+      "title_tr": "n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+      "tools": [
+        {
+          "name": "n11_search",
+          "summary": "Search products by keyword, sort by price or relevance"
+        },
+        {
+          "name": "n11_product_detail",
+          "summary": "Detail of one product: price, stock, seller, rating, category"
+        },
+        {
+          "name": "n11_list_categories",
+          "summary": "The 11 top categories with URLs and slugs"
+        },
+        {
+          "name": "n11_price_stats",
+          "summary": "Price stats for a query: min/median/mean/max in TRY"
+        },
+        {
+          "name": "n11_product_reviews",
+          "summary": "Recent customer reviews: reviewer and star rating"
+        }
+      ]
+    },
+    {
+      "description": "Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
+      "name": "ciceksepeti-mcp",
+      "pypi": "ciceksepeti-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp",
+      "title": "ciceksepeti.com — flowers & gifts search, details & price stats",
+      "title_tr": "ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
+      "tools": [
+        {
+          "name": "ciceksepeti_search",
+          "summary": "Search flowers & gifts by keyword, sort by price or relevance"
+        },
+        {
+          "name": "ciceksepeti_product_detail",
+          "summary": "Detail of one product: price, stock, seller, rating, category"
+        },
+        {
+          "name": "ciceksepeti_list_categories",
+          "summary": "89 flower/plant/gift categories with URLs and slugs"
+        },
+        {
+          "name": "ciceksepeti_price_stats",
+          "summary": "Price stats for a query: min/median/mean/max in TRY"
+        },
+        {
+          "name": "ciceksepeti_product_reviews",
+          "summary": "Recent customer reviews: reviewer, star rating, date"
+        }
+      ]
+    },
+    {
+      "description": "Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
+      "name": "obilet-mcp",
+      "pypi": "obilet-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/obilet-mcp",
+      "title": "obilet.com — bus journeys, locations & flight summary",
+      "title_tr": "obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
+      "tools": [
+        {
+          "name": "obilet_search_locations",
+          "summary": "Search bus/flight locations by name"
+        },
+        {
+          "name": "obilet_search_bus_journeys",
+          "summary": "Bus journeys for a route + date, sorted by price, departure or duration"
+        },
+        {
+          "name": "obilet_journey_detail",
+          "summary": "Full detail of one journey: stops, prices, features"
+        },
+        {
+          "name": "obilet_price_stats",
+          "summary": "Price stats for a route + date: min/median/mean/max in TRY"
+        },
+        {
+          "name": "obilet_flight_summary",
+          "summary": "Flight summary: count, min/max price, durations, airlines"
+        }
+      ]
+    },
+    {
+      "description": "Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
+      "name": "biletall-mcp",
+      "pypi": "biletall-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/biletall-mcp",
+      "title": "biletall.com — bus & flight tickets, routes & prices",
+      "title_tr": "biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
+      "tools": [
+        {
+          "name": "biletall_search_locations",
+          "summary": "Search locations by name (offline, 1,726 slugs)"
+        },
+        {
+          "name": "biletall_bus_route",
+          "summary": "Cheapest bus journeys for a route, today"
+        },
+        {
+          "name": "biletall_flight_route",
+          "summary": "Cheapest flights for a route, with dates"
+        },
+        {
+          "name": "biletall_price_stats",
+          "summary": "Price stats for a bus route: min/median/mean/max in TRY"
+        },
+        {
+          "name": "biletall_popular_routes",
+          "summary": "Most-travelled bus routes with prices"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
+      "name": "secretcv-mcp",
+      "pypi": "secretcv-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/secretcv-mcp",
+      "title": "secretcv.com — job search, listings & sectors",
+      "title_tr": "secretcv.com — iş ilanları, arama ve sektörler",
+      "tools": [
+        {
+          "name": "secretcv_search_jobs",
+          "summary": "Search jobs by keyword"
+        },
+        {
+          "name": "secretcv_latest_jobs",
+          "summary": "Latest job listings, newest first"
+        },
+        {
+          "name": "secretcv_get_job",
+          "summary": "Full detail for one job"
+        },
+        {
+          "name": "secretcv_list_sectors",
+          "summary": "All sectors with job counts"
+        },
+        {
+          "name": "secretcv_list_cities",
+          "summary": "All cities with job counts"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
+      "name": "biletix-mcp",
+      "pypi": "biletix-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/biletix-mcp",
+      "title": "biletix.com — events, tickets & venues",
+      "title_tr": "biletix.com — etkinlikler, biletler ve mekânlar",
+      "tools": [
+        {
+          "name": "biletix_trending",
+          "summary": "Trending featured events"
+        },
+        {
+          "name": "biletix_search_events",
+          "summary": "Search events in featured listings"
+        },
+        {
+          "name": "biletix_get_event",
+          "summary": "Full detail for one event"
+        },
+        {
+          "name": "biletix_list_by_category",
+          "summary": "Events by category"
+        },
+        {
+          "name": "biletix_list_venues",
+          "summary": "All venues"
+        },
+        {
+          "name": "biletix_venue_events",
+          "summary": "Events at one venue"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
+      "name": "sozcu-mcp",
+      "pypi": "sozcu-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/sozcu-mcp",
+      "title": "sozcu.com.tr — news headlines, articles & market rates",
+      "title_tr": "sozcu.com.tr — haberler, makaleler ve piyasa kurları",
+      "tools": [
+        {
+          "name": "sozcu_headlines",
+          "summary": "Headlines by section"
+        },
+        {
+          "name": "sozcu_latest",
+          "summary": "Latest news from the dated archive"
+        },
+        {
+          "name": "sozcu_get_article",
+          "summary": "Full article text"
+        },
+        {
+          "name": "sozcu_search_news",
+          "summary": "Search the news archive"
+        },
+        {
+          "name": "sozcu_market_rates",
+          "summary": "Live market ticker rates"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
+      "name": "eleman-net-mcp",
+      "pypi": "eleman-net-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/eleman-net-mcp",
+      "title": "eleman.net — job listings, sectors & cities",
+      "title_tr": "eleman.net — iş ilanları, sektörler ve şehirler",
+      "tools": [
+        {
+          "name": "eleman_search_jobs",
+          "summary": "Search jobs by keyword"
+        },
+        {
+          "name": "eleman_get_job",
+          "summary": "Full detail for one job"
+        },
+        {
+          "name": "eleman_list_sectors",
+          "summary": "All sectors"
+        },
+        {
+          "name": "eleman_list_cities",
+          "summary": "All cities"
+        },
+        {
+          "name": "eleman_new_listings",
+          "summary": "Newest listings"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
+      "name": "mackolik-mcp",
+      "pypi": "mackolik-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/mackolik-mcp",
+      "title": "mackolik.com — live scores, results, fixtures & standings",
+      "title_tr": "mackolik.com — canlı skorlar, sonuçlar, fikstür ve puan durumu",
+      "tools": [
+        {
+          "name": "mackolik_live_scores",
+          "summary": "Live matches right now"
+        },
+        {
+          "name": "mackolik_results",
+          "summary": "Results for a date"
+        },
+        {
+          "name": "mackolik_fixtures",
+          "summary": "Upcoming fixtures"
+        },
+        {
+          "name": "mackolik_standings",
+          "summary": "League standings"
+        },
+        {
+          "name": "mackolik_match_detail",
+          "summary": "Detail for one match"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
+      "name": "donanimhaber-mcp",
+      "pypi": "donanimhaber-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/donanimhaber-mcp",
+      "title": "donanimhaber.com — tech news, articles & hot forum topics",
+      "title_tr": "donanimhaber.com — teknoloji haberleri, makaleler ve popüler forum konuları",
+      "tools": [
+        {
+          "name": "donanimhaber_latest",
+          "summary": "Latest tech articles"
+        },
+        {
+          "name": "donanimhaber_search_news",
+          "summary": "Search news (Turkish-aware filter)"
+        },
+        {
+          "name": "donanimhaber_get_article",
+          "summary": "Full article text"
+        },
+        {
+          "name": "donanimhaber_section",
+          "summary": "Articles in one section"
+        },
+        {
+          "name": "donanimhaber_sections",
+          "summary": "All sections"
+        },
+        {
+          "name": "donanimhaber_forum_hot",
+          "summary": "Hot forum topics"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
+      "name": "yemek-com-mcp",
+      "pypi": "yemek-com-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/yemek-com-mcp",
+      "title": "Yemek.com — Turkish recipes, categories & videos",
+      "title_tr": "Yemek.com — Türk yemek tarifleri, kategoriler ve videolar",
+      "tools": [
+        {
+          "name": "yemek_search_recipes",
+          "summary": "Search recipes by keyword"
+        },
+        {
+          "name": "yemek_get_recipe",
+          "summary": "Full recipe: ingredients, steps, rating"
+        },
+        {
+          "name": "yemek_list_categories",
+          "summary": "All recipe categories"
+        },
+        {
+          "name": "yemek_list_trending",
+          "summary": "Trending recipes"
+        },
+        {
+          "name": "yemek_list_videos",
+          "summary": "Recipe videos"
+        },
+        {
+          "name": "yemek_list_popular",
+          "summary": "Most popular recipes"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
+      "name": "hurriyet-mcp",
+      "pypi": "hurriyet-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/hurriyet-mcp",
+      "title": "Hürriyet — news headlines, articles & search",
+      "title_tr": "Hürriyet — haberler, makaleler ve arama",
+      "tools": [
+        {
+          "name": "hurriyet_get_headlines",
+          "summary": "Headlines by section"
+        },
+        {
+          "name": "hurriyet_get_article",
+          "summary": "Full article text"
+        },
+        {
+          "name": "hurriyet_search_news",
+          "summary": "Search news by keyword"
+        },
+        {
+          "name": "hurriyet_get_latest",
+          "summary": "Latest news from the homepage"
+        },
+        {
+          "name": "hurriyet_list_categories",
+          "summary": "All news sections"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
+      "name": "sok-mcp",
+      "pypi": "sok-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/sok-mcp",
+      "title": "ŞOK — grocery products, categories, campaigns & prices",
+      "title_tr": "ŞOK — market ürünleri, kategoriler, kampanyalar ve fiyatlar",
+      "tools": [
+        {
+          "name": "sok_search_products",
+          "summary": "Search products by keyword"
+        },
+        {
+          "name": "sok_get_product",
+          "summary": "Full detail for one product"
+        },
+        {
+          "name": "sok_list_categories",
+          "summary": "All 19 categories"
+        },
+        {
+          "name": "sok_category_products",
+          "summary": "Products in one category"
+        },
+        {
+          "name": "sok_list_promotions",
+          "summary": "Current campaigns"
+        },
+        {
+          "name": "sok_price_stats",
+          "summary": "Price stats for a query in TRY"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
+      "name": "jolly-tur-mcp",
+      "pypi": "jolly-tur-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/jolly-tur-mcp",
+      "title": "Jolly Tur — hotels, live prices & campaigns",
+      "title_tr": "Jolly Tur — oteller, canlı fiyatlar ve kampanyalar",
+      "tools": [
+        {
+          "name": "jolly_search_hotels",
+          "summary": "Search hotels with live prices"
+        },
+        {
+          "name": "jolly_get_hotel",
+          "summary": "Full detail for one hotel"
+        },
+        {
+          "name": "jolly_list_campaigns",
+          "summary": "Current campaigns"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie.",
+      "name": "migros-mcp",
+      "pypi": "migros-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/migros-mcp",
+      "title": "Migros Sanal Market — products, prices, promos & categories",
+      "title_tr": "Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
+      "tools": [
+        {
+          "name": "migros_search_products",
+          "summary": "Search products by keyword"
+        },
+        {
+          "name": "migros_get_product",
+          "summary": "Full detail for one product"
+        },
+        {
+          "name": "migros_list_categories",
+          "summary": "All 11 categories"
+        },
+        {
+          "name": "migros_list_promotions",
+          "summary": "Current promotions"
+        },
+        {
+          "name": "migros_price_stats",
+          "summary": "Price stats for a query in TRY"
+        },
+        {
+          "name": "migros_view_cart",
+          "summary": "View your cart: items, quantities, totals"
+        },
+        {
+          "name": "migros_add_to_cart",
+          "summary": "Add a product to your cart (confirm=true)"
+        },
+        {
+          "name": "migros_remove_from_cart",
+          "summary": "Remove a product from your cart (confirm=true)"
+        },
+        {
+          "name": "migros_update_cart_quantity",
+          "summary": "Change a cart item's quantity (confirm=true)"
+        },
+        {
+          "name": "migros_create_order",
+          "summary": "Start checkout: returns the payment link, never pays"
+        }
+      ],
+      "env": {
+        "MIGROS_SESSION": "YOUR_SESSION_COOKIE_HERE"
+      },
+      "account_actions": true
+    },
+    {
+      "description": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
+      "name": "paribu-cineverse-mcp",
+      "pypi": "paribu-cineverse-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp",
+      "title": "Paribu Cineverse — now showing, coming soon & showtimes",
+      "title_tr": "Paribu Cineverse — vizyondakiler, yakında gelecekler ve seanslar",
+      "tools": [
+        {
+          "name": "cineverse_list_now_showing",
+          "summary": "Films now showing"
+        },
+        {
+          "name": "cineverse_list_coming_soon",
+          "summary": "Coming soon films"
+        },
+        {
+          "name": "cineverse_get_movie",
+          "summary": "Full detail for one film"
+        },
+        {
+          "name": "cineverse_list_cinemas",
+          "summary": "All cinemas, optional city filter"
+        },
+        {
+          "name": "cineverse_get_showtimes",
+          "summary": "Showtimes for a film/cinema"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
+      "name": "trthaber-mcp",
+      "pypi": "trthaber-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/trthaber-mcp",
+      "title": "TRT Haber — headlines, breaking news & full articles",
+      "title_tr": "TRT Haber — manşetler, son dakika ve haber metinleri",
+      "tools": [
+        {
+          "name": "trthaber_headlines",
+          "summary": "Headlines by category"
+        },
+        {
+          "name": "trthaber_latest",
+          "summary": "Breaking news, newest first"
+        },
+        {
+          "name": "trthaber_get_article",
+          "summary": "Full text of one article"
+        },
+        {
+          "name": "trthaber_search_news",
+          "summary": "Keyword search over current news"
+        },
+        {
+          "name": "trthaber_list_categories",
+          "summary": "The 18 news categories"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
+      "name": "tff-mcp",
+      "pypi": "tff-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
+      "title": "Turkish Football Federation — standings, fixtures & match details",
+      "title_tr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
+      "tools": [
+        {
+          "name": "tff_list_leagues",
+          "summary": "The 18 covered leagues"
+        },
+        {
+          "name": "tff_standings",
+          "summary": "League standings (puan cetveli)"
+        },
+        {
+          "name": "tff_fixtures",
+          "summary": "Fixtures and results by week"
+        },
+        {
+          "name": "tff_match_detail",
+          "summary": "Full match detail: officials, goals, lineups"
+        },
+        {
+          "name": "tff_top_scorers",
+          "summary": "Top scorers (gol krallığı)"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.",
+      "name": "bim-mcp",
+      "pypi": "bim-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/bim-mcp",
+      "title": "bim.com.tr (BİM) — weekly Aktüel deals, prices & categories",
+      "title_tr": "bim.com.tr (BİM) — haftalık Aktüel ürünler, fiyatlar ve kategoriler",
+      "tools": [
+        {
+          "name": "bim_list_aktuel_dates",
+          "summary": "Aktüel + İndirim date periods with keys"
+        },
+        {
+          "name": "bim_aktuel_products",
+          "summary": "Priced Aktüel products for one week (filter + sort)"
+        },
+        {
+          "name": "bim_product_detail",
+          "summary": "Full detail for one Aktüel product"
+        },
+        {
+          "name": "bim_price_stats",
+          "summary": "Price stats for one Aktüel week (TRY)"
+        },
+        {
+          "name": "bim_list_categories",
+          "summary": "The 11 product-range categories"
+        },
+        {
+          "name": "bim_list_cities",
+          "summary": "The 81 provinces in the store finder"
+        },
+        {
+          "name": "bim_health",
+          "summary": "Check whether bim.com.tr is reachable"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.",
+      "name": "tabii-mcp",
+      "pypi": "tabii-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/tabii-mcp",
+      "title": "tabii.com (TRT) — streaming catalog, live channels & people",
+      "title_tr": "tabii.com (TRT) — dizi/film kataloğu, canlı kanallar ve oyuncular",
+      "tools": [
+        {
+          "name": "tabii_search_content",
+          "summary": "Search the catalog by original Turkish title"
+        },
+        {
+          "name": "tabii_get_show",
+          "summary": "Full detail for one title (seasons, episodes, cast)"
+        },
+        {
+          "name": "tabii_homepage",
+          "summary": "Current homepage sections (exclusive, series, movies...)"
+        },
+        {
+          "name": "tabii_live_channels",
+          "summary": "The 15 live TRT channels with HLS stream URLs"
+        },
+        {
+          "name": "tabii_get_person",
+          "summary": "One cast/crew member by id, with filmography"
+        },
+        {
+          "name": "tabii_health",
+          "summary": "Check whether tabii.com is reachable"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.",
+      "name": "eksisozluk-mcp",
+      "pypi": "eksisozluk-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/eksisozluk-mcp",
+      "title": "eksisozluk.com (Ekşi Sözlük) — topics, entries & search",
+      "title_tr": "eksisozluk.com — gündem başlıkları, entry'ler ve arama",
+      "tools": [
+        {
+          "name": "eksisozluk_trending",
+          "summary": "Gündem — trending topics with entry counts"
+        },
+        {
+          "name": "eksisozluk_search_topics",
+          "summary": "Search topic titles (partial matches welcome)"
+        },
+        {
+          "name": "eksisozluk_get_topic",
+          "summary": "Entries of one topic (recent / şükela sorts, pages)"
+        },
+        {
+          "name": "eksisozluk_channel_topics",
+          "summary": "Topics of one channel (spor, siyaset, ...)"
+        },
+        {
+          "name": "eksisozluk_debe",
+          "summary": "Yesterday's most-liked entries, grouped by topic"
+        },
+        {
+          "name": "eksisozluk_health",
+          "summary": "Check whether eksisozluk.com is reachable"
+        }
+      ]
+    },
+    {
+      "description": "Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements.",
+      "name": "iskur-mcp",
+      "pypi": "iskur-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/iskur-mcp",
+      "title": "İŞKUR — open job listings, details & announcements",
+      "title_tr": "İŞKUR — açık iş ilanları, iş detayı ve duyurular",
+      "tools": [
+        {
+          "name": "iskur_search_jobs",
+          "summary": "Search open job listings (keyword, city, date range, work type, education)"
+        },
+        {
+          "name": "iskur_latest_jobs",
+          "summary": "Jobs posted in the last 24 hours, optionally in one city"
+        },
+        {
+          "name": "iskur_get_job",
+          "summary": "Detail of one listing (description, skills, occupation, education)"
+        },
+        {
+          "name": "iskur_list_cities",
+          "summary": "The 81 provinces with codes"
+        },
+        {
+          "name": "iskur_list_announcements",
+          "summary": "İŞKUR official announcements"
+        },
+        {
+          "name": "iskur_health",
+          "summary": "Check whether the İŞKUR job portal is reachable"
+        }
+      ]
+    },
+    {
+      "description": "Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities.",
+      "name": "beyazperde-mcp",
+      "pypi": "beyazperde-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/beyazperde-mcp",
+      "title": "Beyazperde — now showing, search, showtimes & news",
+      "title_tr": "Beyazperde — vizyondakiler, film arama, seanslar ve haberler",
+      "tools": [
+        {
+          "name": "beyazperde_now_showing",
+          "summary": "Movies now showing in Turkish cinemas (title, release date, duration, genres, director, cast)"
+        },
+        {
+          "name": "beyazperde_search_movies",
+          "summary": "Search movies by title (Turkish title, original title, year, director, genres)"
+        },
+        {
+          "name": "beyazperde_get_movie",
+          "summary": "Detail of one movie (synopsis, director, cast, genres, duration, ratings)"
+        },
+        {
+          "name": "beyazperde_showtimes",
+          "summary": "Today's showtimes for a movie in a city (cinemas, versions, times)"
+        },
+        {
+          "name": "beyazperde_latest_news",
+          "summary": "Latest cinema news from Beyazperde"
+        },
+        {
+          "name": "beyazperde_list_cities",
+          "summary": "The 85 cities (with geocodes) showtimes can be listed for"
+        },
+        {
+          "name": "beyazperde_health",
+          "summary": "Check whether beyazperde.com is reachable"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.",
+      "name": "nefisyemektarifleri-mcp",
+      "pypi": "nefisyemektarifleri-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp",
+      "title": "Nefis Yemek Tarifleri — Turkish recipes, search, categories & daily menu",
+      "title_tr": "Nefis Yemek Tarifleri — tarif arama, kategoriler ve günlük menü",
+      "tools": [
+        {
+          "name": "nefis_search_recipes",
+          "summary": "Search recipes by dish or ingredient (13 per page, paginated)"
+        },
+        {
+          "name": "nefis_get_recipe",
+          "summary": "Full recipe: ingredients with amounts, steps, tips, times, servings, rating, nutrition"
+        },
+        {
+          "name": "nefis_list_categories",
+          "summary": "Full recipe-category tree (24 top-level, 74 subcategories)"
+        },
+        {
+          "name": "nefis_category_recipes",
+          "summary": "Recipes in one category, sorted popular/trending/newest"
+        },
+        {
+          "name": "nefis_trending",
+          "summary": "Most-made recipes (En Çok Yapılanlar, 24)"
+        },
+        {
+          "name": "nefis_daily_menu",
+          "summary": "Today's Bugün Ne Pişirsem? menu (25 recipes)"
+        },
+        {
+          "name": "nefis_health",
+          "summary": "Check whether nefisyemektarifleri.com is reachable right now"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets.",
+      "name": "paribu-mcp",
+      "pypi": "paribu-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/paribu-mcp",
+      "title": "Paribu — crypto exchange: tickers, order books, trades & markets",
+      "title_tr": "Paribu — kripto borsası: fiyatlar, emir defteri, işlemler ve piyasalar",
+      "tools": [
+        {
+          "name": "paribu_get_ticker",
+          "summary": "24h ticker for one market, or a ranked list of all 266 markets"
+        },
+        {
+          "name": "paribu_get_orderbook",
+          "summary": "Live order book: best bid/ask, spread, mid price, levels"
+        },
+        {
+          "name": "paribu_get_recent_trades",
+          "summary": "Most recent public trades, newest first (1–20)"
+        },
+        {
+          "name": "paribu_list_markets",
+          "summary": "Full 467-pair catalogue with precision, steps, labels"
+        },
+        {
+          "name": "paribu_get_currency",
+          "summary": "Currency metadata: networks, withdrawal fees, limits"
+        },
+        {
+          "name": "paribu_market_movers",
+          "summary": "Top gainers / losers over the last 24h by percentage"
+        },
+        {
+          "name": "paribu_health",
+          "summary": "Check whether api.paribu.com is reachable"
+        }
+      ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for Diyanet prayer times — official timetable for 81 provinces & districts, yearly tables & qibla.",
+      "name": "diyanet-mcp",
+      "pypi": "diyanet-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/diyanet-mcp",
+      "title": "Diyanet — prayer times: official timetable for 81 provinces & districts",
+      "title_tr": "Diyanet — namaz vakitleri: 81 il ve ilçeler için resmi çizelge",
+      "tools": [
+        {
+          "name": "diyanet_prayer_times",
+          "summary": "Today's 6 prayer times + Miladi/Hijri dates, qibla angle/time and astro sunrise/sunset for a place"
+        },
+        {
+          "name": "diyanet_yearly_times",
+          "summary": "Full-year table: one row per day (Miladi + Hijri dates + 6 times), 365 rows"
+        },
+        {
+          "name": "diyanet_list_provinces",
+          "summary": "The 81 provinces with Diyanet ids and Turkish + English names"
+        },
+        {
+          "name": "diyanet_list_districts",
+          "summary": "Districts of one province (by name or id) with ids, names and page URLs"
+        },
+        {
+          "name": "diyanet_qibla",
+          "summary": "Qibla angle, qibla time, astro sunrise/sunset for a place"
+        },
+        {
+          "name": "diyanet_health",
+          "summary": "Check whether namazvakitleri.diyanet.gov.tr is reachable"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "description": "Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
-   "name": "arabam-mcp",
-   "pypi": "arabam-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/arabam-mcp",
-   "title": "arabam.com — used-car listings & market prices",
-   "title_tr": "arabam.com — ikinci el otomobil ilanları ve piyasa fiyatları",
-   "tools": [
-    {
-     "name": "arabam_search",
-     "summary": "Search listings by brand/model slug, paged"
-    },
-    {
-     "name": "arabam_listing_detail",
-     "summary": "Full 19-field spec table + price for one listing"
-    },
-    {
-     "name": "arabam_list_brands",
-     "summary": "All ~77 brands with counts and slugs"
-    },
-    {
-     "name": "arabam_list_models",
-     "summary": "Models of a brand with counts and slugs"
-    },
-    {
-     "name": "arabam_price_stats",
-     "summary": "Min/max/median/average price over N pages"
-    }
-   ]
-  },
-  {
-   "description": "Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
-   "name": "emlakjet-mcp",
-   "pypi": "emlakjet-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/emlakjet-mcp",
-   "title": "emlakjet.com — real-estate listings, districts & price stats",
-   "title_tr": "emlakjet.com — emlak ilanları, ilçeler ve fiyat istatistikleri",
-   "tools": [
-    {
-     "name": "emlakjet_search",
-     "summary": "Search listings by city/district, rooms, price, area"
-    },
-    {
-     "name": "emlakjet_listing_detail",
-     "summary": "Full detail + 14 spec fields for one listing"
-    },
-    {
-     "name": "emlakjet_list_districts",
-     "summary": "Districts of a city with listing pages"
-    },
-    {
-     "name": "emlakjet_price_stats",
-     "summary": "Min/max/median/average price + median per m²"
-    }
-   ]
-  },
-  {
-   "description": "Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
-   "name": "armut-mcp",
-   "pypi": "armut-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/armut-mcp",
-   "title": "armut.com — local services, pros & price guides",
-   "title_tr": "armut.com — yerel hizmetler, profesyoneller ve fiyat rehberleri",
-   "tools": [
-    {
-     "name": "armut_search_services",
-     "summary": "Search the 6,759-service catalogue by keyword"
-    },
-    {
-     "name": "armut_service_detail",
-     "summary": "Detail of one service: pro count, rating, reviews"
-    },
-    {
-     "name": "armut_list_pros",
-     "summary": "Top pros for a service, optionally filtered by city"
-    },
-    {
-     "name": "armut_service_faq",
-     "summary": "FAQs for a service, with answers"
-    },
-    {
-     "name": "armut_price_guide",
-     "summary": "Price guide: 12 monthly averages, quotes, example jobs"
-    },
-    {
-     "name": "armut_trending_services",
-     "summary": "Trending/popular services and most-searched combos"
-    }
-   ]
-  },
-  {
-   "account_actions": true,
-   "description": "Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). Optional local-session account actions: view/add/remove cart items and manage favorites (needs your own browser session cookie).",
-   "env": {
-    "HEPSIBURADA_SESSION": "YOUR_SESSION_COOKIE_HERE"
-   },
-   "name": "hepsiburada-mcp",
-   "pypi": "hepsiburada-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/hepsiburada-mcp",
-   "title": "hepsiburada.com — shopping search, product details & price stats",
-   "title_tr": "hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
-   "tools": [
-    {
-     "name": "hepsiburada_search",
-     "summary": "Search products by keyword, sort by price or relevance"
-    },
-    {
-     "name": "hepsiburada_product_detail",
-     "summary": "Detail of one product: price, stock, seller, GTIN, highlights"
-    },
-    {
-     "name": "hepsiburada_list_categories",
-     "summary": "The 9 top categories with URLs and ids"
-    },
-    {
-     "name": "hepsiburada_price_stats",
-     "summary": "Price stats for a query: min/median/mean/max in TRY"
-    },
-    {
-     "name": "hepsiburada_product_reviews",
-     "summary": "Recent customer reviews: author, rating, text, date"
-    },
-    {
-     "name": "hepsiburada_view_cart",
-     "summary": "View your cart: items, quantities, prices (TRY)"
-    },
-    {
-     "name": "hepsiburada_add_to_cart",
-     "summary": "Add a product to your cart (confirm required)"
-    },
-    {
-     "name": "hepsiburada_remove_from_cart",
-     "summary": "Remove one item from your cart (confirm required)"
-    },
-    {
-     "name": "hepsiburada_update_cart_quantity",
-     "summary": "Change a cart item's quantity (confirm required)"
-    },
-    {
-     "name": "hepsiburada_list_favorites",
-     "summary": "List your favorite product SKUs"
-    },
-    {
-     "name": "hepsiburada_add_favorite",
-     "summary": "Add a product to favorites (confirm required)"
-    },
-    {
-     "name": "hepsiburada_remove_favorite",
-     "summary": "Remove a product from favorites (confirm required)"
-    }
-   ]
-  },
-  {
-   "description": "Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
-   "name": "n11-mcp",
-   "pypi": "n11-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/n11-mcp",
-   "title": "n11.com — shopping search, product details & price stats",
-   "title_tr": "n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
-   "tools": [
-    {
-     "name": "n11_search",
-     "summary": "Search products by keyword, sort by price or relevance"
-    },
-    {
-     "name": "n11_product_detail",
-     "summary": "Detail of one product: price, stock, seller, rating, category"
-    },
-    {
-     "name": "n11_list_categories",
-     "summary": "The 11 top categories with URLs and slugs"
-    },
-    {
-     "name": "n11_price_stats",
-     "summary": "Price stats for a query: min/median/mean/max in TRY"
-    },
-    {
-     "name": "n11_product_reviews",
-     "summary": "Recent customer reviews: reviewer and star rating"
-    }
-   ]
-  },
-  {
-   "description": "Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
-   "name": "ciceksepeti-mcp",
-   "pypi": "ciceksepeti-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp",
-   "title": "ciceksepeti.com — flowers & gifts search, details & price stats",
-   "title_tr": "ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
-   "tools": [
-    {
-     "name": "ciceksepeti_search",
-     "summary": "Search flowers & gifts by keyword, sort by price or relevance"
-    },
-    {
-     "name": "ciceksepeti_product_detail",
-     "summary": "Detail of one product: price, stock, seller, rating, category"
-    },
-    {
-     "name": "ciceksepeti_list_categories",
-     "summary": "89 flower/plant/gift categories with URLs and slugs"
-    },
-    {
-     "name": "ciceksepeti_price_stats",
-     "summary": "Price stats for a query: min/median/mean/max in TRY"
-    },
-    {
-     "name": "ciceksepeti_product_reviews",
-     "summary": "Recent customer reviews: reviewer, star rating, date"
-    }
-   ]
-  },
-  {
-   "description": "Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
-   "name": "obilet-mcp",
-   "pypi": "obilet-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/obilet-mcp",
-   "title": "obilet.com — bus journeys, locations & flight summary",
-   "title_tr": "obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
-   "tools": [
-    {
-     "name": "obilet_search_locations",
-     "summary": "Search bus/flight locations by name"
-    },
-    {
-     "name": "obilet_search_bus_journeys",
-     "summary": "Bus journeys for a route + date, sorted by price, departure or duration"
-    },
-    {
-     "name": "obilet_journey_detail",
-     "summary": "Full detail of one journey: stops, prices, features"
-    },
-    {
-     "name": "obilet_price_stats",
-     "summary": "Price stats for a route + date: min/median/mean/max in TRY"
-    },
-    {
-     "name": "obilet_flight_summary",
-     "summary": "Flight summary: count, min/max price, durations, airlines"
-    }
-   ]
-  },
-  {
-   "description": "Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
-   "name": "biletall-mcp",
-   "pypi": "biletall-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/biletall-mcp",
-   "title": "biletall.com — bus & flight tickets, routes & prices",
-   "title_tr": "biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
-   "tools": [
-    {
-     "name": "biletall_search_locations",
-     "summary": "Search locations by name (offline, 1,726 slugs)"
-    },
-    {
-     "name": "biletall_bus_route",
-     "summary": "Cheapest bus journeys for a route, today"
-    },
-    {
-     "name": "biletall_flight_route",
-     "summary": "Cheapest flights for a route, with dates"
-    },
-    {
-     "name": "biletall_price_stats",
-     "summary": "Price stats for a bus route: min/median/mean/max in TRY"
-    },
-    {
-     "name": "biletall_popular_routes",
-     "summary": "Most-travelled bus routes with prices"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
-   "name": "secretcv-mcp",
-   "pypi": "secretcv-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/secretcv-mcp",
-   "title": "secretcv.com — job search, listings & sectors",
-   "title_tr": "secretcv.com — iş ilanları, arama ve sektörler",
-   "tools": [
-    {
-     "name": "secretcv_search_jobs",
-     "summary": "Search jobs by keyword"
-    },
-    {
-     "name": "secretcv_latest_jobs",
-     "summary": "Latest job listings, newest first"
-    },
-    {
-     "name": "secretcv_get_job",
-     "summary": "Full detail for one job"
-    },
-    {
-     "name": "secretcv_list_sectors",
-     "summary": "All sectors with job counts"
-    },
-    {
-     "name": "secretcv_list_cities",
-     "summary": "All cities with job counts"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
-   "name": "biletix-mcp",
-   "pypi": "biletix-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/biletix-mcp",
-   "title": "biletix.com — events, tickets & venues",
-   "title_tr": "biletix.com — etkinlikler, biletler ve mekânlar",
-   "tools": [
-    {
-     "name": "biletix_trending",
-     "summary": "Trending featured events"
-    },
-    {
-     "name": "biletix_search_events",
-     "summary": "Search events in featured listings"
-    },
-    {
-     "name": "biletix_get_event",
-     "summary": "Full detail for one event"
-    },
-    {
-     "name": "biletix_list_by_category",
-     "summary": "Events by category"
-    },
-    {
-     "name": "biletix_list_venues",
-     "summary": "All venues"
-    },
-    {
-     "name": "biletix_venue_events",
-     "summary": "Events at one venue"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
-   "name": "sozcu-mcp",
-   "pypi": "sozcu-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/sozcu-mcp",
-   "title": "sozcu.com.tr — news headlines, articles & market rates",
-   "title_tr": "sozcu.com.tr — haberler, makaleler ve piyasa kurları",
-   "tools": [
-    {
-     "name": "sozcu_headlines",
-     "summary": "Headlines by section"
-    },
-    {
-     "name": "sozcu_latest",
-     "summary": "Latest news from the dated archive"
-    },
-    {
-     "name": "sozcu_get_article",
-     "summary": "Full article text"
-    },
-    {
-     "name": "sozcu_search_news",
-     "summary": "Search the news archive"
-    },
-    {
-     "name": "sozcu_market_rates",
-     "summary": "Live market ticker rates"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
-   "name": "eleman-net-mcp",
-   "pypi": "eleman-net-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/eleman-net-mcp",
-   "title": "eleman.net — job listings, sectors & cities",
-   "title_tr": "eleman.net — iş ilanları, sektörler ve şehirler",
-   "tools": [
-    {
-     "name": "eleman_search_jobs",
-     "summary": "Search jobs by keyword"
-    },
-    {
-     "name": "eleman_get_job",
-     "summary": "Full detail for one job"
-    },
-    {
-     "name": "eleman_list_sectors",
-     "summary": "All sectors"
-    },
-    {
-     "name": "eleman_list_cities",
-     "summary": "All cities"
-    },
-    {
-     "name": "eleman_new_listings",
-     "summary": "Newest listings"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
-   "name": "mackolik-mcp",
-   "pypi": "mackolik-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/mackolik-mcp",
-   "title": "mackolik.com — live scores, results, fixtures & standings",
-   "title_tr": "mackolik.com — canlı skorlar, sonuçlar, fikstür ve puan durumu",
-   "tools": [
-    {
-     "name": "mackolik_live_scores",
-     "summary": "Live matches right now"
-    },
-    {
-     "name": "mackolik_results",
-     "summary": "Results for a date"
-    },
-    {
-     "name": "mackolik_fixtures",
-     "summary": "Upcoming fixtures"
-    },
-    {
-     "name": "mackolik_standings",
-     "summary": "League standings"
-    },
-    {
-     "name": "mackolik_match_detail",
-     "summary": "Detail for one match"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
-   "name": "donanimhaber-mcp",
-   "pypi": "donanimhaber-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/donanimhaber-mcp",
-   "title": "donanimhaber.com — tech news, articles & hot forum topics",
-   "title_tr": "donanimhaber.com — teknoloji haberleri, makaleler ve popüler forum konuları",
-   "tools": [
-    {
-     "name": "donanimhaber_latest",
-     "summary": "Latest tech articles"
-    },
-    {
-     "name": "donanimhaber_search_news",
-     "summary": "Search news (Turkish-aware filter)"
-    },
-    {
-     "name": "donanimhaber_get_article",
-     "summary": "Full article text"
-    },
-    {
-     "name": "donanimhaber_section",
-     "summary": "Articles in one section"
-    },
-    {
-     "name": "donanimhaber_sections",
-     "summary": "All sections"
-    },
-    {
-     "name": "donanimhaber_forum_hot",
-     "summary": "Hot forum topics"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
-   "name": "yemek-com-mcp",
-   "pypi": "yemek-com-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/yemek-com-mcp",
-   "title": "Yemek.com — Turkish recipes, categories & videos",
-   "title_tr": "Yemek.com — Türk yemek tarifleri, kategoriler ve videolar",
-   "tools": [
-    {
-     "name": "yemek_search_recipes",
-     "summary": "Search recipes by keyword"
-    },
-    {
-     "name": "yemek_get_recipe",
-     "summary": "Full recipe: ingredients, steps, rating"
-    },
-    {
-     "name": "yemek_list_categories",
-     "summary": "All recipe categories"
-    },
-    {
-     "name": "yemek_list_trending",
-     "summary": "Trending recipes"
-    },
-    {
-     "name": "yemek_list_videos",
-     "summary": "Recipe videos"
-    },
-    {
-     "name": "yemek_list_popular",
-     "summary": "Most popular recipes"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
-   "name": "hurriyet-mcp",
-   "pypi": "hurriyet-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/hurriyet-mcp",
-   "title": "Hürriyet — news headlines, articles & search",
-   "title_tr": "Hürriyet — haberler, makaleler ve arama",
-   "tools": [
-    {
-     "name": "hurriyet_get_headlines",
-     "summary": "Headlines by section"
-    },
-    {
-     "name": "hurriyet_get_article",
-     "summary": "Full article text"
-    },
-    {
-     "name": "hurriyet_search_news",
-     "summary": "Search news by keyword"
-    },
-    {
-     "name": "hurriyet_get_latest",
-     "summary": "Latest news from the homepage"
-    },
-    {
-     "name": "hurriyet_list_categories",
-     "summary": "All news sections"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
-   "name": "sok-mcp",
-   "pypi": "sok-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/sok-mcp",
-   "title": "ŞOK — grocery products, categories, campaigns & prices",
-   "title_tr": "ŞOK — market ürünleri, kategoriler, kampanyalar ve fiyatlar",
-   "tools": [
-    {
-     "name": "sok_search_products",
-     "summary": "Search products by keyword"
-    },
-    {
-     "name": "sok_get_product",
-     "summary": "Full detail for one product"
-    },
-    {
-     "name": "sok_list_categories",
-     "summary": "All 19 categories"
-    },
-    {
-     "name": "sok_category_products",
-     "summary": "Products in one category"
-    },
-    {
-     "name": "sok_list_promotions",
-     "summary": "Current campaigns"
-    },
-    {
-     "name": "sok_price_stats",
-     "summary": "Price stats for a query in TRY"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
-   "name": "jolly-tur-mcp",
-   "pypi": "jolly-tur-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/jolly-tur-mcp",
-   "title": "Jolly Tur — hotels, live prices & campaigns",
-   "title_tr": "Jolly Tur — oteller, canlı fiyatlar ve kampanyalar",
-   "tools": [
-    {
-     "name": "jolly_search_hotels",
-     "summary": "Search hotels with live prices"
-    },
-    {
-     "name": "jolly_get_hotel",
-     "summary": "Full detail for one hotel"
-    },
-    {
-     "name": "jolly_list_campaigns",
-     "summary": "Current campaigns"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie.",
-   "name": "migros-mcp",
-   "pypi": "migros-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/migros-mcp",
-   "title": "Migros Sanal Market — products, prices, promos & categories",
-   "title_tr": "Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
-   "tools": [
-    {
-     "name": "migros_search_products",
-     "summary": "Search products by keyword"
-    },
-    {
-     "name": "migros_get_product",
-     "summary": "Full detail for one product"
-    },
-    {
-     "name": "migros_list_categories",
-     "summary": "All 11 categories"
-    },
-    {
-     "name": "migros_list_promotions",
-     "summary": "Current promotions"
-    },
-    {
-     "name": "migros_price_stats",
-     "summary": "Price stats for a query in TRY"
-    },
-    {
-     "name": "migros_view_cart",
-     "summary": "View your cart: items, quantities, totals"
-    },
-    {
-     "name": "migros_add_to_cart",
-     "summary": "Add a product to your cart (confirm=true)"
-    },
-    {
-     "name": "migros_remove_from_cart",
-     "summary": "Remove a product from your cart (confirm=true)"
-    },
-    {
-     "name": "migros_update_cart_quantity",
-     "summary": "Change a cart item's quantity (confirm=true)"
-    },
-    {
-     "name": "migros_create_order",
-     "summary": "Start checkout: returns the payment link, never pays"
-    }
-   ],
-   "env": {
-    "MIGROS_SESSION": "YOUR_SESSION_COOKIE_HERE"
-   },
-   "account_actions": true
-  },
-  {
-   "description": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
-   "name": "paribu-cineverse-mcp",
-   "pypi": "paribu-cineverse-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp",
-   "title": "Paribu Cineverse — now showing, coming soon & showtimes",
-   "title_tr": "Paribu Cineverse — vizyondakiler, yakında gelecekler ve seanslar",
-   "tools": [
-    {
-     "name": "cineverse_list_now_showing",
-     "summary": "Films now showing"
-    },
-    {
-     "name": "cineverse_list_coming_soon",
-     "summary": "Coming soon films"
-    },
-    {
-     "name": "cineverse_get_movie",
-     "summary": "Full detail for one film"
-    },
-    {
-     "name": "cineverse_list_cinemas",
-     "summary": "All cinemas, optional city filter"
-    },
-    {
-     "name": "cineverse_get_showtimes",
-     "summary": "Showtimes for a film/cinema"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
-   "name": "trthaber-mcp",
-   "pypi": "trthaber-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/trthaber-mcp",
-   "title": "TRT Haber — headlines, breaking news & full articles",
-   "title_tr": "TRT Haber — manşetler, son dakika ve haber metinleri",
-   "tools": [
-    {
-     "name": "trthaber_headlines",
-     "summary": "Headlines by category"
-    },
-    {
-     "name": "trthaber_latest",
-     "summary": "Breaking news, newest first"
-    },
-    {
-     "name": "trthaber_get_article",
-     "summary": "Full text of one article"
-    },
-    {
-     "name": "trthaber_search_news",
-     "summary": "Keyword search over current news"
-    },
-    {
-     "name": "trthaber_list_categories",
-     "summary": "The 18 news categories"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
-   "name": "tff-mcp",
-   "pypi": "tff-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/tff-mcp",
-   "title": "Turkish Football Federation — standings, fixtures & match details",
-   "title_tr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
-   "tools": [
-    {
-     "name": "tff_list_leagues",
-     "summary": "The 18 covered leagues"
-    },
-    {
-     "name": "tff_standings",
-     "summary": "League standings (puan cetveli)"
-    },
-    {
-     "name": "tff_fixtures",
-     "summary": "Fixtures and results by week"
-    },
-    {
-     "name": "tff_match_detail",
-     "summary": "Full match detail: officials, goals, lineups"
-    },
-    {
-     "name": "tff_top_scorers",
-     "summary": "Top scorers (gol krallığı)"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.",
-   "name": "bim-mcp",
-   "pypi": "bim-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/bim-mcp",
-   "title": "bim.com.tr (BİM) — weekly Aktüel deals, prices & categories",
-   "title_tr": "bim.com.tr (BİM) — haftalık Aktüel ürünler, fiyatlar ve kategoriler",
-   "tools": [
-    {
-     "name": "bim_list_aktuel_dates",
-     "summary": "Aktüel + İndirim date periods with keys"
-    },
-    {
-     "name": "bim_aktuel_products",
-     "summary": "Priced Aktüel products for one week (filter + sort)"
-    },
-    {
-     "name": "bim_product_detail",
-     "summary": "Full detail for one Aktüel product"
-    },
-    {
-     "name": "bim_price_stats",
-     "summary": "Price stats for one Aktüel week (TRY)"
-    },
-    {
-     "name": "bim_list_categories",
-     "summary": "The 11 product-range categories"
-    },
-    {
-     "name": "bim_list_cities",
-     "summary": "The 81 provinces in the store finder"
-    },
-    {
-     "name": "bim_health",
-     "summary": "Check whether bim.com.tr is reachable"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.",
-   "name": "tabii-mcp",
-   "pypi": "tabii-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/tabii-mcp",
-   "title": "tabii.com (TRT) — streaming catalog, live channels & people",
-   "title_tr": "tabii.com (TRT) — dizi/film kataloğu, canlı kanallar ve oyuncular",
-   "tools": [
-    {
-     "name": "tabii_search_content",
-     "summary": "Search the catalog by original Turkish title"
-    },
-    {
-     "name": "tabii_get_show",
-     "summary": "Full detail for one title (seasons, episodes, cast)"
-    },
-    {
-     "name": "tabii_homepage",
-     "summary": "Current homepage sections (exclusive, series, movies...)"
-    },
-    {
-     "name": "tabii_live_channels",
-     "summary": "The 15 live TRT channels with HLS stream URLs"
-    },
-    {
-     "name": "tabii_get_person",
-     "summary": "One cast/crew member by id, with filmography"
-    },
-    {
-     "name": "tabii_health",
-     "summary": "Check whether tabii.com is reachable"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.",
-   "name": "eksisozluk-mcp",
-   "pypi": "eksisozluk-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/eksisozluk-mcp",
-   "title": "eksisozluk.com (Ekşi Sözlük) — topics, entries & search",
-   "title_tr": "eksisozluk.com — gündem başlıkları, entry'ler ve arama",
-   "tools": [
-    {
-     "name": "eksisozluk_trending",
-     "summary": "Gündem — trending topics with entry counts"
-    },
-    {
-     "name": "eksisozluk_search_topics",
-     "summary": "Search topic titles (partial matches welcome)"
-    },
-    {
-     "name": "eksisozluk_get_topic",
-     "summary": "Entries of one topic (recent / şükela sorts, pages)"
-    },
-    {
-     "name": "eksisozluk_channel_topics",
-     "summary": "Topics of one channel (spor, siyaset, ...)"
-    },
-    {
-     "name": "eksisozluk_debe",
-     "summary": "Yesterday's most-liked entries, grouped by topic"
-    },
-    {
-     "name": "eksisozluk_health",
-     "summary": "Check whether eksisozluk.com is reachable"
-    }
-   ]
-  },
-  {
-   "description": "Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements.",
-   "name": "iskur-mcp",
-   "pypi": "iskur-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/iskur-mcp",
-   "title": "İŞKUR — open job listings, details & announcements",
-   "title_tr": "İŞKUR — açık iş ilanları, iş detayı ve duyurular",
-   "tools": [
-    {
-     "name": "iskur_search_jobs",
-     "summary": "Search open job listings (keyword, city, date range, work type, education)"
-    },
-    {
-     "name": "iskur_latest_jobs",
-     "summary": "Jobs posted in the last 24 hours, optionally in one city"
-    },
-    {
-     "name": "iskur_get_job",
-     "summary": "Detail of one listing (description, skills, occupation, education)"
-    },
-    {
-     "name": "iskur_list_cities",
-     "summary": "The 81 provinces with codes"
-    },
-    {
-     "name": "iskur_list_announcements",
-     "summary": "İŞKUR official announcements"
-    },
-    {
-     "name": "iskur_health",
-     "summary": "Check whether the İŞKUR job portal is reachable"
-    }
-   ]
-  },
-  {
-   "description": "Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities.",
-   "name": "beyazperde-mcp",
-   "pypi": "beyazperde-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/beyazperde-mcp",
-   "title": "Beyazperde — now showing, search, showtimes & news",
-   "title_tr": "Beyazperde — vizyondakiler, film arama, seanslar ve haberler",
-   "tools": [
-    {
-     "name": "beyazperde_now_showing",
-     "summary": "Movies now showing in Turkish cinemas (title, release date, duration, genres, director, cast)"
-    },
-    {
-     "name": "beyazperde_search_movies",
-     "summary": "Search movies by title (Turkish title, original title, year, director, genres)"
-    },
-    {
-     "name": "beyazperde_get_movie",
-     "summary": "Detail of one movie (synopsis, director, cast, genres, duration, ratings)"
-    },
-    {
-     "name": "beyazperde_showtimes",
-     "summary": "Today's showtimes for a movie in a city (cinemas, versions, times)"
-    },
-    {
-     "name": "beyazperde_latest_news",
-     "summary": "Latest cinema news from Beyazperde"
-    },
-    {
-     "name": "beyazperde_list_cities",
-     "summary": "The 85 cities (with geocodes) showtimes can be listed for"
-    },
-    {
-     "name": "beyazperde_health",
-     "summary": "Check whether beyazperde.com is reachable"
-    }
-   ]
-  },
-  {
-   "description": "Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.",
-   "name": "nefisyemektarifleri-mcp",
-   "pypi": "nefisyemektarifleri-mcp",
-   "repository": "https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp",
-   "title": "Nefis Yemek Tarifleri — Turkish recipes, search, categories & daily menu",
-   "title_tr": "Nefis Yemek Tarifleri — tarif arama, kategoriler ve günlük menü",
-   "tools": [
-    {
-     "name": "nefis_search_recipes",
-     "summary": "Search recipes by dish or ingredient (13 per page, paginated)"
-    },
-    {
-     "name": "nefis_get_recipe",
-     "summary": "Full recipe: ingredients with amounts, steps, tips, times, servings, rating, nutrition"
-    },
-    {
-     "name": "nefis_list_categories",
-     "summary": "Full recipe-category tree (24 top-level, 74 subcategories)"
-    },
-    {
-     "name": "nefis_category_recipes",
-     "summary": "Recipes in one category, sorted popular/trending/newest"
-    },
-    {
-     "name": "nefis_trending",
-     "summary": "Most-made recipes (En Çok Yapılanlar, 24)"
-    },
-    {
-     "name": "nefis_daily_menu",
-     "summary": "Today's Bugün Ne Pişirsem? menu (25 recipes)"
-    },
-    {
-     "name": "nefis_health",
-     "summary": "Check whether nefisyemektarifleri.com is reachable right now"
-    }
-   ]
-  },
-   {
-    "description": "Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets.",
-    "name": "paribu-mcp",
-    "pypi": "paribu-mcp",
-    "repository": "https://github.com/mohammad-abbasi-sh/paribu-mcp",
-    "title": "Paribu — crypto exchange: tickers, order books, trades & markets",
-    "title_tr": "Paribu — kripto borsası: fiyatlar, emir defteri, işlemler ve piyasalar",
-    "tools": [
-     {
-      "name": "paribu_get_ticker",
-      "summary": "24h ticker for one market, or a ranked list of all 266 markets"
-     },
-     {
-      "name": "paribu_get_orderbook",
-      "summary": "Live order book: best bid/ask, spread, mid price, levels"
-     },
-     {
-      "name": "paribu_get_recent_trades",
-      "summary": "Most recent public trades, newest first (1–20)"
-     },
-     {
-      "name": "paribu_list_markets",
-      "summary": "Full 467-pair catalogue with precision, steps, labels"
-     },
-     {
-      "name": "paribu_get_currency",
-      "summary": "Currency metadata: networks, withdrawal fees, limits"
-     },
-     {
-      "name": "paribu_market_movers",
-      "summary": "Top gainers / losers over the last 24h by percentage"
-     },
-     {
-      "name": "paribu_health",
-      "summary": "Check whether api.paribu.com is reachable"
-     }
-    ]
-   }
- ]
+  ]
 }
