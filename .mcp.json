@@ -185,6 +185,12 @@
       "args": [
         "paribu-mcp"
       ]
+    },
+    "diyanet": {
+      "command": "uvx",
+      "args": [
+        "diyanet-mcp"
+      ]
     }
   }
 }
