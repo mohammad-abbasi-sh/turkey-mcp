@@ -191,6 +191,12 @@
       "args": [
         "diyanet-mcp"
       ]
+    },
+    "osym": {
+      "command": "uvx",
+      "args": [
+        "osym-mcp"
+      ]
     }
   }
 }
