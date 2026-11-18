@@ -1,6 +1,6 @@
 # Turkey MCP
 
-> 31 MCP servers (180 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+> 32 MCP servers (186 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
 - [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp): Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key). (4 tools)
 - [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp): Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY). (5 tools)
@@ -33,6 +33,7 @@
 - [nefisyemektarifleri-mcp](https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp): Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories. (7 tools)
 - [paribu-mcp](https://github.com/mohammad-abbasi-sh/paribu-mcp): Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets. (7 tools)
 - [diyanet-mcp](https://github.com/mohammad-abbasi-sh/diyanet-mcp): Unofficial read-only MCP server for Diyanet prayer times — official timetable for 81 provinces & districts, yearly tables & qibla. (6 tools)
+- [osym-mcp](https://github.com/mohammad-abbasi-sh/osym-mcp): Unofficial read-only MCP server for ÖSYM — Türkiye's national exam authority: announcements, exam calendar, per-group news. (6 tools)
 
 ## Install
 
