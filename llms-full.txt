@@ -1,0 +1,643 @@
+# Turkey MCP — full catalog
+
+> 32 MCP servers (186 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-18 from the live catalog.
+
+## How to use
+
+- Pick a server below, add it to your MCP client with `claude mcp add --transport stdio --scope user <name> -- uvx <package>`, then ask your assistant in plain language.
+- All servers at once: the profile builder at https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/builder builds a ready .mcp.json for any app.
+- Machine-readable catalog: https://mohammad-abbasi-sh.github.io/turkey-mcp/catalog.json — search index: https://mohammad-abbasi-sh.github.io/turkey-mcp/search.json
+
+## tcmb-mcp
+
+- Title: Central Bank of Türkiye — official FX rates
+- Category: finance
+- Summary: Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).
+- Repository: https://github.com/mohammad-abbasi-sh/tcmb-mcp
+- PyPI: https://pypi.org/project/tcmb-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-06
+- Install: `claude mcp add --transport stdio --scope user tcmb -- uvx tcmb-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/tcmb-mcp
+
+### Tools (4)
+
+- `tcmb_get_rates`: Today's FX rates for all currencies
+- `tcmb_get_rate`: Rate for one currency code (e.g. USD)
+- `tcmb_list_currencies`: List all available currency codes
+- `tcmb_get_rates_on`: Historical rates for a date (YYYYMMDD)
+
+## arabam-mcp
+
+- Title: arabam.com — used-car listings & market prices
+- Category: cars
+- Summary: Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).
+- Repository: https://github.com/mohammad-abbasi-sh/arabam-mcp
+- PyPI: https://pypi.org/project/arabam-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user arabam -- uvx arabam-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/arabam-mcp
+
+### Tools (5)
+
+- `arabam_search`: Search listings by brand/model slug, paged
+- `arabam_listing_detail`: Full 19-field spec table + price for one listing
+- `arabam_list_brands`: All ~77 brands with counts and slugs
+- `arabam_list_models`: Models of a brand with counts and slugs
+- `arabam_price_stats`: Min/max/median/average price over N pages
+
+## emlakjet-mcp
+
+- Title: emlakjet.com — real-estate listings, districts & price stats
+- Category: real-estate
+- Summary: Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).
+- Repository: https://github.com/mohammad-abbasi-sh/emlakjet-mcp
+- PyPI: https://pypi.org/project/emlakjet-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user emlakjet -- uvx emlakjet-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/emlakjet-mcp
+
+### Tools (4)
+
+- `emlakjet_search`: Search listings by city/district, rooms, price, area
+- `emlakjet_listing_detail`: Full detail + 14 spec fields for one listing
+- `emlakjet_list_districts`: Districts of a city with listing pages
+- `emlakjet_price_stats`: Min/max/median/average price + median per m²
+
+## armut-mcp
+
+- Title: armut.com — local services, pros & price guides
+- Category: services
+- Summary: Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).
+- Repository: https://github.com/mohammad-abbasi-sh/armut-mcp
+- PyPI: https://pypi.org/project/armut-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user armut -- uvx armut-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/armut-mcp
+
+### Tools (6)
+
+- `armut_search_services`: Search the 6,759-service catalogue by keyword
+- `armut_service_detail`: Detail of one service: pro count, rating, reviews
+- `armut_list_pros`: Top pros for a service, optionally filtered by city
+- `armut_service_faq`: FAQs for a service, with answers
+- `armut_price_guide`: Price guide: 12 monthly averages, quotes, example jobs
+- `armut_trending_services`: Trending/popular services and most-searched combos
+
+## hepsiburada-mcp
+
+- Title: hepsiburada.com — shopping search, product details & price stats
+- Category: shopping
+- Summary: Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). Optional local-session account actions: view/add/remove cart items and manage favorites (needs your own browser session cookie).
+- Repository: https://github.com/mohammad-abbasi-sh/hepsiburada-mcp
+- PyPI: https://pypi.org/project/hepsiburada-mcp/
+- Version: 0.2.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user hepsiburada -- uvx hepsiburada-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/hepsiburada-mcp
+
+### Tools (12)
+
+- `hepsiburada_search`: Search products by keyword, sort by price or relevance
+- `hepsiburada_product_detail`: Detail of one product: price, stock, seller, GTIN, highlights
+- `hepsiburada_list_categories`: The 9 top categories with URLs and ids
+- `hepsiburada_price_stats`: Price stats for a query: min/median/mean/max in TRY
+- `hepsiburada_product_reviews`: Recent customer reviews: author, rating, text, date
+- `hepsiburada_view_cart`: View your cart: items, quantities, prices (TRY)
+- `hepsiburada_add_to_cart`: Add a product to your cart (confirm required)
+- `hepsiburada_remove_from_cart`: Remove one item from your cart (confirm required)
+- `hepsiburada_update_cart_quantity`: Change a cart item's quantity (confirm required)
+- `hepsiburada_list_favorites`: List your favorite product SKUs
+- `hepsiburada_add_favorite`: Add a product to favorites (confirm required)
+- `hepsiburada_remove_favorite`: Remove a product from favorites (confirm required)
+
+## n11-mcp
+
+- Title: n11.com — shopping search, product details & price stats
+- Category: shopping
+- Summary: Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).
+- Repository: https://github.com/mohammad-abbasi-sh/n11-mcp
+- PyPI: https://pypi.org/project/n11-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user n11 -- uvx n11-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/n11-mcp
+
+### Tools (5)
+
+- `n11_search`: Search products by keyword, sort by price or relevance
+- `n11_product_detail`: Detail of one product: price, stock, seller, rating, category
+- `n11_list_categories`: The 11 top categories with URLs and slugs
+- `n11_price_stats`: Price stats for a query: min/median/mean/max in TRY
+- `n11_product_reviews`: Recent customer reviews: reviewer and star rating
+
+## ciceksepeti-mcp
+
+- Title: ciceksepeti.com — flowers & gifts search, details & price stats
+- Category: shopping
+- Summary: Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).
+- Repository: https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp
+- PyPI: https://pypi.org/project/ciceksepeti-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user ciceksepeti -- uvx ciceksepeti-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/ciceksepeti-mcp
+
+### Tools (5)
+
+- `ciceksepeti_search`: Search flowers & gifts by keyword, sort by price or relevance
+- `ciceksepeti_product_detail`: Detail of one product: price, stock, seller, rating, category
+- `ciceksepeti_list_categories`: 89 flower/plant/gift categories with URLs and slugs
+- `ciceksepeti_price_stats`: Price stats for a query: min/median/mean/max in TRY
+- `ciceksepeti_product_reviews`: Recent customer reviews: reviewer, star rating, date
+
+## obilet-mcp
+
+- Title: obilet.com — bus journeys, locations & flight summary
+- Category: travel
+- Summary: Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).
+- Repository: https://github.com/mohammad-abbasi-sh/obilet-mcp
+- PyPI: https://pypi.org/project/obilet-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-07
+- Install: `claude mcp add --transport stdio --scope user obilet -- uvx obilet-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/obilet-mcp
+
+### Tools (5)
+
+- `obilet_search_locations`: Search bus/flight locations by name
+- `obilet_search_bus_journeys`: Bus journeys for a route + date, sorted by price, departure or duration
+- `obilet_journey_detail`: Full detail of one journey: stops, prices, features
+- `obilet_price_stats`: Price stats for a route + date: min/median/mean/max in TRY
+- `obilet_flight_summary`: Flight summary: count, min/max price, durations, airlines
+
+## biletall-mcp
+
+- Title: biletall.com — bus & flight tickets, routes & prices
+- Category: travel
+- Summary: Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.
+- Repository: https://github.com/mohammad-abbasi-sh/biletall-mcp
+- PyPI: https://pypi.org/project/biletall-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user biletall -- uvx biletall-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/biletall-mcp
+
+### Tools (5)
+
+- `biletall_search_locations`: Search locations by name (offline, 1,726 slugs)
+- `biletall_bus_route`: Cheapest bus journeys for a route, today
+- `biletall_flight_route`: Cheapest flights for a route, with dates
+- `biletall_price_stats`: Price stats for a bus route: min/median/mean/max in TRY
+- `biletall_popular_routes`: Most-travelled bus routes with prices
+
+## secretcv-mcp
+
+- Title: secretcv.com — job search, listings & sectors
+- Category: jobs
+- Summary: Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.
+- Repository: https://github.com/mohammad-abbasi-sh/secretcv-mcp
+- PyPI: https://pypi.org/project/secretcv-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user secretcv -- uvx secretcv-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/secretcv-mcp
+
+### Tools (5)
+
+- `secretcv_search_jobs`: Search jobs by keyword
+- `secretcv_latest_jobs`: Latest job listings, newest first
+- `secretcv_get_job`: Full detail for one job
+- `secretcv_list_sectors`: All sectors with job counts
+- `secretcv_list_cities`: All cities with job counts
+
+## biletix-mcp
+
+- Title: biletix.com — events, tickets & venues
+- Category: entertainment
+- Summary: Unofficial read-only MCP server for biletix.com events: trending, search, venues.
+- Repository: https://github.com/mohammad-abbasi-sh/biletix-mcp
+- PyPI: https://pypi.org/project/biletix-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user biletix -- uvx biletix-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/biletix-mcp
+
+### Tools (6)
+
+- `biletix_trending`: Trending featured events
+- `biletix_search_events`: Search events in featured listings
+- `biletix_get_event`: Full detail for one event
+- `biletix_list_by_category`: Events by category
+- `biletix_list_venues`: All venues
+- `biletix_venue_events`: Events at one venue
+
+## sozcu-mcp
+
+- Title: sozcu.com.tr — news headlines, articles & market rates
+- Category: news
+- Summary: Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.
+- Repository: https://github.com/mohammad-abbasi-sh/sozcu-mcp
+- PyPI: https://pypi.org/project/sozcu-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user sozcu -- uvx sozcu-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/sozcu-mcp
+
+### Tools (5)
+
+- `sozcu_headlines`: Headlines by section
+- `sozcu_latest`: Latest news from the dated archive
+- `sozcu_get_article`: Full article text
+- `sozcu_search_news`: Search the news archive
+- `sozcu_market_rates`: Live market ticker rates
+
+## eleman-net-mcp
+
+- Title: eleman.net — job listings, sectors & cities
+- Category: jobs
+- Summary: Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.
+- Repository: https://github.com/mohammad-abbasi-sh/eleman-net-mcp
+- PyPI: https://pypi.org/project/eleman-net-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user eleman-net -- uvx eleman-net-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/eleman-net-mcp
+
+### Tools (5)
+
+- `eleman_search_jobs`: Search jobs by keyword
+- `eleman_get_job`: Full detail for one job
+- `eleman_list_sectors`: All sectors
+- `eleman_list_cities`: All cities
+- `eleman_new_listings`: Newest listings
+
+## mackolik-mcp
+
+- Title: mackolik.com — live scores, results, fixtures & standings
+- Category: sports
+- Summary: Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.
+- Repository: https://github.com/mohammad-abbasi-sh/mackolik-mcp
+- PyPI: https://pypi.org/project/mackolik-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user mackolik -- uvx mackolik-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/mackolik-mcp
+
+### Tools (5)
+
+- `mackolik_live_scores`: Live matches right now
+- `mackolik_results`: Results for a date
+- `mackolik_fixtures`: Upcoming fixtures
+- `mackolik_standings`: League standings
+- `mackolik_match_detail`: Detail for one match
+
+## donanimhaber-mcp
+
+- Title: donanimhaber.com — tech news, articles & hot forum topics
+- Category: news
+- Summary: Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.
+- Repository: https://github.com/mohammad-abbasi-sh/donanimhaber-mcp
+- PyPI: https://pypi.org/project/donanimhaber-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user donanimhaber -- uvx donanimhaber-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/donanimhaber-mcp
+
+### Tools (6)
+
+- `donanimhaber_latest`: Latest tech articles
+- `donanimhaber_search_news`: Search news (Turkish-aware filter)
+- `donanimhaber_get_article`: Full article text
+- `donanimhaber_section`: Articles in one section
+- `donanimhaber_sections`: All sections
+- `donanimhaber_forum_hot`: Hot forum topics
+
+## yemek-com-mcp
+
+- Title: Yemek.com — Turkish recipes, categories & videos
+- Category: food
+- Summary: Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.
+- Repository: https://github.com/mohammad-abbasi-sh/yemek-com-mcp
+- PyPI: https://pypi.org/project/yemek-com-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user yemek-com -- uvx yemek-com-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/yemek-com-mcp
+
+### Tools (6)
+
+- `yemek_search_recipes`: Search recipes by keyword
+- `yemek_get_recipe`: Full recipe: ingredients, steps, rating
+- `yemek_list_categories`: All recipe categories
+- `yemek_list_trending`: Trending recipes
+- `yemek_list_videos`: Recipe videos
+- `yemek_list_popular`: Most popular recipes
+
+## hurriyet-mcp
+
+- Title: Hürriyet — news headlines, articles & search
+- Category: news
+- Summary: Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.
+- Repository: https://github.com/mohammad-abbasi-sh/hurriyet-mcp
+- PyPI: https://pypi.org/project/hurriyet-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user hurriyet -- uvx hurriyet-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/hurriyet-mcp
+
+### Tools (5)
+
+- `hurriyet_get_headlines`: Headlines by section
+- `hurriyet_get_article`: Full article text
+- `hurriyet_search_news`: Search news by keyword
+- `hurriyet_get_latest`: Latest news from the homepage
+- `hurriyet_list_categories`: All news sections
+
+## sok-mcp
+
+- Title: ŞOK — grocery products, categories, campaigns & prices
+- Category: grocery
+- Summary: Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.
+- Repository: https://github.com/mohammad-abbasi-sh/sok-mcp
+- PyPI: https://pypi.org/project/sok-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user sok -- uvx sok-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/sok-mcp
+
+### Tools (6)
+
+- `sok_search_products`: Search products by keyword
+- `sok_get_product`: Full detail for one product
+- `sok_list_categories`: All 19 categories
+- `sok_category_products`: Products in one category
+- `sok_list_promotions`: Current campaigns
+- `sok_price_stats`: Price stats for a query in TRY
+
+## jolly-tur-mcp
+
+- Title: Jolly Tur — hotels, live prices & campaigns
+- Category: travel
+- Summary: Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.
+- Repository: https://github.com/mohammad-abbasi-sh/jolly-tur-mcp
+- PyPI: https://pypi.org/project/jolly-tur-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user jolly-tur -- uvx jolly-tur-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/jolly-tur-mcp
+
+### Tools (3)
+
+- `jolly_search_hotels`: Search hotels with live prices
+- `jolly_get_hotel`: Full detail for one hotel
+- `jolly_list_campaigns`: Current campaigns
+
+## migros-mcp
+
+- Title: Migros Sanal Market — products, prices, promos & categories
+- Category: grocery
+- Summary: Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie.
+- Repository: https://github.com/mohammad-abbasi-sh/migros-mcp
+- PyPI: https://pypi.org/project/migros-mcp/
+- Version: 0.2.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user migros -- uvx migros-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/migros-mcp
+
+### Tools (10)
+
+- `migros_search_products`: Search products by keyword
+- `migros_get_product`: Full detail for one product
+- `migros_list_categories`: All 11 categories
+- `migros_list_promotions`: Current promotions
+- `migros_price_stats`: Price stats for a query in TRY
+- `migros_view_cart`: View your cart: items, quantities, totals
+- `migros_add_to_cart`: Add a product to your cart (confirm=true)
+- `migros_remove_from_cart`: Remove a product from your cart (confirm=true)
+- `migros_update_cart_quantity`: Change a cart item's quantity (confirm=true)
+- `migros_create_order`: Start checkout: returns the payment link, never pays
+
+## paribu-cineverse-mcp
+
+- Title: Paribu Cineverse — now showing, coming soon & showtimes
+- Category: entertainment
+- Summary: Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.
+- Repository: https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp
+- PyPI: https://pypi.org/project/paribu-cineverse-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user paribu-cineverse -- uvx paribu-cineverse-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/paribu-cineverse-mcp
+
+### Tools (5)
+
+- `cineverse_list_now_showing`: Films now showing
+- `cineverse_list_coming_soon`: Coming soon films
+- `cineverse_get_movie`: Full detail for one film
+- `cineverse_list_cinemas`: All cinemas, optional city filter
+- `cineverse_get_showtimes`: Showtimes for a film/cinema
+
+## trthaber-mcp
+
+- Title: TRT Haber — headlines, breaking news & full articles
+- Category: news
+- Summary: Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.
+- Repository: https://github.com/mohammad-abbasi-sh/trthaber-mcp
+- PyPI: https://pypi.org/project/trthaber-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-08
+- Install: `claude mcp add --transport stdio --scope user trthaber -- uvx trthaber-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/trthaber-mcp
+
+### Tools (5)
+
+- `trthaber_headlines`: Headlines by category
+- `trthaber_latest`: Breaking news, newest first
+- `trthaber_get_article`: Full text of one article
+- `trthaber_search_news`: Keyword search over current news
+- `trthaber_list_categories`: The 18 news categories
+
+## tff-mcp
+
+- Title: Turkish Football Federation — standings, fixtures & match details
+- Category: sports
+- Summary: Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.
+- Repository: https://github.com/mohammad-abbasi-sh/tff-mcp
+- PyPI: https://pypi.org/project/tff-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-09
+- Install: `claude mcp add --transport stdio --scope user tff -- uvx tff-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/tff-mcp
+
+### Tools (5)
+
+- `tff_list_leagues`: The 18 covered leagues
+- `tff_standings`: League standings (puan cetveli)
+- `tff_fixtures`: Fixtures and results by week
+- `tff_match_detail`: Full match detail: officials, goals, lineups
+- `tff_top_scorers`: Top scorers (gol krallığı)
+
+## bim-mcp
+
+- Title: bim.com.tr (BİM) — weekly Aktüel deals, prices & categories
+- Category: grocery
+- Summary: Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.
+- Repository: https://github.com/mohammad-abbasi-sh/bim-mcp
+- PyPI: https://pypi.org/project/bim-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-10
+- Install: `claude mcp add --transport stdio --scope user bim -- uvx bim-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/bim-mcp
+
+### Tools (7)
+
+- `bim_list_aktuel_dates`: Aktüel + İndirim date periods with keys
+- `bim_aktuel_products`: Priced Aktüel products for one week (filter + sort)
+- `bim_product_detail`: Full detail for one Aktüel product
+- `bim_price_stats`: Price stats for one Aktüel week (TRY)
+- `bim_list_categories`: The 11 product-range categories
+- `bim_list_cities`: The 81 provinces in the store finder
+- `bim_health`: Check whether bim.com.tr is reachable
+
+## tabii-mcp
+
+- Title: tabii.com (TRT) — streaming catalog, live channels & people
+- Category: entertainment
+- Summary: Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.
+- Repository: https://github.com/mohammad-abbasi-sh/tabii-mcp
+- PyPI: https://pypi.org/project/tabii-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-11
+- Install: `claude mcp add --transport stdio --scope user tabii -- uvx tabii-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/tabii-mcp
+
+### Tools (6)
+
+- `tabii_search_content`: Search the catalog by original Turkish title
+- `tabii_get_show`: Full detail for one title (seasons, episodes, cast)
+- `tabii_homepage`: Current homepage sections (exclusive, series, movies...)
+- `tabii_live_channels`: The 15 live TRT channels with HLS stream URLs
+- `tabii_get_person`: One cast/crew member by id, with filmography
+- `tabii_health`: Check whether tabii.com is reachable
+
+## eksisozluk-mcp
+
+- Title: eksisozluk.com (Ekşi Sözlük) — topics, entries & search
+- Category: communication
+- Summary: Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.
+- Repository: https://github.com/mohammad-abbasi-sh/eksisozluk-mcp
+- PyPI: https://pypi.org/project/eksisozluk-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-12
+- Install: `claude mcp add --transport stdio --scope user eksisozluk -- uvx eksisozluk-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/eksisozluk-mcp
+
+### Tools (6)
+
+- `eksisozluk_trending`: Gündem — trending topics with entry counts
+- `eksisozluk_search_topics`: Search topic titles (partial matches welcome)
+- `eksisozluk_get_topic`: Entries of one topic (recent / şükela sorts, pages)
+- `eksisozluk_channel_topics`: Topics of one channel (spor, siyaset, ...)
+- `eksisozluk_debe`: Yesterday's most-liked entries, grouped by topic
+- `eksisozluk_health`: Check whether eksisozluk.com is reachable
+
+## iskur-mcp
+
+- Title: İŞKUR — open job listings, details & announcements
+- Category: jobs
+- Summary: Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements.
+- Repository: https://github.com/mohammad-abbasi-sh/iskur-mcp
+- PyPI: https://pypi.org/project/iskur-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-13
+- Install: `claude mcp add --transport stdio --scope user iskur -- uvx iskur-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/iskur-mcp
+
+### Tools (6)
+
+- `iskur_search_jobs`: Search open job listings (keyword, city, date range, work type, education)
+- `iskur_latest_jobs`: Jobs posted in the last 24 hours, optionally in one city
+- `iskur_get_job`: Detail of one listing (description, skills, occupation, education)
+- `iskur_list_cities`: The 81 provinces with codes
+- `iskur_list_announcements`: İŞKUR official announcements
+- `iskur_health`: Check whether the İŞKUR job portal is reachable
+
+## beyazperde-mcp
+
+- Title: Beyazperde — now showing, search, showtimes & news
+- Category: entertainment
+- Summary: Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities.
+- Repository: https://github.com/mohammad-abbasi-sh/beyazperde-mcp
+- PyPI: https://pypi.org/project/beyazperde-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-14
+- Install: `claude mcp add --transport stdio --scope user beyazperde -- uvx beyazperde-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/beyazperde-mcp
+
+### Tools (7)
+
+- `beyazperde_now_showing`: Movies now showing in Turkish cinemas (title, release date, duration, genres, director, cast)
+- `beyazperde_search_movies`: Search movies by title (Turkish title, original title, year, director, genres)
+- `beyazperde_get_movie`: Detail of one movie (synopsis, director, cast, genres, duration, ratings)
+- `beyazperde_showtimes`: Today's showtimes for a movie in a city (cinemas, versions, times)
+- `beyazperde_latest_news`: Latest cinema news from Beyazperde
+- `beyazperde_list_cities`: The 85 cities (with geocodes) showtimes can be listed for
+- `beyazperde_health`: Check whether beyazperde.com is reachable
+
+## nefisyemektarifleri-mcp
+
+- Title: Nefis Yemek Tarifleri — Turkish recipes, search, categories & daily menu
+- Category: food
+- Summary: Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.
+- Repository: https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp
+- PyPI: https://pypi.org/project/nefisyemektarifleri-mcp/
+- Version: 0.1.0 — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-15
+- Install: `claude mcp add --transport stdio --scope user nefisyemektarifleri -- uvx nefisyemektarifleri-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/nefisyemektarifleri-mcp
+
+### Tools (7)
+
+- `nefis_search_recipes`: Search recipes by dish or ingredient (13 per page, paginated)
+- `nefis_get_recipe`: Full recipe: ingredients with amounts, steps, tips, times, servings, rating, nutrition
+- `nefis_list_categories`: Full recipe-category tree (24 top-level, 74 subcategories)
+- `nefis_category_recipes`: Recipes in one category, sorted popular/trending/newest
+- `nefis_trending`: Most-made recipes (En Çok Yapılanlar, 24)
+- `nefis_daily_menu`: Today's Bugün Ne Pişirsem? menu (25 recipes)
+- `nefis_health`: Check whether nefisyemektarifleri.com is reachable right now
+
+## paribu-mcp
+
+- Title: Paribu — crypto exchange: tickers, order books, trades & markets
+- Category: finance
+- Summary: Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets.
+- Repository: https://github.com/mohammad-abbasi-sh/paribu-mcp
+- PyPI: https://pypi.org/project/paribu-mcp/
+- Version: pending — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-16
+- Install: `claude mcp add --transport stdio --scope user paribu -- uvx paribu-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/paribu-mcp
+
+### Tools (7)
+
+- `paribu_get_ticker`: 24h ticker for one market, or a ranked list of all 266 markets
+- `paribu_get_orderbook`: Live order book: best bid/ask, spread, mid price, levels
+- `paribu_get_recent_trades`: Most recent public trades, newest first (1–20)
+- `paribu_list_markets`: Full 467-pair catalogue with precision, steps, labels
+- `paribu_get_currency`: Currency metadata: networks, withdrawal fees, limits
+- `paribu_market_movers`: Top gainers / losers over the last 24h by percentage
+- `paribu_health`: Check whether api.paribu.com is reachable
+
+## diyanet-mcp
+
+- Title: Diyanet — prayer times: official timetable for 81 provinces & districts
+- Category: services
+- Summary: Unofficial read-only MCP server for Diyanet prayer times — official timetable for 81 provinces & districts, yearly tables & qibla.
+- Repository: https://github.com/mohammad-abbasi-sh/diyanet-mcp
+- PyPI: https://pypi.org/project/diyanet-mcp/
+- Version: pending — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-17
+- Install: `claude mcp add --transport stdio --scope user diyanet -- uvx diyanet-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/diyanet-mcp
+
+### Tools (6)
+
+- `diyanet_prayer_times`: Today's 6 prayer times + Miladi/Hijri dates, qibla angle/time and astro sunrise/sunset for a place
+- `diyanet_yearly_times`: Full-year table: one row per day (Miladi + Hijri dates + 6 times), 365 rows
+- `diyanet_list_provinces`: The 81 provinces with Diyanet ids and Turkish + English names
+- `diyanet_list_districts`: Districts of one province (by name or id) with ids, names and page URLs
+- `diyanet_qibla`: Qibla angle, qibla time, astro sunrise/sunset for a place
+- `diyanet_health`: Check whether namazvakitleri.diyanet.gov.tr is reachable
+
+## osym-mcp
+
+- Title: ÖSYM — exams: announcements, exam calendar, per-group news
+- Category: services
+- Summary: Unofficial read-only MCP server for ÖSYM — Türkiye's national exam authority: announcements, exam calendar, per-group news.
+- Repository: https://github.com/mohammad-abbasi-sh/osym-mcp
+- PyPI: https://pypi.org/project/osym-mcp/
+- Version: pending — health: verified — last checked: 2026-11-18 — in the catalog since: 2026-11-18
+- Install: `claude mcp add --transport stdio --scope user osym -- uvx osym-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/osym-mcp
+
+### Tools (6)
+
+- `osym_latest_announcements`: Newest ÖSYM announcements, newest first (limit 1–50; optional year 2010–2026)
+- `osym_search_announcements`: Search announcements by title, Turkish-insensitive (optional year, limit 1–50)
+- `osym_get_announcement`: Full text of one announcement by slug or URL, with guide-PDF links
+- `osym_exam_calendar`: Official exam calendar: 95 exams with application / exam / result / preference dates
+- `osym_exam_group`: One exam group's announcements — or the full group list with no argument
+- `osym_health`: Check whether www.osym.gov.tr is reachable
