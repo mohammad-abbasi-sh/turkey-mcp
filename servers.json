@@ -1039,6 +1039,40 @@
           "summary": "Check whether namazvakitleri.diyanet.gov.tr is reachable"
         }
       ]
+    },
+    {
+      "description": "Unofficial read-only MCP server for ÖSYM — Türkiye's national exam authority: announcements, exam calendar, per-group news.",
+      "name": "osym-mcp",
+      "pypi": "osym-mcp",
+      "repository": "https://github.com/mohammad-abbasi-sh/osym-mcp",
+      "title": "ÖSYM — exams: announcements, exam calendar, per-group news",
+      "title_tr": "ÖSYM — sınavlar: duyurular, sınav takvimi ve grup duyuruları",
+      "tools": [
+        {
+          "name": "osym_latest_announcements",
+          "summary": "Newest ÖSYM announcements, newest first (limit 1–50; optional year 2010–2026)"
+        },
+        {
+          "name": "osym_search_announcements",
+          "summary": "Search announcements by title, Turkish-insensitive (optional year, limit 1–50)"
+        },
+        {
+          "name": "osym_get_announcement",
+          "summary": "Full text of one announcement by slug or URL, with guide-PDF links"
+        },
+        {
+          "name": "osym_exam_calendar",
+          "summary": "Official exam calendar: 95 exams with application / exam / result / preference dates"
+        },
+        {
+          "name": "osym_exam_group",
+          "summary": "One exam group's announcements — or the full group list with no argument"
+        },
+        {
+          "name": "osym_health",
+          "summary": "Check whether www.osym.gov.tr is reachable"
+        }
+      ]
     }
   ]
 }
