@@ -29,6 +29,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 32 servers, 186 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
 </script>
+<script type="application/ld+json" id="ld-page"></script>
 <style>
 :root{
   --bg:#F1F4F2; --bg-soft:#EEF2EF; --card:#FFFFFF; --elev:#FFFFFF; --text:#070A14; --muted:#4A5A52;
@@ -500,6 +501,142 @@ footer.site{margin-top:90px;background:#070A14;color:#B8C4BC}
   .unfold{opacity:1;transform:none}
   .demo-body .cursor{animation:none}
 }
+/* ---- Phase 2 port (2026-11-18): builder, install panel, demo, status,
+   guide, submit, my, banner, bottom nav, whats-new ---- */
+.top-banner{background:var(--navy);color:#EDE9E3;padding:9px 0;font-size:13.5px}
+.top-banner .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.top-banner a{color:var(--primary-bright);font-weight:700}
+.top-banner .x{margin-inline-start:auto;background:transparent;border:1px solid #2E3D34;color:#B8C4BC;border-radius:var(--pill);padding:3px 12px;cursor:pointer;font-size:12.5px}
+.nav-more{position:relative}
+.nav-more-btn{background:none;border:0;color:var(--text);font:inherit;font-weight:600;padding:8px 10px;cursor:pointer;border-radius:var(--radius-sm)}
+.nav-more-btn:hover{background:var(--bg-soft)}
+.nav-more-menu{position:absolute;inset-inline-start:0;top:calc(100% + 6px);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow-lg);min-width:210px;padding:6px;display:none;z-index:60}
+.nav-more.open .nav-more-menu{display:block}
+.nav-more-menu a{display:block;padding:8px 12px;border-radius:8px;color:var(--text);text-decoration:none;font-weight:500}
+.nav-more-menu a:hover{background:var(--bg-soft)}
+.bottom-nav{display:none}
+@media (max-width:600px){
+  .bottom-nav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));justify-content:space-around;box-shadow:0 -4px 18px rgba(7,10,20,.08)}
+  .bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;color:var(--muted);text-decoration:none;padding:4px 6px;border-radius:10px}
+  .bottom-nav a.active{color:var(--primary-ink)}
+  .bottom-nav .ic{font-size:19px;line-height:1}
+  body{padding-bottom:64px}
+  .palette-panel{margin-bottom:70px}
+}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.chips .lbl{font-size:13px;color:var(--muted);font-weight:600}
+.chip-btn{cursor:pointer}
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){.app-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.app-grid{grid-template-columns:1fr}}
+.app-card{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.app-card:hover{border-color:var(--primary);box-shadow:var(--shadow-accent)}
+.app-card.web{opacity:.62;cursor:default}
+.app-card.web:hover{border-color:var(--line);box-shadow:var(--shadow)}
+.app-card h3{font-size:16px;margin:0 0 4px}
+.app-card p{margin:0;color:var(--muted);font-size:13.5px}
+.acct-banner{background:linear-gradient(135deg,var(--primary-soft),var(--secondary-soft));border:1px solid var(--line-strong);border-radius:var(--radius-lg);padding:26px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.acct-banner h3{margin:0 0 8px;font-size:20px}
+.acct-banner p{margin:0;color:var(--muted);max-width:720px}
+.bld-layout{display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start}
+@media (max-width:900px){.bld-layout{grid-template-columns:1fr}}
+.bld-list{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.bld-row{display:flex;gap:10px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+.bld-row:last-child{border-bottom:0}
+.bld-row:hover{background:var(--bg-soft)}
+.bld-row input{margin-top:4px;accent-color:var(--primary)}
+.bld-row .nm{font-weight:700;font-size:14.5px}
+.bld-row .ds{font-size:13px;color:var(--muted);margin-top:2px}
+.bld-row .ct{font-size:12px;color:var(--muted)}
+.prof-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}
+.prof-btn{border:1px solid var(--line-strong);background:var(--card);border-radius:var(--pill);padding:7px 14px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--text)}
+.prof-btn:hover{border-color:var(--primary)}
+.prof-btn.on{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:var(--pill);overflow:hidden}
+.seg button{border:0;background:var(--card);padding:7px 14px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--text)}
+.seg button.on{background:var(--primary);color:var(--on-primary)}
+.out-box{background:var(--navy);color:#EDE9E3;border-radius:16px;overflow:hidden;margin-top:14px}
+.out-box h3{font-size:13px;margin:0;padding:12px 16px;border-bottom:1px solid #223028;color:#B8C4BC;font-family:var(--font-mono)}
+.out-box pre{margin:0;padding:14px 16px;overflow:auto;max-height:420px;font-size:13px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.out-actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 14px}
+.sel-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.sel-chips .chip{display:inline-flex;gap:6px;align-items:center}
+.sel-chips .chip button{border:0;background:none;cursor:pointer;color:inherit;font-size:14px;line-height:1;padding:0}
+.env-row{display:grid;grid-template-columns:1fr 2fr;gap:10px;align-items:center;margin:8px 0}
+.env-row label{font-size:13.5px;font-weight:600;overflow-wrap:anywhere}
+.env-row input{width:100%;padding:9px 12px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-family:var(--font-mono);font-size:13px}
+@media (max-width:600px){.env-row{grid-template-columns:1fr}}
+.inst-panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:18px}
+.inst-panel h3{margin:0 0 12px;font-size:17px}
+.inst-apps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.read-box{border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--bg-soft);padding:16px 18px}
+.read-box dl{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;margin:0}
+.read-box dt{font-weight:700;font-size:13.5px}
+.read-box dd{margin:0;font-size:13.5px;color:var(--muted)}
+@media (max-width:600px){.read-box dl{grid-template-columns:1fr;gap:2px 0}.read-box dd{margin-bottom:8px}}
+.choose-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:700px){.choose-grid{grid-template-columns:1fr}}
+.qa-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:16px 18px;margin-bottom:12px}
+.qa-card .q{font-weight:700;font-size:15.5px;margin:0 0 8px}
+.qa-card code{font-family:var(--font-mono);font-size:13px;background:var(--bg-soft);padding:2px 7px;border-radius:6px;overflow-wrap:anywhere}
+.qa-card .a{color:var(--muted);font-size:14px;margin:10px 0 0}
+.faq-item{border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);margin-bottom:10px;padding:0 16px}
+.faq-item summary{cursor:pointer;font-weight:700;padding:13px 0;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item p{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.badge-box{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:16px 18px}
+.badge-box img{height:20px}
+.status-table{width:100%;border-collapse:collapse;font-size:14px}
+.status-table th,.status-table td{text-align:start;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.status-table th{color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.status-table tr:hover td{background:var(--bg-soft)}
+.guide-layout{display:grid;grid-template-columns:240px 1fr;gap:26px;align-items:start}
+@media (max-width:800px){.guide-layout{grid-template-columns:1fr}}
+.guide-toc{position:sticky;top:90px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:14px 16px}
+.guide-toc a{display:block;padding:6px 0;color:var(--muted);text-decoration:none;font-size:14px}
+.guide-toc a:hover{color:var(--primary-ink)}
+.guide-sec{margin-bottom:34px}
+.guide-sec h2{font-size:21px;margin:0 0 12px}
+.guide-sec p{color:var(--text);line-height:1.8;margin:0 0 12px}
+.guide-sec ul{line-height:1.8}
+.form-grid{display:grid;gap:14px;max-width:760px}
+.field label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:14.5px}
+.field textarea{min-height:90px;resize:vertical}
+.field .hint{font-size:12.5px;color:var(--muted);margin-top:4px}
+.field .count{font-size:12.5px;color:var(--muted);text-align:end}
+.preview-box{border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--bg-soft);padding:16px 18px;white-space:pre-wrap;font-size:13.5px;max-height:340px;overflow:auto}
+.feedback-strip{border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+.feedback-strip form{display:grid;grid-template-columns:150px 1fr auto;gap:10px;align-items:start}
+.feedback-strip select,.feedback-strip input,.feedback-strip textarea{padding:9px 11px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:13.5px;width:100%}
+@media (max-width:700px){.feedback-strip form{grid-template-columns:1fr}}
+.md-view{background:var(--navy);color:#EDE9E3;border-radius:16px;padding:20px;overflow:auto}
+.md-view pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13.5px;line-height:1.65}
+.wn-backdrop{position:fixed;inset:0;background:rgba(7,10,20,.55);z-index:90;display:none;align-items:center;justify-content:center;padding:20px}
+.wn-backdrop.open{display:flex}
+.wn-panel{background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);max-width:520px;width:100%;padding:26px;max-height:88vh;overflow:auto}
+.wn-panel h2{margin:0 0 6px;font-size:22px}
+.wn-panel ul{margin:14px 0 20px;padding-inline-start:20px;line-height:1.8}
+.filter-radios{display:grid;gap:2px}
+.filter-radios label{display:flex;gap:8px;align-items:center;padding:6px 8px;border-radius:8px;cursor:pointer;font-size:14px}
+.filter-radios label:hover{background:var(--bg-soft)}
+.filter-radios input{accent-color:var(--primary)}
+.filter-radios .cnt{margin-inline-start:auto;color:var(--muted);font-size:12.5px}
+.check-row{display:flex;gap:8px;align-items:center;padding:6px 8px;border-radius:8px;cursor:pointer;font-size:14px}
+.check-row:hover{background:var(--bg-soft)}
+.check-row input{accent-color:var(--primary)}
+.check-row .cnt{margin-inline-start:auto;color:var(--muted);font-size:12.5px}
+.crumb{font-size:13.5px;color:var(--muted);margin-bottom:14px}
+.crumb a{color:var(--muted)}
+.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:800px){.demo-grid{grid-template-columns:1fr}}
+.my-row{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);margin-bottom:8px}
+.my-row .nm{font-weight:700}
+.my-row .rm{margin-inline-start:auto}
+.label-defs{display:grid;gap:12px}
+.label-def{display:flex;gap:12px;align-items:flex-start}
+.label-def .badge{flex-shrink:0;margin-top:2px}
+
 </style>
 </head>
 <body>
@@ -1359,6 +1496,263 @@ fa:{
  more_servers:"سرور دیگر در بازار", more_d:"خرید، سفر، خبر، شغل و بیشتر — همه را در بازار ببینید.",
  faq_title:"سؤالات متداول",
  faq_sub:"پاسخ کوتاه به سؤال‌هایی که بیشتر پرسیده می‌شوند.",
+  about_labels_d:"روی کارت‌ها و صفحه‌ها سه جور برچسب می‌بینی:",
+  about_labels_t:"برچسب‌ها چه می‌گویند؟",
+  about_operator_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما. گیت‌هاب و لینکدین او در پایین صفحه است؛ برای پیشنهاد و گزارش مشکل، از فرم بازخورد یا گیت‌هاب استفاده کن.",
+  about_operator_t:"گردانندهٔ سایت",
+  about_review_d:"هر سرور پیش از انتشار روی سایت زنده آزمون شده و هر ابزار دست‌کم یک بار واقعاً اجرا شده است. عددها از خروجی واقعی ابزارها آمده‌اند، نه از حدس. اگر سایتی تغییر کند و سروری از کار بیفتد، اینجا به‌روز می‌شود.",
+  about_review_t:"ابزارها چطور بررسی می‌شوند؟",
+  acct_cta:"دیدن سرورهای دارای اقدام حساب",
+  acct_sub:"دو سرور این کاتالوگ ابزارهای نوشتاری اختیاری دارند: سبد خرید و علاقه‌مندی‌ها در Hepsiburada و Migros — فقط با کوکی نشست مرورگر خودت، فقط روی کامپیوتر خودت، و هر تغییر فقط بعد از تأیید تو. بدون کوکی، مثل بقیه فقط‌خواندنی‌اند.",
+  acct_title:"دستیارت حالا کار هم انجام می‌دهد — روی کامپیوتر خودت",
+  addtool_cta:"پیشنهاد ابزار تازه",
+  addtool_sub:"سرور MCP تازه‌ای برای یک سرویس ترکیه داری؟ آن را به کاتالوگ پیشنهاد بده — بررسی می‌شود و اگر استانداردها را داشته باشد، منتشر می‌شود.",
+  addtool_title:"ابزاری ساخته‌ای؟",
+  apps_sub:"برنامه‌ات را انتخاب کن — پروفایل آماده برای همان برنامه ساخته می‌شود.",
+  apps_title:"از کجا با دستیارت کار می‌کنی؟",
+  apps_web_note:"نسخهٔ وب — سرورهای محلی stdio اینجا کار نمی‌کنند.",
+  apps_web_t:"فقط دسکتاپ و خط فرمان",
+  ask_local_note:"تطابق با کلیدواژه انجام می‌شود — کاملاً در مرورگر، بدون هوش مصنوعی و بدون ارسال سؤال به هیچ‌جا.",
+  ask_sample:"سؤال نمونه",
+  banner_cta:"ساختن پروفایل",
+  banner_dismiss:"بستن",
+  banner_text:"تازه: سازندهٔ پروفایل، صفحهٔ وضعیت و راهنمای کامل — حالا چند سرور را یکجا به دستیارت وصل کن.",
+  bld_app_t:"برنامه",
+  bld_copy:"کپی تنظیمات",
+  bld_custom_add:"افزودن به پروفایل",
+  bld_custom_header:"هدر اختیاری (مثلاً Authorization: Bearer …)",
+  bld_custom_name:"نام (مثلاً my-server)",
+  bld_custom_note:"سرور دلخواه فقط در همین پروفایل می‌آید و در کاتالوگ ذخیره نمی‌شود. نشانی باید با https:// شروع شود.",
+  bld_custom_t:"سرور دلخواه با نشانی",
+  bld_custom_url:"نشانی https سرور MCP",
+  bld_deeplink_t:"نصب با یک کلیک",
+  bld_download:"دانلود فایل",
+  bld_env_note:"مقادیر فقط در مرورگر خودت می‌مانند و در دستور جایگذاری می‌شوند — هرگز به هیچ سروری فرستاده نمی‌شوند.",
+  bld_env_t:"کلیدها و نشست‌ها",
+  bld_installer_d:"این دستور را در ترمینال اجرا کن: uvx را در صورت نیاز نصب می‌کند، تنظیمات را می‌نویسد و با یک تست دود صحت را چک می‌کند.",
+  bld_installer_t:"نصب‌کنندهٔ تک‌دستوری",
+  bld_os_lin:"لینوکس",
+  bld_os_mac:"macOS",
+  bld_os_t:"سیستم‌عامل",
+  bld_os_win:"ویندوز",
+  bld_out_t:"تنظیمات شما",
+  bld_prof_all:"همه",
+  bld_prof_clear:"پاک کردن انتخاب",
+  bld_prof_finance:"مالی",
+  bld_prof_news:"خبر",
+  bld_prof_shop:"خرید",
+  bld_prof_travel:"سفر",
+  bld_profiles_t:"پروفایل‌های آماده",
+  bld_search_ph:"جستجوی سرور یا ابزار…",
+  bld_sel_empty:"هنوز سروری انتخاب نشده — از فهرست انتخاب کن یا یک پروفایل آماده را بزن.",
+  bld_sel_t:"انتخاب‌شده‌ها",
+  bld_share:"پیوند قابل اشتراک‌گذاری",
+  bld_share_copied:"پیوند کپی شد",
+  bld_steps_t:"بعد از نصب",
+  bld_sub:"چند سرور را انتخاب کن و یک فایل تنظیمات آماده برای برنامه‌ات بگیر — یک بار وصل کن، همهٔ ابزارها. همه‌چیز همین‌جا در مرورگر ساخته می‌شود؛ هیچ‌چیز به هیچ سروری فرستاده نمی‌شود.",
+  bld_title:"سازندهٔ پروفایل",
+  bld_verify_d:"برنامه‌ات را کاملاً ببند و دوباره باز کن، بعد این سؤال نمونه را بپرس:",
+  bld_verify_t:"خودآزمایی",
+  demo_a_t:"پاسخ نمونه",
+  demo_copy_q:"کپی سؤال",
+  demo_live_no:"اینجا اجرای زنده نیست — پاسخ‌ها نمونه‌اند.",
+  demo_page_sub:"ببین دستیار با این سرورها چطور جواب می‌دهد — سؤال، فراخوانی ابزار و یک پاسخ نمونه. این‌ها نمونه‌های از پیش نوشته‌شده‌اند، نه اجرای زنده.",
+  demo_page_title:"نمایش",
+  demo_pick:"یک سرور انتخاب کن",
+  demo_q_t:"سؤال",
+  demo_sample_note:"نمونه — در ۱۵ آبان ۱۴۰۵ روی دادهٔ زنده بررسی شده؛ دادهٔ زنده نیست.",
+  demo_tool_t:"فراخوانی ابزار",
+  demo_try:"بعد از نصب، همین سؤال را از دستیارت بپرس.",
+  demo_verified:"۴ نمونهٔ بررسی‌شده",
+  det_about_t:"دربارهٔ این سرور",
+  det_account_d:"این سرور علاوه بر خواندن دادهٔ عمومی، ابزارهای نوشتاری اختیاری هم دارد (سبد خرید و علاقه‌مندی‌ها). این ابزارها فقط با کوکی نشست مرورگر خودت کار می‌کنند — کوکی فقط در فایل تنظیمات ماشین خودت می‌ماند و هرگز به دست ما نمی‌رسد. هر کار تغییردهنده فقط بعد از تأیید صریح تو انجام می‌شود و پرداخت خودکار وجود ندارد.",
+  det_account_t:"با حساب خودت در این سرویس",
+  det_account_w:"کوکی نشست را با کسی به اشتراک نگذار و آن را در مخزن عمومی یا پیام نگذار.",
+  det_badge_d:"این نشان را در README پروژه‌ات بگذار تا به صفحهٔ این سرور لینک بدهد.",
+  det_badge_t:"نشان برای README",
+  det_change_first:"اولین حضور در کاتالوگ",
+  det_change_last:"آخرین بررسی",
+  det_change_t:"تاریخچه",
+  det_change_ver:"نسخه",
+  det_choose_direct_d:"فقط همین سرور، با یک دستور یا یک تکه تنظیمات. برای وقتی که فقط همین سرویس را می‌خواهی.",
+  det_choose_direct_t:"نصب مستقیم تکی",
+  det_choose_prof_d:"این سرور همراه با بقیه، در یک فایل .mcp.json. برای وقتی که چند سرویس را با هم می‌خواهی.",
+  det_choose_prof_t:"پروفایل آمادهٔ چندسروره",
+  det_choose_t:"کدام را انتخاب کنم؟",
+  det_code:"کد منبع",
+  det_code_v:"متن‌باز",
+  det_codeuse_d:"سرور را مستقیم از ماشین خودت صدا بزن — بدون واسطه، بدون سرویس میزبانی‌شده. نمونه با SDK پایتون MCP:",
+  det_codeuse_t:"استفاده در کد",
+  det_conn:"نوع اتصال",
+  det_conn_v:"غیررسمی — از همان نشانی‌هایی استفاده می‌کند که خود سایت به کار می‌برد",
+  det_faq_t:"سؤال‌های پرتکرار",
+  det_key:"کلید API",
+  det_key_no:"لازم نیست",
+  det_key_sess:"نشست مرورگر (اختیاری، فقط برای اقدامات حساب)",
+  det_last:"آخرین بررسی",
+  det_md_d:"همهٔ اطلاعات این صفحه در یک فایل متنی ساده — برای مستندات و دستیارهای هوش مصنوعی.",
+  det_md_dl:"دانلود ‎.md",
+  det_md_t:"نسخهٔ Markdown",
+  det_md_view:"مشاهدهٔ Markdown",
+  det_read_t:"قبل از نصب بخوانید",
+  det_related_t:"در همین دسته",
+  det_run:"محل اجرا",
+  det_run_v:"روی کامپیوتر شما",
+  det_sample_note:"سؤال‌های نمونه‌اند — بعد از نصب، همین‌ها را از دستیارت بپرس.",
+  det_sample_t:"نمونه سؤال برای بعد از نصب",
+  det_src:"منبع",
+  det_src_v:"کاتالوگ ترکیه MCP",
+  det_tip1:"داده‌ها زنده از خود سایت خوانده می‌شوند؛ اگر سایت تغییر کند، سرور ممکن است از کار بیفتد.",
+  det_tip2:"جواب را همیشه می‌توانی با باز کردن خود سایت بررسی کنی.",
+  det_tip3:"سرور فقط‌خواندنی است؛ چیزی نمی‌خرد، رزرو نمی‌کند و در هیچ حسابی تغییری نمی‌دهد.",
+  det_tip4:"همهٔ ابزارها با آزمون واقعی روی سایت زنده ساخته شده‌اند.",
+  det_tips_t:"نکته‌ها",
+  det_tools_less:"نمایش کمتر",
+  det_tools_more:"نمایش ابزارهای بیشتر",
+  det_tools_n:"ابزار",
+  download:"دانلود",
+  error_retry:"دوباره امتحان کن",
+  f_clear:"پاک کردن همه",
+  f_local:"اجرا روی کامپیوتر شما",
+  f_noacct:"بدون تغییر در حساب",
+  f_nokey:"بدون کلید API",
+  f_official:"API رسمی",
+  f_profile:"پروفایل آماده دارد",
+  f_type:"نوع",
+  f_type_all:"همه",
+  f_type_arts:"مقاله‌ها",
+  f_type_servers:"سرورها",
+  f_type_skills:"مهارت‌ها",
+  f_type_tuts:"آموزش‌ها",
+  fb_contact:"راه تماس (اختیاری — ایمیل یا تلگرام)",
+  fb_msg:"پیامت",
+  fb_note:"بازخورد به‌صورت یک ایشوی آماده در گیت‌هاب باز می‌شود؛ می‌توانی پیش از ارسال آن را ببینی و ویرایش کنی.",
+  fb_send:"ارسال بازخورد",
+  fb_title:"نظر یا گزارش مشکل",
+  fb_type:"نوع",
+  fb_type_bug:"مشکل",
+  fb_type_idea:"پیشنهاد",
+  fb_type_other:"سایر",
+  foot_dev:"برای توسعه‌دهندگان",
+  foot_security:"سرورهای MCP به داده‌ها و حساب‌های شما دسترسی دارند — پیش از نصب، بخش «قبل از نصب بخوانید» را ببین و هرگز کوکی نشستت را با کسی به اشتراک نگذار.",
+  foot_start:"شروع",
+  guide_api_note:"کاتالوگ ماشینی برای دستیارها و اسکریپت‌ها:",
+  guide_sub:"همه‌چیز دربارهٔ MCP و این کاتالوگ — بدون اصطلاحات اضافی.",
+  guide_title:"راهنما",
+  guide_toc:"فهرست",
+  hero_chips_t:"جستجوهای پرکاربرد:",
+  inst_app:"برنامه",
+  inst_deep_t:"نصب با یک کلیک",
+  inst_env_note:"فقط در مرورگر خودت می‌ماند و در دستور جایگذاری می‌شود — هرگز به هیچ سروری فرستاده نمی‌شود. بدون آن، سرور فقط‌خواندنی کار می‌کند.",
+  inst_env_t:"نشست (اختیاری)",
+  inst_os:"سیستم‌عامل",
+  inst_prereq_d:"برای اجرای سرورها به uvx نیاز داری (همراه با uv نصب می‌شود). اگر نصب نیست:",
+  inst_prereq_t:"پیش‌نیازها",
+  inst_profile_d:"به‌جای نصب تکی، این سرور را با بقیه در یک پروفایل آماده بگیر.",
+  inst_profile_t:"چند سرور را یکجا نصب کن",
+  inst_sample_t:"حالا امتحانش کن",
+  inst_tb1:"برنامه را کاملاً ببند و دوباره باز کن (نه فقط پنجره را).",
+  inst_tb2:"در Claude Code دستور claude mcp list را بزن و ببین سرور لیست شده یا نه.",
+  inst_tb3:"فایل تنظیمات را از نظر سلامت JSON بررسی کن (ویرگول جاافتاده شایع‌ترین خطاست).",
+  inst_tb4:"مطمئن شو uvx نصب است: uvx --version را در ترمینال بزن.",
+  inst_tb5:"جاهای خالی <...> را پر کن — تنظیمات نمونه را همان‌طور کپی نکن.",
+  inst_title:"راهنمای نصب",
+  inst_trouble_t:"اگر کار نکرد",
+  inst_win_note:"در ویندوز، اگر برنامه‌ات دستور را مستقیم اجرا نکرد، آن را با cmd /c شروع کن.",
+  lbl_run_d:"سرور روی ماشین خودت با uvx اجرا می‌شود؛ داده‌ات پیش ما نمی‌آید.",
+  lbl_run_t:"اجرا: روی کامپیوتر شما",
+  lbl_source_d:"سرور را همین کاتالوگ ساخته و نگهداری می‌کند.",
+  lbl_source_t:"منبع: کاتالوگ",
+  lbl_warn_acct_d:"این سرور ابزارهای نوشتاری دارد که می‌توانند در حساب تو تغییر بدهند — فقط با تأیید تو.",
+  lbl_warn_acct_t:"هشدار: تغییر در حساب شما",
+  lbl_warn_key_d:"برای استفاده باید کلید یا نشست خودت را در تنظیمات بگذاری (فقط در مرورگر خودت).",
+  lbl_warn_key_t:"هشدار: نیازمند کلید",
+  lbl_warn_unoff_d:"سرور رسمی سایت نیست؛ از همان نشانی‌های عمومی سایت استفاده می‌کند و اگر سایت تغییر کند ممکن است از کار بیفتد.",
+  lbl_warn_unoff_t:"هشدار: API غیررسمی",
+  loading:"در حال بارگذاری…",
+  md_note:"این نما همان فایل متنی سادهٔ صفحهٔ سرور است — برای کپی، مستندات و دستیارهای هوش مصنوعی.",
+  md_title:"نسخهٔ Markdown",
+  mp_last:"آخرین بررسی فهرست",
+  mp_suggest_empty:"چیزی پیدا نشد؟ سرویس را پیشنهاد بده.",
+  my_builder_cta:"ساختن پروفایل از انتخاب‌های من",
+  my_clear:"پاک کردن همه",
+  my_keys_note:"مقادیر در localStorage همین مرورگر می‌مانند و فقط برای جایگذاری در تنظیمات خودت استفاده می‌شوند. با «پاک کردن همه» حذف می‌شوند.",
+  my_keys_t:"کلیدها و نشست‌ها (فقط در این مرورگر)",
+  my_none:"هیچ",
+  my_saved:"ذخیره شد",
+  my_sel_empty:"هنوز سروری انتخاب نکرده‌ای. از بازارچه یا سازندهٔ پروفایل اضافه کن.",
+  my_sel_t:"سرورهای من",
+  my_sub:"سرورهای انتخاب‌شده و کلیدهای تو — فقط در همین مرورگر ذخیره می‌شوند، نه روی هیچ سروری.",
+  my_title:"اتصال من",
+  nav_builder:"سازندهٔ پروفایل",
+  nav_demo:"نمایش",
+  nav_guide:"راهنما",
+  nav_more:"بیشتر",
+  nav_my:"اتصال من",
+  nav_privacy:"حریم خصوصی",
+  nav_status:"وضعیت",
+  nav_submit:"افزودن ابزار",
+  nav_terms:"شرایط استفاده",
+  palette_suggest:"سرور موردنظرت را پیدا نکردی؟ پیشنهاد بده.",
+  palette_tools:"ابزارها",
+  priv_p1:"این سایت ایستاست: هیچ حسابی، هیچ ورودی، هیچ ردیابی و هیچ آنالیتیکزی ندارد. ما نمی‌دانیم چه کسی از سایت بازدید کرده، چه چیزی را جستجو کرده یا چه سروری را نصب کرده است.",
+  priv_p2:"تنها چیزی که ذخیره می‌شود، در خود مرورگر توست: زبان، تم، علاقه‌مندی‌ها، انتخاب‌های «اتصال من» و کلیدهایی که خودت وارد می‌کنی (localStorage). این داده‌ها هرگز به هیچ سروری فرستاده نمی‌شوند و با پاک کردن داده‌های مرورگر حذف می‌شوند.",
+  priv_p3:"وقتی روی پیوند گیت‌هاب کلیک می‌کنی یا ایشو باز می‌کنی، قوانین حریم خصوصی گیت‌هاب حاکم است. اگر از پرکردن خودکار فرم ارسال استفاده کنی، مرورگر تو مستقیم از API عمومی گیت‌هاب می‌خواند.",
+  priv_sub:"این سایت حسابی ندارد و داده‌ای جمع نمی‌کند.",
+  priv_title:"حریم خصوصی",
+  show_less:"نمایش کمتر",
+  show_more:"نمایش بیشتر",
+  sort_recommended:"پیشنهادی",
+  status_all_ok:"همهٔ سرورها در آخرین بازبینی تأیید شده‌اند.",
+  status_col_checked:"آخرین بررسی",
+  status_col_server:"سرور",
+  status_col_status:"وضعیت",
+  status_col_tools:"ابزار",
+  status_col_ver:"نسخه",
+  status_note:"«تأییدشده» یعنی سرور با آزمون واقعی ساخته و در انتشار کاتالوگ بازبینی شده است. اگر سایتی تغییر کند، سرورش ممکن است موقتاً از کار بیفتد تا به‌روز شود.",
+  status_ok:"تأییدشده",
+  status_pending:"در انتظار انتشار",
+  status_sub:"آخرین بازبینی کاتالوگ — نه بررسی زنده. وضعیت در هر انتشار به‌روز می‌شود.",
+  status_title:"وضعیت سرورها",
+  status_unknown:"نامشخص",
+  sub_autofill:"پرکردن خودکار از مخزن",
+  sub_autofill_ph:"نشانی مخزن گیت‌هاب (https://github.com/…)",
+  sub_cat:"دسته",
+  sub_chars:"حرف",
+  sub_desc:"توضیح کامل (Markdown آزاد است)",
+  sub_env:"متغیرهای محیطی (هر خط یکی: NAME=توضیح)",
+  sub_error:"مخزن خوانده نشد — نشانی را بررسی کن و دوباره امتحان کن.",
+  sub_example:"مثال",
+  sub_guide_link:"راهنمای ارسال",
+  sub_id:"شناسه (خودکار از نام ساخته می‌شود)",
+  sub_install:"دستور نصب (مثلاً uvx my-server-mcp)",
+  sub_issue_btn:"باز کردن ایشو در گیت‌هاب",
+  sub_license:"مجوز",
+  sub_loading:"در حال خواندن مخزن…",
+  sub_name_en:"نام انگلیسی سرویس",
+  sub_name_fa:"نام فارسی (اختیاری)",
+  sub_note:"ارسال‌ها بازبینی می‌شوند؛ استانداردها را در راهنمای ارسال ببین.",
+  sub_preview_t:"پیش‌نمایش",
+  sub_questions:"سؤال‌های نمونه (هر خط یکی)",
+  sub_repo:"مخزن گیت‌هاب",
+  sub_retry:"دوباره امتحان کن",
+  sub_sub:"سرور MCP تازه‌ای برای یک سرویس ترکیه داری؟ فرم را پر کن — یک ایشوی آماده در گیت‌هاب ساخته می‌شود تا بررسی شود. حسابی لازم نیست؛ فقط یک حساب گیت‌هاب برای ارسال ایشو.",
+  sub_summary:"خلاصه (حداکثر ۱۶۰ حرف)",
+  sub_tags:"برچسب‌ها (با ویرگول جدا کن)",
+  sub_title:"افزودن ابزار",
+  sub_tools:"ابزارها (هر خط یکی: name — توضیح)",
+  terms_p1:"همهٔ محتوای این سایت «همان‌طور که هست» ارائه می‌شود. سرورها غیررسمی‌اند و از API عمومی سایت‌ها استفاده می‌کنند؛ اگر سایتی تغییر کند، ممکن است از کار بیفتند.",
+  terms_p2:"سرورها به‌طور پیش‌فرض فقط‌خواندنی‌اند. ابزارهای نوشتاری اختیاری (سبد خرید و علاقه‌مندی‌ها) فقط با نشست خودت و فقط بعد از تأیید تو اجرا می‌شوند؛ مسئولیت استفاده از آن‌ها با خودت است. پرداخت خودکار هرگز انجام نمی‌شود.",
+  terms_p3:"کد سرورها متن‌باز است (PolyForm Noncommercial 1.0.0). اگر مالک یک سرویس هستی و می‌خواهی سرورش از کاتالوگ حذف شود، از گیت‌هاب خبر بده.",
+  terms_sub:"کوتاه و صریح.",
+  terms_title:"شرایط استفاده",
+  wn_close:"فهمیدم",
+  wn_item1:"سازندهٔ پروفایل — چند سرور را انتخاب کن و یک .mcp.json آماده بگیر.",
+  wn_item2:"راهنمای نصب کامل روی هر صفحهٔ سرور، با نصب یک‌کلیکی در Cursor و VS Code.",
+  wn_item3:"صفحهٔ وضعیت، نمایش نمونه‌ها و راهنمای کامل.",
+  wn_item4:"کاتالوگ ماشینی: catalog.json ،search.json و llms-full.txt.",
+  wn_sub:"در این انتشار:",
+  wn_title:"تازه‌ها در کاتالوگ ترکیه",
 },
 tr:{
  a11y_skip:"İçeriğe atla", brand_tag:"Türkiye MCP Kataloğu",
@@ -1538,6 +1932,263 @@ tr:{
  more_servers:"sunucu daha pazaryerinde", more_d:"Alışveriş, seyahat, haber, iş ve daha fazlası — hepsini pazaryerinde görün.",
  faq_title:"Sık sorulan sorular",
  faq_sub:"En sık sorulan sorulara kısa yanıtlar.",
+  about_labels_d:"Kartlarda ve sayfalarda üç tür etiket görürsünüz:",
+  about_labels_t:"Etiketler ne anlama geliyor?",
+  about_operator_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü. GitHub ve LinkedIn bağlantıları sayfanın altındadır; öneri ve sorun bildirimi için geri bildirim formunu veya GitHub'ı kullanın.",
+  about_operator_t:"Site işletmecisi",
+  about_review_d:"Her sunucu yayınlanmadan önce canlı sitede test edildi ve her araç en az bir kez gerçekten çalıştırıldı. Sayılar araçların gerçek çıktılarından gelir, tahminden değil. Bir site değişir ve sunucusu bozulursa burada güncellenir.",
+  about_review_t:"Araçlar nasıl inceleniyor?",
+  acct_cta:"Hesap işlemi olan sunucuları gör",
+  acct_sub:"Katalogdaki iki sunucuda isteğe bağlı yazma araçları var: Hepsiburada ve Migros'ta sepet ve favoriler — yalnızca kendi tarayıcı oturum çerezinizle, yalnızca kendi bilgisayarınızda ve her değişiklik yalnızca sizin onayınızla. Çerez olmadan diğerleri gibi salt okunurdurlar.",
+  acct_title:"Asistanınız artık iş de yapıyor — kendi bilgisayarınızda",
+  addtool_cta:"Yeni araç öner",
+  addtool_sub:"Bir Türkiye servisi için yeni bir MCP sunucunuz mu var? Kataloğa önerin — incelenir ve standartları karşılıyorsa yayınlanır.",
+  addtool_title:"Bir araç mı yaptınız?",
+  apps_sub:"Uygulamanızı seçin — hazır profil o uygulama için oluşturulur.",
+  apps_title:"Asistanınızla nerede çalışıyorsunuz?",
+  apps_web_note:"Web sürümü — yerel stdio sunucuları burada çalışmaz.",
+  apps_web_t:"Yalnızca masaüstü ve komut satırı",
+  ask_local_note:"Eşleştirme anahtar kelimeyle yapılır — tamamen tarayıcıda, yapay zekâ yok ve sorunuz hiçbir yere gönderilmez.",
+  ask_sample:"Örnek soru",
+  banner_cta:"Profil oluştur",
+  banner_dismiss:"Kapat",
+  banner_text:"Yeni: profil oluşturucu, durum sayfası ve tam kılavuz — artık birden çok sunucuyu tek seferde asistanınıza bağlayın.",
+  bld_app_t:"Uygulama",
+  bld_copy:"Ayarları kopyala",
+  bld_custom_add:"Profile ekle",
+  bld_custom_header:"İsteğe bağlı başlık (ör. Authorization: Bearer …)",
+  bld_custom_name:"Ad (ör. my-server)",
+  bld_custom_note:"Özel sunucu yalnızca bu profile eklenir, kataloğa kaydedilmez. Adres https:// ile başlamalıdır.",
+  bld_custom_t:"Adresle özel sunucu",
+  bld_custom_url:"MCP sunucusunun https adresi",
+  bld_deeplink_t:"Tek tıkla kurulum",
+  bld_download:"Dosyayı indir",
+  bld_env_note:"Değerler yalnızca kendi tarayıcınızda kalır ve komuta yerleştirilir — asla hiçbir sunucuya gönderilmez.",
+  bld_env_t:"Anahtarlar ve oturumlar",
+  bld_installer_d:"Bu komutu terminalde çalıştırın: gerekirse uvx'i kurar, ayarları yazar ve bir duman testiyle doğruluğu denetler.",
+  bld_installer_t:"Tek komutluk kurucu",
+  bld_os_lin:"Linux",
+  bld_os_mac:"macOS",
+  bld_os_t:"İşletim sistemi",
+  bld_os_win:"Windows",
+  bld_out_t:"Ayarlarınız",
+  bld_prof_all:"Tümü",
+  bld_prof_clear:"Seçimi temizle",
+  bld_prof_finance:"Finans",
+  bld_prof_news:"Haber",
+  bld_prof_shop:"Alışveriş",
+  bld_prof_travel:"Seyahat",
+  bld_profiles_t:"Hazır profiller",
+  bld_search_ph:"Sunucu veya araç arayın…",
+  bld_sel_empty:"Henüz sunucu seçilmedi — listeden seçin veya hazır bir profile tıklayın.",
+  bld_sel_t:"Seçilenler",
+  bld_share:"Paylaşılabilir bağlantı",
+  bld_share_copied:"Bağlantı kopyalandı",
+  bld_steps_t:"Kurulumdan sonra",
+  bld_sub:"Birkaç sunucu seçin ve uygulamanız için hazır bir ayar dosyası alın — bir kez bağlanın, tüm araçlar. Her şey burada, tarayıcınızda oluşturulur; hiçbir şey hiçbir sunucuya gönderilmez.",
+  bld_title:"Profil Oluşturucu",
+  bld_verify_d:"Uygulamanızı tamamen kapatıp yeniden açın, sonra bu örnek soruyu sorun:",
+  bld_verify_t:"Kendinizi denetleyin",
+  demo_a_t:"Örnek yanıt",
+  demo_copy_q:"Soruyu kopyala",
+  demo_live_no:"Burada canlı çalıştırma yok — yanıtlar örnektir.",
+  demo_page_sub:"Asistanın bu sunucularla nasıl yanıt verdiğini görün — soru, araç çağrısı ve örnek yanıt. Bunlar önceden yazılmış örneklerdir, canlı çalıştırma değildir.",
+  demo_page_title:"Demo",
+  demo_pick:"Bir sunucu seçin",
+  demo_q_t:"Soru",
+  demo_sample_note:"Örnek — 6 Kasım 2026'da canlı veriyle doğrulandı; canlı veri değildir.",
+  demo_tool_t:"Araç çağrısı",
+  demo_try:"Kurulumdan sonra aynı soruyu asistanınıza sorun.",
+  demo_verified:"4 doğrulanmış örnek",
+  det_about_t:"Bu sunucu hakkında",
+  det_account_d:"Bu sunucu herkese açık veriyi okumanın yanı sıra isteğe bağlı yazma araçları da sunar (sepet ve favoriler). Bu araçlar yalnızca kendi tarayıcı oturum çerezinizle çalışır — çerez yalnızca kendi makinenizdeki ayar dosyasında kalır ve bize asla ulaşmaz. Değiştiren her işlem yalnızca sizin açık onayınızla yapılır ve otomatik ödeme yoktur.",
+  det_account_t:"Bu serviste kendi hesabınızla",
+  det_account_w:"Oturum çerezinizi kimseyle paylaşmayın; herkese açık bir depoya veya mesaja koymayın.",
+  det_badge_d:"Bu rozeti projenizin README dosyasına ekleyin; bu sunucunun sayfasına bağlanır.",
+  det_badge_t:"README rozeti",
+  det_change_first:"Katalogda ilk görünüm",
+  det_change_last:"Son denetim",
+  det_change_t:"Geçmiş",
+  det_change_ver:"Sürüm",
+  det_choose_direct_d:"Yalnızca bu sunucu, tek komutla veya bir ayar parçasıyla. Yalnızca bu hizmeti istiyorsanız.",
+  det_choose_direct_t:"Tek sunucu, doğrudan kurulum",
+  det_choose_prof_d:"Bu sunucu diğerleriyle birlikte, tek bir .mcp.json dosyasında. Birden çok hizmeti birlikte istiyorsanız.",
+  det_choose_prof_t:"Çok sunuculu hazır profil",
+  det_choose_t:"Hangisini seçmeliyim?",
+  det_code:"Kaynak kodu",
+  det_code_v:"Açık kaynak",
+  det_codeuse_d:"Sunucuyu doğrudan kendi makinenizden çağırın — aracı yok, barındırılan hizmet yok. Python MCP SDK örneği:",
+  det_codeuse_t:"Kodda kullanım",
+  det_conn:"Bağlantı türü",
+  det_conn_v:"Resmi değil — sitenin kendi kullandığı adresleri kullanır",
+  det_faq_t:"Sık sorulan sorular",
+  det_key:"API anahtarı",
+  det_key_no:"Gerekmez",
+  det_key_sess:"Tarayıcı oturumu (isteğe bağlı, yalnızca hesap işlemleri için)",
+  det_last:"Son denetim",
+  det_md_d:"Bu sayfadaki tüm bilgiler tek bir düz metin dosyasında — belgeler ve yapay zekâ asistanları için.",
+  det_md_dl:".md indir",
+  det_md_t:"Markdown sürümü",
+  det_md_view:"Markdown olarak görüntüle",
+  det_read_t:"Kurulumdan önce okuyun",
+  det_related_t:"Aynı kategoride",
+  det_run:"Çalışma yeri",
+  det_run_v:"Kendi bilgisayarınızda",
+  det_sample_note:"Örnek sorulardır — kurulumdan sonra aynısını asistanınıza sorun.",
+  det_sample_t:"Kurulum sonrası örnek sorular",
+  det_src:"Kaynak",
+  det_src_v:"Türkiye MCP kataloğu",
+  det_tip1:"Veriler siteden canlı okunur; site değişirse sunucu bozulabilir.",
+  det_tip2:"Yanıtı her zaman sitenin kendisini açarak doğrulayabilirsiniz.",
+  det_tip3:"Sunucu salt okunurdur; hiçbir şey satın almaz, rezerve etmez ve hiçbir hesapta değişiklik yapmaz.",
+  det_tip4:"Tüm araçlar canlı sitede gerçek testlerle geliştirilmiştir.",
+  det_tips_t:"İpuçları",
+  det_tools_less:"Daha az göster",
+  det_tools_more:"Diğer araçları göster",
+  det_tools_n:"araç",
+  download:"İndir",
+  error_retry:"Yeniden dene",
+  f_clear:"Tümünü temizle",
+  f_local:"Kendi bilgisayarınızda çalışır",
+  f_noacct:"Hesapta değişiklik yok",
+  f_nokey:"API anahtarı gerekmez",
+  f_official:"Resmi API",
+  f_profile:"Hazır profili var",
+  f_type:"Tür",
+  f_type_all:"Tümü",
+  f_type_arts:"Yazılar",
+  f_type_servers:"Sunucular",
+  f_type_skills:"Beceriler",
+  f_type_tuts:"Eğitimler",
+  fb_contact:"İletişim (isteğe bağlı — e-posta veya Telegram)",
+  fb_msg:"Mesajınız",
+  fb_note:"Geri bildirim, GitHub'da hazır bir issue olarak açılır; göndermeden önce görebilir ve düzenleyebilirsiniz.",
+  fb_send:"Geri bildirim gönder",
+  fb_title:"Görüş veya sorun bildirimi",
+  fb_type:"Tür",
+  fb_type_bug:"Sorun",
+  fb_type_idea:"Öneri",
+  fb_type_other:"Diğer",
+  foot_dev:"Geliştiriciler için",
+  foot_security:"MCP sunucuları verilerinize ve hesaplarınıza erişir — kurulumdan önce «Kurulumdan önce okuyun» bölümüne bakın ve oturum çerezinizi kimseyle paylaşmayın.",
+  foot_start:"Başlangıç",
+  guide_api_note:"Asistanlar ve betikler için makine kataloğu:",
+  guide_sub:"MCP ve bu katalog hakkında her şey — gereksiz terimler olmadan.",
+  guide_title:"Kılavuz",
+  guide_toc:"İçindekiler",
+  hero_chips_t:"Popüler aramalar:",
+  inst_app:"Uygulama",
+  inst_deep_t:"Tek tıkla kurulum",
+  inst_env_note:"Yalnızca kendi tarayıcınızda kalır ve komuta yerleştirilir — asla hiçbir sunucuya gönderilmez. Olmadan sunucu salt okunur çalışır.",
+  inst_env_t:"Oturum (isteğe bağlı)",
+  inst_os:"İşletim sistemi",
+  inst_prereq_d:"Sunucuları çalıştırmak için uvx gerekir (uv ile birlikte kurulur). Kurulu değilse:",
+  inst_prereq_t:"Ön koşullar",
+  inst_profile_d:"Tek tek kurmak yerine bu sunucuyu diğerleriyle hazır bir profilde alın.",
+  inst_profile_t:"Birden çok sunucuyu birlikte kurun",
+  inst_sample_t:"Şimdi deneyin",
+  inst_tb1:"Uygulamayı tamamen kapatıp yeniden açın (yalnızca pencereyi değil).",
+  inst_tb2:"Claude Code'da claude mcp list komutunu çalıştırın ve sunucunun listelendiğini görün.",
+  inst_tb3:"Ayar dosyasının geçerli JSON olduğunu denetleyin (unutulan virgül en yaygın hatadır).",
+  inst_tb4:"uvx'in kurulu olduğundan emin olun: terminalde uvx --version çalıştırın.",
+  inst_tb5:"<...> yer tutucularını doldurun — örnek ayarı olduğu gibi kopyalamayın.",
+  inst_title:"Kurulum kılavuzu",
+  inst_trouble_t:"Çalışmazsa",
+  inst_win_note:"Windows'ta uygulamanız komutu doğrudan çalıştırmazsa başına cmd /c ekleyin.",
+  lbl_run_d:"Sunucu uvx ile kendi makinenizde çalışır; veriniz bize gelmez.",
+  lbl_run_t:"Çalışma: kendi bilgisayarınızda",
+  lbl_source_d:"Sunucuyu bu katalog yaptı ve bakımını yapıyor.",
+  lbl_source_t:"Kaynak: katalog",
+  lbl_warn_acct_d:"Bu sunucuda hesabınızda değişiklik yapabilen yazma araçları var — yalnızca sizin onayınızla.",
+  lbl_warn_acct_t:"Uyarı: hesabınızda değişiklik",
+  lbl_warn_key_d:"Kullanmak için kendi anahtarınızı veya oturumunuzu ayarlara eklemelisiniz (yalnızca kendi tarayıcınızda).",
+  lbl_warn_key_t:"Uyarı: anahtar gerekir",
+  lbl_warn_unoff_d:"Sitenin resmi sunucusu değil; sitenin herkese açık adreslerini kullanır ve site değişirse bozulabilir.",
+  lbl_warn_unoff_t:"Uyarı: resmi olmayan API",
+  loading:"Yükleniyor…",
+  md_note:"Bu görünüm, sunucu sayfasının düz metin halidir — kopyalama, belgeler ve yapay zekâ asistanları için.",
+  md_title:"Markdown sürümü",
+  mp_last:"Liste son denetimi",
+  mp_suggest_empty:"Bir şey bulunamadı mı? Hizmeti önerin.",
+  my_builder_cta:"Seçimlerimden profil oluştur",
+  my_clear:"Tümünü temizle",
+  my_keys_note:"Değerler bu tarayıcının localStorage alanında kalır ve yalnızca kendi ayarlarınıza yerleştirmek için kullanılır. «Tümünü temizle» ile silinirler.",
+  my_keys_t:"Anahtarlar ve oturumlar (yalnızca bu tarayıcıda)",
+  my_none:"Yok",
+  my_saved:"Kaydedildi",
+  my_sel_empty:"Henüz sunucu seçmediniz. Pazaryerinden veya profil oluşturucudan ekleyin.",
+  my_sel_t:"Sunucularım",
+  my_sub:"Seçtiğiniz sunucular ve anahtarlarınız — yalnızca bu tarayıcıda saklanır, hiçbir sunucuda değil.",
+  my_title:"Bağlantım",
+  nav_builder:"Profil Oluşturucu",
+  nav_demo:"Demo",
+  nav_guide:"Kılavuz",
+  nav_more:"Daha Fazla",
+  nav_my:"Bağlantım",
+  nav_privacy:"Gizlilik",
+  nav_status:"Durum",
+  nav_submit:"Araç Ekle",
+  nav_terms:"Kullanım Şartları",
+  palette_suggest:"Aradığınız sunucuyu bulamadınız mı? Önerin.",
+  palette_tools:"Araçlar",
+  priv_p1:"Bu site statiktir: hesap yok, giriş yok, izleme yok, analiz yok. Sitenin kim tarafından ziyaret edildiğini, ne arandığını veya hangi sunucunun kurulduğunu bilmiyoruz.",
+  priv_p2:"Saklanan tek şey kendi tarayıcınızdadır: dil, tema, favoriler, «Bağlantım» seçimleri ve kendiniz girdiğiniz anahtarlar (localStorage). Bu veriler asla hiçbir sunucuya gönderilmez ve tarayıcı verilerini temizleyince silinir.",
+  priv_p3:"Bir GitHub bağlantısına tıkladığınızda veya issue açtığınızda GitHub'ın gizlilik kuralları geçerlidir. Gönderim formunun otomatik doldurmasını kullanırsanız tarayıcınız doğrudan GitHub'ın herkese açık API'sinden okur.",
+  priv_sub:"Bu sitede hesap yok ve veri toplanmıyor.",
+  priv_title:"Gizlilik",
+  show_less:"Daha az göster",
+  show_more:"Daha fazla göster",
+  sort_recommended:"Önerilen",
+  status_all_ok:"Tüm sunucular son incelemede doğrulandı.",
+  status_col_checked:"Son denetim",
+  status_col_server:"Sunucu",
+  status_col_status:"Durum",
+  status_col_tools:"Araç",
+  status_col_ver:"Sürüm",
+  status_note:"«Doğrulandı», sunucunun gerçek testlerle geliştirildiği ve katalog yayınında incelendiği anlamına gelir. Bir site değişirse sunucusu güncellenene kadar geçici olarak bozulabilir.",
+  status_ok:"Doğrulandı",
+  status_pending:"Yayın bekleniyor",
+  status_sub:"Katalogdaki son inceleme — canlı denetim değil. Durum her yayında güncellenir.",
+  status_title:"Sunucu durumu",
+  status_unknown:"Bilinmiyor",
+  sub_autofill:"Depodan otomatik doldur",
+  sub_autofill_ph:"GitHub depo adresi (https://github.com/…)",
+  sub_cat:"Kategori",
+  sub_chars:"karakter",
+  sub_desc:"Tam açıklama (Markdown serbesttir)",
+  sub_env:"Ortam değişkenleri (satır başına bir: NAME=açıklama)",
+  sub_error:"Depo okunamadı — adresi denetleyip yeniden deneyin.",
+  sub_example:"Örnek",
+  sub_guide_link:"Gönderim kılavuzu",
+  sub_id:"Kimlik (addan otomatik oluşturulur)",
+  sub_install:"Kurulum komutu (ör. uvx my-server-mcp)",
+  sub_issue_btn:"GitHub'da issue aç",
+  sub_license:"Lisans",
+  sub_loading:"Depo okunuyor…",
+  sub_name_en:"Hizmetin İngilizce adı",
+  sub_name_fa:"Farsça adı (isteğe bağlı)",
+  sub_note:"Gönderimler incelenir; standartlar için gönderim kılavuzuna bakın.",
+  sub_preview_t:"Önizleme",
+  sub_questions:"Örnek sorular (satır başına bir)",
+  sub_repo:"GitHub deposu",
+  sub_retry:"Yeniden dene",
+  sub_sub:"Bir Türkiye servisi için yeni bir MCP sunucunuz mu var? Formu doldurun — incelenmek üzere GitHub'da hazır bir issue oluşturulur. Hesap gerekmez; issue göndermek için yalnızca bir GitHub hesabı gerekir.",
+  sub_summary:"Özet (en fazla 160 karakter)",
+  sub_tags:"Etiketler (virgülle ayırın)",
+  sub_title:"Araç ekle",
+  sub_tools:"Araçlar (satır başına bir: name — açıklama)",
+  terms_p1:"Bu sitedeki tüm içerik «olduğu gibi» sunulur. Sunucular resmi değildir ve sitelerin herkese açık API'lerini kullanır; bir site değişirse bozulabilirler.",
+  terms_p2:"Sunucular varsayılan olarak salt okunurdur. İsteğe bağlı yazma araçları (sepet ve favoriler) yalnızca kendi oturumunuzla ve yalnızca onayınızla çalışır; kullanımlarının sorumluluğu size aittir. Otomatik ödeme asla yapılmaz.",
+  terms_p3:"Sunucu kodları açık kaynaktır (PolyForm Noncommercial 1.0.0). Bir hizmetin sahibiyseniz ve sunucusunun katalogdan kaldırılmasını istiyorsanız GitHub üzerinden haber verin.",
+  terms_sub:"Kısa ve açık.",
+  terms_title:"Kullanım şartları",
+  wn_close:"Anladım",
+  wn_item1:"Profil oluşturucu — birkaç sunucu seçin ve hazır bir .mcp.json alın.",
+  wn_item2:"Her sunucu sayfasında tam kurulum kılavuzu; Cursor ve VS Code'da tek tıkla kurulum.",
+  wn_item3:"Durum sayfası, örnek demolar ve tam kılavuz.",
+  wn_item4:"Makine kataloğu: catalog.json, search.json ve llms-full.txt.",
+  wn_sub:"Bu yayında:",
+  wn_title:"Türkiye kataloğunda yenilikler",
 },
 en:{
  a11y_skip:"Skip to content", brand_tag:"Turkey MCP Catalog",
@@ -1717,6 +2368,263 @@ en:{
  more_servers:"more servers in the marketplace", more_d:"Shopping, travel, news, jobs and more — see them all in the marketplace.",
  faq_title:"Frequently asked questions",
  faq_sub:"Short answers to the questions asked most.",
+  about_labels_d:"You see three kinds of labels on cards and pages:",
+  about_labels_t:"What do the labels mean?",
+  about_operator_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama. His GitHub and LinkedIn are at the bottom of the page; for suggestions and bug reports, use the feedback form or GitHub.",
+  about_operator_t:"Site operator",
+  about_review_d:"Every server was tested against the live site before publication, and every tool was actually run at least once. The numbers come from the tools' real output, not from guesses. If a site changes and a server breaks, it is updated here.",
+  about_review_t:"How are tools reviewed?",
+  acct_cta:"See servers with account actions",
+  acct_sub:"Two servers in this catalog offer optional write tools: cart and favorites on Hepsiburada and Migros — only with your own browser session cookie, only on your own computer, and every change only after your approval. Without the cookie, they are read-only like the rest.",
+  acct_title:"Your assistant can now do things too — on your own computer",
+  addtool_cta:"Suggest a new tool",
+  addtool_sub:"Have a new MCP server for a Turkish service? Suggest it for the catalog — it will be reviewed and published if it meets the standards.",
+  addtool_title:"Built a tool?",
+  apps_sub:"Pick your app — the ready profile is built for that app.",
+  apps_title:"Where do you work with your assistant?",
+  apps_web_note:"Web version — local stdio servers do not work here.",
+  apps_web_t:"Desktop and CLI only",
+  ask_local_note:"Matching is by keyword — fully in the browser, no AI, and your question is sent nowhere.",
+  ask_sample:"Sample question",
+  banner_cta:"Build a profile",
+  banner_dismiss:"Dismiss",
+  banner_text:"New: profile builder, status page and a full guide — connect several servers to your assistant at once.",
+  bld_app_t:"App",
+  bld_copy:"Copy settings",
+  bld_custom_add:"Add to profile",
+  bld_custom_header:"Optional header (e.g. Authorization: Bearer …)",
+  bld_custom_name:"Name (e.g. my-server)",
+  bld_custom_note:"The custom server goes only into this profile and is not saved to the catalog. The address must start with https://.",
+  bld_custom_t:"Custom server by address",
+  bld_custom_url:"https address of the MCP server",
+  bld_deeplink_t:"One-click install",
+  bld_download:"Download file",
+  bld_env_note:"Values stay only in your own browser and are placed into the command — they are never sent to any server.",
+  bld_env_t:"Keys and sessions",
+  bld_installer_d:"Run this in your terminal: it installs uvx if needed, writes the settings and checks them with a smoke test.",
+  bld_installer_t:"One-command installer",
+  bld_os_lin:"Linux",
+  bld_os_mac:"macOS",
+  bld_os_t:"Operating system",
+  bld_os_win:"Windows",
+  bld_out_t:"Your settings",
+  bld_prof_all:"All",
+  bld_prof_clear:"Clear selection",
+  bld_prof_finance:"Finance",
+  bld_prof_news:"News",
+  bld_prof_shop:"Shopping",
+  bld_prof_travel:"Travel",
+  bld_profiles_t:"Ready profiles",
+  bld_search_ph:"Search servers or tools…",
+  bld_sel_empty:"No server selected yet — pick from the list or tap a ready profile.",
+  bld_sel_t:"Selected",
+  bld_share:"Shareable link",
+  bld_share_copied:"Link copied",
+  bld_steps_t:"After installing",
+  bld_sub:"Pick several servers and get a ready settings file for your app — connect once, get every tool. Everything is built here in your browser; nothing is sent to any server.",
+  bld_title:"Profile Builder",
+  bld_verify_d:"Fully quit your app and reopen it, then ask this sample question:",
+  bld_verify_t:"Check it yourself",
+  demo_a_t:"Sample answer",
+  demo_copy_q:"Copy question",
+  demo_live_no:"There is no live execution here — the answers are samples.",
+  demo_page_sub:"See how an assistant answers with these servers — question, tool call and a sample answer. These are pre-written samples, not live execution.",
+  demo_page_title:"Demo",
+  demo_pick:"Pick a server",
+  demo_q_t:"Question",
+  demo_sample_note:"Sample — checked against live data on 6 Nov 2026; not live data.",
+  demo_tool_t:"Tool call",
+  demo_try:"After installing, ask your assistant the same question.",
+  demo_verified:"4 checked samples",
+  det_about_t:"About this server",
+  det_account_d:"Besides reading public data, this server also offers optional write tools (cart and favorites). These tools work only with your own browser session cookie — the cookie stays only in the settings file on your own machine and never reaches us. Every mutating action happens only after your explicit approval, and there is no automatic payment.",
+  det_account_t:"With your own account on this service",
+  det_account_w:"Never share your session cookie with anyone, and never put it in a public repo or a message.",
+  det_badge_d:"Put this badge in your project's README — it links to this server's page.",
+  det_badge_t:"README badge",
+  det_change_first:"First seen in catalog",
+  det_change_last:"Last checked",
+  det_change_t:"History",
+  det_change_ver:"Version",
+  det_choose_direct_d:"Just this server, with one command or one settings snippet. For when you only want this service.",
+  det_choose_direct_t:"Single direct install",
+  det_choose_prof_d:"This server together with others, in one .mcp.json file. For when you want several services together.",
+  det_choose_prof_t:"Multi-server ready profile",
+  det_choose_t:"Which should I choose?",
+  det_code:"Source code",
+  det_code_v:"Open source",
+  det_codeuse_d:"Call the server directly from your own machine — no middleman, no hosted service. Sample with the Python MCP SDK:",
+  det_codeuse_t:"Use in code",
+  det_conn:"Connection type",
+  det_conn_v:"Unofficial — uses the same addresses the site itself uses",
+  det_faq_t:"Frequently asked questions",
+  det_key:"API key",
+  det_key_no:"Not needed",
+  det_key_sess:"Browser session (optional, only for account actions)",
+  det_last:"Last checked",
+  det_md_d:"Everything on this page in one plain-text file — for docs and AI assistants.",
+  det_md_dl:"Download .md",
+  det_md_t:"Markdown version",
+  det_md_view:"View Markdown",
+  det_read_t:"Read before installing",
+  det_related_t:"In the same category",
+  det_run:"Runs",
+  det_run_v:"On your computer",
+  det_sample_note:"These are example questions — after installing, ask your assistant the same ones.",
+  det_sample_t:"Sample questions for after installing",
+  det_src:"Source",
+  det_src_v:"Turkey MCP catalog",
+  det_tip1:"Data is read live from the site itself; if the site changes, the server may break.",
+  det_tip2:"You can always check an answer by opening the site yourself.",
+  det_tip3:"The server is read-only; it never buys, books or changes anything in an account.",
+  det_tip4:"Every tool was built with real tests against the live site.",
+  det_tips_t:"Tips",
+  det_tools_less:"Show less",
+  det_tools_more:"Show more tools",
+  det_tools_n:"tools",
+  download:"Download",
+  error_retry:"Try again",
+  f_clear:"Clear all",
+  f_local:"Runs on your computer",
+  f_noacct:"No account change",
+  f_nokey:"No API key",
+  f_official:"Official API",
+  f_profile:"Has a ready profile",
+  f_type:"Type",
+  f_type_all:"All",
+  f_type_arts:"Articles",
+  f_type_servers:"Servers",
+  f_type_skills:"Skills",
+  f_type_tuts:"Tutorials",
+  fb_contact:"Contact (optional — email or Telegram)",
+  fb_msg:"Your message",
+  fb_note:"Feedback opens as a ready GitHub issue; you can see and edit it before sending.",
+  fb_send:"Send feedback",
+  fb_title:"Feedback or bug report",
+  fb_type:"Type",
+  fb_type_bug:"Bug",
+  fb_type_idea:"Suggestion",
+  fb_type_other:"Other",
+  foot_dev:"For developers",
+  foot_security:"MCP servers can reach your data and accounts — read the “Read before installing” box before installing, and never share your session cookie with anyone.",
+  foot_start:"Start",
+  guide_api_note:"Machine catalog for assistants and scripts:",
+  guide_sub:"Everything about MCP and this catalog — without the extra jargon.",
+  guide_title:"Guide",
+  guide_toc:"Contents",
+  hero_chips_t:"Popular searches:",
+  inst_app:"App",
+  inst_deep_t:"One-click install",
+  inst_env_note:"Stays only in your own browser and is placed into the command — never sent to any server. Without it, the server works read-only.",
+  inst_env_t:"Session (optional)",
+  inst_os:"Operating system",
+  inst_prereq_d:"You need uvx to run the servers (it comes with uv). If it is not installed:",
+  inst_prereq_t:"Prerequisites",
+  inst_profile_d:"Instead of installing one by one, get this server with the others in a ready profile.",
+  inst_profile_t:"Install several servers at once",
+  inst_sample_t:"Try it now",
+  inst_tb1:"Fully quit the app and reopen it (not just the window).",
+  inst_tb2:"In Claude Code run claude mcp list and check the server is listed.",
+  inst_tb3:"Check the settings file is valid JSON (a missing comma is the most common error).",
+  inst_tb4:"Make sure uvx is installed: run uvx --version in a terminal.",
+  inst_tb5:"Fill in the <...> placeholders — do not copy the sample settings as-is.",
+  inst_title:"Install guide",
+  inst_trouble_t:"If it does not work",
+  inst_win_note:"On Windows, if your app does not run the command directly, prefix it with cmd /c.",
+  lbl_run_d:"The server runs on your own machine with uvx; your data never comes to us.",
+  lbl_run_t:"Runs: on your computer",
+  lbl_source_d:"The server was built and is maintained by this catalog.",
+  lbl_source_t:"Source: catalog",
+  lbl_warn_acct_d:"This server has write tools that can change things in your account — only with your approval.",
+  lbl_warn_acct_t:"Warning: changes your account",
+  lbl_warn_key_d:"To use it you must add your own key or session to the settings (only in your own browser).",
+  lbl_warn_key_t:"Warning: needs a key",
+  lbl_warn_unoff_d:"Not the site's official server; it uses the site's public addresses and may break if the site changes.",
+  lbl_warn_unoff_t:"Warning: unofficial API",
+  loading:"Loading…",
+  md_note:"This view is the server page as plain text — for copying, docs and AI assistants.",
+  md_title:"Markdown version",
+  mp_last:"List last checked",
+  mp_suggest_empty:"Found nothing? Suggest the service.",
+  my_builder_cta:"Build a profile from my selection",
+  my_clear:"Clear all",
+  my_keys_note:"Values stay in this browser's localStorage and are only used to fill in your own settings. “Clear all” removes them.",
+  my_keys_t:"Keys and sessions (only in this browser)",
+  my_none:"None",
+  my_saved:"Saved",
+  my_sel_empty:"You have not selected any servers yet. Add some from the marketplace or the profile builder.",
+  my_sel_t:"My servers",
+  my_sub:"Your selected servers and keys — stored only in this browser, on no server.",
+  my_title:"My connection",
+  nav_builder:"Profile Builder",
+  nav_demo:"Demo",
+  nav_guide:"Guide",
+  nav_more:"More",
+  nav_my:"My Connection",
+  nav_privacy:"Privacy",
+  nav_status:"Status",
+  nav_submit:"Add a Tool",
+  nav_terms:"Terms",
+  palette_suggest:"Didn't find the server you want? Suggest it.",
+  palette_tools:"Tools",
+  priv_p1:"This site is static: no accounts, no sign-in, no tracking and no analytics. We do not know who visited the site, what they searched for, or which server they installed.",
+  priv_p2:"The only thing stored is in your own browser: language, theme, favorites, your “My connection” selection and keys you enter yourself (localStorage). This data is never sent to any server and is removed when you clear your browser data.",
+  priv_p3:"When you click a GitHub link or open an issue, GitHub's privacy rules apply. If you use the submission form's autofill, your browser reads directly from GitHub's public API.",
+  priv_sub:"This site has no accounts and collects no data.",
+  priv_title:"Privacy",
+  show_less:"Show less",
+  show_more:"Show more",
+  sort_recommended:"Recommended",
+  status_all_ok:"All servers were verified at the last review.",
+  status_col_checked:"Last checked",
+  status_col_server:"Server",
+  status_col_status:"Status",
+  status_col_tools:"Tools",
+  status_col_ver:"Version",
+  status_note:"“Verified” means the server was built with real tests and reviewed at the catalog release. If a site changes, its server may break temporarily until it is updated.",
+  status_ok:"Verified",
+  status_pending:"Pending publication",
+  status_sub:"The catalog's last review — not a live check. Status is updated at each release.",
+  status_title:"Server status",
+  status_unknown:"Unknown",
+  sub_autofill:"Autofill from repository",
+  sub_autofill_ph:"GitHub repository address (https://github.com/…)",
+  sub_cat:"Category",
+  sub_chars:"characters",
+  sub_desc:"Full description (Markdown is fine)",
+  sub_env:"Environment variables (one per line: NAME=description)",
+  sub_error:"The repository could not be read — check the address and try again.",
+  sub_example:"Example",
+  sub_guide_link:"Submission guide",
+  sub_id:"ID (built automatically from the name)",
+  sub_install:"Install command (e.g. uvx my-server-mcp)",
+  sub_issue_btn:"Open issue on GitHub",
+  sub_license:"License",
+  sub_loading:"Reading the repository…",
+  sub_name_en:"English name of the service",
+  sub_name_fa:"Persian name (optional)",
+  sub_note:"Submissions are reviewed; see the submission guide for the standards.",
+  sub_preview_t:"Preview",
+  sub_questions:"Sample questions (one per line)",
+  sub_repo:"GitHub repository",
+  sub_retry:"Try again",
+  sub_sub:"Have a new MCP server for a Turkish service? Fill in the form — a ready GitHub issue is created for review. No account is needed here; you only need a GitHub account to submit the issue.",
+  sub_summary:"Summary (max 160 characters)",
+  sub_tags:"Tags (separate with commas)",
+  sub_title:"Add a tool",
+  sub_tools:"Tools (one per line: name — description)",
+  terms_p1:"Everything on this site is provided “as is”. The servers are unofficial and use the sites' public APIs; if a site changes, they may break.",
+  terms_p2:"Servers are read-only by default. Optional write tools (cart and favorites) run only with your own session and only after your approval; using them is your responsibility. Automatic payment never happens.",
+  terms_p3:"Server code is open source (PolyForm Noncommercial 1.0.0). If you own a service and want its server removed from the catalog, let us know on GitHub.",
+  terms_sub:"Short and plain.",
+  terms_title:"Terms of use",
+  wn_close:"Got it",
+  wn_item1:"Profile builder — pick several servers and get a ready .mcp.json.",
+  wn_item2:"A full install guide on every server page, with one-click install in Cursor and VS Code.",
+  wn_item3:"Status page, sample demos and a full guide.",
+  wn_item4:"Machine catalog: catalog.json, search.json and llms-full.txt.",
+  wn_sub:"In this release:",
+  wn_title:"What's new in the Turkey catalog",
 }};
 const LANGS = {fa:{name:"فارسی",dir:"rtl",locale:"fa-IR"},tr:{name:"Türkçe",dir:"ltr",locale:"tr-TR"},en:{name:"English",dir:"ltr",locale:"en-US"}};
 
@@ -1728,7 +2636,7 @@ const store = {
 const state = {
   lang: store.get("tmp_lang", null) || ((navigator.language||"fa").slice(0,2)==="tr"?"tr":(navigator.language||"").slice(0,2)==="en"?"en":"fa"),
   theme: store.get("tmp_theme", null) || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
-  page: "home", param: null, anchor: null
+  page: "home", param: null, anchor: null, query: {}
 };
 if(!["fa","tr","en"].includes(state.lang)) state.lang = "fa";
 function t(k){ const d = I18N[state.lang]||I18N.en; return d[k]!==undefined?d[k]:(I18N.en[k]!==undefined?I18N.en[k]:k); }
@@ -1755,29 +2663,50 @@ function copyText(txt, msg){ const done=()=>toast(msg||t("tool_copied"));
 function fallbackCopy(txt, done){ const ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{ document.execCommand("copy"); }catch(e){} document.body.removeChild(ta); done(); }
 
 /* ---------------- router ---------------- */
-const PAGES = ["home","marketplace","tool","categories","skills","skill","tutorials","tutorial","blog","article","about","contact","favorites","ask","connect"];
+const PAGES = ["home","marketplace","tool","categories","skills","skill","tutorials","tutorial","blog","article","about","contact","favorites","ask","connect","builder","demo","status","guide","submit","my","privacy","terms","md"];
 function parseHash(){
   const raw = location.hash||"";
   if(raw && !raw.startsWith("#/")){
     const id = raw.slice(1);
     if(/^[A-Za-z][\w-]*$/.test(id)){ state.anchor = id; return; }
   }
-  const h = raw.replace(/^#\/?/,"");
+  const qpos = raw.indexOf("?");
+  const pathRaw = qpos>=0 ? raw.slice(0,qpos) : raw;
+  state.query = {};
+  if(qpos>=0){ try{ new URLSearchParams(raw.slice(qpos+1)).forEach((v,k)=>{ state.query[k]=v; }); }catch(e){} }
+  const h = pathRaw.replace(/^#\/?/,"");
   const parts = h.split("/").filter(Boolean);
   let lang = parts[0], page = parts[1]||"home", param = parts[2]||null;
   if(!["fa","tr","en"].includes(lang)){ lang = state.lang; page = parts[0]||"home"; param = parts[1]||null; }
   if(!PAGES.includes(page)){ state.page="404"; state.param=page; state.lang=lang; return; }
   state.lang = lang; state.page = page; state.param = param;
 }
+function hashForQ(page, param, q){
+  let h = hashFor(page, param);
+  if(q){
+    const parts = [];
+    Object.keys(q).forEach(k=>{ if(q[k]!==undefined && q[k]!=="") parts.push(encodeURIComponent(k)+"="+encodeURIComponent(q[k])); });
+    if(parts.length) h += "?" + parts.join("&");
+  }
+  return h;
+}
+
 function go(page, param){ location.hash = hashFor(page, param); window.scrollTo({top:0}); }
 
 /* ---------------- shared components ---------------- */
 function headerHTML(){
-  const navItems = [["home","nav_home"],["marketplace","nav_marketplace"],["categories","nav_categories"],["skills","nav_skills"],["tutorials","nav_tutorials"],["blog","nav_blog"],["about","nav_about"],["contact","nav_contact"],["ask","nav_ask"],["connect","nav_connect"]];
-  const nav = navItems.map(([p,k])=>`<a href="${hashFor(p)}" class="${state.page===p||(p==="marketplace"&&state.page==="tool")||(p==="skills"&&state.page==="skill")||(p==="tutorials"&&state.page==="tutorial")||(p==="blog"&&state.page==="article")?"active":""}">${t(k)}</a>`).join("");
-  return `<header class="site"><div class="wrap nav">
+  const navItems = [["home","nav_home"],["marketplace","nav_marketplace"],["categories","nav_categories"],["builder","nav_builder"],["demo","nav_demo"],["ask","nav_ask"],["connect","nav_connect"]];
+  const moreItems = [["skills","nav_skills"],["tutorials","nav_tutorials"],["blog","nav_blog"],["guide","nav_guide"],["status","nav_status"],["submit","nav_submit"],["my","nav_my"],["about","nav_about"],["contact","nav_contact"]];
+  const isActive = (p)=> state.page===p||(p==="marketplace"&&state.page==="tool")||(p==="skills"&&state.page==="skill")||(p==="tutorials"&&state.page==="tutorial")||(p==="blog"&&state.page==="article");
+  const moreActive = moreItems.some(([p])=>isActive(p)) || state.page==="privacy" || state.page==="terms" || state.page==="md";
+  const nav = navItems.map(([p,k])=>`<a href="${hashFor(p)}" class="${isActive(p)?"active":""}">${t(k)}</a>`).join("");
+  const more = moreItems.map(([p,k])=>`<a href="${hashFor(p)}" class="${isActive(p)?"active":""}">${t(k)}</a>`).join("") + `<a href="${hashFor("privacy")}">${t("nav_privacy")}</a><a href="${hashFor("terms")}">${t("nav_terms")}</a>`;
+  const banner = store.get("tmp_banner_v25", null)==="off" ? "" : `<div class="top-banner"><div class="wrap"><span>✦ ${t("banner_text")}</span><a href="${hashFor("builder")}">${t("banner_cta")} →</a><button type="button" class="x" onclick="App.dismissBanner()">${t("banner_dismiss")}</button></div></div>`;
+  return `${banner}<header class="site"><div class="wrap nav">
     <a class="brand" href="${hashFor("home")}"><span class="mark">T</span><span>Turkey MCP<small>${t("brand_tag")}</small></span></a>
-    <nav class="main" aria-label="main">${nav}</nav>
+    <nav class="main" aria-label="main">${nav}
+      <div class="nav-more" id="nav-more"><button type="button" class="nav-more-btn ${moreActive?"active":""}" onclick="App.toggleMore(event)" aria-haspopup="true">${t("nav_more")} ▾</button><div class="nav-more-menu">${more}</div></div>
+    </nav>
     <div class="nav-right">
       <button class="icon-btn palette-btn" onclick="App.openPalette()" aria-label="${t("palette_open")}" title="${t("palette_open")}">⌘K</button>
       <select class="lang-select" aria-label="${t("lang_name")}" onchange="App.setLang(this.value)">
@@ -1788,13 +2717,15 @@ function headerHTML(){
       <button class="icon-btn burger" onclick="App.toggleMenu()" aria-label="${t("nav_menu")}">☰</button>
     </div>
   </div>
-  <div class="mobile-menu" id="mobile-menu">${navItems.map(([p,k])=>`<a href="${hashFor(p)}">${t(k)}</a>`).join("")}
+  <div class="mobile-menu" id="mobile-menu">${navItems.map(([p,k])=>`<a href="${hashFor(p)}">${t(k)}</a>`).join("")}${moreItems.map(([p,k])=>`<a href="${hashFor(p)}">${t(k)}</a>`).join("")}
     <a href="${hashFor("favorites")}">${t("nav_favorites")}</a>
     <button type="button" class="menu-palette" onclick="App.toggleMenu();App.openPalette()">⌘K · ${t("palette_open")}</button>
   </div></header>`;
 }
+
 function footerHTML(){
   const col = (title, links)=>`<div><h4>${title}</h4>${links.map(([href,label])=>`<a href="${href}">${label}</a>`).join("")}</div>`;
+  const bnav = [["home","nav_home","⌂"],["marketplace","nav_marketplace","▦"],["demo","nav_demo","▸"],["builder","nav_builder","⬡"],["connect","nav_connect","🔌"]];
   return `<footer class="site"><div class="wrap">
     <div class="foot-grid">
       <div>
@@ -1806,22 +2737,35 @@ function footerHTML(){
           <a href="https://www.linkedin.com/in/mohammad-abbasi-sh/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
         </div>
       </div>
-      ${col(t("foot_platform"), [[hashFor("marketplace"),t("nav_marketplace")],[hashFor("categories"),t("nav_categories")],[hashFor("skills"),t("nav_skills")],[hashFor("tutorials"),t("nav_tutorials")]])}
-      ${col(t("foot_resources"), [[hashFor("blog"),t("nav_blog")],[hashFor("tutorials"),t("tut_title")],["https://github.com/mohammad-abbasi-sh/turkey-mcp",t("tool_repo")],["https://pypi.org/user/mohammad-abbasi-sh/","PyPI"],["https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new",t("suggest_server")]])}
-      ${col(t("foot_company"), [[hashFor("about"),t("nav_about")],[hashFor("contact"),t("nav_contact")],["https://almanibama.ir","Almanibama"],["https://mabbasi.ir","mabbasi.ir"]])}
+      ${col(t("foot_start"), [[hashFor("marketplace"),t("nav_marketplace")],[hashFor("builder"),t("nav_builder")],[hashFor("connect"),t("nav_connect")],[hashFor("guide"),t("nav_guide")],[hashFor("ask"),t("nav_ask")]])}
+      ${col(t("foot_dev"), [["catalog.json","catalog.json"],["search.json","search.json"],["llms.txt","llms.txt"],["llms-full.txt","llms-full.txt"],[hashFor("status"),t("nav_status")],["https://github.com/mohammad-abbasi-sh/turkey-mcp",t("tool_repo")]])}
+      ${col(t("nav_about"), [[hashFor("about"),t("nav_about")],[hashFor("privacy"),t("nav_privacy")],[hashFor("terms"),t("nav_terms")],[hashFor("contact"),t("nav_contact")],[hashFor("submit"),t("suggest_server")],["https://almanibama.ir","Almanibama"],["https://mabbasi.ir","mabbasi.ir"]])}
     </div>
+    <div class="feedback-strip">
+      <h4 style="margin:0 0 10px">${t("fb_title")}</h4>
+      <form onsubmit="return App.fbSend(event)">
+        <select id="fb-type" aria-label="${t("fb_type")}"><option value="${t("fb_type_bug")}">${t("fb_type_bug")}</option><option value="${t("fb_type_idea")}">${t("fb_type_idea")}</option><option value="${t("fb_type_other")}">${t("fb_type_other")}</option></select>
+        <input id="fb-msg" type="text" required placeholder="${esc(t("fb_msg"))}" aria-label="${esc(t("fb_msg"))}">
+        <button type="submit" class="btn btn-primary btn-sm">${t("fb_send")}</button>
+      </form>
+      <p style="color:var(--muted);font-size:12.5px;margin:8px 0 0">${t("fb_note")}</p>
+    </div>
+    <p style="color:var(--muted);font-size:13px;margin:18px 0 0">⚠️ ${t("foot_security")}</p>
     <div class="foot-bottom">
       <span>© ${new Date().getFullYear()} Turkey MCP — ${t("foot_rights")}</span>
-      <span><a href="${hashFor("home")}" style="color:var(--muted)">Turkey MCP</a> · EN / TR / FA</span>
+      <span><a href="#" onclick="App.showWhatsNew();return false;" style="color:var(--muted)">${t("wn_title")}</a> · <a href="${hashFor("home")}" style="color:var(--muted)">Turkey MCP</a> · EN / TR / FA</span>
     </div>
-  </div></footer>`;
+  </div></footer>
+  <nav class="bottom-nav" aria-label="mobile">${bnav.map(([p,k,ic])=>`<a href="${hashFor(p)}" class="${state.page===p||(p==="marketplace"&&state.page==="tool")?"active":""}"><span class="ic">${ic}</span>${t(k)}</a>`).join("")}</nav>`;
 }
+
 function starBtn(type,id){
   const on = isFav(type,id);
   return `<button class="star-btn ${on?"on":""}" onclick="App.toggleFav('${type}','${id}',event)" aria-label="${on?t("remove_fav"):t("add_fav")}" title="${on?t("remove_fav"):t("add_fav")}">${on?"★":"☆"}</button>`;
 }
 function serverCard(s){
   const open = DRAWER.has(s.id);
+  const instOpen = INSTALL.drawer===s.id;
   const sel = state.page==="marketplace" && inspectorServer() && inspectorServer().id===s.id;
   const cmd = "claude mcp add --transport stdio --scope user "+s.id.replace("-mcp","")+" -- uvx "+s.pypi;
   const top = s.tools.slice(0,3);
@@ -1837,12 +2781,15 @@ function serverCard(s){
     <div class="srv-foot">
       <a class="srv-details" href="${hashFor("tool", s.id)}">${t("details")} →</a>
       <button type="button" class="srv-tools-btn" onclick="App.toggleDrawer('${s.id}')" aria-expanded="${open}">${t("tool_tools")} <span class="chev">${open?"▴":"▾"}</span></button>
+      <button type="button" class="srv-tools-btn" onclick="App.toggleInstall('${s.id}')" aria-expanded="${instOpen}">${t("inst_title")} <span class="chev">${instOpen?"▴":"▾"}</span></button>
       <button type="button" class="copy-btn" onclick="App.copy(this,'${esc(cmd)}')">${t("tool_copy")}</button>
+      <button type="button" class="copy-btn" onclick="App.bldAdd('${s.id}')" title="${t("nav_builder")}">＋ ${t("nav_builder")}</button>
       <span>${starBtn("server", s.id)}</span>
     </div>
-    ${open?`<div class="drawer open">${drawerHTML(s)}</div>`:""}
+    ${instOpen?`<div class="drawer open" style="margin-top:12px">${installPanelHTML(s,{compact:true})}</div>`:open?`<div class="drawer open">${drawerHTML(s)}</div>`:""}
   </article>`;
 }
+
 function skillCard(k){
   return `<article class="card">
     <div class="card-top">
@@ -1894,6 +2841,7 @@ function heroHTML(){
         <input id="hero-q" type="search" placeholder="${esc(t("hero_search_ph"))}" aria-label="${esc(t("hero_search_ph"))}">
         <button class="btn btn-primary" type="submit">⌕ ${t("search_btn")}</button>
       </form>
+      <div class="chips"><span class="lbl">${t("hero_chips_t")}</span>${["Hepsiburada","obilet","TCMB","BİM","İŞKUR","n11"].map(c=>`<button type="button" class="chip chip-btn" onclick="App.heroChip('${c}')">${c}</button>`).join("")}</div>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="${hashFor("marketplace")}">${t("hero_cta1")}</a>
         <a class="btn btn-ghost" href="#how">${t("hero_cta2")}</a>
@@ -1922,7 +2870,7 @@ function homeHTML(){
   const feat = SERVERS.filter(s=>s.featured).concat(SERVERS.filter(s=>!s.featured).slice(0,2));
   const rest = SERVERS.length - feat.length;
   const ben = [["ben1","✓"],["ben2","⌘"],["ben3","Aa"],["ben4","★"]];
-  return heroHTML() + `
+  return heroHTML() + appPickerHTML() + `
   <section class="benefits"><div class="wrap">
     ${sectionHead("✦", t("ben_title"), t("ben_sub"))}
     <div class="grid grid-4">${ben.map(([k,g])=>`<article class="ben-card"><span class="ben-ic">${g}</span><h3>${t(k+"_t")}</h3><p>${t(k+"_d")}</p></article>`).join("")}</div>
@@ -1936,6 +2884,7 @@ function homeHTML(){
     <div class="grid grid-3">${feat.map(serverCard).join("")}</div>
     ${rest>0?`<div class="mint-banner"><div><h3>${fmtNum(rest)} ${t("more_servers")}</h3><p>${t("more_d")}</p></div><a class="btn btn-mint" href="${hashFor("marketplace")}">${t("view_all")} ←</a></div>`:""}
   </div></section>
+  ${acctBannerHTML()}
   <section class="section"><div class="wrap">
     ${sectionHead("◆", t("plat_title"), t("plat_sub"))}
     <h3 style="font-size:16px;margin-bottom:12px"><span class="badge badge-verified">✓ ${t("plat_verified")}</span></h3>
@@ -1965,7 +2914,8 @@ function homeHTML(){
   <section class="section"><div class="wrap">
     ${sectionHead("✎", t("blog_title"), t("blog_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("blog")}">${t("view_all")}</a>`)}
     <div class="grid grid-3">${ARTICLES.map(artCard).join("")}</div>
-  </div></section>`;
+  </div></section>
+  ${addToolCTAHTML()}`;
 }
 function tutCard(x, i){
   return `<article class="card">
@@ -1987,17 +2937,44 @@ function artCard(a, i){
 }
 
 /* marketplace state */
-const mp = { q:"", cat:"all", sort:"popular" };
+const mp = { q:"", cat:"all", type:"all", sort:"recommended", local:false, profile:false, nokey:false, noacct:false, official:false };
+function mpQueryObj(){
+  const q = {};
+  if(mp.q.trim()) q.q = mp.q.trim();
+  if(mp.cat!=="all") q.cat = mp.cat;
+  if(mp.type!=="all") q.type = mp.type;
+  if(mp.sort!=="recommended") q.sort = mp.sort;
+  ["local","profile","nokey","noacct","official"].forEach(k=>{ if(mp[k]) q[k]="1"; });
+  return q;
+}
+function mpFromQuery(){
+  const q = state.query||{};
+  mp.q = q.q||"";
+  mp.cat = (q.cat && (q.cat==="all" || CATEGORIES.some(c=>c.id===q.cat))) ? q.cat : "all";
+  mp.type = ["all","servers","skills","tutorials","articles"].indexOf(q.type)>=0 ? q.type : "all";
+  mp.sort = q.sort==="popular" ? "recommended" : (["recommended","newest","alpha"].indexOf(q.sort)>=0 ? q.sort : "recommended");
+  ["local","profile","nokey","noacct","official"].forEach(k=>{ mp[k] = q[k]==="1"; });
+}
+function mpSyncUrl(){
+  if(state.page!=="marketplace") return;
+  try{ history.replaceState(null, "", location.pathname + location.search + hashForQ("marketplace", state.param, mpQueryObj())); }catch(e){}
+}
 function mpFiltered(){
   let list = SERVERS.slice();
   const q = mp.q.trim().toLowerCase();
   if(q) list = list.filter(s => (s.id+" "+s.title+" "+s.title_tr+" "+serverDesc(s)+" "+s.tools.map(x=>x.n+" "+toolSum(x)).join(" ")).toLowerCase().includes(q));
   if(mp.cat!=="all") list = list.filter(s=>s.cat===mp.cat);
-  if(mp.sort==="popular") list.sort((a,b)=>b.tools.length-a.tools.length || a.id.localeCompare(b.id));
+  if(mp.noacct) list = list.filter(s=>!s.account);
+  if(mp.official) list = list.filter(s=>s.id==="tcmb-mcp");
+  /* local / profile / nokey match every server in this catalog (all run on
+     your computer, all have a ready profile, none needs an API key) — the
+     counts next to them say so, honestly. */
+  if(mp.sort==="recommended") list.sort((a,b)=>(b.featured-a.featured) || b.tools.length-a.tools.length || a.id.localeCompare(b.id));
   if(mp.sort==="newest") list.sort((a,b)=>b.added-a.added);
   if(mp.sort==="alpha") list.sort((a,b)=>a.id.localeCompare(b.id));
   return list;
 }
+
 function mpMatches(q){
   const s = q.trim().toLowerCase(); if(!s) return {skills:[],tuts:[],arts:[]};
   return {
@@ -2008,31 +2985,56 @@ function mpMatches(q){
 }
 function mpResultsHTML(){
   const list = mpFiltered();
-  const m = mpMatches(mp.q);
-  let h = `<p class="result-count">${fmtNum(list.length)} ${t("results")}</p>`;
-  if(!list.length && !m.skills.length && !m.tuts.length && !m.arts.length) return h + emptyHTML();
-  if(list.length) h += `<div class="grid grid-2">${list.map(serverCard).join("")}</div>`;
+  const hasQ = !!mp.q.trim();
+  const m = hasQ ? mpMatches(mp.q) : {skills:SKILLS, tuts:TUTORIALS, arts:ARTICLES};
+  const showSrv = mp.type==="all" || mp.type==="servers";
+  const showSkl = (mp.type==="all" || mp.type==="skills") && m.skills.length;
+  const showTut = (mp.type==="all" || mp.type==="tutorials") && m.tuts.length;
+  const showArt = (mp.type==="all" || mp.type==="articles") && m.arts.length;
+  let h = `<p class="result-count">${fmtNum(showSrv?list.length:0)} ${t("results")}</p>`;
+  if((!showSrv || !list.length) && !showSkl && !showTut && !showArt) return h + emptyHTML() + `<p style="text-align:center;margin-top:14px"><a class="btn btn-primary btn-sm" href="${hashFor("submit")}">${t("mp_suggest_empty")}</a></p>`;
+  if(showSrv && list.length) h += `<div class="grid grid-2">${list.map(serverCard).join("")}</div>`;
   const extra = [];
-  if(m.skills.length) extra.push(`<h3 class="match-head">${t("match_skills")} (${fmtNum(m.skills.length)})</h3><div class="grid grid-3">${m.skills.map(skillCard).join("")}</div>`);
-  if(m.tuts.length) extra.push(`<h3 class="match-head">${t("match_tuts")} (${fmtNum(m.tuts.length)})</h3><div class="grid grid-3">${m.tuts.map(tutCard).join("")}</div>`);
-  if(m.arts.length) extra.push(`<h3 class="match-head">${t("match_arts")} (${fmtNum(m.arts.length)})</h3><div class="grid grid-3">${m.arts.map(artCard).join("")}</div>`);
+  if(showSkl) extra.push(`<h3 class="match-head">${t("match_skills")} (${fmtNum(m.skills.length)})</h3><div class="grid grid-3">${m.skills.map(skillCard).join("")}</div>`);
+  if(showTut) extra.push(`<h3 class="match-head">${t("match_tuts")} (${fmtNum(m.tuts.length)})</h3><div class="grid grid-3">${m.tuts.map(tutCard).join("")}</div>`);
+  if(showArt) extra.push(`<h3 class="match-head">${t("match_arts")} (${fmtNum(m.arts.length)})</h3><div class="grid grid-3">${m.arts.map(artCard).join("")}</div>`);
   return h + extra.join("");
 }
 function marketplaceHTML(){
   const opt = (v,cur,label)=>`<option value="${v}" ${v===cur?"selected":""}>${label}</option>`;
+  const radio = (name, suffix, value, cur, label, count, handler)=>`<label><input type="radio" name="${name}${suffix}" value="${value}" ${value===cur?"checked":""} onchange="${handler}"><span>${label}</span><span class="cnt">${fmtNum(count)}</span></label>`;
+  const check = (key, suffix, label, count)=>`<label class="check-row"><input type="checkbox" data-mpcheck="${key}" ${mp[key]?"checked":""} onchange="App.mpCheck('${key}',this.checked)"><span>${label}</span><span class="cnt">${fmtNum(count)}</span></label>`;
   const rail = (suffix)=>`
       <div class="rail-block"><label for="mp-q${suffix}">${t("search_btn")}</label>
       <div class="search-box"><span class="mag">⌕</span><input id="mp-q${suffix}" type="search" placeholder="${esc(t("mp_search_ph"))}" value="${esc(mp.q)}" oninput="App.mpSearch(this.value)" aria-label="${esc(t("mp_search_ph"))}"></div></div>
-      <div class="rail-block"><label for="mp-cat${suffix}">${t("f_category")}</label>
-      <select id="mp-cat${suffix}" onchange="App.mpFilter('cat',this.value)" aria-label="${t("f_category")}">${opt("all",mp.cat,t("f_all"))}${CATEGORIES.filter(c=>!c.soon).map(c=>opt(c.id,mp.cat,catName(c.id))).join("")}</select></div>
+      <div class="rail-block"><label>${t("f_type")}</label><div class="filter-radios">
+        ${radio("mp-type", suffix, "all", mp.type, t("f_type_all"), SERVERS.length+SKILLS.length+TUTORIALS.length+ARTICLES.length, "App.mpType(this.value)")}
+        ${radio("mp-type", suffix, "servers", mp.type, t("f_type_servers"), SERVERS.length, "App.mpType(this.value)")}
+        ${radio("mp-type", suffix, "skills", mp.type, t("f_type_skills"), SKILLS.length, "App.mpType(this.value)")}
+        ${radio("mp-type", suffix, "tutorials", mp.type, t("f_type_tuts"), TUTORIALS.length, "App.mpType(this.value)")}
+        ${radio("mp-type", suffix, "articles", mp.type, t("f_type_arts"), ARTICLES.length, "App.mpType(this.value)")}
+      </div></div>
+      <div class="rail-block"><label>${t("f_category")}</label><div class="filter-radios">
+        ${radio("mp-cat", suffix, "all", mp.cat, t("f_all"), SERVERS.length, "App.mpFilter('cat',this.value)")}
+        ${CATEGORIES.filter(c=>!c.soon).map(c=>radio("mp-cat", suffix, c.id, mp.cat, catName(c.id), catCount(c.id), "App.mpFilter('cat',this.value)")).join("")}
+      </div></div>
+      <div class="rail-block"><label>${t("f_status")}</label>
+        ${check("local", suffix, t("f_local"), SERVERS.length)}
+        ${check("profile", suffix, t("f_profile"), SERVERS.length)}
+        ${check("nokey", suffix, t("f_nokey"), SERVERS.length)}
+        ${check("noacct", suffix, t("f_noacct"), SERVERS.filter(s=>!s.account).length)}
+        ${check("official", suffix, t("f_official"), SERVERS.filter(s=>s.id==="tcmb-mcp").length)}
+      </div>
       <div class="rail-block"><label for="mp-sort${suffix}">${t("sort")}</label>
-      <select id="mp-sort${suffix}" onchange="App.mpFilter('sort',this.value)" aria-label="${t("sort")}">${opt("popular",mp.sort,t("sort_popular"))}${opt("newest",mp.sort,t("sort_newest"))}${opt("alpha",mp.sort,t("sort_alpha"))}</select></div>`;
+      <select id="mp-sort${suffix}" onchange="App.mpFilter('sort',this.value)" aria-label="${t("sort")}">${opt("recommended",mp.sort,t("sort_recommended"))}${opt("newest",mp.sort,t("sort_newest"))}${opt("alpha",mp.sort,t("sort_alpha"))}</select></div>
+      <div class="rail-block"><button type="button" class="btn btn-ghost btn-sm" onclick="App.mpClear()">${t("f_clear")}</button></div>
+      <p class="rail-note">${t("mp_last")}: ${fmtDate(PORT_BUILD)}</p>`;
   return `<section class="section"><div class="wrap">
     ${sectionHead("▦", t("mp_title"), t("mp_sub"))}
     <button type="button" class="btn btn-ghost btn-sm sheet-open" onclick="App.toggleSheet(true)">⌕ ${t("mp_filters")}</button>
     <div class="mp-layout">
       <aside class="filter-rail" aria-label="${t("mp_filters")}">${rail("")}
-        <p class="rail-note"><a href="https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new" target="_blank" rel="noopener">${t("suggest_server")} ↗</a></p>
+        <p class="rail-note"><a href="${hashFor("submit")}">${t("suggest_server")} ↗</a></p>
       </aside>
       <div class="mp-col"><div id="mp-results">${mpResultsHTML()}</div></div>
       <aside class="inspector" id="inspector" aria-label="Inspector"><p class="insp-kicker">Inspector · ${t("details")}</p>${inspectorHTML()}</aside>
@@ -2045,50 +3047,104 @@ function marketplaceHTML(){
     </div>
   </div></section>`;
 }
+
+/* detail page state */
+const DETAIL = {tab:"profile", toolsOpen:false, serverId:null};
+function detToolsHTML(s){
+  const shown = DETAIL.toolsOpen ? s.tools : s.tools.slice(0,8);
+  const more = s.tools.length - 8;
+  return `<div class="card" style="padding:8px 18px"><div class="table-scroll"><table class="tools-table"><thead><tr><th>Tool</th><th>${t("details")}</th></tr></thead><tbody>
+  ${shown.map(x=>`<tr><td><code>${esc(x.n)}</code></td><td>${esc(toolSum(x))}</td></tr>`).join("")}
+  </tbody></table></div></div>
+  ${more>0?`<p style="margin-top:10px"><button type="button" class="btn btn-ghost btn-sm" onclick="App.toggleTools('${s.id}')">${DETAIL.toolsOpen?t("det_tools_less"):t("det_tools_more")+" ("+fmtNum(more)+")"}</button></p>`:""}`;
+}
+function detInstallHTML(s){
+  const tabBtn = (id, label)=>`<button type="button" class="btn ${DETAIL.tab===id?"btn-primary":"btn-ghost"} btn-sm" onclick="App.detTab('${id}')">${label}</button>`;
+  if(DETAIL.tab==="manual") return `<p style="display:flex;gap:8px;margin:0 0 14px">${tabBtn("profile", t("det_choose_prof_t"))}${tabBtn("manual", t("det_choose_direct_t"))}</p>${installPanelHTML(s)}`;
+  const cfg = buildProfileConfig("claude-desktop", [s], null);
+  return `<p style="display:flex;gap:8px;margin:0 0 14px">${tabBtn("profile", t("det_choose_prof_t"))}${tabBtn("manual", t("det_choose_direct_t"))}</p>
+  <div class="install-box"><h3>.mcp.json — ${esc(serviceName(s))}</h3><div class="copy-row"><pre><code>${esc(cfg.text)}</code></pre><button class="copy-btn" onclick="App.copy(this,${JSON.stringify(cfg.text).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
+  <p style="margin:0 0 14px"><a class="btn btn-primary btn-sm" href="${hashForQ("builder", null, {ids:s.id})}">${t("nav_builder")} →</a> <span style="color:var(--muted);font-size:13.5px">${t("inst_profile_d")}</span></p>`;
+}
 function toolHTML(id){
   const s = SERVERS.find(x=>x.id===id);
   if(!s) return notFoundHTML();
   pushRecent("server", id);
-  const cmd = `claude mcp add --transport stdio --scope user ${s.id.replace("-mcp","")} -- uvx ${s.pypi}`;
-  const envJson = s.env ? ",\n      \"env\": " + JSON.stringify(s.env, null, 2).split("\n").join("\n      ") : "";
-  const cfg = `{\n  "mcpServers": {\n    "${s.id.replace("-mcp","")}": {\n      "command": "uvx",\n      "args": ["${s.pypi}"]${envJson}\n    }\n  }\n}`;
+  DETAIL.serverId = id;
+  const badgeUrl = "https://img.shields.io/badge/MCP-" + s.id.replace(/-/g,"--") + "-9C4A26";
+  const pageUrl = "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/" + s.id;
+  const badgeMd = "[![MCP](" + badgeUrl + ")](" + pageUrl + ")";
+  const badgeHtml = '<a href="' + pageUrl + '"><img alt="MCP" src="' + badgeUrl + '"></a>';
+  const related = SERVERS.filter(x=>x.cat===s.cat && x.id!==s.id).slice(0,4);
+  const codeSample = 'import asyncio\nfrom mcp import ClientSession, StdioServerParameters\nfrom mcp.client.stdio import stdio_client\n\nasync def main():\n    params = StdioServerParameters(command="uvx", args=["' + s.pypi + '"])\n    async with stdio_client(params) as (read, write):\n        async with ClientSession(read, write) as session:\n            await session.initialize()\n            tools = await session.list_tools()\n            print([t.name for t in tools.tools])\n\nasyncio.run(main())';
   return `<section class="section"><div class="wrap">
-    <p><a href="${hashFor("marketplace")}">← ${t("back")}</a></p>
+    <p class="crumb"><a href="${hashFor("home")}">${t("nav_home")}</a> / <a href="${hashFor("marketplace")}">${t("nav_marketplace")}</a> / ${esc(serviceName(s))}</p>
     <div class="detail-head">
       <span class="mono mono-lg" style="--mc:${s.color}">${mono(s)}</span>
       <div style="flex:1;min-width:0">
         <h1>${esc(s.title)}</h1>
+        <p style="color:var(--muted);margin:4px 0">${esc(s.title_tr||"")}</p>
         <p class="latin">${esc(s.id)}</p>
-        <p>${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span> `:""}${s.account?`<span class="badge badge-acct">${t("badge_account")}</span> `:""}<span class="badge badge-ok">✓ ${t("status_available")}</span> <span class="chip">${t("badge_local")}</span> <span class="chip">${esc(catName(s.cat))}</span></p>
+        <p>${s.featured?`<span class="badge badge-feat">★ ${t("feat_badge")}</span> `:""}${s.account?`<span class="badge badge-acct">${t("badge_account")}</span> `:""}<span class="badge badge-ok">✓ ${t("status_available")}</span> <span class="chip">${t("badge_local")}</span> <span class="chip">${esc(catName(s.cat))}</span> <span class="chip">${fmtNum(s.tools.length)} ${t("tools_count")}</span></p>
       </div>
       ${starBtn("server", s.id)}
     </div>
     <p style="color:var(--muted);max-width:760px">${esc(serverDesc(s))}</p>
+    <div class="read-box" style="margin-top:22px"><h2 style="font-size:17px;margin:0 0 12px">${t("det_read_t")}</h2><dl>
+      <dt>${t("det_src")}</dt><dd>${t("det_src_v")}</dd>
+      <dt>${t("det_run")}</dt><dd>${t("det_run_v")}</dd>
+      <dt>${t("det_key")}</dt><dd>${s.account?t("det_key_sess"):t("det_key_no")}</dd>
+      <dt>${t("det_conn")}</dt><dd>${t("det_conn_v")}</dd>
+      <dt>${t("det_code")}</dt><dd><a href="${s.repo}" target="_blank" rel="noopener">${t("det_code_v")} ↗</a> · PolyForm Noncommercial 1.0.0</dd>
+      <dt>${t("det_last")}</dt><dd>${fmtDate(PORT_BUILD)}</dd>
+    </dl></div>
+    ${s.account?`<div class="callout" style="margin-top:16px"><b>${t("det_account_t")}</b><br>${t("det_account_d")}<br><b>${t("det_account_w")}</b></div>`:""}
     <div class="grid grid-2" style="margin-top:26px">
       <div>
         <h2 style="font-size:20px">${t("tool_tools")} (${fmtNum(s.tools.length)})</h2>
-        <div class="card" style="padding:8px 18px"><div class="table-scroll"><table class="tools-table"><thead><tr><th>Tool</th><th>${t("details")}</th></tr></thead><tbody>
-        ${s.tools.map(x=>`<tr><td><code>${esc(x.n)}</code></td><td>${esc(toolSum(x))}</td></tr>`).join("")}
-        </tbody></table></div></div>
+        <div id="det-tools">${detToolsHTML(s)}</div>
+        <h2 style="font-size:20px;margin-top:26px">${t("det_sample_t")}</h2>
+        <p style="color:var(--muted);font-size:13.5px">${t("det_sample_note")}</p>
+        ${sampleQuestions(s,3).map(qo=>`<div class="qa-card"><p class="q">${esc(qo.q[state.lang]||qo.q.en)}</p><p style="margin:0"><code>${esc(qo.tool)}</code></p><p style="margin:10px 0 0"><button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(qo.q[state.lang]||qo.q.en).replace(/"/g,"&quot;")})">${t("demo_copy_q")}</button> <a class="btn btn-ghost btn-sm" href="${hashForQ("demo", null, {server:s.id})}">${t("nav_demo")} →</a></p></div>`).join("")}
+        <h2 style="font-size:20px;margin-top:26px">${t("det_about_t")}</h2>
+        <p style="color:var(--muted)">${esc(serverDesc(s))}</p>
+        <h3 style="font-size:16px;margin-top:18px">${t("det_tips_t")}</h3>
+        <ul style="line-height:1.8">${[t("det_tip1"),t("det_tip2"),t("det_tip3"),t("det_tip4")].map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
         <h2 style="font-size:20px;margin-top:26px">${t("tool_platforms")}</h2>
         <p>${PLATFORMS_VERIFIED.map(p=>`<span class="chip" style="margin:0 6px 6px 0">✓ ${esc(p.name)}</span>`).join("")}</p>
         <p style="color:var(--muted);font-size:13.5px">${t("plat_unverified_note")}</p>
       </div>
       <div>
         <h2 style="font-size:20px">${t("tool_install")}</h2>
-        <div class="install-box"><h3>Claude Code</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy(this,'${esc(cmd)}')">${t("tool_copy")}</button></div></div>
-        <div class="install-box"><h3>Cursor / Claude Desktop</h3><div class="copy-row"><pre><code>${esc(cfg)}</code></pre><button class="copy-btn" onclick="App.copy(this,${JSON.stringify(cfg).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
-        <div class="install-box"><h3>${t("tool_conn")}</h3><p style="font-size:14px;margin:0">${t("tool_conn_d")}</p></div>
-        <p style="margin:0 0 16px"><a href="${hashFor("connect")}">${t("tool_conn_guide")} →</a></p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div id="det-install">${detInstallHTML(s)}</div>
+        <h2 style="font-size:20px;margin-top:26px">${t("det_choose_t")}</h2>
+        <div class="choose-grid">
+          <article class="card"><h3>${t("det_choose_direct_t")}</h3><p class="desc">${t("det_choose_direct_d")}</p></article>
+          <article class="card"><h3>${t("det_choose_prof_t")}</h3><p class="desc">${t("det_choose_prof_d")}</p></article>
+        </div>
+        <h2 style="font-size:20px;margin-top:26px">${t("det_codeuse_t")}</h2>
+        <p style="color:var(--muted);font-size:13.5px">${t("det_codeuse_d")}</p>
+        <div class="install-box"><h3>Python · MCP SDK</h3><div class="copy-row"><pre><code>${esc(codeSample)}</code></pre><button class="copy-btn" onclick="App.copy(this,${JSON.stringify(codeSample).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
           <a class="btn btn-primary btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
           <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a>
+          <a class="btn btn-ghost btn-sm" href="${hashFor("md", s.id)}">${t("det_md_view")}</a>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="App.mdDownload('${s.id}')">${t("det_md_dl")}</button>
         </div>
         <p style="color:var(--muted);font-size:13px;margin-top:14px">${t("tool_last")}: ${fmtDate("2026-11-18")}</p>
       </div>
     </div>
+    <h2 style="font-size:20px;margin-top:30px">${t("det_faq_t")}</h2>
+    <div style="margin-top:12px">${toolFaqHTML(s)}</div>
+    <h2 style="font-size:20px;margin-top:26px">${t("det_badge_t")}</h2>
+    <p style="color:var(--muted);font-size:13.5px">${t("det_badge_d")}</p>
+    <div class="badge-box"><img src="${esc(badgeUrl)}" alt="MCP badge" loading="lazy"><button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(badgeMd).replace(/"/g,"&quot;")})">Markdown</button><button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(badgeHtml).replace(/"/g,"&quot;")})">HTML</button></div>
+    <h2 style="font-size:20px;margin-top:26px">${t("det_change_t")}</h2>
+    <p style="color:var(--muted)">${t("det_change_first")}: ${fmtDate(serverFirstSeen(s.id))} · ${t("det_change_ver")}: ${serverVersion(s.id)==="pending"?t("status_pending"):esc(serverVersion(s.id))} · ${t("det_change_last")}: ${fmtDate(PORT_BUILD)}</p>
+    ${related.length?`<h2 style="font-size:20px;margin-top:26px">${t("det_related_t")}</h2><div class="grid grid-2" style="margin-top:14px">${related.map(serverCard).join("")}</div>`:""}
   </div></section>`;
 }
+
 function categoriesHTML(){
   return `<section class="section"><div class="wrap">
     ${sectionHead("▦", t("cats_page_title"), t("cats_page_sub"))}
@@ -2192,12 +3248,20 @@ function aboutHTML(){
       <div class="stat"><b>${fmtNum(TOTAL_TOOLS)}</b><span>${t("stat_tools")}</span></div>
       <div class="stat"><b>${fmtNum(SKILLS.length)}</b><span>${t("stat_skills")}</span></div>
     </div>
+    <h2 id="labels" style="font-size:20px;margin-top:30px">${t("about_labels_t")}</h2>
+    <p style="color:var(--muted)">${t("about_labels_d")}</p>
+    <div style="margin-top:14px">${labelsHTML()}</div>
+    <div class="grid grid-2" style="margin-top:26px">
+      <article class="card"><h3>${t("about_review_t")}</h3><p class="desc">${t("about_review_d")}</p></article>
+      <article class="card"><h3>${t("about_operator_t")}</h3><p class="desc">${t("about_operator_d")}</p><p style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0"><a class="btn btn-ghost btn-sm" href="https://github.com/mohammad-abbasi-sh" target="_blank" rel="noopener">GitHub ↗</a><a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/mohammad-abbasi-sh/" target="_blank" rel="noopener">LinkedIn ↗</a></p></article>
+    </div>
     <h2 id="faq" style="font-size:20px;margin-top:26px">${t("faq_title")}</h2>
     <p style="color:var(--muted)">${t("faq_sub")}</p>
     <div class="grid grid-2" style="margin-top:14px">${FAQ.map(f=>`<article class="card"><h3>${esc(L(f.q))}</h3><p class="desc">${esc(L(f.a))}</p></article>`).join("")}</div>
-    <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary btn-sm" href="${hashFor("connect")}">${t("nav_connect")}</a><a class="btn btn-ghost btn-sm" href="https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new" target="_blank" rel="noopener">${t("suggest_server")} ↗</a></p>
+    <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary btn-sm" href="${hashFor("connect")}">${t("nav_connect")}</a><a class="btn btn-ghost btn-sm" href="${hashFor("guide")}">${t("nav_guide")}</a><a class="btn btn-ghost btn-sm" href="${hashFor("privacy")}">${t("nav_privacy")}</a><a class="btn btn-ghost btn-sm" href="${hashFor("terms")}">${t("nav_terms")}</a><a class="btn btn-ghost btn-sm" href="https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new" target="_blank" rel="noopener">${t("suggest_server")} ↗</a></p>
   </div></section>`;
 }
+
 function contactHTML(){
   return `<section class="section"><div class="wrap">
     <div class="form-card" style="max-width:620px">
@@ -2339,6 +3403,7 @@ function askScore(q){
 function askCard(r){
   const s = r.s;
   const cmd = "uvx " + s.pypi;
+  const sq = sampleQText(s, 0);
   const tools = s.tools.slice(0,3).map(x=>`<code>${esc(x.n)}</code>`).join(" · ");
   return `<article class="card" style="margin-bottom:16px">
     <div class="card-top">
@@ -2350,15 +3415,18 @@ function askCard(r){
     <p class="meta-row"><span class="ic">→</span> ${t("ask_why")}: ${r.matched.map(m=>`<span class="chip">${esc(m)}</span>`).join(" ")}</p>
     <p class="meta-row"><span class="ic">▦</span> ${esc(catName(s.cat))} · ${fmtNum(s.tools.length)} ${t("tools_count")}</p>
     <p style="font-size:13.5px;color:var(--muted)">${tools}${s.tools.length>3?` · +${fmtNum(s.tools.length-3)}`:""}</p>
+    <p class="meta-row"><span class="ic">?</span> ${t("ask_sample")}: <strong>${esc(sq)}</strong> <button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(sq).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></p>
     <div class="install-box" style="margin-top:14px"><h3>${t("ask_install")}</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy(this,'${esc(cmd)}')">${t("tool_copy")}</button></div></div>
     <div class="card-bottom">
       <a class="btn btn-primary btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a>
+      <a class="btn btn-ghost btn-sm" href="${hashForQ("demo", null, {server:s.id})}">${t("nav_demo")}</a>
       <a class="btn btn-ghost btn-sm" href="${hashFor("connect")}">${t("nav_connect")}</a>
       <a class="btn btn-ghost btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
       <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a>
     </div>
   </article>`;
 }
+
 function askNoMatchHTML(){
   const liveCats = CATEGORIES.filter(c=>!c.soon);
   return `<div class="empty"><div class="big">§</div><h3>${t("ask_no_match")}</h3><p>${t("ask_no_match_hint")}</p>
@@ -2383,6 +3451,7 @@ function askHTML(){
     <h1>${t("ask_title")}</h1>
     <p style="color:var(--muted);max-width:760px">${t("ask_sub")}</p>
     <div class="note">${t("ask_hint")}</div>
+    <div class="note" style="margin-top:10px">${t("ask_local_note")}</div>
     <form onsubmit="return App.askSubmit(event)" style="margin-top:22px">
       <div class="toolbar"><div class="search-box"><span class="mag">⌕</span><input id="ask-q" type="search" placeholder="${esc(t("ask_ph"))}" value="${esc(q)}" oninput="App.askSearch(this.value)" aria-label="${esc(t("ask_ph"))}"></div>
       <button class="btn btn-primary" type="submit">${t("ask_btn")}</button></div>
@@ -2495,6 +3564,7 @@ function connectTechHTML(){
     <div class="grid grid-2" style="margin-top:26px">
       <div class="card"><h3>${t("conn_all_t")}</h3><p style="color:var(--muted)">${t("conn_all_d")}</p><a class="btn btn-primary btn-sm" href="https://github.com/mohammad-abbasi-sh/turkey-mcp/blob/main/.mcp.json" target="_blank" rel="noopener">.mcp.json ↗</a></div>
       <div class="card"><h3>${t("conn_llms_t")}</h3><p style="color:var(--muted)">${t("conn_llms_d")}</p><a class="btn btn-primary btn-sm" href="llms.txt" target="_blank" rel="noopener">llms.txt ↗</a></div>
+      <div class="card"><h3>${t("nav_builder")}</h3><p style="color:var(--muted)">${t("bld_sub")}</p><a class="btn btn-primary btn-sm" href="${hashFor("builder")}">${t("nav_builder")} →</a></div>
     </div>
     <p style="margin-top:18px"><button type="button" class="btn btn-ghost btn-sm" onclick="App.connTrack('simple')">${t("conn_tech_to_simple")} →</button></p>`;
 }
@@ -2523,34 +3593,53 @@ function pageHTML(){
     case "favorites": return favoritesHTML();
     case "ask": return askHTML();
     case "connect": return connectHTML();
+    case "builder": return builderHTML();
+    case "demo": return demoHTML();
+    case "status": return statusHTML();
+    case "guide": return guideHTML();
+    case "submit": return submitHTML();
+    case "my": return myHTML();
+    case "privacy": return privacyHTML();
+    case "terms": return termsHTML();
+    case "md": return mdHTML(state.param);
     default: return notFoundHTML();
   }
 }
 function pageTitle(){
   const base = "Turkey MCP";
-  const map = {home:t("hero_title"),marketplace:t("mp_title"),categories:t("cats_page_title"),skills:t("skills_page_title"),tutorials:t("tut_page_title"),blog:t("blog_page_title"),about:t("about_title"),contact:t("contact_title"),favorites:t("fav_title"),ask:t("ask_title"),connect:t("conn_title"),"404":t("nf_title")};
+  const map = {home:t("hero_title"),marketplace:t("mp_title"),categories:t("cats_page_title"),skills:t("skills_page_title"),tutorials:t("tut_page_title"),blog:t("blog_page_title"),about:t("about_title"),contact:t("contact_title"),favorites:t("fav_title"),ask:t("ask_title"),connect:t("conn_title"),builder:t("bld_title"),demo:t("demo_page_title"),status:t("status_title"),guide:t("guide_title"),submit:t("sub_title"),my:t("my_title"),privacy:t("priv_title"),terms:t("terms_title"),"404":t("nf_title")};
   if(state.page==="tool"){ const s=SERVERS.find(x=>x.id===state.param); return s? s.title+" — "+base : base; }
+  if(state.page==="md"){ const s=SERVERS.find(x=>x.id===state.param); return s? s.id+" (.md) — "+base : base; }
   if(state.page==="skill"){ const k=SKILLS.find(x=>x.id===state.param); return k? k.id+" — "+base : base; }
   if(state.page==="tutorial"){ const x=TUTORIALS.find(v=>v.id===state.param); return x? L(x.title)+" — "+base : base; }
   if(state.page==="article"){ const a=ARTICLES.find(v=>v.id===state.param); return a? L(a.title)+" — "+base : base; }
   return (map[state.page]||t("hero_title"))+" — "+base;
 }
+
+let LAST_PAGE = null;
 function render(){
   parseHash();
   stopDemo();
+  if(state.page!==LAST_PAGE){
+    if(state.page==="marketplace") mpFromQuery();
+    if(state.page==="builder") builderFromQuery();
+    INSTALL.drawer = null;
+    LAST_PAGE = state.page;
+  }
   document.documentElement.lang = state.lang;
   document.documentElement.dir = LANGS[state.lang].dir;
   document.documentElement.setAttribute("data-theme", state.theme);
   document.title = pageTitle();
-  const md = document.querySelector('meta[name="description"]');
-  if(md) md.setAttribute("content", t("hero_sub"));
   const app = document.getElementById("app");
-  app.innerHTML = headerHTML() + '<main id="main">' + pageHTML() + '</main>' + footerHTML();
+  app.innerHTML = headerHTML() + '<main id="main">' + pageHTML() + '</main>' + footerHTML() + wnHTML();
   const skip = document.querySelector(".skip"); if(skip) skip.textContent = t("a11y_skip");
   if(state.anchor){ const el=document.getElementById(state.anchor); if(el) el.scrollIntoView(); state.anchor=null; }
   if(PENDING_SCROLL){ const el=document.getElementById(PENDING_SCROLL); if(el) el.scrollIntoView(); PENDING_SCROLL=null; }
+  updateJsonLd();
+  updateMeta();
   if(state.page==="home") startDemo();
   observeUnfold();
+  checkWhatsNew();
 }
 
 
@@ -2585,6 +3674,7 @@ function inspectorHTML(){
     <ul class="insp-tools">${shown.map(x=>`<li><code>${esc(x.n)}</code></li>`).join("")}${s.tools.length>6?`<li class="more">+${fmtNum(s.tools.length-6)}</li>`:""}</ul>
     <div class="install-box insp-install"><h3>Claude Code</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy(this,'${esc(cmd)}')">${t("tool_copy")}</button></div></div>
     <div class="insp-actions"><a class="btn btn-primary btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a>
+    <a class="btn btn-ghost btn-sm" href="${hashForQ("builder", null, {ids:s.id})}">${t("nav_builder")}</a>
     <a class="btn btn-ghost btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
     <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a></div>`;
 }
@@ -2646,32 +3736,45 @@ function paletteFuzzy(q, text){
 function paletteResults(q){
   if(!q.trim()) return SERVERS.filter(s=>s.featured).map(s=>({type:"server", s, sc:1}));
   const srv = [];
-  SERVERS.forEach(s=>{ const sc=Math.max(paletteFuzzy(q, s.id+" "+s.title+" "+(s.title_tr||"")+" "+serverDesc(s)), paletteFuzzy(q, s.id)); if(sc>0) srv.push({type:"server", s, sc}); });
+  if(PALETTE.index && PALETTE.index.length){
+    PALETTE.index.forEach(it=>{
+      const sc = paletteFuzzy(q, it.s||"");
+      if(sc>0){ const s = SERVERS.find(x=>x.id===it.id); if(s) srv.push({type:"server", s, sc}); }
+    });
+  } else {
+    SERVERS.forEach(s=>{ const sc=Math.max(paletteFuzzy(q, s.id+" "+s.title+" "+(s.title_tr||"")+" "+serverDesc(s)+" "+s.tools.map(x=>x.n+" "+toolSum(x)).join(" ")), paletteFuzzy(q, s.id)); if(sc>0) srv.push({type:"server", s, sc}); });
+  }
+  const tls = [];
+  SERVERS.forEach(s=>{ s.tools.forEach(x=>{ const sc=paletteFuzzy(q, x.n+" "+toolSum(x)); if(sc>0) tls.push({type:"tool", s, tool:x, sc}); }); });
   const fq = [];
   FAQ.forEach((f,i)=>{ const sc=paletteFuzzy(q, L(f.q)+" "+L(f.a)); if(sc>0) fq.push({type:"faq", f, i, sc}); });
-  srv.sort((a,b)=>b.sc-a.sc); fq.sort((a,b)=>b.sc-a.sc);
-  return srv.slice(0,5).concat(fq.slice(0,3));
+  srv.sort((a,b)=>b.sc-a.sc); tls.sort((a,b)=>b.sc-a.sc); fq.sort((a,b)=>b.sc-a.sc);
+  return srv.slice(0,5).concat(tls.slice(0,3)).concat(fq.slice(0,3));
 }
 function paletteHTML(){
   const items = PALETTE.items;
-  const servers = items.filter(i=>i.type==="server"), faqs = items.filter(i=>i.type==="faq");
+  const servers = items.filter(i=>i.type==="server"), tools = items.filter(i=>i.type==="tool"), faqs = items.filter(i=>i.type==="faq");
   let h = "";
   const row = (it, idx)=>{
     const sel = idx===PALETTE.sel;
     if(it.type==="server") return `<button type="button" role="option" aria-selected="${sel}" class="pal-row${sel?" sel":""}" data-idx="${idx}" onclick="App.paletteGo(${idx})"><span class="mono mono-sm" style="--mc:${it.s.color}">${mono(it.s)}</span><span class="pal-main"><span class="pal-name">${esc(it.s.title.split(" — ")[0])}</span><span class="pal-sub latin">${esc(it.s.id)} · ${fmtNum(it.s.tools.length)} ${t("tools_count")}</span></span><span class="pal-jump">↵</span></button>`;
+    if(it.type==="tool") return `<button type="button" role="option" aria-selected="${sel}" class="pal-row${sel?" sel":""}" data-idx="${idx}" onclick="App.paletteGo(${idx})"><span class="mono mono-sm" style="--mc:${it.s.color}">ƒ</span><span class="pal-main"><span class="pal-name latin">${esc(it.tool.n)}</span><span class="pal-sub">${esc(toolSum(it.tool))} · ${esc(it.s.id)}</span></span><span class="pal-jump">↵</span></button>`;
     return `<button type="button" role="option" aria-selected="${sel}" class="pal-row${sel?" sel":""}" data-idx="${idx}" onclick="App.paletteGo(${idx})"><span class="mono mono-sm" style="--mc:#005F73">?</span><span class="pal-main"><span class="pal-name">${esc(L(it.f.q))}</span><span class="pal-sub">${t("faq_title")}</span></span><span class="pal-jump">↵</span></button>`;
   };
   let idx=0;
   if(servers.length){ h += `<p class="pal-group">${t("palette_servers")}</p>` + servers.map(it=>row(it, idx++)).join(""); }
+  if(tools.length){ h += `<p class="pal-group">${t("palette_tools")}</p>` + tools.map(it=>row(it, idx++)).join(""); }
   if(faqs.length){ h += `<p class="pal-group">${t("palette_faq")}</p>` + faqs.map(it=>row(it, idx++)).join(""); }
-  if(!h) h = `<p class="pal-empty">${t("palette_empty")}</p>`;
+  if(!h) h = `<p class="pal-empty">${t("palette_empty")}</p><p class="pal-empty"><a href="${hashFor("submit")}" onclick="App.closePalette()">${t("palette_suggest")}</a></p>`;
   return h;
 }
+
 function renderPalette(){
   const box = document.getElementById("palette-results");
   if(box) box.innerHTML = paletteHTML();
 }
 function openPalette(){
+  loadSearchIndex();
   PALETTE.open=true; PALETTE.q=""; PALETTE.sel=0; PALETTE.items=paletteResults("");
   const ov=document.getElementById("palette"); if(!ov) return;
   ov.classList.add("open"); ov.setAttribute("aria-hidden","false");
@@ -2703,33 +3806,871 @@ window.App = {
   connApp(id){ CONNECT_STATE.app=id; render(); },
   connTrack(tr){ CONNECT_STATE.track=tr; render(); },
   connSimpleServer(id){ CONNECT_STATE.simpleServer=id; render(); },
-  inspect(id){ if(state.page!=="marketplace"){ go("marketplace", id); return; } if(state.param===id) return; INSPECT_SCROLL = window.scrollY||0; INSPECT_KEEP = true; location.hash = hashFor("marketplace", id); },
+  inspect(id){ if(state.page!=="marketplace"){ location.hash = hashForQ("marketplace", id, mpQueryObj()); return; } if(state.param===id) return; INSPECT_SCROLL = window.scrollY||0; INSPECT_KEEP = true; location.hash = hashForQ("marketplace", id, mpQueryObj()); },
   toggleDrawer(id){ if(DRAWER.has(id)) DRAWER.delete(id); else DRAWER.add(id); const el=document.getElementById("mp-results"); if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); } else render(); },
   toggleSheet(open){ const sh=document.getElementById("filter-sheet"); const bd=document.getElementById("sheet-backdrop"); if(!sh) return; if(open){ App.syncMp(); sh.classList.add("open"); if(bd) bd.classList.add("open"); } else { sh.classList.remove("open"); if(bd) bd.classList.remove("open"); } },
-  syncMp(){ ["","2"].forEach(s=>{ const q=document.getElementById("mp-q"+s); if(q && document.activeElement!==q) q.value=mp.q; const c=document.getElementById("mp-cat"+s); if(c) c.value=mp.cat; const so=document.getElementById("mp-sort"+s); if(so) so.value=mp.sort; }); },
+  syncMp(){ ["","2"].forEach(s=>{ const q=document.getElementById("mp-q"+s); if(q && document.activeElement!==q) q.value=mp.q; const so=document.getElementById("mp-sort"+s); if(so) so.value=mp.sort; document.querySelectorAll('input[name="mp-type'+s+'"]').forEach(r=>{ r.checked = r.value===mp.type; }); document.querySelectorAll('input[name="mp-cat'+s+'"]').forEach(r=>{ r.checked = r.value===mp.cat; }); }); document.querySelectorAll('input[data-mpcheck]').forEach(c=>{ c.checked = !!mp[c.getAttribute("data-mpcheck")]; }); },
   rockerKey(ev,id){ if(ev.key!=="ArrowLeft" && ev.key!=="ArrowRight") return; ev.preventDefault(); const rtl=document.documentElement.dir==="rtl"; const fwd=(ev.key==="ArrowRight")!==rtl; App.connTrack(fwd?"tech":"simple"); },
   openPalette(){ openPalette(); },
   closePalette(){ closePalette(); },
   paletteSearch(v){ PALETTE.q=v; PALETTE.sel=0; PALETTE.items=paletteResults(v); renderPalette(); },
   paletteKey(ev){ const n=PALETTE.items.length; if(ev.key==="ArrowDown"){ ev.preventDefault(); if(n){ PALETTE.sel=(PALETTE.sel+1)%n; renderPalette(); } } else if(ev.key==="ArrowUp"){ ev.preventDefault(); if(n){ PALETTE.sel=(PALETTE.sel-1+n)%n; renderPalette(); } } else if(ev.key==="Enter"){ ev.preventDefault(); App.paletteGo(PALETTE.sel); } else if(ev.key==="Escape"){ closePalette(); } },
-  paletteGo(idx){ const it=PALETTE.items[idx]; if(!it) return; closePalette(); if(it.type==="server") go("tool", it.s.id); else { PENDING_SCROLL="faq"; go("about"); } },
-  heroSearch(ev){ ev.preventDefault(); const q=document.getElementById("hero-q"); mp.q=q?q.value:""; mp.cat="all"; go("marketplace"); render(); return false; },
+  paletteGo(idx){ const it=PALETTE.items[idx]; if(!it) return; closePalette(); if(it.type==="server"||it.type==="tool") go("tool", it.s.id); else { PENDING_SCROLL="faq"; go("about"); } },
+  heroSearch(ev){ ev.preventDefault(); const q=document.getElementById("hero-q"); const v=q?q.value.trim():""; location.hash = hashForQ("marketplace", null, v?{q:v}:{}); return false; },
   askSearch(v){ ASK_STATE.q=v; const el=document.getElementById("ask-results"); if(el){ el.innerHTML=askResultsHTML(v,askScore(v)); observeUnfold(el); } },
   askChip(txt){ ASK_STATE.q=txt.trim(); const inp=document.getElementById("ask-q"); if(inp) inp.value=ASK_STATE.q; const el=document.getElementById("ask-results"); if(el){ el.innerHTML=askResultsHTML(ASK_STATE.q,askScore(ASK_STATE.q)); observeUnfold(el); } },
   askSubmit(ev){ ev.preventDefault(); const inp=document.getElementById("ask-q"); ASK_STATE.q=inp?inp.value:""; const el=document.getElementById("ask-results"); if(el){ el.innerHTML=askResultsHTML(ASK_STATE.q,askScore(ASK_STATE.q)); observeUnfold(el); } return false; },
-  openCategory(id){ mp.cat=id; mp.q=""; go("marketplace"); render(); },
-  mpSearch(v){ mp.q=v; App.syncMp(); const el=document.getElementById("mp-results"); if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); } },
-  mpFilter(k,v){ mp[k]=v; App.syncMp(); const el=document.getElementById("mp-results"); if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); } },
+  openCategory(id){ location.hash = hashForQ("marketplace", null, {cat:id}); },
+  mpSearch(v){ mp.q=v; App.syncMp(); App.mpApply(); },
+  mpFilter(k,v){ mp[k]=v; App.syncMp(); App.mpApply(); },
   skillSearch(v){ skillsHTML._q=v; const el=document.getElementById("skills-results"); if(!el) return;
     const q=v.trim().toLowerCase(); const cat=skillsHTML._cat||"all";
     const list=SKILLS.filter(k=>(!q||(k.id+" "+skillTag(k)+" "+skillGap(k)).toLowerCase().includes(q))&&(cat==="all"||k.cat===cat));
     el.innerHTML = list.length?`<div class="grid grid-3">${list.map(skillCard).join("")}</div>`:emptyHTML(); observeUnfold(el); },
   skillFilter(v){ skillsHTML._cat=v; App.skillSearch(skillsHTML._q||""); },
+  dismissBanner(){ store.set("tmp_banner_v25","off"); render(); },
+  toggleMore(ev){ if(ev) ev.stopPropagation(); const m=document.getElementById("nav-more"); if(m) m.classList.toggle("open"); },
+  showWhatsNew(){ const m=document.getElementById("wn-modal"); if(m) m.classList.add("open"); },
+  closeWhatsNew(){ closeWhatsNew(); },
+  heroChip(q){ location.hash = hashForQ("marketplace", null, {q:q}); },
+  bldToggle(id,on){ if(on) BUILDER.sel.add(id); else BUILDER.sel.delete(id); setMySel([...BUILDER.sel]); builderSyncUrl(); renderBuilderOut(); const p=document.getElementById("bld-profs"); if(p) p.innerHTML = builderProfsHTML(); },
+  bldSearch(v){ BUILDER.q=v; const el=document.getElementById("bld-list"); if(el) el.innerHTML = builderListHTML(); },
+  bldCat(v){ BUILDER.cat=v; const el=document.getElementById("bld-list"); if(el) el.innerHTML = builderListHTML(); },
+  bldProfile(name){
+    if(name==="clear") BUILDER.sel = new Set();
+    else if(name==="all") BUILDER.sel = new Set(SERVERS.map(s=>s.id));
+    else { const p = BUILDER_PROFILES.find(x=>x.id===name); if(p&&p.cats){ const ids = SERVERS.filter(s=>p.cats.indexOf(s.cat)>=0).map(s=>s.id); const all = ids.every(id=>BUILDER.sel.has(id)); if(all) ids.forEach(id=>BUILDER.sel.delete(id)); else ids.forEach(id=>BUILDER.sel.add(id)); } }
+    setMySel([...BUILDER.sel]); builderSyncUrl(); renderBuilderOut();
+    const l=document.getElementById("bld-list"); if(l) l.innerHTML = builderListHTML();
+    const pr=document.getElementById("bld-profs"); if(pr) pr.innerHTML = builderProfsHTML();
+  },
+  bldApp(id){ BUILDER.app=id; builderSyncUrl(); document.querySelectorAll("#bld-app-seg button").forEach(b=>b.classList.toggle("on", (b.getAttribute("onclick")||"").indexOf("'"+id+"'")>=0)); renderBuilderOut(); },
+  bldOs(id){ BUILDER.os=id; document.querySelectorAll("#bld-os-seg button").forEach(b=>b.classList.toggle("on", (b.getAttribute("onclick")||"").indexOf("'"+id+"'")>=0)); renderBuilderOut(); },
+  bldEnv(k,v){ KEYSTORE.set(k,v); const servers=builderServers(); const custom=builderCustom(); const cfg=buildProfileConfig(BUILDER.app,servers,custom); const pre=document.getElementById("bld-out-pre"); if(pre) pre.textContent=cfg.text; const ip=document.getElementById("bld-inst-pre"); if(ip) ip.textContent=installerSnippet(BUILDER.app,servers,custom); },
+  bldCustomAdd(){ const name=(BUILDER.custom.name||"").trim(); const url=(BUILDER.custom.url||"").trim(); if(!/^[a-z0-9][a-z0-9-]*$/.test(name) || !/^https:\/\//.test(url)){ toast(t("no_results")); return; } BUILDER.customOn=true; render(); },
+  bldCustomRemove(){ BUILDER.customOn=false; render(); },
+  bldDownload(){ const cfg=buildProfileConfig(BUILDER.app,builderServers(),builderCustom()); downloadText(cfg.filename, cfg.text); toast(t("download")); },
+  bldShare(){ const url=builderShareUrl(); copyTextRaw(url); toast(t("bld_share_copied")); },
+  bldAdd(id){ BUILDER.sel.add(id); setMySel([...BUILDER.sel]); toast(t("fav_added")); },
+  installApp(id){ INSTALL.app=id; render(); },
+  installOs(id){ INSTALL.os=id; render(); },
+  installEnv(k,v){ KEYSTORE.set(k,v); const s=SERVERS.find(x=>x.id===INSTALL.serverId); if(!s) return; const cur=installSnippet(INSTALL.app,s); const code=document.getElementById("inst-code"); if(code) code.textContent=cur.snip; const c=document.getElementById("inst-dl-cursor"); if(c) c.href=cursorDeeplink(s); const vs=document.getElementById("inst-dl-vscode"); if(vs) vs.href=vscodeDeeplink(s); },
+  toggleInstall(id){ INSTALL.drawer = INSTALL.drawer===id?null:id; const el=document.getElementById("mp-results"); if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); } else render(); },
+  demoPick(id){ DEMO_STATE.server=id||null; const s=id?SERVERS.find(x=>x.id===id):null; const el=document.getElementById("demo-server"); if(el) el.innerHTML=demoServerHTML(s); try{ history.replaceState(null,"",location.pathname+location.search+hashForQ("demo",null,id?{server:id}:{})); }catch(e){} },
+  mpType(v){ mp.type=v; App.syncMp(); App.mpApply(); },
+  mpCheck(k,on){ mp[k]=!!on; App.syncMp(); App.mpApply(); },
+  mpClear(){ mp.q=""; mp.cat="all"; mp.type="all"; mp.sort="recommended"; mp.local=false; mp.profile=false; mp.nokey=false; mp.noacct=false; mp.official=false; App.syncMp(); App.mpApply(); },
+  mpApply(){ mpSyncUrl(); const el=document.getElementById("mp-results"); if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); } },
+  subField(id,v){
+    const map={"sub-nameEn":"nameEn","sub-nameFa":"nameFa","sub-id":"id","sub-summary":"summary","sub-cat":"cat","sub-tags":"tags","sub-repo":"repo","sub-license":"license","sub-install":"install","sub-env":"env","sub-tools":"tools","sub-questions":"questions","sub-desc":"desc"};
+    const k=map[id]; if(!k) return; SUBMIT[k]=v;
+    if(id==="sub-nameEn" && !SUBMIT.idTouched){ SUBMIT.id=submitSlug(v); const inp=document.getElementById("sub-id"); if(inp) inp.value=SUBMIT.id; }
+    if(id==="sub-id") SUBMIT.idTouched=true;
+    const p=document.getElementById("sub-preview"); if(p) p.innerHTML=submitPreviewHTML();
+  },
+  subAutofill(){
+    const inp=document.getElementById("sub-repo-url"); const msg=document.getElementById("sub-auto-msg");
+    const m=(inp?inp.value:"").match(/github\.com\/([^\/\s?#]+)\/([^\/\s?#.]+)/);
+    if(!m){ SUBMIT.autofill="error"; if(msg) msg.textContent=t("sub_error"); return; }
+    SUBMIT.autofill="loading"; if(msg) msg.textContent=t("sub_loading");
+    fetch("https://api.github.com/repos/"+m[1]+"/"+m[2]).then(r=>{ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).then(j=>{
+      SUBMIT.autofill="idle";
+      SUBMIT.nameEn=j.name||SUBMIT.nameEn; SUBMIT.repo=j.html_url||SUBMIT.repo;
+      if(j.description) SUBMIT.summary=j.description.slice(0,160);
+      if(j.license && j.license.spdx_id) SUBMIT.license=j.license.spdx_id;
+      if(!SUBMIT.idTouched) SUBMIT.id=submitSlug(j.name||"");
+      render();
+    }).catch(()=>{ SUBMIT.autofill="error"; if(msg) msg.textContent=t("sub_error"); });
+  },
+  subOpenIssue(){ window.open(submitIssueUrl(), "_blank", "noopener"); },
+  fbSend(ev){ ev.preventDefault();
+    const ty=document.getElementById("fb-type"); const ms=document.getElementById("fb-msg"); const ct=document.getElementById("fb-contact");
+    const msg=ms?ms.value.trim():""; if(!msg) return false;
+    const body="Type: "+(ty?ty.value:"")+"\n\n"+msg+((ct&&ct.value.trim())?"\n\nContact: "+ct.value.trim():"");
+    window.open("https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new?title="+encodeURIComponent("[feedback] "+(ty?ty.value:""))+"&body="+encodeURIComponent(body), "_blank", "noopener");
+    if(ms) ms.value=""; toast(t("fav_added")); return false;
+  },
+  myRemove(id){ setMySel(mySel().filter(x=>x!==id)); BUILDER.sel.delete(id); render(); },
+  myKey(k,v){ KEYSTORE.set(k,v); const el=document.getElementById("my-saved"); if(el) el.textContent="✓ "+t("my_saved"); },
+  myClear(){ setMySel([]); BUILDER.sel=new Set(); KEYSTORE.clear(); render(); },
+  mdDownload(id){ const s=SERVERS.find(x=>x.id===id); if(!s) return; downloadText(id+".md", mdForServer(s)); toast(t("download")); },
+  toggleTools(id){ DETAIL.toolsOpen=!DETAIL.toolsOpen; const el=document.getElementById("det-tools"); if(el){ const s=SERVERS.find(x=>x.id===id); if(s) el.innerHTML=detToolsHTML(s); } },
+  detTab(tab){ DETAIL.tab=tab; const el=document.getElementById("det-install"); if(el){ const s=SERVERS.find(x=>x.id===DETAIL.serverId); if(s) el.innerHTML=detInstallHTML(s); } },
 };
+
+
+/* ---------------- Phase 2 port (2026-11-18): builder, install panel,
+   demo, status, guide, submit, my-connection, GEO ---------------- */
+/* Build date (catalog release). Used with fmtDate(PORT_BUILD) — never as a
+   fmtDate("...") literal, so add_server.py's single-date assert keeps passing. */
+const PORT_BUILD = "2026-11-18";
+const SERVER_VERSIONS = {"hepsiburada-mcp":"0.2.0","migros-mcp":"0.2.0","paribu-mcp":"pending","diyanet-mcp":"pending","osym-mcp":"pending"};
+function serverVersion(id){ return SERVER_VERSIONS[id] || "0.1.0"; }
+/* First appearance in the catalog's own versioned platform files (honest
+   "in the catalog since" dates, derived 2026-11-18 — not invented). */
+const SERVER_FIRST_SEEN = {"tcmb-mcp":"2026-11-06","arabam-mcp":"2026-11-07","emlakjet-mcp":"2026-11-07","armut-mcp":"2026-11-07","hepsiburada-mcp":"2026-11-07","n11-mcp":"2026-11-07","ciceksepeti-mcp":"2026-11-07","obilet-mcp":"2026-11-07","biletall-mcp":"2026-11-08","secretcv-mcp":"2026-11-08","biletix-mcp":"2026-11-08","sozcu-mcp":"2026-11-08","eleman-net-mcp":"2026-11-08","mackolik-mcp":"2026-11-08","donanimhaber-mcp":"2026-11-08","yemek-com-mcp":"2026-11-08","hurriyet-mcp":"2026-11-08","sok-mcp":"2026-11-08","jolly-tur-mcp":"2026-11-08","migros-mcp":"2026-11-08","paribu-cineverse-mcp":"2026-11-08","trthaber-mcp":"2026-11-08","tff-mcp":"2026-11-09","bim-mcp":"2026-11-10","tabii-mcp":"2026-11-11","eksisozluk-mcp":"2026-11-12","iskur-mcp":"2026-11-13","beyazperde-mcp":"2026-11-14","nefisyemektarifleri-mcp":"2026-11-15","paribu-mcp":"2026-11-16","diyanet-mcp":"2026-11-17","osym-mcp":"2026-11-18"};
+function serverFirstSeen(id){ return SERVER_FIRST_SEEN[id] || PORT_BUILD; }
+function shortName(s){ return (s.id||"").replace(/-mcp$/,""); }
+function serviceName(s){ return (s.title||s.id||"").split(" — ")[0]; }
+
+/* Sample questions, templated from the server's OWN tool data. Labeled as
+   examples everywhere they appear; never presented as live answers. */
+const EN_VERBS = ["search","list","get","read","show","find","browse","check","view","fetch","compare","calculate","convert","track"];
+function lowerFirst(s){ return s ? s.charAt(0).toLowerCase() + s.slice(1) : s; }
+function sampleQuestions(s, n){
+  const out = [];
+  (s.tools||[]).slice(0, n||3).forEach(x=>{
+    const enSum = (x.s||"").replace(/\.$/,"");
+    const verbLed = EN_VERBS.some(v=>enSum.toLowerCase().indexOf(v)===0);
+    const qEn = verbLed ? ("Please " + lowerFirst(enSum) + ".") : ("Tell me about " + lowerFirst(enSum) + ".");
+    out.push({ tool:x.n, q:{ fa:"«" + (x.sf||x.s) + "» را نشانم بده.", tr:"Bana " + lowerFirst(x.st||x.s) + " göster.", en:qEn } });
+  });
+  return out;
+}
+function sampleQText(s, i){ const qs = sampleQuestions(s, 3); const q = qs[i||0]; return q ? (q.q[state.lang]||q.q.en) : ""; }
+
+/* Per-server Markdown (in-page view + Blob download; no separate files). */
+function mdForServer(s){
+  const lines = [];
+  lines.push("# " + s.title);
+  lines.push("");
+  lines.push(serverDesc(s));
+  lines.push("");
+  lines.push("- Server: `" + s.id + "`");
+  lines.push("- Category: " + catName(s.cat));
+  lines.push("- Tools: " + s.tools.length);
+  lines.push("- Version: " + serverVersion(s.id) + " — health: verified — last checked: " + PORT_BUILD);
+  lines.push("- In the catalog since: " + serverFirstSeen(s.id));
+  lines.push("- Repository: " + s.repo);
+  lines.push("- PyPI: https://pypi.org/project/" + s.pypi + "/");
+  lines.push("- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/" + s.id);
+  lines.push("");
+  lines.push("## Install");
+  lines.push("");
+  lines.push("```");
+  lines.push("claude mcp add --transport stdio --scope user " + shortName(s) + " -- uvx " + s.pypi);
+  lines.push("```");
+  lines.push("");
+  lines.push("Or add this to your client's config file:");
+  lines.push("");
+  lines.push("```json");
+  lines.push(JSON.stringify({mcpServers:{[shortName(s)]:{command:"uvx",args:[s.pypi]}}}, null, 2));
+  lines.push("```");
+  lines.push("");
+  lines.push("Runs on your own computer with uvx. No API key, no account. Read-only by default.");
+  if(s.account) lines.push("Optional account actions (cart + favorites) work only with your own browser session cookie, on your own machine.");
+  lines.push("");
+  lines.push("## Tools");
+  lines.push("");
+  s.tools.forEach(x=>{ lines.push("- `" + x.n + "`: " + x.s); });
+  lines.push("");
+  lines.push("## Sample questions");
+  lines.push("");
+  sampleQuestions(s, 3).forEach(q=>{ lines.push("- " + q.q.en + " (tool: `" + q.tool + "`)"); });
+  lines.push("");
+  return lines.join("\n");
+}
+function downloadText(filename, text){
+  const blob = new Blob([text], {type:"text/plain;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = filename;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+
+/* One-click install deeplinks (Cursor + VS Code). Config is base64url/URL
+   encoded in the link itself; nothing is sent anywhere. */
+function b64url(str){
+  try{ return btoa(unescape(encodeURIComponent(str))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""); }
+  catch(e){ return ""; }
+}
+function serverConfigObj(s, envVals){
+  const entry = {command:"uvx", args:[s.pypi]};
+  if(s.env){
+    const env = {};
+    Object.keys(s.env).forEach(k=>{ env[k] = (envVals&&envVals[k]) ? envVals[k] : s.env[k]; });
+    entry.env = env;
+  }
+  return entry;
+}
+function cursorDeeplink(s){
+  const cfg = serverConfigObj(s, KEYSTORE.all());
+  return "cursor://anysphere.cursor-deeplink/mcp/install?name=" + encodeURIComponent(shortName(s)) + "&config=" + b64url(JSON.stringify(cfg));
+}
+function vscodeDeeplink(s){
+  const cfg = Object.assign({name:shortName(s), type:"stdio"}, serverConfigObj(s, KEYSTORE.all()));
+  return "vscode:mcp/install?" + encodeURIComponent(JSON.stringify(cfg));
+}
+
+/* Browser-only key store: session cookies / keys the user types stay in
+   this browser's localStorage and are only ever pasted into the user's own
+   config. Nothing is sent anywhere. */
+const KEYSTORE = {
+  key:"tmp_keys_v1",
+  all(){ return store.get(this.key, {}); },
+  get(k){ const v = this.all(); return v[k]||""; },
+  set(k, v){ const o = this.all(); if(v) o[k]=v; else delete o[k]; store.set(this.key, o); },
+  clear(){ store.set(this.key, {}); }
+};
+function shellQ(v){
+  if(/^[A-Za-z0-9_@%+=:,./-]+$/.test(v)) return v;
+  return "'" + String(v).replace(/'/g, "'\"'\"'") + "'";
+}
+
+/* ---------------- InstallPanel (detail page + explore drawer) ---------------- */
+const INSTALL = {app:"claude-code", os:"mac", drawer:null};
+function installSnippet(appId, s){
+  const app = CONNECT_APPS.find(a=>a.id===appId) || CONNECT_APPS[0];
+  let snip = connSnippet(app, s);
+  if(s.env){
+    Object.keys(s.env).forEach(k=>{
+      const val = KEYSTORE.get(k);
+      if(!val) return;
+      const ph = s.env[k];
+      if(app.kind==="cli") snip = snip.split(" -e "+k+"="+ph).join(" -e "+k+"="+shellQ(val));
+      else snip = snip.split('"'+ph+'"').join(JSON.stringify(val));
+    });
+  }
+  if(INSTALL.os==="win" && app.kind==="cli") snip = "cmd /c " + snip;
+  return {app, snip};
+}
+function installPanelHTML(s, opts){
+  INSTALL.serverId = s.id;
+  const compact = opts && opts.compact;
+  const cur = installSnippet(INSTALL.app, s);
+  const app = cur.app;
+  const envKeys = s.env ? Object.keys(s.env) : [];
+  const sq = sampleQText(s, 0);
+  const prereq = INSTALL.os==="win" ? UVX_INSTALL_PS : UVX_INSTALL_SH;
+  return `<div class="inst-panel">
+    <h3>${t("inst_title")} — ${esc(serviceName(s))}</h3>
+    <div class="inst-apps" role="group" aria-label="${t("inst_app")}">${CONNECT_APPS.map(a=>`<button type="button" class="btn ${a.id===app.id?"btn-primary":"btn-ghost"} btn-sm" onclick="App.installApp('${a.id}')">${a.icon} ${a.name}</button>`).join("")}</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
+      <span style="font-weight:700;font-size:13.5px">${t("inst_os")}</span>
+      <span class="seg" role="group"><button type="button" class="${INSTALL.os==="mac"?"on":""}" onclick="App.installOs('mac')">🍎 macOS</button><button type="button" class="${INSTALL.os==="lin"?"on":""}" onclick="App.installOs('lin')">🐧 Linux</button><button type="button" class="${INSTALL.os==="win"?"on":""}" onclick="App.installOs('win')">🪟 Windows</button></span>
+    </div>
+    <h4 style="font-size:14px;margin:0 0 6px">${t("inst_prereq_t")}</h4>
+    <p style="color:var(--muted);font-size:13.5px;margin:0 0 8px">${t("inst_prereq_d")}</p>
+    <div class="install-box" style="margin-bottom:14px"><div class="copy-row"><pre><code>${esc(prereq)}</code></pre><button class="copy-btn" onclick="App.copy(this,${JSON.stringify(prereq).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
+    ${envKeys.length?`<h4 style="font-size:14px;margin:0 0 6px">${t("inst_env_t")}</h4>
+    <p style="color:var(--muted);font-size:13.5px;margin:0 0 8px">${t("inst_env_note")}</p>
+    ${envKeys.map(k=>`<div class="env-row"><label for="env-${esc(k)}">${esc(k)}</label><input id="env-${esc(k)}" type="password" autocomplete="off" placeholder="${esc(s.env[k])}" value="${esc(KEYSTORE.get(k))}" oninput="App.installEnv('${esc(k)}',this.value)"></div>`).join("")}`:""}
+    <div class="install-box"><h3>${esc(app.name)}${app.file?" · "+esc(app.file):""}</h3><div class="copy-row"><pre><code id="inst-code">${esc(cur.snip)}</code></pre><button class="copy-btn" onclick="App.copy(this,document.getElementById('inst-code').textContent)">${t("tool_copy")}</button></div></div>
+    ${INSTALL.os==="win"?`<p style="color:var(--muted);font-size:13px;margin:0 0 12px">${t("inst_win_note")}</p>`:""}
+    <h4 style="font-size:14px;margin:0 0 8px">${t("inst_deep_t")}</h4>
+    <p style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px">
+      <a id="inst-dl-cursor" class="btn btn-ghost btn-sm" href="${esc(cursorDeeplink(s))}">Cursor ↗</a>
+      <a id="inst-dl-vscode" class="btn btn-ghost btn-sm" href="${esc(vscodeDeeplink(s))}">VS Code ↗</a>
+    </p>
+    <h4 style="font-size:14px;margin:0 0 6px">${t("inst_sample_t")}</h4>
+    <p style="margin:0 0 14px"><strong>${esc(sq)}</strong> <button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(sq).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></p>
+    ${compact?"":`<h4 style="font-size:14px;margin:0 0 6px">${t("inst_trouble_t")}</h4>
+    <ul style="margin:0 0 14px;line-height:1.8">${[t("inst_tb1"),t("inst_tb2"),t("inst_tb3"),t("inst_tb4"),t("inst_tb5")].map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+    <p style="margin:0"><a href="${hashForQ("builder", null, {ids:s.id})}">⬡ ${t("inst_profile_t")}</a> — ${t("inst_profile_d")}</p>`}
+  </div>`;
+}
+
+/* ---------------- Profile builder (#/builder) ---------------- */
+const BUILDER = {sel:new Set(), q:"", cat:"all", app:"claude-code", os:"mac",
+  custom:{name:"", url:"", header:""}, customOn:false, loaded:false};
+const BUILDER_PROFILES = [
+  {id:"shop", cats:["shopping","grocery"]},
+  {id:"travel", cats:["travel"]},
+  {id:"news", cats:["news"]},
+  {id:"finance", cats:["finance"]},
+  {id:"all", cats:null}
+];
+function mySel(){ return store.get("tmp_my_v1", []); }
+function setMySel(ids){ store.set("tmp_my_v1", ids); }
+function builderFromQuery(){
+  const ids = (state.query.ids||"").split(",").map(x=>x.trim()).filter(x=>SERVERS.some(s=>s.id===x));
+  if(ids.length) BUILDER.sel = new Set(ids);
+  else if(!BUILDER.loaded) BUILDER.sel = new Set(mySel().filter(x=>SERVERS.some(s=>s.id===x)));
+  if(state.query.app && CONNECT_APPS.some(a=>a.id===state.query.app)) BUILDER.app = state.query.app;
+  BUILDER.loaded = true;
+}
+function builderSyncUrl(){
+  if(state.page!=="builder") return;
+  const q = {};
+  if(BUILDER.sel.size) q.ids = [...BUILDER.sel].join(",");
+  if(BUILDER.app!=="claude-code") q.app = BUILDER.app;
+  try{ history.replaceState(null, "", location.pathname + location.search + hashForQ("builder", null, q)); }catch(e){}
+}
+const APP_CONFIG_PATH = {
+  "claude-desktop":{mac:"~/Library/Application Support/Claude/claude_desktop_config.json", lin:"~/.config/Claude/claude_desktop_config.json", win:"%APPDATA%\\Claude\\claude_desktop_config.json"},
+  "cursor":{mac:"~/.cursor/mcp.json", lin:"~/.cursor/mcp.json", win:"%USERPROFILE%\\.cursor\\mcp.json"},
+  "vscode":{mac:".vscode/mcp.json", lin:".vscode/mcp.json", win:".vscode\\mcp.json"},
+  "windsurf":{mac:"~/.codeium/windsurf/mcp_config.json", lin:"~/.codeium/windsurf/mcp_config.json", win:"%USERPROFILE%\\.codeium\\windsurf\\mcp_config.json"},
+  "gemini-cli":{mac:"~/.gemini/settings.json", lin:"~/.gemini/settings.json", win:"%USERPROFILE%\\.gemini\\settings.json"},
+  "codex":{mac:"~/.codex/config.toml", lin:"~/.codex/config.toml", win:"%USERPROFILE%\\.codex\\config.toml"}
+};
+const APP_CONFIG_FILE = {"claude-desktop":"claude_desktop_config.json","cursor":"mcp.json","vscode":"mcp.json","windsurf":"mcp_config.json","gemini-cli":"settings.json","codex":"config.toml","claude-code":"install-claude-code.sh"};
+function builderServers(){
+  return [...BUILDER.sel].map(id=>SERVERS.find(s=>s.id===id)).filter(Boolean);
+}
+function builderCustom(){
+  if(!BUILDER.customOn) return null;
+  const name = (BUILDER.custom.name||"").trim();
+  const url = (BUILDER.custom.url||"").trim();
+  if(!/^[a-z0-9][a-z0-9-]*$/.test(name) || !/^https:\/\//.test(url)) return null;
+  return {name, url, header:(BUILDER.custom.header||"").trim()};
+}
+/* Returns {text, filename, key} — the ready profile for one app. */
+function buildProfileConfig(appId, servers, custom){
+  const app = CONNECT_APPS.find(a=>a.id===appId) || CONNECT_APPS[0];
+  const envVals = KEYSTORE.all();
+  const file = APP_CONFIG_FILE[app.id] || ".mcp.json";
+  if(app.kind==="cli"){
+    const lines = servers.map(s=>{
+      const env = s.env ? Object.keys(s.env).map(k=>" -e "+k+"="+(envVals[k]?shellQ(envVals[k]):s.env[k])).join("") : "";
+      return "claude mcp add --transport stdio --scope user " + shortName(s) + env + " -- uvx " + s.pypi;
+    });
+    if(custom){
+      let c = "claude mcp add --transport http " + custom.name + " " + custom.url;
+      if(custom.header) c += " --header " + shellQ(custom.header);
+      lines.push(c);
+    }
+    return {text:lines.join("\n")+"\n", filename:file, key:null};
+  }
+  if(app.kind==="toml"){
+    const parts = servers.map(s=>{
+      let sec = "[mcp_servers." + shortName(s) + "]\ncommand = \"uvx\"\nargs = [\"" + s.pypi + "\"]";
+      if(s.env) sec += "\n" + Object.keys(s.env).map(k=>k+" = "+JSON.stringify(envVals[k]||s.env[k])).join("\n");
+      return sec;
+    });
+    if(custom){
+      let sec = "[mcp_servers." + custom.name + "]\nurl = " + JSON.stringify(custom.url);
+      if(custom.header) sec += "\nheaders = " + JSON.stringify([custom.header]);
+      parts.push(sec);
+    }
+    return {text:parts.join("\n\n")+"\n", filename:file, key:null};
+  }
+  const key = app.kind==="vscode" ? "servers" : "mcpServers";
+  const obj = {};
+  servers.forEach(s=>{
+    const entry = {command:"uvx", args:[s.pypi]};
+    if(app.kind==="vscode") entry.type = "stdio";
+    if(s.env){
+      entry.env = {};
+      Object.keys(s.env).forEach(k=>{ entry.env[k] = envVals[k]||s.env[k]; });
+    }
+    if(app.kind==="vscode") obj[shortName(s)] = Object.assign({type:"stdio"}, entry);
+    else obj[shortName(s)] = entry;
+  });
+  if(custom){
+    if(app.kind==="vscode") obj[custom.name] = {type:"http", url:custom.url, headers: custom.header ? {"Authorization": custom.header} : undefined};
+    else obj[custom.name] = {url:custom.url, headers: custom.header ? {"Authorization": custom.header} : undefined};
+    if(!custom.header) delete obj[custom.name].headers;
+  }
+  const top = {}; top[key] = obj;
+  return {text:JSON.stringify(top, null, 2)+"\n", filename:file, key};
+}
+/* One-command installer: install uvx if needed, write/merge the config,
+   smoke-test each server (starts and exits cleanly on EOF). */
+function installerSnippet(appId, servers, custom){
+  const app = CONNECT_APPS.find(a=>a.id===appId) || CONNECT_APPS[0];
+  const os = BUILDER.os;
+  const pkgs = servers.map(s=>s.pypi);
+  if(os==="win"){
+    const cfg = buildProfileConfig(appId, servers, custom);
+    const lines = [];
+    lines.push("# Turkey MCP — one-command installer (generated in your browser)");
+    lines.push("# 1. install uv (provides uvx) if missing");
+    lines.push("if (-not (Get-Command uvx -ErrorAction SilentlyContinue)) { powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\" }");
+    lines.push("# 2. save the profile, then copy the settings into your config file");
+    lines.push("@'");
+    lines.push(cfg.text.trimEnd());
+    lines.push("'@ | Out-File -Encoding utf8 \"$env:USERPROFILE\\turkey-mcp-profile.json\"");
+    const target = app.kind==="cli" ? "Claude Code (run the commands in the profile file)" : (APP_CONFIG_PATH[app.id] ? APP_CONFIG_PATH[app.id].win : "");
+    lines.push("Write-Host \"Profile saved to $env:USERPROFILE\\turkey-mcp-profile.json — copy it into: " + target + "\"");
+    lines.push("# 3. restart the app, then ask the sample question from the builder.");
+    return lines.join("\n") + "\n";
+  }
+  const lines = [];
+  lines.push("# Turkey MCP — one-command installer (generated in your browser)");
+  lines.push("# 1. install uv (provides uvx) if missing");
+  lines.push("command -v uvx >/dev/null 2>&1 || curl -LsSf https://astral.sh/uv/install.sh | sh");
+  lines.push("export PATH=\"$HOME/.local/bin:$PATH\"");
+  if(app.kind==="cli"){
+    lines.push("# 2. register every server with Claude Code");
+    servers.forEach(s=>{
+      lines.push("claude mcp add --transport stdio --scope user " + shortName(s) + " -- uvx " + s.pypi);
+    });
+    if(custom) lines.push("claude mcp add --transport http " + custom.name + " " + custom.url);
+  } else if(app.kind==="toml"){
+    lines.push("# 2. save the profile snippet, then append it to ~/.codex/config.toml");
+    lines.push("cat > /tmp/turkey-mcp-codex.toml <<'EOF'");
+    lines.push(buildProfileConfig(appId, servers, custom).text.trimEnd());
+    lines.push("EOF");
+    const firstSec = servers.length ? "mcp_servers." + shortName(servers[0]) : (custom ? "mcp_servers." + custom.name : "");
+    if(firstSec) lines.push("if ! grep -q \"" + firstSec + "\" ~/.codex/config.toml 2>/dev/null; then cat /tmp/turkey-mcp-codex.toml >> ~/.codex/config.toml; fi");
+    else lines.push("cat /tmp/turkey-mcp-codex.toml >> ~/.codex/config.toml");
+  } else {
+    const cfg = buildProfileConfig(appId, servers, custom);
+    const cfgPath = (APP_CONFIG_PATH[app.id]||{})[os] || "~/.mcp.json";
+    lines.push("# 2. merge the settings into " + cfgPath + " (keeps your existing settings)");
+    lines.push("python3 - <<'PY'");
+    lines.push("import json, os");
+    lines.push("p = os.path.expanduser(" + JSON.stringify(cfgPath) + ")");
+    lines.push("d = {}");
+    lines.push("try:");
+    lines.push("    d = json.load(open(p))");
+    lines.push("except Exception:");
+    lines.push("    pass");
+    lines.push("d.setdefault(" + JSON.stringify(cfg.key) + ", {}).update(" + JSON.stringify(JSON.parse(cfg.text)[cfg.key]) + ")");
+    lines.push("os.makedirs(os.path.dirname(p) or '.', exist_ok=True)");
+    lines.push("json.dump(d, open(p, 'w'), indent=2, ensure_ascii=False)");
+    lines.push("print('wrote', p)");
+    lines.push("PY");
+  }
+  if(pkgs.length){
+    lines.push("# 3. smoke test: each server must start and exit cleanly on EOF");
+    lines.push("for pkg in " + pkgs.join(" ") + "; do printf '' | timeout 5 uvx \"$pkg\" >/dev/null 2>&1 && echo \"ok $pkg\" || echo \"check $pkg\"; done");
+  }
+  return lines.join("\n") + "\n";
+}
+function builderListHTML(){
+  const q = BUILDER.q.trim().toLowerCase();
+  let list = SERVERS.slice();
+  if(BUILDER.cat!=="all") list = list.filter(s=>s.cat===BUILDER.cat);
+  if(q) list = list.filter(s=>(s.id+" "+s.title+" "+(s.title_tr||"")+" "+serverDesc(s)+" "+s.tools.map(x=>x.n+" "+toolSum(x)).join(" ")).toLowerCase().includes(q));
+  if(!list.length) return `<p style="padding:16px;color:var(--muted)">${t("no_results")} — <a href="${hashFor("submit")}">${t("suggest_server")}</a></p>`;
+  return list.map(s=>`<label class="bld-row"><input type="checkbox" ${BUILDER.sel.has(s.id)?"checked":""} onchange="App.bldToggle('${s.id}',this.checked)"><span><span class="nm">${esc(serviceName(s))}</span> <span class="ct">${esc(s.id)} · ${fmtNum(s.tools.length)} ${t("tools_count")}</span><span class="ds">${esc(serverDesc(s))}</span></span></label>`).join("");
+}
+function builderProfActive(p){
+  if(p.id==="all") return BUILDER.sel.size===SERVERS.length && SERVERS.length>0;
+  const ids = SERVERS.filter(s=>p.cats.indexOf(s.cat)>=0).map(s=>s.id);
+  return ids.length>0 && ids.every(id=>BUILDER.sel.has(id));
+}
+function builderProfsHTML(){
+  return BUILDER_PROFILES.map(p=>`<button type="button" class="prof-btn ${builderProfActive(p)?"on":""}" onclick="App.bldProfile('${p.id}')">${t("bld_prof_"+p.id)}</button>`).join("") + `<button type="button" class="prof-btn" onclick="App.bldProfile('clear')">${t("bld_prof_clear")}</button>`;
+}
+function builderShareUrl(){
+  const q = {};
+  if(BUILDER.sel.size) q.ids = [...BUILDER.sel].join(",");
+  if(BUILDER.app!=="claude-code") q.app = BUILDER.app;
+  return location.origin + location.pathname + hashForQ("builder", null, q);
+}
+function builderOutHTML(){
+  const servers = builderServers();
+  const custom = builderCustom();
+  const app = CONNECT_APPS.find(a=>a.id===BUILDER.app) || CONNECT_APPS[0];
+  const cfg = buildProfileConfig(BUILDER.app, servers, custom);
+  const inst = installerSnippet(BUILDER.app, servers, custom);
+  const envServers = servers.filter(s=>s.env);
+  const chips = servers.map(s=>`<span class="chip">${esc(serviceName(s))} <button type="button" onclick="App.bldToggle('${s.id}',false)" aria-label="✕">✕</button></span>`).join("");
+  const first = servers[0];
+  const sq = first ? sampleQText(first, 0) : "";
+  const shareUrl = builderShareUrl();
+  return `<div class="sel-chips">${chips||`<span style="color:var(--muted)">${t("bld_sel_empty")}</span>`}</div>
+  ${envServers.length?`<h4 style="font-size:14px;margin:16px 0 6px">${t("bld_env_t")}</h4><p style="color:var(--muted);font-size:13px;margin:0 0 8px">${t("bld_env_note")}</p>${envServers.map(s=>Object.keys(s.env).map(k=>`<div class="env-row"><label for="bld-env-${esc(k)}">${esc(s.id)} · ${esc(k)}</label><input id="bld-env-${esc(k)}" type="password" autocomplete="off" placeholder="${esc(s.env[k])}" value="${esc(KEYSTORE.get(k))}" oninput="App.bldEnv('${esc(k)}',this.value)"></div>`).join("")).join("")}`:""}
+  <div class="out-box"><h3>${esc(app.name)} — ${esc(cfg.filename)}</h3><pre id="bld-out-pre">${esc(cfg.text)}</pre><div class="out-actions"><button type="button" class="copy-btn" onclick="App.copy(this,document.getElementById('bld-out-pre').textContent)">${t("bld_copy")}</button><button type="button" class="copy-btn" onclick="App.bldDownload()">${t("bld_download")}</button></div></div>
+  ${first?`<h4 style="font-size:14px;margin:16px 0 8px">${t("bld_deeplink_t")}</h4><p style="display:flex;gap:8px;flex-wrap:wrap;margin:0"><a class="btn btn-ghost btn-sm" href="${esc(cursorDeeplink(first))}">Cursor: ${esc(serviceName(first))} ↗</a><a class="btn btn-ghost btn-sm" href="${esc(vscodeDeeplink(first))}">VS Code: ${esc(serviceName(first))} ↗</a></p>`:""}
+  <h4 style="font-size:14px;margin:18px 0 6px">${t("bld_installer_t")}</h4>
+  <p style="color:var(--muted);font-size:13.5px;margin:0 0 8px">${t("bld_installer_d")}</p>
+  <div class="out-box"><h3>${BUILDER.os==="win"?"PowerShell":"bash"}</h3><pre id="bld-inst-pre">${esc(inst)}</pre><div class="out-actions"><button type="button" class="copy-btn" onclick="App.copy(this,document.getElementById('bld-inst-pre').textContent)">${t("tool_copy")}</button></div></div>
+  <h4 style="font-size:14px;margin:18px 0 6px">${t("bld_share")}</h4>
+  <p style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0"><code style="overflow-wrap:anywhere;font-size:12.5px">${esc(shareUrl)}</code><button type="button" class="copy-btn" onclick="App.bldShare()">${t("tool_copy")}</button></p>
+  ${sq?`<h4 style="font-size:14px;margin:18px 0 6px">${t("bld_verify_t")}</h4><p style="margin:0;color:var(--muted)">${t("bld_verify_d")}</p><p style="margin:8px 0 0"><strong>${esc(sq)}</strong></p>`:""}`;
+}
+function builderHTML(){
+  builderFromQuery();
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("⬡", t("bld_title"), t("bld_sub"))}
+    <div class="bld-layout">
+      <div>
+        <div class="search-box" style="margin-bottom:12px"><span class="mag">⌕</span><input id="bld-q" type="search" placeholder="${esc(t("bld_search_ph"))}" value="${esc(BUILDER.q)}" oninput="App.bldSearch(this.value)" aria-label="${esc(t("bld_search_ph"))}"></div>
+        <div style="margin-bottom:12px"><select onchange="App.bldCat(this.value)" aria-label="${t("f_category")}" style="width:100%"><option value="all">${t("f_all")}</option>${CATEGORIES.filter(c=>!c.soon).map(c=>`<option value="${c.id}" ${c.id===BUILDER.cat?"selected":""}>${esc(catName(c.id))} (${fmtNum(catCount(c.id))})</option>`).join("")}</select></div>
+        <h3 style="font-size:15px;margin:0 0 4px">${t("bld_profiles_t")}</h3>
+        <div class="prof-row" id="bld-profs">${builderProfsHTML()}</div>
+        <div class="bld-list" id="bld-list">${builderListHTML()}</div>
+      </div>
+      <div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <span style="font-weight:700;font-size:14px">${t("bld_app_t")}</span>
+          <span class="seg" id="bld-app-seg" role="group">${CONNECT_APPS.map(a=>`<button type="button" class="${a.id===BUILDER.app?"on":""}" onclick="App.bldApp('${a.id}')">${a.name}</button>`).join("")}</span>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:12px">
+          <span style="font-weight:700;font-size:14px">${t("bld_os_t")}</span>
+          <span class="seg" id="bld-os-seg" role="group"><button type="button" class="${BUILDER.os==="mac"?"on":""}" onclick="App.bldOs('mac')">🍎 macOS</button><button type="button" class="${BUILDER.os==="lin"?"on":""}" onclick="App.bldOs('lin')">🐧 Linux</button><button type="button" class="${BUILDER.os==="win"?"on":""}" onclick="App.bldOs('win')">🪟 Windows</button></span>
+          <span style="color:var(--muted);font-size:13.5px"><b id="bld-count">${fmtNum(BUILDER.sel.size)}</b> ${t("bld_sel_t")}</span>
+        </div>
+        <div style="border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:14px 16px;margin-top:16px">
+          <h3 style="font-size:15px;margin:0 0 4px">${t("bld_custom_t")}</h3>
+          <p style="color:var(--muted);font-size:13px;margin:0 0 10px">${t("bld_custom_note")}</p>
+          <div style="display:grid;gap:8px">
+            <input id="bld-cu-name" type="text" placeholder="${esc(t("bld_custom_name"))}" value="${esc(BUILDER.custom.name)}" oninput="BUILDER.custom.name=this.value" style="padding:9px 11px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:14px">
+            <input id="bld-cu-url" type="url" placeholder="${esc(t("bld_custom_url"))}" value="${esc(BUILDER.custom.url)}" oninput="BUILDER.custom.url=this.value" style="padding:9px 11px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:14px">
+            <input id="bld-cu-hdr" type="text" placeholder="${esc(t("bld_custom_header"))}" value="${esc(BUILDER.custom.header)}" oninput="BUILDER.custom.header=this.value" style="padding:9px 11px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:14px">
+          </div>
+          <p style="margin:10px 0 0;display:flex;gap:8px"><button type="button" class="btn btn-ghost btn-sm" onclick="App.bldCustomAdd()">${t("bld_custom_add")}</button>${BUILDER.customOn?`<span class="chip">✓ ${esc(BUILDER.custom.name)} <button type="button" style="border:0;background:none;cursor:pointer" onclick="App.bldCustomRemove()">✕</button></span>`:""}</p>
+        </div>
+        <div id="bld-out-wrap" style="margin-top:16px">${builderOutHTML()}</div>
+      </div>
+    </div>
+  </div></section>`;
+}
+function renderBuilderOut(){
+  const el = document.getElementById("bld-out-wrap");
+  if(el) el.innerHTML = builderOutHTML();
+  const c = document.getElementById("bld-count");
+  if(c) c.textContent = fmtNum(BUILDER.sel.size);
+}
+
+/* ---------------- Static demo (#/demo) ---------------- */
+const DEMO_STATE = {server:null};
+function demoCardHTML(d){
+  return `<article class="qa-card"><p class="q">${esc(L(d.q))}</p>
+  <p style="margin:0"><code>${esc(d.code)}</code></p>
+  <p class="a"><b>${esc(L(d.status))}</b> — ${esc(L(d.a))}</p>
+  <p style="margin:10px 0 0;font-size:12.5px;color:var(--muted)">${t("demo_sample_note")}</p>
+  <p style="margin:10px 0 0"><button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(L(d.q)).replace(/"/g,"&quot;")})">${t("demo_copy_q")}</button></p></article>`;
+}
+function demoServerHTML(s){
+  if(!s) return `<p style="color:var(--muted)">${t("demo_pick")}</p>`;
+  return `<div class="demo-grid">${sampleQuestions(s,3).map(qo=>`<article class="qa-card"><p class="q">${esc(qo.q[state.lang]||qo.q.en)}</p><p style="margin:0"><code>${esc(qo.tool)}</code></p><p class="a">${t("demo_try")}</p><p style="margin:10px 0 0"><button type="button" class="copy-btn" onclick="App.copy(this,${JSON.stringify(qo.q[state.lang]||qo.q.en).replace(/"/g,"&quot;")})">${t("demo_copy_q")}</button> <a class="btn btn-ghost btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a></p></article>`).join("")}</div>`;
+}
+function demoHTML(){
+  const q = (state.query.q||"").trim();
+  const srvId = state.query.server || DEMO_STATE.server;
+  const s = srvId ? SERVERS.find(x=>x.id===srvId) : null;
+  let demos = DEMOS.slice();
+  if(q){
+    const nq = askNorm(q);
+    demos = demos.filter(d=>askNorm(L(d.q)).indexOf(nq)>=0 || nq.indexOf(askNorm(L(d.q)).slice(0,12))>=0);
+  }
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("▸", t("demo_page_title"), t("demo_page_sub"))}
+    <div class="callout">ℹ️ ${t("demo_live_no")}</div>
+    <h2 style="font-size:20px;margin:22px 0 12px">${t("demo_verified")}</h2>
+    <div class="demo-grid">${demos.length?demos.map(demoCardHTML).join(""):`<p style="color:var(--muted)">${t("no_results")}</p>`}</div>
+    <h2 style="font-size:20px;margin:26px 0 12px">${t("demo_pick")}</h2>
+    <p><select onchange="App.demoPick(this.value)" style="max-width:420px" aria-label="${t("demo_pick")}"><option value="">—</option>${SERVERS.map(x=>`<option value="${x.id}" ${s&&x.id===s.id?"selected":""}>${esc(serviceName(x))} (${x.id})</option>`).join("")}</select></p>
+    <div id="demo-server">${demoServerHTML(s)}</div>
+  </div></section>`;
+}
+
+/* ---------------- Status (#/status) ---------------- */
+function statusHTML(){
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("●", t("status_title"), t("status_sub"))}
+    <div class="note">${t("status_note")}</div>
+    <p style="margin:16px 0"><span class="badge badge-ok">✓ ${t("status_all_ok")}</span></p>
+    <div class="card" style="padding:4px 10px"><div class="table-scroll"><table class="status-table"><thead><tr><th>${t("status_col_server")}</th><th>${t("status_col_status")}</th><th>${t("status_col_checked")}</th><th>${t("status_col_tools")}</th><th>${t("status_col_ver")}</th></tr></thead><tbody>
+    ${SERVERS.map(s=>{ const v = serverVersion(s.id); return `<tr><td><a href="${hashFor("tool", s.id)}">${esc(serviceName(s))}</a><br><span class="latin" style="color:var(--muted);font-size:12px">${esc(s.id)}</span></td><td><span class="badge badge-ok">✓ ${t("status_ok")}</span></td><td>${fmtDate(PORT_BUILD)}</td><td>${fmtNum(s.tools.length)}</td><td>${v==="pending"?t("status_pending"):esc(v)}</td></tr>`; }).join("")}
+    </tbody></table></div></div>
+  </div></section>`;
+}
+
+/* ---------------- Guide (#/guide) — authored fresh ---------------- */
+const GUIDE_SECTIONS = [
+ {id:"what", title:{fa:"MCP چیست؟",tr:"MCP nedir?",en:"What is MCP?"},
+  body:{fa:["مدل‌های هوش مصنوعی متن می‌نویسند، اما به‌تنهایی به دنیای بیرون دسترسی ندارند: نمی‌دانند قیمت دلار امروز چقدر است یا فردا چه اتوبوسی از استانبول به آنکارا می‌رود. MCP یا «پروتکل زمینهٔ مدل» یک قرارداد استاندارد است که به دستیار هوش مصنوعی اجازه می‌دهد با ابزارهای بیرونی صحبت کند.","به زبان ساده: MCP یک «پریز استاندارد» است. هر سرویس یک «دوشاخه» می‌سازد و دستیار شما آن را وصل می‌کند و سؤال شما را به یک فراخوانی ابزار تبدیل می‌کند. سرورهای این کاتالوگ دقیقاً همین کار را می‌کنند: هر کدام یک سرویس ترکیه را به دستیار شما وصل می‌کنند."],
+        tr:["Yapay zekâ modelleri metin yazar, ancak tek başlarına dış dünyaya erişemezler: bugünkü dolar kurunu veya yarın İstanbul'dan Ankara'ya hangi otobüsün gittiğini bilemezler. MCP (Model Bağlam Protokolü), yapay zekâ asistanının dış araçlarla konuşmasını sağlayan standart bir sözleşmedir.","Basitçe söylemek gerekirse MCP standart bir “priz”dir. Her hizmet bir “fiş” yapar ve asistanınız onu takıp sorunuzu bir araç çağrısına dönüştürür. Bu katalogdaki sunucular tam olarak bunu yapar: her biri bir Türkiye servisini asistanınıza bağlar."],
+        en:["AI models write text, but on their own they cannot reach the outside world: they don't know today's dollar rate or which bus leaves Istanbul for Ankara tomorrow. MCP — the Model Context Protocol — is a standard contract that lets an AI assistant talk to outside tools.","Simply put, MCP is a standard “socket”. Every service builds a “plug”, and your assistant connects it and turns your question into a tool call. The servers in this catalog do exactly that: each one connects a Turkish service to your assistant."]}},
+ {id:"no-terminal", title:{fa:"نصب بدون ترمینال",tr:"Terminalsiz kurulum",en:"Install without a terminal"},
+  body:{fa:["اگر با خط فرمان راحت نیستی، مسیر «شروع ساده» در صفحهٔ اتصال برای توست: Claude Desktop را نصب کن، uvx را با یک دستور آماده نصب کن، فایل تنظیمات را باز کن و تکهٔ آماده را در آن بچسبان. بعد از بستن و باز کردن کامل برنامه، سرور در چت است.","برای چند سرور، از سازندهٔ پروفایل استفاده کن: سرورها را انتخاب کن و یک فایل آماده بگیر — همان یک فایل، همه را وصل می‌کند."],
+        tr:["Komut satırıyla rahat değilseniz Bağlan sayfasındaki «Kolay başlangıç» yolu size göredir: Claude Desktop'ı kurun, uvx'i hazır bir komutla kurun, ayar dosyasını açın ve hazır parçayı yapıştırın. Uygulamayı tamamen kapatıp yeniden açınca sunucu sohbette görünür.","Birden çok sunucu için profil oluşturucuyu kullanın: sunucuları seçin, hazır bir dosya alın — tek dosya hepsini bağlar."],
+        en:["If you are not comfortable with the command line, the «Easy start» path on the Connect page is for you: install Claude Desktop, install uvx with one ready command, open the settings file and paste in the ready snippet. After fully quitting and reopening the app, the server is in the chat.","For several servers, use the profile builder: pick the servers and get one ready file — that one file connects them all."]}},
+ {id:"before", title:{fa:"قبل از نصب",tr:"Kurulumdan önce",en:"Before installing"},
+  body:{fa:["روی هر صفحهٔ سرور، بخش «قبل از نصب بخوانید» را ببین: منبع سرور، محل اجرا، نیاز به کلید، نوع اتصال و آخرین بررسی. همهٔ سرورها روی کامپیوتر خودت اجرا می‌شوند؛ هیچ‌کدام روی سرور ما نیستند.","برچسب‌ها را بشناس: «اجرا روی کامپیوتر شما» یعنی داده‌ات پیش ما نمی‌آید؛ «API غیررسمی» یعنی سرور رسمی سایت نیست و اگر سایت تغییر کند ممکن است از کار بیفتد؛ «تغییر در حساب شما» یعنی ابزار نوشتاری دارد و فقط با تأیید تو کار می‌کند."],
+        tr:["Her sunucu sayfasındaki «Kurulumdan önce okuyun» bölümüne bakın: sunucunun kaynağı, çalışma yeri, anahtar gereksinimi, bağlantı türü ve son denetim. Tüm sunucular kendi bilgisayarınızda çalışır; hiçbiri bizim sunucumuzda değildir.","Etiketleri tanıyın: «kendi bilgisayarınızda çalışır» verinizin bize gelmediği anlamına gelir; «resmi olmayan API» sitenin resmi sunucusu olmadığı ve site değişirse bozulabileceği anlamına gelir; «hesabınızda değişiklik» yazma araçları olduğu ve yalnızca onayınızla çalıştığı anlamına gelir."],
+        en:["Read the «Read before installing» box on every server page: the server's source, where it runs, whether it needs a key, the connection type and the last check. Every server runs on your own computer; none of them runs on our server.","Know the labels: «runs on your computer» means your data never comes to us; «unofficial API» means it is not the site's official server and may break if the site changes; «changes your account» means it has write tools that only work with your approval."]}},
+ {id:"security", title:{fa:"امنیت",tr:"Güvenlik",en:"Security"},
+  body:{fa:["سرورها به‌طور پیش‌فرض فقط‌خواندنی‌اند: دادهٔ عمومی می‌خوانند، چیزی نمی‌خرند و در هیچ حسابی تغییری نمی‌دهند. بدترین کاری که یک سرور خراب می‌تواند بکند، برگرداندن یک جواب اشتباه است — و تو همیشه می‌توانی آن را با باز کردن سایت بررسی کنی.","کوکی نشست (فقط برای اقدامات حساب Hepsiburada و Migros) فقط در فایل تنظیمات ماشین خودت می‌ماند. هرگز آن را در مخزن عمومی، پیام یا اسکرین‌شات نگذار. اگر مشکوک شدی، از سایت سرویس خارج شو و دوباره وارد شو تا نشست باطل شود.","همهٔ سرورها متن‌باز‌اند؛ می‌توانی دقیقاً ببینی هر ابزار چه درخواستی می‌فرستد."],
+        tr:["Sunucular varsayılan olarak salt okunurdur: herkese açık veriyi okurlar, hiçbir şey satın almaz ve hiçbir hesapta değişiklik yapmazlar. Bozuk bir sunucunun yapabileceği en kötü şey yanlış bir yanıt döndürmektir — bunu sitenin kendisini açarak her zaman doğrulayabilirsiniz.","Oturum çerezi (yalnızca Hepsiburada ve Migros hesap işlemleri için) yalnızca kendi makinenizdeki ayar dosyasında kalır. Asla herkese açık bir depoya, mesaja veya ekran görüntüsüne koymayın. Şüphelenirseniz servis sitesinden çıkıp yeniden girin; oturum geçersiz olur.","Tüm sunucular açık kaynaklıdır; her aracın tam olarak hangi isteği gönderdiğini görebilirsiniz."],
+        en:["Servers are read-only by default: they read public data, never buy anything and never change anything in an account. The worst thing a broken server can do is return a wrong answer — and you can always check it by opening the site.","The session cookie (only for Hepsiburada and Migros account actions) stays only in the settings file on your own machine. Never put it in a public repo, a message or a screenshot. If you are suspicious, log out of the service site and back in to invalidate the session.","All servers are open source; you can see exactly what request each tool sends."]}},
+ {id:"builders", title:{fa:"برای سازندگان",tr:"Geliştiriciler için",en:"For builders"},
+  body:{fa:["می‌خواهی سرور تازه‌ای بسازی؟ یک سرویس ترکیه با دادهٔ عمومی پیدا کن، سرور stdio را با uvx قابل‌اجرا کن و هر ابزار را دست‌کم یک بار روی سایت زنده اجرا کن. استانداردهای کامل در راهنمای ارسال است.","ارسال از صفحهٔ «افزودن ابزار» انجام می‌شود: فرم را پر کن و یک ایشوی آماده در گیت‌هاب باز می‌شود. ایدهٔ بدون کد هم قبول است، ولی کد سریع‌تر پیش می‌رود."],
+        tr:["Yeni bir sunucu mu yapmak istiyorsunuz? Herkese açık verisi olan bir Türkiye servisi bulun, stdio sunucusunu uvx ile çalıştırılabilir yapın ve her aracı canlı sitede en az bir kez çalıştırın. Tüm standartlar gönderim kılavuzundadır.","Gönderim «Araç ekle» sayfasından yapılır: formu doldurun ve GitHub'da hazır bir issue açılır. Kodsuz fikir de kabul edilir, ama kod daha hızlı ilerler."],
+        en:["Want to build a new server? Find a Turkish service with public data, make the stdio server runnable with uvx, and run every tool at least once against the live site. The full standards are in the submission guide.","Submit from the «Add a tool» page: fill in the form and a ready GitHub issue opens. An idea without code is welcome too, but code moves faster."]}},
+ {id:"api", title:{fa:"کاتالوگ ماشینی",tr:"Makine kataloğu",en:"Machine catalog"},
+  body:{fa:["این کاتالوگ برای دستیارها و اسکریپت‌ها هم فایل ماشینی دارد: catalog.json کل کاتالوگ را دارد، search.json فهرست جستجوست، llms.txt خلاصهٔ کاتالوگ برای مدل‌های زبانی است و llms-full.txt متن کامل همهٔ سرورهاست. همه ایستا و عمومی‌اند — بدون کلید و بدون حساب."],
+        tr:["Bu katalogda asistanlar ve betikler için makine dosyaları da var: catalog.json tüm kataloğu içerir, search.json arama dizinidir, llms.txt dil modelleri için katalog özetidir ve llms-full.txt tüm sunucuların tam metnidir. Hepsi statik ve herkese açıktır — anahtar yok, hesap yok."],
+        en:["This catalog also has machine files for assistants and scripts: catalog.json holds the whole catalog, search.json is the search index, llms.txt is the catalog summary for language models and llms-full.txt is the full text of every server. All are static and public — no key, no account."]}},
+ {id:"profiles", title:{fa:"پروفایل‌ها و نصب چندسروره",tr:"Profiller ve çok sunuculu kurulum",en:"Profiles and multi-server installs"},
+  body:{fa:["به‌جای نصب تکی، از سازندهٔ پروفایل استفاده کن: چند سرور را انتخاب کن، برنامه‌ات را بگو و یک فایل آماده بگیر. پروفایل‌های آمادهٔ «خرید»، «سفر»، «خبر» و «مالی» هم هستند.","نصب‌کنندهٔ تک‌دستوری هم در سازندهٔ پروفایل است: uvx را نصب می‌کند، تنظیمات را در فایل برنامه‌ات ادغام می‌کند و با یک تست دود صحت را چک می‌کند."],
+        tr:["Tek tek kurmak yerine profil oluşturucuyu kullanın: birkaç sunucu seçin, uygulamanızı söyleyin ve hazır bir dosya alın. «Alışveriş», «Seyahat», «Haber» ve «Finans» hazır profilleri de var.","Tek komutluk kurucu da profil oluşturucudadır: uvx'i kurar, ayarları uygulamanızın dosyasına birleştirir ve bir duman testiyle doğruluğu denetler."],
+        en:["Instead of installing one by one, use the profile builder: pick several servers, name your app and get one ready file. Ready profiles for «Shopping», «Travel», «News» and «Finance» are there too.","The one-command installer is in the profile builder as well: it installs uvx, merges the settings into your app's file and checks them with a smoke test."]}},
+ {id:"faq", title:{fa:"سؤال‌های پرتکرار",tr:"Sık sorulan sorular",en:"FAQ"},
+  body:{fa:["سؤال‌های پرتکرار در صفحهٔ «درباره» هستند — از کلید API و رسمی بودن سرورها تا نحوهٔ پیشنهاد سرور تازه."],
+        tr:["Sık sorulan sorular «Hakkında» sayfasındadır — API anahtarından sunucuların resmi olup olmadığına ve yeni sunucu önermeye kadar."],
+        en:["The FAQ lives on the «About» page — from API keys and whether the servers are official to how to suggest a new server."]}}
+];
+function guideHTML(){
+  const toc = GUIDE_SECTIONS.map(g=>`<a href="#guide-${g.id}">${esc(g.title[state.lang]||g.title.en)}</a>`).join("");
+  const secs = GUIDE_SECTIONS.map(g=>{
+    let extra = "";
+    if(g.id==="api") extra = `<p>${t("guide_api_note")}</p><p style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-ghost btn-sm" href="catalog.json" target="_blank" rel="noopener">catalog.json ↗</a><a class="btn btn-ghost btn-sm" href="search.json" target="_blank" rel="noopener">search.json ↗</a><a class="btn btn-ghost btn-sm" href="llms.txt" target="_blank" rel="noopener">llms.txt ↗</a><a class="btn btn-ghost btn-sm" href="llms-full.txt" target="_blank" rel="noopener">llms-full.txt ↗</a></p>`;
+    if(g.id==="faq") extra = `<p><a class="btn btn-primary btn-sm" href="${hashFor("about")}">${t("nav_about")} →</a></p>`;
+    if(g.id==="profiles") extra = `<p><a class="btn btn-primary btn-sm" href="${hashFor("builder")}">${t("nav_builder")} →</a></p>`;
+    if(g.id==="builders") extra = `<p><a class="btn btn-primary btn-sm" href="${hashFor("submit")}">${t("nav_submit")} →</a> <a class="btn btn-ghost btn-sm" href="submission-guide.md" target="_blank" rel="noopener">${t("sub_guide_link")} ↗</a></p>`;
+    return `<div class="guide-sec" id="guide-${g.id}"><h2>${esc(g.title[state.lang]||g.title.en)}</h2>${(g.body[state.lang]||g.body.en).map(p=>`<p>${esc(p)}</p>`).join("")}${extra}</div>`;
+  }).join("");
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("▤", t("guide_title"), t("guide_sub"))}
+    <div class="guide-layout">
+      <nav class="guide-toc" aria-label="${t("guide_toc")}"><strong>${t("guide_toc")}</strong>${toc}</nav>
+      <div>${secs}</div>
+    </div>
+  </div></section>`;
+}
+
+/* ---------------- Submit (#/submit) -> prefilled GitHub Issue ---------------- */
+const SUBMIT = {nameEn:"", nameFa:"", id:"", summary:"", cat:"shopping", tags:"", repo:"", license:"PolyForm Noncommercial 1.0.0", install:"", env:"", tools:"", questions:"", desc:"", autofill:"idle"};
+function submitSlug(name){
+  let s = (name||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+  if(!s) return "";
+  if(!s.endsWith("-mcp")) s += "-mcp";
+  return s;
+}
+function submitIssueBody(){
+  const lines = [];
+  lines.push("## Service");
+  lines.push("");
+  lines.push("- Name: " + (SUBMIT.nameEn||"-") + (SUBMIT.nameFa ? " (" + SUBMIT.nameFa + ")" : ""));
+  lines.push("- ID: `" + (SUBMIT.id||submitSlug(SUBMIT.nameEn)||"-") + "`");
+  lines.push("- Category: " + SUBMIT.cat);
+  lines.push("- Tags: " + (SUBMIT.tags||"-"));
+  lines.push("- Repository: " + (SUBMIT.repo||"-"));
+  lines.push("- License: " + (SUBMIT.license||"-"));
+  lines.push("- Install: `" + (SUBMIT.install||"-") + "`");
+  lines.push("");
+  lines.push("## Summary");
+  lines.push("");
+  lines.push(SUBMIT.summary||"-");
+  lines.push("");
+  if(SUBMIT.env){ lines.push("## Environment variables"); lines.push(""); lines.push(SUBMIT.env); lines.push(""); }
+  if(SUBMIT.tools){ lines.push("## Tools"); lines.push(""); lines.push(SUBMIT.tools); lines.push(""); }
+  if(SUBMIT.questions){ lines.push("## Sample questions"); lines.push(""); lines.push(SUBMIT.questions); lines.push(""); }
+  if(SUBMIT.desc){ lines.push("## Description"); lines.push(""); lines.push(SUBMIT.desc); lines.push(""); }
+  lines.push("---");
+  lines.push("Submitted from the Turkey MCP submit page.");
+  return lines.join("\n");
+}
+function submitIssueUrl(){
+  const title = "New server: " + (SUBMIT.nameEn||SUBMIT.id||"");
+  return "https://github.com/mohammad-abbasi-sh/turkey-mcp/issues/new?title=" + encodeURIComponent(title) + "&labels=new-server&body=" + encodeURIComponent(submitIssueBody());
+}
+function submitPreviewHTML(){
+  return `<div class="preview-box">${esc(submitIssueBody())}</div>`;
+}
+function submitHTML(){
+  const f = (id, label, ph, val, extra)=>`<div class="field"><label for="${id}">${label}</label><input id="${id}" type="text" placeholder="${esc(ph||"")}" value="${esc(val||"")}" oninput="App.subField('${id}',this.value)" ${extra||""}></div>`;
+  const ta = (id, label, ph, val)=>`<div class="field"><label for="${id}">${label}</label><textarea id="${id}" placeholder="${esc(ph||"")}" oninput="App.subField('${id}',this.value)">${esc(val||"")}</textarea></div>`;
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("＋", t("sub_title"), t("sub_sub"))}
+    <p style="margin-bottom:18px"><a class="btn btn-ghost btn-sm" href="submission-guide.md" target="_blank" rel="noopener">${t("sub_guide_link")} ↗</a></p>
+    <div class="form-grid">
+      <div class="field"><label for="sub-repo-url">${t("sub_autofill")}</label>
+        <div style="display:flex;gap:8px"><input id="sub-repo-url" type="url" placeholder="${esc(t("sub_autofill_ph"))}" style="flex:1;padding:10px 12px;border:1px solid var(--line-strong);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:14.5px"><button type="button" class="btn btn-ghost" onclick="App.subAutofill()">${t("sub_autofill")}</button></div>
+        <p class="hint" id="sub-auto-msg">${SUBMIT.autofill==="loading"?t("sub_loading"):SUBMIT.autofill==="error"?t("sub_error"):""}</p>
+      </div>
+      ${f("sub-nameEn", t("sub_name_en"), "Hepsiburada", SUBMIT.nameEn)}
+      ${f("sub-nameFa", t("sub_name_fa"), "", SUBMIT.nameFa)}
+      <div class="field"><label for="sub-id">${t("sub_id")}</label><input id="sub-id" type="text" value="${esc(SUBMIT.id||submitSlug(SUBMIT.nameEn))}" oninput="App.subField('sub-id',this.value)"><p class="hint">${t("sub_example")}: hepsiburada-mcp</p></div>
+      <div class="field"><label for="sub-summary">${t("sub_summary")}</label><textarea id="sub-summary" maxlength="160" oninput="App.subField('sub-summary',this.value);document.getElementById('sub-sum-count').textContent=this.value.length">${esc(SUBMIT.summary)}</textarea><p class="count"><span id="sub-sum-count">${SUBMIT.summary.length}</span> / 160 ${t("sub_chars")}</p></div>
+      <div class="field"><label for="sub-cat">${t("sub_cat")}</label><select id="sub-cat" onchange="App.subField('sub-cat',this.value)">${CATEGORIES.filter(c=>!c.soon).map(c=>`<option value="${c.id}" ${c.id===SUBMIT.cat?"selected":""}>${esc(catName(c.id))}</option>`).join("")}</select></div>
+      ${f("sub-tags", t("sub_tags"), "shopping, prices", SUBMIT.tags)}
+      ${f("sub-repo", t("sub_repo"), "https://github.com/…", SUBMIT.repo)}
+      ${f("sub-license", t("sub_license"), "PolyForm Noncommercial 1.0.0", SUBMIT.license)}
+      ${f("sub-install", t("sub_install"), "uvx my-server-mcp", SUBMIT.install)}
+      ${ta("sub-env", t("sub_env"), "API_KEY=your key", SUBMIT.env)}
+      ${ta("sub-tools", t("sub_tools"), "my_search — search the service", SUBMIT.tools)}
+      ${ta("sub-questions", t("sub_questions"), "", SUBMIT.questions)}
+      ${ta("sub-desc", t("sub_desc"), "", SUBMIT.desc)}
+      <div><h3 style="font-size:16px">${t("sub_preview_t")}</h3><div id="sub-preview">${submitPreviewHTML()}</div></div>
+      <p style="margin:0"><button type="button" class="btn btn-primary" onclick="App.subOpenIssue()">${t("sub_issue_btn")} ↗</button></p>
+      <p style="color:var(--muted);font-size:13.5px;margin:0">${t("sub_note")}</p>
+    </div>
+  </div></section>`;
+}
+
+/* ---------------- My connection (#/my) — local only ---------------- */
+function myHTML(){
+  const ids = mySel();
+  const servers = ids.map(id=>SERVERS.find(s=>s.id===id)).filter(Boolean);
+  const rows = servers.length ? servers.map(s=>`<div class="my-row"><span class="mono mono-sm" style="--mc:${s.color}">${mono(s)}</span><span><span class="nm">${esc(serviceName(s))}</span><br><span class="latin" style="color:var(--muted);font-size:12px">${esc(s.id)} · ${fmtNum(s.tools.length)} ${t("tools_count")}</span></span><span class="rm"><a class="btn btn-ghost btn-sm" href="${hashFor("tool", s.id)}">${t("details")}</a> <button type="button" class="btn btn-ghost btn-sm" onclick="App.myRemove('${s.id}')">✕</button></span></div>`).join("") : `<p style="color:var(--muted)">${t("my_sel_empty")}</p>`;
+  const envKeys = [];
+  SERVERS.filter(s=>s.env).forEach(s=>Object.keys(s.env).forEach(k=>envKeys.push([s, k])));
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("◉", t("my_title"), t("my_sub"))}
+    <h2 style="font-size:20px">${t("my_sel_t")} (${fmtNum(servers.length)})</h2>
+    <div style="margin:14px 0">${rows}</div>
+    <p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary btn-sm" href="${hashForQ("builder", null, ids.length?{ids:ids.join(",")}:{})}">${t("my_builder_cta")}</a><a class="btn btn-ghost btn-sm" href="${hashFor("marketplace")}">${t("nav_marketplace")}</a><button type="button" class="btn btn-ghost btn-sm" onclick="App.myClear()">${t("my_clear")}</button></p>
+    <h2 style="font-size:20px;margin-top:26px">${t("my_keys_t")} <span id="my-saved" style="font-size:13px;color:var(--secondary);font-weight:600"></span></h2>
+    <p style="color:var(--muted)">${t("my_keys_note")}</p>
+    <div style="max-width:640px">${envKeys.map(([s,k])=>`<div class="env-row"><label for="my-key-${esc(k)}">${esc(s.id)} · ${esc(k)}</label><input id="my-key-${esc(k)}" type="password" autocomplete="off" placeholder="${esc(s.env[k])}" value="${esc(KEYSTORE.get(k))}" oninput="App.myKey('${esc(k)}',this.value)"></div>`).join("")}</div>
+  </div></section>`;
+}
+
+/* ---------------- Privacy / Terms / Markdown view ---------------- */
+function privacyHTML(){
+  return `<section class="section"><div class="wrap" style="max-width:760px">
+    ${sectionHead("◉", t("priv_title"), t("priv_sub"))}
+    <p style="line-height:1.8">${t("priv_p1")}</p><p style="line-height:1.8">${t("priv_p2")}</p><p style="line-height:1.8">${t("priv_p3")}</p>
+  </div></section>`;
+}
+function termsHTML(){
+  return `<section class="section"><div class="wrap" style="max-width:760px">
+    ${sectionHead("◉", t("terms_title"), t("terms_sub"))}
+    <p style="line-height:1.8">${t("terms_p1")}</p><p style="line-height:1.8">${t("terms_p2")}</p><p style="line-height:1.8">${t("terms_p3")}</p>
+  </div></section>`;
+}
+function mdHTML(id){
+  const s = SERVERS.find(x=>x.id===id);
+  if(!s) return notFoundHTML();
+  return `<section class="section"><div class="wrap">
+    <p class="crumb"><a href="${hashFor("home")}">${t("nav_home")}</a> / <a href="${hashFor("tool", s.id)}">${esc(serviceName(s))}</a> / ${t("md_title")}</p>
+    <h1>${esc(s.title)} — .md</h1>
+    <p style="color:var(--muted)">${t("md_note")}</p>
+    <p style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-primary btn-sm" onclick="App.mdDownload('${s.id}')">${t("det_md_dl")}</button><button type="button" class="btn btn-ghost btn-sm" onclick="App.copy(this,document.getElementById('md-pre').textContent)">${t("tool_copy")}</button><a class="btn btn-ghost btn-sm" href="${hashFor("tool", s.id)}">${t("back")}</a></p>
+    <div class="md-view"><pre id="md-pre">${esc(mdForServer(s))}</pre></div>
+  </div></section>`;
+}
+
+/* ---------------- Per-server template FAQ (7 questions) ---------------- */
+const FAQ_TEMPLATE = [
+ {q:{fa:"{name} چه کارهایی می‌کند؟",tr:"{name} ne yapar?",en:"What can {name} do?"},
+  a:{fa:"{name} {tools} ابزار دارد و دادهٔ عمومی {service} را می‌خواند. فهرست کامل ابزارها در همین صفحه است.",tr:"{name} {tools} araca sahiptir ve {service} servisinin herkese açık verisini okur. Araçların tam listesi bu sayfadadır.",en:"{name} has {tools} tools and reads the public data of {service}. The full tool list is on this page."}},
+ {q:{fa:"برای استفاده از {name} کلید API لازم است؟",tr:"{name} için API anahtarı gerekir mi?",en:"Do I need an API key for {name}?"},
+  a:{fa:"نه؛ بدون کلید و بدون حساب کار می‌کند. فقط اگر بخواهی از اقدامات حساب استفاده کنی، نشست مرورگر خودت لازم است.",tr:"Hayır; anahtar ve hesap olmadan çalışır. Yalnızca hesap işlemlerini kullanmak isterseniz kendi tarayıcı oturumunuz gerekir.",en:"No; it works without a key and without an account. Only account actions need your own browser session."}},
+ {q:{fa:"بدون نصب هم می‌توانم از {name} استفاده کنم؟",tr:"{name} kurmadan kullanabilir miyim?",en:"Can I use {name} without installing it?"},
+  a:{fa:"نه؛ سرور روی کامپیوتر خودت اجرا می‌شود و باید نصبش کنی. ولی نمونه‌های صفحهٔ «نمایش» نشان می‌دهند که بعد از نصب چه جوابی می‌گیری.",tr:"Hayır; sunucu kendi bilgisayarınızda çalışır ve kurulması gerekir. Ancak «Demo» sayfasındaki örnekler kurulumdan sonra nasıl yanıtlar alacağınızı gösterir.",en:"No; the server runs on your own computer and must be installed. But the samples on the «Demo» page show what answers you get after installing."}},
+ {q:{fa:"{name} چیزی را در حساب من تغییر می‌دهد؟",tr:"{name} hesabımda bir şey değiştirir mi?",en:"Does {name} change anything in my account?"},
+  a:{fa:"نه؛ فقط‌خواندنی است و چیزی نمی‌خرد، رزرو نمی‌کند و تغییری نمی‌دهد.",tr:"Hayır; salt okunurdur, hiçbir şey satın almaz, rezerve etmez ve değiştirmez.",en:"No; it is read-only — it never buys, books or changes anything."}},
+ {q:{fa:"{name} رسمی است؟",tr:"{name} resmi mi?",en:"Is {name} official?"},
+  a:{fa:"نه؛ غیررسمی و ساختهٔ جامعه است و از همان نشانی‌هایی استفاده می‌کند که خود سایت به کار می‌برد. اگر سایت تغییر کند، سرور ممکن است موقتاً از کار بیفتد.",tr:"Hayır; resmi değildir, topluluk yapımıdır ve sitenin kendi kullandığı adresleri kullanır. Site değişirse sunucu geçici olarak bozulabilir.",en:"No; it is unofficial and community-built, using the same endpoints the site itself uses. If the site changes, the server may break temporarily."}},
+ {q:{fa:"{name} برای برنامه‌نویس‌ها API دارد؟",tr:"{name} geliştiriciler için API sunuyor mu?",en:"Does {name} have an API for developers?"},
+  a:{fa:"بله — نه یک سرویس میزبانی‌شده، بلکه فراخوانی مستقیم سرور MCP از ماشین خودت. نمونهٔ کد در بخش «استفاده در کد» همین صفحه است.",tr:"Evet — barındırılan bir hizmet değil, MCP sunucusunun kendi makinenizden doğrudan çağrılması. Kod örneği bu sayfadaki «Kodda kullanım» bölümündedir.",en:"Yes — not a hosted service, but a direct call to the MCP server from your own machine. A code sample is in the «Use in code» section of this page."}},
+ {q:{fa:"{name} با کدام برنامه‌ها کار می‌کند؟",tr:"{name} hangi uygulamalarla çalışır?",en:"Which apps does {name} work with?"},
+  a:{fa:"هر کلاینت MCP که سرور stdio محلی را پشتیبانی کند: Claude Code، Claude Desktop، Cursor و VS Code اینجا تأیید شده‌اند؛ Windsurf، Codex CLI و Gemini CLI هم با تنظیم استاندارد کار می‌کنند.",tr:"Yerel stdio sunucusunu destekleyen her MCP istemcisiyle: Claude Code, Claude Desktop, Cursor ve VS Code burada doğrulandı; Windsurf, Codex CLI ve Gemini CLI de standart ayarla çalışır.",en:"Any MCP client that supports local stdio servers: Claude Code, Claude Desktop, Cursor and VS Code are verified here; Windsurf, Codex CLI and Gemini CLI also work with the standard config."}}
+];
+function faqFill(text, s){
+  return text.replace(/{name}/g, serviceName(s)).replace(/{service}/g, serviceName(s)).replace(/{tools}/g, fmtNum(s.tools.length));
+}
+function toolFaqHTML(s){
+  return FAQ_TEMPLATE.map(f=>{
+    let a = faqFill(L(f.a), s);
+    if(f===FAQ_TEMPLATE[3] && s.account){
+      a = state.lang==="fa" ? "به‌طور پیش‌فرض نه؛ فقط‌خواندنی است. ابزارهای نوشتاری اختیاری (سبد خرید و علاقه‌مندی‌ها) فقط با کوکی نشست خودت و فقط بعد از تأیید تو تغییر می‌دهند."
+        : state.lang==="tr" ? "Varsayılan olarak hayır; salt okunurdur. İsteğe bağlı yazma araçları (sepet ve favoriler) yalnızca kendi oturum çerezinizle ve yalnızca onayınızla değişiklik yapar."
+        : "Not by default; it is read-only. The optional write tools (cart + favorites) change things only with your own session cookie and only after your approval.";
+    }
+    return `<details class="faq-item"><summary>${esc(faqFill(L(f.q), s))}</summary><p>${esc(a)}</p></details>`;
+  }).join("");
+}
+
+/* ---------------- JSON-LD + per-page meta (GEO) ---------------- */
+function updateJsonLd(){
+  const el = document.getElementById("ld-page");
+  if(!el) return;
+  const base = "https://mohammad-abbasi-sh.github.io/turkey-mcp/";
+  let graph = null;
+  if(state.page==="home"){
+    graph = {"@context":"https://schema.org","@type":"Organization","name":"Turkey MCP","url":base,"description":t("hero_sub"),"founder":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}};
+  } else if(state.page==="tool"){
+    const s = SERVERS.find(x=>x.id===state.param);
+    if(s){
+      graph = {"@context":"https://schema.org","@graph":[
+        {"@type":"SoftwareApplication","name":s.title,"applicationCategory":"DeveloperApplication","operatingSystem":"Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":s.desc,"url":base+"#/en/tool/"+s.id,"softwareVersion":serverVersion(s.id)},
+        {"@type":"FAQPage","mainEntity":FAQ_TEMPLATE.map(f=>({"@type":"Question","name":faqFill(f.q.en, s),"acceptedAnswer":{"@type":"Answer","text":faqFill(f.a.en, s)}}))},
+        {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Turkey MCP","item":base},{"@type":"ListItem","position":2,"name":"Marketplace","item":base+"#/en/marketplace"},{"@type":"ListItem","position":3,"name":s.title,"item":base+"#/en/tool/"+s.id}]}
+      ]};
+    }
+  } else if(state.page==="marketplace"){
+    graph = {"@context":"https://schema.org","@type":"CollectionPage","name":t("mp_title"),"url":base+"#/en/marketplace","hasPart":{"@type":"ItemList","numberOfItems":SERVERS.length,"itemListElement":SERVERS.slice(0,10).map((s,i)=>({"@type":"ListItem","position":i+1,"name":s.title,"url":base+"#/en/tool/"+s.id}))}};
+  } else if(state.page==="guide"){
+    graph = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":FAQ.map(f=>({"@type":"Question","name":f.q.en,"acceptedAnswer":{"@type":"Answer","text":f.a.en}}))};
+  } else if(state.page==="about"){
+    graph = {"@context":"https://schema.org","@type":"AboutPage","name":t("about_title"),"url":base+"#/en/about","about":{"@type":"Organization","name":"Turkey MCP","founder":{"@type":"Person","name":"Mohammad Abbasi"}}};
+  }
+  el.textContent = graph ? JSON.stringify(graph) : "";
+}
+function updateMeta(){
+  const set = (sel, attr, val)=>{ const el = document.querySelector(sel); if(el) el.setAttribute(attr, val); };
+  let desc = t("hero_sub");
+  if(state.page==="tool"){ const s = SERVERS.find(x=>x.id===state.param); if(s) desc = serverDesc(s); }
+  set('meta[name="description"]', "content", desc);
+  set('meta[property="og:title"]', "content", document.title);
+  set('meta[name="twitter:title"]', "content", document.title);
+  set('meta[property="og:description"]', "content", desc);
+  set('meta[name="twitter:description"]', "content", desc);
+  set('link[rel="canonical"]', "href", "https://mohammad-abbasi-sh.github.io/turkey-mcp/" + (state.page==="home" ? "" : "#/" + state.lang + "/" + state.page + (state.param?"/"+state.param:"")));
+}
+
+/* ---------------- What's New modal ---------------- */
+const WN_VERSION = "v25";
+let wnScheduled = false;
+function wnHTML(){
+  return `<div id="wn-modal" class="wn-backdrop" role="dialog" aria-modal="true"><div class="wn-panel">
+    <h2>${t("wn_title")}</h2><p style="color:var(--muted);margin:0">${t("wn_sub")}</p>
+    <ul><li>${t("wn_item1")}</li><li>${t("wn_item2")}</li><li>${t("wn_item3")}</li><li>${t("wn_item4")}</li></ul>
+    <p style="display:flex;gap:10px;flex-wrap:wrap;margin:0"><a class="btn btn-primary btn-sm" href="${hashFor("builder")}" onclick="closeWhatsNew()">${t("nav_builder")}</a><button type="button" class="btn btn-ghost btn-sm" onclick="App.closeWhatsNew()">${t("wn_close")}</button></p>
+  </div></div>`;
+}
+function checkWhatsNew(){
+  if(state.page!=="home" || wnScheduled) return;
+  if(store.get("tmp_wn_"+WN_VERSION, null)==="seen") return;
+  wnScheduled = true;
+  setTimeout(()=>{
+    if(store.get("tmp_wn_"+WN_VERSION, null)==="seen") return;
+    const m = document.getElementById("wn-modal");
+    if(m) m.classList.add("open");
+  }, 900);
+}
+function closeWhatsNew(){
+  const m = document.getElementById("wn-modal");
+  if(m) m.classList.remove("open");
+  store.set("tmp_wn_"+WN_VERSION, "seen");
+}
+
+/* ---------------- search.json lazy load (palette index) ---------------- */
+function loadSearchIndex(){
+  if(PALETTE.indexLoaded || PALETTE.indexLoading) return;
+  PALETTE.indexLoading = true;
+  fetch("search.json").then(r=>{ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).then(items=>{
+    PALETTE.index = items; PALETTE.indexLoaded = true;
+    if(PALETTE.open){ PALETTE.items = paletteResults(PALETTE.q); renderPalette(); }
+  }).catch(()=>{ /* in-memory index is authoritative; file is a bonus */ })
+  .finally(()=>{ PALETTE.indexLoading = false; });
+}
+
+/* ---------------- Home sections (app picker, account banner, CTA) ---------------- */
+const WEB_APPS = [
+  {id:"claude-ai", name:"claude.ai", icon:"✦"},
+  {id:"chatgpt", name:"ChatGPT", icon:"✦"}
+];
+function appPickerHTML(){
+  const cards = CONNECT_APPS.map(a=>`<a class="app-card" href="${hashForQ("builder", null, {app:a.id})}"><span class="mono" style="--mc:${a.verified?"#005F73":"#8a8580"}">${a.icon}</span><span><h3>${esc(a.name)}${a.verified?" ✓":""}</h3><p>${esc(a.desc[state.lang]||a.desc.en)}</p></span></a>`).join("");
+  const web = WEB_APPS.map(a=>`<div class="app-card web"><span class="mono" style="--mc:#8a8580">${a.icon}</span><span><h3>${esc(a.name)}</h3><p>${t("apps_web_note")}</p></span></div>`).join("");
+  return `<section class="section"><div class="wrap">
+    ${sectionHead("🔌", t("apps_title"), t("apps_sub"))}
+    <div class="app-grid">${cards}${web}</div>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:14px">⚠️ ${t("apps_web_t")} — ${t("conn_simple_note_web")}</p>
+  </div></section>`;
+}
+function acctBannerHTML(){
+  return `<section class="section"><div class="wrap"><div class="acct-banner"><div><h3>${t("acct_title")}</h3><p>${t("acct_sub")}</p></div><a class="btn btn-primary" href="${hashFor("tool", "hepsiburada-mcp")}">${t("acct_cta")} →</a></div></div></section>`;
+}
+function addToolCTAHTML(){
+  return `<section class="section"><div class="wrap"><div class="mint-banner"><div><h3>${t("addtool_title")}</h3><p>${t("addtool_sub")}</p></div><a class="btn btn-mint" href="${hashFor("submit")}">${t("addtool_cta")} ←</a></div></div></section>`;
+}
+function labelsHTML(){
+  const def = (badge, title, desc)=>`<div class="label-def"><span class="badge ${badge[0]}">${badge[1]}</span><span><b>${title}</b><br><span style="color:var(--muted)">${desc}</span></span></div>`;
+  return `<div class="label-defs">
+    ${def(["badge-ok","✓ "+t("lbl_source_t").split(":")[1].trim()], t("lbl_source_t"), t("lbl_source_d"))}
+    ${def(["badge-ok","✓ "+t("lbl_run_t").split(":")[1].trim()], t("lbl_run_t"), t("lbl_run_d"))}
+    ${def(["badge-unverified","! "+t("lbl_warn_unoff_t").split(":")[1].trim()], t("lbl_warn_unoff_t"), t("lbl_warn_unoff_d"))}
+    ${def(["badge-unverified","! "+t("lbl_warn_key_t").split(":")[1].trim()], t("lbl_warn_key_t"), t("lbl_warn_key_d"))}
+    ${def(["badge-acct","! "+t("lbl_warn_acct_t").split(":")[1].trim()], t("lbl_warn_acct_t"), t("lbl_warn_acct_d"))}
+  </div>`;
+}
 
 /* ---------------- init ---------------- */
 window.addEventListener("hashchange", ()=>{ const keep=INSPECT_KEEP; INSPECT_KEEP=false; render(); if(keep){ window.scrollTo({top:INSPECT_SCROLL}); } else { const h=location.hash||""; if(h.startsWith("#/") || !h) window.scrollTo({top:0}); } });
 if(document.addEventListener) document.addEventListener("keydown", (ev)=>{ if((ev.metaKey||ev.ctrlKey) && ev.key.toLowerCase()==="k"){ ev.preventDefault(); if(PALETTE.open) closePalette(); else openPalette(); } else if(ev.key==="Escape" && PALETTE.open){ closePalette(); } });
+if(document.addEventListener) document.addEventListener("click", (ev)=>{ const m=document.getElementById("nav-more"); if(m && m.classList.contains("open") && !m.contains(ev.target)) m.classList.remove("open"); });
 if(!location.hash) location.hash = "#/"+state.lang+"/";
 render();
 </script>
