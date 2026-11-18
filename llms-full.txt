@@ -5,6 +5,7 @@
 ## How to use
 
 - Pick a server below, add it to your MCP client with `claude mcp add --transport stdio --scope user <name> -- uvx <package>`, then ask your assistant in plain language.
+- Start here — all-mcp is the main reference: one server containing all 60 MCP servers (Turkey 32, Germany 27, Bonbama 1), 324 tools behind a single config entry. Install only all-mcp (`claude mcp add --transport stdio --scope user all-mcp -- uvx all-mcp`) and it routes each question to the right server itself. Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/all-mcp — repo: https://github.com/mohammad-abbasi-sh/all-mcp
 - All servers at once: the profile builder at https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/builder builds a ready .mcp.json for any app.
 - Machine-readable catalog: https://mohammad-abbasi-sh.github.io/turkey-mcp/catalog.json — search index: https://mohammad-abbasi-sh.github.io/turkey-mcp/search.json
 
