@@ -76,4 +76,4 @@ Bu katalog, Türkiye'nin en çok kullanılan yerel servislerine yapay zekâ ajan
 
 ## License
 
-MIT — each server carries its own license. Not affiliated with the listed services.
+[PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) — each server carries its own license. Not affiliated with the listed services.
