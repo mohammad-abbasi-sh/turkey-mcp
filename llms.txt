@@ -2,6 +2,8 @@
 
 > 32 MCP servers (186 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
+> Start here — all-mcp is the main reference: one server containing all 60 MCP servers (Turkey 32, Germany 27, Bonbama 1), 324 tools behind a single config entry. Install only all-mcp (`claude mcp add --transport stdio --scope user all-mcp -- uvx all-mcp`) and it routes each question to the right server itself. Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/all-mcp — repo: https://github.com/mohammad-abbasi-sh/all-mcp
+
 - [tcmb-mcp](https://github.com/mohammad-abbasi-sh/tcmb-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/tcmb-mcp)): Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key). (4 tools)
 - [arabam-mcp](https://github.com/mohammad-abbasi-sh/arabam-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/arabam-mcp)): Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY). (5 tools)
 - [emlakjet-mcp](https://github.com/mohammad-abbasi-sh/emlakjet-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/emlakjet-mcp)): Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY). (4 tools)
