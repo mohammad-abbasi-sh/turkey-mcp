@@ -193,7 +193,7 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft)}
 .result-count{color:var(--muted);font-size:14px;margin-bottom:14px}
 .match-head{margin:26px 0 12px}
 /* ---------- marketplace layout: rail + ledger + inspector ---------- */
-.mp-layout{display:grid;grid-template-columns:230px minmax(0,1fr) 320px;gap:28px;align-items:start}
+.mp-layout{display:grid;grid-template-columns:260px minmax(0,1fr) 320px;gap:28px;align-items:start}
 .filter-rail{position:sticky;top:86px;display:flex;flex-direction:column;gap:16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:18px}
 .rail-block label{font-size:13px;color:var(--muted)}
 .rail-note{font-size:13.5px;margin:0;border-top:1px solid var(--line);padding-top:12px}
@@ -285,17 +285,17 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft)}
 .detail-head{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px}
 .detail-head h1{font-size:30px;margin:0}
 .detail-head .latin{color:var(--muted);direction:ltr;text-align:start}
-.table-scroll{overflow-x:auto}
+.table-scroll{overflow-x:auto;min-width:0}
 .tools-table{width:100%;border-collapse:collapse;font-size:14px}
 .tools-table th,.tools-table td{text-align:start;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 .tools-table th{color:var(--muted);font-size:13px}
 .tools-table code{white-space:nowrap}
 .install-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}
 .install-box h3{font-size:16px;margin-bottom:10px}
-.copy-row{display:flex;gap:8px;align-items:stretch}
+.copy-row{display:flex;gap:8px;align-items:flex-start}
 .copy-row>*{min-width:0}
-.copy-row pre{flex:1;margin:0}
-.copy-btn{position:relative;overflow:hidden;border:1px solid var(--line-strong);background:var(--elev);border-radius:var(--radius-sm);padding:0 16px;font-weight:700;color:var(--text);white-space:nowrap}
+.copy-row pre{flex:1;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:visible}
+.copy-btn{position:relative;overflow:hidden;border:1px solid var(--line-strong);background:var(--elev);border-radius:var(--radius-sm);padding:10px 16px;font-weight:700;color:var(--text);white-space:nowrap;flex-shrink:0}
 .copy-btn:hover{border-color:var(--primary-ink)}
 .copy-btn.copied{background:var(--secondary-soft);border-color:var(--secondary);color:var(--secondary)}
 .copy-btn.copied::after{content:"";position:absolute;inset:0;border:2px solid var(--secondary);border-radius:inherit;animation:ripple .6s ease-out}
@@ -405,7 +405,7 @@ footer.site{margin-top:90px;border-top:1px solid var(--line-strong);background:v
 @media (max-width:1280px){
   nav.main{display:none}
   .burger{display:inline-flex}
-  .mp-layout{grid-template-columns:230px minmax(0,1fr)}
+  .mp-layout{grid-template-columns:260px minmax(0,1fr)}
   .inspector{display:none}
 }
 @media (max-width:1020px){
@@ -448,7 +448,7 @@ footer.site{margin-top:90px;border-top:1px solid var(--line-strong);background:v
   .fav-btn{display:none}
   .nav{gap:8px}
   .detail-head h1{font-size:24px}
-  .copy-row{flex-direction:column}
+  .copy-row{flex-direction:column;align-items:stretch}
   .copy-row .copy-btn{padding:11px 16px}
   .big-steps>li{padding:64px 18px 18px}
   .big-steps>li::before{top:14px;inset-inline-start:18px;width:36px;height:36px;font-size:16px}
@@ -1184,10 +1184,10 @@ fa:{
  foot_privacy:"حریم خصوصی", foot_terms:"شرایط استفاده", foot_rights:"همهٔ حقوق محفوظ است.",
  foot_follow:"ما را دنبال کن",
  mp_title:"بازارچهٔ MCP", mp_sub:"همهٔ سرورهای کاتالوگ — جست‌وجو، فیلتر و مرتب‌سازی.",
- mp_search_ph:"جستجو در سرورها، مهارت‌ها، آموزش‌ها و مقاله‌ها…",
+ mp_search_ph:"جستجو در سرورها…",
  f_category:"دسته‌بندی", f_platform:"پلتفرم", f_connection:"نوع اتصال", f_status:"وضعیت",
  f_all:"همه", f_stdio:"stdio (محلی)", f_available:"در دسترس",
- sort:"مرتب‌سازی", sort_popular:"بیشترین ابزار (نمایندهٔ محبوبیت)", sort_newest:"جدیدترین در کاتالوگ", sort_alpha:"الفبایی",
+ sort:"مرتب‌سازی", sort_popular:"بیشترین ابزار", sort_newest:"جدیدترین در کاتالوگ", sort_alpha:"الفبایی",
  results:"نتیجه", no_results:"چیزی پیدا نشد", no_results_hint:"فیلترها را بردار یا عبارت دیگری امتحان کن — مثلاً «اتوبوس»، «ارز» یا «گل».",
  sugg:"پیشنهادها",
  tool_tools:"ابزارهای سرور", tool_install:"نصب و اتصال", tool_repo:"ریپوی گیت‌هاب", tool_pypi:"صفحهٔ PyPI",
@@ -1357,10 +1357,10 @@ tr:{
  foot_privacy:"Gizlilik", foot_terms:"Kullanım Şartları", foot_rights:"Tüm hakları saklıdır.",
  foot_follow:"Bizi takip edin",
  mp_title:"MCP Pazaryeri", mp_sub:"Katalogdaki tüm sunucular — arayın, filtreleyin, sıralayın.",
- mp_search_ph:"Sunucularda, becerilerde, eğitimlerde ve makalelerde arayın…",
+ mp_search_ph:"Sunucularda arayın…",
  f_category:"Kategori", f_platform:"Platform", f_connection:"Bağlantı türü", f_status:"Durum",
  f_all:"Tümü", f_stdio:"stdio (yerel)", f_available:"Kullanılabilir",
- sort:"Sırala", sort_popular:"En çok araç (popülerlik göstergesi)", sort_newest:"Katalogdaki en yeni", sort_alpha:"Alfabetik",
+ sort:"Sırala", sort_popular:"En çok araç", sort_newest:"Katalogdaki en yeni", sort_alpha:"Alfabetik",
  results:"sonuç", no_results:"Sonuç bulunamadı", no_results_hint:"Filtreleri kaldırın veya başka bir ifade deneyin — örn. “otobüs”, “döviz” veya “çiçek”.",
  sugg:"Öneriler",
  tool_tools:"Sunucu araçları", tool_install:"Kurulum ve bağlantı", tool_repo:"GitHub deposu", tool_pypi:"PyPI sayfası",
@@ -1530,10 +1530,10 @@ en:{
  foot_privacy:"Privacy Policy", foot_terms:"Terms of Service", foot_rights:"All rights reserved.",
  foot_follow:"Follow us",
  mp_title:"MCP Marketplace", mp_sub:"Every server in the catalog — search, filter and sort.",
- mp_search_ph:"Search servers, skills, tutorials and articles…",
+ mp_search_ph:"Search servers…",
  f_category:"Category", f_platform:"Platform", f_connection:"Connection type", f_status:"Status",
  f_all:"All", f_stdio:"stdio (local)", f_available:"Available",
- sort:"Sort", sort_popular:"Most tools (popularity proxy)", sort_newest:"Newest in catalog", sort_alpha:"Alphabetical",
+ sort:"Sort", sort_popular:"Most tools", sort_newest:"Newest in catalog", sort_alpha:"Alphabetical",
  results:"results", no_results:"Nothing found", no_results_hint:"Clear the filters or try another phrase — e.g. “bus”, “currency” or “flowers”.",
  sugg:"Suggestions",
  tool_tools:"Server tools", tool_install:"Install & connect", tool_repo:"GitHub repo", tool_pypi:"PyPI page",
@@ -1789,11 +1789,23 @@ function skillCard(k){
 }
 function catCard(c){
   const n = catCount(c.id);
-  return `<article class="card cat-card" onclick="App.openCategory('${c.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')App.openCategory('${c.id}')">
-    <span class="cat-code" style="--mc:${c.color}">${catCode(c.id)}</span>
-    <h3>${esc(catName(c.id))}</h3>
-    <p>${esc(catDesc(c.id))}</p>
-    ${c.soon?`<span class="badge badge-soon">${t("cat_coming")}</span>`:`<span class="chip">${fmtNum(n)} ${n===1?t("cat_server_one"):t("cat_servers")}</span>`}
+  return `<article class="ledger-row cat-row" onclick="App.openCategory('${c.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')App.openCategory('${c.id}')">
+    <div class="row-line" style="cursor:pointer">
+      <span class="mono" style="--mc:${c.color}" aria-hidden="true">${catCode(c.id)}</span>
+      <span class="row-main"><span class="row-name">${esc(catName(c.id))}${c.soon?` <span class="badge badge-soon">${t("cat_coming")}</span>`:``}</span>
+      <span class="row-sub"><span>${esc(catDesc(c.id))}</span></span></span>
+      <span class="row-actions">${c.soon?``:`<span class="chip">${fmtNum(n)} ${n===1?t("cat_server_one"):t("cat_servers")}</span>`}<span class="row-details" aria-hidden="true">→</span></span>
+    </div>
+  </article>`;
+}
+function platRow(p, verified){
+  return `<article class="ledger-row plat-row">
+    <div class="row-line" style="cursor:default">
+      <span class="mono" style="--mc:${verified?"#005F73":"#8a8580"};${verified?"":"opacity:.6"}" aria-hidden="true">${p.icon}</span>
+      <span class="row-main"><span class="row-name">${esc(p.name)}</span>
+      <span class="row-sub"><span>${esc(p.desc[state.lang]||p.desc.en)}</span></span></span>
+      <span class="row-actions"><span class="badge ${verified?"badge-verified":"badge-unverified"}">${verified?"✓ "+t("plat_verified"):"! "+t("plat_unverified")}</span></span>
+    </div>
   </article>`;
 }
 function emptyHTML(hint){
@@ -1844,7 +1856,7 @@ function homeHTML(){
   return heroHTML() + `
   <section class="section"><div class="wrap">
     ${sectionHead("●", t("cats_title"), t("cats_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("categories")}">${t("view_all")}</a>`)}
-    <div class="grid grid-4">${CATEGORIES.map(catCard).join("")}</div>
+    <div class="ledger">${CATEGORIES.map(catCard).join("")}</div>
   </div></section>
   <section class="section"><div class="wrap">
     ${sectionHead("★", t("feat_title"), t("feat_sub"), `<a class="btn btn-ghost btn-sm" href="${hashFor("marketplace")}">${t("view_all")}</a>`)}
@@ -1853,10 +1865,10 @@ function homeHTML(){
   <section class="section"><div class="wrap">
     ${sectionHead("◆", t("plat_title"), t("plat_sub"))}
     <h3 style="font-size:16px;margin-bottom:12px"><span class="badge badge-verified">✓ ${t("plat_verified")}</span></h3>
-    <div class="plat-grid">${PLATFORMS_VERIFIED.map(p=>`<article class="card plat-card"><span class="logo">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc[state.lang]||p.desc.en)}</p><span class="badge badge-verified">✓ ${t("plat_verified")}</span></article>`).join("")}</div>
+    <div class="ledger">${PLATFORMS_VERIFIED.map(p=>platRow(p,true)).join("")}</div>
     <p style="color:var(--muted);font-size:13.5px;margin:14px 0 8px">${t("plat_verified_note")}</p>
     <h3 style="font-size:16px;margin:18px 0 12px"><span class="badge badge-unverified">! ${t("plat_unverified")}</span></h3>
-    <div class="plat-grid">${PLATFORMS_UNVERIFIED.map(p=>`<article class="card plat-card"><span class="logo" style="opacity:.55">${p.icon}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc[state.lang]||p.desc.en)}</p><span class="badge badge-unverified">! ${t("plat_unverified")}</span></article>`).join("")}</div>
+    <div class="ledger">${PLATFORMS_UNVERIFIED.map(p=>platRow(p,false)).join("")}</div>
     <p style="color:var(--muted);font-size:13.5px;margin-top:14px">${t("plat_unverified_note")}</p>
   </div></section>
   <section class="section" id="how"><div class="wrap">
@@ -2006,7 +2018,7 @@ function toolHTML(id){
 function categoriesHTML(){
   return `<section class="section"><div class="wrap">
     ${sectionHead("▦", t("cats_page_title"), t("cats_page_sub"))}
-    <div class="grid grid-4">${CATEGORIES.map(catCard).join("")}</div>
+    <div class="ledger">${CATEGORIES.map(catCard).join("")}</div>
   </div></section>`;
 }
 function skillsHTML(){
@@ -2503,15 +2515,29 @@ function inspectorHTML(){
     <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a></div>`;
 }
 
-/* paper-unfold entrance (IntersectionObserver stagger; skipped when reduced motion) */
+/* paper-unfold entrance (IntersectionObserver stagger; skipped when reduced motion).
+   FIX 2026-11-18: the observer alone left in-viewport content ghosted (opacity 0)
+   until the user scrolled (detail tool table, connect guide, home cards). Belt
+   and braces: (a) reveal elements already intersecting at setup via bounding
+   rect, (b) a 2s safety timeout reveals every .unfold element — nothing may
+   stay faded after load without scrolling. */
 let unfoldObs = null;
+let unfoldFailsafe = null;
+function unfoldInView(el){
+  const r = el.getBoundingClientRect();
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  const vw = window.innerWidth || document.documentElement.clientWidth;
+  return r.bottom > 0 && r.top < vh && r.right > 0 && r.left < vw;
+}
 function observeUnfold(root){
   const scope = root || document;
   const els = scope.querySelectorAll ? scope.querySelectorAll(".ledger-row, .card, .stat, .step, .plat-card") : [];
   if(prefersRM()){ els.forEach(el=>{ el.classList.add("unfold","in"); }); return; }
   if(!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("unfold","in")); return; }
   if(!unfoldObs) unfoldObs = new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); unfoldObs.unobserve(en.target); } }); }, {threshold:0.08});
-  els.forEach((el,i)=>{ if(el.classList.contains("unfold")) return; el.classList.add("unfold"); el.style.transitionDelay = Math.min(i,8)*45+"ms"; unfoldObs.observe(el); });
+  els.forEach((el,i)=>{ if(el.classList.contains("unfold")) return; el.classList.add("unfold"); el.style.transitionDelay = Math.min(i,8)*45+"ms"; if(unfoldInView(el)){ el.classList.add("in"); return; } unfoldObs.observe(el); });
+  if(unfoldFailsafe) clearTimeout(unfoldFailsafe);
+  unfoldFailsafe = setTimeout(()=>{ document.querySelectorAll(".unfold:not(.in)").forEach(el=>el.classList.add("in")); }, 2000);
 }
 
 /* command palette: fuzzy search over servers + FAQ */
