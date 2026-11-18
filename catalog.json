@@ -1,0 +1,2227 @@
+{
+  "catalog": "turkey-mcp",
+  "generated": "2026-11-18",
+  "counts": {
+    "servers": 32,
+    "tools": 186
+  },
+  "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
+  "license": "PolyForm Noncommercial 1.0.0",
+  "note": "Unofficial read-only MCP servers for Turkish web services. Every server runs locally with uvx; no API key, no account. Status is verified at each catalog release, not live.",
+  "servers": [
+    {
+      "id": "tcmb-mcp",
+      "name": "Central Bank of Türkiye — official FX rates",
+      "nameTr": "Türkiye Cumhuriyet Merkez Bankası — resmi döviz kurları",
+      "summary": "Live USD/TRY, EUR/TRY and 20 more FX rates from tcmb.gov.tr (official XML, no key).",
+      "summaryFa": "نرخ زندهٔ دلار، یورو و بیش از ۲۰ ارز دیگر از بانک مرکزی ترکیه (XML رسمی، بدون کلید).",
+      "summaryTr": "tcmb.gov.tr'den canlı USD/TRY, EUR/TRY ve 20'den fazla döviz kuru (resmi XML, anahtar gerekmez).",
+      "category": "finance",
+      "tags": [
+        "finance",
+        "turkey",
+        "read-only",
+        "featured"
+      ],
+      "source": "catalog",
+      "featured": true,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-06",
+      "repo": "https://github.com/mohammad-abbasi-sh/tcmb-mcp",
+      "pypi": "tcmb-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/tcmb-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/tcmb-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "tcmb-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "tcmb_get_rates",
+          "description": "Today's FX rates for all currencies",
+          "descriptionFa": "نرخ امروز همهٔ ارزها",
+          "descriptionTr": "Bugünkü tüm döviz kurları"
+        },
+        {
+          "name": "tcmb_get_rate",
+          "description": "Rate for one currency code (e.g. USD)",
+          "descriptionFa": "نرخ یک ارز مشخص (مثلاً USD)",
+          "descriptionTr": "Tek bir para biriminin kuru (örn. USD)"
+        },
+        {
+          "name": "tcmb_list_currencies",
+          "description": "List all available currency codes",
+          "descriptionFa": "فهرست همهٔ کدهای ارز",
+          "descriptionTr": "Tüm para birimi kodlarını listele"
+        },
+        {
+          "name": "tcmb_get_rates_on",
+          "description": "Historical rates for a date (YYYYMMDD)",
+          "descriptionFa": "نرخ‌های تاریخی یک روز (YYYYMMDD)",
+          "descriptionTr": "Bir tarihe ait geçmiş kurlar (YYYYMMDD)"
+        }
+      ]
+    },
+    {
+      "id": "arabam-mcp",
+      "name": "arabam.com — used-car listings & market prices",
+      "nameTr": "arabam.com — ikinci el otomobil ilanları ve piyasa fiyatları",
+      "summary": "Search ~176k used-car listings on arabam.com: full 19-field specs, brand/model browser, market price stats (TRY).",
+      "summaryFa": "جست‌وجو در حدود ۱۷۶ هزار آگهی خودروی دست‌دوم arabam.com: مشخصات کامل ۱۹ فیلدی، مرور برند و مدل، آمار قیمت بازار (لیر).",
+      "summaryTr": "arabam.com'da ~176 bin ikinci el ilanında arama: 19 alanlık tam özellikler, marka/model gezgini, piyasa fiyat istatistikleri (TL).",
+      "category": "cars",
+      "tags": [
+        "cars",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/arabam-mcp",
+      "pypi": "arabam-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/arabam-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/arabam-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "arabam-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "arabam_search",
+          "description": "Search listings by brand/model slug, paged",
+          "descriptionFa": "جست‌وجوی آگهی‌ها بر اساس برند/مدل، صفحه‌بندی‌شده",
+          "descriptionTr": "Marka/model kısaltmasıyla ilanlarda ara, sayfalı"
+        },
+        {
+          "name": "arabam_listing_detail",
+          "description": "Full 19-field spec table + price for one listing",
+          "descriptionFa": "جدول کامل مشخصات ۱۹ فیلدی + قیمت یک آگهی",
+          "descriptionTr": "Bir ilan için 19 alanlık tam özellik tablosu + fiyat"
+        },
+        {
+          "name": "arabam_list_brands",
+          "description": "All ~77 brands with counts and slugs",
+          "descriptionFa": "همهٔ حدود ۷۷ برند با تعداد و شناسه",
+          "descriptionTr": "Sayı ve kısaltmalarıyla ~77 markanın tamamı"
+        },
+        {
+          "name": "arabam_list_models",
+          "description": "Models of a brand with counts and slugs",
+          "descriptionFa": "مدل‌های یک برند با تعداد و شناسه",
+          "descriptionTr": "Bir markanın modelleri, sayı ve kısaltmalarıyla"
+        },
+        {
+          "name": "arabam_price_stats",
+          "description": "Min/max/median/average price over N pages",
+          "descriptionFa": "کمترین/بیشترین/میانه/میانگین قیمت در N صفحه",
+          "descriptionTr": "N sayfada min/maks/medyan/ortalama fiyat"
+        }
+      ]
+    },
+    {
+      "id": "emlakjet-mcp",
+      "name": "emlakjet.com — real-estate listings, districts & price stats",
+      "nameTr": "emlakjet.com — emlak ilanları, ilçeler ve fiyat istatistikleri",
+      "summary": "Search emlakjet.com sale/rent listings by city and district: full details with 14 spec fields, district browser, market price stats incl. median price per m² (TRY).",
+      "summaryFa": "جست‌وجوی آگهی‌های فروش و اجارهٔ emlakjet.com بر اساس شهر و محله: جزئیات کامل با ۱۴ فیلد مشخصات، مرور محله‌ها، آمار قیمت شامل میانهٔ قیمت هر متر مربع (لیر).",
+      "summaryTr": "emlakjet.com satılık/kiralık ilanlarında şehre ve ilçeye göre arama: 14 alanlık tam detaylar, ilçe gezgini, m² başına medyan fiyat dahil piyasa istatistikleri (TL).",
+      "category": "real-estate",
+      "tags": [
+        "real-estate",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/emlakjet-mcp",
+      "pypi": "emlakjet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/emlakjet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/emlakjet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "emlakjet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "emlakjet_search",
+          "description": "Search listings by city/district, rooms, price, area",
+          "descriptionFa": "جست‌وجوی آگهی بر اساس شهر/محله، اتاق، قیمت، متراژ",
+          "descriptionTr": "Şehir/ilçe, oda, fiyat ve alana göre ilan ara"
+        },
+        {
+          "name": "emlakjet_listing_detail",
+          "description": "Full detail + 14 spec fields for one listing",
+          "descriptionFa": "جزئیات کامل + ۱۴ فیلد مشخصات یک آگهی",
+          "descriptionTr": "Bir ilan için tam detay + 14 özellik alanı"
+        },
+        {
+          "name": "emlakjet_list_districts",
+          "description": "Districts of a city with listing pages",
+          "descriptionFa": "محله‌های یک شهر با صفحه‌های آگهی",
+          "descriptionTr": "Bir şehrin ilçeleri ve ilan sayfaları"
+        },
+        {
+          "name": "emlakjet_price_stats",
+          "description": "Min/max/median/average price + median per m²",
+          "descriptionFa": "کمترین/بیشترین/میانه/میانگین قیمت + میانهٔ هر متر مربع",
+          "descriptionTr": "Min/maks/medyan/ortalama fiyat + m² başına medyan"
+        }
+      ]
+    },
+    {
+      "id": "armut-mcp",
+      "name": "armut.com — local services, pros & price guides",
+      "nameTr": "armut.com — yerel hizmetler, profesyoneller ve fiyat rehberleri",
+      "summary": "Search 6,759 Armut services, browse top pros with ratings and reviews by city, read FAQs, and get price guides with 12 months of averages (TRY).",
+      "summaryFa": "جست‌وجو در ۶٬۷۵۹ خدمت Armut، مرور بهترین متخصصان با امتیاز و نظر بر اساس شهر، خواندن سؤالات متداول و راهنمای قیمت با میانگین ۱۲ ماهه (لیر).",
+      "summaryTr": "6.759 Armut hizmetinde arama, şehre göre puan ve yorumlarıyla en iyi ustaları görme, SSS okuma ve 12 aylık ortalamalarla fiyat rehberleri (TL).",
+      "category": "services",
+      "tags": [
+        "services",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/armut-mcp",
+      "pypi": "armut-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/armut-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/armut-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "armut-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "armut_search_services",
+          "description": "Search the 6,759-service catalogue by keyword",
+          "descriptionFa": "جست‌وجو در کاتالوگ ۶٬۷۵۹ خدمتی با کلیدواژه",
+          "descriptionTr": "6.759 hizmetlik katalogda anahtar kelimeyle ara"
+        },
+        {
+          "name": "armut_service_detail",
+          "description": "Detail of one service: pro count, rating, reviews",
+          "descriptionFa": "جزئیات یک خدمت: تعداد متخصص، امتیاز، نظرات",
+          "descriptionTr": "Bir hizmetin detayı: usta sayısı, puan, yorumlar"
+        },
+        {
+          "name": "armut_list_pros",
+          "description": "Top pros for a service, optionally filtered by city",
+          "descriptionFa": "بهترین متخصصان یک خدمت، با فیلتر شهر",
+          "descriptionTr": "Bir hizmet için en iyi ustalar, isteğe bağlı şehir filtresi"
+        },
+        {
+          "name": "armut_service_faq",
+          "description": "FAQs for a service, with answers",
+          "descriptionFa": "سؤالات متداول یک خدمت با پاسخ",
+          "descriptionTr": "Bir hizmetin SSS'leri ve yanıtları"
+        },
+        {
+          "name": "armut_price_guide",
+          "description": "Price guide: 12 monthly averages, quotes, example jobs",
+          "descriptionFa": "راهنمای قیمت: میانگین ۱۲ ماهه، قیمت‌های نمونه، نمونه‌کارها",
+          "descriptionTr": "Fiyat rehberi: 12 aylık ortalama, teklifler, örnek işler"
+        },
+        {
+          "name": "armut_trending_services",
+          "description": "Trending/popular services and most-searched combos",
+          "descriptionFa": "خدمات پرطرفدار و پرجست‌وجوترین ترکیب‌ها",
+          "descriptionTr": "Trend ve popüler hizmetler ile en çok aranan kombinasyonlar"
+        }
+      ]
+    },
+    {
+      "id": "hepsiburada-mcp",
+      "name": "hepsiburada.com — shopping search, product details & price stats",
+      "nameTr": "hepsiburada.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+      "summary": "Search hepsiburada.com products, read details (price, stock, seller, GTIN), reviews, browse 9 categories, and get price stats (TRY). Optional local-session account actions: view/add/remove cart items and manage favorites (needs your own browser session cookie).",
+      "summaryFa": "جست‌وجوی کالاهای hepsiburada.com، خواندن جزئیات (قیمت، موجودی، فروشنده، GTIN)، نظرات، مرور ۹ دسته و آمار قیمت (لیر). اقدامات حساب اختیاری با نشست محلی: سبد خرید و علاقه‌مندی‌ها.",
+      "summaryTr": "hepsiburada.com ürünlerinde arama, detayları okuma (fiyat, stok, satıcı, GTIN), yorumlar, 9 kategori gezgini ve fiyat istatistikleri (TL). İsteğe bağlı yerel oturumlu hesap işlemleri: sepet + favoriler.",
+      "category": "shopping",
+      "tags": [
+        "shopping",
+        "turkey",
+        "read-only",
+        "account-actions",
+        "featured"
+      ],
+      "source": "catalog",
+      "featured": true,
+      "accountActions": true,
+      "version": "0.2.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/hepsiburada-mcp",
+      "pypi": "hepsiburada-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/hepsiburada-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/hepsiburada-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "hepsiburada-mcp"
+        ],
+        "env": {
+          "HEPSIBURADA_SESSION": "YOUR_SESSION_COOKIE_HERE"
+        }
+      },
+      "tools": [
+        {
+          "name": "hepsiburada_search",
+          "description": "Search products by keyword, sort by price or relevance",
+          "descriptionFa": "جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",
+          "descriptionTr": "Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"
+        },
+        {
+          "name": "hepsiburada_product_detail",
+          "description": "Detail of one product: price, stock, seller, GTIN, highlights",
+          "descriptionFa": "جزئیات یک کالا: قیمت، موجودی، فروشنده، GTIN، نکات مهم",
+          "descriptionTr": "Bir ürünün detayı: fiyat, stok, satıcı, GTIN, öne çıkanlar"
+        },
+        {
+          "name": "hepsiburada_list_categories",
+          "description": "The 9 top categories with URLs and ids",
+          "descriptionFa": "۹ دستهٔ اصلی با نشانی و شناسه",
+          "descriptionTr": "URL ve kimlikleriyle 9 ana kategori"
+        },
+        {
+          "name": "hepsiburada_price_stats",
+          "description": "Price stats for a query: min/median/mean/max in TRY",
+          "descriptionFa": "آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",
+          "descriptionTr": "Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        {
+          "name": "hepsiburada_product_reviews",
+          "description": "Recent customer reviews: author, rating, text, date",
+          "descriptionFa": "نظرات اخیر مشتریان: نویسنده، امتیاز، متن، تاریخ",
+          "descriptionTr": "Son müşteri yorumları: yazar, puan, metin, tarih"
+        },
+        {
+          "name": "hepsiburada_view_cart",
+          "description": "View your cart: items, quantities, prices (TRY)",
+          "descriptionFa": "مشاهدهٔ سبد خرید: کالاها، تعداد، قیمت (لیر)",
+          "descriptionTr": "Sepetinizi görüntüleyin: ürünler, adetler, fiyatlar (TL)"
+        },
+        {
+          "name": "hepsiburada_add_to_cart",
+          "description": "Add a product to your cart (confirm required)",
+          "descriptionFa": "افزودن کالا به سبد خرید (نیازمند تأیید)",
+          "descriptionTr": "Sepetinize ürün ekleyin (onay gerekli)"
+        },
+        {
+          "name": "hepsiburada_remove_from_cart",
+          "description": "Remove one item from your cart (confirm required)",
+          "descriptionFa": "حذف یک کالا از سبد خرید (نیازمند تأیید)",
+          "descriptionTr": "Sepetinizden bir ürün çıkarın (onay gerekli)"
+        },
+        {
+          "name": "hepsiburada_update_cart_quantity",
+          "description": "Change a cart item's quantity (confirm required)",
+          "descriptionFa": "تغییر تعداد یک کالای سبد خرید (نیازمند تأیید)",
+          "descriptionTr": "Bir sepet ürününün adedini değiştirin (onay gerekli)"
+        },
+        {
+          "name": "hepsiburada_list_favorites",
+          "description": "List your favorite product SKUs",
+          "descriptionFa": "فهرست کدهای کالاهای موردعلاقه",
+          "descriptionTr": "Favori ürün SKU'larınızı listeleyin"
+        },
+        {
+          "name": "hepsiburada_add_favorite",
+          "description": "Add a product to favorites (confirm required)",
+          "descriptionFa": "افزودن کالا به علاقه‌مندی‌ها (نیازمند تأیید)",
+          "descriptionTr": "Bir ürünü favorilere ekleyin (onay gerekli)"
+        },
+        {
+          "name": "hepsiburada_remove_favorite",
+          "description": "Remove a product from favorites (confirm required)",
+          "descriptionFa": "حذف کالا از علاقه‌مندی‌ها (نیازمند تأیید)",
+          "descriptionTr": "Bir ürünü favorilerden çıkarın (onay gerekli)"
+        }
+      ]
+    },
+    {
+      "id": "n11-mcp",
+      "name": "n11.com — shopping search, product details & price stats",
+      "nameTr": "n11.com — alışveriş araması, ürün detayları ve fiyat istatistikleri",
+      "summary": "Search n11.com products, read details (price, list price, stock, seller, rating), reviews, browse 11 categories, and get price stats (TRY).",
+      "summaryFa": "جست‌وجوی کالاهای n11.com، خواندن جزئیات (قیمت، قیمت فهرست، موجودی، فروشنده، امتیاز)، نظرات، مرور ۱۱ دسته و آمار قیمت (لیر).",
+      "summaryTr": "n11.com ürünlerinde arama, detayları okuma (fiyat, liste fiyatı, stok, satıcı, puan), yorumlar, 11 kategori gezgini ve fiyat istatistikleri (TL).",
+      "category": "shopping",
+      "tags": [
+        "shopping",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/n11-mcp",
+      "pypi": "n11-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/n11-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/n11-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "n11-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "n11_search",
+          "description": "Search products by keyword, sort by price or relevance",
+          "descriptionFa": "جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",
+          "descriptionTr": "Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"
+        },
+        {
+          "name": "n11_product_detail",
+          "description": "Detail of one product: price, stock, seller, rating, category",
+          "descriptionFa": "جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",
+          "descriptionTr": "Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"
+        },
+        {
+          "name": "n11_list_categories",
+          "description": "The 11 top categories with URLs and slugs",
+          "descriptionFa": "۱۱ دستهٔ اصلی با نشانی و شناسه",
+          "descriptionTr": "URL ve kısaltmalarıyla 11 ana kategori"
+        },
+        {
+          "name": "n11_price_stats",
+          "description": "Price stats for a query: min/median/mean/max in TRY",
+          "descriptionFa": "آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",
+          "descriptionTr": "Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        {
+          "name": "n11_product_reviews",
+          "description": "Recent customer reviews: reviewer and star rating",
+          "descriptionFa": "نظرات اخیر مشتریان: نظر‌دهنده و امتیاز ستاره‌ای",
+          "descriptionTr": "Son müşteri yorumları: yorumcu ve yıldız puanı"
+        }
+      ]
+    },
+    {
+      "id": "ciceksepeti-mcp",
+      "name": "ciceksepeti.com — flowers & gifts search, details & price stats",
+      "nameTr": "ciceksepeti.com — çiçek & hediye araması, ürün detayları ve fiyat istatistikleri",
+      "summary": "Search ciceksepeti.com flowers & gifts, read details (price, stock, seller, rating), reviews, browse 89 categories, and get price stats (TRY).",
+      "summaryFa": "جست‌وجوی گل و هدیه در ciceksepeti.com، خواندن جزئیات (قیمت، موجودی، فروشنده، امتیاز)، نظرات، مرور ۸۹ دسته و آمار قیمت (لیر).",
+      "summaryTr": "ciceksepeti.com'da çiçek ve hediye arama, detayları okuma (fiyat, stok, satıcı, puan), yorumlar, 89 kategori gezgini ve fiyat istatistikleri (TL).",
+      "category": "shopping",
+      "tags": [
+        "shopping",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/ciceksepeti-mcp",
+      "pypi": "ciceksepeti-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/ciceksepeti-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/ciceksepeti-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "ciceksepeti-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "ciceksepeti_search",
+          "description": "Search flowers & gifts by keyword, sort by price or relevance",
+          "descriptionFa": "جست‌وجوی گل و هدیه با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",
+          "descriptionTr": "Anahtar kelimeyle çiçek ve hediye ara, fiyata veya ilgiye göre sırala"
+        },
+        {
+          "name": "ciceksepeti_product_detail",
+          "description": "Detail of one product: price, stock, seller, rating, category",
+          "descriptionFa": "جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",
+          "descriptionTr": "Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"
+        },
+        {
+          "name": "ciceksepeti_list_categories",
+          "description": "89 flower/plant/gift categories with URLs and slugs",
+          "descriptionFa": "۸۹ دستهٔ گل/گیاه/هدیه با نشانی و شناسه",
+          "descriptionTr": "URL ve kısaltmalarıyla 89 çiçek/bitki/hediye kategorisi"
+        },
+        {
+          "name": "ciceksepeti_price_stats",
+          "description": "Price stats for a query: min/median/mean/max in TRY",
+          "descriptionFa": "آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",
+          "descriptionTr": "Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        {
+          "name": "ciceksepeti_product_reviews",
+          "description": "Recent customer reviews: reviewer, star rating, date",
+          "descriptionFa": "نظرات اخیر مشتریان: نظر‌دهنده، امتیاز ستاره‌ای، تاریخ",
+          "descriptionTr": "Son müşteri yorumları: yorumcu, yıldız puanı, tarih"
+        }
+      ]
+    },
+    {
+      "id": "obilet-mcp",
+      "name": "obilet.com — bus journeys, locations & flight summary",
+      "nameTr": "obilet.com — otobüs seferleri, konumlar ve uçuş özeti",
+      "summary": "Search obilet.com bus locations, list bus journeys for a route + date (partner, seats, price in TRY, stops), read journey details, get price stats, and read the flight summary (count, prices, airlines).",
+      "summaryFa": "جست‌وجوی مکان‌های اتوبوس obilet.com، فهرست سفرهای اتوبوس یک مسیر و تاریخ (شرکت، صندلی، قیمت به لیر، توقف‌ها)، جزئیات سفر، آمار قیمت و خلاصهٔ پروازها (تعداد، قیمت، شرکت‌ها).",
+      "summaryTr": "obilet.com otobüs konumlarında arama, bir güzergâh ve tarih için otobüs seferleri (firma, koltuk, TL fiyat, duraklar), sefer detayları, fiyat istatistikleri ve uçuş özeti (sayı, fiyatlar, havayolları).",
+      "category": "travel",
+      "tags": [
+        "travel",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-07",
+      "repo": "https://github.com/mohammad-abbasi-sh/obilet-mcp",
+      "pypi": "obilet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/obilet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/obilet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "obilet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "obilet_search_locations",
+          "description": "Search bus/flight locations by name",
+          "descriptionFa": "جست‌وجوی مکان‌های اتوبوس/پرواز با نام",
+          "descriptionTr": "Otobüs/uçuş konumlarını adla ara"
+        },
+        {
+          "name": "obilet_search_bus_journeys",
+          "description": "Bus journeys for a route + date, sorted by price, departure or duration",
+          "descriptionFa": "سفرهای اتوبوس یک مسیر و تاریخ، مرتب بر اساس قیمت، حرکت یا مدت",
+          "descriptionTr": "Bir güzergâh ve tarih için otobüs seferleri; fiyat, kalkış veya süreye göre sıralı"
+        },
+        {
+          "name": "obilet_journey_detail",
+          "description": "Full detail of one journey: stops, prices, features",
+          "descriptionFa": "جزئیات کامل یک سفر: توقف‌ها، قیمت‌ها، امکانات",
+          "descriptionTr": "Bir seferin tam detayı: duraklar, fiyatlar, özellikler"
+        },
+        {
+          "name": "obilet_price_stats",
+          "description": "Price stats for a route + date: min/median/mean/max in TRY",
+          "descriptionFa": "آمار قیمت یک مسیر و تاریخ: کمترین/میانه/میانگین/بیشترین به لیر",
+          "descriptionTr": "Bir güzergâh ve tarih için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        {
+          "name": "obilet_flight_summary",
+          "description": "Flight summary: count, min/max price, durations, airlines",
+          "descriptionFa": "خلاصهٔ پروازها: تعداد، کمترین/بیشترین قیمت، مدت‌ها، شرکت‌ها",
+          "descriptionTr": "Uçuş özeti: sayı, min/maks fiyat, süreler, havayolları"
+        }
+      ]
+    },
+    {
+      "id": "biletall-mcp",
+      "name": "biletall.com — bus & flight tickets, routes & prices",
+      "nameTr": "biletall.com — otobüs ve uçak biletleri, güzergâhlar ve fiyatlar",
+      "summary": "Search biletall.com locations (1,726 slugs), list cheapest bus journeys for a route (company, seats, stations, price in TRY), cheapest flights (airline, airports + IATA, dates, prices), price stats, and most-travelled routes.",
+      "summaryFa": "جست‌وجوی بلیط اتوبوس و پرواز در biletall.com: ارزان‌ترین سفرها برای یک مسیر، آمار قیمت، و پرترددترین مسیرها با قیمت (لیر).",
+      "summaryTr": "biletall.com'da otobüs ve uçak bileti arama: bir güzergâh için en ucuz seferler, fiyat istatistikleri ve fiyatlarıyla en çok seyahat edilen güzergâhlar (TL).",
+      "category": "travel",
+      "tags": [
+        "travel",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/biletall-mcp",
+      "pypi": "biletall-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/biletall-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/biletall-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "biletall-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "biletall_search_locations",
+          "description": "Search locations by name (offline, 1,726 slugs)",
+          "descriptionFa": "جست‌وجوی مکان‌ها با نام (آفلاین، ۱٬۷۲۶ شناسه)",
+          "descriptionTr": "Konumları adla ara (çevrimdışı, 1.726 kısaltma)"
+        },
+        {
+          "name": "biletall_bus_route",
+          "description": "Cheapest bus journeys for a route, today",
+          "descriptionFa": "ارزان‌ترین سفرهای اتوبوس یک مسیر، امروز",
+          "descriptionTr": "Bir güzergâh için bugünün en ucuz otobüs seferleri"
+        },
+        {
+          "name": "biletall_flight_route",
+          "description": "Cheapest flights for a route, with dates",
+          "descriptionFa": "ارزان‌ترین پروازهای یک مسیر، با تاریخ‌ها",
+          "descriptionTr": "Bir güzergâh için tarihleriyle en ucuz uçuşlar"
+        },
+        {
+          "name": "biletall_price_stats",
+          "description": "Price stats for a bus route: min/median/mean/max in TRY",
+          "descriptionFa": "آمار قیمت یک مسیر اتوبوس: کمترین/میانه/میانگین/بیشترین به لیر",
+          "descriptionTr": "Bir otobüs güzergâhı için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        {
+          "name": "biletall_popular_routes",
+          "description": "Most-travelled bus routes with prices",
+          "descriptionFa": "پرترددترین مسیرهای اتوبوس با قیمت",
+          "descriptionTr": "Fiyatlarıyla en çok seyahat edilen otobüs güzergâhları"
+        }
+      ]
+    },
+    {
+      "id": "secretcv-mcp",
+      "name": "secretcv.com — job search, listings & sectors",
+      "nameTr": "secretcv.com — iş ilanları, arama ve sektörler",
+      "summary": "Unofficial read-only MCP server for secretcv.com jobs: search, detail, sectors.",
+      "summaryFa": "جست‌وجوی آگهی‌های شغلی secretcv.com: جست‌وجو با کلیدواژه، تازه‌ترین آگهی‌ها، جزئیات کامل یک شغل، و فهرست بخش‌ها و شهرها با تعداد آگهی.",
+      "summaryTr": "secretcv.com iş ilanlarında arama: anahtar kelimeyle arama, en yeni ilanlar, bir işin tam detayı ve iş sayılarıyla sektör ve şehir listeleri.",
+      "category": "jobs",
+      "tags": [
+        "jobs",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/secretcv-mcp",
+      "pypi": "secretcv-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/secretcv-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/secretcv-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "secretcv-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "secretcv_search_jobs",
+          "description": "Search jobs by keyword",
+          "descriptionFa": "جست‌وجوی شغل‌ها با کلیدواژه",
+          "descriptionTr": "Anahtar kelimeyle iş ara"
+        },
+        {
+          "name": "secretcv_latest_jobs",
+          "description": "Latest job listings, newest first",
+          "descriptionFa": "تازه‌ترین آگهی‌های شغلی، از جدیدترین",
+          "descriptionTr": "En yeni iş ilanları, yeniden eskiye"
+        },
+        {
+          "name": "secretcv_get_job",
+          "description": "Full detail for one job",
+          "descriptionFa": "جزئیات کامل یک شغل",
+          "descriptionTr": "Bir işin tam detayı"
+        },
+        {
+          "name": "secretcv_list_sectors",
+          "description": "All sectors with job counts",
+          "descriptionFa": "همهٔ بخش‌ها با تعداد آگهی",
+          "descriptionTr": "İş sayılarıyla tüm sektörler"
+        },
+        {
+          "name": "secretcv_list_cities",
+          "description": "All cities with job counts",
+          "descriptionFa": "همهٔ شهرها با تعداد آگهی",
+          "descriptionTr": "İş sayılarıyla tüm şehirler"
+        }
+      ]
+    },
+    {
+      "id": "biletix-mcp",
+      "name": "biletix.com — events, tickets & venues",
+      "nameTr": "biletix.com — etkinlikler, biletler ve mekânlar",
+      "summary": "Unofficial read-only MCP server for biletix.com events: trending, search, venues.",
+      "summaryFa": "رویدادهای Biletix: کنسرت، تئاتر و ورزش — رویدادهای پرطرفدار، جست‌وجو، جزئیات کامل یک رویداد، دسته‌ها و سالن‌ها.",
+      "summaryTr": "Biletix etkinlikleri: konser, tiyatro ve spor — trend etkinlikler, arama, bir etkinliğin tam detayı, kategoriler ve mekânlar.",
+      "category": "entertainment",
+      "tags": [
+        "entertainment",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/biletix-mcp",
+      "pypi": "biletix-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/biletix-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/biletix-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "biletix-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "biletix_trending",
+          "description": "Trending featured events",
+          "descriptionFa": "رویدادهای پرطرفدار",
+          "descriptionTr": "Trend öne çıkan etkinlikler"
+        },
+        {
+          "name": "biletix_search_events",
+          "description": "Search events in featured listings",
+          "descriptionFa": "جست‌وجوی رویدادها در فهرست منتخب",
+          "descriptionTr": "Öne çıkan listelerde etkinlik ara"
+        },
+        {
+          "name": "biletix_get_event",
+          "description": "Full detail for one event",
+          "descriptionFa": "جزئیات کامل یک رویداد",
+          "descriptionTr": "Bir etkinliğin tam detayı"
+        },
+        {
+          "name": "biletix_list_by_category",
+          "description": "Events by category",
+          "descriptionFa": "رویدادها بر اساس دسته",
+          "descriptionTr": "Kategoriye göre etkinlikler"
+        },
+        {
+          "name": "biletix_list_venues",
+          "description": "All venues",
+          "descriptionFa": "همهٔ سالن‌ها",
+          "descriptionTr": "Tüm mekânlar"
+        },
+        {
+          "name": "biletix_venue_events",
+          "description": "Events at one venue",
+          "descriptionFa": "رویدادهای یک سالن",
+          "descriptionTr": "Bir mekândaki etkinlikler"
+        }
+      ]
+    },
+    {
+      "id": "sozcu-mcp",
+      "name": "sozcu.com.tr — news headlines, articles & market rates",
+      "nameTr": "sozcu.com.tr — haberler, makaleler ve piyasa kurları",
+      "summary": "Unofficial read-only MCP server for sozcu.com.tr news: headlines, articles, rates.",
+      "summaryFa": "اخبار Sözcü: تیترها بر اساس بخش، تازه‌ترین اخبار از بایگانی تاریخ‌دار، متن کامل مقاله، جست‌وجو در بایگانی و نرخ‌های زندهٔ بازار.",
+      "summaryTr": "Sözcü haberleri: bölüme göre manşetler, tarihli arşivden en son haberler, makalenin tam metni, arşivde arama ve canlı piyasa kurları.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/sozcu-mcp",
+      "pypi": "sozcu-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/sozcu-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/sozcu-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "sozcu-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "sozcu_headlines",
+          "description": "Headlines by section",
+          "descriptionFa": "تیترها بر اساس بخش",
+          "descriptionTr": "Bölüme göre manşetler"
+        },
+        {
+          "name": "sozcu_latest",
+          "description": "Latest news from the dated archive",
+          "descriptionFa": "تازه‌ترین اخبار از بایگانی تاریخ‌دار",
+          "descriptionTr": "Tarihli arşivden en son haberler"
+        },
+        {
+          "name": "sozcu_get_article",
+          "description": "Full article text",
+          "descriptionFa": "متن کامل مقاله",
+          "descriptionTr": "Makalenin tam metni"
+        },
+        {
+          "name": "sozcu_search_news",
+          "description": "Search the news archive",
+          "descriptionFa": "جست‌وجو در بایگانی اخبار",
+          "descriptionTr": "Haber arşivinde ara"
+        },
+        {
+          "name": "sozcu_market_rates",
+          "description": "Live market ticker rates",
+          "descriptionFa": "نرخ‌های زندهٔ بازار",
+          "descriptionTr": "Canlı piyasa kurları"
+        }
+      ]
+    },
+    {
+      "id": "eleman-net-mcp",
+      "name": "eleman.net — job listings, sectors & cities",
+      "nameTr": "eleman.net — iş ilanları, sektörler ve şehirler",
+      "summary": "Unofficial read-only MCP server for eleman.net jobs: search, detail, sectors, cities.",
+      "summaryFa": "آگهی‌های شغلی eleman.net: جست‌وجو با کلیدواژه، جزئیات کامل یک شغل، فهرست بخش‌ها و شهرها، و تازه‌ترین آگهی‌ها.",
+      "summaryTr": "eleman.net iş ilanları: anahtar kelimeyle arama, bir işin tam detayı, sektör ve şehir listeleri ve en yeni ilanlar.",
+      "category": "jobs",
+      "tags": [
+        "jobs",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/eleman-net-mcp",
+      "pypi": "eleman-net-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/eleman-net-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/eleman-net-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "eleman-net-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "eleman_search_jobs",
+          "description": "Search jobs by keyword",
+          "descriptionFa": "جست‌وجوی شغل‌ها با کلیدواژه",
+          "descriptionTr": "Anahtar kelimeyle iş ara"
+        },
+        {
+          "name": "eleman_get_job",
+          "description": "Full detail for one job",
+          "descriptionFa": "جزئیات کامل یک شغل",
+          "descriptionTr": "Bir işin tam detayı"
+        },
+        {
+          "name": "eleman_list_sectors",
+          "description": "All sectors",
+          "descriptionFa": "همهٔ بخش‌ها",
+          "descriptionTr": "Tüm sektörler"
+        },
+        {
+          "name": "eleman_list_cities",
+          "description": "All cities",
+          "descriptionFa": "همهٔ شهرها",
+          "descriptionTr": "Tüm şehirler"
+        },
+        {
+          "name": "eleman_new_listings",
+          "description": "Newest listings",
+          "descriptionFa": "تازه‌ترین آگهی‌ها",
+          "descriptionTr": "En yeni ilanlar"
+        }
+      ]
+    },
+    {
+      "id": "mackolik-mcp",
+      "name": "mackolik.com — live scores, results, fixtures & standings",
+      "nameTr": "mackolik.com — canlı skorlar, sonuçlar, fikstür ve puan durumu",
+      "summary": "Unofficial read-only MCP server for mackolik.com live scores, results, fixtures, standings.",
+      "summaryFa": "نتایج زندهٔ Mackolik: مسابقات در حال برگزاری، نتایج یک روز، بازی‌های آینده، جدول لیگ‌ها و جزئیات یک مسابقه.",
+      "summaryTr": "Mackolik canlı skorlar: şu an oynanan maçlar, bir günün sonuçları, yaklaşan fikstürler, lig puan durumları ve bir maçın detayı.",
+      "category": "sports",
+      "tags": [
+        "sports",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/mackolik-mcp",
+      "pypi": "mackolik-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/mackolik-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/mackolik-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "mackolik-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "mackolik_live_scores",
+          "description": "Live matches right now",
+          "descriptionFa": "مسابقات زنده همین حالا",
+          "descriptionTr": "Şu an oynanan canlı maçlar"
+        },
+        {
+          "name": "mackolik_results",
+          "description": "Results for a date",
+          "descriptionFa": "نتایج یک روز",
+          "descriptionTr": "Bir tarihin sonuçları"
+        },
+        {
+          "name": "mackolik_fixtures",
+          "description": "Upcoming fixtures",
+          "descriptionFa": "بازی‌های آینده",
+          "descriptionTr": "Yaklaşan fikstürler"
+        },
+        {
+          "name": "mackolik_standings",
+          "description": "League standings",
+          "descriptionFa": "جدول لیگ‌ها",
+          "descriptionTr": "Lig puan durumları"
+        },
+        {
+          "name": "mackolik_match_detail",
+          "description": "Detail for one match",
+          "descriptionFa": "جزئیات یک مسابقه",
+          "descriptionTr": "Bir maçın detayı"
+        }
+      ]
+    },
+    {
+      "id": "donanimhaber-mcp",
+      "name": "donanimhaber.com — tech news, articles & hot forum topics",
+      "nameTr": "donanimhaber.com — teknoloji haberleri, makaleler ve popüler forum konuları",
+      "summary": "Unofficial read-only MCP server for donanimhaber.com tech news and forum: latest, search, articles.",
+      "summaryFa": "اخبار فناوری DonanımHaber: تازه‌ترین مقاله‌ها، جست‌وجوی اخبار، متن کامل مقاله، مقاله‌های یک بخش، همهٔ بخش‌ها و موضوعات داغ انجمن.",
+      "summaryTr": "DonanımHaber teknoloji haberleri: en son makaleler, haber araması, makalenin tam metni, bir bölümün makaleleri, tüm bölümler ve forumun sıcak konuları.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/donanimhaber-mcp",
+      "pypi": "donanimhaber-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/donanimhaber-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/donanimhaber-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "donanimhaber-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "donanimhaber_latest",
+          "description": "Latest tech articles",
+          "descriptionFa": "تازه‌ترین مقاله‌های فناوری",
+          "descriptionTr": "En son teknoloji makaleleri"
+        },
+        {
+          "name": "donanimhaber_search_news",
+          "description": "Search news (Turkish-aware filter)",
+          "descriptionFa": "جست‌وجوی اخبار (فیلتر آگاه به ترکی)",
+          "descriptionTr": "Haber ara (Türkçe duyarlı filtre)"
+        },
+        {
+          "name": "donanimhaber_get_article",
+          "description": "Full article text",
+          "descriptionFa": "متن کامل مقاله",
+          "descriptionTr": "Makalenin tam metni"
+        },
+        {
+          "name": "donanimhaber_section",
+          "description": "Articles in one section",
+          "descriptionFa": "مقاله‌های یک بخش",
+          "descriptionTr": "Bir bölümün makaleleri"
+        },
+        {
+          "name": "donanimhaber_sections",
+          "description": "All sections",
+          "descriptionFa": "همهٔ بخش‌ها",
+          "descriptionTr": "Tüm bölümler"
+        },
+        {
+          "name": "donanimhaber_forum_hot",
+          "description": "Hot forum topics",
+          "descriptionFa": "موضوعات داغ انجمن",
+          "descriptionTr": "Forumun sıcak konuları"
+        }
+      ]
+    },
+    {
+      "id": "yemek-com-mcp",
+      "name": "Yemek.com — Turkish recipes, categories & videos",
+      "nameTr": "Yemek.com — Türk yemek tarifleri, kategoriler ve videolar",
+      "summary": "Unofficial read-only MCP server for Yemek.com Turkish recipes — search, full recipes, categories.",
+      "summaryFa": "رسپی‌های Yemek.com: جست‌وجوی رسپی با کلیدواژه، رسپی کامل با مواد و مراحل و امتیاز، دسته‌ها، رسپی‌های پرطرفدار، ویدیوها و محبوب‌ترین‌ها.",
+      "summaryTr": "Yemek.com tarifleri: anahtar kelimeyle tarif ara, malzemeler, adımlar ve puanla tam tarif, kategoriler, trend tarifler, videolar ve en popülerler.",
+      "category": "food",
+      "tags": [
+        "food",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/yemek-com-mcp",
+      "pypi": "yemek-com-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/yemek-com-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/yemek-com-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "yemek-com-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "yemek_search_recipes",
+          "description": "Search recipes by keyword",
+          "descriptionFa": "جست‌وجوی رسپی با کلیدواژه",
+          "descriptionTr": "Anahtar kelimeyle tarif ara"
+        },
+        {
+          "name": "yemek_get_recipe",
+          "description": "Full recipe: ingredients, steps, rating",
+          "descriptionFa": "رسپی کامل: مواد، مراحل، امتیاز",
+          "descriptionTr": "Tam tarif: malzemeler, adımlar, puan"
+        },
+        {
+          "name": "yemek_list_categories",
+          "description": "All recipe categories",
+          "descriptionFa": "همهٔ دسته‌های رسپی",
+          "descriptionTr": "Tüm tarif kategorileri"
+        },
+        {
+          "name": "yemek_list_trending",
+          "description": "Trending recipes",
+          "descriptionFa": "رسپی‌های پرطرفدار",
+          "descriptionTr": "Trend tarifler"
+        },
+        {
+          "name": "yemek_list_videos",
+          "description": "Recipe videos",
+          "descriptionFa": "ویدیوهای رسپی",
+          "descriptionTr": "Tarif videoları"
+        },
+        {
+          "name": "yemek_list_popular",
+          "description": "Most popular recipes",
+          "descriptionFa": "محبوب‌ترین رسپی‌ها",
+          "descriptionTr": "En popüler tarifler"
+        }
+      ]
+    },
+    {
+      "id": "hurriyet-mcp",
+      "name": "Hürriyet — news headlines, articles & search",
+      "nameTr": "Hürriyet — haberler, makaleler ve arama",
+      "summary": "Unofficial read-only MCP server for Hürriyet news — headlines, full articles, search.",
+      "summaryFa": "اخبار Hürriyet: تیترها بر اساس بخش، متن کامل مقاله، جست‌وجوی اخبار با کلیدواژه، تازه‌ترین اخبار از صفحهٔ اصلی و همهٔ بخش‌های خبری.",
+      "summaryTr": "Hürriyet haberleri: bölüme göre manşetler, makalenin tam metni, anahtar kelimeyle haber araması, ana sayfadan en son haberler ve tüm haber bölümleri.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/hurriyet-mcp",
+      "pypi": "hurriyet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/hurriyet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/hurriyet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "hurriyet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "hurriyet_get_headlines",
+          "description": "Headlines by section",
+          "descriptionFa": "تیترها بر اساس بخش",
+          "descriptionTr": "Bölüme göre manşetler"
+        },
+        {
+          "name": "hurriyet_get_article",
+          "description": "Full article text",
+          "descriptionFa": "متن کامل مقاله",
+          "descriptionTr": "Makalenin tam metni"
+        },
+        {
+          "name": "hurriyet_search_news",
+          "description": "Search news by keyword",
+          "descriptionFa": "جست‌وجوی اخبار با کلیدواژه",
+          "descriptionTr": "Anahtar kelimeyle haber ara"
+        },
+        {
+          "name": "hurriyet_get_latest",
+          "description": "Latest news from the homepage",
+          "descriptionFa": "تازه‌ترین اخبار از صفحهٔ اصلی",
+          "descriptionTr": "Ana sayfadan en son haberler"
+        },
+        {
+          "name": "hurriyet_list_categories",
+          "description": "All news sections",
+          "descriptionFa": "همهٔ بخش‌های خبری",
+          "descriptionTr": "Tüm haber bölümleri"
+        }
+      ]
+    },
+    {
+      "id": "sok-mcp",
+      "name": "ŞOK — grocery products, categories, campaigns & prices",
+      "nameTr": "ŞOK — market ürünleri, kategoriler, kampanyalar ve fiyatlar",
+      "summary": "Unofficial read-only MCP server for ŞOK grocery — products, categories, campaigns, prices.",
+      "summaryFa": "سوپرمارکت ŞOK: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۹ دسته، کالاهای یک دسته، کمپین‌های جاری و آمار قیمت (لیر).",
+      "summaryTr": "ŞOK market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 19 kategori, bir kategorinin ürünleri, güncel kampanyalar ve fiyat istatistikleri (TL).",
+      "category": "grocery",
+      "tags": [
+        "grocery",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/sok-mcp",
+      "pypi": "sok-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/sok-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/sok-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "sok-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "sok_search_products",
+          "description": "Search products by keyword",
+          "descriptionFa": "جست‌وجوی کالا با کلیدواژه",
+          "descriptionTr": "Anahtar kelimeyle ürün ara"
+        },
+        {
+          "name": "sok_get_product",
+          "description": "Full detail for one product",
+          "descriptionFa": "جزئیات کامل یک کالا",
+          "descriptionTr": "Bir ürünün tam detayı"
+        },
+        {
+          "name": "sok_list_categories",
+          "description": "All 19 categories",
+          "descriptionFa": "همهٔ ۱۹ دسته",
+          "descriptionTr": "19 kategorinin tamamı"
+        },
+        {
+          "name": "sok_category_products",
+          "description": "Products in one category",
+          "descriptionFa": "کالاهای یک دسته",
+          "descriptionTr": "Bir kategorinin ürünleri"
+        },
+        {
+          "name": "sok_list_promotions",
+          "description": "Current campaigns",
+          "descriptionFa": "کمپین‌های جاری",
+          "descriptionTr": "Güncel kampanyalar"
+        },
+        {
+          "name": "sok_price_stats",
+          "description": "Price stats for a query in TRY",
+          "descriptionFa": "آمار قیمت یک جست‌وجو به لیر",
+          "descriptionTr": "Bir sorgu için fiyat istatistikleri (TL)"
+        }
+      ]
+    },
+    {
+      "id": "jolly-tur-mcp",
+      "name": "Jolly Tur — hotels, live prices & campaigns",
+      "nameTr": "Jolly Tur — oteller, canlı fiyatlar ve kampanyalar",
+      "summary": "Unofficial read-only MCP server for Jolly Tur hotels — search, live prices, hotel detail, campaigns.",
+      "summaryFa": "هتل‌های Jolly Tur: جست‌وجوی هتل با قیمت‌های زنده، جزئیات کامل یک هتل و کمپین‌های جاری.",
+      "summaryTr": "Jolly Tur otelleri: canlı fiyatlarla otel ara, bir otelin tam detayı ve güncel kampanyalar.",
+      "category": "travel",
+      "tags": [
+        "travel",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/jolly-tur-mcp",
+      "pypi": "jolly-tur-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/jolly-tur-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/jolly-tur-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "jolly-tur-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "jolly_search_hotels",
+          "description": "Search hotels with live prices",
+          "descriptionFa": "جست‌وجوی هتل با قیمت‌های زنده",
+          "descriptionTr": "Canlı fiyatlarla otel ara"
+        },
+        {
+          "name": "jolly_get_hotel",
+          "description": "Full detail for one hotel",
+          "descriptionFa": "جزئیات کامل یک هتل",
+          "descriptionTr": "Bir otelin tam detayı"
+        },
+        {
+          "name": "jolly_list_campaigns",
+          "description": "Current campaigns",
+          "descriptionFa": "کمپین‌های جاری",
+          "descriptionTr": "Güncel kampanyalar"
+        }
+      ]
+    },
+    {
+      "id": "migros-mcp",
+      "name": "Migros Sanal Market — products, prices, promos & categories",
+      "nameTr": "Migros Sanal Market — ürünler, fiyatlar, kampanyalar ve kategoriler",
+      "summary": "Unofficial MCP server for Migros Sanal Market — search, prices, promos, categories, cart. Optional local-session account actions: view/add/remove cart items, change quantities and start checkout (returns the payment link; never pays). Needs your own browser session cookie.",
+      "summaryFa": "سوپرمارکت Migros Sanal Market: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۱ دسته، تبلیغات جاری و آمار قیمت (لیر). اقدامات حساب اختیاری با نشست محلی: مشاهده/افزودن/حذف اقلام سبد، تغییر تعداد و شروع پرداخت (فقط لینک پرداخت؛ هرگز پرداخت نمی‌کند).",
+      "summaryTr": "Migros Sanal Market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 11 kategori, güncel promosyonlar ve fiyat istatistikleri (TL). İsteğe bağlı yerel oturumlu hesap işlemleri: sepeti görüntüleme/ekleme/silme, miktar değiştirme ve ödeme başlatma (yalnızca ödeme bağlantısı; asla ödeme yapmaz).",
+      "category": "grocery",
+      "tags": [
+        "grocery",
+        "turkey",
+        "read-only",
+        "account-actions"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": true,
+      "version": "0.2.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/migros-mcp",
+      "pypi": "migros-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/migros-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/migros-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "migros-mcp"
+        ],
+        "env": {
+          "MIGROS_SESSION": "YOUR_SESSION_COOKIE_HERE"
+        }
+      },
+      "tools": [
+        {
+          "name": "migros_search_products",
+          "description": "Search products by keyword",
+          "descriptionFa": "جست‌وجوی کالا با کلیدواژه",
+          "descriptionTr": "Anahtar kelimeyle ürün ara"
+        },
+        {
+          "name": "migros_get_product",
+          "description": "Full detail for one product",
+          "descriptionFa": "جزئیات کامل یک کالا",
+          "descriptionTr": "Bir ürünün tam detayı"
+        },
+        {
+          "name": "migros_list_categories",
+          "description": "All 11 categories",
+          "descriptionFa": "همهٔ ۱۱ دسته",
+          "descriptionTr": "11 kategorinin tamamı"
+        },
+        {
+          "name": "migros_list_promotions",
+          "description": "Current promotions",
+          "descriptionFa": "تبلیغات جاری",
+          "descriptionTr": "Güncel promosyonlar"
+        },
+        {
+          "name": "migros_price_stats",
+          "description": "Price stats for a query in TRY",
+          "descriptionFa": "آمار قیمت یک جست‌وجو به لیر",
+          "descriptionTr": "Bir sorgu için fiyat istatistikleri (TL)"
+        },
+        {
+          "name": "migros_view_cart",
+          "description": "View your cart: items, quantities, totals",
+          "descriptionFa": "مشاهدهٔ سبد خرید: اقلام، تعداد، جمع",
+          "descriptionTr": "Sepeti görüntüle: ürünler, adetler, toplamlar"
+        },
+        {
+          "name": "migros_add_to_cart",
+          "description": "Add a product to your cart (confirm=true)",
+          "descriptionFa": "افزودن کالا به سبد خرید (تأیید لازم است)",
+          "descriptionTr": "Sepete ürün ekle (onay gerekli)"
+        },
+        {
+          "name": "migros_remove_from_cart",
+          "description": "Remove a product from your cart (confirm=true)",
+          "descriptionFa": "حذف کالا از سبد خرید (تأیید لازم است)",
+          "descriptionTr": "Sepetten ürün çıkar (onay gerekli)"
+        },
+        {
+          "name": "migros_update_cart_quantity",
+          "description": "Change a cart item's quantity (confirm=true)",
+          "descriptionFa": "تغییر تعداد یک قلم سبد (تأیید لازم است)",
+          "descriptionTr": "Sepet ürününün adedini değiştir (onay gerekli)"
+        },
+        {
+          "name": "migros_create_order",
+          "description": "Start checkout: returns the payment link, never pays",
+          "descriptionFa": "شروع پرداخت: فقط لینک پرداخت، هرگز پرداخت نمی‌کند",
+          "descriptionTr": "Ödemeyi başlat: yalnızca ödeme bağlantısı, asla ödeme yapmaz"
+        }
+      ]
+    },
+    {
+      "id": "paribu-cineverse-mcp",
+      "name": "Paribu Cineverse — now showing, coming soon & showtimes",
+      "nameTr": "Paribu Cineverse — vizyondakiler, yakında gelecekler ve seanslar",
+      "summary": "Unofficial read-only MCP server for Paribu Cineverse cinemas — now showing, coming soon, showtimes.",
+      "summaryFa": "سینماهای Paribu Cineverse: فیلم‌های در حال اکران، فیلم‌های آینده، جزئیات کامل یک فیلم، همهٔ سینماها و ساعت نمایش فیلم‌ها.",
+      "summaryTr": "Paribu Cineverse sinemaları: vizyondaki filmler, yakında gelecek filmler, bir filmin tam detayı, tüm sinemalar ve film seansları.",
+      "category": "entertainment",
+      "tags": [
+        "entertainment",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/paribu-cineverse-mcp",
+      "pypi": "paribu-cineverse-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/paribu-cineverse-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/paribu-cineverse-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "paribu-cineverse-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "cineverse_list_now_showing",
+          "description": "Films now showing",
+          "descriptionFa": "فیلم‌های در حال اکران",
+          "descriptionTr": "Vizyondaki filmler"
+        },
+        {
+          "name": "cineverse_list_coming_soon",
+          "description": "Coming soon films",
+          "descriptionFa": "فیلم‌های آینده",
+          "descriptionTr": "Yakında gelecek filmler"
+        },
+        {
+          "name": "cineverse_get_movie",
+          "description": "Full detail for one film",
+          "descriptionFa": "جزئیات کامل یک فیلم",
+          "descriptionTr": "Bir filmin tam detayı"
+        },
+        {
+          "name": "cineverse_list_cinemas",
+          "description": "All cinemas, optional city filter",
+          "descriptionFa": "همهٔ سینماها، با فیلتر شهر",
+          "descriptionTr": "Tüm sinemalar, isteğe bağlı şehir filtresi"
+        },
+        {
+          "name": "cineverse_get_showtimes",
+          "description": "Showtimes for a film/cinema",
+          "descriptionFa": "ساعت نمایش یک فیلم/سینما",
+          "descriptionTr": "Bir film/sinema için seanslar"
+        }
+      ]
+    },
+    {
+      "id": "trthaber-mcp",
+      "name": "TRT Haber — headlines, breaking news & full articles",
+      "nameTr": "TRT Haber — manşetler, son dakika ve haber metinleri",
+      "summary": "Unofficial read-only MCP server for trthaber.com (TRT Haber) — headlines, breaking news, articles, search.",
+      "summaryFa": "اخبار TRT Haber: تیترها بر اساس دسته، خبرهای فوری از جدیدترین، متن کامل یک مقاله، جست‌وجوی اخبار با کلیدواژه و ۱۸ دستهٔ خبری.",
+      "summaryTr": "TRT Haber: kategoriye göre manşetler, en yeni son dakika haberleri, bir makalenin tam metni, anahtar kelimeyle haber araması ve 18 haber kategorisi.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-08",
+      "repo": "https://github.com/mohammad-abbasi-sh/trthaber-mcp",
+      "pypi": "trthaber-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/trthaber-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/trthaber-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "trthaber-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "trthaber_headlines",
+          "description": "Headlines by category",
+          "descriptionFa": "تیترها بر اساس دسته",
+          "descriptionTr": "Kategoriye göre manşetler"
+        },
+        {
+          "name": "trthaber_latest",
+          "description": "Breaking news, newest first",
+          "descriptionFa": "خبرهای فوری، از جدیدترین",
+          "descriptionTr": "Son dakika haberleri, yeniden eskiye"
+        },
+        {
+          "name": "trthaber_get_article",
+          "description": "Full text of one article",
+          "descriptionFa": "متن کامل یک مقاله",
+          "descriptionTr": "Bir makalenin tam metni"
+        },
+        {
+          "name": "trthaber_search_news",
+          "description": "Keyword search over current news",
+          "descriptionFa": "جست‌وجوی اخبار جاری با کلیدواژه",
+          "descriptionTr": "Güncel haberlerde anahtar kelimeyle arama"
+        },
+        {
+          "name": "trthaber_list_categories",
+          "description": "The 18 news categories",
+          "descriptionFa": "۱۸ دستهٔ خبری",
+          "descriptionTr": "18 haber kategorisi"
+        }
+      ]
+    },
+    {
+      "id": "tff-mcp",
+      "name": "Turkish Football Federation — standings, fixtures & match details",
+      "nameTr": "Türkiye Futbol Federasyonu — puan cetveli, fikstür ve maç detayları",
+      "summary": "Unofficial read-only MCP server for tff.org (TFF) — league standings, fixtures, match details, top scorers.",
+      "summaryFa": "فدراسیون فوتبال ترکیه (TFF): جدول لیگ‌ها، بازی‌ها و نتایج هفتگی، جزئیات کامل یک بازی و گلزنان برتر — ۱۸ لیگ.",
+      "summaryTr": "Türkiye Futbol Federasyonu (TFF): lig puan durumları, haftalık fikstür ve sonuçlar, bir maçın tam detayı ve gol krallığı — 18 lig.",
+      "category": "sports",
+      "tags": [
+        "sports",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-09",
+      "repo": "https://github.com/mohammad-abbasi-sh/tff-mcp",
+      "pypi": "tff-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/tff-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/tff-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "tff-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "tff_list_leagues",
+          "description": "The 18 covered leagues",
+          "descriptionFa": "۱۸ لیگ تحت پوشش",
+          "descriptionTr": "Kapsanan 18 lig"
+        },
+        {
+          "name": "tff_standings",
+          "description": "League standings (puan cetveli)",
+          "descriptionFa": "جدول لیگ",
+          "descriptionTr": "Lig puan durumu"
+        },
+        {
+          "name": "tff_fixtures",
+          "description": "Fixtures and results by week",
+          "descriptionFa": "بازی‌ها و نتایج هفته",
+          "descriptionTr": "Haftanın fikstürü ve sonuçları"
+        },
+        {
+          "name": "tff_match_detail",
+          "description": "Full match detail: officials, goals, lineups",
+          "descriptionFa": "جزئیات کامل یک بازی: داوران، گل‌ها، ترکیب",
+          "descriptionTr": "Bir maçın tam detayı: hakemler, goller, kadrolar"
+        },
+        {
+          "name": "tff_top_scorers",
+          "description": "Top scorers (gol krallığı)",
+          "descriptionFa": "گلزنان برتر",
+          "descriptionTr": "Gol krallığı"
+        }
+      ]
+    },
+    {
+      "id": "bim-mcp",
+      "name": "bim.com.tr (BİM) — weekly Aktüel deals, prices & categories",
+      "nameTr": "bim.com.tr (BİM) — haftalık Aktüel ürünler, fiyatlar ve kategoriler",
+      "summary": "Unofficial read-only MCP server for bim.com.tr (BİM discount grocery) — weekly Aktüel deals, prices, categories, provinces.",
+      "summaryFa": "فروشگاه تخفیفی BİM (بزرگ‌ترین زنجیرهٔ تخفیفی ترکیه، ۱۳٬۰۳۲ شعبه): پیشنهادهای هفتگی آکتوئل با قیمت (لیر)، جست‌وجوی محصول، آمار قیمت، ۱۱ دسته و ۸۱ استان.",
+      "summaryTr": "BİM indirim marketi (Türkiye'nin en büyük indirim zinciri, 13.032 mağaza): haftalık Aktüel ürünleri fiyatlarıyla (TL), ürün arama, fiyat istatistikleri, 11 kategori ve 81 il.",
+      "category": "grocery",
+      "tags": [
+        "grocery",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-10",
+      "repo": "https://github.com/mohammad-abbasi-sh/bim-mcp",
+      "pypi": "bim-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/bim-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/bim-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "bim-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "bim_list_aktuel_dates",
+          "description": "Aktüel + İndirim date periods with keys",
+          "descriptionFa": "دوره‌های آکتوئل و ایندیریم با کلید تاریخ",
+          "descriptionTr": "Aktüel ve İndirim tarih dönemleri ve anahtarları"
+        },
+        {
+          "name": "bim_aktuel_products",
+          "description": "Priced Aktüel products for one week (filter + sort)",
+          "descriptionFa": "محصولات قیمت‌دار آکتوئل یک هفته (جست‌وجو و مرتب‌سازی)",
+          "descriptionTr": "Bir haftanın fiyatlı Aktüel ürünleri (arama ve sıralama)"
+        },
+        {
+          "name": "bim_product_detail",
+          "description": "Full detail for one Aktüel product",
+          "descriptionFa": "جزئیات کامل یک محصول آکتوئل",
+          "descriptionTr": "Bir Aktüel ürününün tam detayı"
+        },
+        {
+          "name": "bim_price_stats",
+          "description": "Price stats for one Aktüel week (TRY)",
+          "descriptionFa": "آمار قیمت یک هفتهٔ آکتوئل (لیر)",
+          "descriptionTr": "Bir Aktüel haftasının fiyat istatistikleri (TL)"
+        },
+        {
+          "name": "bim_list_categories",
+          "description": "The 11 product-range categories",
+          "descriptionFa": "۱۱ دستهٔ محصولات",
+          "descriptionTr": "11 ürün kategorisi"
+        },
+        {
+          "name": "bim_list_cities",
+          "description": "The 81 provinces in the store finder",
+          "descriptionFa": "۸۱ استان در یابندهٔ فروشگاه",
+          "descriptionTr": "Mağaza bulucudaki 81 il"
+        },
+        {
+          "name": "bim_health",
+          "description": "Check whether bim.com.tr is reachable",
+          "descriptionFa": "بررسی در دسترس بودن bim.com.tr",
+          "descriptionTr": "bim.com.tr erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "tabii-mcp",
+      "name": "tabii.com (TRT) — streaming catalog, live channels & people",
+      "nameTr": "tabii.com (TRT) — dizi/film kataloğu, canlı kanallar ve oyuncular",
+      "summary": "Unofficial read-only MCP server for tabii.com (TRT streaming) — catalog search, show details, live channels, people.",
+      "summaryFa": "پلتفرم استریم TRT (تابی، بیش از ۱۱ میلیون مشترک): جست‌وجوی کاتالوگ با عنوان اصلی ترکی، جزئیات کامل هر عنوان (فصل‌ها، قسمت‌ها، بازیگران و زبان‌ها)، ۱۵ کانال زندهٔ TRT با آدرس استریم و فیلم‌شناسی بازیگران.",
+      "summaryTr": "TRT'nin dijital platformu tabii (11 milyondan fazla abone): orijinal Türkçe başlığa göre katalog araması, bir içeriğin tam detayı (sezonlar, bölümler, oyuncular ve diller), 15 canlı TRT kanalı ve oyuncu filmografileri.",
+      "category": "entertainment",
+      "tags": [
+        "entertainment",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-11",
+      "repo": "https://github.com/mohammad-abbasi-sh/tabii-mcp",
+      "pypi": "tabii-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/tabii-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/tabii-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "tabii-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "tabii_search_content",
+          "description": "Search the catalog by original Turkish title",
+          "descriptionFa": "جست‌وجوی کاتالوگ با عنوان اصلی ترکی",
+          "descriptionTr": "Orijinal Türkçe başlığa göre katalog araması"
+        },
+        {
+          "name": "tabii_get_show",
+          "description": "Full detail for one title (seasons, episodes, cast)",
+          "descriptionFa": "جزئیات کامل یک عنوان (فصل‌ها، قسمت‌ها، بازیگران)",
+          "descriptionTr": "Bir içeriğin tam detayı (sezonlar, bölümler, oyuncular)"
+        },
+        {
+          "name": "tabii_homepage",
+          "description": "Current homepage sections (exclusive, series, movies...)",
+          "descriptionFa": "بخش‌های فعلی صفحهٔ اصلی",
+          "descriptionTr": "Ana sayfanın güncel bölümleri"
+        },
+        {
+          "name": "tabii_live_channels",
+          "description": "The 15 live TRT channels with HLS stream URLs",
+          "descriptionFa": "۱۵ کانال زندهٔ TRT با آدرس استریم",
+          "descriptionTr": "HLS yayın adresleriyle 15 canlı TRT kanalı"
+        },
+        {
+          "name": "tabii_get_person",
+          "description": "One cast/crew member by id, with filmography",
+          "descriptionFa": "یک بازیگر/عضو عوامل با فیلم‌شناسی",
+          "descriptionTr": "Filmografisiyle bir oyuncu/ekip üyesi"
+        },
+        {
+          "name": "tabii_health",
+          "description": "Check whether tabii.com is reachable",
+          "descriptionFa": "بررسی در دسترس بودن tabii.com",
+          "descriptionTr": "tabii.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "eksisozluk-mcp",
+      "name": "eksisozluk.com (Ekşi Sözlük) — topics, entries & search",
+      "nameTr": "eksisozluk.com — gündem başlıkları, entry'ler ve arama",
+      "summary": "Unofficial read-only MCP server for eksisozluk.com (Ekşi Sözlük) — trending topics, entries, search, channels, debe.",
+      "summaryFa": "اکشی سوزلوک، فرهنگ لغت مشارکتی و پلتفرم اجتماعی نمادین ترکیه: عنوان‌های داغ گوندم با تعداد ورودی، جست‌وجوی عنوان، ورودی‌های هر موضوع با مرتب‌سازی شوکلا و صفحه‌بندی، عنوان‌های کانال‌ها و محبوب‌ترین ورودی‌های دیروز.",
+      "summaryTr": "Türkiye'nin ikonik işbirlikçi sözlüğü ve sosyal platformu Ekşi Sözlük: entry sayılarıyla gündem başlıkları, başlık araması, şükela sıralamalı ve sayfalı entry'ler, kanal başlıkları ve dünün en beğenilen entry'leri.",
+      "category": "communication",
+      "tags": [
+        "communication",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-12",
+      "repo": "https://github.com/mohammad-abbasi-sh/eksisozluk-mcp",
+      "pypi": "eksisozluk-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/eksisozluk-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/eksisozluk-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "eksisozluk-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "eksisozluk_trending",
+          "description": "Gündem — trending topics with entry counts",
+          "descriptionFa": "عنوان‌های داغ گوندم با تعداد ورودی",
+          "descriptionTr": "Entry sayılarıyla gündem başlıkları"
+        },
+        {
+          "name": "eksisozluk_search_topics",
+          "description": "Search topic titles (partial matches welcome)",
+          "descriptionFa": "جست‌وجوی عنوان‌ها (تطابق جزئی هم قبول است)",
+          "descriptionTr": "Başlık araması (kısmi eşleşme olur)"
+        },
+        {
+          "name": "eksisozluk_get_topic",
+          "description": "Entries of one topic (recent / şükela sorts, pages)",
+          "descriptionFa": "ورودی‌های یک موضوع (مرتب‌سازی شوکلا، صفحه‌بندی)",
+          "descriptionTr": "Bir başlığın entry'leri (şükela sıralama, sayfalama)"
+        },
+        {
+          "name": "eksisozluk_channel_topics",
+          "description": "Topics of one channel (spor, siyaset, ...)",
+          "descriptionFa": "عنوان‌های یک کانال (ورزش، سیاست و …)",
+          "descriptionTr": "Bir kanalın başlıkları (spor, siyaset, ...)"
+        },
+        {
+          "name": "eksisozluk_debe",
+          "description": "Yesterday's most-liked entries, grouped by topic",
+          "descriptionFa": "محبوب‌ترین ورودی‌های دیروز، گروه‌بندی‌شده",
+          "descriptionTr": "Dünün en beğenilen entry'leri, başlığa göre gruplu"
+        },
+        {
+          "name": "eksisozluk_health",
+          "description": "Check whether eksisozluk.com is reachable",
+          "descriptionFa": "بررسی در دسترس بودن eksisozluk.com",
+          "descriptionTr": "eksisozluk.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "iskur-mcp",
+      "name": "İŞKUR — open job listings, details & announcements",
+      "nameTr": "İŞKUR — açık iş ilanları, iş detayı ve duyurular",
+      "summary": "Open job listings from İŞKUR (iskur.gov.tr), the Turkish Employment Agency — search, details, provinces & announcements.",
+      "summaryFa": "سازمان کاریابی ترکیه (İŞKUR): جست‌وجوی آگهی‌های شغلی آزاد با کلیدواژه و شهر، آگهی‌های ۲۴ ساعت گذشته، جزئیات کامل هر آگهی (توضیحات، مهارت‌ها، تحصیلات)، ۸۱ استان و اطلاعیه‌های رسمی.",
+      "summaryTr": "Türkiye İş Kurumu (İŞKUR): anahtar kelime ve şehre göre açık iş ilanı arama, son 24 saatin ilanları, bir ilanın tam detayı (açıklama, nitelikler, eğitim), 81 il ve resmî duyurular.",
+      "category": "jobs",
+      "tags": [
+        "jobs",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-13",
+      "repo": "https://github.com/mohammad-abbasi-sh/iskur-mcp",
+      "pypi": "iskur-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/iskur-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/iskur-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "iskur-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "iskur_search_jobs",
+          "description": "Search open job listings (keyword, city, date range, work type, education)",
+          "descriptionFa": "جست‌وجوی آگهی‌های شغلی (کلیدواژه، شهر، تاریخ)",
+          "descriptionTr": "Açık iş ilanı arama (anahtar kelime, şehir, tarih)"
+        },
+        {
+          "name": "iskur_latest_jobs",
+          "description": "Jobs posted in the last 24 hours, optionally in one city",
+          "descriptionFa": "آگهی‌های ۲۴ ساعت گذشته",
+          "descriptionTr": "Son 24 saatin ilanları"
+        },
+        {
+          "name": "iskur_get_job",
+          "description": "Detail of one listing (description, skills, occupation, education)",
+          "descriptionFa": "جزئیات یک آگهی (توضیحات، مهارت‌ها، تحصیلات)",
+          "descriptionTr": "Bir ilanın tam detayı (açıklama, nitelikler, eğitim)"
+        },
+        {
+          "name": "iskur_list_cities",
+          "description": "The 81 provinces with codes",
+          "descriptionFa": "۸۱ استان با کد",
+          "descriptionTr": "Kodlarıyla 81 il"
+        },
+        {
+          "name": "iskur_list_announcements",
+          "description": "İŞKUR official announcements",
+          "descriptionFa": "اطلاعیه‌های رسمی İŞKUR",
+          "descriptionTr": "İŞKUR resmî duyuruları"
+        },
+        {
+          "name": "iskur_health",
+          "description": "Check whether the İŞKUR job portal is reachable",
+          "descriptionFa": "بررسی در دسترس بودن پورتال İŞKUR",
+          "descriptionTr": "İŞKUR portalına erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "beyazperde-mcp",
+      "name": "Beyazperde — now showing, search, showtimes & news",
+      "nameTr": "Beyazperde — vizyondakiler, film arama, seanslar ve haberler",
+      "summary": "Beyazperde (beyazperde.com) — now showing, movie search, details, showtimes, news & cities.",
+      "summaryFa": "بیازپرده، پورتال پیشروی سینمای ترکیه: فیلم‌های روی پرده با تاریخ اکران، مدت، ژانر، کارگردان و بازیگران؛ جست‌وجوی فیلم با عنوان ترکی؛ جزئیات کامل هر فیلم (خلاصه، کارگردان، بازیگران، امتیازها)؛ سانس‌های امروز هر فیلم در هر شهر (سینماها، نسخه‌ها و ساعت‌ها)؛ تازه‌ترین اخبار سینما و ۸۵ شهر با کد جغرافیایی.",
+      "summaryTr": "Türkiye'nin önde gelen sinema portalı Beyazperde: vizyondaki filmler (vizyon tarihi, süre, tür, yönetmen, oyuncular), Türkçe başlığa göre film arama, bir filmin tam detayı (özet, yönetmen, oyuncular, puanlar), bir filmin bir şehirdeki bugünkü seansları (sinemalar, versiyonlar, saatler), güncel sinema haberleri ve 85 şehir.",
+      "category": "entertainment",
+      "tags": [
+        "entertainment",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-14",
+      "repo": "https://github.com/mohammad-abbasi-sh/beyazperde-mcp",
+      "pypi": "beyazperde-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/beyazperde-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/beyazperde-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "beyazperde-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "beyazperde_now_showing",
+          "description": "Movies now showing in Turkish cinemas (title, release date, duration, genres, director, cast)",
+          "descriptionFa": "فیلم‌های روی پرده (تاریخ، مدت، ژانر، کارگردان)",
+          "descriptionTr": "Vizyondaki filmler (tarih, süre, tür, yönetmen)"
+        },
+        {
+          "name": "beyazperde_search_movies",
+          "description": "Search movies by title (Turkish title, original title, year, director, genres)",
+          "descriptionFa": "جست‌وجوی فیلم با عنوان ترکی",
+          "descriptionTr": "Türkçe başlığa göre film arama"
+        },
+        {
+          "name": "beyazperde_get_movie",
+          "description": "Detail of one movie (synopsis, director, cast, genres, duration, ratings)",
+          "descriptionFa": "جزئیات یک فیلم (خلاصه، بازیگران، امتیازها)",
+          "descriptionTr": "Bir filmin tam detayı (özet, oyuncular, puanlar)"
+        },
+        {
+          "name": "beyazperde_showtimes",
+          "description": "Today's showtimes for a movie in a city (cinemas, versions, times)",
+          "descriptionFa": "سانس‌های امروز یک فیلم در یک شهر",
+          "descriptionTr": "Bir filmin bir şehirdeki bugünkü seansları"
+        },
+        {
+          "name": "beyazperde_latest_news",
+          "description": "Latest cinema news from Beyazperde",
+          "descriptionFa": "تازه‌ترین اخبار سینما",
+          "descriptionTr": "Güncel sinema haberleri"
+        },
+        {
+          "name": "beyazperde_list_cities",
+          "description": "The 85 cities (with geocodes) showtimes can be listed for",
+          "descriptionFa": "۸۵ شهر با کد جغرافیایی",
+          "descriptionTr": "Kodlarıyla 85 şehir"
+        },
+        {
+          "name": "beyazperde_health",
+          "description": "Check whether beyazperde.com is reachable",
+          "descriptionFa": "بررسی در دسترس بودن beyazperde.com",
+          "descriptionTr": "beyazperde.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "nefisyemektarifleri-mcp",
+      "name": "Nefis Yemek Tarifleri — Turkish recipes, search, categories & daily menu",
+      "nameTr": "Nefis Yemek Tarifleri — tarif arama, kategoriler ve günlük menü",
+      "summary": "Unofficial read-only MCP server for Nefis Yemek Tarifleri — search, recipes, categories.",
+      "summaryFa": "نفیس یمک تاریف‌لری، بزرگ‌ترین سایت دستور غذای ترکیه: جستجو در بیش از ۱۴٬۰۰۰ دستور برای هر پرس‌وجو؛ دستور کامل با مواد و مقدارها، مراحل، نکته‌ها، زمان، تعداد نفرات، امتیاز و ارزش غذایی؛ درخت کامل دسته‌بندی (۲۴ دسته و ۷۴ زیردسته)؛ فهرست هر دسته با مرتب‌سازی محبوب/پرطرفدار/جدیدترین؛ پرتکرارترین دستورها و منوی روزانه «امروز چی بپزم؟».",
+      "summaryTr": "Türkiye'nin en büyük tarif sitesi Nefis Yemek Tarifleri: her sorguda 14.000'den fazla tarifte arama; tam tarif (miktarlı malzemeler, adımlar, püf noktaları, süreler, porsiyon, puan, besin değerleri); tam kategori ağacı (24 ana kategori, 74 alt kategori); her kategorinin popüler/trend/en yeni sıralı listesi; en çok yapılan tarifler ve günlük 'Bugün Ne Pişirsem?' menüsü.",
+      "category": "food",
+      "tags": [
+        "food",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "0.1.0",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-15",
+      "repo": "https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp",
+      "pypi": "nefisyemektarifleri-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/nefisyemektarifleri-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/nefisyemektarifleri-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "nefisyemektarifleri-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "nefis_search_recipes",
+          "description": "Search recipes by dish or ingredient (13 per page, paginated)",
+          "descriptionFa": "جستجوی دستور غذا با نام غذا یا ماده",
+          "descriptionTr": "Yemek veya malzemeyle tarif arama"
+        },
+        {
+          "name": "nefis_get_recipe",
+          "description": "Full recipe: ingredients with amounts, steps, tips, times, servings, rating, nutrition",
+          "descriptionFa": "دستور کامل: مواد با مقدار، مراحل، نکته‌ها، ارزش غذایی",
+          "descriptionTr": "Tam tarif: miktarlı malzemeler, adımlar, püf noktaları, besin değerleri"
+        },
+        {
+          "name": "nefis_list_categories",
+          "description": "Full recipe-category tree (24 top-level, 74 subcategories)",
+          "descriptionFa": "درخت کامل دسته‌بندی (۲۴ دسته، ۷۴ زیردسته)",
+          "descriptionTr": "Tam kategori ağacı (24 ana kategori, 74 alt kategori)"
+        },
+        {
+          "name": "nefis_category_recipes",
+          "description": "Recipes in one category, sorted popular/trending/newest",
+          "descriptionFa": "دستورهای یک دسته (محبوب/پرطرفدار/جدیدترین)",
+          "descriptionTr": "Bir kategorinin tarifleri (popüler/trend/en yeni)"
+        },
+        {
+          "name": "nefis_trending",
+          "description": "Most-made recipes (En Çok Yapılanlar, 24)",
+          "descriptionFa": "پرتکرارترین دستورها (۲۴ دستور)",
+          "descriptionTr": "En çok yapılan tarifler (24 tarif)"
+        },
+        {
+          "name": "nefis_daily_menu",
+          "description": "Today's Bugün Ne Pişirsem? menu (25 recipes)",
+          "descriptionFa": "منوی روزانه «امروز چی بپزم؟» (۲۵ دستور)",
+          "descriptionTr": "Günün 'Bugün Ne Pişirsem?' menüsü (25 tarif)"
+        },
+        {
+          "name": "nefis_health",
+          "description": "Check whether nefisyemektarifleri.com is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن nefisyemektarifleri.com",
+          "descriptionTr": "nefisyemektarifleri.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "paribu-mcp",
+      "name": "Paribu — crypto exchange: tickers, order books, trades & markets",
+      "nameTr": "Paribu — kripto borsası: fiyatlar, emir defteri, işlemler ve piyasalar",
+      "summary": "Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets.",
+      "summaryFa": "پاریبو، بزرگ‌ترین صرافی ارز دیجیتال ترکیه: قیمت‌های زندهٔ ۲۴ ساعته برای ۲۶۶ بازار (بیت‌کوین، اتریوم و بیش از ۱۹۰ کوین در برابر لیر و تتر)، دفتر سفارش با اسپرد و قیمت میانی، معاملات اخیر، فهرست کامل ۴۶۷ بازار با دقت و گام قیمت، و اطلاعات ارزها شامل شبکه‌ها و کارمزد برداشت.",
+      "summaryTr": "Türkiye'nin en büyük kripto borsası Paribu: 266 piyasada canlı 24 saatlik fiyatlar (BTC, ETH ve 190+ coin; TL ve USDT karşısında), spread ve orta fiyatlı emir defterleri, son işlemler, hassasiyet ve adımlarıyla 467 piyasanın tam kataloğu ve ağlar ile çekim ücretlerini içeren para birimi bilgileri.",
+      "category": "finance",
+      "tags": [
+        "finance",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-16",
+      "repo": "https://github.com/mohammad-abbasi-sh/paribu-mcp",
+      "pypi": "paribu-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/paribu-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/paribu-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "paribu-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "paribu_get_ticker",
+          "description": "24h ticker for one market, or a ranked list of all 266 markets",
+          "descriptionFa": "تیکر ۲۴ ساعتهٔ یک بازار یا فهرست رتبه‌بندی‌شدهٔ ۲۶۶ بازار",
+          "descriptionTr": "Bir piyasanın 24 saatlik özeti veya 266 piyasanın sıralı listesi"
+        },
+        {
+          "name": "paribu_get_orderbook",
+          "description": "Live order book: best bid/ask, spread, mid price, levels",
+          "descriptionFa": "دفتر سفارش زنده: بهترین خرید/فروش، اسپرد و قیمت میانی",
+          "descriptionTr": "Canlı emir defteri: en iyi alış/satış, spread ve orta fiyat"
+        },
+        {
+          "name": "paribu_get_recent_trades",
+          "description": "Most recent public trades, newest first (1–20)",
+          "descriptionFa": "جدیدترین معاملات عمومی (۱ تا ۲۰)",
+          "descriptionTr": "En son herkese açık işlemler (1–20)"
+        },
+        {
+          "name": "paribu_list_markets",
+          "description": "Full 467-pair catalogue with precision, steps, labels",
+          "descriptionFa": "فهرست کامل ۴۶۷ بازار با دقت و گام‌ها",
+          "descriptionTr": "467 piyasanın tam kataloğu: hassasiyet ve adımlar"
+        },
+        {
+          "name": "paribu_get_currency",
+          "description": "Currency metadata: networks, withdrawal fees, limits",
+          "descriptionFa": "اطلاعات ارز: شبکه‌ها، کارمزد برداشت و محدودیت‌ها",
+          "descriptionTr": "Para birimi bilgileri: ağlar, çekim ücretleri ve limitler"
+        },
+        {
+          "name": "paribu_market_movers",
+          "description": "Top gainers / losers over the last 24h by percentage",
+          "descriptionFa": "بیشترین رشد و افت ۲۴ ساعت اخیر",
+          "descriptionTr": "Son 24 saatin en çok yükselen/düşenleri"
+        },
+        {
+          "name": "paribu_health",
+          "description": "Check whether api.paribu.com is reachable",
+          "descriptionFa": "بررسی در دسترس بودن api.paribu.com",
+          "descriptionTr": "api.paribu.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "diyanet-mcp",
+      "name": "Diyanet — prayer times: official timetable for 81 provinces & districts",
+      "nameTr": "Diyanet — namaz vakitleri: 81 il ve ilçeler için resmi çizelge",
+      "summary": "Unofficial read-only MCP server for Diyanet prayer times — official timetable for 81 provinces & districts, yearly tables & qibla.",
+      "summaryFa": "اوقات نماز رسمی دیانت ترکیه: ۶ وقت امروز برای هر یک از ۸۱ استان و شهرستان‌ها، جدول سالانه با تاریخ میلادی و هجری، و زاویه و زمان قبله — جدول رسمی، نه محاسبه‌شده.",
+      "summaryTr": "Diyanet'in resmi namaz vakitleri: 81 il ve ilçeleri için bugünün 6 vakti, Miladi + Hicri tarihli yıllık tablo ve kıble açısı/saati — resmi çizelge, hesaplanmış değil.",
+      "category": "services",
+      "tags": [
+        "services",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-17",
+      "repo": "https://github.com/mohammad-abbasi-sh/diyanet-mcp",
+      "pypi": "diyanet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/diyanet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/diyanet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "diyanet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "diyanet_prayer_times",
+          "description": "Today's 6 prayer times + Miladi/Hijri dates, qibla angle/time and astro sunrise/sunset for a place",
+          "descriptionFa": "۶ وقت امروز + تاریخ میلادی/هجری، زاویه و زمان قبله",
+          "descriptionTr": "Bugünün 6 vakti + Miladi/Hicri tarih, kıble açısı/saati"
+        },
+        {
+          "name": "diyanet_yearly_times",
+          "description": "Full-year table: one row per day (Miladi + Hijri dates + 6 times), 365 rows",
+          "descriptionFa": "جدول سالانه: هر روز یک سطر (۳۶۵ سطر)",
+          "descriptionTr": "Yıllık tablo: günde bir satır (365 satır)"
+        },
+        {
+          "name": "diyanet_list_provinces",
+          "description": "The 81 provinces with Diyanet ids and Turkish + English names",
+          "descriptionFa": "۸۱ استان با کد و نام ترکی + انگلیسی",
+          "descriptionTr": "81 il, kodları ve Türkçe + İngilizce isimleriyle"
+        },
+        {
+          "name": "diyanet_list_districts",
+          "description": "Districts of one province (by name or id) with ids, names and page URLs",
+          "descriptionFa": "شهرستان‌های یک استان با کد و آدرس صفحه",
+          "descriptionTr": "Bir ilin ilçeleri, kodları ve sayfa adresleriyle"
+        },
+        {
+          "name": "diyanet_qibla",
+          "description": "Qibla angle, qibla time, astro sunrise/sunset for a place",
+          "descriptionFa": "زاویه و زمان قبله، طلوع و غروب نجومی",
+          "descriptionTr": "Kıble açısı/saati, astronomik gün doğumu/batımı"
+        },
+        {
+          "name": "diyanet_health",
+          "description": "Check whether namazvakitleri.diyanet.gov.tr is reachable",
+          "descriptionFa": "بررسی در دسترس بودن سایت اوقات نماز دیانت",
+          "descriptionTr": "Diyanet namaz vakitleri sitesi erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "osym-mcp",
+      "name": "ÖSYM — exams: announcements, exam calendar, per-group news",
+      "nameTr": "ÖSYM — sınavlar: duyurular, sınav takvimi ve grup duyuruları",
+      "summary": "Unofficial read-only MCP server for ÖSYM — Türkiye's national exam authority: announcements, exam calendar, per-group news.",
+      "summaryFa": "اطلاعیه‌ها، تقویم آزمون و اخبار گروه‌های سازمان ملی آزمون ترکیه (ÖSYM): جدیدترین اطلاعیه‌ها و متن کامل آن‌ها با PDF راهنما، تقویم رسمی ۹۵ آزمون (YKS، KPSS، ALES، TUS، YDS، DGS و...) با تاریخ ثبت‌نام، آزمون و نتیجه، و اطلاعیه‌های هر گروه آزمون.",
+      "summaryTr": "Türkiye'nin ulusal sınav kurumu ÖSYM'nin duyuruları, sınav takvimi ve grup haberleri: en yeni duyurular ve kılavuz PDF'li tam metinleri, 95 sınavın resmi takvimi (YKS, KPSS, ALES, TUS, YDS, DGS...) — başvuru, sınav ve sonuç tarihleriyle — ve her sınav grubunun duyuruları.",
+      "category": "services",
+      "tags": [
+        "services",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-18",
+      "firstSeen": "2026-11-18",
+      "repo": "https://github.com/mohammad-abbasi-sh/osym-mcp",
+      "pypi": "osym-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/osym-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/osym-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "osym-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "osym_latest_announcements",
+          "description": "Newest ÖSYM announcements, newest first (limit 1–50; optional year 2010–2026)",
+          "descriptionFa": "جدیدترین اطلاعیه‌های ÖSYM، از جدید به قدیم (حد ۱ تا ۵۰؛ سال اختیاری)",
+          "descriptionTr": "En yeni ÖSYM duyuruları, yeniden eskiye (limit 1–50; isteğe bağlı yıl)"
+        },
+        {
+          "name": "osym_search_announcements",
+          "description": "Search announcements by title, Turkish-insensitive (optional year, limit 1–50)",
+          "descriptionFa": "جستجوی اطلاعیه‌ها بر اساس عنوان، بدون حساسیت به ترکی",
+          "descriptionTr": "Duyuruları başlığa göre arama, Türkçe duyarsız"
+        },
+        {
+          "name": "osym_get_announcement",
+          "description": "Full text of one announcement by slug or URL, with guide-PDF links",
+          "descriptionFa": "متن کامل یک اطلاعیه با اسلاگ یا URL، همراه با پیوندهای PDF راهنما",
+          "descriptionTr": "Bir duyurunun tam metni (slug veya URL ile), kılavuz PDF bağlantılarıyla"
+        },
+        {
+          "name": "osym_exam_calendar",
+          "description": "Official exam calendar: 95 exams with application / exam / result / preference dates",
+          "descriptionFa": "تقویم رسمی آزمون: ۹۵ آزمون با تاریخ ثبت‌نام، آزمون، نتیجه و انتخاب رشته",
+          "descriptionTr": "Resmi sınav takvimi: başvuru / sınav / sonuç / tercih tarihleriyle 95 sınav"
+        },
+        {
+          "name": "osym_exam_group",
+          "description": "One exam group's announcements — or the full group list with no argument",
+          "descriptionFa": "اطلاعیه‌های یک گروه آزمون — بدون آرگومان، فهرست کامل گروه‌ها",
+          "descriptionTr": "Bir sınav grubunun duyuruları — argümansız tüm grup listesi"
+        },
+        {
+          "name": "osym_health",
+          "description": "Check whether www.osym.gov.tr is reachable",
+          "descriptionFa": "بررسی در دسترس بودن سایت ÖSYM",
+          "descriptionTr": "ÖSYM sitesi erişilebilir mi kontrolü"
+        }
+      ]
+    }
+  ]
+}
