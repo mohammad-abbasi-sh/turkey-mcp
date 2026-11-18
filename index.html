@@ -192,7 +192,7 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft)}
 .srv-top:focus-visible{outline:3px solid var(--primary-ink);outline-offset:2px}
 .srv-head{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
 .srv-name{font-weight:800;font-size:17px;line-height:1.35;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.srv-id{color:var(--muted);font-size:12.5px;direction:ltr;text-align:start;overflow-wrap:anywhere}
+.srv-id{color:var(--muted);font-size:12.5px;direction:ltr;text-align:start;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .srv-count{flex-shrink:0;text-align:center;border:1px solid var(--line);border-radius:12px;padding:6px 12px;background:var(--bg-soft);min-width:62px}
 .srv-count b{display:block;font-size:24px;line-height:1.1}
 .srv-count span{color:var(--muted);font-size:12px;font-weight:600}
@@ -222,7 +222,7 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft)}
 [dir="ltr"] .insp-kicker{text-transform:uppercase;letter-spacing:.09em}
 .insp-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
 .insp-head h3{font-size:19px;margin:0}
-.insp-head .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start;overflow-wrap:anywhere}
+.insp-head .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .insp-badges{margin:0 0 12px;display:flex;gap:6px;flex-wrap:wrap}
 .insp-desc{color:var(--muted);font-size:14px}
 .inspector h4{font-size:14px;margin:14px 0 8px}
@@ -248,13 +248,13 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft)}
 .tile{width:48px;height:48px;min-width:48px;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:800;color:#fff;background:var(--primary);border-radius:14px}
 [data-theme="dark"] .tile{color:#0B0F0D}
 .card-top{display:flex;gap:12px;align-items:flex-start}
-.card-top .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start;overflow-wrap:anywhere}
+.card-top .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .meta-row{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);margin:0 0 4px}
 .meta-row .ic{font-size:14px}
 .card-bottom{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
 .card-bottom .count{color:var(--muted);font-size:13px}
 .card-bottom .btn{margin-inline-start:auto}
-.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:4px 12px;border-radius:var(--pill)}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:4px 12px;border-radius:var(--pill);white-space:nowrap}
 .badge-feat{background:var(--accent-soft);color:#8A5200}
 [data-theme="dark"] .badge-feat{color:var(--accent)}
 .badge-ok{background:var(--secondary-soft);color:#0B6B5E}
@@ -2078,7 +2078,7 @@ function toolHTML(id){
         <h2 style="font-size:20px">${t("tool_install")}</h2>
         <div class="install-box"><h3>Claude Code</h3><div class="copy-row"><pre><code>${esc(cmd)}</code></pre><button class="copy-btn" onclick="App.copy(this,'${esc(cmd)}')">${t("tool_copy")}</button></div></div>
         <div class="install-box"><h3>Cursor / Claude Desktop</h3><div class="copy-row"><pre><code>${esc(cfg)}</code></pre><button class="copy-btn" onclick="App.copy(this,${JSON.stringify(cfg).replace(/"/g,"&quot;")})">${t("tool_copy")}</button></div></div>
-        <div class="install-box"><h3>${t("tool_conn")}</h3><p style="color:var(--muted);font-size:14px;margin:0">${t("tool_conn_d")}</p></div>
+        <div class="install-box"><h3>${t("tool_conn")}</h3><p style="font-size:14px;margin:0">${t("tool_conn_d")}</p></div>
         <p style="margin:0 0 16px"><a href="${hashFor("connect")}">${t("tool_conn_guide")} →</a></p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn btn-primary btn-sm" href="${s.repo}" target="_blank" rel="noopener">${t("tool_repo")} ↗</a>
@@ -2589,14 +2589,19 @@ function inspectorHTML(){
     <a class="btn btn-ghost btn-sm" href="https://pypi.org/project/${s.pypi}/" target="_blank" rel="noopener">${t("tool_pypi")} ↗</a></div>`;
 }
 
-/* paper-unfold entrance (IntersectionObserver stagger; skipped when reduced motion).
-   FIX 2026-11-18: the observer alone left in-viewport content ghosted (opacity 0)
-   until the user scrolled (detail tool table, connect guide, home cards). Belt
-   and braces: (a) reveal elements already intersecting at setup via bounding
-   rect, (b) a 2s safety timeout reveals every .unfold element — nothing may
-   stay faded after load without scrolling. */
+/* paper-unfold entrance — VISIBLE BY DEFAULT (root-cause fix 2026-11-18).
+   Two previous rounds hid content with CSS (.unfold{opacity:0}) and relied on
+   IntersectionObserver + a 900ms fallback to reveal it. In a real headed
+   browser the reveal repeatedly failed on fresh loads (detail tool table,
+   connect intro stayed ghosted until scroll) while headless CDP probes always
+   passed: IO callbacks pause when the tab/window is occluded or backgrounded,
+   and late font layout can leave an element below the fold when the fallback
+   runs. New invariant: an element is hidden ONLY if (a) JS ran, (b) IO exists,
+   (c) the element is BELOW the fold at setup time, and (d) it is actively
+   observed. In-viewport elements NEVER get the hiding class, so they can
+   never be stuck invisible. A 3s failsafe reveals every hidden element even
+   if IO never fires. */
 let unfoldObs = null;
-let unfoldFailsafe = null;
 function unfoldInView(el){
   const r = el.getBoundingClientRect();
   const vh = window.innerHeight || document.documentElement.clientHeight;
@@ -2613,13 +2618,20 @@ function observeUnfold(root){
   if(prefersRM()){ els.forEach(el=>{ el.classList.add("unfold","in"); }); return; }
   if(!("IntersectionObserver" in window)){ els.forEach(el=>el.classList.add("unfold","in")); return; }
   if(!unfoldObs) unfoldObs = new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); unfoldObs.unobserve(en.target); } }); }, {threshold:0.08});
-  els.forEach((el,i)=>{ if(el.classList.contains("unfold")) return; el.classList.add("unfold"); el.style.transitionDelay = Math.min(i,8)*45+"ms"; unfoldObs.observe(el); });
-  // Fallback: if the observer's initial callbacks never fire (headless /
-  // background-tab quirk — in-viewport cards stayed opacity:0 until the
-  // first scroll), reveal in-viewport elements after 900ms. Below-fold
-  // elements still animate in on scroll as intended.
-  setTimeout(()=>{ els.forEach(el=>{ if(el.classList.contains("in")) return; const r = el.getBoundingClientRect(); if(r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth){ el.classList.add("in"); if(unfoldObs) unfoldObs.unobserve(el); } }); }, 900);
+  let hidden = 0;
+  els.forEach((el)=>{
+    if(el.classList.contains("unfold")) return;
+    if(unfoldInView(el)) return; // in viewport: NEVER hide — stays visible by default
+    el.classList.add("unfold");
+    el.style.transitionDelay = Math.min(hidden,8)*45+"ms";
+    hidden++;
+    unfoldObs.observe(el);
+  });
+  // Failsafe: even if IO never fires (occluded/background tab), nothing stays
+  // hidden past 3s. Below-fold elements simply appear already-visible on scroll.
+  setTimeout(()=>{ document.querySelectorAll(".unfold:not(.in)").forEach(el=>{ el.classList.add("in"); if(unfoldObs) unfoldObs.unobserve(el); }); }, 3000);
 }
+
 /* command palette: fuzzy search over servers + FAQ */
 const PALETTE = {open:false, q:"", sel:0, items:[]};
 function paletteFuzzy(q, text){
