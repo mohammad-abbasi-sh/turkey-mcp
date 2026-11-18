@@ -254,5 +254,13 @@
     "en": "ÖSYM — exams: announcements, exam calendar, per-group news",
     "kind": "server",
     "s": "osym-mcp ÖSYM — exams: announcements, exam calendar, per-group news ÖSYM — sınavlar: duyurular, sınav takvimi ve grup duyuruları Unofficial read-only MCP server for ÖSYM — Türkiye's national exam authority: announcements, exam calendar, per-group news. اطلاعیه‌ها، تقویم آزمون و اخبار گروه‌های سازمان ملی آزمون ترکیه (ÖSYM): جدیدترین اطلاعیه‌ها و متن کامل آن‌ها با PDF راهنما، تقویم رسمی ۹۵ آزمون (YKS، KPSS، ALES، TUS، YDS، DGS و...) با تاریخ ثبت‌نام، آزمون و نتیجه، و اطلاعیه‌های هر گروه آزمون. Türkiye'nin ulusal sınav kurumu ÖSYM'nin duyuruları, sınav takvimi ve grup haberleri: en yeni duyurular ve kılavuz PDF'li tam metinleri, 95 sınavın resmi takvimi (YKS, KPSS, ALES, TUS, YDS, DGS...) — başvuru, sınav ve sonuç tarihleriyle — ve her sınav grubunun duyuruları. services services turkey read-only osym_latest_announcements Newest ÖSYM announcements, newest first (limit 1–50; optional year 2010–2026) جدیدترین اطلاعیه‌های ÖSYM، از جدید به قدیم (حد ۱ تا ۵۰؛ سال اختیاری) En yeni ÖSYM duyuruları, yeniden eskiye (limit 1–50; isteğe bağlı yıl) osym_search_announcements Search announcements by title, Turkish-insensitive (optional year, limit 1–50) جستجوی اطلاعیه‌ها بر اساس عنوان، بدون حساسیت به ترکی Duyuruları başlığa göre arama, Türkçe duyarsız osym_get_announcement Full text of one announcement by slug or URL, with guide-PDF links متن کامل یک اطلاعیه با اسلاگ یا URL، همراه با پیوندهای PDF راهنما Bir duyurunun tam metni (slug veya URL ile), kılavuz PDF bağlantılarıyla osym_exam_calendar Official exam calendar: 95 exams with application / exam / result / preference dates تقویم رسمی آزمون: ۹۵ آزمون با تاریخ ثبت‌نام، آزمون، نتیجه و انتخاب رشته Resmi sınav takvimi: başvuru / sınav / sonuç / tercih tarihleriyle 95 sınav osym_exam_group One exam group's announcements — or the full group list with no argument اطلاعیه‌های یک گروه آزمون — بدون آرگومان، فهرست کامل گروه‌ها Bir sınav grubunun duyuruları — argümansız tüm grup listesi osym_health Check whether www.osym.gov.tr is reachable بررسی در دسترس بودن سایت ÖSYM ÖSYM sitesi erişilebilir mi kontrolü"
+  },
+  {
+    "id": "all-mcp",
+    "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/all-mcp",
+    "name": "all-mcp",
+    "en": "all-mcp — one MCP server for all of them",
+    "kind": "meta",
+    "s": "all-mcp meta router one MCP server for all of them 60 servers 324 tools Turkey Germany Bonbama search_tools call_tool ask list_servers set_location meta_health یک MCP برای همه‌چیز Her Şey İçin Tek MCP"
   }
 ]
