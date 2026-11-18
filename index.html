@@ -217,6 +217,7 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft);font-w
 .result-count{color:var(--muted);font-size:14px;margin-bottom:14px}
 .match-head{margin:26px 0 12px}
 /* ---------- marketplace layout: rail + cards + inspector ---------- */
+.mp-wrap{max-width:1560px} /* marketplace needs the width: at the 1240px wrap the middle column was 564px and grid-3 cards 175px (skill titles clipped, 2026-11-18) */
 .mp-layout{display:grid;grid-template-columns:260px minmax(0,1fr) 320px;gap:28px;align-items:start}
 .filter-rail{position:sticky;top:86px;display:flex;flex-direction:column;gap:16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:18px;box-shadow:var(--shadow)}
 .rail-block label{font-size:13px;color:var(--muted)}
@@ -253,7 +254,15 @@ nav.main a.active{color:var(--primary-ink);background:var(--primary-soft);font-w
 .tile{width:48px;height:48px;min-width:48px;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:800;color:#fff;background:var(--primary);border-radius:14px}
 [data-theme="dark"] .tile{color:#06231C}
 .card-top{display:flex;gap:12px;align-items:flex-start}
+.card-top h3{overflow-wrap:anywhere} /* Latin ids must wrap, never overflow under the star button (marketplace fix 2026-11-18) */
 .card-top .latin{color:var(--muted);font-size:12.5px;margin:2px 0 0;direction:ltr;text-align:start;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* skill card header: tile + star on one row, title on its own full-width row —
+   the old single-row layout squeezed the title into ~21px and the star button
+   covered its first letters (marketplace fix 2026-11-18) */
+.skill-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.skill-top .tile,.skill-top .star-btn{flex-shrink:0}
+.skill-title{direction:ltr;overflow-wrap:anywhere;word-break:break-word}
+[dir="rtl"] .skill-title{text-align:right}
 .meta-row{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);margin:0 0 4px}
 .meta-row .ic{font-size:14px}
 .card-bottom{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
@@ -1588,7 +1597,7 @@ fa:{
  conn_prereq_docs:"مستندات uv",
  palette_open:"جستجوی سریع", palette_ph:"سرور یا سؤال را جستجو کن…", palette_hint:"↑↓ برای حرکت، Enter برای باز کردن، Esc برای بستن",
  palette_servers:"سرورها", palette_faq:"سؤالات متداول", palette_empty:"چیزی پیدا نشد.",
- insp_empty_t:"سروری انتخاب نشده است", insp_empty_d:"روی یک ردیف بزن تا جزئیاتش را اینجا ببینی.",
+ insp_empty_t:"سروری انتخاب نشده است", insp_empty_d:"روی یک سرور کلیک کن تا جزئیاتش را اینجا ببینی.",
  mp_filters:"فیلترها",
  ben_title:"چرا Turkey MCP؟", ben_sub:"سرورهایی که ایجنت شما می‌تواند به آن‌ها اعتماد کند.",
  ben1_t:"فقط‌خواندنی و امن", ben1_d:"بدون لاگین، بدون کلید API و بدون نوشتن — سرورها فقط می‌خوانند.",
@@ -2024,7 +2033,7 @@ tr:{
  conn_prereq_docs:"uv belgeleri",
  palette_open:"Hızlı ara", palette_ph:"Sunucu veya soru arayın…", palette_hint:"Gezinmek için ↑↓, açmak için Enter, kapatmak için Esc",
  palette_servers:"Sunucular", palette_faq:"Sık sorulan sorular", palette_empty:"Sonuç bulunamadı.",
- insp_empty_t:"Sunucu seçilmedi", insp_empty_d:"Detaylarını burada görmek için bir satıra dokunun.",
+ insp_empty_t:"Sunucu seçilmedi", insp_empty_d:"Detaylarını burada görmek için bir sunucuya tıklayın.",
  mp_filters:"Filtreler",
  ben_title:"Neden Turkey MCP?", ben_sub:"Ajanınızın güvenebileceği sunucular.",
  ben1_t:"Salt okunur ve güvenli", ben1_d:"Giriş yok, API anahtarı yok, yazma yok — sunucular yalnızca okur.",
@@ -2460,7 +2469,7 @@ en:{
  conn_prereq_docs:"uv docs",
  palette_open:"Quick search", palette_ph:"Search servers or questions…", palette_hint:"↑↓ to move, Enter to open, Esc to close",
  palette_servers:"Servers", palette_faq:"FAQ", palette_empty:"Nothing found.",
- insp_empty_t:"No server selected", insp_empty_d:"Click a row to inspect it here.",
+ insp_empty_t:"No server selected", insp_empty_d:"Click a server to inspect it here.",
  mp_filters:"Filters",
  ben_title:"Why Turkey MCP?", ben_sub:"Servers your agent can trust.",
  ben1_t:"Read-only and safe", ben1_d:"No login, no API key, no writes — the servers only read.",
@@ -2899,11 +2908,11 @@ function serverCard(s){
 
 function skillCard(k){
   return `<article class="card">
-    <div class="card-top">
+    <div class="skill-top">
       <span class="tile" style="background:var(--primary)">✦</span>
-      <div style="flex:1;min-width:0"><h3>${esc(k.id)}</h3><p class="latin">github.com/mohammad-abbasi-sh/${esc(k.id)}</p></div>
       ${starBtn("skill", k.id)}
     </div>
+    <h3 class="skill-title" title="${esc(k.id)}">${esc(k.id)}</h3>
     <p class="desc">${esc(skillTag(k))}</p>
     <p class="meta-row"><span class="ic">✓</span> ${t("skill_compat")}: Claude Code · Claude.ai · Cursor</p>
     ${k.tests!=="—"?`<p class="meta-row"><span class="ic">✓</span> ${fmtNum(parseInt(k.tests,10))} ${t("skill_tests")}</p>`:""}
@@ -3095,10 +3104,17 @@ function mpResultsHTML(){
   const list = mpFiltered();
   const hasQ = !!mp.q.trim();
   const m = hasQ ? mpMatches(mp.q) : {skills:SKILLS, tuts:TUTORIALS, arts:ARTICLES};
+  /* Skills/tutorials/articles have no category, so they can only match a text
+     query. Under an active server filter with no query they are unrelated
+     content — hide them (same rule as the inspector, 2026-11-18). An explicit
+     type selection still shows its own section. local/profile/nokey match
+     every server, so they do not hide the extras. */
+  const srvFilter = mp.cat!=="all" || mp.noacct || mp.official;
+  const extraShown = (type)=>(mp.type===type || (mp.type==="all" && (hasQ || !srvFilter)));
   const showSrv = mp.type==="all" || mp.type==="servers";
-  const showSkl = (mp.type==="all" || mp.type==="skills") && m.skills.length;
-  const showTut = (mp.type==="all" || mp.type==="tutorials") && m.tuts.length;
-  const showArt = (mp.type==="all" || mp.type==="articles") && m.arts.length;
+  const showSkl = extraShown("skills") && m.skills.length;
+  const showTut = extraShown("tutorials") && m.tuts.length;
+  const showArt = extraShown("articles") && m.arts.length;
   let h = `<p class="result-count">${fmtNum(showSrv?list.length:0)} ${t("results")}</p>`;
   if((!showSrv || !list.length) && !showSkl && !showTut && !showArt) return h + emptyHTML() + `<p style="text-align:center;margin-top:14px"><a class="btn btn-primary btn-sm" href="${hashFor("submit")}">${t("mp_suggest_empty")}</a></p>`;
   if(showSrv && list.length) h += `<div class="grid grid-2">${list.map(serverCard).join("")}</div>`;
@@ -3137,7 +3153,7 @@ function marketplaceHTML(){
       <select id="mp-sort${suffix}" onchange="App.mpFilter('sort',this.value)" aria-label="${t("sort")}">${opt("recommended",mp.sort,t("sort_recommended"))}${opt("newest",mp.sort,t("sort_newest"))}${opt("alpha",mp.sort,t("sort_alpha"))}</select></div>
       <div class="rail-block"><button type="button" class="btn btn-ghost btn-sm" onclick="App.mpClear()">${t("f_clear")}</button></div>
       <p class="rail-note">${t("mp_last")}: ${fmtDate(PORT_BUILD)}</p>`;
-  return `<section class="section"><div class="wrap">
+  return `<section class="section"><div class="wrap mp-wrap">
     ${sectionHead("▦", t("mp_title"), t("mp_sub"))}
     <button type="button" class="btn btn-ghost btn-sm sheet-open" onclick="App.toggleSheet(true)">⌕ ${t("mp_filters")}</button>
     <div class="mp-layout">
@@ -3728,8 +3744,11 @@ let LAST_PAGE = null;
 function render(){
   parseHash();
   stopDemo();
+  /* Marketplace filters come from the URL on EVERY render, not only on page
+     change — otherwise back/forward and deep links within the marketplace
+     keep showing the previous filter (stale-filter bug, 2026-11-18). */
+  if(state.page==="marketplace") mpFromQuery();
   if(state.page!==LAST_PAGE){
-    if(state.page==="marketplace") mpFromQuery();
     if(state.page==="builder") builderFromQuery();
     INSTALL.drawer = null;
     LAST_PAGE = state.page;
@@ -3798,9 +3817,14 @@ function copyTextRaw(txt){ if(navigator.clipboard && navigator.clipboard.writeTe
 const DRAWER = new Set();
 let INSPECT_KEEP = false, INSPECT_SCROLL = 0, PENDING_SCROLL = null;
 function inspectorServer(){
-  const id = (state.page==="marketplace" && state.param) ? state.param : null;
-  const byParam = id ? SERVERS.find(x=>x.id===id) : null;
-  return byParam || SERVERS.find(x=>x.featured) || SERVERS[0];
+  if(state.page!=="marketplace" || !state.param) return null;
+  const s = SERVERS.find(x=>x.id===state.param);
+  if(!s) return null;
+  /* Only keep the selection if it survives the current filter — otherwise the
+     inspector shows a server unrelated to what the user is looking at
+     (e.g. tcmb under a real-estate filter, 2026-11-18). No selection means the
+     empty state, never a default server. */
+  return mpFiltered().some(x=>x.id===s.id) ? s : null;
 }
 function drawerHTML(s){
   return `<div class="drawer-body"><ul class="drawer-tools">${s.tools.map(x=>`<li><code>${esc(x.n)}</code></li>`).join("")}</ul></div>`;
@@ -4005,7 +4029,16 @@ window.App = {
   mpType(v){ mp.type=v; App.syncMp(); App.mpApply(); },
   mpCheck(k,on){ mp[k]=!!on; App.syncMp(); App.mpApply(); },
   mpClear(){ mp.q=""; mp.cat="all"; mp.type="all"; mp.sort="recommended"; mp.local=false; mp.profile=false; mp.nokey=false; mp.noacct=false; mp.official=false; App.syncMp(); App.mpApply(); },
-  mpApply(){ mpSyncUrl(); const el=document.getElementById("mp-results"); if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); } },
+  mpApply(){
+    /* Drop the inspector selection when the filter no longer includes it, and
+       re-render the inspector with the results (it used to go stale, 2026-11-18). */
+    if(state.param && !mpFiltered().some(x=>x.id===state.param)) state.param = null;
+    mpSyncUrl();
+    const el=document.getElementById("mp-results");
+    if(el){ el.innerHTML=mpResultsHTML(); observeUnfold(el); }
+    const insp=document.getElementById("inspector");
+    if(insp){ insp.innerHTML=`<p class="insp-kicker">Inspector · ${t("details")}</p>${inspectorHTML()}`; }
+  },
   subField(id,v){
     const map={"sub-nameEn":"nameEn","sub-nameFa":"nameFa","sub-id":"id","sub-summary":"summary","sub-cat":"cat","sub-tags":"tags","sub-repo":"repo","sub-license":"license","sub-install":"install","sub-env":"env","sub-tools":"tools","sub-questions":"questions","sub-desc":"desc"};
     const k=map[id]; if(!k) return; SUBMIT[k]=v;
