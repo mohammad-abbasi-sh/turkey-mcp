@@ -42,6 +42,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [nefisyemektarifleri-mcp](https://github.com/mohammad-abbasi-sh/nefisyemektarifleri-mcp) | nefisyemektarifleri.com (Nefis Yemek Tarifleri) — recipe search, full recipes, categories & daily menu | 7 | `uvx nefisyemektarifleri-mcp==0.1.0` |
 | [paribu-mcp](https://github.com/mohammad-abbasi-sh/paribu-mcp) | paribu.com (Paribu) — crypto tickers, order books, trades & markets | 7 | `uvx paribu-mcp==0.1.0` |
 | [diyanet-mcp](https://github.com/mohammad-abbasi-sh/diyanet-mcp) | namazvakitleri.diyanet.gov.tr (Diyanet) — prayer times, yearly tables & qibla | 6 | `uvx diyanet-mcp` |
+| [osym-mcp](https://github.com/mohammad-abbasi-sh/osym-mcp) | www.osym.gov.tr (ÖSYM) — exam announcements, calendar & group news | 6 | `uvx osym-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
