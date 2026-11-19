@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 32 MCP servers (186 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-18 from the live catalog.
+> 33 MCP servers (191 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-19 from the live catalog.
 
 ## How to use
 
@@ -642,3 +642,22 @@
 - `osym_exam_calendar`: Official exam calendar: 95 exams with application / exam / result / preference dates
 - `osym_exam_group`: One exam group's announcements — or the full group list with no argument
 - `osym_health`: Check whether www.osym.gov.tr is reachable
+
+## seslisozluk-mcp
+
+- Title: Sesli Sözlük — dictionary: word lookup, translations & pronunciations
+- Category: language
+- Summary: Unofficial read-only MCP server for Sesli Sözlük — Türkiye's multilingual dictionary since 1999: word lookup, translations, pronunciations, example sentences, audio.
+- Repository: https://github.com/mohammad-abbasi-sh/seslisozluk-mcp
+- PyPI: https://pypi.org/project/seslisozluk-mcp/
+- Version: pending — health: verified — last checked: 2026-11-19 — in the catalog since: 2026-11-19
+- Install: `claude mcp add --transport stdio --scope user seslisozluk -- uvx seslisozluk-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/seslisozluk-mcp
+
+### Tools (5)
+
+- `seslisozluk_lookup`: Full word lookup: dictionary panels, hyphenation, pronunciation, etymology, synonyms, audio
+- `seslisozluk_examples`: Example sentences for a word (Turkish–English pairs)
+- `seslisozluk_synonyms`: Synonyms, antonyms, common collocations and related terms
+- `seslisozluk_pronunciation`: Hyphenation, IPA, Turkish pronunciation and audio URLs
+- `seslisozluk_health`: Check whether www.seslisozluk.net is reachable
