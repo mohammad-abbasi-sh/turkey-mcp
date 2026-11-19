@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-18",
+  "generated": "2026-11-19",
   "counts": {
-    "servers": 32,
-    "tools": 186
+    "servers": 33,
+    "tools": 191
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2220,6 +2220,70 @@
           "description": "Check whether www.osym.gov.tr is reachable",
           "descriptionFa": "بررسی در دسترس بودن سایت ÖSYM",
           "descriptionTr": "ÖSYM sitesi erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "seslisozluk-mcp",
+      "name": "Sesli Sözlük — dictionary: word lookup, translations & pronunciations",
+      "nameTr": "Sesli Sözlük — sözlük: kelime arama, çeviriler ve telaffuz",
+      "summary": "Unofficial read-only MCP server for Sesli Sözlük — Türkiye's multilingual dictionary since 1999: word lookup, translations, pronunciations, example sentences, audio.",
+      "summaryFa": "سسلی سوزلوک، فرهنگ لغت چندزبانهٔ آنلاین ترکیه از ۱۹۹۹ (بیش از ۲۰ میلیون واژه): جست‌وجوی واژه در هر دو جهت ترکی–انگلیسی و انگلیسی–ترکی با تعریف‌های تک‌زبانه، بخش‌بندی هجایی، تلفظ IPA و ترکی، ریشه‌شناسی، صرف‌ها، مترادف‌ها و متضادها، ترکیب‌های رایج، واژه‌های مرتبط، جمله‌های نمونه و صدای تلفظ (بریتانیایی/آمریکایی/استرالیایی/ترکی).",
+      "summaryTr": "1999'dan beri Türkiye'nin çok dilli çevrimiçi sözlüğü Sesli Sözlük (20 milyondan fazla sözcük): her iki yönde kelime arama (Türkçe–İngilizce ve İngilizce–Türkçe, tek dilli tanımlarıyla), heceleme, IPA ve Türkçe telaffuz, etimoloji, çekimler, eş/zıt anlamlılar, yaygın kullanımlar, ilgili terimler, örnek cümleler ve telaffuz sesi (İngiliz/ Amerikan/ Avustralya/ Türkçe).",
+      "category": "language",
+      "tags": [
+        "language",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-19",
+      "firstSeen": "2026-11-19",
+      "repo": "https://github.com/mohammad-abbasi-sh/seslisozluk-mcp",
+      "pypi": "seslisozluk-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/seslisozluk-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/seslisozluk-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "seslisozluk-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "seslisozluk_lookup",
+          "description": "Full word lookup: dictionary panels, hyphenation, pronunciation, etymology, synonyms, audio",
+          "descriptionFa": "جست‌وجوی کامل واژه (پنل‌های فرهنگ لغت، تلفظ، ریشه‌شناسی، مترادف‌ها، صدا)",
+          "descriptionTr": "Tam kelime araması (sözlük panelleri, telaffuz, etimoloji, eş anlamlılar, ses)"
+        },
+        {
+          "name": "seslisozluk_examples",
+          "description": "Example sentences for a word (Turkish–English pairs)",
+          "descriptionFa": "جمله‌های نمونهٔ یک واژه (جفت‌های ترکی–انگلیسی)",
+          "descriptionTr": "Bir kelimenin örnek cümleleri (Türkçe–İngilizce çiftleri)"
+        },
+        {
+          "name": "seslisozluk_synonyms",
+          "description": "Synonyms, antonyms, common collocations and related terms",
+          "descriptionFa": "مترادف‌ها، متضادها، ترکیب‌های رایج و واژه‌های مرتبط",
+          "descriptionTr": "Eş anlamlılar, zıt anlamlılar, yaygın kullanımlar ve ilgili terimler"
+        },
+        {
+          "name": "seslisozluk_pronunciation",
+          "description": "Hyphenation, IPA, Turkish pronunciation and audio URLs",
+          "descriptionFa": "بخش‌بندی هجایی، IPA، تلفظ ترکی و URLهای صوتی",
+          "descriptionTr": "Heceleme, IPA, Türkçe okunuş ve ses URL'leri"
+        },
+        {
+          "name": "seslisozluk_health",
+          "description": "Check whether www.seslisozluk.net is reachable",
+          "descriptionFa": "بررسی در دسترس بودن سایت Sesli Sözlük",
+          "descriptionTr": "Sesli Sözlük sitesi erişilebilir mi kontrolü"
         }
       ]
     }
