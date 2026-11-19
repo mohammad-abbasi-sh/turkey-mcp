@@ -43,6 +43,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [paribu-mcp](https://github.com/mohammad-abbasi-sh/paribu-mcp) | paribu.com (Paribu) — crypto tickers, order books, trades & markets | 7 | `uvx paribu-mcp==0.1.0` |
 | [diyanet-mcp](https://github.com/mohammad-abbasi-sh/diyanet-mcp) | namazvakitleri.diyanet.gov.tr (Diyanet) — prayer times, yearly tables & qibla | 6 | `uvx diyanet-mcp` |
 | [osym-mcp](https://github.com/mohammad-abbasi-sh/osym-mcp) | www.osym.gov.tr (ÖSYM) — exam announcements, calendar & group news | 6 | `uvx osym-mcp` |
+| [seslisozluk-mcp](https://github.com/mohammad-abbasi-sh/seslisozluk-mcp) | www.seslisozluk.net (Sesli Sözlük) — dictionary: word lookup, translations, pronunciations & audio | 5 | `uvx seslisozluk-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
@@ -74,14 +75,6 @@ Bu katalog, Türkiye'nin en çok kullanılan yerel servislerine yapay zekâ ajan
 ### فارسی
 
 این کاتالوگ به ایجنت‌های هوش مصنوعی دسترسی زنده به پرکاربردترین سرویس‌های محلی ترکیه می‌دهد — آگهی، املاک، استخدام، فروشگاه، غذا، حمل‌ونقل، قیمت‌ها. همه‌ی سرورها غیررسمی و فقط‌خواندنی‌اند؛ بدون لاگین، بدون کلید، بدون نوشتن. هر روز یک سرور جدید اضافه می‌شود. هر README به انگلیسی، ترکی و فارسی است.
-
-## Cite this project
-
-If you use turkey-mcp, build on it, or write about it, please credit the source:
-
-> Abbasi, Mohammad. *Turkey MCP Catalog*. 2026. https://github.com/mohammad-abbasi-sh/turkey-mcp
-
-A ready-to-copy citation is also available from GitHub's **Cite this repository** button (see `CITATION.cff`). Commercial use needs a separate license (see below).
 
 ## License
 
