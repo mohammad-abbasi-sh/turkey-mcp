@@ -1,6 +1,6 @@
 # Turkey MCP
 
-> 32 MCP servers (186 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+> 33 MCP servers (191 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
 > Start here — all-mcp is the main reference: one server containing all 60 MCP servers (Turkey 32, Germany 27, Bonbama 1), 324 tools behind a single config entry. Install only all-mcp (`claude mcp add --transport stdio --scope user all-mcp -- uvx all-mcp`) and it routes each question to the right server itself. Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/all-mcp — repo: https://github.com/mohammad-abbasi-sh/all-mcp
 
@@ -36,6 +36,7 @@
 - [paribu-mcp](https://github.com/mohammad-abbasi-sh/paribu-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/paribu-mcp)): Unofficial read-only MCP server for Paribu crypto exchange — tickers, order books, trades, markets. (7 tools)
 - [diyanet-mcp](https://github.com/mohammad-abbasi-sh/diyanet-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/diyanet-mcp)): Unofficial read-only MCP server for Diyanet prayer times — official timetable for 81 provinces & districts, yearly tables & qibla. (6 tools)
 - [osym-mcp](https://github.com/mohammad-abbasi-sh/osym-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/osym-mcp)): Unofficial read-only MCP server for ÖSYM — Türkiye's national exam authority: announcements, exam calendar, per-group news. (6 tools)
+- [seslisozluk-mcp](https://github.com/mohammad-abbasi-sh/seslisozluk-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/seslisozluk-mcp)): Unofficial read-only MCP server for Sesli Sözlük — Türkiye's multilingual dictionary since 1999: word lookup, translations, pronunciations, example sentences, audio. (5 tools)
 
 ## Install
 
