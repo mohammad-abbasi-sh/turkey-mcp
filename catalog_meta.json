@@ -1,0 +1,1526 @@
+{
+  "generated": "2026-11-19",
+  "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
+  "servers": {
+    "tcmb-mcp": {
+      "cat": "finance",
+      "color": "#0D9488",
+      "letter": "₺",
+      "featured": true,
+      "account": false,
+      "added": 1,
+      "desc_fa": "نرخ زندهٔ دلار، یورو و بیش از ۲۰ ارز دیگر از بانک مرکزی ترکیه (XML رسمی، بدون کلید).",
+      "desc_tr": "tcmb.gov.tr'den canlı USD/TRY, EUR/TRY ve 20'den fazla döviz kuru (resmi XML, anahtar gerekmez).",
+      "env": null,
+      "tools": {
+        "tcmb_get_rates": {
+          "s": "Today's FX rates for all currencies",
+          "sf": "نرخ امروز همهٔ ارزها",
+          "st": "Bugünkü tüm döviz kurları"
+        },
+        "tcmb_get_rate": {
+          "s": "Rate for one currency code (e.g. USD)",
+          "sf": "نرخ یک ارز مشخص (مثلاً USD)",
+          "st": "Tek bir para biriminin kuru (örn. USD)"
+        },
+        "tcmb_list_currencies": {
+          "s": "List all available currency codes",
+          "sf": "فهرست همهٔ کدهای ارز",
+          "st": "Tüm para birimi kodlarını listele"
+        },
+        "tcmb_get_rates_on": {
+          "s": "Historical rates for a date (YYYYMMDD)",
+          "sf": "نرخ‌های تاریخی یک روز (YYYYMMDD)",
+          "st": "Bir tarihe ait geçmiş kurlar (YYYYMMDD)"
+        }
+      },
+      "first_seen": "2026-11-06",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "arabam-mcp": {
+      "cat": "cars",
+      "color": "#DC2626",
+      "letter": "🚗",
+      "featured": false,
+      "account": false,
+      "added": 2,
+      "desc_fa": "جست‌وجو در حدود ۱۷۶ هزار آگهی خودروی دست‌دوم arabam.com: مشخصات کامل ۱۹ فیلدی، مرور برند و مدل، آمار قیمت بازار (لیر).",
+      "desc_tr": "arabam.com'da ~176 bin ikinci el ilanında arama: 19 alanlık tam özellikler, marka/model gezgini, piyasa fiyat istatistikleri (TL).",
+      "env": null,
+      "tools": {
+        "arabam_search": {
+          "s": "Search listings by brand/model slug, paged",
+          "sf": "جست‌وجوی آگهی‌ها بر اساس برند/مدل، صفحه‌بندی‌شده",
+          "st": "Marka/model kısaltmasıyla ilanlarda ara, sayfalı"
+        },
+        "arabam_listing_detail": {
+          "s": "Full 19-field spec table + price for one listing",
+          "sf": "جدول کامل مشخصات ۱۹ فیلدی + قیمت یک آگهی",
+          "st": "Bir ilan için 19 alanlık tam özellik tablosu + fiyat"
+        },
+        "arabam_list_brands": {
+          "s": "All ~77 brands with counts and slugs",
+          "sf": "همهٔ حدود ۷۷ برند با تعداد و شناسه",
+          "st": "Sayı ve kısaltmalarıyla ~77 markanın tamamı"
+        },
+        "arabam_list_models": {
+          "s": "Models of a brand with counts and slugs",
+          "sf": "مدل‌های یک برند با تعداد و شناسه",
+          "st": "Bir markanın modelleri, sayı ve kısaltmalarıyla"
+        },
+        "arabam_price_stats": {
+          "s": "Min/max/median/average price over N pages",
+          "sf": "کمترین/بیشترین/میانه/میانگین قیمت در N صفحه",
+          "st": "N sayfada min/maks/medyan/ortalama fiyat"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "emlakjet-mcp": {
+      "cat": "real-estate",
+      "color": "#1D4ED8",
+      "letter": "🏠",
+      "featured": false,
+      "account": false,
+      "added": 3,
+      "desc_fa": "جست‌وجوی آگهی‌های فروش و اجارهٔ emlakjet.com بر اساس شهر و محله: جزئیات کامل با ۱۴ فیلد مشخصات، مرور محله‌ها، آمار قیمت شامل میانهٔ قیمت هر متر مربع (لیر).",
+      "desc_tr": "emlakjet.com satılık/kiralık ilanlarında şehre ve ilçeye göre arama: 14 alanlık tam detaylar, ilçe gezgini, m² başına medyan fiyat dahil piyasa istatistikleri (TL).",
+      "env": null,
+      "tools": {
+        "emlakjet_search": {
+          "s": "Search listings by city/district, rooms, price, area",
+          "sf": "جست‌وجوی آگهی بر اساس شهر/محله، اتاق، قیمت، متراژ",
+          "st": "Şehir/ilçe, oda, fiyat ve alana göre ilan ara"
+        },
+        "emlakjet_listing_detail": {
+          "s": "Full detail + 14 spec fields for one listing",
+          "sf": "جزئیات کامل + ۱۴ فیلد مشخصات یک آگهی",
+          "st": "Bir ilan için tam detay + 14 özellik alanı"
+        },
+        "emlakjet_list_districts": {
+          "s": "Districts of a city with listing pages",
+          "sf": "محله‌های یک شهر با صفحه‌های آگهی",
+          "st": "Bir şehrin ilçeleri ve ilan sayfaları"
+        },
+        "emlakjet_price_stats": {
+          "s": "Min/max/median/average price + median per m²",
+          "sf": "کمترین/بیشترین/میانه/میانگین قیمت + میانهٔ هر متر مربع",
+          "st": "Min/maks/medyan/ortalama fiyat + m² başına medyan"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "armut-mcp": {
+      "cat": "services",
+      "color": "#059669",
+      "letter": "🔧",
+      "featured": false,
+      "account": false,
+      "added": 4,
+      "desc_fa": "جست‌وجو در ۶٬۷۵۹ خدمت Armut، مرور بهترین متخصصان با امتیاز و نظر بر اساس شهر، خواندن سؤالات متداول و راهنمای قیمت با میانگین ۱۲ ماهه (لیر).",
+      "desc_tr": "6.759 Armut hizmetinde arama, şehre göre puan ve yorumlarıyla en iyi ustaları görme, SSS okuma ve 12 aylık ortalamalarla fiyat rehberleri (TL).",
+      "env": null,
+      "tools": {
+        "armut_search_services": {
+          "s": "Search the 6,759-service catalogue by keyword",
+          "sf": "جست‌وجو در کاتالوگ ۶٬۷۵۹ خدمتی با کلیدواژه",
+          "st": "6.759 hizmetlik katalogda anahtar kelimeyle ara"
+        },
+        "armut_service_detail": {
+          "s": "Detail of one service: pro count, rating, reviews",
+          "sf": "جزئیات یک خدمت: تعداد متخصص، امتیاز، نظرات",
+          "st": "Bir hizmetin detayı: usta sayısı, puan, yorumlar"
+        },
+        "armut_list_pros": {
+          "s": "Top pros for a service, optionally filtered by city",
+          "sf": "بهترین متخصصان یک خدمت، با فیلتر شهر",
+          "st": "Bir hizmet için en iyi ustalar, isteğe bağlı şehir filtresi"
+        },
+        "armut_service_faq": {
+          "s": "FAQs for a service, with answers",
+          "sf": "سؤالات متداول یک خدمت با پاسخ",
+          "st": "Bir hizmetin SSS'leri ve yanıtları"
+        },
+        "armut_price_guide": {
+          "s": "Price guide: 12 monthly averages, quotes, example jobs",
+          "sf": "راهنمای قیمت: میانگین ۱۲ ماهه، قیمت‌های نمونه، نمونه‌کارها",
+          "st": "Fiyat rehberi: 12 aylık ortalama, teklifler, örnek işler"
+        },
+        "armut_trending_services": {
+          "s": "Trending/popular services and most-searched combos",
+          "sf": "خدمات پرطرفدار و پرجست‌وجوترین ترکیب‌ها",
+          "st": "Trend ve popüler hizmetler ile en çok aranan kombinasyonlar"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "hepsiburada-mcp": {
+      "cat": "shopping",
+      "color": "#EA580C",
+      "letter": "🛒",
+      "featured": true,
+      "account": true,
+      "added": 5,
+      "desc_fa": "جست‌وجوی کالاهای hepsiburada.com، خواندن جزئیات (قیمت، موجودی، فروشنده، GTIN)، نظرات، مرور ۹ دسته و آمار قیمت (لیر). اقدامات حساب اختیاری با نشست محلی: سبد خرید و علاقه‌مندی‌ها.",
+      "desc_tr": "hepsiburada.com ürünlerinde arama, detayları okuma (fiyat, stok, satıcı, GTIN), yorumlar, 9 kategori gezgini ve fiyat istatistikleri (TL). İsteğe bağlı yerel oturumlu hesap işlemleri: sepet + favoriler.",
+      "env": {
+        "HEPSIBURADA_SESSION": "YOUR_SESSION_COOKIE_HERE"
+      },
+      "tools": {
+        "hepsiburada_search": {
+          "s": "Search products by keyword, sort by price or relevance",
+          "sf": "جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",
+          "st": "Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"
+        },
+        "hepsiburada_product_detail": {
+          "s": "Detail of one product: price, stock, seller, GTIN, highlights",
+          "sf": "جزئیات یک کالا: قیمت، موجودی، فروشنده، GTIN، نکات مهم",
+          "st": "Bir ürünün detayı: fiyat, stok, satıcı, GTIN, öne çıkanlar"
+        },
+        "hepsiburada_list_categories": {
+          "s": "The 9 top categories with URLs and ids",
+          "sf": "۹ دستهٔ اصلی با نشانی و شناسه",
+          "st": "URL ve kimlikleriyle 9 ana kategori"
+        },
+        "hepsiburada_price_stats": {
+          "s": "Price stats for a query: min/median/mean/max in TRY",
+          "sf": "آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",
+          "st": "Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        "hepsiburada_product_reviews": {
+          "s": "Recent customer reviews: author, rating, text, date",
+          "sf": "نظرات اخیر مشتریان: نویسنده، امتیاز، متن، تاریخ",
+          "st": "Son müşteri yorumları: yazar, puan, metin, tarih"
+        },
+        "hepsiburada_view_cart": {
+          "s": "View your cart: items, quantities, prices (TRY)",
+          "sf": "مشاهدهٔ سبد خرید: کالاها، تعداد، قیمت (لیر)",
+          "st": "Sepetinizi görüntüleyin: ürünler, adetler, fiyatlar (TL)"
+        },
+        "hepsiburada_add_to_cart": {
+          "s": "Add a product to your cart (confirm required)",
+          "sf": "افزودن کالا به سبد خرید (نیازمند تأیید)",
+          "st": "Sepetinize ürün ekleyin (onay gerekli)"
+        },
+        "hepsiburada_remove_from_cart": {
+          "s": "Remove one item from your cart (confirm required)",
+          "sf": "حذف یک کالا از سبد خرید (نیازمند تأیید)",
+          "st": "Sepetinizden bir ürün çıkarın (onay gerekli)"
+        },
+        "hepsiburada_update_cart_quantity": {
+          "s": "Change a cart item's quantity (confirm required)",
+          "sf": "تغییر تعداد یک کالای سبد خرید (نیازمند تأیید)",
+          "st": "Bir sepet ürününün adedini değiştirin (onay gerekli)"
+        },
+        "hepsiburada_list_favorites": {
+          "s": "List your favorite product SKUs",
+          "sf": "فهرست کدهای کالاهای موردعلاقه",
+          "st": "Favori ürün SKU'larınızı listeleyin"
+        },
+        "hepsiburada_add_favorite": {
+          "s": "Add a product to favorites (confirm required)",
+          "sf": "افزودن کالا به علاقه‌مندی‌ها (نیازمند تأیید)",
+          "st": "Bir ürünü favorilere ekleyin (onay gerekli)"
+        },
+        "hepsiburada_remove_favorite": {
+          "s": "Remove a product from favorites (confirm required)",
+          "sf": "حذف کالا از علاقه‌مندی‌ها (نیازمند تأیید)",
+          "st": "Bir ürünü favorilerden çıkarın (onay gerekli)"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.2.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "n11-mcp": {
+      "cat": "shopping",
+      "color": "#7C3AED",
+      "letter": "🛍️",
+      "featured": false,
+      "account": false,
+      "added": 6,
+      "desc_fa": "جست‌وجوی کالاهای n11.com، خواندن جزئیات (قیمت، قیمت فهرست، موجودی، فروشنده، امتیاز)، نظرات، مرور ۱۱ دسته و آمار قیمت (لیر).",
+      "desc_tr": "n11.com ürünlerinde arama, detayları okuma (fiyat, liste fiyatı, stok, satıcı, puan), yorumlar, 11 kategori gezgini ve fiyat istatistikleri (TL).",
+      "env": null,
+      "tools": {
+        "n11_search": {
+          "s": "Search products by keyword, sort by price or relevance",
+          "sf": "جست‌وجوی کالا با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",
+          "st": "Anahtar kelimeyle ürün ara, fiyata veya ilgiye göre sırala"
+        },
+        "n11_product_detail": {
+          "s": "Detail of one product: price, stock, seller, rating, category",
+          "sf": "جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",
+          "st": "Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"
+        },
+        "n11_list_categories": {
+          "s": "The 11 top categories with URLs and slugs",
+          "sf": "۱۱ دستهٔ اصلی با نشانی و شناسه",
+          "st": "URL ve kısaltmalarıyla 11 ana kategori"
+        },
+        "n11_price_stats": {
+          "s": "Price stats for a query: min/median/mean/max in TRY",
+          "sf": "آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",
+          "st": "Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        "n11_product_reviews": {
+          "s": "Recent customer reviews: reviewer and star rating",
+          "sf": "نظرات اخیر مشتریان: نظر‌دهنده و امتیاز ستاره‌ای",
+          "st": "Son müşteri yorumları: yorumcu ve yıldız puanı"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "ciceksepeti-mcp": {
+      "cat": "shopping",
+      "color": "#DB2777",
+      "letter": "💐",
+      "featured": false,
+      "account": false,
+      "added": 7,
+      "desc_fa": "جست‌وجوی گل و هدیه در ciceksepeti.com، خواندن جزئیات (قیمت، موجودی، فروشنده، امتیاز)، نظرات، مرور ۸۹ دسته و آمار قیمت (لیر).",
+      "desc_tr": "ciceksepeti.com'da çiçek ve hediye arama, detayları okuma (fiyat, stok, satıcı, puan), yorumlar, 89 kategori gezgini ve fiyat istatistikleri (TL).",
+      "env": null,
+      "tools": {
+        "ciceksepeti_search": {
+          "s": "Search flowers & gifts by keyword, sort by price or relevance",
+          "sf": "جست‌وجوی گل و هدیه با کلیدواژه، مرتب‌سازی بر اساس قیمت یا ارتباط",
+          "st": "Anahtar kelimeyle çiçek ve hediye ara, fiyata veya ilgiye göre sırala"
+        },
+        "ciceksepeti_product_detail": {
+          "s": "Detail of one product: price, stock, seller, rating, category",
+          "sf": "جزئیات یک کالا: قیمت، موجودی، فروشنده، امتیاز، دسته",
+          "st": "Bir ürünün detayı: fiyat, stok, satıcı, puan, kategori"
+        },
+        "ciceksepeti_list_categories": {
+          "s": "89 flower/plant/gift categories with URLs and slugs",
+          "sf": "۸۹ دستهٔ گل/گیاه/هدیه با نشانی و شناسه",
+          "st": "URL ve kısaltmalarıyla 89 çiçek/bitki/hediye kategorisi"
+        },
+        "ciceksepeti_price_stats": {
+          "s": "Price stats for a query: min/median/mean/max in TRY",
+          "sf": "آمار قیمت یک جست‌وجو: کمترین/میانه/میانگین/بیشترین به لیر",
+          "st": "Bir sorgu için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        "ciceksepeti_product_reviews": {
+          "s": "Recent customer reviews: reviewer, star rating, date",
+          "sf": "نظرات اخیر مشتریان: نظر‌دهنده، امتیاز ستاره‌ای، تاریخ",
+          "st": "Son müşteri yorumları: yorumcu, yıldız puanı, tarih"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "obilet-mcp": {
+      "cat": "travel",
+      "color": "#0284C7",
+      "letter": "🚌",
+      "featured": false,
+      "account": false,
+      "added": 8,
+      "desc_fa": "جست‌وجوی مکان‌های اتوبوس obilet.com، فهرست سفرهای اتوبوس یک مسیر و تاریخ (شرکت، صندلی، قیمت به لیر، توقف‌ها)، جزئیات سفر، آمار قیمت و خلاصهٔ پروازها (تعداد، قیمت، شرکت‌ها).",
+      "desc_tr": "obilet.com otobüs konumlarında arama, bir güzergâh ve tarih için otobüs seferleri (firma, koltuk, TL fiyat, duraklar), sefer detayları, fiyat istatistikleri ve uçuş özeti (sayı, fiyatlar, havayolları).",
+      "env": null,
+      "tools": {
+        "obilet_search_locations": {
+          "s": "Search bus/flight locations by name",
+          "sf": "جست‌وجوی مکان‌های اتوبوس/پرواز با نام",
+          "st": "Otobüs/uçuş konumlarını adla ara"
+        },
+        "obilet_search_bus_journeys": {
+          "s": "Bus journeys for a route + date, sorted by price, departure or duration",
+          "sf": "سفرهای اتوبوس یک مسیر و تاریخ، مرتب بر اساس قیمت، حرکت یا مدت",
+          "st": "Bir güzergâh ve tarih için otobüs seferleri; fiyat, kalkış veya süreye göre sıralı"
+        },
+        "obilet_journey_detail": {
+          "s": "Full detail of one journey: stops, prices, features",
+          "sf": "جزئیات کامل یک سفر: توقف‌ها، قیمت‌ها، امکانات",
+          "st": "Bir seferin tam detayı: duraklar, fiyatlar, özellikler"
+        },
+        "obilet_price_stats": {
+          "s": "Price stats for a route + date: min/median/mean/max in TRY",
+          "sf": "آمار قیمت یک مسیر و تاریخ: کمترین/میانه/میانگین/بیشترین به لیر",
+          "st": "Bir güzergâh ve tarih için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        "obilet_flight_summary": {
+          "s": "Flight summary: count, min/max price, durations, airlines",
+          "sf": "خلاصهٔ پروازها: تعداد، کمترین/بیشترین قیمت، مدت‌ها، شرکت‌ها",
+          "st": "Uçuş özeti: sayı, min/maks fiyat, süreler, havayolları"
+        }
+      },
+      "first_seen": "2026-11-07",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "biletall-mcp": {
+      "cat": "travel",
+      "color": "#0369A1",
+      "letter": "🚌",
+      "featured": false,
+      "account": false,
+      "added": 9,
+      "desc_fa": "جست‌وجوی بلیط اتوبوس و پرواز در biletall.com: ارزان‌ترین سفرها برای یک مسیر، آمار قیمت، و پرترددترین مسیرها با قیمت (لیر).",
+      "desc_tr": "biletall.com'da otobüs ve uçak bileti arama: bir güzergâh için en ucuz seferler, fiyat istatistikleri ve fiyatlarıyla en çok seyahat edilen güzergâhlar (TL).",
+      "env": null,
+      "tools": {
+        "biletall_search_locations": {
+          "s": "Search locations by name (offline, 1,726 slugs)",
+          "sf": "جست‌وجوی مکان‌ها با نام (آفلاین، ۱٬۷۲۶ شناسه)",
+          "st": "Konumları adla ara (çevrimdışı, 1.726 kısaltma)"
+        },
+        "biletall_bus_route": {
+          "s": "Cheapest bus journeys for a route, today",
+          "sf": "ارزان‌ترین سفرهای اتوبوس یک مسیر، امروز",
+          "st": "Bir güzergâh için bugünün en ucuz otobüs seferleri"
+        },
+        "biletall_flight_route": {
+          "s": "Cheapest flights for a route, with dates",
+          "sf": "ارزان‌ترین پروازهای یک مسیر، با تاریخ‌ها",
+          "st": "Bir güzergâh için tarihleriyle en ucuz uçuşlar"
+        },
+        "biletall_price_stats": {
+          "s": "Price stats for a bus route: min/median/mean/max in TRY",
+          "sf": "آمار قیمت یک مسیر اتوبوس: کمترین/میانه/میانگین/بیشترین به لیر",
+          "st": "Bir otobüs güzergâhı için fiyat istatistikleri: min/medyan/ortalama/maks (TL)"
+        },
+        "biletall_popular_routes": {
+          "s": "Most-travelled bus routes with prices",
+          "sf": "پرترددترین مسیرهای اتوبوس با قیمت",
+          "st": "Fiyatlarıyla en çok seyahat edilen otobüs güzergâhları"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "secretcv-mcp": {
+      "cat": "jobs",
+      "color": "#B45309",
+      "letter": "💼",
+      "featured": false,
+      "account": false,
+      "added": 10,
+      "desc_fa": "جست‌وجوی آگهی‌های شغلی secretcv.com: جست‌وجو با کلیدواژه، تازه‌ترین آگهی‌ها، جزئیات کامل یک شغل، و فهرست بخش‌ها و شهرها با تعداد آگهی.",
+      "desc_tr": "secretcv.com iş ilanlarında arama: anahtar kelimeyle arama, en yeni ilanlar, bir işin tam detayı ve iş sayılarıyla sektör ve şehir listeleri.",
+      "env": null,
+      "tools": {
+        "secretcv_search_jobs": {
+          "s": "Search jobs by keyword",
+          "sf": "جست‌وجوی شغل‌ها با کلیدواژه",
+          "st": "Anahtar kelimeyle iş ara"
+        },
+        "secretcv_latest_jobs": {
+          "s": "Latest job listings, newest first",
+          "sf": "تازه‌ترین آگهی‌های شغلی، از جدیدترین",
+          "st": "En yeni iş ilanları, yeniden eskiye"
+        },
+        "secretcv_get_job": {
+          "s": "Full detail for one job",
+          "sf": "جزئیات کامل یک شغل",
+          "st": "Bir işin tam detayı"
+        },
+        "secretcv_list_sectors": {
+          "s": "All sectors with job counts",
+          "sf": "همهٔ بخش‌ها با تعداد آگهی",
+          "st": "İş sayılarıyla tüm sektörler"
+        },
+        "secretcv_list_cities": {
+          "s": "All cities with job counts",
+          "sf": "همهٔ شهرها با تعداد آگهی",
+          "st": "İş sayılarıyla tüm şehirler"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "biletix-mcp": {
+      "cat": "entertainment",
+      "color": "#BE185D",
+      "letter": "🎫",
+      "featured": false,
+      "account": false,
+      "added": 11,
+      "desc_fa": "رویدادهای Biletix: کنسرت، تئاتر و ورزش — رویدادهای پرطرفدار، جست‌وجو، جزئیات کامل یک رویداد، دسته‌ها و سالن‌ها.",
+      "desc_tr": "Biletix etkinlikleri: konser, tiyatro ve spor — trend etkinlikler, arama, bir etkinliğin tam detayı, kategoriler ve mekânlar.",
+      "env": null,
+      "tools": {
+        "biletix_trending": {
+          "s": "Trending featured events",
+          "sf": "رویدادهای پرطرفدار",
+          "st": "Trend öne çıkan etkinlikler"
+        },
+        "biletix_search_events": {
+          "s": "Search events in featured listings",
+          "sf": "جست‌وجوی رویدادها در فهرست منتخب",
+          "st": "Öne çıkan listelerde etkinlik ara"
+        },
+        "biletix_get_event": {
+          "s": "Full detail for one event",
+          "sf": "جزئیات کامل یک رویداد",
+          "st": "Bir etkinliğin tam detayı"
+        },
+        "biletix_list_by_category": {
+          "s": "Events by category",
+          "sf": "رویدادها بر اساس دسته",
+          "st": "Kategoriye göre etkinlikler"
+        },
+        "biletix_list_venues": {
+          "s": "All venues",
+          "sf": "همهٔ سالن‌ها",
+          "st": "Tüm mekânlar"
+        },
+        "biletix_venue_events": {
+          "s": "Events at one venue",
+          "sf": "رویدادهای یک سالن",
+          "st": "Bir mekândaki etkinlikler"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "sozcu-mcp": {
+      "cat": "news",
+      "color": "#1E40AF",
+      "letter": "📰",
+      "featured": false,
+      "account": false,
+      "added": 12,
+      "desc_fa": "اخبار Sözcü: تیترها بر اساس بخش، تازه‌ترین اخبار از بایگانی تاریخ‌دار، متن کامل مقاله، جست‌وجو در بایگانی و نرخ‌های زندهٔ بازار.",
+      "desc_tr": "Sözcü haberleri: bölüme göre manşetler, tarihli arşivden en son haberler, makalenin tam metni, arşivde arama ve canlı piyasa kurları.",
+      "env": null,
+      "tools": {
+        "sozcu_headlines": {
+          "s": "Headlines by section",
+          "sf": "تیترها بر اساس بخش",
+          "st": "Bölüme göre manşetler"
+        },
+        "sozcu_latest": {
+          "s": "Latest news from the dated archive",
+          "sf": "تازه‌ترین اخبار از بایگانی تاریخ‌دار",
+          "st": "Tarihli arşivden en son haberler"
+        },
+        "sozcu_get_article": {
+          "s": "Full article text",
+          "sf": "متن کامل مقاله",
+          "st": "Makalenin tam metni"
+        },
+        "sozcu_search_news": {
+          "s": "Search the news archive",
+          "sf": "جست‌وجو در بایگانی اخبار",
+          "st": "Haber arşivinde ara"
+        },
+        "sozcu_market_rates": {
+          "s": "Live market ticker rates",
+          "sf": "نرخ‌های زندهٔ بازار",
+          "st": "Canlı piyasa kurları"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "eleman-net-mcp": {
+      "cat": "jobs",
+      "color": "#065F46",
+      "letter": "👷",
+      "featured": false,
+      "account": false,
+      "added": 13,
+      "desc_fa": "آگهی‌های شغلی eleman.net: جست‌وجو با کلیدواژه، جزئیات کامل یک شغل، فهرست بخش‌ها و شهرها، و تازه‌ترین آگهی‌ها.",
+      "desc_tr": "eleman.net iş ilanları: anahtar kelimeyle arama, bir işin tam detayı, sektör ve şehir listeleri ve en yeni ilanlar.",
+      "env": null,
+      "tools": {
+        "eleman_search_jobs": {
+          "s": "Search jobs by keyword",
+          "sf": "جست‌وجوی شغل‌ها با کلیدواژه",
+          "st": "Anahtar kelimeyle iş ara"
+        },
+        "eleman_get_job": {
+          "s": "Full detail for one job",
+          "sf": "جزئیات کامل یک شغل",
+          "st": "Bir işin tam detayı"
+        },
+        "eleman_list_sectors": {
+          "s": "All sectors",
+          "sf": "همهٔ بخش‌ها",
+          "st": "Tüm sektörler"
+        },
+        "eleman_list_cities": {
+          "s": "All cities",
+          "sf": "همهٔ شهرها",
+          "st": "Tüm şehirler"
+        },
+        "eleman_new_listings": {
+          "s": "Newest listings",
+          "sf": "تازه‌ترین آگهی‌ها",
+          "st": "En yeni ilanlar"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "mackolik-mcp": {
+      "cat": "sports",
+      "color": "#15803D",
+      "letter": "⚽",
+      "featured": false,
+      "account": false,
+      "added": 14,
+      "desc_fa": "نتایج زندهٔ Mackolik: مسابقات در حال برگزاری، نتایج یک روز، بازی‌های آینده، جدول لیگ‌ها و جزئیات یک مسابقه.",
+      "desc_tr": "Mackolik canlı skorlar: şu an oynanan maçlar, bir günün sonuçları, yaklaşan fikstürler, lig puan durumları ve bir maçın detayı.",
+      "env": null,
+      "tools": {
+        "mackolik_live_scores": {
+          "s": "Live matches right now",
+          "sf": "مسابقات زنده همین حالا",
+          "st": "Şu an oynanan canlı maçlar"
+        },
+        "mackolik_results": {
+          "s": "Results for a date",
+          "sf": "نتایج یک روز",
+          "st": "Bir tarihin sonuçları"
+        },
+        "mackolik_fixtures": {
+          "s": "Upcoming fixtures",
+          "sf": "بازی‌های آینده",
+          "st": "Yaklaşan fikstürler"
+        },
+        "mackolik_standings": {
+          "s": "League standings",
+          "sf": "جدول لیگ‌ها",
+          "st": "Lig puan durumları"
+        },
+        "mackolik_match_detail": {
+          "s": "Detail for one match",
+          "sf": "جزئیات یک مسابقه",
+          "st": "Bir maçın detayı"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "donanimhaber-mcp": {
+      "cat": "news",
+      "color": "#4F46E5",
+      "letter": "💻",
+      "featured": false,
+      "account": false,
+      "added": 15,
+      "desc_fa": "اخبار فناوری DonanımHaber: تازه‌ترین مقاله‌ها، جست‌وجوی اخبار، متن کامل مقاله، مقاله‌های یک بخش، همهٔ بخش‌ها و موضوعات داغ انجمن.",
+      "desc_tr": "DonanımHaber teknoloji haberleri: en son makaleler, haber araması, makalenin tam metni, bir bölümün makaleleri, tüm bölümler ve forumun sıcak konuları.",
+      "env": null,
+      "tools": {
+        "donanimhaber_latest": {
+          "s": "Latest tech articles",
+          "sf": "تازه‌ترین مقاله‌های فناوری",
+          "st": "En son teknoloji makaleleri"
+        },
+        "donanimhaber_search_news": {
+          "s": "Search news (Turkish-aware filter)",
+          "sf": "جست‌وجوی اخبار (فیلتر آگاه به ترکی)",
+          "st": "Haber ara (Türkçe duyarlı filtre)"
+        },
+        "donanimhaber_get_article": {
+          "s": "Full article text",
+          "sf": "متن کامل مقاله",
+          "st": "Makalenin tam metni"
+        },
+        "donanimhaber_section": {
+          "s": "Articles in one section",
+          "sf": "مقاله‌های یک بخش",
+          "st": "Bir bölümün makaleleri"
+        },
+        "donanimhaber_sections": {
+          "s": "All sections",
+          "sf": "همهٔ بخش‌ها",
+          "st": "Tüm bölümler"
+        },
+        "donanimhaber_forum_hot": {
+          "s": "Hot forum topics",
+          "sf": "موضوعات داغ انجمن",
+          "st": "Forumun sıcak konuları"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "yemek-com-mcp": {
+      "cat": "food",
+      "color": "#C2410C",
+      "letter": "🍳",
+      "featured": false,
+      "account": false,
+      "added": 16,
+      "desc_fa": "رسپی‌های Yemek.com: جست‌وجوی رسپی با کلیدواژه، رسپی کامل با مواد و مراحل و امتیاز، دسته‌ها، رسپی‌های پرطرفدار، ویدیوها و محبوب‌ترین‌ها.",
+      "desc_tr": "Yemek.com tarifleri: anahtar kelimeyle tarif ara, malzemeler, adımlar ve puanla tam tarif, kategoriler, trend tarifler, videolar ve en popülerler.",
+      "env": null,
+      "tools": {
+        "yemek_search_recipes": {
+          "s": "Search recipes by keyword",
+          "sf": "جست‌وجوی رسپی با کلیدواژه",
+          "st": "Anahtar kelimeyle tarif ara"
+        },
+        "yemek_get_recipe": {
+          "s": "Full recipe: ingredients, steps, rating",
+          "sf": "رسپی کامل: مواد، مراحل، امتیاز",
+          "st": "Tam tarif: malzemeler, adımlar, puan"
+        },
+        "yemek_list_categories": {
+          "s": "All recipe categories",
+          "sf": "همهٔ دسته‌های رسپی",
+          "st": "Tüm tarif kategorileri"
+        },
+        "yemek_list_trending": {
+          "s": "Trending recipes",
+          "sf": "رسپی‌های پرطرفدار",
+          "st": "Trend tarifler"
+        },
+        "yemek_list_videos": {
+          "s": "Recipe videos",
+          "sf": "ویدیوهای رسپی",
+          "st": "Tarif videoları"
+        },
+        "yemek_list_popular": {
+          "s": "Most popular recipes",
+          "sf": "محبوب‌ترین رسپی‌ها",
+          "st": "En popüler tarifler"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "hurriyet-mcp": {
+      "cat": "news",
+      "color": "#991B1B",
+      "letter": "🗞️",
+      "featured": false,
+      "account": false,
+      "added": 17,
+      "desc_fa": "اخبار Hürriyet: تیترها بر اساس بخش، متن کامل مقاله، جست‌وجوی اخبار با کلیدواژه، تازه‌ترین اخبار از صفحهٔ اصلی و همهٔ بخش‌های خبری.",
+      "desc_tr": "Hürriyet haberleri: bölüme göre manşetler, makalenin tam metni, anahtar kelimeyle haber araması, ana sayfadan en son haberler ve tüm haber bölümleri.",
+      "env": null,
+      "tools": {
+        "hurriyet_get_headlines": {
+          "s": "Headlines by section",
+          "sf": "تیترها بر اساس بخش",
+          "st": "Bölüme göre manşetler"
+        },
+        "hurriyet_get_article": {
+          "s": "Full article text",
+          "sf": "متن کامل مقاله",
+          "st": "Makalenin tam metni"
+        },
+        "hurriyet_search_news": {
+          "s": "Search news by keyword",
+          "sf": "جست‌وجوی اخبار با کلیدواژه",
+          "st": "Anahtar kelimeyle haber ara"
+        },
+        "hurriyet_get_latest": {
+          "s": "Latest news from the homepage",
+          "sf": "تازه‌ترین اخبار از صفحهٔ اصلی",
+          "st": "Ana sayfadan en son haberler"
+        },
+        "hurriyet_list_categories": {
+          "s": "All news sections",
+          "sf": "همهٔ بخش‌های خبری",
+          "st": "Tüm haber bölümleri"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "sok-mcp": {
+      "cat": "grocery",
+      "color": "#B91C1C",
+      "letter": "🛒",
+      "featured": false,
+      "account": false,
+      "added": 18,
+      "desc_fa": "سوپرمارکت ŞOK: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۹ دسته، کالاهای یک دسته، کمپین‌های جاری و آمار قیمت (لیر).",
+      "desc_tr": "ŞOK market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 19 kategori, bir kategorinin ürünleri, güncel kampanyalar ve fiyat istatistikleri (TL).",
+      "env": null,
+      "tools": {
+        "sok_search_products": {
+          "s": "Search products by keyword",
+          "sf": "جست‌وجوی کالا با کلیدواژه",
+          "st": "Anahtar kelimeyle ürün ara"
+        },
+        "sok_get_product": {
+          "s": "Full detail for one product",
+          "sf": "جزئیات کامل یک کالا",
+          "st": "Bir ürünün tam detayı"
+        },
+        "sok_list_categories": {
+          "s": "All 19 categories",
+          "sf": "همهٔ ۱۹ دسته",
+          "st": "19 kategorinin tamamı"
+        },
+        "sok_category_products": {
+          "s": "Products in one category",
+          "sf": "کالاهای یک دسته",
+          "st": "Bir kategorinin ürünleri"
+        },
+        "sok_list_promotions": {
+          "s": "Current campaigns",
+          "sf": "کمپین‌های جاری",
+          "st": "Güncel kampanyalar"
+        },
+        "sok_price_stats": {
+          "s": "Price stats for a query in TRY",
+          "sf": "آمار قیمت یک جست‌وجو به لیر",
+          "st": "Bir sorgu için fiyat istatistikleri (TL)"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "jolly-tur-mcp": {
+      "cat": "travel",
+      "color": "#0E7490",
+      "letter": "🏨",
+      "featured": false,
+      "account": false,
+      "added": 19,
+      "desc_fa": "هتل‌های Jolly Tur: جست‌وجوی هتل با قیمت‌های زنده، جزئیات کامل یک هتل و کمپین‌های جاری.",
+      "desc_tr": "Jolly Tur otelleri: canlı fiyatlarla otel ara, bir otelin tam detayı ve güncel kampanyalar.",
+      "env": null,
+      "tools": {
+        "jolly_search_hotels": {
+          "s": "Search hotels with live prices",
+          "sf": "جست‌وجوی هتل با قیمت‌های زنده",
+          "st": "Canlı fiyatlarla otel ara"
+        },
+        "jolly_get_hotel": {
+          "s": "Full detail for one hotel",
+          "sf": "جزئیات کامل یک هتل",
+          "st": "Bir otelin tam detayı"
+        },
+        "jolly_list_campaigns": {
+          "s": "Current campaigns",
+          "sf": "کمپین‌های جاری",
+          "st": "Güncel kampanyalar"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "migros-mcp": {
+      "cat": "grocery",
+      "color": "#65A30D",
+      "letter": "🛒",
+      "featured": false,
+      "account": true,
+      "added": 20,
+      "desc_fa": "سوپرمارکت Migros Sanal Market: جست‌وجوی کالا با کلیدواژه، جزئیات کامل یک کالا، ۱۱ دسته، تبلیغات جاری و آمار قیمت (لیر). اقدامات حساب اختیاری با نشست محلی: مشاهده/افزودن/حذف اقلام سبد، تغییر تعداد و شروع پرداخت (فقط لینک پرداخت؛ هرگز پرداخت نمی‌کند).",
+      "desc_tr": "Migros Sanal Market: anahtar kelimeyle ürün ara, bir ürünün tam detayı, 11 kategori, güncel promosyonlar ve fiyat istatistikleri (TL). İsteğe bağlı yerel oturumlu hesap işlemleri: sepeti görüntüleme/ekleme/silme, miktar değiştirme ve ödeme başlatma (yalnızca ödeme bağlantısı; asla ödeme yapmaz).",
+      "env": {
+        "MIGROS_SESSION": "YOUR_SESSION_COOKIE_HERE"
+      },
+      "tools": {
+        "migros_search_products": {
+          "s": "Search products by keyword",
+          "sf": "جست‌وجوی کالا با کلیدواژه",
+          "st": "Anahtar kelimeyle ürün ara"
+        },
+        "migros_get_product": {
+          "s": "Full detail for one product",
+          "sf": "جزئیات کامل یک کالا",
+          "st": "Bir ürünün tam detayı"
+        },
+        "migros_list_categories": {
+          "s": "All 11 categories",
+          "sf": "همهٔ ۱۱ دسته",
+          "st": "11 kategorinin tamamı"
+        },
+        "migros_list_promotions": {
+          "s": "Current promotions",
+          "sf": "تبلیغات جاری",
+          "st": "Güncel promosyonlar"
+        },
+        "migros_price_stats": {
+          "s": "Price stats for a query in TRY",
+          "sf": "آمار قیمت یک جست‌وجو به لیر",
+          "st": "Bir sorgu için fiyat istatistikleri (TL)"
+        },
+        "migros_view_cart": {
+          "s": "View your cart: items, quantities, totals",
+          "sf": "مشاهدهٔ سبد خرید: اقلام، تعداد، جمع",
+          "st": "Sepeti görüntüle: ürünler, adetler, toplamlar"
+        },
+        "migros_add_to_cart": {
+          "s": "Add a product to your cart (confirm=true)",
+          "sf": "افزودن کالا به سبد خرید (تأیید لازم است)",
+          "st": "Sepete ürün ekle (onay gerekli)"
+        },
+        "migros_remove_from_cart": {
+          "s": "Remove a product from your cart (confirm=true)",
+          "sf": "حذف کالا از سبد خرید (تأیید لازم است)",
+          "st": "Sepetten ürün çıkar (onay gerekli)"
+        },
+        "migros_update_cart_quantity": {
+          "s": "Change a cart item's quantity (confirm=true)",
+          "sf": "تغییر تعداد یک قلم سبد (تأیید لازم است)",
+          "st": "Sepet ürününün adedini değiştir (onay gerekli)"
+        },
+        "migros_create_order": {
+          "s": "Start checkout: returns the payment link, never pays",
+          "sf": "شروع پرداخت: فقط لینک پرداخت، هرگز پرداخت نمی‌کند",
+          "st": "Ödemeyi başlat: yalnızca ödeme bağlantısı, asla ödeme yapmaz"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.2.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "paribu-cineverse-mcp": {
+      "cat": "entertainment",
+      "color": "#7E22CE",
+      "letter": "🎬",
+      "featured": false,
+      "account": false,
+      "added": 21,
+      "desc_fa": "سینماهای Paribu Cineverse: فیلم‌های در حال اکران، فیلم‌های آینده، جزئیات کامل یک فیلم، همهٔ سینماها و ساعت نمایش فیلم‌ها.",
+      "desc_tr": "Paribu Cineverse sinemaları: vizyondaki filmler, yakında gelecek filmler, bir filmin tam detayı, tüm sinemalar ve film seansları.",
+      "env": null,
+      "tools": {
+        "cineverse_list_now_showing": {
+          "s": "Films now showing",
+          "sf": "فیلم‌های در حال اکران",
+          "st": "Vizyondaki filmler"
+        },
+        "cineverse_list_coming_soon": {
+          "s": "Coming soon films",
+          "sf": "فیلم‌های آینده",
+          "st": "Yakında gelecek filmler"
+        },
+        "cineverse_get_movie": {
+          "s": "Full detail for one film",
+          "sf": "جزئیات کامل یک فیلم",
+          "st": "Bir filmin tam detayı"
+        },
+        "cineverse_list_cinemas": {
+          "s": "All cinemas, optional city filter",
+          "sf": "همهٔ سینماها، با فیلتر شهر",
+          "st": "Tüm sinemalar, isteğe bağlı şehir filtresi"
+        },
+        "cineverse_get_showtimes": {
+          "s": "Showtimes for a film/cinema",
+          "sf": "ساعت نمایش یک فیلم/سینما",
+          "st": "Bir film/sinema için seanslar"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "trthaber-mcp": {
+      "cat": "news",
+      "color": "#9F1239",
+      "letter": "📺",
+      "featured": false,
+      "account": false,
+      "added": 22,
+      "desc_fa": "اخبار TRT Haber: تیترها بر اساس دسته، خبرهای فوری از جدیدترین، متن کامل یک مقاله، جست‌وجوی اخبار با کلیدواژه و ۱۸ دستهٔ خبری.",
+      "desc_tr": "TRT Haber: kategoriye göre manşetler, en yeni son dakika haberleri, bir makalenin tam metni, anahtar kelimeyle haber araması ve 18 haber kategorisi.",
+      "env": null,
+      "tools": {
+        "trthaber_headlines": {
+          "s": "Headlines by category",
+          "sf": "تیترها بر اساس دسته",
+          "st": "Kategoriye göre manşetler"
+        },
+        "trthaber_latest": {
+          "s": "Breaking news, newest first",
+          "sf": "خبرهای فوری، از جدیدترین",
+          "st": "Son dakika haberleri, yeniden eskiye"
+        },
+        "trthaber_get_article": {
+          "s": "Full text of one article",
+          "sf": "متن کامل یک مقاله",
+          "st": "Bir makalenin tam metni"
+        },
+        "trthaber_search_news": {
+          "s": "Keyword search over current news",
+          "sf": "جست‌وجوی اخبار جاری با کلیدواژه",
+          "st": "Güncel haberlerde anahtar kelimeyle arama"
+        },
+        "trthaber_list_categories": {
+          "s": "The 18 news categories",
+          "sf": "۱۸ دستهٔ خبری",
+          "st": "18 haber kategorisi"
+        }
+      },
+      "first_seen": "2026-11-08",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "tff-mcp": {
+      "cat": "sports",
+      "color": "#DC2626",
+      "letter": "🏆",
+      "featured": false,
+      "account": false,
+      "added": 23,
+      "desc_fa": "فدراسیون فوتبال ترکیه (TFF): جدول لیگ‌ها، بازی‌ها و نتایج هفتگی، جزئیات کامل یک بازی و گلزنان برتر — ۱۸ لیگ.",
+      "desc_tr": "Türkiye Futbol Federasyonu (TFF): lig puan durumları, haftalık fikstür ve sonuçlar, bir maçın tam detayı ve gol krallığı — 18 lig.",
+      "env": null,
+      "tools": {
+        "tff_list_leagues": {
+          "s": "The 18 covered leagues",
+          "sf": "۱۸ لیگ تحت پوشش",
+          "st": "Kapsanan 18 lig"
+        },
+        "tff_standings": {
+          "s": "League standings (puan cetveli)",
+          "sf": "جدول لیگ",
+          "st": "Lig puan durumu"
+        },
+        "tff_fixtures": {
+          "s": "Fixtures and results by week",
+          "sf": "بازی‌ها و نتایج هفته",
+          "st": "Haftanın fikstürü ve sonuçları"
+        },
+        "tff_match_detail": {
+          "s": "Full match detail: officials, goals, lineups",
+          "sf": "جزئیات کامل یک بازی: داوران، گل‌ها، ترکیب",
+          "st": "Bir maçın tam detayı: hakemler, goller, kadrolar"
+        },
+        "tff_top_scorers": {
+          "s": "Top scorers (gol krallığı)",
+          "sf": "گلزنان برتر",
+          "st": "Gol krallığı"
+        }
+      },
+      "first_seen": "2026-11-09",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "bim-mcp": {
+      "cat": "grocery",
+      "color": "#EA580C",
+      "letter": "🛒",
+      "featured": false,
+      "account": false,
+      "added": 24,
+      "desc_fa": "فروشگاه تخفیفی BİM (بزرگ‌ترین زنجیرهٔ تخفیفی ترکیه، ۱۳٬۰۳۲ شعبه): پیشنهادهای هفتگی آکتوئل با قیمت (لیر)، جست‌وجوی محصول، آمار قیمت، ۱۱ دسته و ۸۱ استان.",
+      "desc_tr": "BİM indirim marketi (Türkiye'nin en büyük indirim zinciri, 13.032 mağaza): haftalık Aktüel ürünleri fiyatlarıyla (TL), ürün arama, fiyat istatistikleri, 11 kategori ve 81 il.",
+      "env": null,
+      "tools": {
+        "bim_list_aktuel_dates": {
+          "s": "Aktüel + İndirim date periods with keys",
+          "sf": "دوره‌های آکتوئل و ایندیریم با کلید تاریخ",
+          "st": "Aktüel ve İndirim tarih dönemleri ve anahtarları"
+        },
+        "bim_aktuel_products": {
+          "s": "Priced Aktüel products for one week (filter + sort)",
+          "sf": "محصولات قیمت‌دار آکتوئل یک هفته (جست‌وجو و مرتب‌سازی)",
+          "st": "Bir haftanın fiyatlı Aktüel ürünleri (arama ve sıralama)"
+        },
+        "bim_product_detail": {
+          "s": "Full detail for one Aktüel product",
+          "sf": "جزئیات کامل یک محصول آکتوئل",
+          "st": "Bir Aktüel ürününün tam detayı"
+        },
+        "bim_price_stats": {
+          "s": "Price stats for one Aktüel week (TRY)",
+          "sf": "آمار قیمت یک هفتهٔ آکتوئل (لیر)",
+          "st": "Bir Aktüel haftasının fiyat istatistikleri (TL)"
+        },
+        "bim_list_categories": {
+          "s": "The 11 product-range categories",
+          "sf": "۱۱ دستهٔ محصولات",
+          "st": "11 ürün kategorisi"
+        },
+        "bim_list_cities": {
+          "s": "The 81 provinces in the store finder",
+          "sf": "۸۱ استان در یابندهٔ فروشگاه",
+          "st": "Mağaza bulucudaki 81 il"
+        },
+        "bim_health": {
+          "s": "Check whether bim.com.tr is reachable",
+          "sf": "بررسی در دسترس بودن bim.com.tr",
+          "st": "bim.com.tr erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-10",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "tabii-mcp": {
+      "cat": "entertainment",
+      "color": "#B91C1C",
+      "letter": "📺",
+      "featured": false,
+      "account": false,
+      "added": 25,
+      "desc_fa": "پلتفرم استریم TRT (تابی، بیش از ۱۱ میلیون مشترک): جست‌وجوی کاتالوگ با عنوان اصلی ترکی، جزئیات کامل هر عنوان (فصل‌ها، قسمت‌ها، بازیگران و زبان‌ها)، ۱۵ کانال زندهٔ TRT با آدرس استریم و فیلم‌شناسی بازیگران.",
+      "desc_tr": "TRT'nin dijital platformu tabii (11 milyondan fazla abone): orijinal Türkçe başlığa göre katalog araması, bir içeriğin tam detayı (sezonlar, bölümler, oyuncular ve diller), 15 canlı TRT kanalı ve oyuncu filmografileri.",
+      "env": null,
+      "tools": {
+        "tabii_search_content": {
+          "s": "Search the catalog by original Turkish title",
+          "sf": "جست‌وجوی کاتالوگ با عنوان اصلی ترکی",
+          "st": "Orijinal Türkçe başlığa göre katalog araması"
+        },
+        "tabii_get_show": {
+          "s": "Full detail for one title (seasons, episodes, cast)",
+          "sf": "جزئیات کامل یک عنوان (فصل‌ها، قسمت‌ها، بازیگران)",
+          "st": "Bir içeriğin tam detayı (sezonlar, bölümler, oyuncular)"
+        },
+        "tabii_homepage": {
+          "s": "Current homepage sections (exclusive, series, movies...)",
+          "sf": "بخش‌های فعلی صفحهٔ اصلی",
+          "st": "Ana sayfanın güncel bölümleri"
+        },
+        "tabii_live_channels": {
+          "s": "The 15 live TRT channels with HLS stream URLs",
+          "sf": "۱۵ کانال زندهٔ TRT با آدرس استریم",
+          "st": "HLS yayın adresleriyle 15 canlı TRT kanalı"
+        },
+        "tabii_get_person": {
+          "s": "One cast/crew member by id, with filmography",
+          "sf": "یک بازیگر/عضو عوامل با فیلم‌شناسی",
+          "st": "Filmografisiyle bir oyuncu/ekip üyesi"
+        },
+        "tabii_health": {
+          "s": "Check whether tabii.com is reachable",
+          "sf": "بررسی در دسترس بودن tabii.com",
+          "st": "tabii.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-11",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "eksisozluk-mcp": {
+      "cat": "communication",
+      "color": "#9333EA",
+      "letter": "💬",
+      "featured": false,
+      "account": false,
+      "added": 26,
+      "desc_fa": "اکشی سوزلوک، فرهنگ لغت مشارکتی و پلتفرم اجتماعی نمادین ترکیه: عنوان‌های داغ گوندم با تعداد ورودی، جست‌وجوی عنوان، ورودی‌های هر موضوع با مرتب‌سازی شوکلا و صفحه‌بندی، عنوان‌های کانال‌ها و محبوب‌ترین ورودی‌های دیروز.",
+      "desc_tr": "Türkiye'nin ikonik işbirlikçi sözlüğü ve sosyal platformu Ekşi Sözlük: entry sayılarıyla gündem başlıkları, başlık araması, şükela sıralamalı ve sayfalı entry'ler, kanal başlıkları ve dünün en beğenilen entry'leri.",
+      "env": null,
+      "tools": {
+        "eksisozluk_trending": {
+          "s": "Gündem — trending topics with entry counts",
+          "sf": "عنوان‌های داغ گوندم با تعداد ورودی",
+          "st": "Entry sayılarıyla gündem başlıkları"
+        },
+        "eksisozluk_search_topics": {
+          "s": "Search topic titles (partial matches welcome)",
+          "sf": "جست‌وجوی عنوان‌ها (تطابق جزئی هم قبول است)",
+          "st": "Başlık araması (kısmi eşleşme olur)"
+        },
+        "eksisozluk_get_topic": {
+          "s": "Entries of one topic (recent / şükela sorts, pages)",
+          "sf": "ورودی‌های یک موضوع (مرتب‌سازی شوکلا، صفحه‌بندی)",
+          "st": "Bir başlığın entry'leri (şükela sıralama, sayfalama)"
+        },
+        "eksisozluk_channel_topics": {
+          "s": "Topics of one channel (spor, siyaset, ...)",
+          "sf": "عنوان‌های یک کانال (ورزش، سیاست و …)",
+          "st": "Bir kanalın başlıkları (spor, siyaset, ...)"
+        },
+        "eksisozluk_debe": {
+          "s": "Yesterday's most-liked entries, grouped by topic",
+          "sf": "محبوب‌ترین ورودی‌های دیروز، گروه‌بندی‌شده",
+          "st": "Dünün en beğenilen entry'leri, başlığa göre gruplu"
+        },
+        "eksisozluk_health": {
+          "s": "Check whether eksisozluk.com is reachable",
+          "sf": "بررسی در دسترس بودن eksisozluk.com",
+          "st": "eksisozluk.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-12",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "iskur-mcp": {
+      "cat": "jobs",
+      "color": "#1D4ED8",
+      "letter": "🏢",
+      "featured": false,
+      "account": false,
+      "added": 27,
+      "desc_fa": "سازمان کاریابی ترکیه (İŞKUR): جست‌وجوی آگهی‌های شغلی آزاد با کلیدواژه و شهر، آگهی‌های ۲۴ ساعت گذشته، جزئیات کامل هر آگهی (توضیحات، مهارت‌ها، تحصیلات)، ۸۱ استان و اطلاعیه‌های رسمی.",
+      "desc_tr": "Türkiye İş Kurumu (İŞKUR): anahtar kelime ve şehre göre açık iş ilanı arama, son 24 saatin ilanları, bir ilanın tam detayı (açıklama, nitelikler, eğitim), 81 il ve resmî duyurular.",
+      "env": null,
+      "tools": {
+        "iskur_search_jobs": {
+          "s": "Search open job listings (keyword, city, date range, work type, education)",
+          "sf": "جست‌وجوی آگهی‌های شغلی (کلیدواژه، شهر، تاریخ)",
+          "st": "Açık iş ilanı arama (anahtar kelime, şehir, tarih)"
+        },
+        "iskur_latest_jobs": {
+          "s": "Jobs posted in the last 24 hours, optionally in one city",
+          "sf": "آگهی‌های ۲۴ ساعت گذشته",
+          "st": "Son 24 saatin ilanları"
+        },
+        "iskur_get_job": {
+          "s": "Detail of one listing (description, skills, occupation, education)",
+          "sf": "جزئیات یک آگهی (توضیحات، مهارت‌ها، تحصیلات)",
+          "st": "Bir ilanın tam detayı (açıklama, nitelikler, eğitim)"
+        },
+        "iskur_list_cities": {
+          "s": "The 81 provinces with codes",
+          "sf": "۸۱ استان با کد",
+          "st": "Kodlarıyla 81 il"
+        },
+        "iskur_list_announcements": {
+          "s": "İŞKUR official announcements",
+          "sf": "اطلاعیه‌های رسمی İŞKUR",
+          "st": "İŞKUR resmî duyuruları"
+        },
+        "iskur_health": {
+          "s": "Check whether the İŞKUR job portal is reachable",
+          "sf": "بررسی در دسترس بودن پورتال İŞKUR",
+          "st": "İŞKUR portalına erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-13",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "beyazperde-mcp": {
+      "cat": "entertainment",
+      "color": "#8B5CF6",
+      "letter": "🍿",
+      "featured": false,
+      "account": false,
+      "added": 28,
+      "desc_fa": "بیازپرده، پورتال پیشروی سینمای ترکیه: فیلم‌های روی پرده با تاریخ اکران، مدت، ژانر، کارگردان و بازیگران؛ جست‌وجوی فیلم با عنوان ترکی؛ جزئیات کامل هر فیلم (خلاصه، کارگردان، بازیگران، امتیازها)؛ سانس‌های امروز هر فیلم در هر شهر (سینماها، نسخه‌ها و ساعت‌ها)؛ تازه‌ترین اخبار سینما و ۸۵ شهر با کد جغرافیایی.",
+      "desc_tr": "Türkiye'nin önde gelen sinema portalı Beyazperde: vizyondaki filmler (vizyon tarihi, süre, tür, yönetmen, oyuncular), Türkçe başlığa göre film arama, bir filmin tam detayı (özet, yönetmen, oyuncular, puanlar), bir filmin bir şehirdeki bugünkü seansları (sinemalar, versiyonlar, saatler), güncel sinema haberleri ve 85 şehir.",
+      "env": null,
+      "tools": {
+        "beyazperde_now_showing": {
+          "s": "Movies now showing in Turkish cinemas (title, release date, duration, genres, director, cast)",
+          "sf": "فیلم‌های روی پرده (تاریخ، مدت، ژانر، کارگردان)",
+          "st": "Vizyondaki filmler (tarih, süre, tür, yönetmen)"
+        },
+        "beyazperde_search_movies": {
+          "s": "Search movies by title (Turkish title, original title, year, director, genres)",
+          "sf": "جست‌وجوی فیلم با عنوان ترکی",
+          "st": "Türkçe başlığa göre film arama"
+        },
+        "beyazperde_get_movie": {
+          "s": "Detail of one movie (synopsis, director, cast, genres, duration, ratings)",
+          "sf": "جزئیات یک فیلم (خلاصه، بازیگران، امتیازها)",
+          "st": "Bir filmin tam detayı (özet, oyuncular, puanlar)"
+        },
+        "beyazperde_showtimes": {
+          "s": "Today's showtimes for a movie in a city (cinemas, versions, times)",
+          "sf": "سانس‌های امروز یک فیلم در یک شهر",
+          "st": "Bir filmin bir şehirdeki bugünkü seansları"
+        },
+        "beyazperde_latest_news": {
+          "s": "Latest cinema news from Beyazperde",
+          "sf": "تازه‌ترین اخبار سینما",
+          "st": "Güncel sinema haberleri"
+        },
+        "beyazperde_list_cities": {
+          "s": "The 85 cities (with geocodes) showtimes can be listed for",
+          "sf": "۸۵ شهر با کد جغرافیایی",
+          "st": "Kodlarıyla 85 şehir"
+        },
+        "beyazperde_health": {
+          "s": "Check whether beyazperde.com is reachable",
+          "sf": "بررسی در دسترس بودن beyazperde.com",
+          "st": "beyazperde.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-14",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "nefisyemektarifleri-mcp": {
+      "cat": "food",
+      "color": "#B45309",
+      "letter": "🍲",
+      "featured": false,
+      "account": false,
+      "added": 29,
+      "desc_fa": "نفیس یمک تاریف‌لری، بزرگ‌ترین سایت دستور غذای ترکیه: جستجو در بیش از ۱۴٬۰۰۰ دستور برای هر پرس‌وجو؛ دستور کامل با مواد و مقدارها، مراحل، نکته‌ها، زمان، تعداد نفرات، امتیاز و ارزش غذایی؛ درخت کامل دسته‌بندی (۲۴ دسته و ۷۴ زیردسته)؛ فهرست هر دسته با مرتب‌سازی محبوب/پرطرفدار/جدیدترین؛ پرتکرارترین دستورها و منوی روزانه «امروز چی بپزم؟».",
+      "desc_tr": "Türkiye'nin en büyük tarif sitesi Nefis Yemek Tarifleri: her sorguda 14.000'den fazla tarifte arama; tam tarif (miktarlı malzemeler, adımlar, püf noktaları, süreler, porsiyon, puan, besin değerleri); tam kategori ağacı (24 ana kategori, 74 alt kategori); her kategorinin popüler/trend/en yeni sıralı listesi; en çok yapılan tarifler ve günlük 'Bugün Ne Pişirsem?' menüsü.",
+      "env": null,
+      "tools": {
+        "nefis_search_recipes": {
+          "s": "Search recipes by dish or ingredient (13 per page, paginated)",
+          "sf": "جستجوی دستور غذا با نام غذا یا ماده",
+          "st": "Yemek veya malzemeyle tarif arama"
+        },
+        "nefis_get_recipe": {
+          "s": "Full recipe: ingredients with amounts, steps, tips, times, servings, rating, nutrition",
+          "sf": "دستور کامل: مواد با مقدار، مراحل، نکته‌ها، ارزش غذایی",
+          "st": "Tam tarif: miktarlı malzemeler, adımlar, püf noktaları, besin değerleri"
+        },
+        "nefis_list_categories": {
+          "s": "Full recipe-category tree (24 top-level, 74 subcategories)",
+          "sf": "درخت کامل دسته‌بندی (۲۴ دسته، ۷۴ زیردسته)",
+          "st": "Tam kategori ağacı (24 ana kategori, 74 alt kategori)"
+        },
+        "nefis_category_recipes": {
+          "s": "Recipes in one category, sorted popular/trending/newest",
+          "sf": "دستورهای یک دسته (محبوب/پرطرفدار/جدیدترین)",
+          "st": "Bir kategorinin tarifleri (popüler/trend/en yeni)"
+        },
+        "nefis_trending": {
+          "s": "Most-made recipes (En Çok Yapılanlar, 24)",
+          "sf": "پرتکرارترین دستورها (۲۴ دستور)",
+          "st": "En çok yapılan tarifler (24 tarif)"
+        },
+        "nefis_daily_menu": {
+          "s": "Today's Bugün Ne Pişirsem? menu (25 recipes)",
+          "sf": "منوی روزانه «امروز چی بپزم؟» (۲۵ دستور)",
+          "st": "Günün 'Bugün Ne Pişirsem?' menüsü (25 tarif)"
+        },
+        "nefis_health": {
+          "s": "Check whether nefisyemektarifleri.com is reachable right now",
+          "sf": "بررسی در دسترس بودن nefisyemektarifleri.com",
+          "st": "nefisyemektarifleri.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-15",
+      "version": "0.1.0",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "paribu-mcp": {
+      "cat": "finance",
+      "color": "#D97706",
+      "letter": "🪙",
+      "featured": false,
+      "account": false,
+      "added": 30,
+      "desc_fa": "پاریبو، بزرگ‌ترین صرافی ارز دیجیتال ترکیه: قیمت‌های زندهٔ ۲۴ ساعته برای ۲۶۶ بازار (بیت‌کوین، اتریوم و بیش از ۱۹۰ کوین در برابر لیر و تتر)، دفتر سفارش با اسپرد و قیمت میانی، معاملات اخیر، فهرست کامل ۴۶۷ بازار با دقت و گام قیمت، و اطلاعات ارزها شامل شبکه‌ها و کارمزد برداشت.",
+      "desc_tr": "Türkiye'nin en büyük kripto borsası Paribu: 266 piyasada canlı 24 saatlik fiyatlar (BTC, ETH ve 190+ coin; TL ve USDT karşısında), spread ve orta fiyatlı emir defterleri, son işlemler, hassasiyet ve adımlarıyla 467 piyasanın tam kataloğu ve ağlar ile çekim ücretlerini içeren para birimi bilgileri.",
+      "env": null,
+      "tools": {
+        "paribu_get_ticker": {
+          "s": "24h ticker for one market, or a ranked list of all 266 markets",
+          "sf": "تیکر ۲۴ ساعتهٔ یک بازار یا فهرست رتبه‌بندی‌شدهٔ ۲۶۶ بازار",
+          "st": "Bir piyasanın 24 saatlik özeti veya 266 piyasanın sıralı listesi"
+        },
+        "paribu_get_orderbook": {
+          "s": "Live order book: best bid/ask, spread, mid price, levels",
+          "sf": "دفتر سفارش زنده: بهترین خرید/فروش، اسپرد و قیمت میانی",
+          "st": "Canlı emir defteri: en iyi alış/satış, spread ve orta fiyat"
+        },
+        "paribu_get_recent_trades": {
+          "s": "Most recent public trades, newest first (1–20)",
+          "sf": "جدیدترین معاملات عمومی (۱ تا ۲۰)",
+          "st": "En son herkese açık işlemler (1–20)"
+        },
+        "paribu_list_markets": {
+          "s": "Full 467-pair catalogue with precision, steps, labels",
+          "sf": "فهرست کامل ۴۶۷ بازار با دقت و گام‌ها",
+          "st": "467 piyasanın tam kataloğu: hassasiyet ve adımlar"
+        },
+        "paribu_get_currency": {
+          "s": "Currency metadata: networks, withdrawal fees, limits",
+          "sf": "اطلاعات ارز: شبکه‌ها، کارمزد برداشت و محدودیت‌ها",
+          "st": "Para birimi bilgileri: ağlar, çekim ücretleri ve limitler"
+        },
+        "paribu_market_movers": {
+          "s": "Top gainers / losers over the last 24h by percentage",
+          "sf": "بیشترین رشد و افت ۲۴ ساعت اخیر",
+          "st": "Son 24 saatin en çok yükselen/düşenleri"
+        },
+        "paribu_health": {
+          "s": "Check whether api.paribu.com is reachable",
+          "sf": "بررسی در دسترس بودن api.paribu.com",
+          "st": "api.paribu.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-16",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "diyanet-mcp": {
+      "cat": "services",
+      "color": "#15803D",
+      "letter": "🕌",
+      "featured": false,
+      "account": false,
+      "added": 31,
+      "desc_fa": "اوقات نماز رسمی دیانت ترکیه: ۶ وقت امروز برای هر یک از ۸۱ استان و شهرستان‌ها، جدول سالانه با تاریخ میلادی و هجری، و زاویه و زمان قبله — جدول رسمی، نه محاسبه‌شده.",
+      "desc_tr": "Diyanet'in resmi namaz vakitleri: 81 il ve ilçeleri için bugünün 6 vakti, Miladi + Hicri tarihli yıllık tablo ve kıble açısı/saati — resmi çizelge, hesaplanmış değil.",
+      "env": null,
+      "tools": {
+        "diyanet_prayer_times": {
+          "s": "Today's 6 prayer times + Miladi/Hijri dates, qibla angle/time and astro sunrise/sunset for a place",
+          "sf": "۶ وقت امروز + تاریخ میلادی/هجری، زاویه و زمان قبله",
+          "st": "Bugünün 6 vakti + Miladi/Hicri tarih, kıble açısı/saati"
+        },
+        "diyanet_yearly_times": {
+          "s": "Full-year table: one row per day (Miladi + Hijri dates + 6 times), 365 rows",
+          "sf": "جدول سالانه: هر روز یک سطر (۳۶۵ سطر)",
+          "st": "Yıllık tablo: günde bir satır (365 satır)"
+        },
+        "diyanet_list_provinces": {
+          "s": "The 81 provinces with Diyanet ids and Turkish + English names",
+          "sf": "۸۱ استان با کد و نام ترکی + انگلیسی",
+          "st": "81 il, kodları ve Türkçe + İngilizce isimleriyle"
+        },
+        "diyanet_list_districts": {
+          "s": "Districts of one province (by name or id) with ids, names and page URLs",
+          "sf": "شهرستان‌های یک استان با کد و آدرس صفحه",
+          "st": "Bir ilin ilçeleri, kodları ve sayfa adresleriyle"
+        },
+        "diyanet_qibla": {
+          "s": "Qibla angle, qibla time, astro sunrise/sunset for a place",
+          "sf": "زاویه و زمان قبله، طلوع و غروب نجومی",
+          "st": "Kıble açısı/saati, astronomik gün doğumu/batımı"
+        },
+        "diyanet_health": {
+          "s": "Check whether namazvakitleri.diyanet.gov.tr is reachable",
+          "sf": "بررسی در دسترس بودن سایت اوقات نماز دیانت",
+          "st": "Diyanet namaz vakitleri sitesi erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-17",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "osym-mcp": {
+      "cat": "services",
+      "color": "#4338CA",
+      "letter": "🎓",
+      "featured": false,
+      "account": false,
+      "added": 32,
+      "desc_fa": "اطلاعیه‌ها، تقویم آزمون و اخبار گروه‌های سازمان ملی آزمون ترکیه (ÖSYM): جدیدترین اطلاعیه‌ها و متن کامل آن‌ها با PDF راهنما، تقویم رسمی ۹۵ آزمون (YKS، KPSS، ALES، TUS، YDS، DGS و...) با تاریخ ثبت‌نام، آزمون و نتیجه، و اطلاعیه‌های هر گروه آزمون.",
+      "desc_tr": "Türkiye'nin ulusal sınav kurumu ÖSYM'nin duyuruları, sınav takvimi ve grup haberleri: en yeni duyurular ve kılavuz PDF'li tam metinleri, 95 sınavın resmi takvimi (YKS, KPSS, ALES, TUS, YDS, DGS...) — başvuru, sınav ve sonuç tarihleriyle — ve her sınav grubunun duyuruları.",
+      "env": null,
+      "tools": {
+        "osym_latest_announcements": {
+          "s": "Newest ÖSYM announcements, newest first (limit 1–50; optional year 2010–2026)",
+          "sf": "جدیدترین اطلاعیه‌های ÖSYM، از جدید به قدیم (حد ۱ تا ۵۰؛ سال اختیاری)",
+          "st": "En yeni ÖSYM duyuruları, yeniden eskiye (limit 1–50; isteğe bağlı yıl)"
+        },
+        "osym_search_announcements": {
+          "s": "Search announcements by title, Turkish-insensitive (optional year, limit 1–50)",
+          "sf": "جستجوی اطلاعیه‌ها بر اساس عنوان، بدون حساسیت به ترکی",
+          "st": "Duyuruları başlığa göre arama, Türkçe duyarsız"
+        },
+        "osym_get_announcement": {
+          "s": "Full text of one announcement by slug or URL, with guide-PDF links",
+          "sf": "متن کامل یک اطلاعیه با اسلاگ یا URL، همراه با پیوندهای PDF راهنما",
+          "st": "Bir duyurunun tam metni (slug veya URL ile), kılavuz PDF bağlantılarıyla"
+        },
+        "osym_exam_calendar": {
+          "s": "Official exam calendar: 95 exams with application / exam / result / preference dates",
+          "sf": "تقویم رسمی آزمون: ۹۵ آزمون با تاریخ ثبت‌نام، آزمون، نتیجه و انتخاب رشته",
+          "st": "Resmi sınav takvimi: başvuru / sınav / sonuç / tercih tarihleriyle 95 sınav"
+        },
+        "osym_exam_group": {
+          "s": "One exam group's announcements — or the full group list with no argument",
+          "sf": "اطلاعیه‌های یک گروه آزمون — بدون آرگومان، فهرست کامل گروه‌ها",
+          "st": "Bir sınav grubunun duyuruları — argümansız tüm grup listesi"
+        },
+        "osym_health": {
+          "s": "Check whether www.osym.gov.tr is reachable",
+          "sf": "بررسی در دسترس بودن سایت ÖSYM",
+          "st": "ÖSYM sitesi erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-18",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-18"
+    },
+    "seslisozluk-mcp": {
+      "cat": "language",
+      "color": "#0E7490",
+      "letter": "📖",
+      "featured": false,
+      "account": false,
+      "added": 33,
+      "desc_fa": "سسلی سوزلوک، فرهنگ لغت چندزبانهٔ آنلاین ترکیه از ۱۹۹۹ (بیش از ۲۰ میلیون واژه): جست‌وجوی واژه در هر دو جهت ترکی–انگلیسی و انگلیسی–ترکی با تعریف‌های تک‌زبانه، بخش‌بندی هجایی، تلفظ IPA و ترکی، ریشه‌شناسی، صرف‌ها، مترادف‌ها و متضادها، ترکیب‌های رایج، واژه‌های مرتبط، جمله‌های نمونه و صدای تلفظ (بریتانیایی/آمریکایی/استرالیایی/ترکی).",
+      "desc_tr": "1999'dan beri Türkiye'nin çok dilli çevrimiçi sözlüğü Sesli Sözlük (20 milyondan fazla sözcük): her iki yönde kelime arama (Türkçe–İngilizce ve İngilizce–Türkçe, tek dilli tanımlarıyla), heceleme, IPA ve Türkçe telaffuz, etimoloji, çekimler, eş/zıt anlamlılar, yaygın kullanımlar, ilgili terimler, örnek cümleler ve telaffuz sesi (İngiliz/ Amerikan/ Avustralya/ Türkçe).",
+      "env": null,
+      "tools": {
+        "seslisozluk_lookup": {
+          "s": "Full word lookup: dictionary panels, hyphenation, pronunciation, etymology, synonyms, audio",
+          "sf": "جست‌وجوی کامل واژه (پنل‌های فرهنگ لغت، تلفظ، ریشه‌شناسی، مترادف‌ها، صدا)",
+          "st": "Tam kelime araması (sözlük panelleri, telaffuz, etimoloji, eş anlamlılar, ses)"
+        },
+        "seslisozluk_examples": {
+          "s": "Example sentences for a word (Turkish–English pairs)",
+          "sf": "جمله‌های نمونهٔ یک واژه (جفت‌های ترکی–انگلیسی)",
+          "st": "Bir kelimenin örnek cümleleri (Türkçe–İngilizce çiftleri)"
+        },
+        "seslisozluk_synonyms": {
+          "s": "Synonyms, antonyms, common collocations and related terms",
+          "sf": "مترادف‌ها، متضادها، ترکیب‌های رایج و واژه‌های مرتبط",
+          "st": "Eş anlamlılar, zıt anlamlılar, yaygın kullanımlar ve ilgili terimler"
+        },
+        "seslisozluk_pronunciation": {
+          "s": "Hyphenation, IPA, Turkish pronunciation and audio URLs",
+          "sf": "بخش‌بندی هجایی، IPA، تلفظ ترکی و URLهای صوتی",
+          "st": "Heceleme, IPA, Türkçe okunuş ve ses URL'leri"
+        },
+        "seslisozluk_health": {
+          "s": "Check whether www.seslisozluk.net is reachable",
+          "sf": "بررسی در دسترس بودن سایت Sesli Sözlük",
+          "st": "Sesli Sözlük sitesi erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-19",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-19"
+    }
+  }
+}
