@@ -197,6 +197,12 @@
       "args": [
         "osym-mcp"
       ]
+    },
+    "seslisozluk": {
+      "command": "uvx",
+      "args": [
+        "seslisozluk-mcp"
+      ]
     }
   }
 }
