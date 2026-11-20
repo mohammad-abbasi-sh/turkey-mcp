@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1521,6 +1521,63 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-19"
+    },
+    "memurlar-mcp": {
+      "cat": "news",
+      "color": "#B45309",
+      "letter": "📰",
+      "featured": false,
+      "account": false,
+      "added": 34,
+      "desc_fa": "بزرگ‌ترین پورتال کارمندان دولت ترکیه (ممورلار.نت، از ۱۹۹۹، حدود ۲۱٫۹ میلیون بازدید در ماه): تازه‌ترین اخبار کارمندان دولت با متن کامل، جست‌وجوی کلیدواژه در ۱۴۱ خبر اخیر، و آگهی‌های استخدام بخش دولتی با مهلت ثبت‌نام، ۲۱ دسته و متن کامل آگهی.",
+      "desc_tr": "Türkiye'nin en büyük memur portalı Memurlar.Net (1999'dan beri, ayda ~21,9 milyon ziyaret): tam metinli en yeni memur haberleri, son 141 haberde anahtar kelime araması ve son başvuru tarihi, 21 kategori ve tam ilan metniyle kamu personeli alım ilanları.",
+      "env": null,
+      "tools": {
+        "memurlar_latest_news": {
+          "s": "Latest civil-servant news (newest first, from the news sitemap)",
+          "sf": "تازه‌ترین اخبار کارمندان دولت (از تازه‌ترین، از نقشهٔ خبر)",
+          "st": "En yeni memur haberleri (yeniden eskiye, haber site haritasından)"
+        },
+        "memurlar_search_news": {
+          "s": "Keyword search over the 141 most recent news articles",
+          "sf": "جست‌وجوی کلیدواژه در ۱۴۱ خبر اخیر",
+          "st": "Son 141 haberde anahtar kelime araması"
+        },
+        "memurlar_get_article": {
+          "s": "Full text of one news article (id or URL)",
+          "sf": "متن کامل یک خبر (شناسه یا URL)",
+          "st": "Bir haberin tam metni (kimlik veya URL)"
+        },
+        "memurlar_latest_jobs": {
+          "s": "Latest job announcements, optionally filtered by category",
+          "sf": "تازه‌ترین آگهی‌های استخدام، با فیلتر اختیاری دسته",
+          "st": "En yeni iş ilanları, isteğe bağlı kategori filtresiyle"
+        },
+        "memurlar_search_jobs": {
+          "s": "Keyword search over recent job announcements",
+          "sf": "جست‌وجوی کلیدواژه در آگهی‌های اخیر",
+          "st": "Güncel iş ilanlarında anahtar kelime araması"
+        },
+        "memurlar_get_job": {
+          "s": "Full text of one job announcement with deadline (id or URL)",
+          "sf": "متن کامل یک آگهی با مهلت ثبت‌نام (شناسه یا URL)",
+          "st": "Bir ilanın tam metni ve son başvuru tarihi (kimlik veya URL)"
+        },
+        "memurlar_list_job_categories": {
+          "s": "The 21 ilan categories (slug to Turkish label)",
+          "sf": "۲۱ دستهٔ آگهی (اسلاگ ← برچسب ترکی)",
+          "st": "21 ilan kategorisi (kısa ad → Türkçe etiket)"
+        },
+        "memurlar_health": {
+          "s": "Check whether www.memurlar.net is reachable",
+          "sf": "بررسی در دسترس بودن سایت Memurlar.Net",
+          "st": "Memurlar.Net sitesi erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-20",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-20"
     }
   }
 }
