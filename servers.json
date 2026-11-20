@@ -1103,6 +1103,48 @@
      "summary": "Check whether www.seslisozluk.net is reachable"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for Memurlar.Net — Türkiye's biggest civil-servant portal: latest news, full articles, public-sector job announcements with deadlines.",
+   "name": "memurlar-mcp",
+   "pypi": "memurlar-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/memurlar-mcp",
+   "title": "Memurlar.Net — civil-servant news & public-sector jobs",
+   "title_tr": "Memurlar.Net — memur haberleri, ilanlar ve son başvuru tarihleri",
+   "tools": [
+    {
+     "name": "memurlar_latest_news",
+     "summary": "Latest civil-servant news (newest first, from the news sitemap)"
+    },
+    {
+     "name": "memurlar_search_news",
+     "summary": "Keyword search over the 141 most recent news articles"
+    },
+    {
+     "name": "memurlar_get_article",
+     "summary": "Full text of one news article (id or URL)"
+    },
+    {
+     "name": "memurlar_latest_jobs",
+     "summary": "Latest job announcements, optionally filtered by category"
+    },
+    {
+     "name": "memurlar_search_jobs",
+     "summary": "Keyword search over recent job announcements"
+    },
+    {
+     "name": "memurlar_get_job",
+     "summary": "Full text of one job announcement with deadline (id or URL)"
+    },
+    {
+     "name": "memurlar_list_job_categories",
+     "summary": "The 21 ilan categories (slug to Turkish label)"
+    },
+    {
+     "name": "memurlar_health",
+     "summary": "Check whether www.memurlar.net is reachable"
+    }
+   ]
   }
  ]
 }
