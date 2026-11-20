@@ -203,6 +203,12 @@
       "args": [
         "seslisozluk-mcp"
       ]
+    },
+    "memurlar": {
+      "command": "uvx",
+      "args": [
+        "memurlar-mcp"
+      ]
     }
   }
 }
