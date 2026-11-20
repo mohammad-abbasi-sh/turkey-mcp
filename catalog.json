@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "counts": {
-    "servers": 33,
-    "tools": 191
+    "servers": 34,
+    "tools": 199
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2284,6 +2284,88 @@
           "description": "Check whether www.seslisozluk.net is reachable",
           "descriptionFa": "بررسی در دسترس بودن سایت Sesli Sözlük",
           "descriptionTr": "Sesli Sözlük sitesi erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "memurlar-mcp",
+      "name": "Memurlar.Net — civil-servant news & public-sector jobs",
+      "nameTr": "Memurlar.Net — memur haberleri, ilanlar ve son başvuru tarihleri",
+      "summary": "Unofficial read-only MCP server for Memurlar.Net — Türkiye's biggest civil-servant portal: latest news, full articles, public-sector job announcements with deadlines.",
+      "summaryFa": "بزرگ‌ترین پورتال کارمندان دولت ترکیه (ممورلار.نت، از ۱۹۹۹، حدود ۲۱٫۹ میلیون بازدید در ماه): تازه‌ترین اخبار کارمندان دولت با متن کامل، جست‌وجوی کلیدواژه در ۱۴۱ خبر اخیر، و آگهی‌های استخدام بخش دولتی با مهلت ثبت‌نام، ۲۱ دسته و متن کامل آگهی.",
+      "summaryTr": "Türkiye'nin en büyük memur portalı Memurlar.Net (1999'dan beri, ayda ~21,9 milyon ziyaret): tam metinli en yeni memur haberleri, son 141 haberde anahtar kelime araması ve son başvuru tarihi, 21 kategori ve tam ilan metniyle kamu personeli alım ilanları.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-20",
+      "firstSeen": "2026-11-20",
+      "repo": "https://github.com/mohammad-abbasi-sh/memurlar-mcp",
+      "pypi": "memurlar-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/memurlar-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/memurlar-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "memurlar-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "memurlar_latest_news",
+          "description": "Latest civil-servant news (newest first, from the news sitemap)",
+          "descriptionFa": "تازه‌ترین اخبار کارمندان دولت (از تازه‌ترین، از نقشهٔ خبر)",
+          "descriptionTr": "En yeni memur haberleri (yeniden eskiye, haber site haritasından)"
+        },
+        {
+          "name": "memurlar_search_news",
+          "description": "Keyword search over the 141 most recent news articles",
+          "descriptionFa": "جست‌وجوی کلیدواژه در ۱۴۱ خبر اخیر",
+          "descriptionTr": "Son 141 haberde anahtar kelime araması"
+        },
+        {
+          "name": "memurlar_get_article",
+          "description": "Full text of one news article (id or URL)",
+          "descriptionFa": "متن کامل یک خبر (شناسه یا URL)",
+          "descriptionTr": "Bir haberin tam metni (kimlik veya URL)"
+        },
+        {
+          "name": "memurlar_latest_jobs",
+          "description": "Latest job announcements, optionally filtered by category",
+          "descriptionFa": "تازه‌ترین آگهی‌های استخدام، با فیلتر اختیاری دسته",
+          "descriptionTr": "En yeni iş ilanları, isteğe bağlı kategori filtresiyle"
+        },
+        {
+          "name": "memurlar_search_jobs",
+          "description": "Keyword search over recent job announcements",
+          "descriptionFa": "جست‌وجوی کلیدواژه در آگهی‌های اخیر",
+          "descriptionTr": "Güncel iş ilanlarında anahtar kelime araması"
+        },
+        {
+          "name": "memurlar_get_job",
+          "description": "Full text of one job announcement with deadline (id or URL)",
+          "descriptionFa": "متن کامل یک آگهی با مهلت ثبت‌نام (شناسه یا URL)",
+          "descriptionTr": "Bir ilanın tam metni ve son başvuru tarihi (kimlik veya URL)"
+        },
+        {
+          "name": "memurlar_list_job_categories",
+          "description": "The 21 ilan categories (slug to Turkish label)",
+          "descriptionFa": "۲۱ دستهٔ آگهی (اسلاگ ← برچسب ترکی)",
+          "descriptionTr": "21 ilan kategorisi (kısa ad → Türkçe etiket)"
+        },
+        {
+          "name": "memurlar_health",
+          "description": "Check whether www.memurlar.net is reachable",
+          "descriptionFa": "بررسی در دسترس بودن سایت Memurlar.Net",
+          "descriptionTr": "Memurlar.Net sitesi erişilebilir mi kontrolü"
         }
       ]
     }
