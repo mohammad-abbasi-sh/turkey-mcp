@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 33 MCP servers (191 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-19 from the live catalog.
+> 34 MCP servers (199 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-20 from the live catalog.
 
 ## How to use
 
@@ -661,3 +661,25 @@
 - `seslisozluk_synonyms`: Synonyms, antonyms, common collocations and related terms
 - `seslisozluk_pronunciation`: Hyphenation, IPA, Turkish pronunciation and audio URLs
 - `seslisozluk_health`: Check whether www.seslisozluk.net is reachable
+
+## memurlar-mcp
+
+- Title: Memurlar.Net — civil-servant news & public-sector jobs
+- Category: news
+- Summary: Unofficial read-only MCP server for Memurlar.Net — Türkiye's biggest civil-servant portal: latest news, full articles, public-sector job announcements with deadlines.
+- Repository: https://github.com/mohammad-abbasi-sh/memurlar-mcp
+- PyPI: https://pypi.org/project/memurlar-mcp/
+- Version: pending — health: verified — last checked: 2026-11-20 — in the catalog since: 2026-11-20
+- Install: `claude mcp add --transport stdio --scope user memurlar -- uvx memurlar-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/memurlar-mcp
+
+### Tools (8)
+
+- `memurlar_latest_news`: Latest civil-servant news (newest first, from the news sitemap)
+- `memurlar_search_news`: Keyword search over the 141 most recent news articles
+- `memurlar_get_article`: Full text of one news article (id or URL)
+- `memurlar_latest_jobs`: Latest job announcements, optionally filtered by category
+- `memurlar_search_jobs`: Keyword search over recent job announcements
+- `memurlar_get_job`: Full text of one job announcement with deadline (id or URL)
+- `memurlar_list_job_categories`: The 21 ilan categories (slug to Turkish label)
+- `memurlar_health`: Check whether www.memurlar.net is reachable
