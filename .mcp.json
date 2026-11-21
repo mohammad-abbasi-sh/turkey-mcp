@@ -209,6 +209,12 @@
       "args": [
         "memurlar-mcp"
       ]
+    },
+    "mynet": {
+      "command": "uvx",
+      "args": [
+        "mynet-mcp"
+      ]
     }
   }
 }
