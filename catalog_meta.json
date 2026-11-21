@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20",
+  "generated": "2026-11-21",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1578,6 +1578,58 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-20"
+    },
+    "mynet-mcp": {
+      "cat": "news",
+      "color": "#B45309",
+      "letter": "🌐",
+      "featured": false,
+      "account": false,
+      "added": 35,
+      "desc_fa": "یکی از بزرگ‌ترین پورتال‌های اینترنتی ترکیه (مای‌نت، از ۱۹۹۹): تازه‌ترین اخبار با متن کامل، جست‌وجوی کلیدواژه در ۴۵۴ خبر اخیر، قیمت زندهٔ ۱۹ محصول طلا (گرم، ربع، نیم، جمهوری، گرمسه، اونس، شامل ردیف‌های بازار سرپوشیده)، فال روزانهٔ ۱۲ نشان زودیاک و بخش‌های پورتال.",
+      "desc_tr": "Türkiye'nin en büyük internet portallarından biri Mynet (1999'dan beri): tam metinli en yeni haberler, son 454 haberde anahtar kelime araması, 19 altın ürününde canlı fiyatlar (Gram, Çeyrek, Yarım, Cumhuriyet, Gremse, Ons — Kapalıçarşı satırlarıyla), 12 burç için günlük yorumlar ve portal bölümleri.",
+      "env": null,
+      "tools": {
+        "mynet_latest_news": {
+          "s": "Latest news (newest first, from the news sitemap)",
+          "sf": "تازه‌ترین اخبار (از تازه‌ترین، از نقشهٔ خبر)",
+          "st": "En yeni haberler (yeniden eskiye, haber site haritasından)"
+        },
+        "mynet_search_news": {
+          "s": "Keyword search over the 454 most recent news articles",
+          "sf": "جست‌وجوی کلیدواژه در ۴۵۴ خبر اخیر",
+          "st": "Son 454 haberde anahtar kelime araması"
+        },
+        "mynet_get_article": {
+          "s": "Full text of one news article (id or URL)",
+          "sf": "متن کامل یک خبر (شناسه یا URL)",
+          "st": "Bir haberin tam metni (kimlik veya URL)"
+        },
+        "mynet_gold_prices": {
+          "s": "Live gold prices: 19 products with last/buy/sell + daily change",
+          "sf": "قیمت زندهٔ طلا: ۱۹ محصول با آخرین/خرید/فروش + تغییر روزانه",
+          "st": "Canlı altın fiyatları: son/alış/satış + günlük değişimle 19 ürün"
+        },
+        "mynet_horoscope": {
+          "s": "Today's daily horoscope for one zodiac sign (TR or EN name)",
+          "sf": "فال روزانهٔ یک نشان زودیاک (نام ترکی یا انگلیسی)",
+          "st": "Bir burcun günlük yorumu (Türkçe veya İngilizce ad)"
+        },
+        "mynet_list_sections": {
+          "s": "The portal's main sections (slug -> Turkish label)",
+          "sf": "بخش‌های اصلی پورتال (نام کوتاه ← برچسب ترکی)",
+          "st": "Portalın ana bölümleri (kısa ad → Türkçe etiket)"
+        },
+        "mynet_health": {
+          "s": "Check whether Mynet is reachable right now",
+          "sf": "بررسی در دسترس بودن سایت Mynet",
+          "st": "Mynet sitesi erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-21",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-21"
     }
   }
 }
