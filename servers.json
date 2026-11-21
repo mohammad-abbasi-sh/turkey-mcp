@@ -1145,6 +1145,44 @@
      "summary": "Check whether www.memurlar.net is reachable"
     }
    ]
-  }
+  },
+   {
+    "description": "Unofficial read-only MCP server for Mynet — one of Türkiye's biggest portals: latest news, full articles, live gold prices and daily horoscope.",
+    "name": "mynet-mcp",
+    "pypi": "mynet-mcp",
+    "repository": "https://github.com/mohammad-abbasi-sh/mynet-mcp",
+    "title": "Mynet — news, live gold prices & daily horoscope",
+    "title_tr": "Mynet — haberler, canlı altın fiyatları ve günlük burç yorumları",
+    "tools": [
+     {
+      "name": "mynet_latest_news",
+      "summary": "Latest news (newest first, from the news sitemap)"
+     },
+     {
+      "name": "mynet_search_news",
+      "summary": "Keyword search over the 454 most recent news articles"
+     },
+     {
+      "name": "mynet_get_article",
+      "summary": "Full text of one news article (id or URL)"
+     },
+     {
+      "name": "mynet_gold_prices",
+      "summary": "Live gold prices: 19 products with last/buy/sell + daily change"
+     },
+     {
+      "name": "mynet_horoscope",
+      "summary": "Today's daily horoscope for one zodiac sign (TR or EN name)"
+     },
+     {
+      "name": "mynet_list_sections",
+      "summary": "The portal's main sections (slug -> Turkish label)"
+     },
+     {
+      "name": "mynet_health",
+      "summary": "Check whether Mynet is reachable right now"
+     }
+    ]
+   }
  ]
 }
