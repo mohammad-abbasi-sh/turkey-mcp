@@ -45,6 +45,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [osym-mcp](https://github.com/mohammad-abbasi-sh/osym-mcp) | www.osym.gov.tr (ÖSYM) — exam announcements, calendar & group news | 6 | `uvx osym-mcp` |
 | [seslisozluk-mcp](https://github.com/mohammad-abbasi-sh/seslisozluk-mcp) | www.seslisozluk.net (Sesli Sözlük) — dictionary: word lookup, translations, pronunciations & audio | 5 | `uvx seslisozluk-mcp` |
 | [memurlar-mcp](https://github.com/mohammad-abbasi-sh/memurlar-mcp) | www.memurlar.net (Memurlar.Net) — civil-servant news, full articles & public-sector job announcements with deadlines | 8 | `uvx memurlar-mcp` |
+| [mynet-mcp](https://github.com/mohammad-abbasi-sh/mynet-mcp) | www.mynet.com (Mynet) — latest news, full articles, live gold prices & daily horoscope | 7 | `uvx mynet-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
