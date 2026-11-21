@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-20",
+  "generated": "2026-11-21",
   "counts": {
-    "servers": 34,
-    "tools": 199
+    "servers": 35,
+    "tools": 206
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2366,6 +2366,82 @@
           "description": "Check whether www.memurlar.net is reachable",
           "descriptionFa": "بررسی در دسترس بودن سایت Memurlar.Net",
           "descriptionTr": "Memurlar.Net sitesi erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "mynet-mcp",
+      "name": "Mynet — news, live gold prices & daily horoscope",
+      "nameTr": "Mynet — haberler, canlı altın fiyatları ve günlük burç yorumları",
+      "summary": "Unofficial read-only MCP server for Mynet — one of Türkiye's biggest portals: latest news, full articles, live gold prices and daily horoscope.",
+      "summaryFa": "یکی از بزرگ‌ترین پورتال‌های اینترنتی ترکیه (مای‌نت، از ۱۹۹۹): تازه‌ترین اخبار با متن کامل، جست‌وجوی کلیدواژه در ۴۵۴ خبر اخیر، قیمت زندهٔ ۱۹ محصول طلا (گرم، ربع، نیم، جمهوری، گرمسه، اونس، شامل ردیف‌های بازار سرپوشیده)، فال روزانهٔ ۱۲ نشان زودیاک و بخش‌های پورتال.",
+      "summaryTr": "Türkiye'nin en büyük internet portallarından biri Mynet (1999'dan beri): tam metinli en yeni haberler, son 454 haberde anahtar kelime araması, 19 altın ürününde canlı fiyatlar (Gram, Çeyrek, Yarım, Cumhuriyet, Gremse, Ons — Kapalıçarşı satırlarıyla), 12 burç için günlük yorumlar ve portal bölümleri.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-21",
+      "firstSeen": "2026-11-21",
+      "repo": "https://github.com/mohammad-abbasi-sh/mynet-mcp",
+      "pypi": "mynet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/mynet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/mynet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "mynet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "mynet_latest_news",
+          "description": "Latest news (newest first, from the news sitemap)",
+          "descriptionFa": "تازه‌ترین اخبار (از تازه‌ترین، از نقشهٔ خبر)",
+          "descriptionTr": "En yeni haberler (yeniden eskiye, haber site haritasından)"
+        },
+        {
+          "name": "mynet_search_news",
+          "description": "Keyword search over the 454 most recent news articles",
+          "descriptionFa": "جست‌وجوی کلیدواژه در ۴۵۴ خبر اخیر",
+          "descriptionTr": "Son 454 haberde anahtar kelime araması"
+        },
+        {
+          "name": "mynet_get_article",
+          "description": "Full text of one news article (id or URL)",
+          "descriptionFa": "متن کامل یک خبر (شناسه یا URL)",
+          "descriptionTr": "Bir haberin tam metni (kimlik veya URL)"
+        },
+        {
+          "name": "mynet_gold_prices",
+          "description": "Live gold prices: 19 products with last/buy/sell + daily change",
+          "descriptionFa": "قیمت زندهٔ طلا: ۱۹ محصول با آخرین/خرید/فروش + تغییر روزانه",
+          "descriptionTr": "Canlı altın fiyatları: son/alış/satış + günlük değişimle 19 ürün"
+        },
+        {
+          "name": "mynet_horoscope",
+          "description": "Today's daily horoscope for one zodiac sign (TR or EN name)",
+          "descriptionFa": "فال روزانهٔ یک نشان زودیاک (نام ترکی یا انگلیسی)",
+          "descriptionTr": "Bir burcun günlük yorumu (Türkçe veya İngilizce ad)"
+        },
+        {
+          "name": "mynet_list_sections",
+          "description": "The portal's main sections (slug -> Turkish label)",
+          "descriptionFa": "بخش‌های اصلی پورتال (نام کوتاه ← برچسب ترکی)",
+          "descriptionTr": "Portalın ana bölümleri (kısa ad → Türkçe etiket)"
+        },
+        {
+          "name": "mynet_health",
+          "description": "Check whether Mynet is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن سایت Mynet",
+          "descriptionTr": "Mynet sitesi erişilebilir mi kontrolü"
         }
       ]
     }
