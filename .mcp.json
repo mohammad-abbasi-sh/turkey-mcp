@@ -215,6 +215,12 @@
       "args": [
         "mynet-mcp"
       ]
+    },
+    "lcwaikiki": {
+      "command": "uvx",
+      "args": [
+        "lcwaikiki-mcp"
+      ]
     }
   }
 }
