@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "counts": {
-    "servers": 35,
-    "tools": 206
+    "servers": 36,
+    "tools": 212
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2442,6 +2442,76 @@
           "description": "Check whether Mynet is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن سایت Mynet",
           "descriptionTr": "Mynet sitesi erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "lcwaikiki-mcp",
+      "name": "LC Waikiki — product search, detail, categories & price stats",
+      "nameTr": "LC Waikiki — ürün arama, ürün detayı, kategoriler ve fiyat istatistikleri",
+      "summary": "Unofficial read-only MCP server for LC Waikiki — Türkiye's biggest fashion retailer: product search, full product detail, the category directory and price statistics.",
+      "summaryFa": "بزرگ‌ترین خرده‌فروش مد ترکیه (ال‌سی وایکیکی، بیش از ۱٬۳۰۰ فروشگاه): جست‌وجوی محصول با کلیدواژهٔ ترکی، جزئیات کامل یک محصول (سایزها، جنس پارچه، قیمت به لیر، امتیاز و نظرات)، فهرست ۱۸۵ دسته در ۶ دپارتمان و آمار قیمت یک جست‌وجو.",
+      "summaryTr": "Türkiye'nin en büyük moda perakendecisi LC Waikiki (1.300+ mağaza): Türkçe anahtar kelimeyle ürün arama, bir ürünün tam detayı (bedenler, kumaş, TL fiyat, puan ve yorumlar), 6 departmanda 185 kategorilik dizin ve bir arama için fiyat istatistikleri.",
+      "category": "shopping",
+      "tags": [
+        "shopping",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-22",
+      "firstSeen": "2026-11-22",
+      "repo": "https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp",
+      "pypi": "lcwaikiki-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/lcwaikiki-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/lcwaikiki-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "lcwaikiki-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "lcwaikiki_search_products",
+          "description": "Search products by Turkish keyword (100/page, 8 sorts)",
+          "descriptionFa": "جست‌وجوی محصول با کلیدواژهٔ ترکی (۱۰۰ محصول در صفحه، ۸ مرتب‌سازی)",
+          "descriptionTr": "Türkçe anahtar kelimeyle ürün arama (sayfa başına 100 ürün, 8 sıralama)"
+        },
+        {
+          "name": "lcwaikiki_get_product",
+          "description": "Full detail of one product: sizes, fabric, price, rating, reviews",
+          "descriptionFa": "جزئیات کامل یک محصول: سایزها، پارچه، قیمت، امتیاز و نظرات",
+          "descriptionTr": "Bir ürünün tam detayı: bedenler, kumaş, fiyat, puan ve yorumlar"
+        },
+        {
+          "name": "lcwaikiki_list_categories",
+          "description": "Full category directory: 6 departments, 185 categories",
+          "descriptionFa": "فهرست کامل دسته‌ها: ۶ دپارتمان، ۱۸۵ دسته",
+          "descriptionTr": "Tam kategori dizini: 6 departman, 185 kategori"
+        },
+        {
+          "name": "lcwaikiki_category_products",
+          "description": "Products of one category (paging + sorts)",
+          "descriptionFa": "محصولات یک دسته (صفحه‌بندی و مرتب‌سازی)",
+          "descriptionTr": "Bir kategorinin ürünleri (sayfalama ve sıralama)"
+        },
+        {
+          "name": "lcwaikiki_price_stats",
+          "description": "Price statistics for a search (min/median/mean/max, discounts)",
+          "descriptionFa": "آمار قیمت یک جست‌وجو (کمینه/میانه/میانگین/بیشینه، تخفیف‌ها)",
+          "descriptionTr": "Bir arama için fiyat istatistikleri (min/medyan/ortalama/maks, indirimler)"
+        },
+        {
+          "name": "lcwaikiki_health",
+          "description": "Check whether lcw.com is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن سایت lcw.com",
+          "descriptionTr": "lcw.com erişilebilir mi kontrolü"
         }
       ]
     }
