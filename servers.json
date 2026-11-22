@@ -1146,43 +1146,77 @@
     }
    ]
   },
-   {
-    "description": "Unofficial read-only MCP server for Mynet — one of Türkiye's biggest portals: latest news, full articles, live gold prices and daily horoscope.",
-    "name": "mynet-mcp",
-    "pypi": "mynet-mcp",
-    "repository": "https://github.com/mohammad-abbasi-sh/mynet-mcp",
-    "title": "Mynet — news, live gold prices & daily horoscope",
-    "title_tr": "Mynet — haberler, canlı altın fiyatları ve günlük burç yorumları",
-    "tools": [
-     {
-      "name": "mynet_latest_news",
-      "summary": "Latest news (newest first, from the news sitemap)"
-     },
-     {
-      "name": "mynet_search_news",
-      "summary": "Keyword search over the 454 most recent news articles"
-     },
-     {
-      "name": "mynet_get_article",
-      "summary": "Full text of one news article (id or URL)"
-     },
-     {
-      "name": "mynet_gold_prices",
-      "summary": "Live gold prices: 19 products with last/buy/sell + daily change"
-     },
-     {
-      "name": "mynet_horoscope",
-      "summary": "Today's daily horoscope for one zodiac sign (TR or EN name)"
-     },
-     {
-      "name": "mynet_list_sections",
-      "summary": "The portal's main sections (slug -> Turkish label)"
-     },
-     {
-      "name": "mynet_health",
-      "summary": "Check whether Mynet is reachable right now"
-     }
-    ]
-   }
+  {
+   "description": "Unofficial read-only MCP server for Mynet — one of Türkiye's biggest portals: latest news, full articles, live gold prices and daily horoscope.",
+   "name": "mynet-mcp",
+   "pypi": "mynet-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/mynet-mcp",
+   "title": "Mynet — news, live gold prices & daily horoscope",
+   "title_tr": "Mynet — haberler, canlı altın fiyatları ve günlük burç yorumları",
+   "tools": [
+    {
+     "name": "mynet_latest_news",
+     "summary": "Latest news (newest first, from the news sitemap)"
+    },
+    {
+     "name": "mynet_search_news",
+     "summary": "Keyword search over the 454 most recent news articles"
+    },
+    {
+     "name": "mynet_get_article",
+     "summary": "Full text of one news article (id or URL)"
+    },
+    {
+     "name": "mynet_gold_prices",
+     "summary": "Live gold prices: 19 products with last/buy/sell + daily change"
+    },
+    {
+     "name": "mynet_horoscope",
+     "summary": "Today's daily horoscope for one zodiac sign (TR or EN name)"
+    },
+    {
+     "name": "mynet_list_sections",
+     "summary": "The portal's main sections (slug -> Turkish label)"
+    },
+    {
+     "name": "mynet_health",
+     "summary": "Check whether Mynet is reachable right now"
+    }
+   ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for LC Waikiki — Türkiye's biggest fashion retailer: product search, full product detail, the category directory and price statistics.",
+   "name": "lcwaikiki-mcp",
+   "pypi": "lcwaikiki-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp",
+   "title": "LC Waikiki — product search, detail, categories & price stats",
+   "title_tr": "LC Waikiki — ürün arama, ürün detayı, kategoriler ve fiyat istatistikleri",
+   "tools": [
+    {
+     "name": "lcwaikiki_search_products",
+     "summary": "Search products by Turkish keyword (100/page, 8 sorts)"
+    },
+    {
+     "name": "lcwaikiki_get_product",
+     "summary": "Full detail of one product: sizes, fabric, price, rating, reviews"
+    },
+    {
+     "name": "lcwaikiki_list_categories",
+     "summary": "Full category directory: 6 departments, 185 categories"
+    },
+    {
+     "name": "lcwaikiki_category_products",
+     "summary": "Products of one category (paging + sorts)"
+    },
+    {
+     "name": "lcwaikiki_price_stats",
+     "summary": "Price statistics for a search (min/median/mean/max, discounts)"
+    },
+    {
+     "name": "lcwaikiki_health",
+     "summary": "Check whether lcw.com is reachable right now"
+    }
+   ]
+  }
  ]
 }
