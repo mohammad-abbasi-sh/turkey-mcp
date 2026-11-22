@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 35 MCP servers (206 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-21 from the live catalog.
+> 36 MCP servers (212 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-22 from the live catalog.
 
 ## How to use
 
@@ -704,3 +704,23 @@
 - `mynet_horoscope`: Today's daily horoscope for one zodiac sign (TR or EN name)
 - `mynet_list_sections`: The portal's main sections (slug -> Turkish label)
 - `mynet_health`: Check whether Mynet is reachable right now
+
+## lcwaikiki-mcp
+
+- Title: LC Waikiki — product search, detail, categories & price stats
+- Category: shopping
+- Summary: Unofficial read-only MCP server for LC Waikiki — Türkiye's biggest fashion retailer: product search, full product detail, the category directory and price statistics.
+- Repository: https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp
+- PyPI: https://pypi.org/project/lcwaikiki-mcp/
+- Version: pending — health: verified — last checked: 2026-11-22 — in the catalog since: 2026-11-22
+- Install: `claude mcp add --transport stdio --scope user lcwaikiki -- uvx lcwaikiki-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/lcwaikiki-mcp
+
+### Tools (6)
+
+- `lcwaikiki_search_products`: Search products by Turkish keyword (100/page, 8 sorts)
+- `lcwaikiki_get_product`: Full detail of one product: sizes, fabric, price, rating, reviews
+- `lcwaikiki_list_categories`: Full category directory: 6 departments, 185 categories
+- `lcwaikiki_category_products`: Products of one category (paging + sorts)
+- `lcwaikiki_price_stats`: Price statistics for a search (min/median/mean/max, discounts)
+- `lcwaikiki_health`: Check whether lcw.com is reachable right now
