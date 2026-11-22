@@ -46,6 +46,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [seslisozluk-mcp](https://github.com/mohammad-abbasi-sh/seslisozluk-mcp) | www.seslisozluk.net (Sesli Sözlük) — dictionary: word lookup, translations, pronunciations & audio | 5 | `uvx seslisozluk-mcp` |
 | [memurlar-mcp](https://github.com/mohammad-abbasi-sh/memurlar-mcp) | www.memurlar.net (Memurlar.Net) — civil-servant news, full articles & public-sector job announcements with deadlines | 8 | `uvx memurlar-mcp` |
 | [mynet-mcp](https://github.com/mohammad-abbasi-sh/mynet-mcp) | www.mynet.com (Mynet) — latest news, full articles, live gold prices & daily horoscope | 7 | `uvx mynet-mcp` |
+| [lcwaikiki-mcp](https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp) | www.lcw.com (LC Waikiki) — product search, full detail, categories & price stats | 6 | `uvx lcwaikiki-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
