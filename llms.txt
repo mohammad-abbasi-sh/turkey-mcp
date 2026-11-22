@@ -1,6 +1,6 @@
 # Turkey MCP
 
-> 35 MCP servers (206 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+> 36 MCP servers (212 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
 > Start here — all-mcp is the main reference: one server containing all 60 MCP servers (Turkey 32, Germany 27, Bonbama 1), 324 tools behind a single config entry. Install only all-mcp (`claude mcp add --transport stdio --scope user all-mcp -- uvx all-mcp`) and it routes each question to the right server itself. Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/all-mcp — repo: https://github.com/mohammad-abbasi-sh/all-mcp
 
@@ -39,6 +39,7 @@
 - [seslisozluk-mcp](https://github.com/mohammad-abbasi-sh/seslisozluk-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/seslisozluk-mcp)): Unofficial read-only MCP server for Sesli Sözlük — Türkiye's multilingual dictionary since 1999: word lookup, translations, pronunciations, example sentences, audio. (5 tools)
 - [memurlar-mcp](https://github.com/mohammad-abbasi-sh/memurlar-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/memurlar-mcp)): Unofficial read-only MCP server for Memurlar.Net — Türkiye's biggest civil-servant portal: latest news, full articles, public-sector job announcements with deadlines. (8 tools)
 - [mynet-mcp](https://github.com/mohammad-abbasi-sh/mynet-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/mynet-mcp)): Unofficial read-only MCP server for Mynet — one of Türkiye's biggest portals: latest news, full articles, live gold prices and daily horoscope. (7 tools)
+- [lcwaikiki-mcp](https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/lcwaikiki-mcp)): Unofficial read-only MCP server for LC Waikiki — Türkiye's biggest fashion retailer: product search, full product detail, the category directory and price statistics. (6 tools)
 
 ## Install
 
