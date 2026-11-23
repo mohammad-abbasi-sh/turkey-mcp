@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-22",
+  "generated": "2026-11-23",
   "counts": {
-    "servers": 36,
-    "tools": 212
+    "servers": 37,
+    "tools": 218
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2512,6 +2512,76 @@
           "description": "Check whether lcw.com is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن سایت lcw.com",
           "descriptionTr": "lcw.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "milliyet-mcp",
+      "name": "Milliyet — breaking news, headlines, full articles & search",
+      "nameTr": "Milliyet — son dakika, manşetler, haber metinleri ve arama",
+      "summary": "Unofficial read-only MCP server for Milliyet — one of Türkiye's biggest national newspapers: breaking news, headlines by section, full articles and keyword search.",
+      "summaryFa": "روزنامهٔ ملی میلیّت (از ۱۹۵۰، یکی از بزرگ‌ترین روزنامه‌های ترکیه): خبرهای فوری با ساعت، تیترهای ۱۰ بخش خبری، متن کامل خبرها (نویسنده، تاریخ، کلیدواژه‌ها و تعداد کلمات) و جست‌وجوی کلیدواژه در فهرست‌های روز.",
+      "summaryTr": "Türkiye'nin en büyük ulusal gazetelerinden Milliyet (1950'den beri): saatli son dakika haberleri, 10 bölümün manşetleri, haberlerin tam metni (yazar, tarih, anahtar kelimeler ve kelime sayısı) ve günün listelerinde anahtar kelime araması.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-23",
+      "firstSeen": "2026-11-23",
+      "repo": "https://github.com/mohammad-abbasi-sh/milliyet-mcp",
+      "pypi": "milliyet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/milliyet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/milliyet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "milliyet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "milliyet_latest",
+          "description": "Latest breaking news (son dakika), newest first, with times",
+          "descriptionFa": "خبرهای فوری (سون داکیکا) با ساعت، از تازه‌ترین",
+          "descriptionTr": "Saatli son dakika haberleri, en yeniden"
+        },
+        {
+          "name": "milliyet_headlines",
+          "description": "Top headlines in one Milliyet section",
+          "descriptionFa": "تیترهای برتر یک بخش خبری",
+          "descriptionTr": "Bir bölümün öne çıkan manşetleri"
+        },
+        {
+          "name": "milliyet_get_article",
+          "description": "Full text of one Milliyet article (full URL)",
+          "descriptionFa": "متن کامل یک خبر (با نشانی کامل)",
+          "descriptionTr": "Bir haberin tam metni (tam URL ile)"
+        },
+        {
+          "name": "milliyet_search_news",
+          "description": "Keyword search over today's Milliyet news listings",
+          "descriptionFa": "جست‌وجوی کلیدواژه در خبرهای امروز",
+          "descriptionTr": "Bugünün haberlerinde anahtar kelime araması"
+        },
+        {
+          "name": "milliyet_list_sections",
+          "description": "Milliyet news sections usable with milliyet_headlines",
+          "descriptionFa": "بخش‌های خبری میلیّت",
+          "descriptionTr": "Milliyet'in haber bölümleri"
+        },
+        {
+          "name": "milliyet_health",
+          "description": "Check whether milliyet.com.tr is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن milliyet.com.tr",
+          "descriptionTr": "milliyet.com.tr erişilebilir mi kontrolü"
         }
       ]
     }
