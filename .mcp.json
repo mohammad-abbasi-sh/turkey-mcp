@@ -221,6 +221,12 @@
       "args": [
         "lcwaikiki-mcp"
       ]
+    },
+    "milliyet": {
+      "command": "uvx",
+      "args": [
+        "milliyet-mcp"
+      ]
     }
   }
 }
