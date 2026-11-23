@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21",
+  "generated": "2026-11-23",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1630,6 +1630,100 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-21"
+    },
+    "lcwaikiki-mcp": {
+      "cat": "shopping",
+      "color": "#DB2777",
+      "letter": "👗",
+      "featured": false,
+      "account": false,
+      "added": 36,
+      "desc_fa": "بزرگ‌ترین خرده‌فروش مد ترکیه (ال‌سی وایکیکی، بیش از ۱٬۳۰۰ فروشگاه): جست‌وجوی محصول با کلیدواژهٔ ترکی، جزئیات کامل یک محصول (سایزها، جنس پارچه، قیمت به لیر، امتیاز و نظرات)، فهرست ۱۸۵ دسته در ۶ دپارتمان و آمار قیمت یک جست‌وجو.",
+      "desc_tr": "Türkiye'nin en büyük moda perakendecisi LC Waikiki (1.300+ mağaza): Türkçe anahtar kelimeyle ürün arama, bir ürünün tam detayı (bedenler, kumaş, TL fiyat, puan ve yorumlar), 6 departmanda 185 kategorilik dizin ve bir arama için fiyat istatistikleri.",
+      "env": null,
+      "tools": {
+        "lcwaikiki_search_products": {
+          "s": "Search products by Turkish keyword (100/page, 8 sorts)",
+          "sf": "جست‌وجوی محصول با کلیدواژهٔ ترکی (۱۰۰ محصول در صفحه، ۸ مرتب‌سازی)",
+          "st": "Türkçe anahtar kelimeyle ürün arama (sayfa başına 100 ürün, 8 sıralama)"
+        },
+        "lcwaikiki_get_product": {
+          "s": "Full detail of one product: sizes, fabric, price, rating, reviews",
+          "sf": "جزئیات کامل یک محصول: سایزها، پارچه، قیمت، امتیاز و نظرات",
+          "st": "Bir ürünün tam detayı: bedenler, kumaş, fiyat, puan ve yorumlar"
+        },
+        "lcwaikiki_list_categories": {
+          "s": "Full category directory: 6 departments, 185 categories",
+          "sf": "فهرست کامل دسته‌ها: ۶ دپارتمان، ۱۸۵ دسته",
+          "st": "Tam kategori dizini: 6 departman, 185 kategori"
+        },
+        "lcwaikiki_category_products": {
+          "s": "Products of one category (paging + sorts)",
+          "sf": "محصولات یک دسته (صفحه‌بندی و مرتب‌سازی)",
+          "st": "Bir kategorinin ürünleri (sayfalama ve sıralama)"
+        },
+        "lcwaikiki_price_stats": {
+          "s": "Price statistics for a search (min/median/mean/max, discounts)",
+          "sf": "آمار قیمت یک جست‌وجو (کمینه/میانه/میانگین/بیشینه، تخفیف‌ها)",
+          "st": "Bir arama için fiyat istatistikleri (min/medyan/ortalama/maks, indirimler)"
+        },
+        "lcwaikiki_health": {
+          "s": "Check whether lcw.com is reachable right now",
+          "sf": "بررسی در دسترس بودن سایت lcw.com",
+          "st": "lcw.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-22",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-22"
+    },
+    "milliyet-mcp": {
+      "cat": "news",
+      "color": "#B91C1C",
+      "letter": "🗞️",
+      "featured": false,
+      "account": false,
+      "added": 37,
+      "desc_fa": "روزنامهٔ ملی میلیّت (از ۱۹۵۰، یکی از بزرگ‌ترین روزنامه‌های ترکیه): خبرهای فوری با ساعت، تیترهای ۱۰ بخش خبری، متن کامل خبرها (نویسنده، تاریخ، کلیدواژه‌ها و تعداد کلمات) و جست‌وجوی کلیدواژه در فهرست‌های روز.",
+      "desc_tr": "Türkiye'nin en büyük ulusal gazetelerinden Milliyet (1950'den beri): saatli son dakika haberleri, 10 bölümün manşetleri, haberlerin tam metni (yazar, tarih, anahtar kelimeler ve kelime sayısı) ve günün listelerinde anahtar kelime araması.",
+      "env": null,
+      "tools": {
+        "milliyet_latest": {
+          "s": "Latest breaking news (son dakika), newest first, with times",
+          "sf": "خبرهای فوری (سون داکیکا) با ساعت، از تازه‌ترین",
+          "st": "Saatli son dakika haberleri, en yeniden"
+        },
+        "milliyet_headlines": {
+          "s": "Top headlines in one Milliyet section",
+          "sf": "تیترهای برتر یک بخش خبری",
+          "st": "Bir bölümün öne çıkan manşetleri"
+        },
+        "milliyet_get_article": {
+          "s": "Full text of one Milliyet article (full URL)",
+          "sf": "متن کامل یک خبر (با نشانی کامل)",
+          "st": "Bir haberin tam metni (tam URL ile)"
+        },
+        "milliyet_search_news": {
+          "s": "Keyword search over today's Milliyet news listings",
+          "sf": "جست‌وجوی کلیدواژه در خبرهای امروز",
+          "st": "Bugünün haberlerinde anahtar kelime araması"
+        },
+        "milliyet_list_sections": {
+          "s": "Milliyet news sections usable with milliyet_headlines",
+          "sf": "بخش‌های خبری میلیّت",
+          "st": "Milliyet'in haber bölümleri"
+        },
+        "milliyet_health": {
+          "s": "Check whether milliyet.com.tr is reachable right now",
+          "sf": "بررسی در دسترس بودن milliyet.com.tr",
+          "st": "milliyet.com.tr erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-23",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-23"
     }
   }
 }
