@@ -1217,6 +1217,40 @@
      "summary": "Check whether lcw.com is reachable right now"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for Milliyet — one of Türkiye's biggest national newspapers: breaking news, headlines by section, full articles and keyword search.",
+   "name": "milliyet-mcp",
+   "pypi": "milliyet-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/milliyet-mcp",
+   "title": "Milliyet — breaking news, headlines, full articles & search",
+   "title_tr": "Milliyet — son dakika, manşetler, haber metinleri ve arama",
+   "tools": [
+    {
+     "name": "milliyet_latest",
+     "summary": "Latest breaking news (son dakika), newest first, with times"
+    },
+    {
+     "name": "milliyet_headlines",
+     "summary": "Top headlines in one Milliyet section"
+    },
+    {
+     "name": "milliyet_get_article",
+     "summary": "Full text of one Milliyet article (full URL)"
+    },
+    {
+     "name": "milliyet_search_news",
+     "summary": "Keyword search over today's Milliyet news listings"
+    },
+    {
+     "name": "milliyet_list_sections",
+     "summary": "Milliyet news sections usable with milliyet_headlines"
+    },
+    {
+     "name": "milliyet_health",
+     "summary": "Check whether milliyet.com.tr is reachable right now"
+    }
+   ]
   }
  ]
 }
