@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 36 MCP servers (212 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-22 from the live catalog.
+> 37 MCP servers (218 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-23 from the live catalog.
 
 ## How to use
 
@@ -724,3 +724,23 @@
 - `lcwaikiki_category_products`: Products of one category (paging + sorts)
 - `lcwaikiki_price_stats`: Price statistics for a search (min/median/mean/max, discounts)
 - `lcwaikiki_health`: Check whether lcw.com is reachable right now
+
+## milliyet-mcp
+
+- Title: Milliyet — breaking news, headlines, full articles & search
+- Category: news
+- Summary: Unofficial read-only MCP server for Milliyet — one of Türkiye's biggest national newspapers: breaking news, headlines by section, full articles and keyword search.
+- Repository: https://github.com/mohammad-abbasi-sh/milliyet-mcp
+- PyPI: https://pypi.org/project/milliyet-mcp/
+- Version: pending — health: verified — last checked: 2026-11-23 — in the catalog since: 2026-11-23
+- Install: `claude mcp add --transport stdio --scope user milliyet -- uvx milliyet-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/milliyet-mcp
+
+### Tools (6)
+
+- `milliyet_latest`: Latest breaking news (son dakika), newest first, with times
+- `milliyet_headlines`: Top headlines in one Milliyet section
+- `milliyet_get_article`: Full text of one Milliyet article (full URL)
+- `milliyet_search_news`: Keyword search over today's Milliyet news listings
+- `milliyet_list_sections`: Milliyet news sections usable with milliyet_headlines
+- `milliyet_health`: Check whether milliyet.com.tr is reachable right now
