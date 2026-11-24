@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23",
+  "generated": "2026-11-24",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1724,6 +1724,58 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-23"
+    },
+    "turna-mcp": {
+      "cat": "travel",
+      "color": "#0284C7",
+      "letter": "✈️",
+      "featured": false,
+      "account": false,
+      "added": 38,
+      "desc_fa": "تورنا، سایت جستجو و مقایسهٔ بلیط هواپیما در ترکیه: جستجوی زندهٔ پرواز با قیمت واقعی (ایرلاین، شمارهٔ پرواز، مدت، توقف و بار)، ارزان‌ترین قیمت‌های مسیر در بازهٔ زمانی با آمار قیمت، میانگین ارزان‌ترین قیمت هر ماه و ارزان‌ترین ماه، ارزان‌ترین قیمت هر روز در پنجرهٔ ۱۲۰ روزه، تبدیل نام شهر به کد یاتا و مسیرهای محبوب سایت.",
+      "desc_tr": "Türkiye'nin uçak bileti arama/karşılaştırma sitesi Turna: gerçek fiyatlı canlı uçuş araması (havayolu, uçuş numarası, süre, aktarma, bagaj), tarih aralığında bir rotanın en ucuz fiyatları ve fiyat istatistikleri, aylık ortalama en ucuz ücret ve en ucuz ay, 120 günlük pencerede gün başına en ucuz fiyat, şehir adından IATA koduna çevirme ve sitenin popüler rotaları.",
+      "env": null,
+      "tools": {
+        "turna_search_airports": {
+          "s": "Search airports/cities by name, returns IATA codes",
+          "sf": "جستجوی فرودگاه/شهر با نام ← کدهای یاتا",
+          "st": "İsme göre havalimanı/şehir araması → IATA kodları"
+        },
+        "turna_search_flights": {
+          "s": "Live flight search (one-way or round trip) with real fares",
+          "sf": "جستجوی زندهٔ پرواز (یک‌طرفه یا رفت‌وبرگشت) با قیمت واقعی",
+          "st": "Gerçek fiyatlı canlı uçuş araması (tek yön veya gidiş-dönüş)"
+        },
+        "turna_cheapest_flights": {
+          "s": "Cheapest fares on a route over a date range, with price stats",
+          "sf": "ارزان‌ترین قیمت‌های مسیر در بازهٔ زمانی (+ آمار)",
+          "st": "Bir rotada tarih aralığında en ucuz fiyatlar (+ istatistik)"
+        },
+        "turna_monthly_fares": {
+          "s": "Average cheapest fare per month on a route, plus cheapest month",
+          "sf": "میانگین ارزان‌ترین قیمت هر ماه + ارزان‌ترین ماه",
+          "st": "Ay başına ortalama en ucuz ücret + en ucuz ay"
+        },
+        "turna_daily_prices": {
+          "s": "Cheapest price per day on a route in a window, plus cheapest day",
+          "sf": "ارزان‌ترین قیمت هر روز در پنجره + ارزان‌ترین روز",
+          "st": "Pencerede gün başına en ucuz fiyat + en ucuz gün"
+        },
+        "turna_popular_routes": {
+          "s": "Most popular Turna routes with cheapest departing fare",
+          "sf": "محبوب‌ترین مسیرها با ارزان‌ترین قیمت رفت",
+          "st": "En ucuz kalkış fiyatıyla en popüler rotalar"
+        },
+        "turna_health": {
+          "s": "Check whether turna.com is reachable right now",
+          "sf": "بررسی در دسترس بودن turna.com",
+          "st": "turna.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-24",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-24"
     }
   }
 }
