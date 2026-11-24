@@ -1251,6 +1251,44 @@
      "summary": "Check whether milliyet.com.tr is reachable right now"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for Turna — Türkiye's flight-ticket search: live flight search with real fares, cheapest fares on a route, monthly and daily price calendars, airport autocomplete and popular routes.",
+   "name": "turna-mcp",
+   "pypi": "turna-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/turna-mcp",
+   "title": "Turna — live flight search, cheapest fares & price calendars",
+   "title_tr": "Turna — canlı uçuş arama, en ucuz fiyatlar ve fiyat takvimleri",
+   "tools": [
+    {
+     "name": "turna_search_airports",
+     "summary": "Search airports/cities by name, returns IATA codes"
+    },
+    {
+     "name": "turna_search_flights",
+     "summary": "Live flight search (one-way or round trip) with real fares"
+    },
+    {
+     "name": "turna_cheapest_flights",
+     "summary": "Cheapest fares on a route over a date range, with price stats"
+    },
+    {
+     "name": "turna_monthly_fares",
+     "summary": "Average cheapest fare per month on a route, plus cheapest month"
+    },
+    {
+     "name": "turna_daily_prices",
+     "summary": "Cheapest price per day on a route in a window, plus cheapest day"
+    },
+    {
+     "name": "turna_popular_routes",
+     "summary": "Most popular Turna routes with cheapest departing fare"
+    },
+    {
+     "name": "turna_health",
+     "summary": "Check whether turna.com is reachable right now"
+    }
+   ]
   }
  ]
 }
