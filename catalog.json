@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-23",
+  "generated": "2026-11-24",
   "counts": {
-    "servers": 37,
-    "tools": 218
+    "servers": 38,
+    "tools": 225
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2582,6 +2582,82 @@
           "description": "Check whether milliyet.com.tr is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن milliyet.com.tr",
           "descriptionTr": "milliyet.com.tr erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "turna-mcp",
+      "name": "Turna — live flight search, cheapest fares & price calendars",
+      "nameTr": "Turna — canlı uçuş arama, en ucuz fiyatlar ve fiyat takvimleri",
+      "summary": "Unofficial read-only MCP server for Turna — Türkiye's flight-ticket search: live flight search with real fares, cheapest fares on a route, monthly and daily price calendars, airport autocomplete and popular routes.",
+      "summaryFa": "تورنا، سایت جستجو و مقایسهٔ بلیط هواپیما در ترکیه: جستجوی زندهٔ پرواز با قیمت واقعی (ایرلاین، شمارهٔ پرواز، مدت، توقف و بار)، ارزان‌ترین قیمت‌های مسیر در بازهٔ زمانی با آمار قیمت، میانگین ارزان‌ترین قیمت هر ماه و ارزان‌ترین ماه، ارزان‌ترین قیمت هر روز در پنجرهٔ ۱۲۰ روزه، تبدیل نام شهر به کد یاتا و مسیرهای محبوب سایت.",
+      "summaryTr": "Türkiye'nin uçak bileti arama/karşılaştırma sitesi Turna: gerçek fiyatlı canlı uçuş araması (havayolu, uçuş numarası, süre, aktarma, bagaj), tarih aralığında bir rotanın en ucuz fiyatları ve fiyat istatistikleri, aylık ortalama en ucuz ücret ve en ucuz ay, 120 günlük pencerede gün başına en ucuz fiyat, şehir adından IATA koduna çevirme ve sitenin popüler rotaları.",
+      "category": "travel",
+      "tags": [
+        "travel",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-24",
+      "firstSeen": "2026-11-24",
+      "repo": "https://github.com/mohammad-abbasi-sh/turna-mcp",
+      "pypi": "turna-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/turna-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/turna-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "turna-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "turna_search_airports",
+          "description": "Search airports/cities by name, returns IATA codes",
+          "descriptionFa": "جستجوی فرودگاه/شهر با نام ← کدهای یاتا",
+          "descriptionTr": "İsme göre havalimanı/şehir araması → IATA kodları"
+        },
+        {
+          "name": "turna_search_flights",
+          "description": "Live flight search (one-way or round trip) with real fares",
+          "descriptionFa": "جستجوی زندهٔ پرواز (یک‌طرفه یا رفت‌وبرگشت) با قیمت واقعی",
+          "descriptionTr": "Gerçek fiyatlı canlı uçuş araması (tek yön veya gidiş-dönüş)"
+        },
+        {
+          "name": "turna_cheapest_flights",
+          "description": "Cheapest fares on a route over a date range, with price stats",
+          "descriptionFa": "ارزان‌ترین قیمت‌های مسیر در بازهٔ زمانی (+ آمار)",
+          "descriptionTr": "Bir rotada tarih aralığında en ucuz fiyatlar (+ istatistik)"
+        },
+        {
+          "name": "turna_monthly_fares",
+          "description": "Average cheapest fare per month on a route, plus cheapest month",
+          "descriptionFa": "میانگین ارزان‌ترین قیمت هر ماه + ارزان‌ترین ماه",
+          "descriptionTr": "Ay başına ortalama en ucuz ücret + en ucuz ay"
+        },
+        {
+          "name": "turna_daily_prices",
+          "description": "Cheapest price per day on a route in a window, plus cheapest day",
+          "descriptionFa": "ارزان‌ترین قیمت هر روز در پنجره + ارزان‌ترین روز",
+          "descriptionTr": "Pencerede gün başına en ucuz fiyat + en ucuz gün"
+        },
+        {
+          "name": "turna_popular_routes",
+          "description": "Most popular Turna routes with cheapest departing fare",
+          "descriptionFa": "محبوب‌ترین مسیرها با ارزان‌ترین قیمت رفت",
+          "descriptionTr": "En ucuz kalkış fiyatıyla en popüler rotalar"
+        },
+        {
+          "name": "turna_health",
+          "description": "Check whether turna.com is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن turna.com",
+          "descriptionTr": "turna.com erişilebilir mi kontrolü"
         }
       ]
     }
