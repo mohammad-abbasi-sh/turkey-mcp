@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 37 MCP servers (218 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-23 from the live catalog.
+> 38 MCP servers (225 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-24 from the live catalog.
 
 ## How to use
 
@@ -744,3 +744,24 @@
 - `milliyet_search_news`: Keyword search over today's Milliyet news listings
 - `milliyet_list_sections`: Milliyet news sections usable with milliyet_headlines
 - `milliyet_health`: Check whether milliyet.com.tr is reachable right now
+
+## turna-mcp
+
+- Title: Turna — live flight search, cheapest fares & price calendars
+- Category: travel
+- Summary: Unofficial read-only MCP server for Turna — Türkiye's flight-ticket search: live flight search with real fares, cheapest fares on a route, monthly and daily price calendars, airport autocomplete and popular routes.
+- Repository: https://github.com/mohammad-abbasi-sh/turna-mcp
+- PyPI: https://pypi.org/project/turna-mcp/
+- Version: pending — health: verified — last checked: 2026-11-24 — in the catalog since: 2026-11-24
+- Install: `claude mcp add --transport stdio --scope user turna -- uvx turna-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/turna-mcp
+
+### Tools (7)
+
+- `turna_search_airports`: Search airports/cities by name, returns IATA codes
+- `turna_search_flights`: Live flight search (one-way or round trip) with real fares
+- `turna_cheapest_flights`: Cheapest fares on a route over a date range, with price stats
+- `turna_monthly_fares`: Average cheapest fare per month on a route, plus cheapest month
+- `turna_daily_prices`: Cheapest price per day on a route in a window, plus cheapest day
+- `turna_popular_routes`: Most popular Turna routes with cheapest departing fare
+- `turna_health`: Check whether turna.com is reachable right now
