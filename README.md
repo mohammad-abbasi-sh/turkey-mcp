@@ -48,6 +48,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [mynet-mcp](https://github.com/mohammad-abbasi-sh/mynet-mcp) | www.mynet.com (Mynet) — latest news, full articles, live gold prices & daily horoscope | 7 | `uvx mynet-mcp` |
 | [lcwaikiki-mcp](https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp) | www.lcw.com (LC Waikiki) — product search, full detail, categories & price stats | 6 | `uvx lcwaikiki-mcp` |
 | [milliyet-mcp](https://github.com/mohammad-abbasi-sh/milliyet-mcp) | www.milliyet.com.tr (Milliyet) — breaking news, headlines by section, full articles & keyword search | 6 | `uvx milliyet-mcp` |
+| [turna-mcp](https://github.com/mohammad-abbasi-sh/turna-mcp) | www.turna.com (Turna) — live flight search, cheapest fares, monthly & daily price calendars | 7 | `uvx turna-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
