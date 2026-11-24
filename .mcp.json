@@ -227,6 +227,12 @@
       "args": [
         "milliyet-mcp"
       ]
+    },
+    "turna": {
+      "command": "uvx",
+      "args": [
+        "turna-mcp"
+      ]
     }
   }
 }
