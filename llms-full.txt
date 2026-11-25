@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 38 MCP servers (225 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-24 from the live catalog.
+> 39 MCP servers (232 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-25 from the live catalog.
 
 ## How to use
 
@@ -765,3 +765,24 @@
 - `turna_daily_prices`: Cheapest price per day on a route in a window, plus cheapest day
 - `turna_popular_routes`: Most popular Turna routes with cheapest departing fare
 - `turna_health`: Check whether turna.com is reachable right now
+
+## haberturk-mcp
+
+- Title: Habertürk — latest news, breaking news & full articles
+- Category: news
+- Summary: Unofficial read-only MCP server for Habertürk — Türkiye's major national news portal: latest news from the Google News sitemap, breaking news with times, headlines by 11 sections, full article text and keyword search.
+- Repository: https://github.com/mohammad-abbasi-sh/haberturk-mcp
+- PyPI: https://pypi.org/project/haberturk-mcp/
+- Version: pending — health: verified — last checked: 2026-11-25 — in the catalog since: 2026-11-25
+- Install: `claude mcp add --transport stdio --scope user haberturk -- uvx haberturk-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/haberturk-mcp
+
+### Tools (7)
+
+- `haberturk_latest_news`: Latest news from the Google News sitemap (~600 items), newest first
+- `haberturk_breaking_news`: Latest breaking news (son dakika), newest first, with times
+- `haberturk_headlines`: Top headlines in one section (11 sections)
+- `haberturk_get_article`: Full text of one article (full URL)
+- `haberturk_search_news`: Keyword search over recent news
+- `haberturk_list_sections`: News sections usable with haberturk_headlines
+- `haberturk_health`: Check whether haberturk.com is reachable right now
