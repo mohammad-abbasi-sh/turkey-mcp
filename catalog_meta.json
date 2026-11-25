@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24",
+  "generated": "2026-11-25",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1776,6 +1776,58 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-24"
+    },
+    "haberturk-mcp": {
+      "cat": "news",
+      "color": "#991B1B",
+      "letter": "📰",
+      "featured": false,
+      "account": false,
+      "added": 39,
+      "desc_fa": "هابرتورک، از بزرگ‌ترین پورتال‌های خبری ملی ترکیه (۲۴٫۴ میلیون بازدید در اکتبر ۲۰۲۶، رتبهٔ ۴۰ ترکیه): آخرین اخبار از نقشهٔ سایت Google News (حدود ۶۰۰ مورد با زمان انتشار)، خبرهای فوری با ساعت، تیترهای ۱۱ بخش خبری، متن کامل خبر (نویسنده، تاریخ، کلیدواژه‌ها و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+      "desc_tr": "Türkiye'nin en büyük ulusal haber portallarından Habertürk (Ekim 2026'da 24,4 milyon ziyaret, TR #40): Google News site haritasından son haberler (yayın saatli ~600 öğe), saatli son dakika haberleri, 11 bölümün manşetleri, haberlerin tam metni (yazar, tarih, anahtar kelimeler ve kelime sayısı) ve anahtar kelime araması.",
+      "env": null,
+      "tools": {
+        "haberturk_latest_news": {
+          "s": "Latest news from the Google News sitemap (~600 items), newest first",
+          "sf": "آخرین اخبار از نقشهٔ سایت Google News (حدود ۶۰۰ مورد)، از تازه‌ترین",
+          "st": "Google News site haritasından son haberler (~600 öğe), en yeniden"
+        },
+        "haberturk_breaking_news": {
+          "s": "Latest breaking news (son dakika), newest first, with times",
+          "sf": "خبرهای فوری (سون داکیکا) با ساعت، از تازه‌ترین",
+          "st": "Saatli son dakika haberleri, en yeniden"
+        },
+        "haberturk_headlines": {
+          "s": "Top headlines in one section (11 sections)",
+          "sf": "تیترهای برتر یک بخش خبری (۱۱ بخش)",
+          "st": "Bir bölümün öne çıkan manşetleri (11 bölüm)"
+        },
+        "haberturk_get_article": {
+          "s": "Full text of one article (full URL)",
+          "sf": "متن کامل یک خبر (با نشانی کامل)",
+          "st": "Bir haberin tam metni (tam URL ile)"
+        },
+        "haberturk_search_news": {
+          "s": "Keyword search over recent news",
+          "sf": "جست‌وجوی کلیدواژه در اخبار اخیر",
+          "st": "Güncel haberlerde anahtar kelime araması"
+        },
+        "haberturk_list_sections": {
+          "s": "News sections usable with haberturk_headlines",
+          "sf": "بخش‌های خبری هابرتورک",
+          "st": "Habertürk'ün haber bölümleri"
+        },
+        "haberturk_health": {
+          "s": "Check whether haberturk.com is reachable right now",
+          "sf": "بررسی در دسترس بودن haberturk.com",
+          "st": "haberturk.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-25",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-25"
     }
   }
 }
