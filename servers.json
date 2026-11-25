@@ -1289,6 +1289,44 @@
      "summary": "Check whether turna.com is reachable right now"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for Habertürk — Türkiye's major national news portal: latest news from the Google News sitemap, breaking news with times, headlines by 11 sections, full article text and keyword search.",
+   "name": "haberturk-mcp",
+   "pypi": "haberturk-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/haberturk-mcp",
+   "title": "Habertürk — latest news, breaking news & full articles",
+   "title_tr": "Habertürk — son haberler, son dakika ve tam metin haberler",
+   "tools": [
+    {
+     "name": "haberturk_latest_news",
+     "summary": "Latest news from the Google News sitemap (~600 items), newest first"
+    },
+    {
+     "name": "haberturk_breaking_news",
+     "summary": "Latest breaking news (son dakika), newest first, with times"
+    },
+    {
+     "name": "haberturk_headlines",
+     "summary": "Top headlines in one section (11 sections)"
+    },
+    {
+     "name": "haberturk_get_article",
+     "summary": "Full text of one article (full URL)"
+    },
+    {
+     "name": "haberturk_search_news",
+     "summary": "Keyword search over recent news"
+    },
+    {
+     "name": "haberturk_list_sections",
+     "summary": "News sections usable with haberturk_headlines"
+    },
+    {
+     "name": "haberturk_health",
+     "summary": "Check whether haberturk.com is reachable right now"
+    }
+   ]
   }
  ]
 }
