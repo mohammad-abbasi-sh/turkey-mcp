@@ -1,6 +1,6 @@
 # Turkey MCP
 
-> 38 MCP servers (225 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
+> 39 MCP servers (232 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account.
 
 > Start here — all-mcp is the main reference: one server containing all 60 MCP servers (Turkey 32, Germany 27, Bonbama 1), 324 tools behind a single config entry. Install only all-mcp (`claude mcp add --transport stdio --scope user all-mcp -- uvx all-mcp`) and it routes each question to the right server itself. Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/all-mcp — repo: https://github.com/mohammad-abbasi-sh/all-mcp
 
@@ -42,6 +42,7 @@
 - [lcwaikiki-mcp](https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/lcwaikiki-mcp)): Unofficial read-only MCP server for LC Waikiki — Türkiye's biggest fashion retailer: product search, full product detail, the category directory and price statistics. (6 tools)
 - [milliyet-mcp](https://github.com/mohammad-abbasi-sh/milliyet-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/milliyet-mcp)): Unofficial read-only MCP server for Milliyet — one of Türkiye's biggest national newspapers: breaking news, headlines by section, full articles and keyword search. (6 tools)
 - [turna-mcp](https://github.com/mohammad-abbasi-sh/turna-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/turna-mcp)): Unofficial read-only MCP server for Turna — Türkiye's flight-ticket search: live flight search with real fares, cheapest fares on a route, monthly and daily price calendars, airport autocomplete and popular routes. (7 tools)
+- [haberturk-mcp](https://github.com/mohammad-abbasi-sh/haberturk-mcp) ([.md](https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/haberturk-mcp)): Unofficial read-only MCP server for Habertürk — Türkiye's major national news portal: latest news from the Google News sitemap, breaking news with times, headlines by 11 sections, full article text and keyword search. (7 tools)
 
 ## Install
 
