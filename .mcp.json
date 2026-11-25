@@ -233,6 +233,12 @@
       "args": [
         "turna-mcp"
       ]
+    },
+    "haberturk": {
+      "command": "uvx",
+      "args": [
+        "haberturk-mcp"
+      ]
     }
   }
 }
