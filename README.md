@@ -49,6 +49,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [lcwaikiki-mcp](https://github.com/mohammad-abbasi-sh/lcwaikiki-mcp) | www.lcw.com (LC Waikiki) — product search, full detail, categories & price stats | 6 | `uvx lcwaikiki-mcp` |
 | [milliyet-mcp](https://github.com/mohammad-abbasi-sh/milliyet-mcp) | www.milliyet.com.tr (Milliyet) — breaking news, headlines by section, full articles & keyword search | 6 | `uvx milliyet-mcp` |
 | [turna-mcp](https://github.com/mohammad-abbasi-sh/turna-mcp) | www.turna.com (Turna) — live flight search, cheapest fares, monthly & daily price calendars | 7 | `uvx turna-mcp` |
+| [haberturk-mcp](https://github.com/mohammad-abbasi-sh/haberturk-mcp) | www.haberturk.com (Habertürk) — latest news, breaking news, headlines by section, full articles & keyword search | 7 | `uvx haberturk-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
