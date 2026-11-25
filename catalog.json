@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-24",
+  "generated": "2026-11-25",
   "counts": {
-    "servers": 38,
-    "tools": 225
+    "servers": 39,
+    "tools": 232
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2658,6 +2658,82 @@
           "description": "Check whether turna.com is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن turna.com",
           "descriptionTr": "turna.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "haberturk-mcp",
+      "name": "Habertürk — latest news, breaking news & full articles",
+      "nameTr": "Habertürk — son haberler, son dakika ve tam metin haberler",
+      "summary": "Unofficial read-only MCP server for Habertürk — Türkiye's major national news portal: latest news from the Google News sitemap, breaking news with times, headlines by 11 sections, full article text and keyword search.",
+      "summaryFa": "هابرتورک، از بزرگ‌ترین پورتال‌های خبری ملی ترکیه (۲۴٫۴ میلیون بازدید در اکتبر ۲۰۲۶، رتبهٔ ۴۰ ترکیه): آخرین اخبار از نقشهٔ سایت Google News (حدود ۶۰۰ مورد با زمان انتشار)، خبرهای فوری با ساعت، تیترهای ۱۱ بخش خبری، متن کامل خبر (نویسنده، تاریخ، کلیدواژه‌ها و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+      "summaryTr": "Türkiye'nin en büyük ulusal haber portallarından Habertürk (Ekim 2026'da 24,4 milyon ziyaret, TR #40): Google News site haritasından son haberler (yayın saatli ~600 öğe), saatli son dakika haberleri, 11 bölümün manşetleri, haberlerin tam metni (yazar, tarih, anahtar kelimeler ve kelime sayısı) ve anahtar kelime araması.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-25",
+      "firstSeen": "2026-11-25",
+      "repo": "https://github.com/mohammad-abbasi-sh/haberturk-mcp",
+      "pypi": "haberturk-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/haberturk-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/haberturk-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "haberturk-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "haberturk_latest_news",
+          "description": "Latest news from the Google News sitemap (~600 items), newest first",
+          "descriptionFa": "آخرین اخبار از نقشهٔ سایت Google News (حدود ۶۰۰ مورد)، از تازه‌ترین",
+          "descriptionTr": "Google News site haritasından son haberler (~600 öğe), en yeniden"
+        },
+        {
+          "name": "haberturk_breaking_news",
+          "description": "Latest breaking news (son dakika), newest first, with times",
+          "descriptionFa": "خبرهای فوری (سون داکیکا) با ساعت، از تازه‌ترین",
+          "descriptionTr": "Saatli son dakika haberleri, en yeniden"
+        },
+        {
+          "name": "haberturk_headlines",
+          "description": "Top headlines in one section (11 sections)",
+          "descriptionFa": "تیترهای برتر یک بخش خبری (۱۱ بخش)",
+          "descriptionTr": "Bir bölümün öne çıkan manşetleri (11 bölüm)"
+        },
+        {
+          "name": "haberturk_get_article",
+          "description": "Full text of one article (full URL)",
+          "descriptionFa": "متن کامل یک خبر (با نشانی کامل)",
+          "descriptionTr": "Bir haberin tam metni (tam URL ile)"
+        },
+        {
+          "name": "haberturk_search_news",
+          "description": "Keyword search over recent news",
+          "descriptionFa": "جست‌وجوی کلیدواژه در اخبار اخیر",
+          "descriptionTr": "Güncel haberlerde anahtar kelime araması"
+        },
+        {
+          "name": "haberturk_list_sections",
+          "description": "News sections usable with haberturk_headlines",
+          "descriptionFa": "بخش‌های خبری هابرتورک",
+          "descriptionTr": "Habertürk'ün haber bölümleri"
+        },
+        {
+          "name": "haberturk_health",
+          "description": "Check whether haberturk.com is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن haberturk.com",
+          "descriptionTr": "haberturk.com erişilebilir mi kontrolü"
         }
       ]
     }
