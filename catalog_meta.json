@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25",
+  "generated": "2026-11-26",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1828,6 +1828,58 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-25"
+    },
+    "bigpara-mcp": {
+      "cat": "finance",
+      "color": "#D97706",
+      "letter": "🪙",
+      "featured": false,
+      "account": false,
+      "added": 40,
+      "desc_fa": "پورتال مالی هوریت (بیگ‌پارا): قیمت زندهٔ سهام BIST، نرخ ارز در برابر لیر، قیمت طلا (گرم، çeyrek، اونس)، شاخص‌های BIST، کریپتو و پرتحرک‌ترین‌ها، به‌علاوهٔ تاریخچهٔ قیمت OHLC — ۶۶۱ سهم.",
+      "desc_tr": "Hürriyet'in finans portalı Bigpara: canlı BIST hisseleri, TL karşısında döviz kurları, altın fiyatları (gram, çeyrek, ons), BIST endeksleri, kripto ve en çok hareket edenler, ayrıca OHLC fiyat geçmişi — 661 hisse.",
+      "env": null,
+      "tools": {
+        "bigpara_get_quote": {
+          "s": "Live quote for 1-20 symbols (stocks, FX, gold, indices, crypto)",
+          "sf": "قیمت زندهٔ ۱ تا ۲۰ نماد (سهام، ارز، طلا، شاخص، کریپتو)",
+          "st": "1–20 sembol için canlı fiyat (hisse, döviz, altın, endeks, kripto)"
+        },
+        "bigpara_search_stocks": {
+          "s": "Find BIST stocks by symbol or company name (661-stock universe)",
+          "sf": "جست‌وجوی سهام BIST با نماد یا نام شرکت",
+          "st": "BIST hisselerini sembol veya şirket adıyla arama"
+        },
+        "bigpara_market_movers": {
+          "s": "Top stock or crypto movers (gainers, losers, volume)",
+          "sf": "پرتحرک‌ترین سهام یا کریپتوها (صعودی/نزولی/حجم)",
+          "st": "En çok hareket eden hisseler veya kriptolar (yükselen/düşen/hacim)"
+        },
+        "bigpara_gold_prices": {
+          "s": "Live prices of 20 gold products in TRY (gram, çeyrek, ons, silver)",
+          "sf": "قیمت زندهٔ ۲۰ محصول طلا (گرم، çeyrek، اونس، نقره)",
+          "st": "20 altın ürününün canlı fiyatı (gram, çeyrek, ons, gümüş)"
+        },
+        "bigpara_fx_rates": {
+          "s": "Live rates of 15 FX pairs vs TRY",
+          "sf": "نرخ زندهٔ ۱۵ جفت‌ارز در برابر لیر",
+          "st": "TL karşısında 15 döviz çiftinin canlı kuru"
+        },
+        "bigpara_price_history": {
+          "s": "OHLC price history for one symbol (daily/weekly/monthly/yearly)",
+          "sf": "تاریخچهٔ قیمت OHLC یک نماد (روزانه/هفتگی/ماهانه/سالانه)",
+          "st": "Bir sembolün OHLC fiyat geçmişi (günlük/haftalık/aylık/yıllık)"
+        },
+        "bigpara_health": {
+          "s": "Check whether the Bigpara API is reachable right now",
+          "sf": "بررسی در دسترس بودن API بیگ‌پارا",
+          "st": "Bigpara API'sine erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-26",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-26"
     }
   }
 }
