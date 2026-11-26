@@ -1327,6 +1327,44 @@
      "summary": "Check whether haberturk.com is reachable right now"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for Bigpara (Hürriyet's finance portal): live BIST stock quotes, FX rates vs TRY, gold prices, BIST indices, crypto movers and OHLC price history.",
+   "name": "bigpara-mcp",
+   "pypi": "bigpara-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/bigpara-mcp",
+   "title": "Bigpara — live BIST stocks, FX, gold & indices",
+   "title_tr": "Bigpara — canlı BIST, döviz, altın ve endeksler",
+   "tools": [
+    {
+     "name": "bigpara_get_quote",
+     "summary": "Live quote for 1-20 symbols (stocks, FX, gold, indices, crypto)"
+    },
+    {
+     "name": "bigpara_search_stocks",
+     "summary": "Find BIST stocks by symbol or company name (661-stock universe)"
+    },
+    {
+     "name": "bigpara_market_movers",
+     "summary": "Top stock or crypto movers (gainers, losers, volume)"
+    },
+    {
+     "name": "bigpara_gold_prices",
+     "summary": "Live prices of 20 gold products in TRY (gram, çeyrek, ons, silver)"
+    },
+    {
+     "name": "bigpara_fx_rates",
+     "summary": "Live rates of 15 FX pairs vs TRY"
+    },
+    {
+     "name": "bigpara_price_history",
+     "summary": "OHLC price history for one symbol (daily/weekly/monthly/yearly)"
+    },
+    {
+     "name": "bigpara_health",
+     "summary": "Check whether the Bigpara API is reachable right now"
+    }
+   ]
   }
  ]
 }
