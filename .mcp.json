@@ -239,6 +239,12 @@
       "args": [
         "haberturk-mcp"
       ]
+    },
+    "bigpara": {
+      "command": "uvx",
+      "args": [
+        "bigpara-mcp"
+      ]
     }
   }
 }
