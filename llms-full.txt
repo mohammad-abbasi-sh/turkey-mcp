@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 39 MCP servers (232 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-25 from the live catalog.
+> 40 MCP servers (239 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-26 from the live catalog.
 
 ## How to use
 
@@ -786,3 +786,24 @@
 - `haberturk_search_news`: Keyword search over recent news
 - `haberturk_list_sections`: News sections usable with haberturk_headlines
 - `haberturk_health`: Check whether haberturk.com is reachable right now
+
+## bigpara-mcp
+
+- Title: Bigpara — live BIST stocks, FX, gold & indices
+- Category: finance
+- Summary: Unofficial read-only MCP server for Bigpara (Hürriyet's finance portal): live BIST stock quotes, FX rates vs TRY, gold prices, BIST indices, crypto movers and OHLC price history.
+- Repository: https://github.com/mohammad-abbasi-sh/bigpara-mcp
+- PyPI: https://pypi.org/project/bigpara-mcp/
+- Version: pending — health: verified — last checked: 2026-11-26 — in the catalog since: 2026-11-26
+- Install: `claude mcp add --transport stdio --scope user bigpara -- uvx bigpara-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/bigpara-mcp
+
+### Tools (7)
+
+- `bigpara_get_quote`: Live quote for 1-20 symbols (stocks, FX, gold, indices, crypto)
+- `bigpara_search_stocks`: Find BIST stocks by symbol or company name (661-stock universe)
+- `bigpara_market_movers`: Top stock or crypto movers (gainers, losers, volume)
+- `bigpara_gold_prices`: Live prices of 20 gold products in TRY (gram, çeyrek, ons, silver)
+- `bigpara_fx_rates`: Live rates of 15 FX pairs vs TRY
+- `bigpara_price_history`: OHLC price history for one symbol (daily/weekly/monthly/yearly)
+- `bigpara_health`: Check whether the Bigpara API is reachable right now
