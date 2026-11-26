@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-25",
+  "generated": "2026-11-26",
   "counts": {
-    "servers": 39,
-    "tools": 232
+    "servers": 40,
+    "tools": 239
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2734,6 +2734,82 @@
           "description": "Check whether haberturk.com is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن haberturk.com",
           "descriptionTr": "haberturk.com erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "bigpara-mcp",
+      "name": "Bigpara — live BIST stocks, FX, gold & indices",
+      "nameTr": "Bigpara — canlı BIST, döviz, altın ve endeksler",
+      "summary": "Unofficial read-only MCP server for Bigpara (Hürriyet's finance portal): live BIST stock quotes, FX rates vs TRY, gold prices, BIST indices, crypto movers and OHLC price history.",
+      "summaryFa": "پورتال مالی هوریت (بیگ‌پارا): قیمت زندهٔ سهام BIST، نرخ ارز در برابر لیر، قیمت طلا (گرم، çeyrek، اونس)، شاخص‌های BIST، کریپتو و پرتحرک‌ترین‌ها، به‌علاوهٔ تاریخچهٔ قیمت OHLC — ۶۶۱ سهم.",
+      "summaryTr": "Hürriyet'in finans portalı Bigpara: canlı BIST hisseleri, TL karşısında döviz kurları, altın fiyatları (gram, çeyrek, ons), BIST endeksleri, kripto ve en çok hareket edenler, ayrıca OHLC fiyat geçmişi — 661 hisse.",
+      "category": "finance",
+      "tags": [
+        "finance",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-26",
+      "firstSeen": "2026-11-26",
+      "repo": "https://github.com/mohammad-abbasi-sh/bigpara-mcp",
+      "pypi": "bigpara-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/bigpara-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/bigpara-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "bigpara-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "bigpara_get_quote",
+          "description": "Live quote for 1-20 symbols (stocks, FX, gold, indices, crypto)",
+          "descriptionFa": "قیمت زندهٔ ۱ تا ۲۰ نماد (سهام، ارز، طلا، شاخص، کریپتو)",
+          "descriptionTr": "1–20 sembol için canlı fiyat (hisse, döviz, altın, endeks, kripto)"
+        },
+        {
+          "name": "bigpara_search_stocks",
+          "description": "Find BIST stocks by symbol or company name (661-stock universe)",
+          "descriptionFa": "جست‌وجوی سهام BIST با نماد یا نام شرکت",
+          "descriptionTr": "BIST hisselerini sembol veya şirket adıyla arama"
+        },
+        {
+          "name": "bigpara_market_movers",
+          "description": "Top stock or crypto movers (gainers, losers, volume)",
+          "descriptionFa": "پرتحرک‌ترین سهام یا کریپتوها (صعودی/نزولی/حجم)",
+          "descriptionTr": "En çok hareket eden hisseler veya kriptolar (yükselen/düşen/hacim)"
+        },
+        {
+          "name": "bigpara_gold_prices",
+          "description": "Live prices of 20 gold products in TRY (gram, çeyrek, ons, silver)",
+          "descriptionFa": "قیمت زندهٔ ۲۰ محصول طلا (گرم، çeyrek، اونس، نقره)",
+          "descriptionTr": "20 altın ürününün canlı fiyatı (gram, çeyrek, ons, gümüş)"
+        },
+        {
+          "name": "bigpara_fx_rates",
+          "description": "Live rates of 15 FX pairs vs TRY",
+          "descriptionFa": "نرخ زندهٔ ۱۵ جفت‌ارز در برابر لیر",
+          "descriptionTr": "TL karşısında 15 döviz çiftinin canlı kuru"
+        },
+        {
+          "name": "bigpara_price_history",
+          "description": "OHLC price history for one symbol (daily/weekly/monthly/yearly)",
+          "descriptionFa": "تاریخچهٔ قیمت OHLC یک نماد (روزانه/هفتگی/ماهانه/سالانه)",
+          "descriptionTr": "Bir sembolün OHLC fiyat geçmişi (günlük/haftalık/aylık/yıllık)"
+        },
+        {
+          "name": "bigpara_health",
+          "description": "Check whether the Bigpara API is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن API بیگ‌پارا",
+          "descriptionTr": "Bigpara API'sine erişilebilir mi kontrolü"
         }
       ]
     }
