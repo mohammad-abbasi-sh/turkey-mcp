@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26",
+  "generated": "2026-11-27",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1880,6 +1880,58 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-26"
+    },
+    "cumhuriyet-mcp": {
+      "cat": "news",
+      "color": "#DC2626",
+      "letter": "🗞️",
+      "featured": false,
+      "account": false,
+      "added": 41,
+      "desc_fa": "جمهوریت، از بزرگ‌ترین روزنامه‌های ملی ترکیه (از ۱۹۲۴): آخرین اخبار از نقشهٔ سایت Google News (۶۰۸ مورد با زمان انتشار)، تیترهای صفحهٔ اصلی، تیترهای ۱۱ بخش خبری، متن کامل خبر (نویسنده، تاریخ و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+      "desc_tr": "Türkiye'nin en büyük ulusal gazetelerinden Cumhuriyet (1924'ten beri): Google News site haritasından son haberler (yayın saatli 608 öğe), ana sayfa manşetleri, 11 bölümün manşetleri, haberlerin tam metni (yazar, tarih ve kelime sayısı) ve anahtar kelime araması.",
+      "env": null,
+      "tools": {
+        "cumhuriyet_latest_news": {
+          "s": "Latest news from the Google News sitemap (608 items), newest first",
+          "sf": "آخرین اخبار از نقشهٔ سایت Google News (۶۰۸ مورد)، از تازه‌ترین",
+          "st": "Google News site haritasından son haberler (608 öğe), en yeniden"
+        },
+        "cumhuriyet_headlines": {
+          "s": "Top stories on the homepage right now",
+          "sf": "تیترهای برتر صفحهٔ اصلی همین حالا",
+          "st": "Ana sayfadaki öne çıkan haberler"
+        },
+        "cumhuriyet_section_news": {
+          "s": "Headlines in one section (11 sections)",
+          "sf": "تیترهای یک بخش خبری (۱۱ بخش)",
+          "st": "Bir bölümün manşetleri (11 bölüm)"
+        },
+        "cumhuriyet_get_article": {
+          "s": "Full text of one article (full URL)",
+          "sf": "متن کامل یک خبر (با نشانی کامل)",
+          "st": "Bir haberin tam metni (tam URL ile)"
+        },
+        "cumhuriyet_search_news": {
+          "s": "Keyword search over the 608 newest sitemap titles",
+          "sf": "جست‌وجوی کلیدواژه در ۶۰۸ تیتر تازهٔ نقشهٔ سایت",
+          "st": "En yeni 608 site haritası başlığında anahtar kelime araması"
+        },
+        "cumhuriyet_list_sections": {
+          "s": "News sections usable with cumhuriyet_section_news",
+          "sf": "بخش‌های خبری جمهوریت",
+          "st": "Cumhuriyet'in haber bölümleri"
+        },
+        "cumhuriyet_health": {
+          "s": "Check whether cumhuriyet.com.tr is reachable right now",
+          "sf": "بررسی در دسترس بودن cumhuriyet.com.tr",
+          "st": "cumhuriyet.com.tr erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-27",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-27"
     }
   }
 }
