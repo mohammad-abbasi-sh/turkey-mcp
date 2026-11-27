@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 40 MCP servers (239 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-26 from the live catalog.
+> 41 MCP servers (246 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-27 from the live catalog.
 
 ## How to use
 
@@ -807,3 +807,24 @@
 - `bigpara_fx_rates`: Live rates of 15 FX pairs vs TRY
 - `bigpara_price_history`: OHLC price history for one symbol (daily/weekly/monthly/yearly)
 - `bigpara_health`: Check whether the Bigpara API is reachable right now
+
+## cumhuriyet-mcp
+
+- Title: Cumhuriyet — latest news, headlines & full articles
+- Category: news
+- Summary: Unofficial read-only MCP server for Cumhuriyet — one of Türkiye's biggest national newspapers (founded 1924): latest news from the Google News sitemap, homepage headlines, headlines by 11 sections, full article text and keyword search.
+- Repository: https://github.com/mohammad-abbasi-sh/cumhuriyet-mcp
+- PyPI: https://pypi.org/project/cumhuriyet-mcp/
+- Version: pending — health: verified — last checked: 2026-11-27 — in the catalog since: 2026-11-27
+- Install: `claude mcp add --transport stdio --scope user cumhuriyet -- uvx cumhuriyet-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/cumhuriyet-mcp
+
+### Tools (7)
+
+- `cumhuriyet_latest_news`: Latest news from the Google News sitemap (608 items), newest first
+- `cumhuriyet_headlines`: Top stories on the homepage right now
+- `cumhuriyet_section_news`: Headlines in one section (11 sections)
+- `cumhuriyet_get_article`: Full text of one article (full URL)
+- `cumhuriyet_search_news`: Keyword search over the 608 newest sitemap titles
+- `cumhuriyet_list_sections`: News sections usable with cumhuriyet_section_news
+- `cumhuriyet_health`: Check whether cumhuriyet.com.tr is reachable right now
