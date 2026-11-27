@@ -1365,6 +1365,44 @@
      "summary": "Check whether the Bigpara API is reachable right now"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for Cumhuriyet — one of Türkiye's biggest national newspapers (founded 1924): latest news from the Google News sitemap, homepage headlines, headlines by 11 sections, full article text and keyword search.",
+   "name": "cumhuriyet-mcp",
+   "pypi": "cumhuriyet-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/cumhuriyet-mcp",
+   "title": "Cumhuriyet — latest news, headlines & full articles",
+   "title_tr": "Cumhuriyet — son haberler, manşetler ve tam metin haberler",
+   "tools": [
+    {
+     "name": "cumhuriyet_latest_news",
+     "summary": "Latest news from the Google News sitemap (608 items), newest first"
+    },
+    {
+     "name": "cumhuriyet_headlines",
+     "summary": "Top stories on the homepage right now"
+    },
+    {
+     "name": "cumhuriyet_section_news",
+     "summary": "Headlines in one section (11 sections)"
+    },
+    {
+     "name": "cumhuriyet_get_article",
+     "summary": "Full text of one article (full URL)"
+    },
+    {
+     "name": "cumhuriyet_search_news",
+     "summary": "Keyword search over the 608 newest sitemap titles"
+    },
+    {
+     "name": "cumhuriyet_list_sections",
+     "summary": "News sections usable with cumhuriyet_section_news"
+    },
+    {
+     "name": "cumhuriyet_health",
+     "summary": "Check whether cumhuriyet.com.tr is reachable right now"
+    }
+   ]
   }
  ]
 }
