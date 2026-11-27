@@ -245,6 +245,12 @@
       "args": [
         "bigpara-mcp"
       ]
+    },
+    "cumhuriyet": {
+      "command": "uvx",
+      "args": [
+        "cumhuriyet-mcp"
+      ]
     }
   }
 }
