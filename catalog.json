@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-26",
+  "generated": "2026-11-27",
   "counts": {
-    "servers": 40,
-    "tools": 239
+    "servers": 41,
+    "tools": 246
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2810,6 +2810,82 @@
           "description": "Check whether the Bigpara API is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن API بیگ‌پارا",
           "descriptionTr": "Bigpara API'sine erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "cumhuriyet-mcp",
+      "name": "Cumhuriyet — latest news, headlines & full articles",
+      "nameTr": "Cumhuriyet — son haberler, manşetler ve tam metin haberler",
+      "summary": "Unofficial read-only MCP server for Cumhuriyet — one of Türkiye's biggest national newspapers (founded 1924): latest news from the Google News sitemap, homepage headlines, headlines by 11 sections, full article text and keyword search.",
+      "summaryFa": "جمهوریت، از بزرگ‌ترین روزنامه‌های ملی ترکیه (از ۱۹۲۴): آخرین اخبار از نقشهٔ سایت Google News (۶۰۸ مورد با زمان انتشار)، تیترهای صفحهٔ اصلی، تیترهای ۱۱ بخش خبری، متن کامل خبر (نویسنده، تاریخ و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+      "summaryTr": "Türkiye'nin en büyük ulusal gazetelerinden Cumhuriyet (1924'ten beri): Google News site haritasından son haberler (yayın saatli 608 öğe), ana sayfa manşetleri, 11 bölümün manşetleri, haberlerin tam metni (yazar, tarih ve kelime sayısı) ve anahtar kelime araması.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-27",
+      "firstSeen": "2026-11-27",
+      "repo": "https://github.com/mohammad-abbasi-sh/cumhuriyet-mcp",
+      "pypi": "cumhuriyet-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/cumhuriyet-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/cumhuriyet-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "cumhuriyet-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "cumhuriyet_latest_news",
+          "description": "Latest news from the Google News sitemap (608 items), newest first",
+          "descriptionFa": "آخرین اخبار از نقشهٔ سایت Google News (۶۰۸ مورد)، از تازه‌ترین",
+          "descriptionTr": "Google News site haritasından son haberler (608 öğe), en yeniden"
+        },
+        {
+          "name": "cumhuriyet_headlines",
+          "description": "Top stories on the homepage right now",
+          "descriptionFa": "تیترهای برتر صفحهٔ اصلی همین حالا",
+          "descriptionTr": "Ana sayfadaki öne çıkan haberler"
+        },
+        {
+          "name": "cumhuriyet_section_news",
+          "description": "Headlines in one section (11 sections)",
+          "descriptionFa": "تیترهای یک بخش خبری (۱۱ بخش)",
+          "descriptionTr": "Bir bölümün manşetleri (11 bölüm)"
+        },
+        {
+          "name": "cumhuriyet_get_article",
+          "description": "Full text of one article (full URL)",
+          "descriptionFa": "متن کامل یک خبر (با نشانی کامل)",
+          "descriptionTr": "Bir haberin tam metni (tam URL ile)"
+        },
+        {
+          "name": "cumhuriyet_search_news",
+          "description": "Keyword search over the 608 newest sitemap titles",
+          "descriptionFa": "جست‌وجوی کلیدواژه در ۶۰۸ تیتر تازهٔ نقشهٔ سایت",
+          "descriptionTr": "En yeni 608 site haritası başlığında anahtar kelime araması"
+        },
+        {
+          "name": "cumhuriyet_list_sections",
+          "description": "News sections usable with cumhuriyet_section_news",
+          "descriptionFa": "بخش‌های خبری جمهوریت",
+          "descriptionTr": "Cumhuriyet'in haber bölümleri"
+        },
+        {
+          "name": "cumhuriyet_health",
+          "description": "Check whether cumhuriyet.com.tr is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن cumhuriyet.com.tr",
+          "descriptionTr": "cumhuriyet.com.tr erişilebilir mi kontrolü"
         }
       ]
     }
