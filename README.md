@@ -52,6 +52,7 @@ Agents can't use what they can't reach. This catalog gives AI agents live access
 | [haberturk-mcp](https://github.com/mohammad-abbasi-sh/haberturk-mcp) | www.haberturk.com (Habertürk) — latest news, breaking news, headlines by section, full articles & keyword search | 7 | `uvx haberturk-mcp` |
 | [bigpara-mcp](https://github.com/mohammad-abbasi-sh/bigpara-mcp) | bigpara.hurriyet.com.tr (Bigpara) — live BIST quotes, FX, gold, indices, crypto movers & price history | 7 | `uvx bigpara-mcp` |
 | [cumhuriyet-mcp](https://github.com/mohammad-abbasi-sh/cumhuriyet-mcp) | www.cumhuriyet.com.tr (Cumhuriyet) — latest news from the Google News sitemap, homepage headlines, headlines by section, full articles & keyword search | 7 | `uvx cumhuriyet-mcp` |
+| [cnnturk-mcp](https://github.com/mohammad-abbasi-sh/cnnturk-mcp) | www.cnnturk.com (CNN Türk) — latest breaking news, homepage headlines, headlines by section, full articles & keyword search | 7 | `uvx cnnturk-mcp` |
 
 *One new server every day. Each server ships with tests, fixtures and trilingual docs.*
 
