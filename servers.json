@@ -1403,6 +1403,44 @@
      "summary": "Check whether cumhuriyet.com.tr is reachable right now"
     }
    ]
+  },
+  {
+   "description": "Unofficial read-only MCP server for CNN Türk — one of Türkiye's biggest TV news portals (15.9M visits/month, TR #68): latest breaking news, homepage headlines, headlines by 13 sections, full article text and keyword search.",
+   "name": "cnnturk-mcp",
+   "pypi": "cnnturk-mcp",
+   "repository": "https://github.com/mohammad-abbasi-sh/cnnturk-mcp",
+   "title": "CNN Türk — breaking news, headlines & full articles",
+   "title_tr": "CNN Türk — son dakika, manşetler ve tam metin haberler",
+   "tools": [
+    {
+     "name": "cnnturk_latest_news",
+     "summary": "Latest breaking news from /son-dakika-haberleri/ (81 items), newest first (optional category)"
+    },
+    {
+     "name": "cnnturk_headlines",
+     "summary": "Top stories on the homepage right now"
+    },
+    {
+     "name": "cnnturk_section_news",
+     "summary": "Headlines in one section (13 sections)"
+    },
+    {
+     "name": "cnnturk_get_article",
+     "summary": "Full text of one article (full URL or bare 7-digit id)"
+    },
+    {
+     "name": "cnnturk_search_news",
+     "summary": "Keyword search over today's breaking feed + 5 main sections"
+    },
+    {
+     "name": "cnnturk_list_sections",
+     "summary": "News sections usable with cnnturk_section_news"
+    },
+    {
+     "name": "cnnturk_health",
+     "summary": "Check whether cnnturk.com is reachable right now"
+    }
+   ]
   }
  ]
 }
