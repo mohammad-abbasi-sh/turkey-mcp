@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#F7F9F8">
 <title>Turkey MCP — Connect Turkey's Services to AI</title>
-<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 41 servers, 246 tools, in English, Türkçe and فارسی.">
+<meta name="description" content="Turkey MCP: the complete reference for unofficial read-only MCP servers for Turkish web services — 42 servers, 253 tools, in English, Türkçe and فارسی.">
 <link rel="canonical" href="https://mohammad-abbasi-sh.github.io/turkey-mcp/">
 <link rel="icon" href="favicon.ico">
 <link rel="alternate" hreflang="fa" href="#/fa/">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="x-default" href="#/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Turkey MCP — Connect Turkey's Services to AI">
-<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 41 servers, 246 tools. English, Türkçe, فارسی.">
+<meta property="og:description" content="Unofficial read-only MCP servers for Turkish web services: shopping, cars, real estate, travel, finance, news, jobs and more. 42 servers, 253 tools. English, Türkçe, فارسی.">
 <meta property="og:image" content="https://mohammad-abbasi-sh.github.io/turkey-mcp/og-image.png">
 <meta name="twitter:image" content="https://mohammad-abbasi-sh.github.io/turkey-mcp/og-image.png">
 <meta property="og:locale" content="fa_IR">
@@ -22,12 +22,12 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Turkey MCP — Connect Turkey's Services to AI">
-<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 41 servers, 246 tools. EN / TR / FA.">
+<meta name="twitter:description" content="Unofficial read-only MCP servers for Turkish web services. 42 servers, 253 tools. EN / TR / FA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 41 servers, 246 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Turkey MCP","alternateName":"Turkey MCP Catalog","url":"https://mohammad-abbasi-sh.github.io/turkey-mcp/","inLanguage":["fa","tr","en"],"description":"Unofficial read-only MCP servers for Turkish web services: 42 servers, 253 tools.","creator":{"@type":"Person","name":"Mohammad Abbasi","url":"https://github.com/mohammad-abbasi-sh"}}
 </script>
 <script type="application/ld+json" id="ld-page"></script>
 <style>
@@ -1394,6 +1394,22 @@ const SERVERS = [
    {n:"cumhuriyet_search_news",s:"Keyword search over the 608 newest sitemap titles",sf:"جست‌وجوی کلیدواژه در ۶۰۸ تیتر تازهٔ نقشهٔ سایت",st:"En yeni 608 site haritası başlığında anahtar kelime araması"},
    {n:"cumhuriyet_list_sections",s:"News sections usable with cumhuriyet_section_news",sf:"بخش‌های خبری جمهوریت",st:"Cumhuriyet'in haber bölümleri"},
    {n:"cumhuriyet_health",s:"Check whether cumhuriyet.com.tr is reachable right now",sf:"بررسی در دسترس بودن cumhuriyet.com.tr",st:"cumhuriyet.com.tr erişilebilir mi kontrolü"}
+  ]},
+{ id:"cnnturk-mcp", cat:"news", color:"#DC2626", letter:"🗞️", featured:false, added:42,
+  title:"CNN Türk — breaking news, headlines & full articles",
+  title_tr:"CNN Türk — son dakika, manşetler ve tam metin haberler",
+  desc:"Unofficial read-only MCP server for CNN Türk — one of Türkiye's biggest TV news portals (15.9M visits/month, TR #68): latest breaking news, homepage headlines, headlines by 13 sections, full article text and keyword search.",
+  desc_fa:"سی‌ان‌ان ترک، از بزرگ‌ترین پورتال‌های خبری تلویزیونی ترکیه (۱۵٫۹ میلیون بازدید در ماه، رتبهٔ ۶۸): تازه‌ترین خبرهای فوری (۸۱ مورد با زمان انتشار)، تیترهای صفحهٔ اصلی، تیترهای ۱۳ بخش خبری، متن کامل خبر (نویسنده، تاریخ و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+  desc_tr:"Türkiye'nin en büyük TV haber portallarından CNN Türk (ayda 15,9 milyon ziyaret, TR #68): son dakika akışından son haberler (yayın saatli 81 öğe), ana sayfa manşetleri, 13 bölümün manşetleri, haberlerin tam metni (yazar, tarih ve kelime sayısı) ve anahtar kelime araması.",
+  repo:"https://github.com/mohammad-abbasi-sh/cnnturk-mcp", pypi:"cnnturk-mcp",
+  tools:[
+   {n:"cnnturk_latest_news",s:"Latest breaking news from /son-dakika-haberleri/ (81 items), newest first (optional category)",sf:"تازه‌ترین خبرهای فوری (۸۱ مورد)، از تازه‌ترین",st:"Son dakika akışından son haberler (81 öğe), en yeniden"},
+   {n:"cnnturk_headlines",s:"Top stories on the homepage right now",sf:"تیترهای برتر صفحهٔ اصلی همین حالا",st:"Ana sayfadaki öne çıkan haberler"},
+   {n:"cnnturk_section_news",s:"Headlines in one section (13 sections)",sf:"تیترهای یک بخش خبری (۱۳ بخش)",st:"Bir bölümün manşetleri (13 bölüm)"},
+   {n:"cnnturk_get_article",s:"Full text of one article (full URL or bare 7-digit id)",sf:"متن کامل یک خبر (با نشانی کامل یا شناسهٔ ۷ رقمی)",st:"Bir haberin tam metni (tam URL veya 7 haneli kimlik ile)"},
+   {n:"cnnturk_search_news",s:"Keyword search over today's breaking feed + 5 main sections",sf:"جست‌وجوی کلیدواژه در فید فوری امروز + ۵ بخش اصلی",st:"Bugünün son dakika akışı + 5 ana bölümde anahtar kelime araması"},
+   {n:"cnnturk_list_sections",s:"News sections usable with cnnturk_section_news",sf:"بخش‌های خبری سی‌ان‌ان ترک",st:"CNN Türk'ün haber bölümleri"},
+   {n:"cnnturk_health",s:"Check whether cnnturk.com is reachable right now",sf:"بررسی در دسترس بودن cnnturk.com",st:"cnnturk.com erişilebilir mi kontrolü"}
   ]}
 ];
 const TOTAL_TOOLS = SERVERS.reduce((a,s)=>a+s.tools.length,0);
@@ -1642,7 +1658,7 @@ fa:{
  cat_development:"توسعه", cat_development_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_data:"داده و تحلیل", cat_data_d:"به‌زودی — دسته‌ای برای این کاتالوگ برنامه‌ریزی نشده است",
  cat_coming:"به‌زودی", cat_servers:"سرور", cat_server_one:"سرور", view_all:"مشاهدهٔ همه",
- feat_title:"سرورهای منتخب MCP", feat_sub:"۴۱ سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
+ feat_title:"سرورهای منتخب MCP", feat_sub:"۴۲ سرور فقط‌خواندنی که با آزمون واقعی ساخته شده‌اند — بدون ادعای تأییدنشده.",
  feat_badge:"منتخب", status_available:"در دسترس", tools_count:"ابزار",
  meta_badge:"مرجع اصلی", meta_title:"یک MCP برای همه‌چیز", meta_hier:"از اینجا شروع کنید: all-mcp مرجع اصلی است — بعد این کاتالوگ، بعد سرورهای تکی.", meta_free:"رایگان · بدون سرور · بدون حساب", meta_conn_t:"ساده‌ترین راه: فقط all-mcp", meta_conn_d:"به‌جای نصب سرورها یکی‌یکی، فقط all-mcp را نصب کنید — خودش سؤال شما را به سرور درست می‌رساند. بقیهٔ این راهنما برای وقتی است که بخواهید یک سرور را جدا نصب کنید.", meta_ask_note:"ابزار ask با کلید خودتان (Gemini ،OpenAI ،Anthropic یا OpenRouter) یا مدل لوکال Ollama جواب یک‌مرحله‌ای می‌دهد؛ بدون کلید هم از طریق جستجو کار می‌کند.", meta_loc_note:"با USER_COUNTRY یا ابزار set_location کشورتان را یک بار تنظیم کنید تا سؤال‌های بدون اسم شهر به سرورهای کشور شما بروند.", 
  details:"جزئیات", docs:"مستندات", connect:"اتصال", add_fav:"افزودن به علاقه‌مندی‌ها", remove_fav:"حذف از علاقه‌مندی‌ها",
@@ -1684,7 +1700,7 @@ fa:{
  about_title:"دربارهٔ Turkey MCP", about_sub:"یک کاتالوگ مستقل و متن‌باز — مرجع کامل سرورهای MCP ترکیه.",
  about_mission_t:"مأموریت ما", about_mission_d:"ساختن مرجع کامل و قابل‌اعتماد برای سرویس‌های وب ترکیه: هر سرویس مهم یک سرور MCP فقط‌خواندنی، سه‌زبانه و آزمایش‌شده داشته باشد — بدون ادعای تأییدنشده و بدون دادهٔ ساختگی.",
  about_builder_t:"سازنده", about_builder_d:"محمد عباسی — مدیر سئو و محصول در بن‌باما، و سازندهٔ ابزارهای متن‌باز برای اکوسیستم Claude. این کاتالوگ یک مرجع کامل است، نه مجموعه‌ای از نمونه‌کارها.",
- about_catalog_t:"کاتالوگ", about_catalog_d:"۴۱ سرور، ۲۴۶ ابزار، به‌طور پیش‌فرض فقط‌خواندنی؛ ۳۱ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است. hepsiburada-mcp همچنین اقدامات حساب اختیاری با نشست محلی (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد — بدون نشست مرورگر شما غیرفعال است.",
+ about_catalog_t:"کاتالوگ", about_catalog_d:"۴۲ سرور، ۲۵۳ ابزار، به‌طور پیش‌فرض فقط‌خواندنی؛ ۳۱ سرور روی PyPI منتشر شده‌اند. کد همهٔ سرورها در گیت‌هاب است و هر سرور با تست‌های واقعی تأیید شده است. hepsiburada-mcp همچنین اقدامات حساب اختیاری با نشست محلی (سبد خرید و علاقه‌مندی‌ها) ارائه می‌دهد — بدون نشست مرورگر شما غیرفعال است.",
  contact_title:"تماس با ما", contact_sub:"برای سؤال، پیشنهاد یا گزارش مشکل از راه‌های زیر استفاده کن — پیام مستقیم به گیت‌هاب می‌رسد.", contact_gh_issue:"ثبت Issue در گیت‌هاب", contact_gh_profile:"پروفایل گیت‌هاب",
  dash_go:"رفتن به بازارچه",
  fav_title:"علاقه‌مندی‌ها", fav_sub:"سرورها و مهارت‌هایی که ستاره‌دار کرده‌ای — در همین مرورگر ذخیره می‌شوند.",
@@ -2079,7 +2095,7 @@ tr:{
  cat_development:"Geliştirme", cat_development_d:"Yakında — bu katalog için planlanmadı",
  cat_data:"Veri ve Analitik", cat_data_d:"Yakında — bu katalog için planlanmadı",
  cat_coming:"Yakında", cat_servers:"sunucu", cat_server_one:"sunucu", view_all:"Tümünü Gör",
- feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş 41 salt okunur sunucu — doğrulanmamış iddia yok.",
+ feat_title:"Öne Çıkan MCP Sunucuları", feat_sub:"Gerçek testlerle geliştirilmiş 42 salt okunur sunucu — doğrulanmamış iddia yok.",
  feat_badge:"Öne Çıkan", status_available:"Kullanılabilir", tools_count:"araç",
  meta_badge:"Ana referans", meta_title:"Her Şey İçin Tek MCP", meta_hier:"Buradan başlayın: all-mcp ana referanstır — sonra bu katalog, sonra tek tek sunucular.", meta_free:"Ücretsiz · sunucusuz · hesapsız", meta_conn_t:"En kolay yol: yalnızca all-mcp", meta_conn_d:"Sunucuları tek tek kurmak yerine yalnızca all-mcp'yi kurun — sorunuzu doğru sunucuya kendisi yönlendirir. Bu kılavuzun geri kalanı, bir sunucuyu ayrı kurmak isterseniz içindir.", meta_ask_note:"ask aracı, kendi anahtarınızla (Gemini, OpenAI, Anthropic veya OpenRouter) ya da yerel Ollama modeliyle tek adımda yanıt verir; anahtarsız da arama yoluyla çalışır.", meta_loc_note:"USER_COUNTRY veya set_location aracıyla ülkenizi bir kez ayarlayın; şehir adı içermeyen sorular ülkenizin sunucularına gider.", 
  details:"Detaylar", docs:"Belgeler", connect:"Bağlan", add_fav:"Favorilere ekle", remove_fav:"Favorilerden çıkar",
@@ -2121,7 +2137,7 @@ tr:{
  about_title:"Turkey MCP Hakkında", about_sub:"Bağımsız ve açık kaynaklı bir katalog — Türkiye MCP sunucularının eksiksiz referansı.",
  about_mission_t:"Misyonumuz", about_mission_d:"Türkiye web servisleri için eksiksiz ve güvenilir bir referans oluşturmak: her önemli servisin salt okunur, üç dilli ve test edilmiş bir MCP sunucusu olsun — doğrulanmamış iddia ve uydurma veri olmadan.",
  about_builder_t:"Geliştirici", about_builder_d:"Mohammad Abbasi — Bonbama'da SEO ve Ürün Müdürü, Claude ekosistemi için açık kaynaklı araçların geliştiricisi. Bu katalog eksiksiz bir referanstır, vitrin koleksiyonu değil.",
- about_catalog_t:"Katalog", about_catalog_d:"41 sunucu, 246 araç — varsayılan olarak salt okunur; 31 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır. hepsiburada-mcp ayrıca isteğe bağlı yerel oturumlu hesap işlemleri (sepet + favoriler) sunar — kendi tarayıcı oturumunuz olmadan pasiftir.",
+ about_catalog_t:"Katalog", about_catalog_d:"42 sunucu, 253 araç — varsayılan olarak salt okunur; 31 sunucu PyPI'da yayınlandı. Tüm sunucuların kodu GitHub'dadır ve her sunucu gerçek testlerle doğrulanmıştır. hepsiburada-mcp ayrıca isteğe bağlı yerel oturumlu hesap işlemleri (sepet + favoriler) sunar — kendi tarayıcı oturumunuz olmadan pasiftir.",
  contact_title:"İletişim", contact_sub:"Soru, öneri veya hata bildirimi için aşağıdaki yolları kullanın — mesajınız doğrudan GitHub'a ulaşır.", contact_gh_issue:"GitHub'da Issue aç", contact_gh_profile:"GitHub profili",
  dash_go:"Pazaryerine git",
  fav_title:"Favoriler", fav_sub:"Yıldızladığınız sunucular ve beceriler — bu tarayıcıda saklanır.",
@@ -2516,7 +2532,7 @@ en:{
  cat_development:"Development", cat_development_d:"Coming soon — not planned for this catalog",
  cat_data:"Data & Analytics", cat_data_d:"Coming soon — not planned for this catalog",
  cat_coming:"Coming soon", cat_servers:"servers", cat_server_one:"server", view_all:"View All",
- feat_title:"Featured MCP Servers", feat_sub:"Forty-one read-only servers built with real tests — no unverified claims.",
+ feat_title:"Featured MCP Servers", feat_sub:"Forty-two read-only servers built with real tests — no unverified claims.",
  feat_badge:"Featured", status_available:"Available", tools_count:"tools",
  meta_badge:"Main reference", meta_title:"One MCP for everything", meta_hier:"Start here: all-mcp is the main reference — then this catalog, then the individual servers.", meta_free:"Free · no backend · no account", meta_conn_t:"Easiest: just install all-mcp", meta_conn_d:"Instead of installing servers one by one, install only all-mcp — it routes your question to the right server itself. The rest of this guide is for when you want a single server on its own.", meta_ask_note:"The ask tool answers in one step with your own key (Gemini, OpenAI, Anthropic or OpenRouter) or a local Ollama model; without a key it still works via search.", meta_loc_note:"Set your country once with USER_COUNTRY or the set_location tool, so questions without a city name route to your country's servers.", 
  details:"Details", docs:"Docs", connect:"Connect", add_fav:"Add to favorites", remove_fav:"Remove from favorites",
@@ -2558,7 +2574,7 @@ en:{
  about_title:"About Turkey MCP", about_sub:"An independent, open-source catalog — the complete reference for Turkey MCP servers.",
  about_mission_t:"Our mission", about_mission_d:"To build the complete, trustworthy reference for Turkish web services: every major service gets a read-only, trilingual, tested MCP server — no unverified claims and no fabricated data.",
  about_builder_t:"The builder", about_builder_d:"Mohammad Abbasi — SEO and Product Manager at Bonbama, and builder of open-source tools for the Claude ecosystem. This catalog is a complete reference, not a showcase.",
- about_catalog_t:"The catalog", about_catalog_d:"41 servers, 246 tools — read-only by default; 31 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests. hepsiburada-mcp also offers optional local-session account actions (cart + favorites) — inert without your own browser session.",
+ about_catalog_t:"The catalog", about_catalog_d:"42 servers, 253 tools — read-only by default; 31 servers published on PyPI. Every server's code is on GitHub and each server is verified with real tests. hepsiburada-mcp also offers optional local-session account actions (cart + favorites) — inert without your own browser session.",
  contact_title:"Contact Us", contact_sub:"For questions, suggestions or bug reports, use the links below — your message goes straight to GitHub.", contact_gh_issue:"Open an issue on GitHub", contact_gh_profile:"GitHub profile",
  dash_go:"Go to marketplace",
  fav_title:"Favorites", fav_sub:"Servers and skills you starred — stored in this browser.",
@@ -3468,7 +3484,7 @@ function toolHTML(id){
           <a class="btn btn-ghost btn-sm" href="${hashFor("md", s.id)}">${t("det_md_view")}</a>
           <button type="button" class="btn btn-ghost btn-sm" onclick="App.mdDownload('${s.id}')">${t("det_md_dl")}</button>
         </div>
-        <p style="color:var(--muted);font-size:13px;margin-top:14px">${t("tool_last")}: ${fmtDate("2026-11-27")}</p>
+        <p style="color:var(--muted);font-size:13px;margin-top:14px">${t("tool_last")}: ${fmtDate("2026-11-28")}</p>
       </div>
     </div>
     <h2 style="font-size:20px;margin-top:30px">${t("det_faq_t")}</h2>
