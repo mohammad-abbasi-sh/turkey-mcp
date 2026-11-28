@@ -1,6 +1,6 @@
 # Turkey MCP — full catalog
 
-> 41 MCP servers (246 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-27 from the live catalog.
+> 42 MCP servers (253 tools) for Turkish web services, read-only by default — shopping, cars, real estate, travel, finance, news, jobs, food and more. Every server runs locally with uvx, no API key, no account. Generated 2026-11-28 from the live catalog.
 
 ## How to use
 
@@ -828,3 +828,24 @@
 - `cumhuriyet_search_news`: Keyword search over the 608 newest sitemap titles
 - `cumhuriyet_list_sections`: News sections usable with cumhuriyet_section_news
 - `cumhuriyet_health`: Check whether cumhuriyet.com.tr is reachable right now
+
+## cnnturk-mcp
+
+- Title: CNN Türk — breaking news, headlines & full articles
+- Category: news
+- Summary: Unofficial read-only MCP server for CNN Türk — one of Türkiye's biggest TV news portals (15.9M visits/month, TR #68): latest breaking news, homepage headlines, headlines by 13 sections, full article text and keyword search.
+- Repository: https://github.com/mohammad-abbasi-sh/cnnturk-mcp
+- PyPI: https://pypi.org/project/cnnturk-mcp/
+- Version: pending — health: verified — last checked: 2026-11-28 — in the catalog since: 2026-11-28
+- Install: `claude mcp add --transport stdio --scope user cnnturk -- uvx cnnturk-mcp`
+- Page: https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/cnnturk-mcp
+
+### Tools (7)
+
+- `cnnturk_latest_news`: Latest breaking news from /son-dakika-haberleri/ (81 items), newest first (optional category)
+- `cnnturk_headlines`: Top stories on the homepage right now
+- `cnnturk_section_news`: Headlines in one section (13 sections)
+- `cnnturk_get_article`: Full text of one article (full URL or bare 7-digit id)
+- `cnnturk_search_news`: Keyword search over today's breaking feed + 5 main sections
+- `cnnturk_list_sections`: News sections usable with cnnturk_section_news
+- `cnnturk_health`: Check whether cnnturk.com is reachable right now
