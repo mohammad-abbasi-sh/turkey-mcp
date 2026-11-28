@@ -1,9 +1,9 @@
 {
   "catalog": "turkey-mcp",
-  "generated": "2026-11-27",
+  "generated": "2026-11-28",
   "counts": {
-    "servers": 41,
-    "tools": 246
+    "servers": 42,
+    "tools": 253
   },
   "site": "https://mohammad-abbasi-sh.github.io/turkey-mcp/",
   "license": "PolyForm Noncommercial 1.0.0",
@@ -2886,6 +2886,82 @@
           "description": "Check whether cumhuriyet.com.tr is reachable right now",
           "descriptionFa": "بررسی در دسترس بودن cumhuriyet.com.tr",
           "descriptionTr": "cumhuriyet.com.tr erişilebilir mi kontrolü"
+        }
+      ]
+    },
+    {
+      "id": "cnnturk-mcp",
+      "name": "CNN Türk — breaking news, headlines & full articles",
+      "nameTr": "CNN Türk — son dakika, manşetler ve tam metin haberler",
+      "summary": "Unofficial read-only MCP server for CNN Türk — one of Türkiye's biggest TV news portals (15.9M visits/month, TR #68): latest breaking news, homepage headlines, headlines by 13 sections, full article text and keyword search.",
+      "summaryFa": "سی‌ان‌ان ترک، از بزرگ‌ترین پورتال‌های خبری تلویزیونی ترکیه (۱۵٫۹ میلیون بازدید در ماه، رتبهٔ ۶۸): تازه‌ترین خبرهای فوری (۸۱ مورد با زمان انتشار)، تیترهای صفحهٔ اصلی، تیترهای ۱۳ بخش خبری، متن کامل خبر (نویسنده، تاریخ و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+      "summaryTr": "Türkiye'nin en büyük TV haber portallarından CNN Türk (ayda 15,9 milyon ziyaret, TR #68): son dakika akışından son haberler (yayın saatli 81 öğe), ana sayfa manşetleri, 13 bölümün manşetleri, haberlerin tam metni (yazar, tarih ve kelime sayısı) ve anahtar kelime araması.",
+      "category": "news",
+      "tags": [
+        "news",
+        "turkey",
+        "read-only"
+      ],
+      "source": "catalog",
+      "featured": false,
+      "accountActions": false,
+      "version": "pending",
+      "health": "verified",
+      "lastChecked": "2026-11-28",
+      "firstSeen": "2026-11-28",
+      "repo": "https://github.com/mohammad-abbasi-sh/cnnturk-mcp",
+      "pypi": "cnnturk-mcp",
+      "url": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/tool/cnnturk-mcp",
+      "markdown": "https://mohammad-abbasi-sh.github.io/turkey-mcp/#/en/md/cnnturk-mcp",
+      "install": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "cnnturk-mcp"
+        ]
+      },
+      "tools": [
+        {
+          "name": "cnnturk_latest_news",
+          "description": "Latest breaking news from /son-dakika-haberleri/ (81 items), newest first (optional category)",
+          "descriptionFa": "تازه‌ترین خبرهای فوری (۸۱ مورد)، از تازه‌ترین",
+          "descriptionTr": "Son dakika akışından son haberler (81 öğe), en yeniden"
+        },
+        {
+          "name": "cnnturk_headlines",
+          "description": "Top stories on the homepage right now",
+          "descriptionFa": "تیترهای برتر صفحهٔ اصلی همین حالا",
+          "descriptionTr": "Ana sayfadaki öne çıkan haberler"
+        },
+        {
+          "name": "cnnturk_section_news",
+          "description": "Headlines in one section (13 sections)",
+          "descriptionFa": "تیترهای یک بخش خبری (۱۳ بخش)",
+          "descriptionTr": "Bir bölümün manşetleri (13 bölüm)"
+        },
+        {
+          "name": "cnnturk_get_article",
+          "description": "Full text of one article (full URL or bare 7-digit id)",
+          "descriptionFa": "متن کامل یک خبر (با نشانی کامل یا شناسهٔ ۷ رقمی)",
+          "descriptionTr": "Bir haberin tam metni (tam URL veya 7 haneli kimlik ile)"
+        },
+        {
+          "name": "cnnturk_search_news",
+          "description": "Keyword search over today's breaking feed + 5 main sections",
+          "descriptionFa": "جست‌وجوی کلیدواژه در فید فوری امروز + ۵ بخش اصلی",
+          "descriptionTr": "Bugünün son dakika akışı + 5 ana bölümde anahtar kelime araması"
+        },
+        {
+          "name": "cnnturk_list_sections",
+          "description": "News sections usable with cnnturk_section_news",
+          "descriptionFa": "بخش‌های خبری سی‌ان‌ان ترک",
+          "descriptionTr": "CNN Türk'ün haber bölümleri"
+        },
+        {
+          "name": "cnnturk_health",
+          "description": "Check whether cnnturk.com is reachable right now",
+          "descriptionFa": "بررسی در دسترس بودن cnnturk.com",
+          "descriptionTr": "cnnturk.com erişilebilir mi kontrolü"
         }
       ]
     }
