@@ -251,6 +251,12 @@
       "args": [
         "cumhuriyet-mcp"
       ]
+    },
+    "cnnturk": {
+      "command": "uvx",
+      "args": [
+        "cnnturk-mcp"
+      ]
     }
   }
 }
