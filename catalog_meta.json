@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27",
+  "generated": "2026-11-28",
   "note": "Per-server catalog metadata: categories, authored FA/TR strings, first-seen dates (from versioned platform files), PyPI versions, health flags. Updated by add_server.py on every factory run.",
   "servers": {
     "tcmb-mcp": {
@@ -1932,6 +1932,58 @@
       "version": "pending",
       "health": "verified",
       "last_checked": "2026-11-27"
+    },
+    "cnnturk-mcp": {
+      "cat": "news",
+      "color": "#DC2626",
+      "letter": "🗞️",
+      "featured": false,
+      "account": false,
+      "added": 42,
+      "desc_fa": "سی‌ان‌ان ترک، از بزرگ‌ترین پورتال‌های خبری تلویزیونی ترکیه (۱۵٫۹ میلیون بازدید در ماه، رتبهٔ ۶۸): تازه‌ترین خبرهای فوری (۸۱ مورد با زمان انتشار)، تیترهای صفحهٔ اصلی، تیترهای ۱۳ بخش خبری، متن کامل خبر (نویسنده، تاریخ و تعداد کلمات) و جست‌وجوی کلیدواژه.",
+      "desc_tr": "Türkiye'nin en büyük TV haber portallarından CNN Türk (ayda 15,9 milyon ziyaret, TR #68): son dakika akışından son haberler (yayın saatli 81 öğe), ana sayfa manşetleri, 13 bölümün manşetleri, haberlerin tam metni (yazar, tarih ve kelime sayısı) ve anahtar kelime araması.",
+      "env": null,
+      "tools": {
+        "cnnturk_latest_news": {
+          "s": "Latest breaking news from /son-dakika-haberleri/ (81 items), newest first (optional category)",
+          "sf": "تازه‌ترین خبرهای فوری (۸۱ مورد)، از تازه‌ترین",
+          "st": "Son dakika akışından son haberler (81 öğe), en yeniden"
+        },
+        "cnnturk_headlines": {
+          "s": "Top stories on the homepage right now",
+          "sf": "تیترهای برتر صفحهٔ اصلی همین حالا",
+          "st": "Ana sayfadaki öne çıkan haberler"
+        },
+        "cnnturk_section_news": {
+          "s": "Headlines in one section (13 sections)",
+          "sf": "تیترهای یک بخش خبری (۱۳ بخش)",
+          "st": "Bir bölümün manşetleri (13 bölüm)"
+        },
+        "cnnturk_get_article": {
+          "s": "Full text of one article (full URL or bare 7-digit id)",
+          "sf": "متن کامل یک خبر (با نشانی کامل یا شناسهٔ ۷ رقمی)",
+          "st": "Bir haberin tam metni (tam URL veya 7 haneli kimlik ile)"
+        },
+        "cnnturk_search_news": {
+          "s": "Keyword search over today's breaking feed + 5 main sections",
+          "sf": "جست‌وجوی کلیدواژه در فید فوری امروز + ۵ بخش اصلی",
+          "st": "Bugünün son dakika akışı + 5 ana bölümde anahtar kelime araması"
+        },
+        "cnnturk_list_sections": {
+          "s": "News sections usable with cnnturk_section_news",
+          "sf": "بخش‌های خبری سی‌ان‌ان ترک",
+          "st": "CNN Türk'ün haber bölümleri"
+        },
+        "cnnturk_health": {
+          "s": "Check whether cnnturk.com is reachable right now",
+          "sf": "بررسی در دسترس بودن cnnturk.com",
+          "st": "cnnturk.com erişilebilir mi kontrolü"
+        }
+      },
+      "first_seen": "2026-11-28",
+      "version": "pending",
+      "health": "verified",
+      "last_checked": "2026-11-28"
     }
   }
 }
